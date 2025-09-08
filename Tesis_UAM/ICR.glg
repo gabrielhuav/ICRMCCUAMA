@@ -1,0 +1,10 @@
+This is makeindex, version 2.16 [MiKTeX 24.1].
+Scanning style file ./ICR.ist...........................done (27 attributes redefined, 0 ignored).
+Scanning input file ICR.glo...
+!! Input index error (file = ICR.glo, line = 1):
+   -- Illegal space within numerals in second argument.
+!! Input index error (file = ICR.glo, line = 2):
+   -- Illegal space within numerals in second argument.
+done (0 entries accepted, 2 rejected).
+Nothing written in ICR.gls.
+Transcript written in ICR.glg.

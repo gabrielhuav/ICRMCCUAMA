@@ -1,0 +1,100 @@
+% Plantilla para ICR propuesta por Beatriz A. González Beltrán para ICR de la Maestría en Ciencias de la Computación
+% Realizada el 21/08/24
+%
+
+\documentclass[spanish,12pt,letterpaper]{book}
+
+\usepackage[spanish,mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[numbers]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{adjustbox}  % AÑADIDO para escalar tablas
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\definecolor{UAMPurple}{RGB}{102, 0, 102}
+\definecolor{HeaderBlue}{RGB}{70, 130, 180}
+\definecolor{ProfessionalGray}{RGB}{245, 245, 245}
+\definecolor{LightBlue}{RGB}{230, 240, 250}
+\definecolor{LightGreen}{RGB}{240, 250, 240}
+\definecolor{LightCoral}{RGB}{250, 240, 240}
+\definecolor{LightGold}{RGB}{252, 250, 240}
+\definecolor{LightPink}{RGB}{250, 245, 248}
+\definecolor{LightGray}{RGB}{245, 245, 245}
+\definecolor{LightYellow}{RGB}{255, 255, 224}
+\definecolor{LightOrange}{RGB}{255, 200, 150}
+
+%% Es para poner los márgenes en una impresión
+%% a ambas caras de la hoja
+\voffset=-36pt
+\marginparsep=20pt
+\textwidth 6.0in
+\textheight 8.75in
+\setlength{\headheight}{15pt}
+\oddsidemargin 0.4in
+\evensidemargin 0in
+
+\decimalpoint
+
+\renewcommand{\tablename}{Tabla}
+
+\graphicspath{ {./Imagenes/} }
+
+\usepackage[automake]{glossaries-extra}
+\makeglossaries
+\loadglsentries{Glosario/Glosario}
+
+\begin{document}
+
+\frontmatter
+\include{Portada/Portada}
+\include{Resumen/Resumen}
+\include{Agradecimientos/Dedicatoria}
+\include{Agradecimientos/Agradecimientos}
+
+\tableofcontents
+
+\addcontentsline{toc}{chapter}{Índice de figuras}
+\listoffigures
+\addcontentsline{toc}{chapter}{Índice de tablas}
+\listoftables
+\printglossary[title={Simbología y Acrónimos}, nonumberlist]
+\mainmatter
+\pagestyle{fancy}
+
+\renewcommand{\chaptermark}[1]{\markboth{\it\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\chaptername \ \thechapter}{}}
+\fancyhead[LO,RE]{}
+\fancyhead[LE]{{\bfseries\thepage} \ \ \rightmark}
+\fancyhead[RO]{\leftmark \ \ {\bfseries\thepage}}
+\fancyfoot[LO,LE]{Universidad Autónoma Metropolitana}
+\fancyfoot[CO,CE]{}
+
+\fancyfoot[RO,RE]{Departamento de Sistemas}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\include{Introduccion/Introduccion}
+\include{MarcoTeorico/MarcoTeorico}
+\include{EstadoDelArte/EstadoDelArte}
+\include{Metodologia/Metodologia}
+\include{AnalisisResultados/AnalisisResultados}
+\include{Capitulo6/Capitulo6}
+\include{Conclusiones/Conclusiones}
+
+\appendix
+\include{Anexos/Anexo1}
+%\include{Anexos/Anexo2}
+
+% \backmatter
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibliographystyle{unsrtnat}
+\nocite{*}
+\bibliography{Referencias/Referencias}
+
+\end{document}

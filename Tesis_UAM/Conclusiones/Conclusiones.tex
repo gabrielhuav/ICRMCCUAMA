@@ -1,0 +1,30 @@
+%!TEX root = ../ICR.tex
+\chapter{Conclusiones}
+\label{cap:Conclusiones}
+
+El presente trabajo de investigación se propuso desarrollar y validar métodos computacionales para la detección de fraude digital y noticias falsas en español, un área de creciente importancia pero con recursos considerablemente más limitados que en el idioma inglés. A través de un proceso metodológico evolutivo, se exploraron dos paradigmas distintos de la inteligencia artificial, se construyó un corpus a gran escala y se implementaron prototipos funcionales que demostraron la viabilidad práctica de los modelos desarrollados. Este capítulo resume las contribuciones y hallazgos principales de esta investigación y esboza las direcciones para trabajos futuros.
+
+\section{Resumen del Trabajo y Contribuciones Principales}
+La investigación culminó con éxito en el cumplimiento de todos los objetivos propuestos, generando varias contribuciones significativas tanto en el ámbito metodológico como en el práctico.
+
+\begin{itemize}
+    \item \textbf{Creación de un Corpus a Gran Escala para el Español:} La contribución fundamental de este trabajo fue la construcción de un corpus unificado y balanceado de más de 60,000 noticias en español. Este proceso, que combinó la unificación de cuatro datasets académicos existentes con la adición de datos obtenidos mediante un robusto crawler web, resultó en uno de los recursos más grandes de su tipo para el idioma español, sentando las bases para un entrenamiento de modelos más fiable y representativo.
+
+    \item \textbf{Validación de Enfoques Metaheurísticos (Publicación Científica):} Se implementó y evaluó sistemáticamente una suite de cinco algoritmos metaheurísticos (Recocido Simulado, Búsqueda Dispersa, Algoritmo Genético, VNS y PSO) sobre una representación de Bolsa de Palabras (BoW). Este enfoque demostró ser una vía válida para la optimización de clasificadores, culminando en la publicación de un artículo científico que valida esta fase de la investigación como una contribución independiente al estado del arte.
+
+    \item \textbf{Demostración de la Superioridad de los Modelos Transformer:} El hallazgo central de la tesis es la demostración empírica de que el ajuste fino (*fine-tuning*) de un modelo de lenguaje pre-entrenado, específicamente distilbert-base-multilingual-cased, supera significativamente el rendimiento de los enfoques metaheurísticos en esta tarea. Mientras que los modelos metaheurísticos alcanzaron una exactitud notable, el modelo Transformer logró una **precisión final del 96.2\%** en un conjunto de pruebas completamente aislado, gracias a su capacidad para interpretar el contexto y la semántica del texto.
+
+    \item \textbf{Metodología de Calibración Robusta:} Se desarrolló un pipeline de entrenamiento exhaustivo que incluye una rigurosa calibración de hiperparámetros (tasa de aprendizaje, dropout, etc.) mediante \texttt{KerasTuner}, y la implementación de técnicas avanzadas anti-sobreajuste como \texttt{EarlyStopping} y \texttt{ReduceLROnPlateau}. Este proceso no solo optimizó el rendimiento del modelo final, sino que también generó una metodología documentada y reproducible para futuros experimentos.
+
+    \item \textbf{Implementación de Prototipos Funcionales:} La investigación trascendió el ámbito teórico mediante el desarrollo de dos aplicaciones web funcionales, una para cada enfoque metodológico, utilizando Flask y Docker. La aplicación final, que sirve el modelo DistilBERT, demuestra la viabilidad de convertir el modelo entrenado en una herramienta práctica para el análisis de URLs en tiempo real, completando así el ciclo de vida del proyecto, desde la recolección de datos hasta el despliegue.
+\end{itemize}
+
+\section{Limitaciones del Estudio}
+A pesar de los resultados positivos, es importante reconocer las limitaciones de este trabajo, las cuales abren puertas a futuras investigaciones:
+\begin{itemize}
+    \item \textbf{Dependencia del Contenido Textual:} Los modelos desarrollados se basan exclusivamente en el texto de las noticias. No analizan otros elementos cruciales de la desinformación como imágenes, videos o el perfil de las cuentas que difunden el contenido.
+    \item \textbf{Robustez del Web Scraping:} Aunque se implementó un scraper inteligente, su eficacia sigue dependiendo de la estructura HTML de los sitios web, que puede cambiar con el tiempo y variar significativamente entre diferentes fuentes de noticias.
+    \item \textbf{Dominio del Corpus:} A pesar de su gran tamaño, el corpus está mayoritariamente compuesto por noticias de dominio general y político. El rendimiento del modelo podría variar en dominios muy especializados como el fraude financiero o la desinformación científica.
+\end{itemize}
+
+En conclusión, este trabajo ha demostrado de manera concluyente la eficacia superior del ajuste fino de modelos Transformer para la detección de noticias falsas en español y ha entregado no solo un modelo de alto rendimiento, sino también un corpus a gran escala y un prototipo funcional que sientan las bases para futuras innovaciones en la lucha contra el fraude digital.
