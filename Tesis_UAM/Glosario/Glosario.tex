@@ -1,9 +1,234 @@
 %!TEX root = ../ICR.tex
+
+% =============================================================================
+% ACRÓNIMOS Y ABREVIACIONES
+% =============================================================================
+
 \newacronym{icr}{ICR}{Idónea Comunicación de Resultados}
+\newacronym{pln}{PLN}{Procesamiento del Lenguaje Natural}
+\newacronym{nlp}{NLP}{Natural Language Processing}
+\newacronym{bow}{BoW}{Bolsa de Palabras (Bag of Words)}
+\newacronym{tfidf}{TF-IDF}{Term Frequency-Inverse Document Frequency}
+\newacronym{bert}{BERT}{Bidirectional Encoder Representations from Transformers}
+\newacronym{gpt}{GPT}{Generative Pre-trained Transformer}
+\newacronym{rnn}{RNN}{Redes Neuronales Recurrentes}
+\newacronym{lstm}{LSTM}{Long Short-Term Memory}
+\newacronym{cnn}{CNN}{Redes Neuronales Convolucionales}
+\newacronym{svm}{SVM}{Support Vector Machine}
+\newacronym{ag}{AG}{Algoritmo Genético}
+\newacronym{pso}{PSO}{Particle Swarm Optimization}
+\newacronym{sa}{SA}{Simulated Annealing (Recocido Simulado)}
+\newacronym{vns}{VNS}{Variable Neighborhood Search}
+\newacronym{ss}{SS}{Scatter Search}
+\newacronym{ia}{IA}{Inteligencia Artificial}
+\newacronym{ml}{ML}{Machine Learning}
+\newacronym{dl}{DL}{Deep Learning}
+\newacronym{api}{API}{Application Programming Interface}
+\newacronym{csv}{CSV}{Comma-Separated Values}
+\newacronym{json}{JSON}{JavaScript Object Notation}
+\newacronym{html}{HTML}{HyperText Markup Language}
+\newacronym{css}{CSS}{Cascading Style Sheets}
+\newacronym{http}{HTTP}{HyperText Transfer Protocol}
+\newacronym{url}{URL}{Uniform Resource Locator}
+
+% =============================================================================
+% TÉRMINOS FUNDAMENTALES DE LA INVESTIGACIÓN
+% =============================================================================
+
+\newglossaryentry{noticiafalsa}{
+	name={Noticia Falsa},
+	description={Información deliberadamente fabricada que se presenta como noticia legítima, pero que contiene datos falsos, inexactos o engañosos. Se caracteriza por tener la apariencia de contenido periodístico real, con formato de noticia tradicional, pero con intención maliciosa de desinformar. Incluye tanto contenido completamente inventado como información parcialmente verdadera presentada de manera engañosa.}
+}
+
+\newglossaryentry{bulo}{
+	name={Bulo},
+	description={Información falsa que circula ampliamente, especialmente en redes sociales y medios digitales, con el propósito de engañar a la audiencia. A diferencia de las noticias falsas, los bulos pueden no tener formato periodístico y suelen propagarse de manera viral. Incluye rumores, teorías conspirativas, información médica falsa, y contenido que apela más a las emociones que a los hechos verificables.}
+}
+
+\newglossaryentry{desinformacion}{
+	name={Desinformación},
+	description={Difusión intencional de información falsa o engañosa con el propósito específico de manipular la opinión pública, influir en decisiones políticas o sociales, o causar daño. Se caracteriza por ser un proceso activo y deliberado de creación y distribución de contenido falso.}
+}
+
+\newglossaryentry{misinformacion}{
+	name={Desinformación (Misinformation)},
+	description={Información incorrecta que se comparte sin intención maliciosa. A diferencia de la desinformación, quienes comparten misinformación no tienen conocimiento de que la información es falsa y actúan de buena fe.}
+}
+
+\newglossaryentry{malinformacion}{
+	name={Información Maliciosa (Malinformation)},
+	description={Información genuina que se comparte con intención de causar daño, como filtraciones de información privada, discursos de odio, o acoso. Aunque la información base puede ser verdadera, su uso es malicioso.}
+}
+
+\newglossaryentry{factchecking}{
+	name={Verificación de Hechos (Fact-Checking)},
+	description={Proceso sistemático de investigación y verificación de afirmaciones factuales en contenido publicado. Incluye la consulta de fuentes primarias, expertos, y evidencia documental para determinar la veracidad de las afirmaciones.}
+}
+
+\newglossaryentry{deepfake}{
+	name={Deepfake},
+	description={Contenido multimedia (video, audio, imágenes) generado o manipulado usando inteligencia artificial, especialmente técnicas de aprendizaje profundo, para hacer que parezca que alguien dijo o hizo algo que nunca ocurrió realmente.}
+}
+
+% =============================================================================
+% TÉRMINOS TÉCNICOS DE PROCESAMIENTO DE LENGUAJE NATURAL
+% =============================================================================
+
+\newglossaryentry{tokenizacion}{
+	name={Tokenización},
+	description={Proceso de dividir texto en unidades más pequeñas llamadas tokens, que pueden ser palabras, subpalabras, caracteres o n-gramas. Es el primer paso en el preprocesamiento de texto para análisis computacional.}
+}
+
+\newglossaryentry{stemming}{
+	name={Stemming},
+	description={Técnica de reducción de palabras a su raíz o stem mediante la eliminación de sufijos. Por ejemplo, "corriendo", "corrió", "correr" se reducen a "corr".}
+}
+
+\newglossaryentry{lemmatization}{
+	name={Lematización},
+	description={Proceso más sofisticado que el stemming que reduce las palabras a su forma canónica o lemma, considerando el contexto morfológico y sintáctico. Por ejemplo, "mejor" se lematiza a "bueno".}
+}
+
+\newglossaryentry{stopwords}{
+	name={Palabras Vacías (Stop Words)},
+	description={Palabras comunes en un idioma que generalmente se filtran durante el preprocesamiento de texto porque no aportan significado semántico significativo. Ejemplos en español: "el", "la", "de", "que", "y".}
+}
+
+\newglossaryentry{embedding}{
+	name={Embedding},
+	description={Representación vectorial densa de palabras, frases o documentos en un espacio multidimensional donde la distancia entre vectores refleja similitud semántica. Ejemplos incluyen Word2Vec, GloVe, y FastText.}
+}
+
+\newglossaryentry{transformer}{
+	name={Transformer},
+	description={Arquitectura de red neuronal basada en mecanismos de atención que ha revolucionado el PLN. Introdujo el concepto de atención multi-cabeza y eliminó la necesidad de procesamiento secuencial, permitiendo paralelización eficiente.}
+}
+
+\newglossaryentry{attention}{
+	name={Atención (Attention)},
+	description={Mecanismo que permite a los modelos enfocarse en partes específicas de la entrada al procesar cada elemento. En PLN, permite que el modelo "atienda" a palabras relevantes al procesar una palabra específica.}
+}
+
+\newglossaryentry{finetuning}{
+	name={Fine-tuning},
+	description={Proceso de ajustar un modelo pre-entrenado en una tarea específica utilizando un conjunto de datos más pequeño y especializado. Permite aprovechar el conocimiento general del modelo pre-entrenado para tareas particulares.}
+}
+
+% =============================================================================
+% TÉRMINOS DE ALGORITMOS METAHEURÍSTICOS
+% =============================================================================
+
+\newglossaryentry{metaheuristica}{
+	name={Metaheurística},
+	description={Estrategia de alto nivel para guiar y modificar otras heurísticas con el objetivo de producir soluciones de alta calidad para problemas de optimización. Incluye técnicas como algoritmos genéticos, optimización por enjambre de partículas, y recocido simulado.}
+}
+
+\newglossaryentry{hiperparametro}{
+	name={Hiperparámetro},
+	description={Parámetro de configuración del modelo que se establece antes del entrenamiento y no se aprende durante el proceso de entrenamiento. Ejemplos incluyen la tasa de aprendizaje, el número de épocas, y el tamaño del batch.}
+}
+
+\newglossaryentry{funcionobjetivo}{
+	name={Función Objetivo},
+	description={Función matemática que define el criterio a optimizar en un problema. En el contexto de esta investigación, representa la métrica de rendimiento del modelo que se busca maximizar o minimizar.}
+}
+
+\newglossaryentry{espaciobusqueda}{
+	name={Espacio de Búsqueda},
+	description={Conjunto de todas las posibles configuraciones de hiperparámetros que pueden ser exploradas durante el proceso de optimización. Define los límites y restricciones para cada hiperparámetro.}
+}
+
+\newglossaryentry{convergencia}{
+	name={Convergencia},
+	description={Proceso por el cual un algoritmo de optimización se acerca progresivamente a una solución óptima o cerca del óptimo. Se evalúa observando la estabilización de la función objetivo a lo largo de las iteraciones.}
+}
+
+\newglossaryentry{exploracion}{
+	name={Exploración},
+	description={Capacidad de un algoritmo de búsqueda para investigar regiones no exploradas del espacio de soluciones, evitando quedar atrapado en óptimos locales.}
+}
+
+\newglossaryentry{explotacion}{
+	name={Explotación},
+	description={Capacidad de un algoritmo para refinar y mejorar soluciones prometedoras encontradas, concentrando la búsqueda en regiones del espacio que han mostrado buenos resultados.}
+}
+
+% =============================================================================
+% MÉTRICAS DE EVALUACIÓN
+% =============================================================================
+
+\newglossaryentry{precision}{
+	name={Precisión},
+	description={Métrica que mide la proporción de predicciones positivas que fueron correctas. Se calcula como: Precisión = VP / (VP + FP), donde VP son verdaderos positivos y FP son falsos positivos.}
+}
+
+\newglossaryentry{recall}{
+	name={Sensibilidad (Recall)},
+	description={Métrica que mide la proporción de casos positivos reales que fueron correctamente identificados. Se calcula como: Recall = VP / (VP + FN), donde FN son falsos negativos.}
+}
 
 \newglossaryentry{fscore}{
-	name=\ensuremath{2 \times \dfrac{Precision  \times Recall}{Precision + Recall}},
-	description={Métrica F1 para el clasificador}
+	name={F1-Score},
+	description={Media armónica entre precisión y recall. Se calcula como: F1 = 2 × (Precisión × Recall) / (Precisión + Recall). Proporciona una medida equilibrada del rendimiento del clasificador.}
+}
+
+\newglossaryentry{accuracy}{
+	name={Exactitud (Accuracy)},
+	description={Proporción de predicciones correctas sobre el total de predicciones. Se calcula como: Accuracy = (VP + VN) / (VP + VN + FP + FN), donde VN son verdaderos negativos.}
+}
+
+\newglossaryentry{auc}{
+	name={AUC-ROC},
+	description={Área bajo la curva ROC (Receiver Operating Characteristic). Mide la capacidad del modelo para distinguir entre clases. Un valor de 1.0 indica un clasificador perfecto, mientras que 0.5 indica rendimiento aleatorio.}
+}
+
+\newglossaryentry{matrizconfusion}{
+	name={Matriz de Confusión},
+	description={Tabla que describe el rendimiento de un modelo de clasificación mostrando las predicciones correctas e incorrectas para cada clase. Permite calcular métricas detalladas de rendimiento.}
+}
+
+% =============================================================================
+% TÉRMINOS DE DESARROLLO Y IMPLEMENTACIÓN
+% =============================================================================
+
+\newglossaryentry{webscraping}{
+	name={Web Scraping},
+	description={Técnica de extracción automatizada de datos de sitios web mediante programas que navegan y analizan el contenido HTML de las páginas web para recopilar información específica.}
+}
+
+\newglossaryentry{dataset}{
+	name={Dataset},
+	description={Conjunto estructurado de datos utilizado para entrenar, validar y probar modelos de machine learning. En esta investigación, se refiere al corpus de noticias etiquetadas como verdaderas o falsas.}
+}
+
+\newglossaryentry{corpus}{
+	name={Corpus},
+	description={Colección grande y estructurada de textos utilizados para investigación lingüística o entrenamiento de modelos de PLN. En este contexto, se refiere al conjunto unificado de noticias en español.}
+}
+
+\newglossaryentry{validacioncruzada}{
+	name={Validación Cruzada},
+	description={Técnica de evaluación que divide el dataset en múltiples subconjuntos para entrenar y validar el modelo repetidamente, proporcionando una estimación más robusta del rendimiento.}
+}
+
+\newglossaryentry{overfitting}{
+	name={Sobreajuste (Overfitting)},
+	description={Fenómeno donde un modelo aprende demasiado específicamente los datos de entrenamiento, perdiendo capacidad de generalización a datos nuevos no vistos durante el entrenamiento.}
+}
+
+\newglossaryentry{underfitting}{
+	name={Subajuste (Underfitting)},
+	description={Fenómeno donde un modelo es demasiado simple para capturar la complejidad subyacente de los datos, resultando en bajo rendimiento tanto en entrenamiento como en validación.}
+}
+
+\newglossaryentry{bias}{
+	name={Sesgo (Bias)},
+	description={Error sistemático en las predicciones del modelo que puede deberse a suposiciones erróneas en el algoritmo de aprendizaje, datos de entrenamiento no representativos, o prejuicios inherentes en el dataset.}
+}
+
+\newglossaryentry{varianza}{
+	name={Varianza},
+	description={Medida de cuánto varían las predicciones del modelo para diferentes conjuntos de entrenamiento. Alta varianza indica que el modelo es sensible a pequeños cambios en los datos de entrenamiento.}
 }
 
 \glsaddall

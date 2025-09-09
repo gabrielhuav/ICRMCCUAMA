@@ -1,7 +1,7 @@
 %!TEX root = ../ICR.tex
 \chapter{Metodología \label{cap:Metodologia}}
 
-En este capítulo se detalla el procedimiento experimental seguido para abordar el problema de la detección de noticias falsas y fraude digital en español. La metodología se diseñó con un enfoque evolutivo y comparativo, comenzando con una exploración de técnicas de optimización clásicas y culminando con la implementación de un modelo de lenguaje de última generación. El diseño del flujo de trabajo, ilustrado en la Figura \ref{fig:metodologia_general}, garantiza la reproducibilidad de los resultados al definir claramente cada una de sus etapas, desde la recopilación de datos hasta la evaluación final y la implementación de una aplicación web como solución práctica.
+En este capítulo se detalla el procedimiento experimental seguido para abordar el problema de la detección de noticias falsas en español. La metodología se diseñó con un enfoque evolutivo y comparativo, comenzando con una exploración de técnicas de optimización clásicas y culminando con la implementación de un modelo de lenguaje de última generación. El diseño del flujo de trabajo, ilustrado en la Figura \ref{fig:metodologia_general}, garantiza la reproducibilidad de los resultados al definir claramente cada una de sus etapas, desde la recopilación de datos hasta la evaluación final y la implementación de una aplicación web como solución práctica.
 
 \section{Visión General de la Metodología}
 
@@ -9,7 +9,7 @@ La estrategia metodológica de esta tesis se fundamenta en la comparación siste
 
 El primer paradigma se basa en técnicas clásicas de Procesamiento del Lenguaje Natural (PLN) con representación Bolsa de Palabras (BoW) y optimización metaheurística, mientras que el segundo emplea modelos Transformer pre-entrenados con técnicas de fine-tuning. Esta aproximación comparativa permite evaluar tanto la efectividad como la eficiencia computacional de cada enfoque en el contexto específico de la detección de desinformación en español.
 
-Una vez determinado el mejor modelo mediante las métricas de evaluación correspondientes, se procederá a desarrollar una aplicación web funcional que permita la detección automática de fraude digital en tiempo real.
+Una vez determinado el mejor modelo mediante las métricas de evaluación correspondientes, se procederá a desarrollar una aplicación web funcional que permita la detección automática de noticias falsas en tiempo real.
 
 \begin{figure}[h!]
     \centering
@@ -17,6 +17,92 @@ Una vez determinado el mejor modelo mediante las métricas de evaluación corres
     \caption{Metodología propuesta que aborda la problemática combinando Algoritmos Metaheurísticos y Modelos de Lenguaje.}
     \label{fig:metodologia_general}
 \end{figure}
+
+\section{Definición y Distinción de Conceptos Fundamentales}
+\label{sec:definicion_conceptos}
+
+Antes de proceder con la descripción metodológica, es fundamental establecer con precisión la terminología utilizada en esta investigación, particularmente la distinción entre conceptos relacionados pero diferenciados que a menudo se utilizan de manera intercambiable en la literatura.
+
+\subsection{Noticia Falsa vs. Bulo: Una Distinción Crítica}
+
+En el contexto de esta investigación, es esencial distinguir entre dos conceptos fundamentales que, aunque relacionados, poseen características distintivas importantes para el desarrollo de sistemas de detección automática.
+
+% Definir colores adicionales para las tablas de conceptos
+\definecolor{LightGreen}{RGB}{144, 238, 144}
+\definecolor{LightCoral}{RGB}{240, 128, 128}
+\definecolor{LightSkyBlue}{RGB}{135, 206, 250}
+\definecolor{LightGoldenrod}{RGB}{250, 250, 210}
+\definecolor{LightPink}{RGB}{255, 182, 193}
+
+\begin{table}[htbp]
+\centering
+\adjustbox{width=\textwidth,center}{%
+\footnotesize
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+\rowcolor{UAMPurple!20}
+\textbf{Aspecto} & \textbf{Noticia Falsa} & \textbf{Bulo} \\
+\hline
+\rowcolor{LightGreen!30}
+\textbf{Definición} & 
+\begin{tabular}[t]{@{}l@{}}Información deliberadamente fabricada\\que se presenta como noticia legítima,\\pero contiene datos falsos, inexactos\\o engañosos\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Información falsa que circula\\ampliamente, especialmente en redes\\sociales, con propósito de engañar\\a la audiencia\end{tabular} \\
+\hline
+\rowcolor{LightSkyBlue!30}
+\textbf{Formato} & 
+\begin{tabular}[t]{@{}l@{}}Apariencia de contenido periodístico\\real, formato de noticia tradicional\\con titular, cuerpo, fecha, fuente\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}No necesariamente formato\\periodístico, puede ser texto libre,\\memes, cadenas de WhatsApp\end{tabular} \\
+\hline
+\rowcolor{LightCoral!30}
+\textbf{Intención} & 
+\begin{tabular}[t]{@{}l@{}}Intención maliciosa de desinformar\\simulando legitimidad periodística\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Propósito de engañar que apela\\más a emociones que a hechos\\verificables\end{tabular} \\
+\hline
+\rowcolor{LightGoldenrod!30}
+\textbf{Propagación} & 
+\begin{tabular}[t]{@{}l@{}}Se distribuye a través de sitios\\web que simulan medios legítimos\\o plataformas de noticias\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Circulación viral en redes sociales,\\aplicaciones de mensajería,\\cadenas de reenvío\end{tabular} \\
+\hline
+\rowcolor{LightPink!30}
+\textbf{Ejemplos} & 
+\begin{tabular}[t]{@{}l@{}}Artículos con titular sensacionalista,\\byline falso, citas inventadas,\\estadísticas manipuladas\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Teorías conspirativas, información\\médica falsa, rumores políticos,\\cadenas de "urgente"\end{tabular} \\
+\hline
+\rowcolor{HeaderBlue!20}
+\textbf{Relevancia para PLN} & 
+\begin{tabular}[t]{@{}l@{}}Estructura textual más predecible,\\patrones estilísticos identificables\\en el análisis automatizado\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Variabilidad estructural mayor,\\requiere análisis semántico\\y contextual más sofisticado\end{tabular} \\
+\hline
+\end{tabular}
+}
+\caption{Comparación detallada entre noticia falsa y bulo en el contexto de detección automática.}
+\label{tab:noticia_falsa_vs_bulo}
+\end{table}
+
+\subsection{Taxonomía de la Desinformación}
+
+Para proporcionar un marco conceptual completo, esta investigación adopta la taxonomía establecida por la literatura internacional \cite{bondielli2019survey, hu2022deep}, que clasifica el contenido engañoso en tres categorías principales:
+
+\begin{enumerate}
+    \item \textbf{\gls{desinformacion}}: Información falsa creada y compartida deliberadamente con intención maliciosa
+    \item \textbf{\gls{misinformacion}}: Información incorrecta compartida sin intención maliciosa
+    \item \textbf{\gls{malinformacion}}: Información genuina compartida con intención de causar daño
+\end{enumerate}
+
+El alcance de esta investigación se centra específicamente en la detección automática de \textbf{desinformación}, abarcando tanto noticias falsas como bulos, reconociendo que ambos tipos requieren estrategias de procesamiento de lenguaje natural diferenciadas pero complementarias.
+
+\subsection{Justificación de la Unificación Terminológica}
+
+En el contexto del desarrollo de sistemas automáticos de detección, la distinción entre noticia falsa y bulo, aunque conceptualmente importante, se aborda mediante un enfoque unificado de \textbf{detección de contenido desinformativo}. Esta decisión metodológica se fundamenta en:
+
+\begin{itemize}
+    \item \textbf{Características textuales compartidas}: Ambos tipos utilizan patrones lingüísticos identificables mediante técnicas de PLN
+    \item \textbf{Objetivo común}: La finalidad de engañar o desinformar a la audiencia
+    \item \textbf{Impacto social similar}: Efectos negativos en la percepción pública y toma de decisiones
+    \item \textbf{Necesidad práctica}: Los sistemas de detección automática deben ser capaces de identificar ambos tipos
+\end{itemize}
+
+Por tanto, en el resto de este documento, el término \textbf{``noticias falsas''} se utilizará de manera inclusiva para referirse a cualquier tipo de contenido desinformativo, reconociendo la diversidad de formatos y estrategias de propagación que abarca esta categorización.
 
 \section{Construcción del Corpus Unificado}
 \label{sec:construccion_corpus}

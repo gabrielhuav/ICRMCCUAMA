@@ -469,6 +469,78 @@ La Tabla \ref{tab:algoritmos_metaheuristicos} resume las características princi
 
 Estos algoritmos han demostrado ser especialmente valiosos en el contexto de la detección de noticias falsas, donde los espacios de búsqueda de hiperparámetros son complejos y multidimensionales. Su capacidad para balancear exploración y explotación los convierte en herramientas ideales para optimizar el rendimiento de modelos de aprendizaje automático en tareas de clasificación textual.
 
+\subsection{Aplicación de Metaheurísticas por Tipo de Detección}
+\label{subsec:metaheuristicas_por_tipo}
+
+La literatura revisada revela patrones específicos en la aplicación de algoritmos metaheurísticos según el tipo de detección y el dominio del problema. La Tabla \ref{tab:metaheuristicas_deteccion} presenta una taxonomía detallada de estas aplicaciones.
+
+\begin{table}[htbp]
+\centering
+\adjustbox{width=\textwidth,center}{%
+\small
+\begin{tabular}{|l|l|l|l|c|}
+\hline
+\rowcolor{UAMPurple!20}
+\textbf{Tipo de Detección} & \textbf{Metaheurística Empleada} & \textbf{Aplicación Específica} & \textbf{Autores} & \textbf{Ref.} \\
+\hline
+\begin{tabular}[t]{@{}l@{}}Detección de\\Noticias Falsas\end{tabular} & \begin{tabular}[t]{@{}l@{}}Algoritmo Genético (GA),\\Colonia de Abejas (ABC),\\Búsqueda Iterativa (IG)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Planificación de tareas\\para procesamiento\\de documentos\end{tabular} & Aqil, S. \& Lahby, M. & \cite{aqil2021modeling} \\
+\hline
+\begin{tabular}[t]{@{}l@{}}Detección de\\Reseñas Falsas\end{tabular} & \begin{tabular}[t]{@{}l@{}}Optimización por\\Enjambre de Partículas\\Adaptativo (PSO)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Optimización de\\hiperparámetros en\\redes CNN\end{tabular} & \begin{tabular}[t]{@{}l@{}}Deshai, N. \&\\Rao, B. B.\end{tabular} & \cite{deshai2023unmasking} \\
+\hline
+\begin{tabular}[t]{@{}l@{}}Fraude Financiero\\y de Estados\\Financieros\end{tabular} & \begin{tabular}[t]{@{}l@{}}Algoritmos Genéticos,\\Optimización por\\Enjambre de Partículas,\\Recocido Simulado\end{tabular} & \begin{tabular}[t]{@{}l@{}}Selección de características\\y optimización de\\clasificadores SVM\end{tabular} & \begin{tabular}[t]{@{}l@{}}Hidayattullah, S.\\et al.\end{tabular} & \cite{hidayattullah2020financial} \\
+\hline
+\begin{tabular}[t]{@{}l@{}}Predicción de\\Dificultades\\Financieras\end{tabular} & \begin{tabular}[t]{@{}l@{}}Optimización Bayesiana\\con Procesos\\Gaussianos\end{tabular} & \begin{tabular}[t]{@{}l@{}}Calibración de\\hiperparámetros\\en modelos GPR\end{tabular} & \begin{tabular}[t]{@{}l@{}}Horak, J. \&\\Sabek, A.\end{tabular} & \cite{horak2023gaussian} \\
+\hline
+\begin{tabular}[t]{@{}l@{}}Detección de\\Fraude Laboral\end{tabular} & \begin{tabular}[t]{@{}l@{}}Redes Neuronales\\Artificiales (ANN)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Clasificación de\\ofertas de empleo\\fraudulentas\end{tabular} & \begin{tabular}[t]{@{}l@{}}Nasser, I. M.\\et al.\end{tabular} & \cite{nasser2021online} \\
+\hline
+\begin{tabular}[t]{@{}l@{}}Optimización de\\Modelos de Energía\end{tabular} & \begin{tabular}[t]{@{}l@{}}Algoritmo Genético\\Binario, PSO, Recocido\\Simulado, Búsqueda\\Armónica\end{tabular} & \begin{tabular}[t]{@{}l@{}}Ajuste de hiperparámetros\\en modelos LSTM\\para predicción energética\end{tabular} & \begin{tabular}[t]{@{}l@{}}Bacanin, N.\\et al.\end{tabular} & \cite{bacanin2023benefits} \\
+\hline
+\begin{tabular}[t]{@{}l@{}}Detección Multimodal\\de Noticias Falsas\end{tabular} & \begin{tabular}[t]{@{}l@{}}Enfoque Híbrido\\Multi-hilo con\\Metaheurísticas\end{tabular} & \begin{tabular}[t]{@{}l@{}}Optimización paralela\\de características\\textuales y visuales\end{tabular} & Yildirim, G. & \cite{yildirim2023novel} \\
+\hline
+\begin{tabular}[t]{@{}l@{}}Selección de\\Características\\para Fake News\end{tabular} & \begin{tabular}[t]{@{}l@{}}K-Means combinado\\con Support Vector\\Machine (SVM)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Reducción de\\dimensionalidad\\y mejora de precisión\end{tabular} & \begin{tabular}[t]{@{}l@{}}Yazdi, K. M.\\et al.\end{tabular} & \cite{yazdi2020improving} \\
+\hline
+\begin{tabular}[t]{@{}l@{}}Framework de\\Incertidumbre\\para Fake News\end{tabular} & \begin{tabular}[t]{@{}l@{}}Enfoque Heurístico\\basado en Ensemble\end{tabular} & \begin{tabular}[t]{@{}l@{}}Manejo de incertidumbre\\en clasificación de\\tweets y artículos\end{tabular} & \begin{tabular}[t]{@{}l@{}}Das, S. D.\\et al.\end{tabular} & \cite{das2022heuristic} \\
+\hline
+\begin{tabular}[t]{@{}l@{}}Optimización de\\Dominación Total\\en Redes Sociales\end{tabular} & \begin{tabular}[t]{@{}l@{}}Búsqueda en\\Vecindades Variables\\(VNS)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Propagación de\\información en\\redes sociales\end{tabular} & \begin{tabular}[t]{@{}l@{}}Kapunac, S.\\et al.\end{tabular} & \cite{kapunac2023variable} \\
+\hline
+\begin{tabular}[t]{@{}l@{}}Estimación de\\Esfuerzo en\\Proyectos\end{tabular} & \begin{tabular}[t]{@{}l@{}}Ensemble con\\Metaheurísticas\\para Pesos\end{tabular} & \begin{tabular}[t]{@{}l@{}}Optimización de\\hiperparámetros\\y pesos de ensemble\end{tabular} & \begin{tabular}[t]{@{}l@{}}Yasmin, A.\\et al.\end{tabular} & \cite{yasmin2024ensemble} \\
+\hline
+\end{tabular}
+}
+\caption{Aplicación de metaheurísticas por tipo de detección en la literatura revisada.}
+\label{tab:metaheuristicas_deteccion}
+\end{table}
+
+\subsubsection{Patrones Identificados por Dominio}
+
+Del análisis de la literatura se identifican tres patrones principales en la aplicación de metaheurísticas:
+
+\paragraph{Detección de Contenido Textual}
+Para la detección de noticias falsas y contenido textual fraudulento, predominan los enfoques que combinan:
+\begin{itemize}
+    \item \textbf{Algoritmos Genéticos}: Utilizados principalmente para selección de características y optimización de arquitecturas de modelos \cite{aqil2021modeling, hidayattullah2020financial}
+    \item \textbf{PSO Adaptativo}: Especialmente efectivo para la calibración de hiperparámetros en redes neuronales complejas \cite{deshai2023unmasking, bacanin2023benefits}
+    \item \textbf{Enfoques Híbridos}: Combinación de múltiples metaheurísticas para diferentes aspectos del pipeline de detección \cite{yildirim2023novel}
+\end{itemize}
+
+\paragraph{Optimización de Modelos de Aprendizaje Profundo}
+En aplicaciones que involucran modelos de aprendizaje profundo, se observa una preferencia por:
+\begin{itemize}
+    \item \textbf{Recocido Simulado}: Para escapar de óptimos locales en espacios de hiperparámetros complejos \cite{bacanin2023benefits}
+    \item \textbf{Optimización Bayesiana}: Para calibración eficiente en modelos probabilísticos \cite{horak2023gaussian}
+    \item \textbf{Búsqueda en Vecindades Variables}: Para exploración sistemática de configuraciones de red \cite{kapunac2023variable}
+\end{itemize}
+
+\paragraph{Sistemas de Detección en Tiempo Real}
+Para aplicaciones que requieren procesamiento en tiempo real, las metaheurísticas se enfocan en:
+\begin{itemize}
+    \item \textbf{Algoritmos de Planificación}: Como IG (Iterated Greedy) para optimización de tareas de procesamiento \cite{aqil2021modeling}
+    \item \textbf{Métodos Ensemble}: Con optimización de pesos mediante metaheurísticas \cite{das2022heuristic, yasmin2024ensemble}
+    \item \textbf{Enfoques Multi-hilo}: Para paralelización de la optimización en sistemas multimodales \cite{yildirim2023novel}
+\end{itemize}
+
+Esta taxonomía revela que la elección de la metaheurística está fuertemente influenciada por el tipo de modelo subyacente, las características del conjunto de datos, y los requisitos de rendimiento temporal del sistema de detección.
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{Imagenes/mapaConceptual5.png}

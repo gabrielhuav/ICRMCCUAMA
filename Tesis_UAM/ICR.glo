@@ -1,2 +1,65 @@
 \glossaryentry{ICR?\glossentry{icr}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
-\glossaryentry{"\ensuremath {2 "\times "\dfrac {Precision "\times Recall}{Precision + Recall}}?\glossentry{fscore}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{PLN?\glossentry{pln}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{NLP?\glossentry{nlp}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{BoW?\glossentry{bow}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{TF-IDF?\glossentry{tfidf}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{BERT?\glossentry{bert}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{GPT?\glossentry{gpt}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{RNN?\glossentry{rnn}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{LSTM?\glossentry{lstm}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{CNN?\glossentry{cnn}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{SVM?\glossentry{svm}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{AG?\glossentry{ag}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{PSO?\glossentry{pso}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{VNS?\glossentry{vns}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{SS?\glossentry{ss}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{IA?\glossentry{ia}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{ML?\glossentry{ml}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{DL?\glossentry{dl}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{API?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{CSV?\glossentry{csv}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{JSON?\glossentry{json}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{HTML?\glossentry{html}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{CSS?\glossentry{css}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{HTTP?\glossentry{http}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{URL?\glossentry{url}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Noticia Falsa?\glossentry{noticiafalsa}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Bulo?\glossentry{bulo}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Desinformación?\glossentry{desinformacion}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Desinformación (Misinformation)?\glossentry{misinformacion}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Información Maliciosa (Malinformation)?\glossentry{malinformacion}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Verificación de Hechos (Fact-Checking)?\glossentry{factchecking}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Deepfake?\glossentry{deepfake}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Tokenización?\glossentry{tokenizacion}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Stemming?\glossentry{stemming}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Lematización?\glossentry{lemmatization}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Palabras Vacías (Stop Words)?\glossentry{stopwords}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Embedding?\glossentry{embedding}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Transformer?\glossentry{transformer}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Atención (Attention)?\glossentry{attention}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Fine-tuning?\glossentry{finetuning}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Metaheurística?\glossentry{metaheuristica}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Hiperparámetro?\glossentry{hiperparametro}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Función Objetivo?\glossentry{funcionobjetivo}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Espacio de Búsqueda?\glossentry{espaciobusqueda}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Convergencia?\glossentry{convergencia}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Exploración?\glossentry{exploracion}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Explotación?\glossentry{explotacion}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Precisión?\glossentry{precision}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Sensibilidad (Recall)?\glossentry{recall}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{F1-Score?\glossentry{fscore}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Exactitud (Accuracy)?\glossentry{accuracy}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{AUC-ROC?\glossentry{auc}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Matriz de Confusión?\glossentry{matrizconfusion}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Web Scraping?\glossentry{webscraping}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Dataset?\glossentry{dataset}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Corpus?\glossentry{corpus}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Validación Cruzada?\glossentry{validacioncruzada}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Sobreajuste (Overfitting)?\glossentry{overfitting}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Subajuste (Underfitting)?\glossentry{underfitting}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Sesgo (Bias)?\glossentry{bias}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Varianza?\glossentry{varianza}|setentrycounter[]{page}"\glsnumberformat}{\es@scroman  {i}}
+\glossaryentry{Desinformación?\glossentry{desinformacion}|setentrycounter[]{page}"\glsnumberformat}{44}
+\glossaryentry{Desinformación (Misinformation)?\glossentry{misinformacion}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{Información Maliciosa (Malinformation)?\glossentry{malinformacion}|setentrycounter[]{page}"\glsnumberformat}{45}
