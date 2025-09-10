@@ -26,8 +26,8 @@
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Evolución de la exactitud y pérdida durante el entrenamiento del modelo DistilBERT V7. Las líneas azul y roja muestran la convergencia en entrenamiento y validación respectivamente. La estrella dorada marca la mejor época (13), después de la cual se observa el inicio del overfitting con una separación creciente entre las curvas.}}{121}{figure.5.11}%
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Evolución de exactitud a través de las versiones experimentales.}}{126}{figure.5.12}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Captura de pantalla de la aplicación analizando una noticia real.}}{135}{figure.6.1}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Captura de pantalla de la aplicación detectando una noticia falsa basada en su contenido.}}{135}{figure.6.2}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Captura de pantalla de la aplicación detectando una página de fraude digital.}}{136}{figure.6.3}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Captura de pantalla de la aplicación analizando una noticia real.}}{137}{figure.6.1}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Captura de pantalla de la aplicación detectando una noticia falsa basada en su contenido.}}{137}{figure.6.2}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Captura de pantalla de la aplicación detectando una página de fraude digital.}}{138}{figure.6.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

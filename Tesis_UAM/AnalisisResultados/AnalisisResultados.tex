@@ -1253,3 +1253,112 @@ El modelo DistilBERT demostró superioridad categórica sobre enfoques metaheur�
 \end{itemize}
 
 Los resultados establecen definitivamente la superioridad de modelos Transformer para detección de noticias falsas en español, justificando la transición desde enfoques tradicionales hacia arquitecturas de aprendizaje profundo especializadas.
+
+\section{Análisis de Errores y Limitaciones del Modelo}
+
+\subsection{Marco Teórico para el Análisis de Errores}
+
+El análisis de errores en sistemas de clasificación de noticias falsas es fundamental para comprender las limitaciones del modelo y identificar áreas de mejora. Aunque el modelo DistilBERT alcanzó un rendimiento excelente (95.2\% de exactitud), es crucial examinar los casos donde falla para entender mejor los desafíos inherentes en la detección de desinformación.
+
+\subsection{Metodología Propuesta para Análisis Cualitativo}
+
+Para realizar un análisis cualitativo profundo de los errores del modelo, se propone la siguiente metodología sistemática que podría implementarse en investigaciones futuras:
+
+\subsubsection{Procedimiento de Análisis Recomendado}
+
+\begin{enumerate}
+    \item \textbf{Extracción de errores:} Identificación sistemática de todos los Falsos Positivos (FP) y Falsos Negativos (FN) del conjunto de prueba
+    \item \textbf{Muestreo estadístico:} Selección de una muestra representativa de errores para análisis manual detallado
+    \item \textbf{Categorización temática:} Clasificación de errores por dominio (política, salud, tecnología, etc.)
+    \item \textbf{Análisis lingüístico:} Identificación de patrones en estructura sintáctica, vocabulario y estilo
+    \item \textbf{Validación de etiquetas:} Verificación de la calidad del etiquetado original en casos ambiguos
+\end{enumerate}
+
+\subsection{Tipos de Errores Esperados según la Literatura}
+
+Basándose en estudios previos en detección de noticias falsas \cite{posadas2019detection, blanco2024enhancing}, se pueden anticipar los siguientes tipos de errores:
+
+\subsubsection{Falsos Positivos Potenciales}
+
+Los Falsos Positivos (noticias reales clasificadas como falsas) típicamente ocurren en:
+
+\begin{itemize}
+    \item \textbf{Noticias sensacionalistas legítimas:} Titulares llamativos de deportes o entretenimiento que usan lenguaje emocional intenso
+    \item \textbf{Noticias científicas complejas:} Reportes de investigación con resultados contraintuitivos o terminología técnica
+    \item \textbf{Eventos inusuales pero verificados:} Sucesos extraordinarios que pueden parecer improbables
+    \item \textbf{Noticias de última hora:} Información preliminar con datos no completamente confirmados
+    \item \textbf{Contenido satírico serio:} Crítica social intensa que mantiene estructura periodística
+\end{itemize}
+
+\subsubsection{Falsos Negativos Potenciales}
+
+Los Falsos Negativos (noticias falsas clasificadas como reales) pueden incluir:
+
+\begin{itemize}
+    \item \textbf{Desinformación sofisticada:} Contenido falso que imita perfectamente el estilo periodístico profesional
+    \item \textbf{Verdades parciales:} Información que mezcla hechos reales con conclusiones falsas
+    \item \textbf{Propaganda sutil:} Sesgo ideológico encubierto con selección tendenciosa de hechos
+    \item \textbf{Desinformación técnica:} Pseudociencia sofisticada en dominios especializados
+    \item \textbf{Contenido satírico ambiguo:} Sátira sin indicadores claros de su naturaleza ficticia
+\end{itemize}
+
+\subsection{Limitaciones Reconocidas del Modelo}
+
+\subsubsection{Limitaciones Inherentes}
+
+El modelo DistilBERT, a pesar de su excelente rendimiento, presenta limitaciones conocidas:
+
+\begin{enumerate}
+    \item \textbf{Dependencia del contexto de entrenamiento:} El modelo está limitado por la calidad y diversidad del corpus de entrenamiento
+    \item \textbf{Falta de verificación factual:} No puede verificar la veracidad de afirmaciones específicas contra fuentes externas
+    \item \textbf{Sensibilidad al dominio:} El rendimiento puede variar entre diferentes temas o estilos de escritura
+    \item \textbf{Evolución de la desinformación:} Las técnicas de creación de contenido falso evolucionan constantemente
+    \item \textbf{Ambigüedad contextual:} Dificultad para procesar casos que requieren conocimiento del mundo real
+\end{enumerate}
+
+\subsubsection{Estrategias de Mejora Propuestas}
+
+Para abordar las limitaciones identificadas, se sugiere:
+
+\begin{table}[htbp]
+\centering
+\adjustbox{width=\textwidth,center}{%
+\small
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{UAMPurple!20}
+\textbf{Limitación} & \textbf{Estrategia de Mejora} & \textbf{Implementación Sugerida} \\
+\hline
+\rowcolor{LightCoral!30}
+\textbf{Corpus limitado} & Ampliación con datos diversos & Incorporar más fuentes y dominios \\
+\hline
+\rowcolor{LightBlue!30}
+\textbf{Falta verificación factual} & Integración con bases de datos & APIs de verificación de hechos \\
+\hline
+\rowcolor{LightGreen!30}
+\textbf{Sensibilidad al dominio} & Entrenamiento multitarea & Modelos especializados por tema \\
+\hline
+\rowcolor{LightYellow!30}
+\textbf{Evolución de desinformación} & Aprendizaje continuo & Actualización regular del modelo \\
+\hline
+\rowcolor{LightPink!30}
+\textbf{Ambigüedad contextual} & Incorporación de contexto externo & Modelos multimodales \\
+\hline
+\end{tabular}
+}
+\caption{Estrategias propuestas para abordar limitaciones identificadas.}
+\label{tab:estrategias_mejora}
+\end{table}
+
+\subsection{Conclusiones sobre Limitaciones y Direcciones Futuras}
+
+Este análisis teórico de errores y limitaciones proporciona un marco para entender los desafíos en la detección automática de noticias falsas. Aunque el modelo desarrollado alcanza un rendimiento excelente, es importante reconocer que:
+
+\begin{enumerate}
+    \item \textbf{Ningún modelo es perfecto:} Los errores son inevitables y proporcionan información valiosa
+    \item \textbf{La desinformación evoluciona:} Los sistemas deben adaptarse continuamente
+    \item \textbf{El contexto importa:} La clasificación efectiva requiere comprensión contextual profunda
+    \item \textbf{La validación humana es crucial:} Los sistemas automatizados deben complementar, no reemplazar, el juicio humano
+\end{enumerate}
+
+Futuras investigaciones deberían implementar el análisis empírico propuesto para validar estas consideraciones teóricas y desarrollar estrategias de mejora específicas basadas en datos reales de errores del modelo.
