@@ -352,18 +352,6 @@ F.~Alam, A.~Barrón-Cedeño, G.~S. Cheema, G.~K. Shahi, S.~Hakimov,
 \newblock URL \url{https://dclibrary.mbzuai.ac.ae/nlpfp/78/}.
 \newblock Recuperado el 05 de julio de 2024.
 
-\bibitem[Aragón et~al.(2020)Aragón, Jarquín, Gómez, Escalante,
-  Villaseñor-Pineda, Gómez-Adorno, others, and
-  Posadas-Durán]{aragon2020overview}
-M.~E. Aragón, H.~Jarquín, M.~M.~Y. Gómez, H.~J. Escalante,
-  L.~Villaseñor-Pineda, H.~Gómez-Adorno, others, and J.~P. Posadas-Durán.
-\newblock Overview of mex-a3t at iberlef 2020: Fake news and aggressiveness
-  analysis in mexican {Spanish}.
-\newblock In \emph{Notebook Papers of 2nd SEPLN Workshop on Iberian Languages
-  Evaluation Forum (IberLEF)}, Malaga, España, September 2020.
-\newblock URL \url{https://openreview.net/forum?id=vkjfS0w2hu}.
-\newblock Recuperado el 06 de julio de 2024.
-
 \bibitem[Barrón-Cedeño et~al.(2023)Barrón-Cedeño, Alam, Caselli,
   Da~San~Martino, Elsayed, Galassi, others, and Nakov]{barron2023clef}
 A.~Barrón-Cedeño, F.~Alam, T.~Caselli, G.~Da~San~Martino, T.~Elsayed,
@@ -375,6 +363,18 @@ A.~Barrón-Cedeño, F.~Alam, T.~Caselli, G.~Da~San~Martino, T.~Elsayed,
   2023.
 \newblock \doi{10.1007/978-3-031-28241-6_59}.
 \newblock URL \url{https://doi.org/10.1007/978-3-031-28241-6_59}.
+
+\bibitem[Aragón et~al.(2020)Aragón, Jarquín, Gómez, Escalante,
+  Villaseñor-Pineda, Gómez-Adorno, others, and
+  Posadas-Durán]{aragon2020overview}
+M.~E. Aragón, H.~Jarquín, M.~M.~Y. Gómez, H.~J. Escalante,
+  L.~Villaseñor-Pineda, H.~Gómez-Adorno, others, and J.~P. Posadas-Durán.
+\newblock Overview of mex-a3t at iberlef 2020: Fake news and aggressiveness
+  analysis in mexican {Spanish}.
+\newblock In \emph{Notebook Papers of 2nd SEPLN Workshop on Iberian Languages
+  Evaluation Forum (IberLEF)}, Malaga, España, September 2020.
+\newblock URL \url{https://openreview.net/forum?id=vkjfS0w2hu}.
+\newblock Recuperado el 06 de julio de 2024.
 
 \bibitem[Gómez-Adorno et~al.(2021)Gómez-Adorno, Posadas-Durán, Enguix, and
   Capetillo]{gomez2021overview}
@@ -395,30 +395,6 @@ J.~M. Ramírez~Cruz, S.~Ú. Palacios~Alvarado, K.~E. Franca~Tapia, J.~P.~F.
 \newblock URL \url{https://github.com/jpposadas/FakeNewsCorpusSpanish}.
 \newblock Recuperado el 10 de julio de 2024.
 
-\bibitem[Whitehouse et~al.(2022)Whitehouse, Weyde, Madhyastha, and
-  Komninos]{whitehouse2022evaluation}
-C.~Whitehouse, T.~Weyde, P.~Madhyastha, and N.~Komninos.
-\newblock Evaluation of fake news detection with knowledge-enhanced language
-  models, April 2022.
-\newblock URL \url{https://arxiv.org/abs/2204.00458}.
-
-\bibitem[Kapunac et~al.(2023)Kapunac, Kartelj, and
-  Djukanović]{kapunac2023variable}
-S.~Kapunac, A.~Kartelj, and M.~Djukanović.
-\newblock Variable neighborhood search for weighted total domination problem
-  and its application in social network information spreading.
-\newblock \emph{Applied Soft Computing}, 143:\penalty0 110387, 2023.
-\newblock \doi{10.1016/j.asoc.2023.110387}.
-\newblock URL \url{https://doi.org/10.1016/j.asoc.2023.110387}.
-
-\bibitem[Yasmin et~al.(2024)Yasmin, Haider~Butt, and Daud]{yasmin2024ensemble}
-A.~Yasmin, W.~Haider~Butt, and A.~Daud.
-\newblock Ensemble effort estimation with metaheuristic hyperparameters and
-  weight optimization for achieving accuracy.
-\newblock \emph{PLOS ONE}, 19\penalty0 (4):\penalty0 e0300296, 2024.
-\newblock \doi{10.1371/journal.pone.0300296}.
-\newblock URL \url{https://doi.org/10.1371/journal.pone.0300296}.
-
 \bibitem[Yazdi et~al.(2020)Yazdi, Yazdi, Khodayi, Hou, Zhou, and
   Saedy]{yazdi2020improving}
 K.~M. Yazdi, A.~M. Yazdi, S.~Khodayi, J.~Hou, W.~Zhou, and S.~Saedy.
@@ -428,144 +404,13 @@ K.~M. Yazdi, A.~M. Yazdi, S.~Khodayi, J.~Hou, W.~Zhou, and S.~Saedy.
   \url{https://publications.waset.org/10011058/improving-fake-news-detection-using-k-means-and-support-vector-machine-approaches}.
 \newblock Recuperado el 05 de julio de 2024.
 
-\bibitem[Mridha et~al.(2021)Mridha, Keya, Hamid, Monowar, and
-  Rahman]{mridha2021comprehensive}
-M.~F. Mridha, A.~J. Keya, M.~A. Hamid, M.~M. Monowar, and M.~S. Rahman.
-\newblock A comprehensive review on fake news detection with deep learning.
-\newblock \emph{IEEE Access}, 9:\penalty0 156151--156170, 2021.
-\newblock \doi{10.1109/ACCESS.2021.3129329}.
-\newblock URL \url{https://doi.org/10.1109/ACCESS.2021.3129329}.
-
-\bibitem[Aguirre~Quezada(2023)]{aguirre2023fraude}
-J.~P. Aguirre~Quezada.
-\newblock El fraude en méxico: daños patrimoniales y trabajo legislativo para
-  enfrentarlo.
-\newblock Technical report, Senado de México, 2023.
-\newblock URL
-  \url{http://bibliodigitalibd.senado.gob.mx/handle/123456789/6051}.
-\newblock Recuperado el 05 de julio de 2024.
-
-\bibitem[Alvarez(2021)]{alvarez2021fraude}
-O.~H. Alvarez.
-\newblock Fraude laboral en la era digital.
-\newblock \emph{Revista General de Derecho del Trabajo y de la Seguridad
-  Social}, \penalty0 (59), 2021.
-\newblock ISSN 1696-9626.
-\newblock URL
-  \url{https://dialnet.unirioja.es/servlet/articulo?codigo=8029600}.
-\newblock Recuperado el 06 de julio de 2024.
-
-\bibitem[Osorio-Giraldo et~al.(2023)Osorio-Giraldo, Ropain-Zambrano,
-  Taba-Pulgarin, and de~Jesús Osorio-Orozco]{osorio2023proyecto}
-J.~M. Osorio-Giraldo, C.~J. Ropain-Zambrano, A.~F. Taba-Pulgarin, and
-  A.~de~Jesús Osorio-Orozco.
-\newblock 10. proyecto de seguridad para reducir fraudes y robos en marketplace
-  de facebook.
-\newblock In \emph{Coloquio de Investigación Formativa 2023-1}, page~89, 2023.
-\newblock URL
-  \url{https://ridum.umanizales.edu.co/xmlui/bitstream/handle/20.500.12746/6834/CIF%202023-1%20-%20Res%C3%BAmenes%20ejecutivos_RIDUM.pdf?sequence=1&isAllowed=y#page=89}.
-\newblock Recuperado el 05 de julio de 2024.
-
-\bibitem[Villamil~Arcos(2022)]{villamil2022seleccion}
-C.~Villamil~Arcos.
-\newblock Selección de una técnica de aprendizaje de máquina para la
-  detección de fraude financiero digital enfocado a transacciones no
-  autorizadas o consentidas.
-\newblock Master's thesis, Universidad Nacional de Colombia, 2022.
-\newblock URL \url{https://repositorio.unal.edu.co/handle/unal/84015}.
-\newblock Recuperado el 05 de julio de 2024.
-
-\bibitem[Ehrlinger and Wöß(2016)]{ehrlinger2016towards}
-L.~Ehrlinger and W.~Wöß.
-\newblock Towards a definition of knowledge graphs.
-\newblock In \emph{SEMANTiCS (Posters, Demos, SuCCESS)}, 2016.
-\newblock URL
-  \url{https://www.researchgate.net/publication/323316736_Towards_a_Definition_of_Knowledge_Graphs}.
-\newblock Recuperado el 06 de julio de 2024.
-
-\bibitem[García~Robledo et~al.(2020)García~Robledo, Reyes-Ortiz, and
-  González-Beltrán]{garcia2020interfaz}
-G.~A. García~Robledo, J.~A. Reyes-Ortiz, and B.~A. González-Beltrán.
-\newblock Interfaz de consulta en idioma español para la búsqueda de
-  información en un ambiente académico.
-\newblock Tesis de maestría en ciencias de la computación, Universidad
-  Autónoma Metropolitana, 2020.
-\newblock URL \url{https://zaloamati.azc.uam.mx/handle/11191/7812}.
-\newblock Recuperado el 07 de julio de 2024.
-
-\bibitem[Hurtado~Avilés et~al.(2024{\natexlab{b}})Hurtado~Avilés,
-  Villa~Vargas, Tapia~Hernández, Rivera~Sanabria, and
-  Jaimes~Ponce]{hurtado2024representacion}
-G.~Hurtado~Avilés, J.~M. Villa~Vargas, S.~Tapia~Hernández, A.~Á.
-  Rivera~Sanabria, and J.~M. Jaimes~Ponce.
-\newblock Representación ontológica de la arquitectura de control de un robot
-  {SCARA} utilizando {IoT} y {MATLAB}.
-\newblock In M.~Tovar~Vidal, A.~L. Lezama~Sánchez, and M.~Contreras~González,
-  editors, \emph{Avances recientes en procesamiento de lenguaje natural y otras
-  áreas afines}. Benemérita Universidad Autónoma de Puebla,
-  2024{\natexlab{b}}.
-\newblock ISBN 978-607-5914-56-5.
-
-\bibitem[Levesque(1986)]{levesque1986knowledge}
-H.~J. Levesque.
-\newblock Knowledge representation and reasoning.
-\newblock \emph{Annual review of computer science}, 1\penalty0 (1):\penalty0
-  255--287, 1986.
-\newblock \doi{10.1146/annurev.cs.01.060186.001351}.
-\newblock URL \url{https://doi.org/10.1146/annurev.cs.01.060186.001351}.
-
-\bibitem[Liddy(2001)]{liddy2001natural}
-E.~D. Liddy.
-\newblock Natural language processing.
-\newblock Technical report, Syracuse University, 2001.
-\newblock URL \url{https://surface.syr.edu/istpub/63/}.
-\newblock Recuperado el 05 de julio de 2024.
-
-\bibitem[Manzano-Velasco and Daza-Rosero(2024)]{manzano2024sistema}
-C.~E. Manzano-Velasco and L.~S. Daza-Rosero.
-\newblock Sistema de alerta temprana para monitorear la propagación de
-  noticias falsas: caso de estudio contexto político colombiano.
-\newblock Trabajo grado, Universidad del Cauca, 2024.
-\newblock URL
-  \url{http://repositorio.unicauca.edu.co:8080/xmlui/handle/123456789/9485}.
-\newblock Recuperado el 07 de julio de 2024.
-
-\bibitem[Padilla~Cuevas et~al.(2019)Padilla~Cuevas, Reyes-Ortiz, and
-  Bravo]{padilla2019deteccion}
-J.~Padilla~Cuevas, J.~A. Reyes-Ortiz, and M.~Bravo.
-\newblock Detección y representación de eventos en un ambiente académico
-  inteligente.
-\newblock Tesis de maestría en ciencias de la computación, Universidad
-  Autónoma Metropolitana, 2019.
-\newblock URL \url{https://zaloamati.azc.uam.mx/handle/11191/6124}.
-\newblock Recuperado el 06 de julio de 2024.
-
-\bibitem[Reyes-Ortiz(2008)]{reyes2008extraccion}
-J.~A. Reyes-Ortiz.
-\newblock Extracción de información semántica para la clasificación de
-  servicios web.
-\newblock Tesis de maestría en ciencias en ciencias de la computación, Centro
-  Nacional de Investigación y Desarrollo Tecnológico, 2008.
-\newblock URL
-  \url{https://www.cenidet.edu.mx/subplan/biblio/seleccion/Tesis/MC%20Jos%E9%20Alejandro%20Reyes%20Ortiz%202008.pdf}.
-\newblock Recuperado el 07 de julio de 2024.
-
-\bibitem[Reyes-Ortiz et~al.(2015)Reyes-Ortiz, González-Beltrán, and
-  Gallardo-López]{reyes2015clinical}
-J.~A. Reyes-Ortiz, B.~A. González-Beltrán, and L.~Gallardo-López.
-\newblock Clinical decision support systems: A survey of {NLP}-based approaches
-  from unstructured data.
-\newblock In \emph{2015 26th International Workshop on Database and Expert
-  Systems Applications (DEXA)}, pages 163--167, Valencia, Spain, 2015.
-\newblock \doi{10.1109/DEXA.2015.47}.
-\newblock URL \url{https://doi.org/10.1109/DEXA.2015.47}.
-
-\bibitem[Shapiro(2006)]{shapiro2006knowledge}
-S.~C. Shapiro.
-\newblock Knowledge representation.
-\newblock In \emph{Encyclopedia of cognitive science}. Wiley, 2006.
-\newblock \doi{10.1002/0470018860.s00058}.
-\newblock URL \url{https://doi.org/10.1002/0470018860.s00058}.
+\bibitem[Yasmin et~al.(2024)Yasmin, Haider~Butt, and Daud]{yasmin2024ensemble}
+A.~Yasmin, W.~Haider~Butt, and A.~Daud.
+\newblock Ensemble effort estimation with metaheuristic hyperparameters and
+  weight optimization for achieving accuracy.
+\newblock \emph{PLOS ONE}, 19\penalty0 (4):\penalty0 e0300296, 2024.
+\newblock \doi{10.1371/journal.pone.0300296}.
+\newblock URL \url{https://doi.org/10.1371/journal.pone.0300296}.
 
 \bibitem[Holland(1992)]{holland1992adaptation}
 J.~H. Holland.
@@ -632,6 +477,25 @@ T.~O'Malley, E.~Bursztein, J.~Long, F.~Chollet, H.~Jin, L.~Invernizzi, and {The
   \url{https://blog.tensorflow.org/2020/01/hyperparameter-tuning-with-keras-tuner.html}.
 \newblock Recuperado el 29 de enero de 2020.
 
+\bibitem[Kapunac et~al.(2023)Kapunac, Kartelj, and
+  Djukanović]{kapunac2023variable}
+S.~Kapunac, A.~Kartelj, and M.~Djukanović.
+\newblock Variable neighborhood search for weighted total domination problem
+  and its application in social network information spreading.
+\newblock \emph{Applied Soft Computing}, 143:\penalty0 110387, 2023.
+\newblock \doi{10.1016/j.asoc.2023.110387}.
+\newblock URL \url{https://doi.org/10.1016/j.asoc.2023.110387}.
+
+\bibitem[Alvarez(2021)]{alvarez2021fraude}
+O.~H. Alvarez.
+\newblock Fraude laboral en la era digital.
+\newblock \emph{Revista General de Derecho del Trabajo y de la Seguridad
+  Social}, \penalty0 (59), 2021.
+\newblock ISSN 1696-9626.
+\newblock URL
+  \url{https://dialnet.unirioja.es/servlet/articulo?codigo=8029600}.
+\newblock Recuperado el 06 de julio de 2024.
+
 \bibitem[Acosta(2019{\natexlab{b}})]{acosta2019dataset}
 Fabricio Andrés~Zules Acosta.
 \newblock {DataSet Web scraping noticias verificadas}.
@@ -664,6 +528,61 @@ Y.~Blanco-Fernández, J.~Otero-Vizoso, A.~Gil-Solla, and J.~Garc{\'i}a-Duque.
   \url{https://www.kaggle.com/datasets/javieroterovizoso/spanish-political-fake-news}.
 \newblock Recuperado el 15 de julio de 2024.
 
+\bibitem[Aguirre~Quezada(2023)]{aguirre2023fraude}
+J.~P. Aguirre~Quezada.
+\newblock El fraude en méxico: daños patrimoniales y trabajo legislativo para
+  enfrentarlo.
+\newblock Technical report, Senado de México, 2023.
+\newblock URL
+  \url{http://bibliodigitalibd.senado.gob.mx/handle/123456789/6051}.
+\newblock Recuperado el 05 de julio de 2024.
+
+\bibitem[Ehrlinger and Wöß(2016)]{ehrlinger2016towards}
+L.~Ehrlinger and W.~Wöß.
+\newblock Towards a definition of knowledge graphs.
+\newblock In \emph{SEMANTiCS (Posters, Demos, SuCCESS)}, 2016.
+\newblock URL
+  \url{https://www.researchgate.net/publication/323316736_Towards_a_Definition_of_Knowledge_Graphs}.
+\newblock Recuperado el 06 de julio de 2024.
+
+\bibitem[García~Robledo et~al.(2020)García~Robledo, Reyes-Ortiz, and
+  González-Beltrán]{garcia2020interfaz}
+G.~A. García~Robledo, J.~A. Reyes-Ortiz, and B.~A. González-Beltrán.
+\newblock Interfaz de consulta en idioma español para la búsqueda de
+  información en un ambiente académico.
+\newblock Tesis de maestría en ciencias de la computación, Universidad
+  Autónoma Metropolitana, 2020.
+\newblock URL \url{https://zaloamati.azc.uam.mx/handle/11191/7812}.
+\newblock Recuperado el 07 de julio de 2024.
+
+\bibitem[Hurtado~Avilés et~al.(2024{\natexlab{b}})Hurtado~Avilés,
+  Villa~Vargas, Tapia~Hernández, Rivera~Sanabria, and
+  Jaimes~Ponce]{hurtado2024representacion}
+G.~Hurtado~Avilés, J.~M. Villa~Vargas, S.~Tapia~Hernández, A.~Á.
+  Rivera~Sanabria, and J.~M. Jaimes~Ponce.
+\newblock Representación ontológica de la arquitectura de control de un robot
+  {SCARA} utilizando {IoT} y {MATLAB}.
+\newblock In M.~Tovar~Vidal, A.~L. Lezama~Sánchez, and M.~Contreras~González,
+  editors, \emph{Avances recientes en procesamiento de lenguaje natural y otras
+  áreas afines}. Benemérita Universidad Autónoma de Puebla,
+  2024{\natexlab{b}}.
+\newblock ISBN 978-607-5914-56-5.
+
+\bibitem[Levesque(1986)]{levesque1986knowledge}
+H.~J. Levesque.
+\newblock Knowledge representation and reasoning.
+\newblock \emph{Annual review of computer science}, 1\penalty0 (1):\penalty0
+  255--287, 1986.
+\newblock \doi{10.1146/annurev.cs.01.060186.001351}.
+\newblock URL \url{https://doi.org/10.1146/annurev.cs.01.060186.001351}.
+
+\bibitem[Liddy(2001)]{liddy2001natural}
+E.~D. Liddy.
+\newblock Natural language processing.
+\newblock Technical report, Syracuse University, 2001.
+\newblock URL \url{https://surface.syr.edu/istpub/63/}.
+\newblock Recuperado el 05 de julio de 2024.
+
 \bibitem[Manzano-Velasco(2024)]{manzano2024dataset}
 C.~E. Manzano-Velasco.
 \newblock {DataSet Web scraping noticias verificadas}.
@@ -671,5 +590,86 @@ C.~E. Manzano-Velasco.
 \newblock URL
   \url{https://www.kaggle.com/datasets/enriquemanzano/dataset-web-scraping-noticias-verificadas/data}.
 \newblock Recuperado el 24 de junio de 2024.
+
+\bibitem[Manzano-Velasco and Daza-Rosero(2024)]{manzano2024sistema}
+C.~E. Manzano-Velasco and L.~S. Daza-Rosero.
+\newblock Sistema de alerta temprana para monitorear la propagación de
+  noticias falsas: caso de estudio contexto político colombiano.
+\newblock Trabajo grado, Universidad del Cauca, 2024.
+\newblock URL
+  \url{http://repositorio.unicauca.edu.co:8080/xmlui/handle/123456789/9485}.
+\newblock Recuperado el 07 de julio de 2024.
+
+\bibitem[Mridha et~al.(2021)Mridha, Keya, Hamid, Monowar, and
+  Rahman]{mridha2021comprehensive}
+M.~F. Mridha, A.~J. Keya, M.~A. Hamid, M.~M. Monowar, and M.~S. Rahman.
+\newblock A comprehensive review on fake news detection with deep learning.
+\newblock \emph{IEEE Access}, 9:\penalty0 156151--156170, 2021.
+\newblock \doi{10.1109/ACCESS.2021.3129329}.
+\newblock URL \url{https://doi.org/10.1109/ACCESS.2021.3129329}.
+
+\bibitem[Osorio-Giraldo et~al.(2023)Osorio-Giraldo, Ropain-Zambrano,
+  Taba-Pulgarin, and de~Jesús Osorio-Orozco]{osorio2023proyecto}
+J.~M. Osorio-Giraldo, C.~J. Ropain-Zambrano, A.~F. Taba-Pulgarin, and
+  A.~de~Jesús Osorio-Orozco.
+\newblock 10. proyecto de seguridad para reducir fraudes y robos en marketplace
+  de facebook.
+\newblock In \emph{Coloquio de Investigación Formativa 2023-1}, page~89, 2023.
+\newblock URL
+  \url{https://ridum.umanizales.edu.co/xmlui/bitstream/handle/20.500.12746/6834/CIF%202023-1%20-%20Res%C3%BAmenes%20ejecutivos_RIDUM.pdf?sequence=1&isAllowed=y#page=89}.
+\newblock Recuperado el 05 de julio de 2024.
+
+\bibitem[Padilla~Cuevas et~al.(2019)Padilla~Cuevas, Reyes-Ortiz, and
+  Bravo]{padilla2019deteccion}
+J.~Padilla~Cuevas, J.~A. Reyes-Ortiz, and M.~Bravo.
+\newblock Detección y representación de eventos en un ambiente académico
+  inteligente.
+\newblock Tesis de maestría en ciencias de la computación, Universidad
+  Autónoma Metropolitana, 2019.
+\newblock URL \url{https://zaloamati.azc.uam.mx/handle/11191/6124}.
+\newblock Recuperado el 06 de julio de 2024.
+
+\bibitem[Reyes-Ortiz(2008)]{reyes2008extraccion}
+J.~A. Reyes-Ortiz.
+\newblock Extracción de información semántica para la clasificación de
+  servicios web.
+\newblock Tesis de maestría en ciencias en ciencias de la computación, Centro
+  Nacional de Investigación y Desarrollo Tecnológico, 2008.
+\newblock URL
+  \url{https://www.cenidet.edu.mx/subplan/biblio/seleccion/Tesis/MC%20Jos%E9%20Alejandro%20Reyes%20Ortiz%202008.pdf}.
+\newblock Recuperado el 07 de julio de 2024.
+
+\bibitem[Reyes-Ortiz et~al.(2015)Reyes-Ortiz, González-Beltrán, and
+  Gallardo-López]{reyes2015clinical}
+J.~A. Reyes-Ortiz, B.~A. González-Beltrán, and L.~Gallardo-López.
+\newblock Clinical decision support systems: A survey of {NLP}-based approaches
+  from unstructured data.
+\newblock In \emph{2015 26th International Workshop on Database and Expert
+  Systems Applications (DEXA)}, pages 163--167, Valencia, Spain, 2015.
+\newblock \doi{10.1109/DEXA.2015.47}.
+\newblock URL \url{https://doi.org/10.1109/DEXA.2015.47}.
+
+\bibitem[Shapiro(2006)]{shapiro2006knowledge}
+S.~C. Shapiro.
+\newblock Knowledge representation.
+\newblock In \emph{Encyclopedia of cognitive science}. Wiley, 2006.
+\newblock \doi{10.1002/0470018860.s00058}.
+\newblock URL \url{https://doi.org/10.1002/0470018860.s00058}.
+
+\bibitem[Villamil~Arcos(2022)]{villamil2022seleccion}
+C.~Villamil~Arcos.
+\newblock Selección de una técnica de aprendizaje de máquina para la
+  detección de fraude financiero digital enfocado a transacciones no
+  autorizadas o consentidas.
+\newblock Master's thesis, Universidad Nacional de Colombia, 2022.
+\newblock URL \url{https://repositorio.unal.edu.co/handle/unal/84015}.
+\newblock Recuperado el 05 de julio de 2024.
+
+\bibitem[Whitehouse et~al.(2022)Whitehouse, Weyde, Madhyastha, and
+  Komninos]{whitehouse2022evaluation}
+C.~Whitehouse, T.~Weyde, P.~Madhyastha, and N.~Komninos.
+\newblock Evaluation of fake news detection with knowledge-enhanced language
+  models, April 2022.
+\newblock URL \url{https://arxiv.org/abs/2204.00458}.
 
 \end{thebibliography}

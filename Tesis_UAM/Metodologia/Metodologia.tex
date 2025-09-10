@@ -23,7 +23,7 @@ Una vez determinado el mejor modelo mediante las métricas de evaluación corres
 
 Antes de proceder con la descripción metodológica, es fundamental establecer con precisión la terminología utilizada en esta investigación, particularmente la distinción entre conceptos relacionados pero diferenciados que a menudo se utilizan de manera intercambiable en la literatura.
 
-\subsection{Noticia Falsa vs. Bulo: Una Distinción Crítica}
+\subsection{Distinción entre Noticia Falsa y Bulo}
 
 En el contexto de esta investigación, es esencial distinguir entre dos conceptos fundamentales que, aunque relacionados, poseen características distintivas importantes para el desarrollo de sistemas de detección automática.
 
@@ -34,50 +34,6 @@ En el contexto de esta investigación, es esencial distinguir entre dos concepto
 \definecolor{LightGoldenrod}{RGB}{250, 250, 210}
 \definecolor{LightPink}{RGB}{255, 182, 193}
 
-\begin{table}[htbp]
-\centering
-\adjustbox{width=\textwidth,center}{%
-\footnotesize
-\begin{tabular}{|l|p{6cm}|p{6cm}|}
-\hline
-\rowcolor{UAMPurple!20}
-\textbf{Aspecto} & \textbf{Noticia Falsa} & \textbf{Bulo} \\
-\hline
-\rowcolor{LightGreen!30}
-\textbf{Definición} & 
-\begin{tabular}[t]{@{}l@{}}Información deliberadamente fabricada\\que se presenta como noticia legítima,\\pero contiene datos falsos, inexactos\\o engañosos\end{tabular} & 
-\begin{tabular}[t]{@{}l@{}}Información falsa que circula\\ampliamente, especialmente en redes\\sociales, con propósito de engañar\\a la audiencia\end{tabular} \\
-\hline
-\rowcolor{LightSkyBlue!30}
-\textbf{Formato} & 
-\begin{tabular}[t]{@{}l@{}}Apariencia de contenido periodístico\\real, formato de noticia tradicional\\con titular, cuerpo, fecha, fuente\end{tabular} & 
-\begin{tabular}[t]{@{}l@{}}No necesariamente formato\\periodístico, puede ser texto libre,\\memes, cadenas de WhatsApp\end{tabular} \\
-\hline
-\rowcolor{LightCoral!30}
-\textbf{Intención} & 
-\begin{tabular}[t]{@{}l@{}}Intención maliciosa de desinformar\\simulando legitimidad periodística\end{tabular} & 
-\begin{tabular}[t]{@{}l@{}}Propósito de engañar que apela\\más a emociones que a hechos\\verificables\end{tabular} \\
-\hline
-\rowcolor{LightGoldenrod!30}
-\textbf{Propagación} & 
-\begin{tabular}[t]{@{}l@{}}Se distribuye a través de sitios\\web que simulan medios legítimos\\o plataformas de noticias\end{tabular} & 
-\begin{tabular}[t]{@{}l@{}}Circulación viral en redes sociales,\\aplicaciones de mensajería,\\cadenas de reenvío\end{tabular} \\
-\hline
-\rowcolor{LightPink!30}
-\textbf{Ejemplos} & 
-\begin{tabular}[t]{@{}l@{}}Artículos con titular sensacionalista,\\byline falso, citas inventadas,\\estadísticas manipuladas\end{tabular} & 
-\begin{tabular}[t]{@{}l@{}}Teorías conspirativas, información\\médica falsa, rumores políticos,\\cadenas de "urgente"\end{tabular} \\
-\hline
-\rowcolor{HeaderBlue!20}
-\textbf{Relevancia para PLN} & 
-\begin{tabular}[t]{@{}l@{}}Estructura textual más predecible,\\patrones estilísticos identificables\\en el análisis automatizado\end{tabular} & 
-\begin{tabular}[t]{@{}l@{}}Variabilidad estructural mayor,\\requiere análisis semántico\\y contextual más sofisticado\end{tabular} \\
-\hline
-\end{tabular}
-}
-\caption{Comparación detallada entre noticia falsa y bulo en el contexto de detección automática.}
-\label{tab:noticia_falsa_vs_bulo}
-\end{table}
 
 \subsection{Taxonomía de la Desinformación}
 
@@ -108,6 +64,53 @@ Por tanto, en el resto de este documento, el término \textbf{``noticias falsas'
 \label{sec:construccion_corpus}
 
 El primer y más fundamental paso de la metodología fue la construcción de un corpus de alta calidad y de tamaño significativo en español, dada la escasez documentada de recursos centralizados para esta tarea \cite{hu2022deep}.
+
+\begin{table}[htbp]
+\centering
+\adjustbox{width=\textwidth,center}{%
+\footnotesize
+\begin{tabular}{|c|l|l|c|c|l|c|}
+\hline
+\rowcolor{UAMPurple!20}
+\textbf{Aspecto} & \textbf{Noticia Falsa} & \textbf{Bulo} \\
+\hline
+\rowcolor{LightGreen!30}
+\textbf{Definición} & 
+Información deliberadamente fabricada que se presenta como noticia legítima, pero contiene datos falsos, inexactos o engañosos & 
+Información falsa que circula ampliamente, especialmente en redes sociales, con propósito de engañar a la audiencia \\
+\hline
+\rowcolor{LightSkyBlue!30}
+\textbf{Formato} & 
+Apariencia de contenido periodístico real, formato de noticia tradicional con titular, cuerpo, fecha, fuente & 
+No necesariamente formato periodístico, puede ser texto libre, memes, cadenas de WhatsApp \\
+\hline
+\rowcolor{LightCoral!30}
+\textbf{Intención} & 
+Intención maliciosa de desinformar simulando legitimidad periodística & 
+Propósito de engañar que apela más a emociones que a hechos verificables \\
+\hline
+\rowcolor{LightGoldenrod!30}
+\textbf{Propagación} & 
+Se distribuye a través de sitios web que simulan medios legítimos o plataformas de noticias & 
+Circulación viral en redes sociales, aplicaciones de mensajería, cadenas de reenvío \\
+\hline
+\rowcolor{LightPink!30}
+\textbf{Ejemplos} & 
+Artículos con titular sensacionalista, byline falso, citas inventadas, estadísticas manipuladas & 
+Teorías conspirativas, información médica falsa, rumores políticos, cadenas de ``urgente'' \\
+\hline
+\rowcolor{HeaderBlue!20}
+\textbf{Relevancia para PLN} & 
+Estructura textual más predecible, patrones estilísticos identificables en el análisis automatizado & 
+Variabilidad estructural mayor, requiere análisis semántico y contextual más sofisticado \\
+\hline
+\end{tabular}
+}
+\caption{Comparación detallada entre noticia falsa y bulo en el contexto de detección automática.}
+\label{tab:noticia_falsa_vs_bulo}
+\end{table}
+
+
 
 % Definir colores adicionales para hacer las tablas más coloridas
 \definecolor{LightGreen}{RGB}{144, 238, 144}

@@ -3,21 +3,23 @@
 
 \section{Planteamiento del problema}
 
-En la era de la información digital, la interconexión global ha traído consigo un desafío sin precedentes: la propagación masiva de desinformación y fraude digital. Este fenómeno, que abarca desde noticias falsas (\textit{fake news}) hasta complejas estafas en línea, representa una amenaza significativa para la estabilidad social, económica y democrática a nivel mundial.
+En la era de la información digital, la interconexión global ha traído consigo un desafío sin precedentes: la propagación masiva de \gls{desinformacion} y fraude digital. Este fenómeno, que abarca desde \glspl{noticiafalsa} (\textit{fake news}) hasta complejas estafas en línea, representa una amenaza significativa para la estabilidad social, económica y democrática a nivel mundial.
 
-Las noticias falsas, definidas como información deliberadamente engañosa disfrazada de periodismo auténtico \cite{bondielli2019survey}, se difunden a través de redes sociales y medios digitales con el fin de manipular la opinión pública y el comportamiento de los individuos. La gravedad de esta problemática se ha intensificado exponencialmente con la sofisticación de los actores maliciosos, la democratización de herramientas de generación de contenido mediante Inteligencia Artificial \cite{hu2024bad}, y la velocidad sin precedentes con la que la información se viraliza en el ecosistema digital.
+Las \glspl{noticiafalsa}, definidas como información deliberadamente engañosa disfrazada de periodismo auténtico \cite{bondielli2019survey}, se difunden a través de redes sociales y medios digitales con el fin de manipular la opinión pública y el comportamiento de los individuos. La gravedad de esta problemática se ha intensificado exponencialmente con la sofisticación de los actores maliciosos, la democratización de herramientas de generación de contenido mediante \gls{ia} \cite{hu2024bad}, y la velocidad sin precedentes con la que la información se viraliza en el ecosistema digital.
 
 La investigación reciente ha documentado el impacto multidimensional de la desinformación, que va desde la distorsión de procesos democráticos \cite{ali2020posttruth} hasta la creación de pánico público durante crisis sanitarias como la pandemia de COVID-19 \cite{perez2020fake}. Paralelamente, el fraude digital ha evolucionado hacia formas cada vez más sofisticadas, aprovechando tanto vulnerabilidades técnicas como sesgos cognitivos humanos \cite{ali2021fake}.
 
 El fraude digital contemporáneo se manifiesta a través de múltiples modalidades con un impacto significativo en individuos, empresas y sociedades, como se ilustra en la Figura \ref{fig:mapa_problema}:
 
 \begin{itemize}
-    \item \textbf{Noticias falsas generadas por IA:} Contenido sintético creado por Grandes Modelos de Lenguaje (LLMs) que imita el estilo periodístico legítimo \cite{su2023fake}
+    \item \textbf{Noticias falsas generadas por \gls{ia}:} Contenido sintético creado por Grandes Modelos de Lenguaje (\glspl{gpt}) que imita el estilo periodístico legítimo \cite{su2023fake}
     \item \textbf{Desinformación política dirigida:} Campañas coordinadas para influir en procesos electorales y opinión pública \cite{carcamo2021fake}
     \item \textbf{Fraude financiero digital:} Esquemas que explotan plataformas digitales y criptomonedas \cite{cao2020corporate}
     \item \textbf{Fraude laboral en línea:} Ofertas de empleo falsas que buscan obtener información personal o financiera \cite{nasser2021online}
     \item \textbf{Estafas de ingeniería social:} Técnicas sofisticadas que combinan información personal extraída de redes sociales con narrativas convincentes
     \item \textbf{Desinformación en salud:} Información médica falsa que puede tener consecuencias directas en la salud pública \cite{pulido2020new}
+    \item \textbf{\Glspl{deepfake}:} Contenido multimedia manipulado mediante técnicas de \gls{dl}
+    \item \textbf{\Glspl{bulo}:} Información falsa que se propaga viralmente en redes sociales
 \end{itemize}
 
 \begin{figure}[h!]
@@ -41,14 +43,15 @@ Esta brecha de recursos se manifiesta en:
 
 \subsection{La Complejidad Técnica del Problema}
 
-La detección automatizada de noticias falsas constituye un problema técnico multifacético que requiere la integración de múltiples disciplinas. Como documenta la literatura reciente \cite{singh2023comprehensive}, los desafíos incluyen:
+La detección automatizada de \glspl{noticiafalsa} constituye un problema técnico multifacético que requiere la integración de múltiples disciplinas. Como documenta la literatura reciente \cite{singh2023comprehensive}, los desafíos incluyen:
 
 \begin{itemize}
-    \item \textbf{Análisis semántico profundo:} Necesidad de comprender el contexto y las implicaciones sutiles del contenido
+    \item \textbf{Análisis semántico profundo:} Necesidad de comprender el contexto y las implicaciones sutiles del contenido mediante técnicas de \gls{pln}
     \item \textbf{Detección de patrones estilométricos:} Identificación de características lingüísticas que indiquen autoría maliciosa \cite{tsai2023stylometric}
-    \item \textbf{Procesamiento en tiempo real:} Capacidad de analizar el volumen masivo de contenido generado diariamente
-    \item \textbf{Adaptación a contenido sintético:} Detección de texto generado por modelos de IA cada vez más sofisticados \cite{su2023adapting}
+    \item \textbf{Procesamiento en tiempo real:} Capacidad de analizar el volumen masivo de contenido generado diariamente usando \gls{ml}
+    \item \textbf{Adaptación a contenido sintético:} Detección de texto generado por modelos de \gls{ia} cada vez más sofisticados \cite{su2023adapting}
     \item \textbf{Robustez ante ataques adversariales:} Resistencia a intentos deliberados de evadir la detección
+    \item \textbf{Optimización de \glspl{hiperparametro}:} Calibración de parámetros del modelo para maximizar el rendimiento
 \end{itemize}
 
 Dada la sofisticación de estas amenazas, se requieren soluciones tecnológicas igualmente avanzadas para combatir el fraude digital, como se esquematiza en la Figura \ref{fig:mapa_soluciones}. Este trabajo se centra en el desarrollo de tales soluciones, con un enfoque particular en el idioma español y la comparación sistemática de paradigmas tecnológicos complementarios.

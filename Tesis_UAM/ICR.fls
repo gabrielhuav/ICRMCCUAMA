@@ -1,6 +1,6 @@
-PWD c:\Users\gabri\Downloads\Tesis_UAM
+PWD c:\Users\gabri\OneDrive\Imágenes\Documentos\GitHubDesktop\ICRMCCUAMA\Tesis_UAM
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\gabri\Downloads\Tesis_UAM\ICR.tex
+INPUT c:\Users\gabri\OneDrive\Imágenes\Documentos\GitHubDesktop\ICRMCCUAMA\Tesis_UAM\ICR.tex
 OUTPUT ICR.log
 INPUT C:\Users\gabri\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
 INPUT C:\Users\gabri\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
@@ -448,7 +448,7 @@ INPUT C:\Users\gabri\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\eccc144
 INPUT C:\Users\gabri\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1728.tfm
 INPUT C:\Users\gabri\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1728.tfm
 INPUT C:\Users\gabri\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
-OUTPUT ICR.ist
+OUTPUT ICR.xdy
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\Resumen\Resumen.tex
 INPUT .\Resumen\Resumen.tex
@@ -487,6 +487,10 @@ INPUT .\ICR.lot
 INPUT .\ICR.lot
 INPUT ICR.lot
 OUTPUT ICR.lot
+INPUT .\ICR.gls
+INPUT .\ICR.gls
+INPUT ICR.gls
+INPUT C:\Users\gabri\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT .\ICR.gls
 INPUT .\ICR.gls
 INPUT ICR.gls
@@ -555,7 +559,6 @@ INPUT .\Imagenes\mapaConceptual5.png
 INPUT .\Imagenes\mapaConceptual5.png
 INPUT .\Imagenes\mapaConceptual5.png
 INPUT .\Imagenes\mapaConceptual5.png
-INPUT C:\Users\gabri\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT .\Imagenes\mapaConceptual6.png
 INPUT .\Imagenes\mapaConceptual6.png
 INPUT .\Imagenes\mapaConceptual6.png
@@ -813,8 +816,6 @@ INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecr
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
-INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
-INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk
@@ -825,6 +826,8 @@ INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ect
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
+INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk

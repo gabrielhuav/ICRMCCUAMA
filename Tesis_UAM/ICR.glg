@@ -2,9 +2,141 @@ This is makeindex, version 2.16 [MiKTeX 24.1].
 Scanning style file ./ICR.ist...........................done (27 attributes redefined, 0 ignored).
 Scanning input file ICR.glo...
 !! Input index error (file = ICR.glo, line = 1):
-   -- Illegal space within numerals in second argument.
+   -- Unknown index keyword (indexentry:tkey(("ICR""\\glossentry.
 !! Input index error (file = ICR.glo, line = 2):
-   -- Illegal space within numerals in second argument.
-done (0 entries accepted, 2 rejected).
+   -- Unknown index keyword (indexentry:tkey(("PLN""\\glossentry.
+!! Input index error (file = ICR.glo, line = 3):
+   -- Unknown index keyword (indexentry:tkey(("NLP""\\glossentry.
+!! Input index error (file = ICR.glo, line = 4):
+   -- Unknown index keyword (indexentry:tkey(("BoW""\\glossentry.
+!! Input index error (file = ICR.glo, line = 5):
+   -- Unknown index keyword (indexentry:tkey(("TF-IDF""\\glossentry.
+!! Input index error (file = ICR.glo, line = 6):
+   -- Unknown index keyword (indexentry:tkey(("BERT""\\glossentry.
+!! Input index error (file = ICR.glo, line = 7):
+   -- Unknown index keyword (indexentry:tkey(("GPT""\\glossentry.
+!! Input index error (file = ICR.glo, line = 8):
+   -- Unknown index keyword (indexentry:tkey(("RNN""\\glossentry.
+!! Input index error (file = ICR.glo, line = 9):
+   -- Unknown index keyword (indexentry:tkey(("LSTM""\\glossentry.
+!! Input index error (file = ICR.glo, line = 10):
+   -- Unknown index keyword (indexentry:tkey(("CNN""\\glossentry.
+!! Input index error (file = ICR.glo, line = 11):
+   -- Unknown index keyword (indexentry:tkey(("SVM""\\glossentry.
+!! Input index error (file = ICR.glo, line = 12):
+   -- Unknown index keyword (indexentry:tkey(("AG""\\glossentry.
+!! Input index error (file = ICR.glo, line = 13):
+   -- Unknown index keyword (indexentry:tkey(("PSO""\\glossentry.
+!! Input index error (file = ICR.glo, line = 14):
+   -- Unknown index keyword (indexentry:tkey(("SA""\\glossentry.
+!! Input index error (file = ICR.glo, line = 15):
+   -- Unknown index keyword (indexentry:tkey(("VNS""\\glossentry.
+!! Input index error (file = ICR.glo, line = 16):
+   -- Unknown index keyword (indexentry:tkey(("SS""\\glossentry.
+!! Input index error (file = ICR.glo, line = 17):
+   -- Unknown index keyword (indexentry:tkey(("IA""\\glossentry.
+!! Input index error (file = ICR.glo, line = 18):
+   -- Unknown index keyword (indexentry:tkey(("ML""\\glossentry.
+!! Input index error (file = ICR.glo, line = 19):
+   -- Unknown index keyword (indexentry:tkey(("DL""\\glossentry.
+!! Input index error (file = ICR.glo, line = 20):
+   -- Unknown index keyword (indexentry:tkey(("API""\\glossentry.
+!! Input index error (file = ICR.glo, line = 21):
+   -- Unknown index keyword (indexentry:tkey(("CSV""\\glossentry.
+!! Input index error (file = ICR.glo, line = 22):
+   -- Unknown index keyword (indexentry:tkey(("JSON""\\glossentry.
+!! Input index error (file = ICR.glo, line = 23):
+   -- Unknown index keyword (indexentry:tkey(("HTML""\\glossentry.
+!! Input index error (file = ICR.glo, line = 24):
+   -- Unknown index keyword (indexentry:tkey(("CSS""\\glossentry.
+!! Input index error (file = ICR.glo, line = 25):
+   -- Unknown index keyword (indexentry:tkey(("HTTP""\\glossentry.
+!! Input index error (file = ICR.glo, line = 26):
+   -- Unknown index keyword (indexentry:tkey(("URL""\\glossentry.
+!! Input index error (file = ICR.glo, line = 27):
+   -- Unknown index keyword (indexentry:tkey(("NoticiaFalsa""\\glossentry.
+!! Input index error (file = ICR.glo, line = 28):
+   -- Unknown index keyword (indexentry:tkey(("Bulo""\\glossentry.
+!! Input index error (file = ICR.glo, line = 29):
+   -- Unknown index keyword (indexentry:tkey(("Desinformación""\\glossentry.
+!! Input index error (file = ICR.glo, line = 30):
+   -- Unknown index keyword (indexentry:tkey(("Desinformación(Misinformation)""\\glossentry.
+!! Input index error (file = ICR.glo, line = 31):
+   -- Unknown index keyword (indexentry:tkey(("InformaciónMaliciosa(Malinformation)""\\glossentry.
+!! Input index error (file = ICR.glo, line = 32):
+   -- Unknown index keyword (indexentry:tkey(("VerificacióndeHechos(Fact-Checking)""\\glossentry.
+!! Input index error (file = ICR.glo, line = 33):
+   -- Unknown index keyword (indexentry:tkey(("Deepfake""\\glossentry.
+!! Input index error (file = ICR.glo, line = 34):
+   -- Unknown index keyword (indexentry:tkey(("Tokenización""\\glossentry.
+!! Input index error (file = ICR.glo, line = 35):
+   -- Unknown index keyword (indexentry:tkey(("Stemming""\\glossentry.
+!! Input index error (file = ICR.glo, line = 36):
+   -- Unknown index keyword (indexentry:tkey(("Lematización""\\glossentry.
+!! Input index error (file = ICR.glo, line = 37):
+   -- Unknown index keyword (indexentry:tkey(("PalabrasVacías(StopWords)""\\glossentry.
+!! Input index error (file = ICR.glo, line = 38):
+   -- Unknown index keyword (indexentry:tkey(("Embedding""\\glossentry.
+!! Input index error (file = ICR.glo, line = 39):
+   -- Unknown index keyword (indexentry:tkey(("Transformer""\\glossentry.
+!! Input index error (file = ICR.glo, line = 40):
+   -- Unknown index keyword (indexentry:tkey(("Atención(Attention)""\\glossentry.
+!! Input index error (file = ICR.glo, line = 41):
+   -- Unknown index keyword (indexentry:tkey(("Fine-tuning""\\glossentry.
+!! Input index error (file = ICR.glo, line = 42):
+   -- Unknown index keyword (indexentry:tkey(("Metaheurística""\\glossentry.
+!! Input index error (file = ICR.glo, line = 43):
+   -- Unknown index keyword (indexentry:tkey(("Hiperparámetro""\\glossentry.
+!! Input index error (file = ICR.glo, line = 44):
+   -- Unknown index keyword (indexentry:tkey(("FunciónObjetivo""\\glossentry.
+!! Input index error (file = ICR.glo, line = 45):
+   -- Unknown index keyword (indexentry:tkey(("EspaciodeBúsqueda""\\glossentry.
+!! Input index error (file = ICR.glo, line = 46):
+   -- Unknown index keyword (indexentry:tkey(("Convergencia""\\glossentry.
+!! Input index error (file = ICR.glo, line = 47):
+   -- Unknown index keyword (indexentry:tkey(("Exploración""\\glossentry.
+!! Input index error (file = ICR.glo, line = 48):
+   -- Unknown index keyword (indexentry:tkey(("Explotación""\\glossentry.
+!! Input index error (file = ICR.glo, line = 49):
+   -- Unknown index keyword (indexentry:tkey(("Precisión""\\glossentry.
+!! Input index error (file = ICR.glo, line = 50):
+   -- Unknown index keyword (indexentry:tkey(("Sensibilidad(Recall)""\\glossentry.
+!! Input index error (file = ICR.glo, line = 51):
+   -- Unknown index keyword (indexentry:tkey(("F1-Score""\\glossentry.
+!! Input index error (file = ICR.glo, line = 52):
+   -- Unknown index keyword (indexentry:tkey(("Exactitud(Accuracy)""\\glossentry.
+!! Input index error (file = ICR.glo, line = 53):
+   -- Unknown index keyword (indexentry:tkey(("AUC-ROC""\\glossentry.
+!! Input index error (file = ICR.glo, line = 54):
+   -- Unknown index keyword (indexentry:tkey(("MatrizdeConfusión""\\glossentry.
+!! Input index error (file = ICR.glo, line = 55):
+   -- Unknown index keyword (indexentry:tkey(("WebScraping""\\glossentry.
+!! Input index error (file = ICR.glo, line = 56):
+   -- Unknown index keyword (indexentry:tkey(("Dataset""\\glossentry.
+!! Input index error (file = ICR.glo, line = 57):
+   -- Unknown index keyword (indexentry:tkey(("Corpus""\\glossentry.
+!! Input index error (file = ICR.glo, line = 58):
+   -- Unknown index keyword (indexentry:tkey(("ValidaciónCruzada""\\glossentry.
+!! Input index error (file = ICR.glo, line = 59):
+   -- Unknown index keyword (indexentry:tkey(("Sobreajuste(Overfitting)""\\glossentry.
+!! Input index error (file = ICR.glo, line = 60):
+   -- Unknown index keyword (indexentry:tkey(("Subajuste(Underfitting)""\\glossentry.
+!! Input index error (file = ICR.glo, line = 61):
+   -- Unknown index keyword (indexentry:tkey(("Sesgo(Bias)""\\glossentry.
+!! Input index error (file = ICR.glo, line = 62):
+   -- Unknown index keyword (indexentry:tkey(("Varianza""\\glossentry.
+!! Input index error (file = ICR.glo, line = 63):
+   -- Unknown index keyword (indexentry:tkey(("Desinformación""\\glossentry.
+!! Input index error (file = ICR.glo, line = 64):
+   -- Unknown index keyword (indexentry:tkey(("NoticiaFalsa""\\glossentry.
+!! Input index error (file = ICR.glo, line = 65):
+   -- Unknown index keyword (indexentry:tkey(("NoticiaFalsa""\\glossentry.
+!! Input index error (file = ICR.glo, line = 66):
+   -- Unknown index keyword (indexentry:tkey(("IA""\\glossentry.
+!! Input index error (file = ICR.glo, line = 67):
+   -- Unknown index keyword (indexentry:tkey(("IA""\\glossentry.
+!! Input index error (file = ICR.glo, line = 68):
+   -- Unknown index keyword (indexentry:tkey(("GPT""\\glossentry.
+done (0 entries accepted, 68 rejected).
 Nothing written in ICR.gls.
 Transcript written in ICR.glg.
