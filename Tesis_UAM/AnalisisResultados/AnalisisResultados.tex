@@ -15,7 +15,7 @@ La primera fase de esta investigación se centró en el desarrollo y evaluación
 
 \subsubsection{Características del Corpus Utilizado}
 
-Los experimentos se realizaron sobre el corpus académico unificado, que constituye la primera versión del dataset desarrollado en esta investigación, sin la inclusión posterior de datos obtenidos mediante web scraping. 
+Los experimentos se realizaron sobre el corpus académico unificado, que constituye la primera versión del conjunto de datos desarrollado en esta investigación, sin la inclusión posterior de datos obtenidos mediante extracción web. 
 
 
 \begin{table}[htbp]
@@ -31,20 +31,20 @@ Los experimentos se realizaron sobre el corpus académico unificado, que constit
 1 & \begin{tabular}[t]{@{}l@{}}Spanish Fake News Corpus\\(IberLEF)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Posadas-Durán, J.P.\\Gómez-Adorno, H.\end{tabular} & 2019-2021 & 971 & \begin{tabular}[t]{@{}l@{}}Análisis estilométrico\\Múltiples versiones\end{tabular} & \cite{posadas2019detection} \\
 \hline
 \rowcolor{LightSkyBlue!30}
-2 & \begin{tabular}[t]{@{}l@{}}Dataset Zules Acosta\\(UPM)\end{tabular} & Acosta, F.A.Z. & 2019 & 598 & \begin{tabular}[t]{@{}l@{}}Trabajo fin de máster\\Web scraping verificado\end{tabular} & \cite{acosta2019construccion} \\
+2 & \begin{tabular}[t]{@{}l@{}}Conjunto de datos Zules Acosta\\(UPM)\end{tabular} & Acosta, F.A.Z. & 2019 & 598 & \begin{tabular}[t]{@{}l@{}}Trabajo fin de maestría\\Extracción web verificada\end{tabular} & \cite{acosta2019construccion} \\
 \hline
 \rowcolor{LightCoral!30}
-3 & \begin{tabular}[t]{@{}l@{}}Dataset Tretiakov\\(Kaggle)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Tretiakov, A.\\Martín García, A.\end{tabular} & 2022 & 1,958 & \begin{tabular}[t]{@{}l@{}}Machine Learning\\Disponible públicamente\end{tabular} & \cite{tretiakov2022detection} \\
+3 & \begin{tabular}[t]{@{}l@{}}Conjunto de datos Tretiakov\\(Kaggle)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Tretiakov, A.\\Martín García, A.\end{tabular} & 2022 & 1,958 & \begin{tabular}[t]{@{}l@{}}Aprendizaje automático\\Disponible públicamente\end{tabular} & \cite{tretiakov2022detection} \\
 \hline
 \rowcolor{LightGoldenrod!30}
-4 & \begin{tabular}[t]{@{}l@{}}Spanish Political Fake News\\Dataset\end{tabular} & \begin{tabular}[t]{@{}l@{}}Blanco-Fernández, Y.\\Otero-Vizoso, J.\end{tabular} & 2024 & 57,231 & \begin{tabular}[t]{@{}l@{}}Temática política\\Modelos BERT/RoBERTa\end{tabular} & \cite{blanco2024enhancing} \\
+4 & \begin{tabular}[t]{@{}l@{}}Spanish Political Fake News\\Conjunto de datos\end{tabular} & \begin{tabular}[t]{@{}l@{}}Blanco-Fernández, Y.\\Otero-Vizoso, J.\end{tabular} & 2024 & 57,231 & \begin{tabular}[t]{@{}l@{}}Temática política\\Modelos BERT/RoBERTa\end{tabular} & \cite{blanco2024enhancing} \\
 \hline
 \rowcolor{HeaderBlue!20}
 \multicolumn{5}{|c|}{\textbf{TOTAL CORPUS ACADÉMICOS}} & \textbf{60,758} & \textbf{Cuatro fuentes} \\
 \hline
 \end{tabular}
 }
-\caption{Corpus académicos utilizados para la construcción del dataset unificado.}
+\caption{Corpus académicos utilizados para la construcción del conjunto de datos unificado.}
 \label{tab:corpus_academicos_resultados}
 \end{table}
 
@@ -742,7 +742,7 @@ El desarrollo del modelo DistilBERT requirió un proceso de experimentación exh
 
 \subsubsection{Características del Corpus Expandido}
 
-Para el entrenamiento del modelo DistilBERT se utilizó la versión expandida del corpus, que incorpora tanto fuentes académicas como datos obtenidos mediante web scraping:
+Para el entrenamiento del modelo DistilBERT se utilizó la versión expandida del corpus, que incorpora tanto fuentes académicas como datos obtenidos mediante extracción web:
 
 \begin{table}[htbp]
 \centering
@@ -757,7 +757,7 @@ Para el entrenamiento del modelo DistilBERT se utilizó la versión expandida de
 \textbf{Corpus Académicos} & 60,758 & 98.5\% & Investigación verificada & Alta \\
 \hline
 \rowcolor{LightBlue!30}
-\textbf{Web Scraping} & 916 & 1.5\% & Sitios de noticias & Verificada \\
+\textbf{Extracción web} & 916 & 1.5\% & Sitios de noticias & Verificada \\
 \hline
 \rowcolor{HeaderBlue!20}
 \textbf{Corpus Total} & 61,674 & 100\% & Híbrido & Controlada \\

@@ -9,8 +9,8 @@
 \contentsline {table}{\numberline {3.5}{\ignorespaces Aplicación de metaheurísticas por tipo de detección en la literatura revisada.}}{45}{table.3.5}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Comparación detallada entre noticia falsa y bulo en el contexto de detección automática.}}{54}{table.4.1}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Corpus académicos utilizados para la construcción del dataset unificado.}}{54}{table.4.2}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Fases del proceso de web scraping implementado para "El Deforma".}}{57}{table.4.3}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Corpus académicos utilizados para la construcción del conjunto de datos unificado.}}{54}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Fases del proceso de extracción web implementado para "El Deforma".}}{57}{table.4.3}%
 \contentsline {table}{\numberline {4.4}{\ignorespaces Referencias bibliográficas completas de los corpus académicos utilizados.}}{57}{table.4.4}%
 \contentsline {table}{\numberline {4.5}{\ignorespaces Composición final del corpus unificado después del procesamiento completo.}}{58}{table.4.5}%
 \contentsline {table}{\numberline {4.6}{\ignorespaces División estratificada principal del corpus para entrenamiento y evaluación.}}{59}{table.4.6}%
@@ -41,7 +41,7 @@
 \contentsline {table}{\numberline {4.31}{\ignorespaces Marco ético implementado para el desarrollo responsable de la herramienta.}}{75}{table.4.31}%
 \contentsline {table}{\numberline {4.32}{\ignorespaces Artefactos generados para facilitar la reproducibilidad completa del estudio.}}{76}{table.4.32}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Corpus académicos utilizados para la construcción del dataset unificado.}}{78}{table.5.1}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Corpus académicos utilizados para la construcción del conjunto de datos unificado.}}{78}{table.5.1}%
 \contentsline {table}{\numberline {5.2}{\ignorespaces Configuración detallada de parámetros para los cinco algoritmos metaheurísticos implementados.}}{79}{table.5.2}%
 \contentsline {table}{\numberline {5.3}{\ignorespaces Función de evaluación común utilizada por todos los algoritmos metaheurísticos.}}{80}{table.5.3}%
 \contentsline {table}{\numberline {5.4}{\ignorespaces Pseudocódigo completo del algoritmo Multi-Start Simulated Annealing (MSA).}}{81}{table.5.4}%

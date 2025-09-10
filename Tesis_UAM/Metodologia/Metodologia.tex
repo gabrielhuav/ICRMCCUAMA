@@ -211,38 +211,38 @@ Se llevó a cabo un proceso exhaustivo de investigación y unificación de cuatr
 1 & \begin{tabular}[t]{@{}l@{}}Spanish Fake News Corpus\\(IberLEF)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Posadas-Durán, J.P.\\Gómez-Adorno, H.\end{tabular} & 2019-2021 & 971 & \begin{tabular}[t]{@{}l@{}}Análisis estilométrico\\Múltiples versiones\end{tabular} & \cite{posadas2019detection} \\
 \hline
 \rowcolor{LightSkyBlue!30}
-2 & \begin{tabular}[t]{@{}l@{}}Dataset Zules Acosta\\(UPM)\end{tabular} & Acosta, F.A.Z. & 2019 & 598 & \begin{tabular}[t]{@{}l@{}}Trabajo fin de máster\\Web scraping verificado\end{tabular} & \cite{acosta2019construccion} \\
+2 & \begin{tabular}[t]{@{}l@{}}Conjunto de datos Zules Acosta\\(UPM)\end{tabular} & Acosta, F.A.Z. & 2019 & 598 & \begin{tabular}[t]{@{}l@{}}Trabajo fin de maestría\\Extracción web verificada\end{tabular} & \cite{acosta2019construccion} \\
 \hline
 \rowcolor{LightCoral!30}
-3 & \begin{tabular}[t]{@{}l@{}}Dataset Tretiakov\\(Kaggle)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Tretiakov, A.\\Martín García, A.\end{tabular} & 2022 & 1,958 & \begin{tabular}[t]{@{}l@{}}Machine Learning\\Disponible públicamente\end{tabular} & \cite{tretiakov2022detection} \\
+3 & \begin{tabular}[t]{@{}l@{}}Conjunto de datos Tretiakov\\(Kaggle)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Tretiakov, A.\\Martín García, A.\end{tabular} & 2022 & 1,958 & \begin{tabular}[t]{@{}l@{}}Aprendizaje automático\\Disponible públicamente\end{tabular} & \cite{tretiakov2022detection} \\
 \hline
 \rowcolor{LightGoldenrod!30}
-4 & \begin{tabular}[t]{@{}l@{}}Spanish Political Fake News\\Dataset\end{tabular} & \begin{tabular}[t]{@{}l@{}}Blanco-Fernández, Y.\\Otero-Vizoso, J.\end{tabular} & 2024 & 57,231 & \begin{tabular}[t]{@{}l@{}}Temática política\\Modelos BERT/RoBERTa\end{tabular} & \cite{blanco2024enhancing} \\
+4 & \begin{tabular}[t]{@{}l@{}}Spanish Political Fake News\\Conjunto de datos\end{tabular} & \begin{tabular}[t]{@{}l@{}}Blanco-Fernández, Y.\\Otero-Vizoso, J.\end{tabular} & 2024 & 57,231 & \begin{tabular}[t]{@{}l@{}}Temática política\\Modelos BERT/RoBERTa\end{tabular} & \cite{blanco2024enhancing} \\
 \hline
 \rowcolor{HeaderBlue!20}
 \multicolumn{5}{|c|}{\textbf{TOTAL CORPUS ACADÉMICOS}} & \textbf{60,758} & \textbf{Cuatro fuentes} \\
 \hline
 \end{tabular}
 }
-\caption{Corpus académicos utilizados para la construcción del dataset unificado.}
+\caption{Corpus académicos utilizados para la construcción del conjunto de datos unificado.}
 \label{tab:corpus_academicos}
 \end{table}
 
 \subsubsection{Spanish Fake News Corpus (IberLEF)}
 
-Este corpus, asociado a las competencias de IberLEF y desarrollado por Posadas-Durán, Gómez-Adorno, et al., ha tenido varias versiones. La versión original y más citada del corpus contiene un total de 971 noticias \cite{posadas2019detection}. \textbf{Su propósito específico fue el desarrollo de técnicas de análisis estilométrico para identificar patrones lingüísticos distintivos en texto desinformativo}. Este corpus se caracteriza por su enfoque metodológico riguroso en análisis estilométrico y ha sido utilizado en múltiples evaluaciones comparativas dentro del marco de las competencias IberLEF \cite{gomez2021overview, aragon2020overview}. \textbf{Las fuentes de este corpus provienen principalmente de sitios web verificados como desinformativos por organismos de fact-checking españoles y latinoamericanos}. Las versiones posteriores del corpus han sido mantenidas y actualizadas en repositorios públicos \cite{ramirez2021spanish}.
+Este corpus, asociado a las competencias de IberLEF y desarrollado por Posadas-Durán, Gómez-Adorno, et al., ha tenido varias versiones. La versión original y más citada del corpus contiene un total de 971 noticias \cite{posadas2019detection}. \textbf{Su propósito específico fue el desarrollo de técnicas de análisis estilométrico para identificar patrones lingüísticos distintivos en texto desinformativo}. Este corpus se caracteriza por su enfoque metodológico riguroso en análisis estilométrico y ha sido utilizado en múltiples evaluaciones comparativas dentro del marco de las competencias IberLEF \cite{gomez2021overview, aragon2020overview}. \textbf{Las fuentes de este corpus provienen principalmente de sitios web verificados como desinformativos por organismos de verificación de datos españoles y latinoamericanos}. Las versiones posteriores del corpus han sido mantenidas y actualizadas en repositorios públicos \cite{ramirez2021spanish}.
 
-\subsubsection{Dataset de Zules Acosta (Universidad Politécnica de Madrid)}
+\subsubsection{Conjunto de datos de Zules Acosta (Universidad Politécnica de Madrid)}
 
-Desarrollado como parte de un Trabajo Fin de Máster Universitario en Ciberseguridad en la Universidad Politécnica de Madrid, este corpus contiene 598 noticias verificadas \cite{acosta2019construccion}. \textbf{Su propósito original fue establecer una metodología de construcción de corpus para noticias falsas en español, con énfasis en la verificación manual exhaustiva}. El dataset fue construido mediante técnicas de web scraping y se encuentra disponible públicamente en la plataforma Kaggle \cite{acosta2019dataset, zules2019spanish}. \textbf{Las fuentes incluyen tanto medios legítimos (para noticias reales) como sitios identificados como propagadores de desinformación, con verificación cruzada mediante múltiples fact-checkers}. Su contribución principal radica en la aplicación de metodologías rigurosas de verificación para la construcción de datasets de noticias falsas.
+Desarrollado como parte de un Trabajo Fin de Maestría Universitaria en Ciberseguridad en la Universidad Politécnica de Madrid, este corpus contiene 598 noticias verificadas \cite{acosta2019construccion}. \textbf{Su propósito original fue establecer una metodología de construcción de corpus para noticias falsas en español, con énfasis en la verificación manual exhaustiva}. El conjunto de datos fue construido mediante técnicas de extracción web y se encuentra disponible públicamente en la plataforma Kaggle \cite{acosta2019dataset, zules2019spanish}. \textbf{Las fuentes incluyen tanto medios legítimos (para noticias reales) como sitios identificados como propagadores de desinformación, con verificación cruzada mediante múltiples verificadores de hechos}. Su contribución principal radica en la aplicación de metodologías rigurosas de verificación para la construcción de conjuntos de datos de noticias falsas.
 
 \subsubsection{Dataset de Tretiakov et al.}
 
-Este corpus, desarrollado por Tretiakov, Martín García y Camacho, contiene 1,958 noticias falsas en español \cite{tretiakov2022detection}. \textbf{Su propósito específico fue la evaluación de técnicas de machine learning tradicionales para clasificación binaria de contenido desinformativo}. El dataset fue creado en el contexto de técnicas de aprendizaje automático para la detección de información falsa y se encuentra disponible públicamente en Kaggle \cite{tretiakov2022noticias}. \textbf{Las fuentes de este corpus se concentran en redes sociales y plataformas digitales donde se propaga desinformación, incluyendo Twitter, Facebook y sitios web no verificados}. Su enfoque se centra en la aplicación de técnicas de machine learning para la clasificación automatizada de contenido desinformativo.
+Este corpus, desarrollado por Tretiakov, Martín García y Camacho, contiene 1,958 noticias falsas en español \cite{tretiakov2022detection}. \textbf{Su propósito específico fue la evaluación de técnicas de aprendizaje automático tradicionales para clasificación binaria de contenido desinformativo}. El conjunto de datos fue creado en el contexto de técnicas de aprendizaje automático para la detección de información falsa y se encuentra disponible públicamente en Kaggle \cite{tretiakov2022noticias}. \textbf{Las fuentes de este corpus se concentran en redes sociales y plataformas digitales donde se propaga desinformación, incluyendo Twitter, Facebook y sitios web no verificados}. Su enfoque se centra en la aplicación de técnicas de aprendizaje automático para la clasificación automatizada de contenido desinformativo.
 
 \subsubsection{Spanish Political Fake News Dataset}
 
-El corpus más extenso utilizado, desarrollado por Blanco-Fernández et al., contiene 57,231 noticias de temática política \cite{blanco2024enhancing}. \textbf{Su propósito específico fue evaluar modelos transformer (BERT/RoBERTa) en el dominio político, donde la desinformación tiene particular relevancia social}. Este dataset fue específicamente diseñado para evaluar modelos BERT y RoBERTa en la detección de desinformación política en español y se encuentra disponible en Kaggle \cite{blanco2024spanish}. \textbf{Las fuentes incluyen tanto medios de comunicación tradicionales como plataformas digitales especializadas en contenido político, con particular énfasis en el contexto español e iberoamericano}. Su gran tamaño y enfoque en contenido político lo convierte en un recurso valioso para el entrenamiento de modelos de gran escala.
+El corpus más extenso utilizado, desarrollado por Blanco-Fernández et al., contiene 57,231 noticias de temática política \cite{blanco2024enhancing}. \textbf{Su propósito específico fue evaluar modelos transformer (BERT/RoBERTa) en el dominio político, donde la desinformación tiene particular relevancia social}. Este conjunto de datos fue específicamente diseñado para evaluar modelos BERT y RoBERTa en la detección de desinformación política en español y se encuentra disponible en Kaggle \cite{blanco2024spanish}. \textbf{Las fuentes incluyen tanto medios de comunicación tradicionales como plataformas digitales especializadas en contenido político, con particular énfasis en el contexto español e iberoamericano}. Su gran tamaño y enfoque en contenido político lo convierte en un recurso valioso para el entrenamiento de modelos de gran escala.
 
 \subsection{Proceso de Unificación y Estandarización}
 
@@ -252,15 +252,15 @@ La integración de corpus heterogéneos requirió un proceso sistemático de est
     \item \textbf{Normalización de formato:} Unificación de esquemas de etiquetado en un sistema binario consistente (FALSO=0, REAL=1) y estandarización de estructuras de datos CSV con separador de punto y coma
     \item \textbf{Eliminación de duplicados:} Implementación de algoritmos de detección de contenido similar basados en hash de texto y comparación de títulos
     \item \textbf{Validación de calidad:} Verificación manual de una muestra estadísticamente significativa para confirmar la calidad del etiquetado y consistencia temática
-    \item \textbf{Balanceado de clases:} Análisis detallado de la distribución de clases para identificar necesidades de ampliación y garantizar equilibrio
+    \item \textbf{Balanceo de clases:} Análisis detallado de la distribución de clases para identificar necesidades de ampliación y garantizar equilibrio
     \item \textbf{Limpieza de datos:} Eliminación de registros con valores nulos o inconsistentes mediante \texttt{dropna()} y validación de tipos de datos
 \end{enumerate}
 
-\subsection{Ampliación del Corpus Mediante Web Scraping}
+\subsection{Ampliación del Corpus Mediante Extracción Web}
 
-Para mejorar el balance del conjunto de datos y aumentar la diversidad de las noticias etiquetadas como "FALSAS", se aplicaron técnicas de web scraping automatizado. Se desarrolló un script especializado en Python utilizando las librerías BeautifulSoup y Requests para extraer de forma sistemática los titulares y cuerpos de noticia del portal de contenido satírico "El Deforma".
+Para mejorar el balance del conjunto de datos y aumentar la diversidad de las noticias etiquetadas como "FALSAS", se aplicaron técnicas de extracción web automatizada. Se desarrolló un script especializado en Python utilizando las librerías BeautifulSoup y Requests para extraer de forma sistemática los titulares y cuerpos de noticia del portal de contenido satírico "El Deforma".
 
-\subsubsection{Proceso de Web Scraping Automatizado}
+\subsubsection{Proceso de Extracción Web Automatizada}
 
 El proceso de extracción automatizada se ejecutó en múltiples fases para alcanzar el objetivo de 9,000 noticias adicionales. La Tabla \ref{tab:web_scraping_proceso} detalla las diferentes etapas implementadas.
 
@@ -286,21 +286,21 @@ El proceso de extracción automatizada se ejecutó en múltiples fases para alca
 4 & \begin{tabular}[t]{@{}l@{}}Paginación\\Sistemática\end{tabular} & \begin{tabular}[t]{@{}l@{}}Escaneo por páginas\\Indexación completa\end{tabular} & 9,000 & 9,000 & \begin{tabular}[t]{@{}l@{}}Éxito completo\\Objetivo alcanzado\end{tabular} \\
 \hline
 \rowcolor{HeaderBlue!20}
-\multicolumn{4}{|c|}{\textbf{TOTAL EXTRAÍDO}} & \textbf{9,000} & \textbf{Web scraping completado} \\
+\multicolumn{4}{|c|}{\textbf{TOTAL EXTRAÍDO}} & \textbf{9,000} & \textbf{Extracción web completada} \\
 \hline
 \end{tabular}
 }
-\caption{Fases del proceso de web scraping implementado para "El Deforma".}
+\caption{Fases del proceso de extracción web implementado para "El Deforma".}
 \label{tab:web_scraping_proceso}
 \end{table}
 
-\subsubsection{Implementación Técnica del Web Scraping}
+\subsubsection{Implementación Técnica de la Extracción Web}
 
 El proceso de extracción automatizada incluyó:
 
 \begin{enumerate}
     \item \textbf{Identificación de patrones:} Análisis de la estructura HTML del sitio web objetivo para identificar selectores CSS consistentes (\texttt{h1.tdb-title-text}, \texttt{div.tdb-block-inner})
-    \item \textbf{Extracción automatizada:} Implementación de rutinas de scraping con manejo de errores y delays aleatorios (1.5-4.5 segundos) para evitar sobrecarga del servidor
+    \item \textbf{Extracción automatizada:} Implementación de rutinas de extracción con manejo de errores y delays aleatorios (1.5-4.5 segundos) para evitar sobrecarga del servidor
     \item \textbf{Validación de contenido:} Verificación automática de la calidad del contenido extraído mediante filtros de longitud mínima (500 caracteres)
     \item \textbf{Limpieza de texto:} Eliminación de disclaimers específicos del sitio, caracteres especiales y normalización de espacios mediante expresiones regulares
     \item \textbf{Etiquetado automático:} Asignación de etiqueta "FALSO" (0) a todo el contenido extraído del portal satírico
@@ -332,7 +332,7 @@ Spanish Fake News Corpus (IberLEF) & Workshop IberLEF 2020 & IberLEF Workshop Pr
 Spanish Fake News Corpus (IberLEF) & Repositorio GitHub & GitHub Repository & \cite{ramirez2021spanish} \\
 \hline
 \rowcolor{LightBlue}
-\textbf{Dataset Zules Acosta (UPM)} & Tesis de Máster & Universidad Politécnica de Madrid & \cite{acosta2019construccion} \\
+\textbf{Conjunto de datos Zules Acosta (UPM)} & Tesis de Maestría & Universidad Politécnica de Madrid & \cite{acosta2019construccion} \\
 \hline
 \rowcolor{ProfessionalGray}
 Dataset Zules Acosta (UPM) & Dataset Kaggle & Kaggle Platform & \cite{zules2019spanish} \\
@@ -367,7 +367,7 @@ Esta estrategia de ampliación se justifica por varios factores:
 
 \subsection{Corpus Final y Estrategia de División}
 
-El proceso completo de unificación, limpieza de duplicados y ampliación mediante web scraping resultó en un \textbf{corpus final con 61,674 noticias únicas}, constituyendo uno de los recursos más extensos disponibles para la detección de noticias falsas en español.
+El proceso completo de unificación, limpieza de duplicados y ampliación mediante extracción web resultó en un \textbf{corpus final con 61,674 noticias únicas}, constituyendo uno de los recursos más extensos disponibles para la detección de noticias falsas en español.
 
 \subsubsection{Análisis de Composición Final}
 
@@ -385,7 +385,7 @@ La Tabla \ref{tab:corpus_final} presenta la composición detallada del corpus un
 Corpus Académicos Unificados & 52,689 & 85.4\% & Mixto & Procesado \\
 \hline
 \rowcolor{LightPink!30}
-Web Scraping "El Deforma" & 9,000 & 14.6\% & Falso & Extraído \\
+Extracción Web "El Deforma" & 9,000 & 14.6\% & Falso & Extraído \\
 \hline
 \rowcolor{LightCoral!30}
 Duplicados Eliminados & -15 & -0.02\% & -- & Removido \\
