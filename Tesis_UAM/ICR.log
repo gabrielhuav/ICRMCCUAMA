@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.25)  10 SEP 2025 03:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.25)  10 SEP 2025 03:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1659,7 +1659,7 @@ Cap\'{\i }tulo 1.
 LaTeX Info: Redefining \. on input line 40.
 LaTeX Info: Redefining \% on input line 40.
  [2]
-<Imagenes/mapaConceptual1.png, id=1360, 722.7pt x 520.19344pt>
+<Imagenes/mapaConceptual1.png, id=1359, 722.7pt x 520.19344pt>
 File: Imagenes/mapaConceptual1.png Graphic file (type png)
 <use Imagenes/mapaConceptual1.png>
 Package pdftex.def Info: Imagenes/mapaConceptual1.png  used on input line 54.
@@ -1682,7 +1682,7 @@ LaTeX Info: Redefining \% on input line 79.
 LaTeX Info: Redefining \. on input line 110.
 LaTeX Info: Redefining \% on input line 110.
  [5]
-<Imagenes/mapaConceptual2.png, id=1400, 726.46407pt x 504.38437pt>
+<Imagenes/mapaConceptual2.png, id=1399, 726.46407pt x 504.38437pt>
 File: Imagenes/mapaConceptual2.png Graphic file (type png)
 <use Imagenes/mapaConceptual2.png>
 Package pdftex.def Info: Imagenes/mapaConceptual2.png  used on input line 120.
@@ -1795,7 +1795,7 @@ LaTeX Info: Redefining \% on input line 572.
 LaTeX Info: Redefining \. on input line 588.
 LaTeX Info: Redefining \% on input line 588.
  [29]
-<Imagenes/mapaConceptual3.png, id=1685, 398.9304pt x 191.2746pt>
+<Imagenes/mapaConceptual3.png, id=1684, 398.9304pt x 191.2746pt>
 File: Imagenes/mapaConceptual3.png Graphic file (type png)
 <use Imagenes/mapaConceptual3.png>
 Package pdftex.def Info: Imagenes/mapaConceptual3.png  used on input line 618.
@@ -1908,12 +1908,12 @@ File: Imagenes/mapaConceptual3.png Graphic file (type png)
 <use Imagenes/mapaConceptual3.png>
 Package pdftex.def Info: Imagenes/mapaConceptual3.png  used on input line 350.
 (pdftex.def)             Requested size: 433.62pt x 207.91895pt.
-<Imagenes/mapaConceptual4.png, id=1900, 407.6028pt x 192.2382pt>
+<Imagenes/mapaConceptual4.png, id=1899, 407.6028pt x 192.2382pt>
 File: Imagenes/mapaConceptual4.png Graphic file (type png)
 <use Imagenes/mapaConceptual4.png>
 Package pdftex.def Info: Imagenes/mapaConceptual4.png  used on input line 357.
 (pdftex.def)             Requested size: 433.62pt x 204.5107pt.
-<Imagenes/mapaConceptual5.png, id=1901, 440.3652pt x 208.6194pt>
+<Imagenes/mapaConceptual5.png, id=1900, 440.3652pt x 208.6194pt>
 File: Imagenes/mapaConceptual5.png Graphic file (type png)
 <use Imagenes/mapaConceptual5.png>
 Package pdftex.def Info: Imagenes/mapaConceptual5.png  used on input line 364.
@@ -1922,7 +1922,7 @@ Package pdftex.def Info: Imagenes/mapaConceptual5.png  used on input line 364.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/mapaConceptual6.png, id=1902, 441.3288pt x 211.5102pt>
+<Imagenes/mapaConceptual6.png, id=1901, 441.3288pt x 211.5102pt>
 File: Imagenes/mapaConceptual6.png Graphic file (type png)
 <use Imagenes/mapaConceptual6.png>
 Package pdftex.def Info: Imagenes/mapaConceptual6.png  used on input line 371.
@@ -1964,7 +1964,7 @@ LaTeX Info: Redefining \% on input line 100.
 
  (Metodologia/Metodologia.tex
 Cap\'{\i }tulo 4.
-<Imagenes/metodologiaCompleta.png, id=2008, 324.2514pt x 170.5572pt>
+<Imagenes/metodologiaCompleta.png, id=2007, 324.2514pt x 170.5572pt>
 File: Imagenes/metodologiaCompleta.png Graphic file (type png)
 <use Imagenes/metodologiaCompleta.png>
 Package pdftex.def Info: Imagenes/metodologiaCompleta.png  used on input line 1
@@ -2016,12 +2016,6 @@ LaTeX Info: Redefining \% on input line 398.
 LaTeX Info: Redefining \. on input line 440.
 LaTeX Info: Redefining \% on input line 440.
  [72]
-Overfull \hbox (4.13824pt too wide) in paragraph at lines 441--442
-\T1/cmr/m/n/12 man-te-ner una pro-por-ción si-mi-lar en-tre no-ti-cias "FALSAS[
-] -EA-LES"(idealmente
- []
-
-
 Overfull \hbox (81.65826pt too wide) in paragraph at lines 488--489
 \T1/cmr/m/n/12 je-ti-vo pa-ra iden-ti-fi-car se-lec-to-res CSS con-sis-ten-tes 
 (\T1/cmtt/m/n/12 h1.tdb-title-text\T1/cmr/m/n/12 , \T1/cmtt/m/n/12 div.tdb-bloc
@@ -2607,10 +2601,10 @@ Package rerunfilecheck Info: File `ICR.out' has not changed.
 (rerunfilecheck)             Checksum: C531F85358918B103439CA6EE7E01E5F;46198.
  ) 
 Here is how much of TeX's memory you used:
- 47604 strings out of 474486
- 1098210 string characters out of 5743755
+ 47584 strings out of 474486
+ 1097896 string characters out of 5743755
  1981542 words of memory out of 5000000
- 68222 multiletter control sequences out of 15000+600000
+ 68202 multiletter control sequences out of 15000+600000
  584645 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,19n,93p,2518b,2304s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2625,22 +2619,22 @@ pi600\tcrm1000.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
 n/ec/dpi600\ecbx0800.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/j
 knappen/ec/dpi600\ectt1095.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/lj
 four/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\gabri\AppData\Local\MiKTeX
-\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\gabri\AppData\Local\
-MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\gabri\AppData\
-Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\gabri\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\ga
-bri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Us
-ers\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> 
-<C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti120
-0.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\t
-crm1200.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
-i600\ecsl1200.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
-/ec/dpi600\ecxc1200.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jk
-nappen/ec/dpi600\ecbx2488.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljf
-our/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/
-pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\gabri\AppData\Local\MiKTeX\
-fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\gabri\AppData\Local\M
+/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\gabri\AppData\Local\MiKTeX
+\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0600.pk> <C:\Users\gabri\AppData\Local\
+MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\gabri\AppData\
+Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\gabri\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\ga
+bri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Us
+ers\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> 
+<C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt120
+0.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
+cti1200.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
+i600\tcrm1200.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
+/ec/dpi600\ecsl1200.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jk
+nappen/ec/dpi600\ecxc1200.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/
+pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\gabri\AppData\Local\MiKTeX\
+fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\gabri\AppData\Local\M
 iKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\gabri\AppData\L
 ocal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\gabri\App
 Data\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\gab
@@ -2664,9 +2658,9 @@ c/amsfonts/cm/cmr8.pfb><C:/Users/gabri/AppData/Local/Programs/MiKTeX/fonts/type
 onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/gabri/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/gabri/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ICR.pdf (189 pages, 7495569 bytes).
+Output written on ICR.pdf (189 pages, 7494415 bytes).
 PDF statistics:
- 4393 PDF objects out of 5155 (max. 8388607)
+ 4392 PDF objects out of 5155 (max. 8388607)
  916 named destinations out of 1000 (max. 500000)
  1502 words of extra memory for PDF output out of 10000 (max. 10000000)
 

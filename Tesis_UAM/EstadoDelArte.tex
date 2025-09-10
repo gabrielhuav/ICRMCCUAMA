@@ -318,7 +318,7 @@ Los algoritmos metaheurísticos han demostrado ser herramientas valiosas para ab
 El enfoque de ensemble con marcos heurísticos \cite{das2022heuristic} ha mostrado prometedores resultados al combinar múltiples modelos con información estadística adicional. Yildirim \cite{yildirim2023novel} propuso un enfoque híbrido multi-thread que optimiza tanto la selección de características como los parámetros del modelo. La aplicación de PSO para la detección de reseñas falsas \cite{deshai2023unmasking} demuestra la versatilidad de estas técnicas más allá de las noticias.
 
 \subsection{Perspectivas Interdisciplinarias y Análisis Social}
-La comprensión del fenómeno de las noticias falsas requiere un enfoque interdisciplinario que combine aspectos técnicos con análisis social y psicológico. Ali et al. \cite{ali2021fake, ali2020posttruth} han investigado cómo las heurísticas cognitivas humanas, como la popularidad social ("me gusta"), influyen en la percepción de credibilidad. Su trabajo sobre el procesamiento heurístico durante eventos políticos específicos (elecciones de 2016 en EE.UU.) proporciona insights valiosos sobre la psicología de la desinformación.
+La comprensión del fenómeno de las noticias falsas requiere un enfoque interdisciplinario que combine aspectos técnicos con análisis social y psicológico. Ali et al. \cite{ali2021fake, ali2020posttruth} han investigado cómo las heurísticas cognitivas humanas, como la popularidad social (``me gusta''), influyen en la percepción de credibilidad. Su trabajo sobre el procesamiento heurístico durante eventos políticos específicos (elecciones de 2016 en EE.UU.) proporciona insights valiosos sobre la psicología de la desinformación.
 
 El análisis del rol de los medios de comunicación \cite{carcamo2021fake, perez2020fake} ha revelado patrones culturales en cómo diferentes países abordan la desinformación. Pulido et al. \cite{pulido2020new} propusieron el marco SISM (Social Impact in Social Media) para combatir específicamente la desinformación en salud, un dominio crítico durante pandemias.
 
@@ -393,7 +393,7 @@ Modelos de Lenguaje & \begin{tabular}[t]{@{}l@{}}Evalúa la detección de notici
 \end{figure}
 
 \section{Análisis del Impacto Social y Rol de los Medios}
-Comprender el impacto social de la desinformación es crucial. Investigaciones como la de Singh et al. \cite{singh2023comprehensive} abordan la complejidad y los desafíos de la detección en redes sociales. Ali et al. \cite{ali2021fake} examinaron cómo heurísticas (como la cantidad de "me gusta") influyen en la credibilidad y la intención de compartir noticias en Facebook. El rol de los medios de comunicación es fundamental en esta lucha; trabajos como los de Ulloa et al. \cite{carcamo2021fake} y Pérez-Dasilva et al. \cite{perez2020fake} analizan cómo los medios en Chile, España y en el contexto de la pandemia de COVID-19 abordan la desinformación.
+Comprender el impacto social de la desinformación es crucial. Investigaciones como la de Singh et al. \cite{singh2023comprehensive} abordan la complejidad y los desafíos de la detección en redes sociales. Ali et al. \cite{ali2021fake} examinaron cómo heurísticas (como la cantidad de ``me gusta'') influyen en la credibilidad y la intención de compartir noticias en Facebook. El rol de los medios de comunicación es fundamental en esta lucha; trabajos como los de Ulloa et al. \cite{carcamo2021fake} y Pérez-Dasilva et al. \cite{perez2020fake} analizan cómo los medios en Chile, España y en el contexto de la pandemia de COVID-19 abordan la desinformación.
 
 \section{Detección Aplicada a Fraude Financiero y Laboral}
 El estado del arte se extiende a dominios críticos como el fraude financiero y laboral. Artículos como el de Cao et al. \cite{cao2020corporate} analizan cómo las decisiones de empleo pueden ser indicadores ("red flags") de riesgo de fraude financiero para los auditores. En el ámbito del fraude laboral, Nasser et al. \cite{nasser2021online} presentan un modelo basado en Redes Neuronales Artificiales (ANN) para detectar publicaciones de trabajo fraudulentas, mientras que Álvarez \cite{alvarez2021fraude} aborda las nuevas modalidades de fraude en la era digital en Latinoamérica. El Mapa Conceptual \ref{fig:mapa_conceptual_4} clasifica varios artículos según su enfoque en estas problemáticas.
@@ -492,7 +492,7 @@ Imagina que estás construyendo un modelo de machine learning (el pastel).
 
 Los \textbf{parámetros} son los elementos que el modelo aprende por sí mismo durante el entrenamiento (la cocción). Por ejemplo, cómo se combinan la harina y el azúcar dentro del horno. En una red neuronal, estos son los pesos (\textit{weights}) y sesgos (\textit{biases}) de las neuronas. No los eliges tú directamente, se ajustan solos a partir de los datos.
 
-Los \textbf{hiperparámetros}, en cambio, son las decisiones que tú tomas antes de empezar a entrenar. Son los ajustes o "perillas" de la receta que tú, como cocinero (científico de datos), debes fijar. Por ejemplo:
+Los \textbf{hiperparámetros}, en cambio, son las decisiones que tú tomas antes de empezar a entrenar. Son los ajustes o ``perillas'' de la receta que tú, como cocinero (científico de datos), debes fijar. Por ejemplo:
 
 \begin{itemize}
     \item \textbf{La temperatura del horno} → tasa de aprendizaje (\textit{learning rate})
@@ -522,11 +522,11 @@ Tradicionalmente, los científicos de datos probaban diferentes combinaciones de
     \item \textbf{Búsqueda aleatoria (Random Search)}: Probar combinaciones al azar - más eficiente pero sin dirección
 \end{itemize}
 
-Aquí es donde entran los algoritmos metaheurísticos, que son como "cocineros inteligentes" que aprenden de cada pastel que hacen para mejorar la siguiente receta.
+Aquí es donde entran los algoritmos metaheurísticos, que son como ``cocineros inteligentes'' que aprenden de cada pastel que hacen para mejorar la siguiente receta.
 
 \subsection{Herramientas Modernas: Keras Tuner}
 
-En el ecosistema de TensorFlow, Keras Tuner \cite{omalley2020hyperparameter} ha emergido como una herramienta fundamental para automatizar la búsqueda de los mejores hiperparámetros. Desarrollado por el equipo de Keras, esta biblioteca permite que el sistema pruebe automáticamente diferentes "recetas" y encuentre la mejor configuración para tu modelo.
+En el ecosistema de TensorFlow, Keras Tuner \cite{omalley2020hyperparameter} ha emergido como una herramienta fundamental para automatizar la búsqueda de los mejores hiperparámetros. Desarrollado por el equipo de Keras, esta biblioteca permite que el sistema pruebe automáticamente diferentes ``recetas'' y encuentre la mejor configuración para tu modelo.
 
 Keras Tuner facilita:
 \begin{itemize}

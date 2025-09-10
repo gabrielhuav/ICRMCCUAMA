@@ -96,7 +96,7 @@ Sin embargo, estos enfoques requieren corpus más especializados y presentan des
 \subsection{Fronteras Difusas en la Clasificación de Veracidad}
 \label{subsec:fronteras_difusas}
 
-\textbf{Es importante reconocer que la clasificación binaria de contenido informativo presenta inherentemente zonas grises y fronteras difusas}, donde la distinción entre "verdadero" y "falso" no es absoluta. Esta complejidad conceptual representa uno de los desafíos fundamentales en la detección automatizada de desinformación.
+\textbf{Es importante reconocer que la clasificación binaria de contenido informativo presenta inherentemente zonas grises y fronteras difusas}, donde la distinción entre ``verdadero'' y ``falso'' no es absoluta. Esta complejidad conceptual representa uno de los desafíos fundamentales en la detección automatizada de desinformación.
 
 \subsubsection{Casos Límite y Ambigüedades}
 
@@ -116,7 +116,7 @@ En la práctica, existen varios tipos de contenido que desafían la clasificaci�
 Esta ambiguidad inherente se aborda en esta investigación mediante:
 
 \begin{enumerate}
-    \item \textbf{Criterios de etiquetado conservadores:} En casos ambiguos, se prioriza la asignación a la clase "REAL" para evitar censura inadecuada de contenido legítimo
+    \item \textbf{Criterios de etiquetado conservadores:} En casos ambiguos, se prioriza la asignación a la clase ``REAL'' para evitar censura inadecuada de contenido legítimo
     \item \textbf{Umbral de confianza:} El modelo genera probabilidades que pueden interpretarse como niveles de certeza, permitiendo identificar casos limítrofes
     \item \textbf{Validación humana en casos dudosos:} Los corpus utilizados fueron validados manualmente para resolver ambigüedades
     \item \textbf{Reconocimiento de limitaciones:} Se asume que un porcentaje mínimo de casos será inherentemente ambiguo y difícil de clasificar con certeza absoluta
@@ -356,7 +356,7 @@ Una consideración metodológica fundamental en esta investigación es el recono
 \begin{itemize}
     \item \textbf{Español peninsular (España):} Representado principalmente en los corpus de Posadas-Durán \cite{posadas2019detection} y Blanco-Fernández \cite{blanco2024enhancing}, que utilizan fuentes de medios españoles verificados
     
-    \item \textbf{Español mexicano:} Incorporado a través del contenido de "El Deforma" y fuentes mexicanas presentes en el corpus de Acosta \cite{acosta2019construccion}
+    \item \textbf{Español mexicano:} Incorporado a través del contenido de ``El Deforma'' y fuentes mexicanas presentes en el corpus de Acosta \cite{acosta2019construccion}
     
     \item \textbf{Español latinoamericano diverso:} El corpus de Acosta incluye fuentes internacionales que abarcan múltiples países de habla hispana
     
@@ -438,13 +438,13 @@ La integración de corpus heterogéneos requirió un proceso sistemático de est
     \item \textbf{Normalización de formato:} Unificación de esquemas de etiquetado en un sistema binario consistente (FALSO=0, REAL=1) y estandarización de estructuras de datos CSV con separador de punto y coma
     \item \textbf{Eliminación de duplicados:} Implementación de algoritmos de detección de contenido similar basados en hash de texto y comparación de títulos
     \item \textbf{Validación de calidad:} Verificación manual de una muestra estadísticamente significativa para confirmar la calidad del etiquetado y consistencia temática
-    \item \textbf{Balanceo de clases:} Análisis detallado de la distribución de clases para identificar necesidades de ampliación y garantizar equilibrio. El balanceo se refiere a mantener una proporción similar entre noticias "FALSAS" y "REALES" (idealmente cercana al 50\%-50\%) para evitar sesgos algorítmicos y garantizar que los modelos aprendan a detectar ambas clases con igual efectividad
+    \item \textbf{Balanceo de clases:} Análisis detallado de la distribución de clases para identificar necesidades de ampliación y garantizar equilibrio. El balanceo se refiere a mantener una proporción similar entre noticias ``FALSAS'' y ``REALES'' (idealmente cercana al 50\%-50\%) para evitar sesgos algorítmicos y garantizar que los modelos aprendan a detectar ambas clases con igual efectividad
     \item \textbf{Limpieza de datos:} Eliminación de registros con valores nulos o inconsistentes mediante \texttt{dropna()} y validación de tipos de datos
 \end{enumerate}
 
 \subsection{Ampliación del Corpus Mediante Extracción Web}
 
-Para mejorar el balance del conjunto de datos y aumentar la diversidad de las noticias etiquetadas como "FALSAS", se aplicaron técnicas de extracción web automatizada. Se desarrolló un script especializado en Python utilizando las librerías BeautifulSoup y Requests para extraer de forma sistemática los titulares y cuerpos de noticia del portal de contenido satírico "El Deforma".
+Para mejorar el balance del conjunto de datos y aumentar la diversidad de las noticias etiquetadas como ``FALSAS'', se aplicaron técnicas de extracción web automatizada. Se desarrolló un script especializado en Python utilizando las librerías BeautifulSoup y Requests para extraer de forma sistemática los titulares y cuerpos de noticia del portal de contenido satírico ``El Deforma''.
 
 \subsubsection{Proceso de Extracción Web Automatizada}
 
@@ -476,7 +476,7 @@ El proceso de extracción automatizada se ejecutó en múltiples fases para alca
 \hline
 \end{tabular}
 }
-\caption{Fases del proceso de extracción web implementado para "El Deforma".}
+\caption{Fases del proceso de extracción web implementado para ``El Deforma''.}
 \label{tab:web_scraping_proceso}
 \end{table}
 
@@ -489,7 +489,7 @@ El proceso de extracción automatizada incluyó:
     \item \textbf{Extracción automatizada:} Implementación de rutinas de extracción con manejo de errores y delays aleatorios (1.5-4.5 segundos) para evitar sobrecarga del servidor
     \item \textbf{Validación de contenido:} Verificación automática de la calidad del contenido extraído mediante filtros de longitud mínima (500 caracteres)
     \item \textbf{Limpieza de texto:} Eliminación de disclaimers específicos del sitio, caracteres especiales y normalización de espacios mediante expresiones regulares
-    \item \textbf{Etiquetado automático:} Asignación de etiqueta "FALSO" (0) a todo el contenido extraído del portal satírico
+    \item \textbf{Etiquetado automático:} Asignación de etiqueta ``FALSO'' (0) a todo el contenido extraído del portal satírico
     \item \textbf{Persistencia progresiva:} Guardado en lotes de 50 registros con formato CSV y separador de punto y coma para evitar pérdida de datos
     \item \textbf{Gestión de estado:} Implementación de archivos de progreso para permitir la reanudación del proceso en caso de interrupción
 \end{enumerate}
@@ -571,7 +571,7 @@ La Tabla \ref{tab:corpus_final} presenta la composición detallada del corpus un
 Corpus Académicos Unificados & 52,689 & 85.4\% & Mixto & Procesado \\
 \hline
 \rowcolor{LightPink!30}
-Extracción Web "El Deforma" & 9,000 & 14.6\% & Falso & Extraído \\
+Extracción Web ``El Deforma'' & 9,000 & 14.6\% & Falso & Extraído \\
 \hline
 \rowcolor{LightCoral!30}
 Duplicados Eliminados & -15 & -0.02\% & -- & Removido \\
@@ -593,7 +593,7 @@ El análisis de balance del corpus final mostró una distribución equilibrada:
 
 \subsubsection{Concepto y Importancia del Balanceo de Clases}
 
-El \textbf{balanceo de clases} es un concepto fundamental en el aprendizaje automático que se refiere a la distribución equitativa de ejemplos entre las diferentes categorías o clases del conjunto de datos. En el contexto de la detección de noticias falsas, esto significa mantener una proporción similar entre noticias etiquetadas como "FALSAS" y "REALES".
+El \textbf{balanceo de clases} es un concepto fundamental en el aprendizaje automático que se refiere a la distribución equitativa de ejemplos entre las diferentes categorías o clases del conjunto de datos. En el contexto de la detección de noticias falsas, esto significa mantener una proporción similar entre noticias etiquetadas como ``FALSAS'' y ``REALES''.
 
 \textbf{¿Por qué es crucial el balanceo?}
 
