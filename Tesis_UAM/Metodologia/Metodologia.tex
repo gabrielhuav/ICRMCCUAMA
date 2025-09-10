@@ -1,15 +1,24 @@
 %!TEX root = ../ICR.tex
 \chapter{Metodología \label{cap:Metodologia}}
 
-En este capítulo se detalla el procedimiento experimental seguido para abordar el problema de la detección de noticias falsas en español. La metodología se diseñó con un enfoque evolutivo y comparativo, comenzando con una exploración de técnicas de optimización clásicas y culminando con la implementación de un modelo de lenguaje de última generación. El diseño del flujo de trabajo, ilustrado en la Figura \ref{fig:metodologia_general}, garantiza la reproducibilidad de los resultados al definir claramente cada una de sus etapas, desde la recopilación de datos hasta la evaluación final y la implementación de una aplicación web como solución práctica.
+En este capítulo se presenta una metodología unificada e integrada para abordar el problema de la detección de noticias falsas en español. La estrategia metodológica se fundamenta en un proceso evolutivo de desarrollo y evaluación que avanza desde técnicas clásicas hasta modelos de lenguaje de última generación, permitiendo una comparación sistemática y objetiva de diferentes paradigmas de inteligencia artificial sobre una base de datos común.
 
-\section{Visión General de la Metodología}
+El diseño metodológico adopta un enfoque experimental escalonado que incluye: (1) adquisición y procesamiento unificado de datos, (2) implementación de un pipeline de procesamiento común, (3) desarrollo paralelo de modelos de clasificación utilizando algoritmos metaheurísticos y modelos Transformer, y (4) evaluación comparativa integral bajo un marco de métricas unificado. Este proceso culmina con la implementación de la solución más efectiva en una aplicación web funcional.
 
-La estrategia metodológica de esta tesis se fundamenta en la comparación sistemática de dos paradigmas de la inteligencia artificial sobre un corpus unificado de gran escala. Como se muestra en la Figura \ref{fig:metodologia_general}, ambos enfoques parten de una base común (la problemática y los datos), pero siguen rutas de implementación y modelado distintas, para finalmente ser evaluados bajo un mismo marco de métricas y así determinar la solución más eficaz que será implementada en una aplicación web.
+\section{Visión General del Proceso Metodológico Integrado}
 
-El primer paradigma se basa en técnicas clásicas de Procesamiento del Lenguaje Natural (PLN) con representación Bolsa de Palabras (BoW) y optimización metaheurística, mientras que el segundo emplea modelos Transformer pre-entrenados con técnicas de fine-tuning. Esta aproximación comparativa permite evaluar tanto la efectividad como la eficiencia computacional de cada enfoque en el contexto específico de la detección de desinformación en español.
+La metodología se estructura como un pipeline experimental unificado que evalúa sistemáticamente dos paradigmas de inteligencia artificial complementarios. Como se ilustra en la Figura \ref{fig:metodologia_general}, ambos enfoques parten de una base metodológica común pero implementan estrategias de modelado diferenciadas, convergiendo finalmente en una evaluación comparativa que determina la solución óptima.
 
-Una vez determinado el mejor modelo mediante las métricas de evaluación correspondientes, se procederá a desarrollar una aplicación web funcional que permita la detección automática de noticias falsas en tiempo real.
+\textbf{Fundamento del enfoque evolutivo:} Esta investigación adopta una filosofía de desarrollo evolutivo donde se exploran técnicas de complejidad creciente, comenzando con métodos clásicos de PLN optimizados mediante metaheurísticas (estableciendo una línea base sólida) y progresando hacia modelos Transformer de última generación. Esta progresión permite:
+
+\begin{itemize}
+    \item \textbf{Validación incremental:} Cada fase valida y mejora los resultados de la anterior
+    \item \textbf{Comparación objetiva:} Todos los modelos se evalúan bajo las mismas condiciones experimentales
+    \item \textbf{Justificación de complejidad:} Se demuestra empíricamente si la complejidad adicional se traduce en mejoras de rendimiento
+    \item \textbf{Transferibilidad metodológica:} Los procesos desarrollados son aplicables a otros tipos de fraude digital
+\end{itemize}
+
+Una vez completada la evaluación comparativa, el modelo de mejor rendimiento se implementa en una aplicación web que demuestra la viabilidad práctica de la solución desarrollada.
 
 \begin{figure}[h!]
     \centering
