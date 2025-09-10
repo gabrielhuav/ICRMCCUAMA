@@ -3,7 +3,14 @@
 
 \section{Planteamiento del problema}
 
-En la era de la información digital, la interconexión global ha traído consigo un desafío sin precedentes: la propagación masiva de \gls{desinformacion}. Este fenómeno, que abarca desde \glspl{noticiafalsa} (\textit{fake news}) hasta diversas formas de \gls{fraudedigital}, representa una amenaza significativa para la estabilidad social, económica y democrática a nivel mundial.
+En la era de la información digital, la interconexión global ha traído consigo un desafío sin precedentes: la propag\subsubsection{Alcance Lingüístico y Cultural}
+\begin{itemize}
+    \item \textbf{Idioma objetivo:} El proyecto se centra exclusivamente en textos en español neutro multiregional, integrando contenido de España ($\sim$70\%), México ($\sim$20\%), y otras regiones latinoamericanas ($\sim$10\%)
+    \item \textbf{Variantes regionales cubiertas:} Español peninsular (España), español mexicano, y español latinoamericano diverso, proporcionando robustez a través de múltiples variantes dialectales
+    \item \textbf{Justificación de neutralidad regional:} El enfoque multiregional permite desarrollar modelos generalizables que funcionan efectivamente para toda la comunidad hispanohablante, sin sesgo hacia una variante específica
+    \item \textbf{Dominio de aplicación:} Detección de noticias falsas como caso de uso principal, con extensibilidad demostrada hacia otros tipos de fraude digital
+    \item \textbf{Contexto geográfico:} Cobertura de múltiples países hispanohablantes a través de los corpus integrados, reflejando la realidad del consumo de noticias en español que cruza fronteras nacionales
+\end{itemize}masiva de \gls{desinformacion}. Este fenómeno, que abarca desde \glspl{noticiafalsa} (\textit{fake news}) hasta diversas formas de \gls{fraudedigital}, representa una amenaza significativa para la estabilidad social, económica y democrática a nivel mundial.
 
 Las \glspl{noticiafalsa}, definidas como información deliberadamente engañosa disfrazada de periodismo auténtico \cite{bondielli2019survey}, se difunden a través de redes sociales y medios digitales con el fin de manipular la opinión pública y el comportamiento de los individuos. La gravedad de esta problemática se ha intensificado exponencialmente con la sofisticación de los actores maliciosos, la democratización de herramientas de generación de contenido mediante \gls{ia} \cite{hu2024bad}, y la velocidad sin precedentes con la que la información se viraliza en el ecosistema digital.
 
@@ -49,9 +56,41 @@ La desinformación contemporánea se manifiesta a través de múltiples modalida
     \label{fig:mapa_problema}
 \end{figure}
 
-\subsection{El Desafío Específico del Español}
+\subsection{El Desafío Específico del Español: Enfoque Multiregional}
 
 El español, como la cuarta lengua más hablada del mundo con más de 500 millones de hablantes nativos \cite{acosta2019construccion}, presenta desafíos únicos para la detección automatizada de desinformación. A pesar de su importancia demográfica y económica, existe una notable escasez de recursos computacionales especializados para la detección de noticias falsas en español, en comparación con los abundantes recursos disponibles para el inglés \cite{posadas2019detection}.
+
+\subsubsection{Variante del Español Utilizada: Justificación Metodológica}
+
+\textbf{Esta investigación adopta un enfoque de español neutro multiregional}, fundamentado en la integración estratégica de corpus que representan diferentes variantes geográficas y estilísticas del español. Esta decisión metodológica se justifica por:
+
+\begin{itemize}
+    \item \textbf{Corpus español peninsular:} Los corpus de Posadas-Durán et al. \cite{posadas2019detection} y Blanco-Fernández et al. \cite{blanco2024enhancing} incluyen principalmente contenido de medios españoles, aportando características del español de España
+    
+    \item \textbf{Corpus latinoamericano:} El corpus de Acosta \cite{acosta2019construccion} incorpora fuentes internacionales con presencia de español mexicano y de otros países latinoamericanos
+    
+    \item \textbf{Contenido mexicano específico:} La inclusión de contenido de "El Deforma" (portal satírico mexicano) aporta características específicas del español mexicano contemporáneo
+    
+    \item \textbf{Variabilidad temporal:} Los corpus abarcan contenido desde 2018 hasta 2024, capturando la evolución del español digital en múltiples regiones
+\end{itemize}
+
+\textbf{Distribución geográfica del corpus unificado:}
+\begin{itemize}
+    \item \textbf{España ($\sim$70\%):} Principalmente del corpus político de Blanco-Fernández
+    \item \textbf{México ($\sim$20\%):} Contenido de El Deforma y fuentes mexicanas en otros corpus
+    \item \textbf{Multinacional ($\sim$10\%):} Corpus de Acosta con fuentes internacionales diversas
+\end{itemize}
+
+Esta composición resulta en un modelo que puede generalizar efectivamente a través de las principales variantes del español, sin estar sesgado hacia una región específica.
+
+\subsubsection{Ventajas del Enfoque Multiregional}
+
+\begin{itemize}
+    \item \textbf{Robustez lingüística:} El modelo entrenado es capaz de detectar desinformación independientemente de la variante regional del español
+    \item \textbf{Generalización mejorada:} Menor dependencia de modismos o construcciones específicas de una región
+    \item \textbf{Aplicabilidad universal:} El sistema resultante es útil para toda la comunidad hispanohablante
+    \item \textbf{Representatividad demográfica:} Refleja la realidad del consumo de noticias en español, que frecuentemente cruza fronteras nacionales
+\end{itemize}
 
 Esta brecha de recursos se manifiesta en:
 \begin{itemize}

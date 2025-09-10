@@ -108,6 +108,16 @@ J.~P. Posadas-Durán, H.~Gómez-Adorno, G.~Sidorov, and J.~J.~M. Escobar.
 \newblock \doi{10.3233/jifs-179034}.
 \newblock URL \url{https://doi.org/10.3233/jifs-179034}.
 
+\bibitem[Blanco-Fernández et~al.(2024{\natexlab{a}})Blanco-Fernández,
+  Otero-Vizoso, Gil-Solla, and Garc{\'i}a-Duque]{blanco2024enhancing}
+Y.~Blanco-Fernández, J.~Otero-Vizoso, A.~Gil-Solla, and J.~Garc{\'i}a-Duque.
+\newblock Enhancing misinformation detection in {Spanish} language with deep
+  learning: {BERT} and {RoBERTa} transformer models.
+\newblock \emph{Applied Sciences}, 14\penalty0 (21):\penalty0 9729,
+  2024{\natexlab{a}}.
+\newblock \doi{10.3390/app14219729}.
+\newblock URL \url{https://doi.org/10.3390/app14219729}.
+
 \bibitem[Singh et~al.(2023)Singh, Ahmed, Alam, Raghuvanshi, and
   Kumar]{singh2023comprehensive}
 M.~K. Singh, J.~Ahmed, M.~A. Alam, K.~K. Raghuvanshi, and S.~Kumar.
@@ -160,16 +170,6 @@ Arsenii Tretiakov, Alejandro Martín~Garc{\'i}a, and David Camacho.
   Springer, 2022{\natexlab{a}}.
 \newblock \doi{10.1007/978-3-031-21753-1_5}.
 \newblock URL \url{http://dx.doi.org/10.1007/978-3-031-21753-1_5}.
-
-\bibitem[Blanco-Fernández et~al.(2024{\natexlab{a}})Blanco-Fernández,
-  Otero-Vizoso, Gil-Solla, and Garc{\'i}a-Duque]{blanco2024enhancing}
-Y.~Blanco-Fernández, J.~Otero-Vizoso, A.~Gil-Solla, and J.~Garc{\'i}a-Duque.
-\newblock Enhancing misinformation detection in {Spanish} language with deep
-  learning: {BERT} and {RoBERTa} transformer models.
-\newblock \emph{Applied Sciences}, 14\penalty0 (21):\penalty0 9729,
-  2024{\natexlab{a}}.
-\newblock \doi{10.3390/app14219729}.
-\newblock URL \url{https://doi.org/10.3390/app14219729}.
 
 \bibitem[Sanh et~al.(2019)Sanh, Debut, Chaumond, and Wolf]{sanh2019distilbert}
 V.~Sanh, L.~Debut, J.~Chaumond, and T.~Wolf.
