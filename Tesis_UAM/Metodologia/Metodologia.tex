@@ -244,6 +244,171 @@ Este corpus, desarrollado por Tretiakov, Martín García y Camacho, contiene 1,9
 
 El corpus más extenso utilizado, desarrollado por Blanco-Fernández et al., contiene 57,231 noticias de temática política \cite{blanco2024enhancing}. \textbf{Su propósito específico fue evaluar modelos transformer (BERT/RoBERTa) en el dominio político, donde la desinformación tiene particular relevancia social}. Este conjunto de datos fue específicamente diseñado para evaluar modelos BERT y RoBERTa en la detección de desinformación política en español y se encuentra disponible en Kaggle \cite{blanco2024spanish}. \textbf{Las fuentes incluyen tanto medios de comunicación tradicionales como plataformas digitales especializadas en contenido político, con particular énfasis en el contexto español e iberoamericano}. Su gran tamaño y enfoque en contenido político lo convierte en un recurso valioso para el entrenamiento de modelos de gran escala.
 
+\subsection{Análisis Comparativo Detallado de los Corpus Utilizados}
+
+Para garantizar una comprensión completa de las características y diferencias entre los corpus utilizados, se presenta un análisis comparativo exhaustivo que permite entender las fortalezas y limitaciones de cada fuente de datos, así como las decisiones metodológicas tomadas en el proceso de unificación.
+
+\begin{table}[htbp]
+\centering
+\adjustbox{width=\textwidth,center}{%
+\tiny
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\rowcolor{UAMPurple!20}
+\textbf{Aspecto Comparativo} & \textbf{Posadas-Durán} & \textbf{Acosta (UPM)} & \textbf{Tretiakov} & \textbf{Blanco-Fernández} & \textbf{El Deforma} \\
+\hline
+\rowcolor{LightBlue!30}
+\textbf{Tamaño del corpus} & 971 noticias & 598 noticias & 1,958 noticias & 57,231 noticias & 9,000 noticias \\
+\hline
+\rowcolor{LightGreen!30}
+\textbf{Año de creación} & 2019-2021 & 2019 & 2022 & 2024 & 2024 (extracción) \\
+\hline
+\rowcolor{LightYellow!30}
+\textbf{Enfoque metodológico} & 
+\begin{tabular}[t]{@{}l@{}}Análisis estilométrico\\Competencias IberLEF\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Metodología de\\construcción de corpus\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Aprendizaje automático\\tradicional\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Modelos Transformer\\BERT/RoBERTa\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Contenido satírico\\Web scraping\end{tabular} \\
+\hline
+\rowcolor{LightCoral!30}
+\textbf{Dominio temático} & General & General & General & Político específico & Satírico/General \\
+\hline
+\rowcolor{LightPink!30}
+\textbf{Distribución de clases} & Balanceado & Balanceado & Solo falsas & Balanceado & Solo falsas \\
+\hline
+\rowcolor{LightOrange!30}
+\textbf{Fuentes de noticias reales} & 
+\begin{tabular}[t]{@{}l@{}}Medios españoles\\verificados\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Múltiples medios\\internacionales\end{tabular} & 
+N/A & 
+\begin{tabular}[t]{@{}l@{}}Medios políticos\\españoles\end{tabular} & 
+N/A \\
+\hline
+\rowcolor{LightGray!30}
+\textbf{Fuentes de noticias falsas} & 
+\begin{tabular}[t]{@{}l@{}}Sitios verificados como\\desinformativos\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Fact-checkers y\\verificadores\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Redes sociales y\\sitios no verificados\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Desinformación\\política verificada\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Portal satírico\\El Deforma\end{tabular} \\
+\hline
+\rowcolor{LightBlue!30}
+\textbf{Variabilidad regional} & España/Latinoamérica & Internacional & Múltiple & España & México \\
+\hline
+\rowcolor{LightGreen!30}
+\textbf{Periodo temporal} & 2018-2021 & 2018-2019 & 2020-2022 & 2020-2024 & 2020-2024 \\
+\hline
+\rowcolor{LightYellow!30}
+\textbf{Calidad de anotación} & 
+\begin{tabular}[t]{@{}l@{}}Alta - múltiples\\anotadores\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Alta - verificación\\manual exhaustiva\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Media - basada\\en fuentes\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Alta - verificación\\política especializada\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Automática - contenido\\inherentemente falso\end{tabular} \\
+\hline
+\rowcolor{LightCoral!30}
+\textbf{Metadatos incluidos} & 
+\begin{tabular}[t]{@{}l@{}}Características\\estilométricas\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Fuente, fecha,\\categoría\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Fecha, fuente,\\contexto\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Orientación política,\\fecha, fuente\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}URL, fecha de\\extracción\end{tabular} \\
+\hline
+\rowcolor{LightPink!30}
+\textbf{Disponibilidad pública} & 
+\begin{tabular}[t]{@{}l@{}}GitHub\\(IberLEF)\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Kaggle\\UPM\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Kaggle\\Público\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Kaggle\\Applied Sciences\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Generado para\\esta tesis\end{tabular} \\
+\hline
+\rowcolor{LightOrange!30}
+\textbf{Fortaleza principal} & 
+\begin{tabular}[t]{@{}l@{}}Análisis lingüístico\\profundo\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Metodología\\rigurosa\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Foco en ML\\tradicional\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Gran escala y\\especialización política\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Contemporaneidad\\y diversidad\end{tabular} \\
+\hline
+\rowcolor{LightGray!30}
+\textbf{Limitación principal} & 
+\begin{tabular}[t]{@{}l@{}}Tamaño\\limitado\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Tamaño muy\\pequeño\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Solo noticias\\falsas\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Dominio muy\\específico\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Solo contenido\\satírico\end{tabular} \\
+\hline
+\rowcolor{LightBlue!30}
+\textbf{Contribución al corpus final} & 1.6\% & 1.0\% & 3.2\% & 92.8\% & 14.6\% \\
+\hline
+\end{tabular}
+}
+\caption{Comparación exhaustiva de características de los corpus utilizados en la construcción del conjunto de datos unificado.}
+\label{tab:comparacion_exhaustiva_corpus}
+\end{table}
+
+\subsubsection{Análisis de Complementariedad entre Corpus}
+
+La selección y combinación de estos cinco fuentes de datos no fue arbitraria, sino que responde a una estrategia metodológica que busca aprovechar las fortalezas complementarias de cada corpus para crear un conjunto de datos robusto y diverso:
+
+\textbf{1. Diversidad Metodológica:}
+\begin{itemize}
+    \item \textbf{Corpus de Posadas-Durán:} Aporta rigor en análisis estilométrico y experiencia en competencias académicas
+    \item \textbf{Corpus de Acosta:} Contribuye con metodología de construcción verificada manualmente
+    \item \textbf{Corpus de Tretiakov:} Añade perspectiva de ML tradicional y fuentes de redes sociales
+    \item \textbf{Corpus de Blanco-Fernández:} Proporciona escala masiva y especialización en dominio político
+    \item \textbf{Contenido de El Deforma:} Introduce diversidad estilística y contemporaneidad
+\end{itemize}
+
+\textbf{2. Cobertura Temporal y Geográfica:}
+\begin{itemize}
+    \item \textbf{Span temporal:} 2018-2024 (6 años de evolución en patrones de desinformación)
+    \item \textbf{Cobertura geográfica:} España, México, Latinoamérica (diversidad regional del español)
+    \item \textbf{Evolución temática:} Desde temas generales hasta especialización política y satírica
+\end{itemize}
+
+\textbf{3. Complementariedad en Tipos de Desinformación:}
+\begin{itemize}
+    \item \textbf{Desinformación tradicional:} Corpus académicos con verificación formal
+    \item \textbf{Desinformación política:} Especialización del corpus de Blanco-Fernández
+    \item \textbf{Contenido satírico:} Ampliación con El Deforma para diversidad estilística
+    \item \textbf{Múltiples fuentes:} Desde medios tradicionales hasta redes sociales
+\end{itemize}
+
+\textbf{4. Validación de Robustez:}
+La diversidad en metodologías de construcción permite validar la robustez de los modelos desarrollados:
+\begin{itemize}
+    \item Modelos entrenados deben generalizar entre diferentes tipos de anotación
+    \item Capacidad de detectar patrones consistentes a pesar de diferencias metodológicas
+    \item Evaluación de transferencia entre dominios (general → político → satírico)
+\end{itemize}
+
+\subsubsection{Justificación de la Estrategia de Unificación}
+
+La decisión de unificar corpus heterogéneos se basa en varios principios metodológicos sólidos:
+
+\textbf{1. Principio de Máxima Diversidad:}
+\begin{itemize}
+    \item Mayor variabilidad en patrones lingüísticos
+    \item Reducción de sesgos específicos de corpus individuales
+    \item Mejora en generalización de modelos entrenados
+\end{itemize}
+
+\textbf{2. Principio de Escala Efectiva:}
+\begin{itemize}
+    \item Aprovechamiento del corpus grande (Blanco-Fernández) como base
+    \item Enriquecimiento con corpus especializados más pequeños
+    \item Balanceo mediante extracción web controlada
+\end{itemize}
+
+\textbf{3. Principio de Validación Cruzada:}
+\begin{itemize}
+    \item Cada corpus actúa como validación independiente de los otros
+    \item Patrones consistentes entre corpus indican robustez
+    \item Diferencias señalan áreas que requieren atención especial
+\end{itemize}
+
 \subsection{Proceso de Unificación y Estandarización}
 
 La integración de corpus heterogéneos requirió un proceso sistemático de estandarización que incluyó:
@@ -404,6 +569,51 @@ El análisis de balance del corpus final mostró una distribución equilibrada:
     \item \textbf{Noticias FALSAS (0):} 30,734 registros (49.8\%)
     \item \textbf{Noticias REALES (1):} 30,940 registros (50.2\%)
 \end{itemize}
+
+\subsubsection{Síntesis del Análisis Comparativo entre Corpus}
+
+El análisis detallado de los corpus permite identificar patrones complementarios que justifican la estrategia de unificación adoptada:
+
+\textbf{1. Análisis Cuantitativo Comparativo:}
+\begin{itemize}
+    \item \textbf{Distribución de tamaños:} Desde corpus micro (598 noticias) hasta macro (57,231 noticias)
+    \item \textbf{Diversidad temporal:} Cobertura continua de 6 años (2018-2024) entre todos los corpus
+    \item \textbf{Representación geográfica:} Equilibrio entre España (3 corpus), México (1 corpus) y cobertura internacional (1 corpus)
+\end{itemize}
+
+\textbf{2. Análisis Cualitativo de Complementariedad:}
+\begin{itemize}
+    \item \textbf{Metodologías de verificación:} Combinación de verificación manual experta, fact-checking automatizado y verificación basada en fuentes
+    \item \textbf{Dominios temáticos:} Progresión desde contenido general hasta especialización política y satírica
+    \item \textbf{Tipos de desinformación:} Desde noticias completamente fabricadas hasta manipulación política y contenido satírico
+\end{itemize}
+
+\textbf{3. Fortalezas Emergentes de la Unificación:}
+La combinación de estos corpus heterogéneos produce un conjunto de datos con características emergentes superiores a la suma de sus partes:
+\begin{itemize}
+    \item \textbf{Robustez metodológica:} Los modelos entrenados deben generalizar entre diferentes criterios de anotación
+    \item \textbf{Diversidad estilística:} Desde registro formal académico hasta contenido informal de redes sociales
+    \item \textbf{Cobertura temática exhaustiva:} Temas generales, especialización política, contenido satírico
+    \item \textbf{Validación cruzada inherente:} Cada corpus actúa como conjunto de validación independiente
+\end{itemize}
+
+\textbf{4. Limitaciones Reconocidas y Mitigación:}
+\begin{itemize}
+    \item \textbf{Heterogeneidad metodológica:} Mitigada mediante estandarización rigurosa del proceso de unificación
+    \item \textbf{Desbalance de tamaños:} Compensado mediante estrategia de extracción web controlada
+    \item \textbf{Diferencias temporales:} Convertidas en ventaja para evaluar evolución de patrones
+\end{itemize}
+
+\textbf{5. Validación de la Estrategia Comparativa:}
+El proceso de comparación mutua entre corpus revela que cada fuente aporta elementos únicos e irreemplazables:
+\begin{itemize}
+    \item \textbf{Corpus pequeños especializados:} Aportan calidad y metodología rigurosa
+    \item \textbf{Corpus grande generalista:} Proporciona escala y diversidad temática amplia
+    \item \textbf{Contenido web extraído:} Añade contemporaneidad y variabilidad estilística
+    \item \textbf{Combinación sinérgica:} Produce un recurso superior a cualquier corpus individual
+\end{itemize}
+
+El resultado de esta estrategia de comparación y unificación es un corpus robusto de 61,674 noticias que mantiene la diversidad y riqueza de las fuentes originales mientras proporciona la escala necesaria para entrenar modelos de deep learning efectivos. Esta aproximación metodológica garantiza que los modelos desarrollados sean capaces de generalizar efectivamente entre diferentes tipos de contenido desinformativo y contextos de aplicación.
 
 \subsubsection{División Estratificada para Entrenamiento}
 
