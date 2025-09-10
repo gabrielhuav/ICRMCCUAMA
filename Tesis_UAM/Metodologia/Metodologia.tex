@@ -417,7 +417,7 @@ La integración de corpus heterogéneos requirió un proceso sistemático de est
     \item \textbf{Normalización de formato:} Unificación de esquemas de etiquetado en un sistema binario consistente (FALSO=0, REAL=1) y estandarización de estructuras de datos CSV con separador de punto y coma
     \item \textbf{Eliminación de duplicados:} Implementación de algoritmos de detección de contenido similar basados en hash de texto y comparación de títulos
     \item \textbf{Validación de calidad:} Verificación manual de una muestra estadísticamente significativa para confirmar la calidad del etiquetado y consistencia temática
-    \item \textbf{Balanceo de clases:} Análisis detallado de la distribución de clases para identificar necesidades de ampliación y garantizar equilibrio
+    \item \textbf{Balanceo de clases:} Análisis detallado de la distribución de clases para identificar necesidades de ampliación y garantizar equilibrio. El balanceo se refiere a mantener una proporción similar entre noticias "FALSAS" y "REALES" (idealmente cercana al 50\%-50\%) para evitar sesgos algorítmicos y garantizar que los modelos aprendan a detectar ambas clases con igual efectividad
     \item \textbf{Limpieza de datos:} Eliminación de registros con valores nulos o inconsistentes mediante \texttt{dropna()} y validación de tipos de datos
 \end{enumerate}
 
@@ -568,6 +568,51 @@ El análisis de balance del corpus final mostró una distribución equilibrada:
 \begin{itemize}
     \item \textbf{Noticias FALSAS (0):} 30,734 registros (49.8\%)
     \item \textbf{Noticias REALES (1):} 30,940 registros (50.2\%)
+\end{itemize}
+
+\subsubsection{Concepto y Importancia del Balanceo de Clases}
+
+El \textbf{balanceo de clases} es un concepto fundamental en el aprendizaje automático que se refiere a la distribución equitativa de ejemplos entre las diferentes categorías o clases del conjunto de datos. En el contexto de la detección de noticias falsas, esto significa mantener una proporción similar entre noticias etiquetadas como "FALSAS" y "REALES".
+
+\textbf{¿Por qué es crucial el balanceo?}
+
+\begin{enumerate}
+    \item \textbf{Prevención de sesgo algorítmico:} Un conjunto de datos desbalanceado puede llevar a que el modelo aprenda a predecir sistemáticamente la clase mayoritaria, ignorando la minoritaria
+    \item \textbf{Métricas de evaluación confiables:} Las métricas como exactitud pueden ser engañosas en datasets desbalanceados (ejemplo: 95\% de exactitud puede significar que el modelo siempre predice la clase mayoritaria)
+    \item \textbf{Generalización robusta:} Los modelos entrenados con datos balanceados tienden a generalizar mejor en escenarios reales donde la distribución puede ser diferente
+    \item \textbf{Detección efectiva de ambas clases:} Es igualmente importante detectar noticias falsas como preservar noticias verdaderas
+\end{enumerate}
+
+\textbf{Estrategias implementadas para lograr el balanceo:}
+
+\begin{itemize}
+    \item \textbf{Análisis cuantitativo inicial:} Evaluación de la distribución de clases en cada corpus individual
+    \item \textbf{Identificación de déficits:} Detección de desbalances significativos que requerían corrección
+    \item \textbf{Extracción web dirigida:} Adición estratégica de 9,000 noticias falsas mediante web scraping para compensar el déficit
+    \item \textbf{Validación final:} Confirmación de que la distribución resultante es prácticamente equilibrada (49.8\% vs 50.2\%)
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    % TODO: Agregar imagen que muestre:
+    % - Gráfico de barras comparando distribución antes y después del balanceo
+    % - Visualización de la proporción 49.8% vs 50.2%
+    % - Comparación con ejemplos de datasets desbalanceados (ej: 80%-20%)
+    \includegraphics[width=0.8\textwidth]{Imagenes/balanceo_corpus_explicacion.png}
+    \caption{Representación gráfica del proceso de balanceo del corpus: comparación entre distribución inicial desbalanceada y distribución final equilibrada. La imagen muestra cómo la extracción web de 9,000 noticias falsas permitió alcanzar un equilibrio óptimo de 49.8\% noticias falsas vs 50.2\% noticias reales.}
+    \label{fig:balanceo_corpus}
+\end{figure}
+
+La Figura \ref{fig:balanceo_corpus} ilustra gráficamente el concepto de balanceo implementado, mostrando la transformación desde una distribución inicial potencialmente sesgada hacia la distribución final equilibrada que optimiza el rendimiento de los modelos de clasificación.
+
+\textbf{Impacto del balanceo en el rendimiento:}
+
+El balanceo adecuado del corpus tiene impactos directos en múltiples aspectos del proyecto:
+\begin{itemize}
+    \item \textbf{Entrenamiento más estable:} Los algoritmos convergen de manera más consistente
+    \item \textbf{Métricas más interpretables:} F1-Score, precisión y recall reflejan el rendimiento real
+    \item \textbf{Transferibilidad mejorada:} Los modelos se adaptan mejor a nuevos dominios
+    \item \textbf{Validación confiable:} Los resultados de validación cruzada son más representativos
 \end{itemize}
 
 \subsubsection{Síntesis del Análisis Comparativo entre Corpus}
