@@ -7,7 +7,23 @@ En la era de la información digital, la interconexión global ha traído consig
 
 Las \glspl{noticiafalsa}, definidas como información deliberadamente engañosa disfrazada de periodismo auténtico \cite{bondielli2019survey}, se difunden a través de redes sociales y medios digitales con el fin de manipular la opinión pública y el comportamiento de los individuos. La gravedad de esta problemática se ha intensificado exponencialmente con la sofisticación de los actores maliciosos, la democratización de herramientas de generación de contenido mediante \gls{ia} \cite{hu2024bad}, y la velocidad sin precedentes con la que la información se viraliza en el ecosistema digital.
 
-\textbf{Es importante distinguir entre noticias falsas y fraude digital}: mientras que las \glspl{noticiafalsa} se enfocan en la manipulación de la información y la opinión pública a través de contenido periodístico falso, el \gls{fraudedigital} abarca un espectro más amplio de actividades maliciosas orientadas principalmente a obtener beneficios económicos o acceso no autorizado a información sensible. \textbf{Este proyecto se centra específicamente en la detección de noticias falsas}, aunque la metodología desarrollada podría ser replicada y adaptada para abordar otros tipos de fraude digital.
+\textbf{Distinción fundamental entre noticias falsas y fraude digital}: 
+
+\begin{itemize}
+    \item \textbf{\Glspl{noticiafalsa}}: Información deliberadamente fabricada que imita el formato periodístico legítimo con el objetivo primario de \textit{manipular la opinión pública}, influir en decisiones políticas/sociales, o distorsionar la percepción de eventos actuales. Su "éxito" se mide por el alcance y la influencia social.
+    
+    \item \textbf{\Gls{fraudedigital}}: Actividades maliciosas digitales con objetivo primario de \textit{obtener beneficios económicos ilícitos} o acceso no autorizado a información/recursos. Incluye estafas de inversión, phishing, fraude financiero, y esquemas Ponzi digitales. Su "éxito" se mide por el beneficio económico obtenido.
+\end{itemize}
+
+\textbf{¿Por qué son tareas de detección relacionadas pero distintas?}
+\begin{itemize}
+    \item \textbf{Objetivos diferentes}: Noticias falsas buscan influencia social; fraude digital busca beneficio económico
+    \item \textbf{Audiencias diferentes}: Noticias falsas apuntan a consumidores de noticias; fraude digital a potenciales víctimas económicas
+    \item \textbf{Métricas de éxito diferentes}: Viral vs. rentabilidad económica
+    \item \textbf{Patrones lingüísticos diferentes}: Noticias falsas imitan periodismo; fraude digital usa técnicas de persuasión comercial/urgencia
+\end{itemize}
+
+\textbf{Enfoque de esta investigación}: Este proyecto se centra específicamente en la detección de noticias falsas, desarrollando una metodología que es inherentemente transferible a fraude digital debido a características computacionales compartidas: naturaleza textual, necesidad de clasificación binaria (legítimo/malicioso), y optimización de parámetros.
 
 La investigación reciente ha documentado el impacto multidimensional de la desinformación, que va desde la distorsión de procesos democráticos \cite{ali2020posttruth} hasta la creación de pánico público durante crisis sanitarias como la pandemia de COVID-19 \cite{perez2020fake}. Paralelamente, el fraude digital ha evolucionado hacia formas cada vez más sofisticadas, aprovechando tanto vulnerabilidades técnicas como sesgos cognitivos humanos \cite{ali2021fake}.
 

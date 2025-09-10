@@ -31,26 +31,76 @@ La rápida propagación de las noticias falsas a través de las redes sociales p
 
 La investigación de Ali et al. \cite{ali2021fake} ha demostrado que las heurísticas cognitivas humanas, como la popularidad social (número de "me gusta" o compartidos), influyen significativamente en la percepción de credibilidad. Este fenómeno complica la detección, ya que el contenido falso puede volverse viral precisamente por aprovechar estos sesgos cognitivos.
 
-\subsection{Diferenciación y Transferibilidad: Noticias Falsas vs. Fraude Digital}
+\subsection{Diferenciación Técnica y Transferibilidad: Noticias Falsas vs. Fraude Digital}
 
-Es fundamental establecer una distinción clara entre los conceptos centrales de este trabajo:
+Es crucial establecer una distinción técnica clara entre los dominios de aplicación, ya que aunque comparten características computacionales, representan problemas con diferentes objetivos, audiencias y patrones:
+
+\subsubsection{Características Distintivas por Dominio}
+
+\begin{table}[htbp]
+\centering
+\adjustbox{width=\textwidth,center}{%
+\small
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{UAMPurple!20}
+\textbf{Aspecto} & \textbf{Noticias Falsas} & \textbf{Fraude Digital} \\
+\hline
+\textbf{Objetivo primario} & 
+\begin{tabular}[t]{@{}l@{}}Manipulación de opinión pública,\\influencia política/social\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Beneficio económico ilícito,\\acceso no autorizado a recursos\end{tabular} \\
+\hline
+\textbf{Formato típico} & 
+\begin{tabular}[t]{@{}l@{}}Artículos periodísticos,\\imitando medios legítimos\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Emails de phishing, anuncios\\de inversión, ofertas comerciales\end{tabular} \\
+\hline
+\textbf{Audiencia objetivo} & 
+\begin{tabular}[t]{@{}l@{}}Consumidores de noticias, votantes,\\opinión pública general\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Potenciales víctimas económicas,\\usuarios con activos digitales\end{tabular} \\
+\hline
+\textbf{Métrica de éxito} & 
+\begin{tabular}[t]{@{}l@{}}Viralidad, alcance,\\influencia en opinión\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Cantidad de dinero/\\información obtenida\end{tabular} \\
+\hline
+\textbf{Indicadores lingüísticos} & 
+\begin{tabular}[t]{@{}l@{}}Imitación de estilo periodístico,\\fuentes falsas, sensacionalismo político\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Urgencia económica, ofertas "limitadas",\\solicitudes de información personal\end{tabular} \\
+\hline
+\textbf{Temporalidad} & 
+\begin{tabular}[t]{@{}l@{}}Eventos actuales,\\ciclos noticiosos\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Atemporales, aprovechan\\tendencias económicas\end{tabular} \\
+\hline
+\end{tabular}
+}
+\caption{Diferencias técnicas entre dominios de desinformación}
+\label{tab:diferencias_dominios}
+\end{table}
+
+\subsubsection{Fundamentos de la Transferibilidad Metodológica}
+
+A pesar de sus diferencias conceptuales, ambos dominios comparten características computacionales fundamentales que justifican la transferibilidad de la metodología desarrollada:
 
 \begin{itemize}
-    \item \textbf{Noticias Falsas (\glspl{noticiafalsa}):} Información deliberadamente engañosa que se presenta con formato periodístico legítimo, cuyo objetivo principal es manipular la opinión pública, influir en decisiones políticas o sociales, o crear confusión sobre eventos actuales. Se caracteriza por imitar el estilo de medios de comunicación establecidos.
-
-    \item \textbf{Fraude Digital (\gls{fraudedigital}):} Conjunto más amplio de actividades maliciosas en entornos digitales orientadas principalmente a obtener beneficios económicos ilícitos, acceso no autorizado a información sensible, o perpetrar estafas. Incluye phishing, esquemas Ponzi digitales, fraude financiero, estafas de inversión, entre otros.
+    \item \textbf{Naturaleza textual primaria}: Ambos dominios se basan en contenido textual como vector principal de engaño
+    \item \textbf{Problema de clasificación binaria}: Se reducen a problemas de clasificación legítimo/malicioso
+    \item \textbf{Características estilométricas}: Ambos pueden exhibir patrones lingüísticos distintivos detectables
+    \item \textbf{Optimización de hiperparámetros}: Ambos se benefician de técnicas de calibración metaheurística
+    \item \textbf{Evaluación mediante métricas estándar}: Utilizan las mismas métricas de clasificación (precisión, recall, F1-Score)
 \end{itemize}
 
-\textbf{Enfoque de esta investigación:} Este proyecto se centra específicamente en la detección de noticias falsas, utilizando técnicas de procesamiento de lenguaje natural y optimización metaheurística. Sin embargo, la metodología desarrollada es inherentemente transferible a otros tipos de fraude digital, ya que ambos problemas comparten características fundamentales:
+\subsubsection{Protocolo de Transferencia Metodológica}
 
-\begin{itemize}
-    \item \textbf{Naturaleza textual:} Ambos tipos de contenido requieren análisis de texto
-    \item \textbf{Patrones lingüísticos:} Pueden exhibir características estilométricas distintivas
-    \item \textbf{Clasificación binaria:} Pueden abordarse como problemas de clasificación legítimo/fraudulento
-    \item \textbf{Optimización de parámetros:} Ambos se benefician de técnicas de calibración de hiperparámetros
-\end{itemize}
+Para aplicar la metodología desarrollada a detección de fraude digital, se requiere el siguiente protocolo de adaptación:
 
-\textbf{Adaptaciones necesarias para transferencia:} Para aplicar la metodología a otros tipos de fraude digital sería necesario: (1) construir corpus específicos del dominio objetivo, (2) ajustar características de preprocesamiento según el tipo de contenido, (3) re-calibrar hiperparámetros para el nuevo dominio, y (4) potencialmente incorporar características adicionales específicas del tipo de fraude.
+\begin{enumerate}
+    \item \textbf{Construcción de corpus específico}: Recopilar y etiquetar datos representativos del tipo de fraude digital objetivo
+    \item \textbf{Ajuste de preprocesamiento}: Adaptar técnicas de limpieza según las características del nuevo dominio (emails vs. artículos)
+    \item \textbf{Re-calibración de hiperparámetros}: Aplicar los mismos algoritmos metaheurísticos pero re-optimizar para el nuevo corpus
+    \item \textbf{Incorporación de características específicas}: Añadir features relevantes al nuevo dominio (URLs sospechosas, patrones de solicitud de información)
+    \item \textbf{Validación cross-domain}: Evaluar la transferencia utilizando métricas de generalización
+\end{enumerate}
+
+\textbf{Enfoque de esta investigación}: Este proyecto desarrolla y valida la metodología en el dominio de noticias falsas en español, estableciendo las bases técnicas para su posterior transferencia a otros tipos de fraude digital. La elección de noticias falsas como dominio inicial se justifica por: (1) disponibilidad de corpus etiquetados, (2) relevancia social en comunidades hispanohablantes, y (3) menor complejidad técnica que permite validar la metodología base antes de extensiones más complejas.
 
 \section{Representación de Texto: Desde BoW hasta Embeddings Contextuales}
 \label{sec:representacion_texto}

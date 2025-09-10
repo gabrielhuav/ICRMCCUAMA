@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.25)  10 SEP 2025 02:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.25)  10 SEP 2025 03:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1184,19 +1184,19 @@ LaTeX Info: Redefining \% on input line 1.
  [9
 
 ]
-Overfull \hbox (5.18776pt too wide) in paragraph at lines 103--103
+Overfull \hbox (5.18776pt too wide) in paragraph at lines 106--106
  [][] [][]\T1/cmr/m/n/12 Algoritmos Me-ta-heu-rís-ti-cos: Fun-da-men-tos Teó-ri
 -cos y Apli-ca-cio-nes Prác- 
  []
 
-LaTeX Info: Redefining \. on input line 106.
-LaTeX Info: Redefining \% on input line 106.
+LaTeX Info: Redefining \. on input line 109.
+LaTeX Info: Redefining \% on input line 109.
 [10]
-LaTeX Info: Redefining \. on input line 170.
-LaTeX Info: Redefining \% on input line 170.
+LaTeX Info: Redefining \. on input line 173.
+LaTeX Info: Redefining \% on input line 173.
  [11]
-LaTeX Info: Redefining \. on input line 257.
-LaTeX Info: Redefining \% on input line 257.
+LaTeX Info: Redefining \. on input line 260.
+LaTeX Info: Redefining \% on input line 260.
  [12])
 \tf@toc=\write7
 \openout7 = `ICR.toc'.
@@ -1226,8 +1226,8 @@ LaTeX Info: Redefining \% on input line 1.
 
 
 ]
-LaTeX Info: Redefining \. on input line 56.
-LaTeX Info: Redefining \% on input line 56.
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
  [18])
 \tf@lot=\write9
 \openout9 = `ICR.lot'.
@@ -1656,255 +1656,255 @@ Cap\'{\i }tulo 1.
 
 
 ]
-<Imagenes/mapaConceptual1.png, id=1353, 722.7pt x 520.19344pt>
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
+ [2]
+<Imagenes/mapaConceptual1.png, id=1364, 722.7pt x 520.19344pt>
 File: Imagenes/mapaConceptual1.png Graphic file (type png)
 <use Imagenes/mapaConceptual1.png>
-Package pdftex.def Info: Imagenes/mapaConceptual1.png  used on input line 31.
+Package pdftex.def Info: Imagenes/mapaConceptual1.png  used on input line 47.
 (pdftex.def)             Requested size: 433.62pt x 312.11845pt.
+LaTeX Info: Redefining \. on input line 60.
+LaTeX Info: Redefining \% on input line 60.
+ [3 <./Imagenes/mapaConceptual1.png>]
+<Imagenes/mapaConceptual2.png, id=1384, 726.46407pt x 504.38437pt>
+File: Imagenes/mapaConceptual2.png Graphic file (type png)
+<use Imagenes/mapaConceptual2.png>
+Package pdftex.def Info: Imagenes/mapaConceptual2.png  used on input line 81.
+(pdftex.def)             Requested size: 433.62pt x 301.0706pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 44.
-LaTeX Info: Redefining \% on input line 44.
-[2]
-LaTeX Info: Redefining \. on input line 55.
-LaTeX Info: Redefining \% on input line 55.
- [3 <./Imagenes/mapaConceptual1.png>]
-<Imagenes/mapaConceptual2.png, id=1383, 726.46407pt x 504.38437pt>
-File: Imagenes/mapaConceptual2.png Graphic file (type png)
-<use Imagenes/mapaConceptual2.png>
-Package pdftex.def Info: Imagenes/mapaConceptual2.png  used on input line 65.
-(pdftex.def)             Requested size: 433.62pt x 301.0706pt.
-LaTeX Info: Redefining \. on input line 73.
-LaTeX Info: Redefining \% on input line 73.
- [4 <./Imagenes/mapaConceptual2.png>]
-LaTeX Info: Redefining \. on input line 98.
-LaTeX Info: Redefining \% on input line 98.
-
-[5]
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+[4]
+LaTeX Info: Redefining \. on input line 101.
+LaTeX Info: Redefining \% on input line 101.
+ [5 <./Imagenes/mapaConceptual2.png>]
 LaTeX Info: Redefining \. on input line 128.
 LaTeX Info: Redefining \% on input line 128.
  [6]
-Overfull \hbox (27.59181pt too wide) in paragraph at lines 146--147
+Overfull \hbox (27.59181pt too wide) in paragraph at lines 162--163
 []\T1/cmr/bx/n/12 Optimización me-ta-heu-rís-ti-ca: \T1/cmr/m/n/12 Apli-ca-ción
  sis-te-má-ti-ca de al-go-rit-mos bio-inspirados
  []
 
-LaTeX Info: Redefining \. on input line 161.
-LaTeX Info: Redefining \% on input line 161.
+LaTeX Info: Redefining \. on input line 163.
+LaTeX Info: Redefining \% on input line 163.
 [7]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-74.
+90.
  (C:\Users\gabri\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
 
 [8]
-Overfull \hbox (24.1192pt too wide) in paragraph at lines 207--208
+LaTeX Info: Redefining \. on input line 221.
+LaTeX Info: Redefining \% on input line 221.
+ [9]
+Overfull \hbox (24.1192pt too wide) in paragraph at lines 223--224
 []\T1/cmr/bx/n/12 Limitaciones de trans-fe-ren-cia: \T1/cmr/m/n/12 Con-te-ni-do
  mul-ti-mo-dal (deep-fa-kes de vi-deo/audio)
  []
 
-LaTeX Info: Redefining \. on input line 222.
-LaTeX Info: Redefining \% on input line 222.
-[9]
 LaTeX Info: Redefining \. on input line 247.
 LaTeX Info: Redefining \% on input line 247.
- [10]
-Overfull \hbox (16.75839pt too wide) in paragraph at lines 255--256
+[10]
+Overfull \hbox (16.75839pt too wide) in paragraph at lines 271--272
 []\T1/cmr/bx/n/12 Optimización me-ta-heu-rís-ti-ca: \T1/cmr/m/n/12 Apli-ca-ción
  no-ve-do-sa de al-go-rit-mos bio-inspirados
  []
 
-LaTeX Info: Redefining \. on input line 279.
-LaTeX Info: Redefining \% on input line 279.
-[11])
+LaTeX Info: Redefining \. on input line 272.
+LaTeX Info: Redefining \% on input line 272.
+[11]
+LaTeX Info: Redefining \. on input line 303.
+LaTeX Info: Redefining \% on input line 303.
+ [12])
 LaTeX Info: Redefining \. on input line 98.
 LaTeX Info: Redefining \% on input line 98.
- [12]
+ [13]
 \openout2 = `MarcoTeorico/MarcoTeorico.aux'.
 
  (MarcoTeorico/MarcoTeorico.tex
-Cap\'{\i }tulo 2.
-[13
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+ [14
 
 
 
 
 ]
-Overfull \hbox (14.89433pt too wide) in paragraph at lines 34--34
-[]\T1/cmr/bx/n/14.4 Diferenciación y Trans-fe-ri-bi-li-dad: No-ti-cias Fal-sas 
-vs. Frau-
- []
-
-LaTeX Info: Redefining \. on input line 41.
-LaTeX Info: Redefining \% on input line 41.
-[14]
-Overfull \hbox (1.40675pt too wide) in paragraph at lines 55--55
+Cap\'{\i }tulo 2.
+[15]
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
+ [16]
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
+ [17]
+Overfull \hbox (1.40675pt too wide) in paragraph at lines 105--105
 []\T1/cmr/bx/n/17.28 Representación de Tex-to: Des-de BoW has-ta Em-
  []
 
-LaTeX Info: Redefining \. on input line 66.
-LaTeX Info: Redefining \% on input line 66.
-[15]
-LaTeX Info: Redefining \. on input line 103.
-LaTeX Info: Redefining \% on input line 103.
- [16]
-LaTeX Info: Redefining \. on input line 136.
-LaTeX Info: Redefining \% on input line 136.
- [17]
-LaTeX Info: Redefining \. on input line 165.
-LaTeX Info: Redefining \% on input line 165.
- [18]
-LaTeX Info: Redefining \. on input line 198.
-LaTeX Info: Redefining \% on input line 198.
+LaTeX Info: Redefining \. on input line 127.
+LaTeX Info: Redefining \% on input line 127.
+[18]
+LaTeX Info: Redefining \. on input line 158.
+LaTeX Info: Redefining \% on input line 158.
  [19]
-LaTeX Info: Redefining \. on input line 244.
-LaTeX Info: Redefining \% on input line 244.
+LaTeX Info: Redefining \. on input line 196.
+LaTeX Info: Redefining \% on input line 196.
  [20]
-LaTeX Info: Redefining \. on input line 297.
-LaTeX Info: Redefining \% on input line 297.
+LaTeX Info: Redefining \. on input line 224.
+LaTeX Info: Redefining \% on input line 224.
  [21]
-LaTeX Info: Redefining \. on input line 351.
-LaTeX Info: Redefining \% on input line 351.
+LaTeX Info: Redefining \. on input line 258.
+LaTeX Info: Redefining \% on input line 258.
  [22]
-LaTeX Info: Redefining \. on input line 388.
-LaTeX Info: Redefining \% on input line 388.
+LaTeX Info: Redefining \. on input line 308.
+LaTeX Info: Redefining \% on input line 308.
  [23]
-LaTeX Info: Redefining \. on input line 430.
-LaTeX Info: Redefining \% on input line 430.
+LaTeX Info: Redefining \. on input line 362.
+LaTeX Info: Redefining \% on input line 362.
  [24]
-LaTeX Info: Redefining \. on input line 512.
-LaTeX Info: Redefining \% on input line 512.
+LaTeX Info: Redefining \. on input line 408.
+LaTeX Info: Redefining \% on input line 408.
  [25]
-LaTeX Info: Redefining \. on input line 536.
-LaTeX Info: Redefining \% on input line 536.
+LaTeX Info: Redefining \. on input line 452.
+LaTeX Info: Redefining \% on input line 452.
  [26]
-<Imagenes/mapaConceptual3.png, id=1658, 398.9304pt x 191.2746pt>
+LaTeX Info: Redefining \. on input line 496.
+LaTeX Info: Redefining \% on input line 496.
+ [27]
+LaTeX Info: Redefining \. on input line 572.
+LaTeX Info: Redefining \% on input line 572.
+ [28]
+LaTeX Info: Redefining \. on input line 588.
+LaTeX Info: Redefining \% on input line 588.
+ [29]
+<Imagenes/mapaConceptual3.png, id=1680, 398.9304pt x 191.2746pt>
 File: Imagenes/mapaConceptual3.png Graphic file (type png)
 <use Imagenes/mapaConceptual3.png>
-Package pdftex.def Info: Imagenes/mapaConceptual3.png  used on input line 568.
+Package pdftex.def Info: Imagenes/mapaConceptual3.png  used on input line 618.
 (pdftex.def)             Requested size: 433.62pt x 207.91895pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 577.
-LaTeX Info: Redefining \% on input line 577.
-[27]
-LaTeX Info: Redefining \. on input line 593.
-LaTeX Info: Redefining \% on input line 593.
- [28 <./Imagenes/mapaConceptual3.png>]
-LaTeX Info: Redefining \. on input line 633.
-LaTeX Info: Redefining \% on input line 633.
- [29]
-Overfull \hbox (1.32481pt too wide) in paragraph at lines 643--644
+LaTeX Info: Redefining \. on input line 635.
+LaTeX Info: Redefining \% on input line 635.
+[30]
+LaTeX Info: Redefining \. on input line 660.
+LaTeX Info: Redefining \% on input line 660.
+ [31 <./Imagenes/mapaConceptual3.png>]
+Overfull \hbox (1.32481pt too wide) in paragraph at lines 693--694
 []\T1/cmr/bx/n/12 Evitación de óp-ti-mos lo-ca-les: \T1/cmr/m/n/12 Ca-pa-ci-dad
  de es-ca-pe de con-fi-gu-ra-cio-nes subóp-
  []
 
-LaTeX Info: Redefining \. on input line 666.
-LaTeX Info: Redefining \% on input line 666.
-[30]
-LaTeX Info: Redefining \. on input line 700.
-LaTeX Info: Redefining \% on input line 700.
- [31]
-LaTeX Info: Redefining \. on input line 736.
-LaTeX Info: Redefining \% on input line 736.
- [32])
+LaTeX Info: Redefining \. on input line 694.
+LaTeX Info: Redefining \% on input line 694.
+[32]
+LaTeX Info: Redefining \. on input line 727.
+LaTeX Info: Redefining \% on input line 727.
+ [33]
+LaTeX Info: Redefining \. on input line 760.
+LaTeX Info: Redefining \% on input line 760.
+ [34]
+LaTeX Info: Redefining \. on input line 796.
+LaTeX Info: Redefining \% on input line 796.
+ [35])
 LaTeX Info: Redefining \. on input line 99.
 LaTeX Info: Redefining \% on input line 99.
- [33]
+ [36]
 \openout2 = `EstadoDelArte/EstadoDelArte.aux'.
 
  (EstadoDelArte/EstadoDelArte.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [34
+Cap\'{\i }tulo 3.
+[37
 
 
 
 
 ]
-Cap\'{\i }tulo 3.
-[35]
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
- [36]
+ [38]
 LaTeX Info: Redefining \. on input line 46.
 LaTeX Info: Redefining \% on input line 46.
- [37]
+ [39]
 Underfull \vbox (badness 2285) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 54.
 LaTeX Info: Redefining \% on input line 54.
- [38]
+ [40]
 LaTeX Info: Redefining \. on input line 95.
 LaTeX Info: Redefining \% on input line 95.
 
-[39]
+[41]
 Underfull \vbox (badness 1168) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 105.
 LaTeX Info: Redefining \% on input line 105.
- [40]
+ [42]
 LaTeX Info: Redefining \. on input line 144.
 LaTeX Info: Redefining \% on input line 144.
 
-[41]
+[43]
 Underfull \vbox (badness 2285) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 152.
 LaTeX Info: Redefining \% on input line 152.
- [42]
+ [44]
 LaTeX Info: Redefining \. on input line 189.
 LaTeX Info: Redefining \% on input line 189.
 
-[43]
+[45]
 LaTeX Info: Redefining \. on input line 204.
 LaTeX Info: Redefining \% on input line 204.
- [44]
+ [46]
 Underfull \vbox (badness 7888) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 220.
 LaTeX Info: Redefining \% on input line 220.
- [45]
+ [47]
 LaTeX Info: Redefining \. on input line 232.
 LaTeX Info: Redefining \% on input line 232.
 
-[46]
+[48]
 LaTeX Info: Redefining \. on input line 269.
 LaTeX Info: Redefining \% on input line 269.
- [47]
+ [49]
 Overfull \hbox (8.83992pt too wide) in paragraph at lines 270--270
 []\T1/cmr/bx/n/17.28 Hiperparámetros en Mo-de-los de Apren-di-za-je Au-
  []
 
 LaTeX Info: Redefining \. on input line 288.
 LaTeX Info: Redefining \% on input line 288.
-[48]
+[50]
 LaTeX Info: Redefining \. on input line 309.
 LaTeX Info: Redefining \% on input line 309.
- [49]
+ [51]
 LaTeX Info: Redefining \. on input line 328.
 LaTeX Info: Redefining \% on input line 328.
- [50]
+ [52]
 LaTeX Info: Redefining \. on input line 347.
 LaTeX Info: Redefining \% on input line 347.
- [51]
+ [53]
 File: Imagenes/mapaConceptual3.png Graphic file (type png)
 <use Imagenes/mapaConceptual3.png>
 Package pdftex.def Info: Imagenes/mapaConceptual3.png  used on input line 350.
 (pdftex.def)             Requested size: 433.62pt x 207.91895pt.
-<Imagenes/mapaConceptual4.png, id=1879, 407.6028pt x 192.2382pt>
+<Imagenes/mapaConceptual4.png, id=1895, 407.6028pt x 192.2382pt>
 File: Imagenes/mapaConceptual4.png Graphic file (type png)
 <use Imagenes/mapaConceptual4.png>
 Package pdftex.def Info: Imagenes/mapaConceptual4.png  used on input line 357.
 (pdftex.def)             Requested size: 433.62pt x 204.5107pt.
-<Imagenes/mapaConceptual5.png, id=1880, 440.3652pt x 208.6194pt>
+<Imagenes/mapaConceptual5.png, id=1896, 440.3652pt x 208.6194pt>
 File: Imagenes/mapaConceptual5.png Graphic file (type png)
 <use Imagenes/mapaConceptual5.png>
 Package pdftex.def Info: Imagenes/mapaConceptual5.png  used on input line 364.
@@ -1913,7 +1913,7 @@ Package pdftex.def Info: Imagenes/mapaConceptual5.png  used on input line 364.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/mapaConceptual6.png, id=1881, 441.3288pt x 211.5102pt>
+<Imagenes/mapaConceptual6.png, id=1897, 441.3288pt x 211.5102pt>
 File: Imagenes/mapaConceptual6.png Graphic file (type png)
 <use Imagenes/mapaConceptual6.png>
 Package pdftex.def Info: Imagenes/mapaConceptual6.png  used on input line 371.
@@ -1923,39 +1923,39 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 380.
 LaTeX Info: Redefining \% on input line 380.
-[52 <./Imagenes/mapaConceptual4.png>]
+[54 <./Imagenes/mapaConceptual4.png>]
 LaTeX Info: Redefining \. on input line 381.
 LaTeX Info: Redefining \% on input line 381.
- [53 <./Imagenes/mapaConceptual5.png> <./Imagenes/mapaConceptual6.png>]
+ [55 <./Imagenes/mapaConceptual5.png> <./Imagenes/mapaConceptual6.png>]
 LaTeX Info: Redefining \. on input line 390.
 LaTeX Info: Redefining \% on input line 390.
- [54]
+ [56]
 Underfull \vbox (badness 2970) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 406.
 LaTeX Info: Redefining \% on input line 406.
- [55]
+ [57]
 LaTeX Info: Redefining \. on input line 463.
 LaTeX Info: Redefining \% on input line 463.
 
-[56]
+[58]
 LaTeX Info: Redefining \. on input line 463.
 LaTeX Info: Redefining \% on input line 463.
- [57]
+ [59]
 LaTeX Info: Redefining \. on input line 488.
 LaTeX Info: Redefining \% on input line 488.
- [58]
+ [60]
 LaTeX Info: Redefining \. on input line 502.
 LaTeX Info: Redefining \% on input line 502.
- [59])
+ [61])
 LaTeX Info: Redefining \. on input line 100.
 LaTeX Info: Redefining \% on input line 100.
- [60]
+ [62]
 \openout2 = `Metodologia/Metodologia.aux'.
 
  (Metodologia/Metodologia.tex
 Cap\'{\i }tulo 4.
-<Imagenes/metodologiaCompleta.png, id=1987, 324.2514pt x 170.5572pt>
+<Imagenes/metodologiaCompleta.png, id=2003, 324.2514pt x 170.5572pt>
 File: Imagenes/metodologiaCompleta.png Graphic file (type png)
 <use Imagenes/metodologiaCompleta.png>
 Package pdftex.def Info: Imagenes/metodologiaCompleta.png  used on input line 1
@@ -1972,7 +1972,7 @@ Overfull \hbox (3.18669pt too wide) in paragraph at lines 21--21
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [61
+ [63
 
 
 
@@ -1981,29 +1981,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 45.
 LaTeX Info: Redefining \% on input line 45.
 
-[62 <./Imagenes/metodologiaCompleta.png>]
+[64 <./Imagenes/metodologiaCompleta.png>]
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
- [63]
+ [65]
 LaTeX Info: Redefining \. on input line 108.
 LaTeX Info: Redefining \% on input line 108.
- [64]
+ [66]
 LaTeX Info: Redefining \. on input line 137.
 LaTeX Info: Redefining \% on input line 137.
- [65]
+ [67]
 LaTeX Info: Redefining \. on input line 234.
 LaTeX Info: Redefining \% on input line 234.
- [66]
+ [68]
 LaTeX Info: Redefining \. on input line 246.
 LaTeX Info: Redefining \% on input line 246.
- [67]
+ [69]
 LaTeX Info: Redefining \. on input line 362.
 LaTeX Info: Redefining \% on input line 362.
- [68]
+ [70]
 LaTeX Info: Redefining \. on input line 409.
 LaTeX Info: Redefining \% on input line 409.
 
-[69]
+[71]
 Overfull \hbox (4.13824pt too wide) in paragraph at lines 420--421
 \T1/cmr/m/n/12 man-te-ner una pro-por-ción si-mi-lar en-tre no-ti-cias "FALSAS[
 ] -EA-LES"(idealmente
@@ -2011,7 +2011,7 @@ Overfull \hbox (4.13824pt too wide) in paragraph at lines 420--421
 
 LaTeX Info: Redefining \. on input line 467.
 LaTeX Info: Redefining \% on input line 467.
-[70]
+[72]
 Overfull \hbox (81.65826pt too wide) in paragraph at lines 467--468
 \T1/cmr/m/n/12 je-ti-vo pa-ra iden-ti-fi-car se-lec-to-res CSS con-sis-ten-tes 
 (\T1/cmtt/m/n/12 h1.tdb-title-text\T1/cmr/m/n/12 , \T1/cmtt/m/n/12 div.tdb-bloc
@@ -2020,11 +2020,11 @@ k-inner\T1/cmr/m/n/12 )
 
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
-[71]
+[73]
 LaTeX Info: Redefining \. on input line 580.
 LaTeX Info: Redefining \% on input line 580.
- [72]
-<Imagenes/balanceo_corpus_explicacion.png, id=2119, 1924.94156pt x 1105.88156pt
+ [74]
+<Imagenes/balanceo_corpus_explicacion.png, id=2135, 1924.94156pt x 1105.88156pt
 >
 File: Imagenes/balanceo_corpus_explicacion.png Graphic file (type png)
 <use Imagenes/balanceo_corpus_explicacion.png>
@@ -2033,13 +2033,13 @@ t line 601.
 (pdftex.def)             Requested size: 346.89731pt x 199.28633pt.
 LaTeX Info: Redefining \. on input line 622.
 LaTeX Info: Redefining \% on input line 622.
- [73]
+ [75]
 LaTeX Info: Redefining \. on input line 639.
 LaTeX Info: Redefining \% on input line 639.
- [74 <./Imagenes/balanceo_corpus_explicacion.png>]
+ [76 <./Imagenes/balanceo_corpus_explicacion.png>]
 LaTeX Info: Redefining \. on input line 666.
 LaTeX Info: Redefining \% on input line 666.
- [75]
+ [77]
 Overfull \hbox (20.18683pt too wide) in paragraph at lines 711--712
 []\T1/cmr/bx/n/12 Mezclado alea-to-rio: \T1/cmr/m/n/12 Ran-do-mi-za-ción del or
 -den con se-mi-lla fi-ja (\T1/cmtt/m/n/12 random_state=42\T1/cmr/m/n/12 )
@@ -2047,25 +2047,25 @@ Overfull \hbox (20.18683pt too wide) in paragraph at lines 711--712
 
 LaTeX Info: Redefining \. on input line 713.
 LaTeX Info: Redefining \% on input line 713.
-[76]
+[78]
 LaTeX Info: Redefining \. on input line 744.
 LaTeX Info: Redefining \% on input line 744.
- [77]
+ [79]
 LaTeX Info: Redefining \. on input line 804.
 LaTeX Info: Redefining \% on input line 804.
- [78]
+ [80]
 LaTeX Info: Redefining \. on input line 879.
 LaTeX Info: Redefining \% on input line 879.
- [79]
+ [81]
 LaTeX Info: Redefining \. on input line 952.
 LaTeX Info: Redefining \% on input line 952.
- [80]
+ [82]
 LaTeX Info: Redefining \. on input line 1013.
 LaTeX Info: Redefining \% on input line 1013.
- [81]
+ [83]
 LaTeX Info: Redefining \. on input line 1086.
 LaTeX Info: Redefining \% on input line 1086.
- [82]
+ [84]
 Overfull \hbox (3.8647pt too wide) in paragraph at lines 1126--1127
 []\T1/cmr/m/n/12 La con-fi-gu-ra-ción ba-se del mo-de-lo se es-ta-ble-ció con-s
 i-de-ran-do las li-mi-ta-cio-nes compu-
@@ -2073,56 +2073,56 @@ i-de-ran-do las li-mi-ta-cio-nes compu-
 
 LaTeX Info: Redefining \. on input line 1198.
 LaTeX Info: Redefining \% on input line 1198.
-[83]
+[85]
 LaTeX Info: Redefining \. on input line 1248.
 LaTeX Info: Redefining \% on input line 1248.
- [84]
+ [86]
 LaTeX Info: Redefining \. on input line 1280.
 LaTeX Info: Redefining \% on input line 1280.
- [85]
+ [87]
 LaTeX Info: Redefining \. on input line 1384.
 LaTeX Info: Redefining \% on input line 1384.
- [86]
+ [88]
 LaTeX Info: Redefining \. on input line 1397.
 LaTeX Info: Redefining \% on input line 1397.
- [87]
+ [89]
 LaTeX Info: Redefining \. on input line 1476.
 LaTeX Info: Redefining \% on input line 1476.
- [88]
+ [90]
 LaTeX Info: Redefining \. on input line 1496.
 LaTeX Info: Redefining \% on input line 1496.
- [89]
+ [91]
 LaTeX Info: Redefining \. on input line 1529.
 LaTeX Info: Redefining \% on input line 1529.
- [90]
+ [92]
 LaTeX Info: Redefining \. on input line 1643.
 LaTeX Info: Redefining \% on input line 1643.
- [91]
+ [93]
 LaTeX Info: Redefining \. on input line 1654.
 LaTeX Info: Redefining \% on input line 1654.
- [92]
+ [94]
 LaTeX Info: Redefining \. on input line 1792.
 LaTeX Info: Redefining \% on input line 1792.
- [93]
-LaTeX Info: Redefining \. on input line 1888.
-LaTeX Info: Redefining \% on input line 1888.
- [94]
-LaTeX Info: Redefining \. on input line 1888.
-LaTeX Info: Redefining \% on input line 1888.
  [95]
+LaTeX Info: Redefining \. on input line 1888.
+LaTeX Info: Redefining \% on input line 1888.
+ [96]
+LaTeX Info: Redefining \. on input line 1888.
+LaTeX Info: Redefining \% on input line 1888.
+ [97]
 LaTeX Info: Redefining \. on input line 1936.
 LaTeX Info: Redefining \% on input line 1936.
- [96])
+ [98])
 LaTeX Info: Redefining \. on input line 101.
 LaTeX Info: Redefining \% on input line 101.
- [97]
+ [99]
 \openout2 = `AnalisisResultados/AnalisisResultados.aux'.
 
 
 (AnalisisResultados/AnalisisResultados.tex
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
- [98
+ [100
 
 
 
@@ -2132,39 +2132,39 @@ Cap\'{\i }tulo 5.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [99]
+ [101]
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
 
-[100]
+[102]
 LaTeX Info: Redefining \. on input line 133.
 LaTeX Info: Redefining \% on input line 133.
- [101]
+ [103]
 LaTeX Info: Redefining \. on input line 174.
 LaTeX Info: Redefining \% on input line 174.
- [102]
+ [104]
 Underfull \vbox (badness 3323) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 293.
 LaTeX Info: Redefining \% on input line 293.
- [103]
+ [105]
 LaTeX Info: Redefining \. on input line 293.
 LaTeX Info: Redefining \% on input line 293.
 
-[104]
+[106]
 LaTeX Info: Redefining \. on input line 446.
 LaTeX Info: Redefining \% on input line 446.
- [105]
+ [107]
 LaTeX Info: Redefining \. on input line 446.
 LaTeX Info: Redefining \% on input line 446.
- [106]
-<Imagenes/convergencia_recocido_simulado.png, id=2397, 611.4042pt x 390.258pt>
+ [108]
+<Imagenes/convergencia_recocido_simulado.png, id=2413, 611.4042pt x 390.258pt>
 File: Imagenes/convergencia_recocido_simulado.png Graphic file (type png)
 <use Imagenes/convergencia_recocido_simulado.png>
 Package pdftex.def Info: Imagenes/convergencia_recocido_simulado.png  used on i
 nput line 453.
 (pdftex.def)             Requested size: 346.89731pt x 221.43108pt.
-<Imagenes/matriz_confusion_recocido_simulado.png, id=2398, 465.4188pt x 390.258
+<Imagenes/matriz_confusion_recocido_simulado.png, id=2414, 465.4188pt x 390.258
 pt>
 File: Imagenes/matriz_confusion_recocido_simulado.png Graphic file (type png)
 <use Imagenes/matriz_confusion_recocido_simulado.png>
@@ -2177,8 +2177,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 465.
 LaTeX Info: Redefining \% on input line 465.
-[107 <./Imagenes/convergencia_recocido_simulado.png>]
-<Imagenes/convergencia_ss.png, id=2405, 617.1858pt x 390.258pt>
+[109 <./Imagenes/convergencia_recocido_simulado.png>]
+<Imagenes/convergencia_ss.png, id=2421, 617.1858pt x 390.258pt>
 File: Imagenes/convergencia_ss.png Graphic file (type png)
 <use Imagenes/convergencia_ss.png>
 Package pdftex.def Info: Imagenes/convergencia_ss.png  used on input line 473.
@@ -2187,7 +2187,7 @@ Package pdftex.def Info: Imagenes/convergencia_ss.png  used on input line 473.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/matriz_confusion_ss.png, id=2406, 465.4188pt x 390.258pt>
+<Imagenes/matriz_confusion_ss.png, id=2422, 465.4188pt x 390.258pt>
 File: Imagenes/matriz_confusion_ss.png Graphic file (type png)
 <use Imagenes/matriz_confusion_ss.png>
 Package pdftex.def Info: Imagenes/matriz_confusion_ss.png  used on input line 4
@@ -2198,18 +2198,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 485.
 LaTeX Info: Redefining \% on input line 485.
-[108 <./Imagenes/matriz_confusion_recocido_simulado.png>]
+[110 <./Imagenes/matriz_confusion_recocido_simulado.png>]
 LaTeX Info: Redefining \. on input line 490.
 LaTeX Info: Redefining \% on input line 490.
- [109 <./Imagenes/convergencia_ss.png> <./Imagenes/matriz_confusion_ss.png>]
-<Imagenes/convergencia_algoritmo_genÃ©tico.png, id=2420, 611.4042pt x 390.258pt
+ [111 <./Imagenes/convergencia_ss.png> <./Imagenes/matriz_confusion_ss.png>]
+<Imagenes/convergencia_algoritmo_genÃ©tico.png, id=2437, 611.4042pt x 390.258pt
 >
 File: Imagenes/convergencia_algoritmo_genÃ©tico.png Graphic file (type png)
 <use Imagenes/convergencia_algoritmo_genÃ©tico.png>
 Package pdftex.def Info: Imagenes/convergencia_algoritmo_genÃ©tico.png  used on
  input line 493.
 (pdftex.def)             Requested size: 346.89731pt x 221.43108pt.
-<Imagenes/matriz_confusion_algoritmo_genÃ©tico.png, id=2421, 465.4188pt x 390.2
+<Imagenes/matriz_confusion_algoritmo_genÃ©tico.png, id=2438, 465.4188pt x 390.2
 58pt>
 File: Imagenes/matriz_confusion_algoritmo_genÃ©tico.png Graphic file (type png)
 
@@ -2223,8 +2223,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 505.
 LaTeX Info: Redefining \% on input line 505.
-[110 <./Imagenes/convergencia_algoritmo_genÃ©tico.png>]
-<Imagenes/convergencia_vns.png, id=2427, 611.4042pt x 390.258pt>
+[112 <./Imagenes/convergencia_algoritmo_genÃ©tico.png>]
+<Imagenes/convergencia_vns.png, id=2444, 611.4042pt x 390.258pt>
 File: Imagenes/convergencia_vns.png Graphic file (type png)
 <use Imagenes/convergencia_vns.png>
 Package pdftex.def Info: Imagenes/convergencia_vns.png  used on input line 513.
@@ -2234,7 +2234,7 @@ Package pdftex.def Info: Imagenes/convergencia_vns.png  used on input line 513.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/matriz_confusion_vns.png, id=2428, 465.4188pt x 390.258pt>
+<Imagenes/matriz_confusion_vns.png, id=2445, 465.4188pt x 390.258pt>
 File: Imagenes/matriz_confusion_vns.png Graphic file (type png)
 <use Imagenes/matriz_confusion_vns.png>
 Package pdftex.def Info: Imagenes/matriz_confusion_vns.png  used on input line 
@@ -2245,20 +2245,20 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 525.
 LaTeX Info: Redefining \% on input line 525.
-[111 <./Imagenes/matriz_confusion_algoritmo_genÃ©tico.png>]
+[113 <./Imagenes/matriz_confusion_algoritmo_genÃ©tico.png>]
 Overfull \vbox (11.16568pt too high) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
 
-[112 <./Imagenes/convergencia_vns.png> <./Imagenes/matriz_confusion_vns.png>]
-<Imagenes/convergencia_pso.png, id=2443, 617.1858pt x 390.258pt>
+[114 <./Imagenes/convergencia_vns.png> <./Imagenes/matriz_confusion_vns.png>]
+<Imagenes/convergencia_pso.png, id=2459, 617.1858pt x 390.258pt>
 File: Imagenes/convergencia_pso.png Graphic file (type png)
 <use Imagenes/convergencia_pso.png>
 Package pdftex.def Info: Imagenes/convergencia_pso.png  used on input line 533.
 
 (pdftex.def)             Requested size: 346.89731pt x 219.3588pt.
-<Imagenes/matriz_confusion_pso.png, id=2444, 465.4188pt x 390.258pt>
+<Imagenes/matriz_confusion_pso.png, id=2460, 465.4188pt x 390.258pt>
 File: Imagenes/matriz_confusion_pso.png Graphic file (type png)
 <use Imagenes/matriz_confusion_pso.png>
 Package pdftex.def Info: Imagenes/matriz_confusion_pso.png  used on input line 
@@ -2270,30 +2270,30 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 545.
 LaTeX Info: Redefining \% on input line 545.
-[113 <./Imagenes/convergencia_pso.png>]
+[115 <./Imagenes/convergencia_pso.png>]
 LaTeX Info: Redefining \. on input line 566.
 LaTeX Info: Redefining \% on input line 566.
- [114 <./Imagenes/matriz_confusion_pso.png>]
+ [116 <./Imagenes/matriz_confusion_pso.png>]
 LaTeX Info: Redefining \. on input line 644.
 LaTeX Info: Redefining \% on input line 644.
- [115]
+ [117]
 LaTeX Info: Redefining \. on input line 690.
 LaTeX Info: Redefining \% on input line 690.
- [116]
+ [118]
 LaTeX Info: Redefining \. on input line 720.
 LaTeX Info: Redefining \% on input line 720.
- [117]
+ [119]
 Overfull \hbox (10.44398pt too wide) in paragraph at lines 722--722
 []\T1/cmr/bx/n/17.28 Resultados del En-fo-que Trans-for-mer: Dis-til-BERT
  []
 
 LaTeX Info: Redefining \. on input line 776.
 LaTeX Info: Redefining \% on input line 776.
-[118]
+[120]
 LaTeX Info: Redefining \. on input line 867.
 LaTeX Info: Redefining \% on input line 867.
- [119]
-<Imagenes/Entrenamiento/curva_aprendizaje_v7.png, id=2503, 1293.633pt x 498.422
+ [121]
+<Imagenes/Entrenamiento/curva_aprendizaje_v7.png, id=2519, 1293.633pt x 498.422
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v7.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v7.png>
@@ -2306,49 +2306,49 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 907.
 LaTeX Info: Redefining \% on input line 907.
-[120]
+[122]
 LaTeX Info: Redefining \. on input line 926.
 LaTeX Info: Redefining \% on input line 926.
- [121 <./Imagenes/Entrenamiento/curva_aprendizaje_v7.png>]
+ [123 <./Imagenes/Entrenamiento/curva_aprendizaje_v7.png>]
 LaTeX Info: Redefining \. on input line 940.
 LaTeX Info: Redefining \% on input line 940.
- [122]
-<Imagenes/Entrenamiento/curva_aprendizaje_v1.png, id=2533, 1149.093pt x 425.670
+ [124]
+<Imagenes/Entrenamiento/curva_aprendizaje_v1.png, id=2550, 1149.093pt x 425.670
 3pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v1.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v1.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v1.png  used 
 on input line 992.
 (pdftex.def)             Requested size: 195.12767pt x 72.27855pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v2.png, id=2534, 1149.093pt x 426.152
+<Imagenes/Entrenamiento/curva_aprendizaje_v2.png, id=2551, 1149.093pt x 426.152
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v2.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v2.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v2.png  used 
 on input line 993.
 (pdftex.def)             Requested size: 195.12767pt x 72.36035pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v3.png, id=2535, 1149.093pt x 426.152
+<Imagenes/Entrenamiento/curva_aprendizaje_v3.png, id=2552, 1149.093pt x 426.152
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v3.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v3.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v3.png  used 
 on input line 997.
 (pdftex.def)             Requested size: 195.12767pt x 72.36035pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v4.png, id=2536, 1149.093pt x 426.152
+<Imagenes/Entrenamiento/curva_aprendizaje_v4.png, id=2553, 1149.093pt x 426.152
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v4.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v4.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v4.png  used 
 on input line 998.
 (pdftex.def)             Requested size: 195.12767pt x 72.36035pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v5.png, id=2537, 1293.633pt x 498.422
+<Imagenes/Entrenamiento/curva_aprendizaje_v5.png, id=2554, 1293.633pt x 498.422
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v5.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v5.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v5.png  used 
 on input line 1002.
 (pdftex.def)             Requested size: 195.12767pt x 75.17838pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v6.png, id=2538, 1293.633pt x 498.422
+<Imagenes/Entrenamiento/curva_aprendizaje_v6.png, id=2555, 1293.633pt x 498.422
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v6.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v6.png>
@@ -2362,11 +2362,11 @@ on input line 1007.
 (pdftex.def)             Requested size: 390.25534pt x 150.35675pt.
 LaTeX Info: Redefining \. on input line 1029.
 LaTeX Info: Redefining \% on input line 1029.
- [123]
+ [125]
 LaTeX Info: Redefining \. on input line 1029.
 LaTeX Info: Redefining \% on input line 1029.
 
-[124 <./Imagenes/Entrenamiento/curva_aprendizaje_v1.png> <./Imagenes/Entrenamie
+[126 <./Imagenes/Entrenamiento/curva_aprendizaje_v1.png> <./Imagenes/Entrenamie
 nto/curva_aprendizaje_v2.png> <./Imagenes/Entrenamiento/curva_aprendizaje_v3.pn
 g> <./Imagenes/Entrenamiento/curva_aprendizaje_v4.png> <./Imagenes/Entrenamient
 o/curva_aprendizaje_v5.png> <./Imagenes/Entrenamiento/curva_aprendizaje_v6.png>
@@ -2378,33 +2378,33 @@ r/m/n/12 La V5 com-bi-nó la di-vi-sión 70/10/20
 
 LaTeX Info: Redefining \. on input line 1067.
 LaTeX Info: Redefining \% on input line 1067.
-[125]
+[127]
 LaTeX Info: Redefining \. on input line 1127.
 LaTeX Info: Redefining \% on input line 1127.
- [126]
-LaTeX Info: Redefining \. on input line 1191.
-LaTeX Info: Redefining \% on input line 1191.
- [127]
-LaTeX Info: Redefining \. on input line 1191.
-LaTeX Info: Redefining \% on input line 1191.
  [128]
+LaTeX Info: Redefining \. on input line 1191.
+LaTeX Info: Redefining \% on input line 1191.
+ [129]
+LaTeX Info: Redefining \. on input line 1191.
+LaTeX Info: Redefining \% on input line 1191.
+ [130]
 LaTeX Info: Redefining \. on input line 1262.
 LaTeX Info: Redefining \% on input line 1262.
- [129]
+ [131]
 LaTeX Info: Redefining \. on input line 1289.
 LaTeX Info: Redefining \% on input line 1289.
- [130]
+ [132]
 LaTeX Info: Redefining \. on input line 1317.
 LaTeX Info: Redefining \% on input line 1317.
- [131])
+ [133])
 LaTeX Info: Redefining \. on input line 102.
 LaTeX Info: Redefining \% on input line 102.
- [132]
+ [134]
 \openout2 = `Capitulo6/Capitulo6.aux'.
 
  (Capitulo6/Capitulo6.tex
 Cap\'{\i }tulo 6.
-[133
+[135
 
 
 
@@ -2412,36 +2412,36 @@ Cap\'{\i }tulo 6.
 ]
 LaTeX Info: Redefining \. on input line 33.
 LaTeX Info: Redefining \% on input line 33.
- [134]
+ [136]
 Overfull \hbox (19.18446pt too wide) in paragraph at lines 44--44
 []\T1/cmr/bx/n/17.28 Prototipo 2: Ana-li-za-dor Ba-sa-do en Mo-de-los Trans-
  []
 
 LaTeX Info: Redefining \. on input line 59.
 LaTeX Info: Redefining \% on input line 59.
-[135]
+[137]
 Overfull \hbox (49.81021pt too wide) in paragraph at lines 60--61
 []\T1/cmr/bx/n/12 Predicción: \T1/cmr/m/n/12 Los ten-so-res se pa-san al mo-de-
 lo \T1/cmtt/m/n/12 TFAutoModelForSequenceClassification\T1/cmr/m/n/12 ,
  []
 
-<Imagenes/app_real.png, id=2647, 1924.94156pt x 1105.88156pt>
+<Imagenes/app_real.png, id=2663, 1924.94156pt x 1105.88156pt>
 File: Imagenes/app_real.png Graphic file (type png)
 <use Imagenes/app_real.png>
 Package pdftex.def Info: Imagenes/app_real.png  used on input line 72.
 (pdftex.def)             Requested size: 390.25534pt x 224.1929pt.
-<Imagenes/app_falsa1.png, id=2649, 1920.42468pt x 1103.62312pt>
+<Imagenes/app_falsa1.png, id=2665, 1920.42468pt x 1103.62312pt>
 File: Imagenes/app_falsa1.png Graphic file (type png)
 <use Imagenes/app_falsa1.png>
 Package pdftex.def Info: Imagenes/app_falsa1.png  used on input line 82.
 (pdftex.def)             Requested size: 390.25534pt x 224.2571pt.
 LaTeX Info: Redefining \. on input line 89.
 LaTeX Info: Redefining \% on input line 89.
-[136]
+[138]
 LaTeX Info: Redefining \. on input line 89.
 LaTeX Info: Redefining \% on input line 89.
- [137 <./Imagenes/app_real.png> <./Imagenes/app_falsa1.png>]
-<Imagenes/app_falsa2.png, id=2665, 1924.94156pt x 1102.87032pt>
+ [139 <./Imagenes/app_real.png> <./Imagenes/app_falsa1.png>]
+<Imagenes/app_falsa2.png, id=2681, 1924.94156pt x 1102.87032pt>
 File: Imagenes/app_falsa2.png Graphic file (type png)
 <use Imagenes/app_falsa2.png>
 Package pdftex.def Info: Imagenes/app_falsa2.png  used on input line 92.
@@ -2449,12 +2449,12 @@ Package pdftex.def Info: Imagenes/app_falsa2.png  used on input line 92.
 )
 LaTeX Info: Redefining \. on input line 103.
 LaTeX Info: Redefining \% on input line 103.
- [138 <./Imagenes/app_falsa2.png>]
+ [140 <./Imagenes/app_falsa2.png>]
 \openout2 = `Conclusiones/Conclusiones.aux'.
 
  (Conclusiones/Conclusiones.tex
 Cap\'{\i }tulo 7.
-[139
+[141
 
 
 
@@ -2467,33 +2467,33 @@ rlyStopping \T1/cmr/m/n/12 y \T1/cmtt/m/n/12 ReduceLROnPlateau\T1/cmr/m/n/12 .
 
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
-[140])
+[142])
 LaTeX Info: Redefining \. on input line 104.
 LaTeX Info: Redefining \% on input line 104.
- [141]
+ [143]
 \openout2 = `Anexos/Anexo1.aux'.
 
  (Anexos/Anexo1.tex
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
- [142
+ [144
 
 
 
 
 ]
 Ap\'{e}ndice A.
-) [143] (ICR.bbl
+) [145] (ICR.bbl
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [144
+ [146
 
 
 
-] [145]
+] [147]
 LaTeX Info: Redefining \. on input line 153.
 LaTeX Info: Redefining \% on input line 153.
- [146]
+ [148]
 Underfull \hbox (badness 1430) in paragraph at lines 156--163
 []\T1/cmr/m/n/12 Arsenii Tre-tia-kov, Ale-jan-dro Mar-tín Gar-cía, and Da-vid C
 a-ma-cho.  De-
@@ -2507,13 +2507,13 @@ ar-ning tech-ni-
 
 LaTeX Info: Redefining \. on input line 236.
 LaTeX Info: Redefining \% on input line 236.
-[147]
+[149]
 LaTeX Info: Redefining \. on input line 313.
 LaTeX Info: Redefining \% on input line 313.
- [148]
+ [150]
 LaTeX Info: Redefining \. on input line 390.
 LaTeX Info: Redefining \% on input line 390.
- [149]
+ [151]
 Overfull \hbox (99.3442pt too wide) in paragraph at lines 400--406
 \T1/cmtt/m/n/12 improving-[]fake-[]news-[]detection-[]using-[]k-[]means-[]and-[
 ]support-[]vector-[]machine-[]approaches$[]\T1/cmr/m/n/12 .
@@ -2521,7 +2521,7 @@ Overfull \hbox (99.3442pt too wide) in paragraph at lines 400--406
 
 LaTeX Info: Redefining \. on input line 469.
 LaTeX Info: Redefining \% on input line 469.
-[150]
+[152]
 Underfull \hbox (badness 1472) in paragraph at lines 500--505
 []\T1/cmr/m/n/12 Fabricio An-drés Zu-les Acos-ta.  Da-ta-Set Web scra-ping no-t
 i-cias ve-ri-fi-ca-
@@ -2553,7 +2553,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 541--547
 
 LaTeX Info: Redefining \. on input line 557.
 LaTeX Info: Redefining \% on input line 557.
-[151]
+[153]
 Underfull \hbox (badness 4595) in paragraph at lines 587--593
 []\T1/cmr/m/n/12 C. E. Manzano-Velasco.  Da-ta-Set Web scra-ping no-ti-cias ve-
 ri-fi-ca-das.
@@ -2573,10 +2573,10 @@ lowed = y # page = 89$[]\T1/cmr/m/n/12 .
 
 LaTeX Info: Redefining \. on input line 631.
 LaTeX Info: Redefining \% on input line 631.
-[152])
+[154])
 LaTeX Info: Redefining \. on input line 116.
 LaTeX Info: Redefining \% on input line 116.
- [153] (ICR.aux (Portada/Portada.aux)
+ [155] (ICR.aux (Portada/Portada.aux)
 LaTeX Info: Redefining \. on input line 17.
 LaTeX Info: Redefining \% on input line 17.
  (Resumen/Resumen.aux)
@@ -2594,13 +2594,13 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ICR.out' has not changed.
-(rerunfilecheck)             Checksum: 53795BCB9D8FEC4BEE50F892D7095230;46031.
+(rerunfilecheck)             Checksum: 06A844B71FB0F48D9884D9BA89B5B3C7;46077.
  ) 
 Here is how much of TeX's memory you used:
- 47587 strings out of 474486
- 1098017 string characters out of 5743755
+ 47601 strings out of 474486
+ 1098174 string characters out of 5743755
  1981542 words of memory out of 5000000
- 68219 multiletter control sequences out of 15000+600000
+ 68222 multiletter control sequences out of 15000+600000
  584645 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,19n,93p,2518b,2304s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2654,9 +2654,9 @@ c/amsfonts/cm/cmr8.pfb><C:/Users/gabri/AppData/Local/Programs/MiKTeX/fonts/type
 onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/gabri/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/gabri/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ICR.pdf (187 pages, 7482657 bytes).
+Output written on ICR.pdf (189 pages, 7489052 bytes).
 PDF statistics:
- 4363 PDF objects out of 5155 (max. 8388607)
- 902 named destinations out of 1000 (max. 500000)
+ 4382 PDF objects out of 5155 (max. 8388607)
+ 913 named destinations out of 1000 (max. 500000)
  1502 words of extra memory for PDF output out of 10000 (max. 10000000)
 

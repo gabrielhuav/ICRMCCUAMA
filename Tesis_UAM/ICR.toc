@@ -6,308 +6,311 @@
 \contentsline {chapter}{Glosario}{\es@scroman {xxvii}}{section*.13}%
 \contentsline {chapter}{\numberline {1}Introducción }{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Planteamiento del problema}{1}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}El Desafío Específico del Español}{2}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}La Complejidad Técnica del Problema}{3}{subsection.1.1.2}%
-\contentsline {section}{\numberline {1.2}Motivación}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.1.1}El Desafío Específico del Español}{3}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}La Complejidad Técnica del Problema}{4}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Motivación}{4}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Impacto Personal y Social Observado}{5}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Vulnerabilidad de Poblaciones Específicas}{5}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Urgencia Tecnológica}{5}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.3}Urgencia Tecnológica}{6}{subsection.1.2.3}%
 \contentsline {section}{\numberline {1.3}Justificación}{6}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Brecha Tecnológica en Recursos para el Español}{6}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Novedad Metodológica: Enfoque Evolutivo Comparativo}{6}{subsection.1.3.2}%
-\contentsline {subsubsection}{Paradigma Clásico Optimizado}{6}{section*.15}%
+\contentsline {subsection}{\numberline {1.3.2}Novedad Metodológica: Enfoque Evolutivo Comparativo}{7}{subsection.1.3.2}%
+\contentsline {subsubsection}{Paradigma Clásico Optimizado}{7}{section*.15}%
 \contentsline {subsubsection}{Paradigma de Deep Learning}{7}{section*.16}%
 \contentsline {subsection}{\numberline {1.3.3}Contribución Científica Multidimensional}{7}{subsection.1.3.3}%
 \contentsline {subsubsection}{Contribución a Recursos Lingüísticos}{7}{section*.17}%
-\contentsline {subsubsection}{Contribución Metodológica}{7}{section*.18}%
-\contentsline {subsubsection}{Contribución Aplicada}{7}{section*.19}%
+\contentsline {subsubsection}{Contribución Metodológica}{8}{section*.18}%
+\contentsline {subsubsection}{Contribución Aplicada}{8}{section*.19}%
 \contentsline {subsection}{\numberline {1.3.4}Relevancia en el Contexto de LLMs}{8}{subsection.1.3.4}%
 \contentsline {section}{\numberline {1.4}Objetivos}{8}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Alcance y Limitaciones}{8}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Alcance}{8}{subsection.1.5.1}%
-\contentsline {subsubsection}{Alcance Lingüístico y Cultural}{8}{section*.22}%
+\contentsline {section}{\numberline {1.5}Alcance y Limitaciones}{9}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Alcance}{9}{subsection.1.5.1}%
+\contentsline {subsubsection}{Alcance Lingüístico y Cultural}{9}{section*.22}%
 \contentsline {subsubsection}{Alcance Técnico}{9}{section*.23}%
-\contentsline {subsubsection}{Transferibilidad de la Metodología}{9}{section*.24}%
-\contentsline {subsubsection}{Alcance Metodológico}{9}{section*.25}%
+\contentsline {subsubsection}{Transferibilidad de la Metodología}{10}{section*.24}%
+\contentsline {subsubsection}{Alcance Metodológico}{10}{section*.25}%
 \contentsline {subsection}{\numberline {1.5.2}Limitaciones}{10}{subsection.1.5.2}%
 \contentsline {subsubsection}{Limitaciones de Datos}{10}{section*.26}%
-\contentsline {subsubsection}{Limitaciones Técnicas}{10}{section*.27}%
-\contentsline {subsubsection}{Limitaciones Operacionales}{10}{section*.28}%
+\contentsline {subsubsection}{Limitaciones Técnicas}{11}{section*.27}%
+\contentsline {subsubsection}{Limitaciones Operacionales}{11}{section*.28}%
 \contentsline {subsubsection}{Limitaciones de Evaluación}{11}{section*.29}%
 \contentsline {section}{\numberline {1.6}Contribuciones Esperadas}{11}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}Contribuciones Teóricas}{11}{subsection.1.6.1}%
-\contentsline {subsection}{\numberline {1.6.2}Contribuciones Prácticas}{11}{subsection.1.6.2}%
-\contentsline {subsection}{\numberline {1.6.3}Contribuciones Sociales}{11}{subsection.1.6.3}%
+\contentsline {subsection}{\numberline {1.6.2}Contribuciones Prácticas}{12}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Contribuciones Sociales}{12}{subsection.1.6.3}%
 \contentsline {section}{\numberline {1.7}Organización del Documento}{12}{section.1.7}%
-\contentsline {chapter}{\numberline {2}Marco Teórico }{13}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Detección de Noticias Falsas: Fundamentos y Extensibilidad}{13}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Impacto Social y Desafíos de la Desinformación}{14}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}El Problema de las Heurísticas Cognitivas}{14}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Diferenciación y Transferibilidad: Noticias Falsas vs. Fraude Digital}{14}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Representación de Texto: Desde BoW hasta Embeddings Contextuales}{15}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Bolsa de Palabras (Bag-of-Words - BoW)}{15}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Ponderación TF-IDF (Term Frequency-Inverse Document Frequency)}{16}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Limitaciones de los Métodos Clásicos}{16}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}La Revolución Transformer y los Modelos de Lenguaje Modernos}{17}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}La Arquitectura Transformer: Fundamentos}{17}{subsection.2.3.1}%
-\contentsline {subsubsection}{Mecanismo de Atención Multi-Cabeza}{17}{section*.30}%
-\contentsline {subsection}{\numberline {2.3.2}BERT y la Era del Pre-entrenamiento Bidireccional}{17}{subsection.2.3.2}%
-\contentsline {subsubsection}{Variantes de BERT para Eficiencia}{17}{section*.31}%
-\contentsline {subsection}{\numberline {2.3.3}Aplicaciones en Detección de Noticias Falsas en Español}{18}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Grandes Modelos de Lenguaje (LLMs) y Nuevos Paradigmas}{18}{subsection.2.3.4}%
-\contentsline {subsubsection}{GPT-3 y el Paradigma Few-Shot}{18}{section*.32}%
-\contentsline {subsubsection}{LLaMA y la Democratización de LLMs}{18}{section*.33}%
-\contentsline {subsubsection}{Modelos Multimodales: Gemini}{18}{section*.34}%
-\contentsline {subsubsection}{IA Constitucional}{18}{section*.35}%
-\contentsline {subsection}{\numberline {2.3.5}El Doble Rol de los LLMs en Detección}{18}{subsection.2.3.5}%
-\contentsline {section}{\numberline {2.4}Optimización Metaheurística en Detección de Fraude}{19}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Fundamentos de las Metaheurísticas}{19}{subsection.2.4.1}%
-\contentsline {subsubsection}{Justificación del Uso de Metaheurísticas en Detección de Noticias Falsas}{19}{section*.36}%
-\contentsline {subsubsection}{Arquitectura General del Sistema Metaheurístico}{19}{section*.37}%
-\contentsline {subsubsection}{Entradas del Sistema Metaheurístico}{20}{section*.38}%
-\contentsline {subsubsection}{Preprocesamiento y Pipeline}{20}{section*.39}%
-\contentsline {subsubsection}{Algoritmos Metaheurísticos Implementados}{21}{section*.40}%
-\contentsline {subsubsection}{Función Objetivo y Evaluación}{23}{section*.41}%
-\contentsline {subsubsection}{Etapas del Proceso Metaheurístico}{24}{section*.42}%
-\contentsline {subsubsection}{Salidas del Sistema Metaheurístico}{25}{section*.43}%
-\contentsline {subsubsection}{Comparación de Algoritmos Metaheurísticos}{26}{section*.44}%
-\contentsline {subsubsection}{Criterios de Selección y Justificación}{26}{section*.45}%
-\contentsline {subsubsection}{Justificación Frente a Métodos Alternativos}{27}{section*.46}%
-\contentsline {subsubsection}{Flujo del Proceso Metaheurístico}{28}{section*.47}%
-\contentsline {subsubsection}{Consideraciones de Implementación}{28}{section*.48}%
-\contentsline {subsubsection}{Métricas de Monitoreo del Proceso}{29}{section*.49}%
-\contentsline {subsection}{\numberline {2.4.2}Aplicaciones en Detección de Noticias Falsas}{30}{subsection.2.4.2}%
-\contentsline {subsubsection}{Modelado como Problema de Scheduling}{30}{section*.50}%
-\contentsline {subsubsection}{Optimización de Hiperparámetros en Deep Learning}{30}{section*.51}%
-\contentsline {subsubsection}{Frameworks de Ensemble Heurístico}{30}{section*.52}%
-\contentsline {subsection}{\numberline {2.4.3}Metaheurísticas para Detección de Fraude Financiero}{31}{subsection.2.4.3}%
-\contentsline {subsubsection}{Optimización Multi-objetivo}{31}{section*.53}%
-\contentsline {subsubsection}{Optimización de Procesos Gaussianos}{31}{section*.54}%
-\contentsline {subsection}{\numberline {2.4.4}Algoritmos Híbridos Modernos}{31}{subsection.2.4.4}%
-\contentsline {subsubsection}{Enfoques Multi-thread}{31}{section*.55}%
-\contentsline {subsubsection}{PSO Adaptativo}{31}{section*.56}%
-\contentsline {section}{\numberline {2.5}Integración de Enfoques: Hacia Sistemas Híbridos}{31}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Combinación de Representaciones Clásicas y Modernas}{31}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Arquitecturas de Ensemble Optimizadas}{32}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Optimización End-to-End}{32}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}Desafíos y Direcciones Futuras}{32}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Desafíos Técnicos}{32}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Consideraciones Éticas y Sociales}{33}{subsection.2.6.2}%
-\contentsline {section}{\numberline {2.7}Síntesis del Marco Teórico}{33}{section.2.7}%
-\contentsline {chapter}{\numberline {3}Estado del arte }{35}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Metodología de Búsqueda Bibliográfica}{35}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Panorama de la Investigación en Detección de Noticias Falsas}{37}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Fundamentos Metodológicos y Construcción de Corpus}{37}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Evolución de los Modelos de Lenguaje en Detección de Desinformación}{39}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Técnicas de Optimización Metaheurística en Detección de Desinformación}{41}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Algoritmos Metaheurísticos: Fundamentos Teóricos y Aplicaciones Prácticas}{44}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Algoritmos Genéticos (GA): Evolución Artificial para Optimización}{44}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Optimización por Enjambre de Partículas (PSO): Inteligencia Colectiva}{45}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Recocido Simulado: Física Estadística para Optimización}{46}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Búsqueda Dispersa (Scatter Search): Combinación Determinística}{46}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Búsqueda en Vecindades Variables (VNS): Exploración Sistemática}{47}{subsection.3.3.5}%
-\contentsline {section}{\numberline {3.4}Hiperparámetros en Modelos de Aprendizaje Automático: Fundamentos y Optimización}{48}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Naturaleza y Definición de Hiperparámetros}{48}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Importancia Crítica en la Detección de Noticias Falsas}{49}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Desafíos en la Búsqueda de Configuración Óptima}{50}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Herramientas Modernas: Keras Tuner y Automatización}{50}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Ventajas Sinérgicas: Modelos de Lenguaje y Herramientas de Optimización}{51}{subsection.3.4.5}%
-\contentsline {section}{\numberline {3.5}Análisis Temático Comprehensivo de la Literatura Relevante}{53}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}El Desafío Fundamental de los Datos: Creación y Curación de Corpus en Español}{54}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Revolución de los Modelos de Lenguaje y Arquitecturas Transformer}{55}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Optimización y Metaheurísticas en la Detección: Enfoques Innovadores}{56}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Aplicación de Metaheurísticas por Tipo de Detección}{56}{subsection.3.5.4}%
-\contentsline {subsubsection}{Patrones Identificados por Dominio}{56}{section*.57}%
-\contentsline {paragraph}{Detección de Contenido Textual}{56}{section*.58}%
-\contentsline {paragraph}{Optimización de Modelos de Aprendizaje Profundo}{58}{section*.59}%
-\contentsline {paragraph}{Sistemas de Detección en Tiempo Real}{58}{section*.60}%
-\contentsline {subsection}{\numberline {3.5.5}Perspectivas Interdisciplinarias y Análisis Social}{59}{subsection.3.5.5}%
-\contentsline {subsection}{\numberline {3.5.6}Detección de Fraude: Extensión Más Allá de las Noticias}{59}{subsection.3.5.6}%
-\contentsline {section}{\numberline {3.6}Síntesis y Perspectivas Futuras}{60}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Metodología }{61}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Visión General de la Metodología}{61}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Definición y Distinción de Conceptos Fundamentales}{62}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Distinción entre Noticia Falsa y Bulo}{62}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Taxonomía de la Desinformación}{62}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Justificación de la Unificación Terminológica}{63}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Esquema de Clasificación: Enfoque Binario}{63}{subsection.4.2.4}%
-\contentsline {subsubsection}{Justificación del Enfoque Binario}{64}{section*.61}%
-\contentsline {subsubsection}{Consideraciones sobre Esquemas Alternativos}{64}{section*.62}%
-\contentsline {subsection}{\numberline {4.2.5}Fronteras Difusas en la Clasificación de Veracidad}{64}{subsection.4.2.5}%
-\contentsline {subsubsection}{Casos Límite y Ambigüedades}{64}{section*.63}%
-\contentsline {subsubsection}{Implicaciones para el Modelado}{65}{section*.64}%
-\contentsline {subsubsection}{Justificación Pragmática del Enfoque Binario}{65}{section*.65}%
-\contentsline {section}{\numberline {4.3}Construcción del Corpus Unificado}{66}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Fuentes de Datos Académicas}{66}{subsection.4.3.1}%
-\contentsline {subsubsection}{Spanish Fake News Corpus (IberLEF)}{66}{section*.66}%
-\contentsline {subsubsection}{Conjunto de datos de Zules Acosta (Universidad Politécnica de Madrid)}{67}{section*.67}%
-\contentsline {subsubsection}{Dataset de Tretiakov et al.}{67}{section*.68}%
-\contentsline {subsubsection}{Spanish Political Fake News Dataset}{67}{section*.69}%
-\contentsline {subsection}{\numberline {4.3.2}Análisis Comparativo Detallado de los Corpus Utilizados}{68}{subsection.4.3.2}%
-\contentsline {subsubsection}{Análisis de Complementariedad entre Corpus}{68}{section*.70}%
-\contentsline {subsubsection}{Justificación de la Estrategia de Unificación}{69}{section*.71}%
-\contentsline {subsection}{\numberline {4.3.3}Proceso de Unificación y Estandarización}{70}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Ampliación del Corpus Mediante Extracción Web}{70}{subsection.4.3.4}%
-\contentsline {subsubsection}{Proceso de Extracción Web Automatizada}{70}{section*.72}%
-\contentsline {subsubsection}{Implementación Técnica de la Extracción Web}{71}{section*.73}%
-\contentsline {subsection}{\numberline {4.3.5}Corpus Final y Estrategia de División}{72}{subsection.4.3.5}%
-\contentsline {subsubsection}{Análisis de Composición Final}{72}{section*.74}%
-\contentsline {subsubsection}{Concepto y Importancia del Balanceo de Clases}{72}{section*.75}%
-\contentsline {subsubsection}{Síntesis del Análisis Comparativo entre Corpus}{74}{section*.76}%
-\contentsline {subsubsection}{División Estratificada para Entrenamiento}{76}{section*.77}%
-\contentsline {subsubsection}{Proceso de Limpieza Final}{76}{section*.78}%
-\contentsline {section}{\numberline {4.4}Enfoque 1: Detección Mediante Algoritmos Metaheurísticos}{77}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Preprocesamiento y Representación Textual}{77}{subsection.4.4.1}%
-\contentsline {subsubsection}{Función de Limpieza de Texto}{77}{section*.79}%
-\contentsline {subsubsection}{Representación Bolsa de Palabras con Ponderación TF-IDF}{78}{section*.80}%
-\contentsline {subsection}{\numberline {4.4.2}Algoritmos Metaheurísticos Implementados}{78}{subsection.4.4.2}%
-\contentsline {subsubsection}{Recocido Multiarranque (Multi-Start Simulated Annealing - MSA)}{79}{section*.81}%
-\contentsline {subsubsection}{Búsqueda Dispersa (Scatter Search - SS)}{79}{section*.82}%
-\contentsline {subsubsection}{Algoritmo Genético (Genetic Algorithm - GA)}{80}{section*.83}%
-\contentsline {subsubsection}{Búsqueda en Vecindades Variables (Variable Neighborhood Search - VNS)}{80}{section*.84}%
-\contentsline {subsubsection}{Optimización por Enjambre de Partículas (Particle Swarm Optimization - PSO)}{81}{section*.85}%
-\contentsline {subsection}{\numberline {4.4.3}Función de Evaluación y Clasificación}{81}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Reducción de Dimensionalidad}{82}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Enfoque 2: Detección Mediante Modelo Transformer}{82}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Selección y Justificación del Modelo}{82}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Infraestructura Computacional}{83}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Configuración Experimental y Optimización de Hiperparámetros}{83}{subsection.4.5.3}%
-\contentsline {subsubsection}{Parámetros de Entrenamiento Base}{83}{section*.86}%
-\contentsline {subsubsection}{Estrategia de Regularización Avanzada}{83}{section*.87}%
-\contentsline {subsubsection}{Proceso de Búsqueda de Hiperparámetros}{84}{section*.88}%
-\contentsline {subsection}{\numberline {4.5.4}Arquitectura del Modelo de Clasificación}{84}{subsection.4.5.4}%
-\contentsline {subsection}{\numberline {4.5.5}Protocolo de Entrenamiento}{84}{subsection.4.5.5}%
-\contentsline {subsubsection}{Configuración de Entrenamiento}{85}{section*.89}%
-\contentsline {subsubsection}{Estrategia de Validación}{85}{section*.90}%
-\contentsline {subsection}{\numberline {4.5.6}Consideraciones de Implementación}{85}{subsection.4.5.6}%
-\contentsline {subsubsection}{Optimizaciones de Memoria}{85}{section*.91}%
-\contentsline {subsubsection}{Monitoreo y Logging}{86}{section*.92}%
-\contentsline {section}{\numberline {4.6}Metodología de Evaluación Comparativa}{86}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Protocolo de Evaluación}{86}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Fundamentos de la Matriz de Confusión}{86}{subsection.4.6.2}%
-\contentsline {subsubsection}{Representación Visual de la Matriz de Confusión}{86}{section*.93}%
-\contentsline {subsection}{\numberline {4.6.3}Marco de Métricas de Rendimiento}{87}{subsection.4.6.3}%
-\contentsline {subsubsection}{Fundamentación Teórica de las Métricas según el Estado del Arte}{87}{section*.94}%
-\contentsline {subsubsection}{Propiedades Matemáticas de las Métricas Implementadas}{87}{section*.95}%
-\contentsline {subsubsection}{Validación Matemática de las Métricas Implementadas}{89}{section*.96}%
-\contentsline {subsubsection}{Consideraciones Específicas para Detección de Noticias Falsas}{90}{section*.97}%
-\contentsline {subsubsection}{Alineación con Métricas del Estado del Arte}{90}{section*.98}%
-\contentsline {subsection}{\numberline {4.6.4}Criterios de Selección del Mejor Modelo}{91}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}Protocolo de Validación Cruzada}{92}{subsection.4.6.5}%
-\contentsline {subsection}{\numberline {4.6.6}Benchmarking Computacional}{92}{subsection.4.6.6}%
-\contentsline {subsection}{\numberline {4.6.7}Análisis de Matrices de Confusión}{92}{subsection.4.6.7}%
-\contentsline {subsection}{\numberline {4.6.8}Reporte de Resultados}{93}{subsection.4.6.8}%
-\contentsline {section}{\numberline {4.7}Infraestructura Computacional y Herramientas}{93}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Entorno de Desarrollo para Algoritmos Metaheurísticos}{93}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Hardware Dedicado para Entrenamiento DistilBERT}{93}{subsection.4.7.2}%
-\contentsline {subsubsection}{Optimizaciones Específicas del Hardware}{94}{section*.99}%
-\contentsline {subsection}{\numberline {4.7.3}Stack Tecnológico Completo}{94}{subsection.4.7.3}%
-\contentsline {section}{\numberline {4.8}Consideraciones Éticas y de Privacidad}{94}{section.4.8}%
-\contentsline {subsection}{\numberline {4.8.1}Marco Ético de Desarrollo}{94}{subsection.4.8.1}%
-\contentsline {subsection}{\numberline {4.8.2}Limitaciones Declaradas y Uso Responsable}{96}{subsection.4.8.2}%
-\contentsline {section}{\numberline {4.9}Validación y Reproducibilidad}{96}{section.4.9}%
-\contentsline {subsection}{\numberline {4.9.1}Ecosistema de Artefactos de Reproducibilidad}{96}{subsection.4.9.1}%
-\contentsline {subsection}{\numberline {4.9.2}Solución Lista para Producción}{97}{subsection.4.9.2}%
-\contentsline {chapter}{\numberline {5}Análisis de Resultados }{99}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Resultados del Enfoque Metaheurístico con Representación BoW-TF-IDF}{99}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Marco Experimental y Configuración Base}{100}{subsection.5.1.1}%
-\contentsline {subsubsection}{Características del Corpus Utilizado}{100}{section*.100}%
-\contentsline {subsubsection}{Configuración de Representación Textual}{100}{section*.101}%
-\contentsline {subsubsection}{Arquitectura del Clasificador}{101}{section*.102}%
-\contentsline {subsection}{\numberline {5.1.2}Implementación y Configuración de Algoritmos Metaheurísticos}{101}{subsection.5.1.2}%
-\contentsline {subsubsection}{Justificación de Parámetros Seleccionados}{101}{section*.103}%
-\contentsline {subsection}{\numberline {5.1.3}Pseudocódigos de los Algoritmos Implementados}{102}{subsection.5.1.3}%
-\contentsline {subsubsection}{Función de Evaluación Común}{102}{section*.104}%
-\contentsline {subsubsection}{Multi-Start Simulated Annealing (MSA)}{103}{section*.105}%
-\contentsline {subsubsection}{Scatter Search (SS)}{103}{section*.106}%
-\contentsline {subsubsection}{Genetic Algorithm (GA)}{105}{section*.107}%
-\contentsline {subsubsection}{Variable Neighborhood Search (VNS)}{105}{section*.108}%
-\contentsline {subsubsection}{Particle Swarm Optimization (PSO)}{105}{section*.109}%
-\contentsline {subsection}{\numberline {5.1.4}Visualizaciones de Resultados por Algoritmo}{107}{subsection.5.1.4}%
-\contentsline {subsubsection}{Recocido Multiarranque (MSA) - Visualizaciones}{107}{section*.110}%
-\contentsline {subsubsection}{Búsqueda Dispersa (SS) - Visualizaciones}{108}{section*.111}%
-\contentsline {subsubsection}{Algoritmo Genético (GA) - Visualizaciones}{109}{section*.112}%
-\contentsline {subsubsection}{Búsqueda en Vecindades Variables (VNS) - Visualizaciones}{111}{section*.113}%
-\contentsline {subsubsection}{Optimización por Enjambre de Partículas (PSO) - Visualizaciones}{112}{section*.114}%
-\contentsline {subsubsection}{Interpretación de las Visualizaciones}{114}{section*.115}%
-\contentsline {subsection}{\numberline {5.1.5}Contextualización con Investigación Publicada}{114}{subsection.5.1.5}%
-\contentsline {subsubsection}{Comparación con Investigación Internacional}{115}{section*.116}%
-\contentsline {subsection}{\numberline {5.1.6}Análisis Comparativo de Resultados}{115}{subsection.5.1.6}%
-\contentsline {subsubsection}{Fortalezas y Debilidades Identificadas}{115}{section*.117}%
-\contentsline {subsection}{\numberline {5.1.7}Limitaciones Fundamentales y Justificación para Evolución}{116}{subsection.5.1.7}%
-\contentsline {subsubsection}{Limitaciones del Enfoque Metaheurístico}{116}{section*.118}%
-\contentsline {paragraph}{Limitaciones de Representación:}{116}{section*.119}%
-\contentsline {paragraph}{Limitaciones de Rendimiento:}{116}{section*.120}%
-\contentsline {subsubsection}{Evidencia de Superioridad de Modelos de Lenguaje}{116}{section*.121}%
-\contentsline {subsection}{\numberline {5.1.8}Síntesis y Transición}{117}{subsection.5.1.8}%
-\contentsline {subsubsection}{Contribuciones del Enfoque Metaheurístico}{117}{section*.122}%
-\contentsline {subsubsection}{Ranking Final Basado en F1-Score Macro}{117}{section*.123}%
-\contentsline {subsubsection}{Justificación para la Evolución}{117}{section*.124}%
-\contentsline {section}{\numberline {5.2}Resultados del Enfoque Transformer: DistilBERT Multilingüe}{118}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Marco Experimental y Evolución del Desarrollo}{118}{subsection.5.2.1}%
-\contentsline {subsubsection}{Proceso de Experimentación Iterativa}{118}{section*.125}%
-\contentsline {subsubsection}{Características del Corpus Expandido}{118}{section*.126}%
-\contentsline {subsubsection}{División Estratégica de Datos}{119}{section*.127}%
-\contentsline {subsection}{\numberline {5.2.2}Configuración del Modelo DistilBERT Optimizado}{119}{subsection.5.2.2}%
-\contentsline {subsubsection}{Arquitectura y Parámetros Base}{119}{section*.128}%
-\contentsline {subsubsection}{Estrategia de Regularización Anti-Overfitting}{119}{section*.129}%
-\contentsline {subsection}{\numberline {5.2.3}Proceso de Optimización y Búsqueda de Hiperparámetros}{119}{subsection.5.2.3}%
-\contentsline {subsubsection}{Metodología de Tuning Automatizado}{119}{section*.130}%
-\contentsline {subsubsection}{Configuración Óptima Identificada}{120}{section*.131}%
-\contentsline {subsection}{\numberline {5.2.4}Análisis de Convergencia y Control de Overfitting}{120}{subsection.5.2.4}%
-\contentsline {subsubsection}{Evolución del Entrenamiento}{120}{section*.132}%
-\contentsline {subsubsection}{Análisis del Gap de Generalización}{121}{section*.133}%
-\contentsline {subsubsection}{Justificación del Early Stopping}{121}{section*.134}%
-\contentsline {subsection}{\numberline {5.2.5}Evolución Experimental: Versiones de Desarrollo}{122}{subsection.5.2.5}%
-\contentsline {subsubsection}{Marco de Desarrollo Iterativo}{122}{section*.135}%
-\contentsline {subsubsection}{Resumen de Versiones Experimentales}{123}{section*.136}%
-\contentsline {subsubsection}{Visualización de Convergencia por Versiones}{123}{section*.137}%
-\contentsline {subsubsection}{Análisis Detallado por Versión}{123}{section*.138}%
-\contentsline {paragraph}{Versión V1 - Línea Base con División Estándar:}{123}{section*.139}%
-\contentsline {paragraph}{Versión V2 - Primera Configuración Anti-Overfitting:}{123}{section*.140}%
-\contentsline {paragraph}{Versión V3 - Mejora Inicial Post-V2:}{123}{section*.141}%
-\contentsline {paragraph}{Versión V4 - Control de Overfitting Mejorado:}{123}{section*.142}%
-\contentsline {paragraph}{Versión V5 - Configuración Híbrida Exitosa:}{125}{section*.143}%
-\contentsline {paragraph}{Versión V6 - Regularización Máxima Inicial:}{125}{section*.144}%
-\contentsline {paragraph}{Versión V7 - Configuración Final Óptima:}{125}{section*.145}%
-\contentsline {subsubsection}{Configuraciones Técnicas Comparativas}{125}{section*.146}%
-\contentsline {subsubsection}{Evolución del Rendimiento}{126}{section*.147}%
-\contentsline {subsubsection}{Versiones Clave del Desarrollo}{126}{section*.148}%
-\contentsline {paragraph}{V2 - Breakthrough Anti-Overfitting:}{126}{section*.149}%
-\contentsline {paragraph}{V4-V5 - Pico de Rendimiento:}{126}{section*.150}%
-\contentsline {paragraph}{V7 - Configuración Final:}{126}{section*.151}%
-\contentsline {subsubsection}{Factores Críticos del Éxito}{126}{section*.152}%
-\contentsline {subsection}{\numberline {5.2.6}Pseudocódigo del Algoritmo de Entrenamiento DistilBERT}{127}{subsection.5.2.6}%
-\contentsline {subsection}{\numberline {5.2.7}Resultados Finales y Comparación}{129}{subsection.5.2.7}%
-\contentsline {subsubsection}{Rendimiento Final DistilBERT}{129}{section*.153}%
-\contentsline {subsubsection}{Superioridad sobre Enfoques Metaheurísticos}{129}{section*.154}%
-\contentsline {subsubsection}{Conclusiones del Desarrollo}{129}{section*.155}%
-\contentsline {section}{\numberline {5.3}Análisis de Errores y Limitaciones del Modelo}{130}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Marco Teórico para el Análisis de Errores}{130}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Metodología Propuesta para Análisis Cualitativo}{130}{subsection.5.3.2}%
-\contentsline {subsubsection}{Procedimiento de Análisis Recomendado}{130}{section*.156}%
-\contentsline {subsection}{\numberline {5.3.3}Tipos de Errores Esperados según la Literatura}{130}{subsection.5.3.3}%
-\contentsline {subsubsection}{Falsos Positivos Potenciales}{130}{section*.157}%
-\contentsline {subsubsection}{Falsos Negativos Potenciales}{131}{section*.158}%
-\contentsline {subsection}{\numberline {5.3.4}Limitaciones Reconocidas del Modelo}{131}{subsection.5.3.4}%
-\contentsline {subsubsection}{Limitaciones Inherentes}{131}{section*.159}%
-\contentsline {subsubsection}{Estrategias de Mejora Propuestas}{132}{section*.160}%
-\contentsline {subsection}{\numberline {5.3.5}Conclusiones sobre Limitaciones y Direcciones Futuras}{132}{subsection.5.3.5}%
-\contentsline {chapter}{\numberline {6}Implementación de Prototipos Funcionales}{133}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Introducción a la Fase de Implementación}{133}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Arquitectura General del Sistema}{133}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Prototipo 1: Analizador Basado en Metaheurísticas}{134}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Componentes del Modelo}{134}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Flujo de Inferencia}{135}{subsection.6.3.2}%
-\contentsline {section}{\numberline {6.4}Prototipo 2: Analizador Basado en Modelos Transformer (Versión Final)}{135}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Componentes del Modelo}{135}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Flujo de Inferencia}{136}{subsection.6.4.2}%
-\contentsline {section}{\numberline {6.5}Interfaz de Usuario y Casos de Uso}{136}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Caso de Uso 1: Detección de una Noticia Real}{136}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Caso de Uso 2: Detección de una Página con Contenido Engañoso}{136}{subsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.5.3}Caso de Uso 3: Detección de una Página Fraudulenta}{136}{subsection.6.5.3}%
-\contentsline {chapter}{\numberline {7}Conclusiones}{139}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Resumen del Trabajo y Contribuciones Principales}{139}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Limitaciones del Estudio}{140}{section.7.2}%
-\contentsline {chapter}{\numberline {A}Anexo 1 }{143}{appendix.Alph1}%
-\contentsline {chapter}{Bibliografía}{144}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {2}Marco Teórico }{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Detección de Noticias Falsas: Fundamentos y Extensibilidad}{15}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Impacto Social y Desafíos de la Desinformación}{16}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}El Problema de las Heurísticas Cognitivas}{16}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Diferenciación Técnica y Transferibilidad: Noticias Falsas vs. Fraude Digital}{16}{subsection.2.1.3}%
+\contentsline {subsubsection}{Características Distintivas por Dominio}{17}{section*.30}%
+\contentsline {subsubsection}{Fundamentos de la Transferibilidad Metodológica}{17}{section*.31}%
+\contentsline {subsubsection}{Protocolo de Transferencia Metodológica}{17}{section*.32}%
+\contentsline {section}{\numberline {2.2}Representación de Texto: Desde BoW hasta Embeddings Contextuales}{18}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Bolsa de Palabras (Bag-of-Words - BoW)}{18}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Ponderación TF-IDF (Term Frequency-Inverse Document Frequency)}{19}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Limitaciones de los Métodos Clásicos}{19}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}La Revolución Transformer y los Modelos de Lenguaje Modernos}{19}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}La Arquitectura Transformer: Fundamentos}{19}{subsection.2.3.1}%
+\contentsline {subsubsection}{Mecanismo de Atención Multi-Cabeza}{20}{section*.33}%
+\contentsline {subsection}{\numberline {2.3.2}BERT y la Era del Pre-entrenamiento Bidireccional}{20}{subsection.2.3.2}%
+\contentsline {subsubsection}{Variantes de BERT para Eficiencia}{20}{section*.34}%
+\contentsline {subsection}{\numberline {2.3.3}Aplicaciones en Detección de Noticias Falsas en Español}{20}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Grandes Modelos de Lenguaje (LLMs) y Nuevos Paradigmas}{21}{subsection.2.3.4}%
+\contentsline {subsubsection}{GPT-3 y el Paradigma Few-Shot}{21}{section*.35}%
+\contentsline {subsubsection}{LLaMA y la Democratización de LLMs}{21}{section*.36}%
+\contentsline {subsubsection}{Modelos Multimodales: Gemini}{21}{section*.37}%
+\contentsline {subsubsection}{IA Constitucional}{21}{section*.38}%
+\contentsline {subsection}{\numberline {2.3.5}El Doble Rol de los LLMs en Detección}{21}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Optimización Metaheurística en Detección de Fraude}{22}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Fundamentos de las Metaheurísticas}{22}{subsection.2.4.1}%
+\contentsline {subsubsection}{Justificación del Uso de Metaheurísticas en Detección de Noticias Falsas}{22}{section*.39}%
+\contentsline {subsubsection}{Arquitectura General del Sistema Metaheurístico}{22}{section*.40}%
+\contentsline {subsubsection}{Entradas del Sistema Metaheurístico}{23}{section*.41}%
+\contentsline {subsubsection}{Preprocesamiento y Pipeline}{23}{section*.42}%
+\contentsline {subsubsection}{Algoritmos Metaheurísticos Implementados}{24}{section*.43}%
+\contentsline {subsubsection}{Función Objetivo y Evaluación}{26}{section*.44}%
+\contentsline {subsubsection}{Etapas del Proceso Metaheurístico}{26}{section*.45}%
+\contentsline {subsubsection}{Salidas del Sistema Metaheurístico}{27}{section*.46}%
+\contentsline {subsubsection}{Comparación de Algoritmos Metaheurísticos}{28}{section*.47}%
+\contentsline {subsubsection}{Criterios de Selección y Justificación}{29}{section*.48}%
+\contentsline {subsubsection}{Justificación Frente a Métodos Alternativos}{29}{section*.49}%
+\contentsline {subsubsection}{Flujo del Proceso Metaheurístico}{30}{section*.50}%
+\contentsline {subsubsection}{Consideraciones de Implementación}{31}{section*.51}%
+\contentsline {subsubsection}{Métricas de Monitoreo del Proceso}{32}{section*.52}%
+\contentsline {subsection}{\numberline {2.4.2}Aplicaciones en Detección de Noticias Falsas}{32}{subsection.2.4.2}%
+\contentsline {subsubsection}{Modelado como Problema de Scheduling}{32}{section*.53}%
+\contentsline {subsubsection}{Optimización de Hiperparámetros en Deep Learning}{33}{section*.54}%
+\contentsline {subsubsection}{Frameworks de Ensemble Heurístico}{33}{section*.55}%
+\contentsline {subsection}{\numberline {2.4.3}Metaheurísticas para Detección de Fraude Financiero}{33}{subsection.2.4.3}%
+\contentsline {subsubsection}{Optimización Multi-objetivo}{33}{section*.56}%
+\contentsline {subsubsection}{Optimización de Procesos Gaussianos}{34}{section*.57}%
+\contentsline {subsection}{\numberline {2.4.4}Algoritmos Híbridos Modernos}{34}{subsection.2.4.4}%
+\contentsline {subsubsection}{Enfoques Multi-thread}{34}{section*.58}%
+\contentsline {subsubsection}{PSO Adaptativo}{34}{section*.59}%
+\contentsline {section}{\numberline {2.5}Integración de Enfoques: Hacia Sistemas Híbridos}{34}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Combinación de Representaciones Clásicas y Modernas}{34}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Arquitecturas de Ensemble Optimizadas}{35}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Optimización End-to-End}{35}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Desafíos y Direcciones Futuras}{35}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Desafíos Técnicos}{35}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Consideraciones Éticas y Sociales}{35}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Síntesis del Marco Teórico}{36}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Estado del arte }{37}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Metodología de Búsqueda Bibliográfica}{37}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Panorama de la Investigación en Detección de Noticias Falsas}{39}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Fundamentos Metodológicos y Construcción de Corpus}{39}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Evolución de los Modelos de Lenguaje en Detección de Desinformación}{41}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Técnicas de Optimización Metaheurística en Detección de Desinformación}{43}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Algoritmos Metaheurísticos: Fundamentos Teóricos y Aplicaciones Prácticas}{46}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Algoritmos Genéticos (GA): Evolución Artificial para Optimización}{46}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Optimización por Enjambre de Partículas (PSO): Inteligencia Colectiva}{47}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Recocido Simulado: Física Estadística para Optimización}{48}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Búsqueda Dispersa (Scatter Search): Combinación Determinística}{48}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Búsqueda en Vecindades Variables (VNS): Exploración Sistemática}{49}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Hiperparámetros en Modelos de Aprendizaje Automático: Fundamentos y Optimización}{50}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Naturaleza y Definición de Hiperparámetros}{50}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Importancia Crítica en la Detección de Noticias Falsas}{51}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Desafíos en la Búsqueda de Configuración Óptima}{52}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Herramientas Modernas: Keras Tuner y Automatización}{52}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Ventajas Sinérgicas: Modelos de Lenguaje y Herramientas de Optimización}{53}{subsection.3.4.5}%
+\contentsline {section}{\numberline {3.5}Análisis Temático Comprehensivo de la Literatura Relevante}{55}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}El Desafío Fundamental de los Datos: Creación y Curación de Corpus en Español}{56}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Revolución de los Modelos de Lenguaje y Arquitecturas Transformer}{57}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Optimización y Metaheurísticas en la Detección: Enfoques Innovadores}{58}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Aplicación de Metaheurísticas por Tipo de Detección}{58}{subsection.3.5.4}%
+\contentsline {subsubsection}{Patrones Identificados por Dominio}{58}{section*.60}%
+\contentsline {paragraph}{Detección de Contenido Textual}{58}{section*.61}%
+\contentsline {paragraph}{Optimización de Modelos de Aprendizaje Profundo}{60}{section*.62}%
+\contentsline {paragraph}{Sistemas de Detección en Tiempo Real}{60}{section*.63}%
+\contentsline {subsection}{\numberline {3.5.5}Perspectivas Interdisciplinarias y Análisis Social}{61}{subsection.3.5.5}%
+\contentsline {subsection}{\numberline {3.5.6}Detección de Fraude: Extensión Más Allá de las Noticias}{61}{subsection.3.5.6}%
+\contentsline {section}{\numberline {3.6}Síntesis y Perspectivas Futuras}{62}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Metodología }{63}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Visión General de la Metodología}{63}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Definición y Distinción de Conceptos Fundamentales}{64}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Distinción entre Noticia Falsa y Bulo}{64}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Taxonomía de la Desinformación}{64}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Justificación de la Unificación Terminológica}{65}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Esquema de Clasificación: Enfoque Binario}{65}{subsection.4.2.4}%
+\contentsline {subsubsection}{Justificación del Enfoque Binario}{66}{section*.64}%
+\contentsline {subsubsection}{Consideraciones sobre Esquemas Alternativos}{66}{section*.65}%
+\contentsline {subsection}{\numberline {4.2.5}Fronteras Difusas en la Clasificación de Veracidad}{66}{subsection.4.2.5}%
+\contentsline {subsubsection}{Casos Límite y Ambigüedades}{66}{section*.66}%
+\contentsline {subsubsection}{Implicaciones para el Modelado}{67}{section*.67}%
+\contentsline {subsubsection}{Justificación Pragmática del Enfoque Binario}{67}{section*.68}%
+\contentsline {section}{\numberline {4.3}Construcción del Corpus Unificado}{68}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Fuentes de Datos Académicas}{68}{subsection.4.3.1}%
+\contentsline {subsubsection}{Spanish Fake News Corpus (IberLEF)}{68}{section*.69}%
+\contentsline {subsubsection}{Conjunto de datos de Zules Acosta (Universidad Politécnica de Madrid)}{69}{section*.70}%
+\contentsline {subsubsection}{Dataset de Tretiakov et al.}{69}{section*.71}%
+\contentsline {subsubsection}{Spanish Political Fake News Dataset}{69}{section*.72}%
+\contentsline {subsection}{\numberline {4.3.2}Análisis Comparativo Detallado de los Corpus Utilizados}{70}{subsection.4.3.2}%
+\contentsline {subsubsection}{Análisis de Complementariedad entre Corpus}{70}{section*.73}%
+\contentsline {subsubsection}{Justificación de la Estrategia de Unificación}{71}{section*.74}%
+\contentsline {subsection}{\numberline {4.3.3}Proceso de Unificación y Estandarización}{72}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Ampliación del Corpus Mediante Extracción Web}{72}{subsection.4.3.4}%
+\contentsline {subsubsection}{Proceso de Extracción Web Automatizada}{72}{section*.75}%
+\contentsline {subsubsection}{Implementación Técnica de la Extracción Web}{73}{section*.76}%
+\contentsline {subsection}{\numberline {4.3.5}Corpus Final y Estrategia de División}{74}{subsection.4.3.5}%
+\contentsline {subsubsection}{Análisis de Composición Final}{74}{section*.77}%
+\contentsline {subsubsection}{Concepto y Importancia del Balanceo de Clases}{74}{section*.78}%
+\contentsline {subsubsection}{Síntesis del Análisis Comparativo entre Corpus}{76}{section*.79}%
+\contentsline {subsubsection}{División Estratificada para Entrenamiento}{78}{section*.80}%
+\contentsline {subsubsection}{Proceso de Limpieza Final}{78}{section*.81}%
+\contentsline {section}{\numberline {4.4}Enfoque 1: Detección Mediante Algoritmos Metaheurísticos}{79}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Preprocesamiento y Representación Textual}{79}{subsection.4.4.1}%
+\contentsline {subsubsection}{Función de Limpieza de Texto}{79}{section*.82}%
+\contentsline {subsubsection}{Representación Bolsa de Palabras con Ponderación TF-IDF}{80}{section*.83}%
+\contentsline {subsection}{\numberline {4.4.2}Algoritmos Metaheurísticos Implementados}{80}{subsection.4.4.2}%
+\contentsline {subsubsection}{Recocido Multiarranque (Multi-Start Simulated Annealing - MSA)}{81}{section*.84}%
+\contentsline {subsubsection}{Búsqueda Dispersa (Scatter Search - SS)}{81}{section*.85}%
+\contentsline {subsubsection}{Algoritmo Genético (Genetic Algorithm - GA)}{82}{section*.86}%
+\contentsline {subsubsection}{Búsqueda en Vecindades Variables (Variable Neighborhood Search - VNS)}{82}{section*.87}%
+\contentsline {subsubsection}{Optimización por Enjambre de Partículas (Particle Swarm Optimization - PSO)}{83}{section*.88}%
+\contentsline {subsection}{\numberline {4.4.3}Función de Evaluación y Clasificación}{83}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Reducción de Dimensionalidad}{84}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Enfoque 2: Detección Mediante Modelo Transformer}{84}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Selección y Justificación del Modelo}{84}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Infraestructura Computacional}{85}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Configuración Experimental y Optimización de Hiperparámetros}{85}{subsection.4.5.3}%
+\contentsline {subsubsection}{Parámetros de Entrenamiento Base}{85}{section*.89}%
+\contentsline {subsubsection}{Estrategia de Regularización Avanzada}{85}{section*.90}%
+\contentsline {subsubsection}{Proceso de Búsqueda de Hiperparámetros}{86}{section*.91}%
+\contentsline {subsection}{\numberline {4.5.4}Arquitectura del Modelo de Clasificación}{86}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Protocolo de Entrenamiento}{86}{subsection.4.5.5}%
+\contentsline {subsubsection}{Configuración de Entrenamiento}{87}{section*.92}%
+\contentsline {subsubsection}{Estrategia de Validación}{87}{section*.93}%
+\contentsline {subsection}{\numberline {4.5.6}Consideraciones de Implementación}{87}{subsection.4.5.6}%
+\contentsline {subsubsection}{Optimizaciones de Memoria}{87}{section*.94}%
+\contentsline {subsubsection}{Monitoreo y Logging}{88}{section*.95}%
+\contentsline {section}{\numberline {4.6}Metodología de Evaluación Comparativa}{88}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Protocolo de Evaluación}{88}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Fundamentos de la Matriz de Confusión}{88}{subsection.4.6.2}%
+\contentsline {subsubsection}{Representación Visual de la Matriz de Confusión}{88}{section*.96}%
+\contentsline {subsection}{\numberline {4.6.3}Marco de Métricas de Rendimiento}{89}{subsection.4.6.3}%
+\contentsline {subsubsection}{Fundamentación Teórica de las Métricas según el Estado del Arte}{89}{section*.97}%
+\contentsline {subsubsection}{Propiedades Matemáticas de las Métricas Implementadas}{89}{section*.98}%
+\contentsline {subsubsection}{Validación Matemática de las Métricas Implementadas}{91}{section*.99}%
+\contentsline {subsubsection}{Consideraciones Específicas para Detección de Noticias Falsas}{92}{section*.100}%
+\contentsline {subsubsection}{Alineación con Métricas del Estado del Arte}{92}{section*.101}%
+\contentsline {subsection}{\numberline {4.6.4}Criterios de Selección del Mejor Modelo}{93}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Protocolo de Validación Cruzada}{94}{subsection.4.6.5}%
+\contentsline {subsection}{\numberline {4.6.6}Benchmarking Computacional}{94}{subsection.4.6.6}%
+\contentsline {subsection}{\numberline {4.6.7}Análisis de Matrices de Confusión}{94}{subsection.4.6.7}%
+\contentsline {subsection}{\numberline {4.6.8}Reporte de Resultados}{95}{subsection.4.6.8}%
+\contentsline {section}{\numberline {4.7}Infraestructura Computacional y Herramientas}{95}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Entorno de Desarrollo para Algoritmos Metaheurísticos}{95}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Hardware Dedicado para Entrenamiento DistilBERT}{95}{subsection.4.7.2}%
+\contentsline {subsubsection}{Optimizaciones Específicas del Hardware}{96}{section*.102}%
+\contentsline {subsection}{\numberline {4.7.3}Stack Tecnológico Completo}{96}{subsection.4.7.3}%
+\contentsline {section}{\numberline {4.8}Consideraciones Éticas y de Privacidad}{96}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Marco Ético de Desarrollo}{96}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Limitaciones Declaradas y Uso Responsable}{98}{subsection.4.8.2}%
+\contentsline {section}{\numberline {4.9}Validación y Reproducibilidad}{98}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Ecosistema de Artefactos de Reproducibilidad}{98}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Solución Lista para Producción}{99}{subsection.4.9.2}%
+\contentsline {chapter}{\numberline {5}Análisis de Resultados }{101}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Resultados del Enfoque Metaheurístico con Representación BoW-TF-IDF}{101}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Marco Experimental y Configuración Base}{102}{subsection.5.1.1}%
+\contentsline {subsubsection}{Características del Corpus Utilizado}{102}{section*.103}%
+\contentsline {subsubsection}{Configuración de Representación Textual}{102}{section*.104}%
+\contentsline {subsubsection}{Arquitectura del Clasificador}{103}{section*.105}%
+\contentsline {subsection}{\numberline {5.1.2}Implementación y Configuración de Algoritmos Metaheurísticos}{103}{subsection.5.1.2}%
+\contentsline {subsubsection}{Justificación de Parámetros Seleccionados}{103}{section*.106}%
+\contentsline {subsection}{\numberline {5.1.3}Pseudocódigos de los Algoritmos Implementados}{104}{subsection.5.1.3}%
+\contentsline {subsubsection}{Función de Evaluación Común}{104}{section*.107}%
+\contentsline {subsubsection}{Multi-Start Simulated Annealing (MSA)}{105}{section*.108}%
+\contentsline {subsubsection}{Scatter Search (SS)}{105}{section*.109}%
+\contentsline {subsubsection}{Genetic Algorithm (GA)}{107}{section*.110}%
+\contentsline {subsubsection}{Variable Neighborhood Search (VNS)}{107}{section*.111}%
+\contentsline {subsubsection}{Particle Swarm Optimization (PSO)}{107}{section*.112}%
+\contentsline {subsection}{\numberline {5.1.4}Visualizaciones de Resultados por Algoritmo}{109}{subsection.5.1.4}%
+\contentsline {subsubsection}{Recocido Multiarranque (MSA) - Visualizaciones}{109}{section*.113}%
+\contentsline {subsubsection}{Búsqueda Dispersa (SS) - Visualizaciones}{110}{section*.114}%
+\contentsline {subsubsection}{Algoritmo Genético (GA) - Visualizaciones}{111}{section*.115}%
+\contentsline {subsubsection}{Búsqueda en Vecindades Variables (VNS) - Visualizaciones}{113}{section*.116}%
+\contentsline {subsubsection}{Optimización por Enjambre de Partículas (PSO) - Visualizaciones}{114}{section*.117}%
+\contentsline {subsubsection}{Interpretación de las Visualizaciones}{116}{section*.118}%
+\contentsline {subsection}{\numberline {5.1.5}Contextualización con Investigación Publicada}{116}{subsection.5.1.5}%
+\contentsline {subsubsection}{Comparación con Investigación Internacional}{117}{section*.119}%
+\contentsline {subsection}{\numberline {5.1.6}Análisis Comparativo de Resultados}{117}{subsection.5.1.6}%
+\contentsline {subsubsection}{Fortalezas y Debilidades Identificadas}{117}{section*.120}%
+\contentsline {subsection}{\numberline {5.1.7}Limitaciones Fundamentales y Justificación para Evolución}{118}{subsection.5.1.7}%
+\contentsline {subsubsection}{Limitaciones del Enfoque Metaheurístico}{118}{section*.121}%
+\contentsline {paragraph}{Limitaciones de Representación:}{118}{section*.122}%
+\contentsline {paragraph}{Limitaciones de Rendimiento:}{118}{section*.123}%
+\contentsline {subsubsection}{Evidencia de Superioridad de Modelos de Lenguaje}{118}{section*.124}%
+\contentsline {subsection}{\numberline {5.1.8}Síntesis y Transición}{119}{subsection.5.1.8}%
+\contentsline {subsubsection}{Contribuciones del Enfoque Metaheurístico}{119}{section*.125}%
+\contentsline {subsubsection}{Ranking Final Basado en F1-Score Macro}{119}{section*.126}%
+\contentsline {subsubsection}{Justificación para la Evolución}{119}{section*.127}%
+\contentsline {section}{\numberline {5.2}Resultados del Enfoque Transformer: DistilBERT Multilingüe}{120}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Marco Experimental y Evolución del Desarrollo}{120}{subsection.5.2.1}%
+\contentsline {subsubsection}{Proceso de Experimentación Iterativa}{120}{section*.128}%
+\contentsline {subsubsection}{Características del Corpus Expandido}{120}{section*.129}%
+\contentsline {subsubsection}{División Estratégica de Datos}{121}{section*.130}%
+\contentsline {subsection}{\numberline {5.2.2}Configuración del Modelo DistilBERT Optimizado}{121}{subsection.5.2.2}%
+\contentsline {subsubsection}{Arquitectura y Parámetros Base}{121}{section*.131}%
+\contentsline {subsubsection}{Estrategia de Regularización Anti-Overfitting}{121}{section*.132}%
+\contentsline {subsection}{\numberline {5.2.3}Proceso de Optimización y Búsqueda de Hiperparámetros}{121}{subsection.5.2.3}%
+\contentsline {subsubsection}{Metodología de Tuning Automatizado}{121}{section*.133}%
+\contentsline {subsubsection}{Configuración Óptima Identificada}{122}{section*.134}%
+\contentsline {subsection}{\numberline {5.2.4}Análisis de Convergencia y Control de Overfitting}{122}{subsection.5.2.4}%
+\contentsline {subsubsection}{Evolución del Entrenamiento}{122}{section*.135}%
+\contentsline {subsubsection}{Análisis del Gap de Generalización}{123}{section*.136}%
+\contentsline {subsubsection}{Justificación del Early Stopping}{123}{section*.137}%
+\contentsline {subsection}{\numberline {5.2.5}Evolución Experimental: Versiones de Desarrollo}{124}{subsection.5.2.5}%
+\contentsline {subsubsection}{Marco de Desarrollo Iterativo}{124}{section*.138}%
+\contentsline {subsubsection}{Resumen de Versiones Experimentales}{125}{section*.139}%
+\contentsline {subsubsection}{Visualización de Convergencia por Versiones}{125}{section*.140}%
+\contentsline {subsubsection}{Análisis Detallado por Versión}{125}{section*.141}%
+\contentsline {paragraph}{Versión V1 - Línea Base con División Estándar:}{125}{section*.142}%
+\contentsline {paragraph}{Versión V2 - Primera Configuración Anti-Overfitting:}{125}{section*.143}%
+\contentsline {paragraph}{Versión V3 - Mejora Inicial Post-V2:}{125}{section*.144}%
+\contentsline {paragraph}{Versión V4 - Control de Overfitting Mejorado:}{125}{section*.145}%
+\contentsline {paragraph}{Versión V5 - Configuración Híbrida Exitosa:}{127}{section*.146}%
+\contentsline {paragraph}{Versión V6 - Regularización Máxima Inicial:}{127}{section*.147}%
+\contentsline {paragraph}{Versión V7 - Configuración Final Óptima:}{127}{section*.148}%
+\contentsline {subsubsection}{Configuraciones Técnicas Comparativas}{127}{section*.149}%
+\contentsline {subsubsection}{Evolución del Rendimiento}{128}{section*.150}%
+\contentsline {subsubsection}{Versiones Clave del Desarrollo}{128}{section*.151}%
+\contentsline {paragraph}{V2 - Breakthrough Anti-Overfitting:}{128}{section*.152}%
+\contentsline {paragraph}{V4-V5 - Pico de Rendimiento:}{128}{section*.153}%
+\contentsline {paragraph}{V7 - Configuración Final:}{128}{section*.154}%
+\contentsline {subsubsection}{Factores Críticos del Éxito}{128}{section*.155}%
+\contentsline {subsection}{\numberline {5.2.6}Pseudocódigo del Algoritmo de Entrenamiento DistilBERT}{129}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}Resultados Finales y Comparación}{131}{subsection.5.2.7}%
+\contentsline {subsubsection}{Rendimiento Final DistilBERT}{131}{section*.156}%
+\contentsline {subsubsection}{Superioridad sobre Enfoques Metaheurísticos}{131}{section*.157}%
+\contentsline {subsubsection}{Conclusiones del Desarrollo}{131}{section*.158}%
+\contentsline {section}{\numberline {5.3}Análisis de Errores y Limitaciones del Modelo}{132}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Marco Teórico para el Análisis de Errores}{132}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Metodología Propuesta para Análisis Cualitativo}{132}{subsection.5.3.2}%
+\contentsline {subsubsection}{Procedimiento de Análisis Recomendado}{132}{section*.159}%
+\contentsline {subsection}{\numberline {5.3.3}Tipos de Errores Esperados según la Literatura}{132}{subsection.5.3.3}%
+\contentsline {subsubsection}{Falsos Positivos Potenciales}{132}{section*.160}%
+\contentsline {subsubsection}{Falsos Negativos Potenciales}{133}{section*.161}%
+\contentsline {subsection}{\numberline {5.3.4}Limitaciones Reconocidas del Modelo}{133}{subsection.5.3.4}%
+\contentsline {subsubsection}{Limitaciones Inherentes}{133}{section*.162}%
+\contentsline {subsubsection}{Estrategias de Mejora Propuestas}{134}{section*.163}%
+\contentsline {subsection}{\numberline {5.3.5}Conclusiones sobre Limitaciones y Direcciones Futuras}{134}{subsection.5.3.5}%
+\contentsline {chapter}{\numberline {6}Implementación de Prototipos Funcionales}{135}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introducción a la Fase de Implementación}{135}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Arquitectura General del Sistema}{135}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Prototipo 1: Analizador Basado en Metaheurísticas}{136}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Componentes del Modelo}{136}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Flujo de Inferencia}{137}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Prototipo 2: Analizador Basado en Modelos Transformer (Versión Final)}{137}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Componentes del Modelo}{137}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Flujo de Inferencia}{138}{subsection.6.4.2}%
+\contentsline {section}{\numberline {6.5}Interfaz de Usuario y Casos de Uso}{138}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Caso de Uso 1: Detección de una Noticia Real}{138}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Caso de Uso 2: Detección de una Página con Contenido Engañoso}{138}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}Caso de Uso 3: Detección de una Página Fraudulenta}{138}{subsection.6.5.3}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{141}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Resumen del Trabajo y Contribuciones Principales}{141}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Limitaciones del Estudio}{142}{section.7.2}%
+\contentsline {chapter}{\numberline {A}Anexo 1 }{145}{appendix.Alph1}%
+\contentsline {chapter}{Bibliografía}{146}{appendix.Alph1}%
