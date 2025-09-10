@@ -23,8 +23,14 @@ La investigación culminó con éxito en el cumplimiento de todos los objetivos 
 A pesar de los resultados positivos, es importante reconocer las limitaciones de este trabajo, las cuales abren puertas a futuras investigaciones:
 \begin{itemize}
     \item \textbf{Dependencia del Contenido Textual:} Los modelos desarrollados se basan exclusivamente en el texto de las noticias. No analizan otros elementos cruciales de la desinformación como imágenes, videos o el perfil de las cuentas que difunden el contenido.
+    
+    \item \textbf{Simplificación Binaria de un Problema Complejo:} Aunque el enfoque de clasificación binaria (FALSO/REAL) es pragmático y efectivo, la realidad de la información presenta un espectro continuo de veracidad. Existen zonas grises donde la información es parcialmente correcta, desactualizada, o presenta sesgos interpretativos que no se capturan adecuadamente en un esquema binario simple.
+    
     \item \textbf{Robustez del Web Scraping:} Aunque se implementó un scraper inteligente, su eficacia sigue dependiendo de la estructura HTML de los sitios web, que puede cambiar con el tiempo y variar significativamente entre diferentes fuentes de noticias.
+    
     \item \textbf{Dominio del Corpus:} A pesar de su gran tamaño, el corpus está mayoritariamente compuesto por noticias de dominio general y político. El rendimiento del modelo podría variar en dominios muy especializados como el fraude financiero o la desinformación científica.
+    
+    \item \textbf{Fronteras Difusas en la Clasificación:} El modelo puede tener dificultades con contenido satírico ambiguo, información parcialmente correcta, o casos donde la veracidad depende del contexto temporal o cultural específico.
 \end{itemize}
 
 En conclusión, este trabajo ha demostrado de manera concluyente la eficacia superior del ajuste fino de modelos Transformer para la detección de noticias falsas en español y ha entregado no solo un modelo de alto rendimiento, sino también un corpus a gran escala y un prototipo funcional que sientan las bases para futuras innovaciones en la lucha contra el fraude digital.

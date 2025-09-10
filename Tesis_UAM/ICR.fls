@@ -1,6 +1,6 @@
-PWD c:\Users\gabri\OneDrive\Imágenes\Documentos\GitHubDesktop\ICRMCCUAMA\Tesis_UAM
+PWD c:\Users\gabri\Documents\GitHub Desktop\ICRMCCUAMA\Tesis_UAM
 INPUT C:\Users\gabri\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\gabri\OneDrive\Imágenes\Documentos\GitHubDesktop\ICRMCCUAMA\Tesis_UAM\ICR.tex
+INPUT c:\Users\gabri\Documents\GitHub Desktop\ICRMCCUAMA\Tesis_UAM\ICR.tex
 OUTPUT ICR.log
 INPUT C:\Users\gabri\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
 INPUT C:\Users\gabri\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls

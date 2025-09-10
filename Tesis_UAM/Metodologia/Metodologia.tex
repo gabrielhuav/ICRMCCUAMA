@@ -60,6 +60,81 @@ En el contexto del desarrollo de sistemas automáticos de detección, la distinc
 
 Por tanto, en el resto de este documento, el término \textbf{``noticias falsas''} se utilizará de manera inclusiva para referirse a cualquier tipo de contenido desinformativo, reconociendo la diversidad de formatos y estrategias de propagación que abarca esta categorización.
 
+\subsection{Esquema de Clasificación: Enfoque Binario}
+\label{subsec:esquema_clasificacion}
+
+\textbf{Esta investigación adopta un esquema de clasificación binaria}, donde cada noticia se etiqueta en una de dos clases mutuamente excluyentes:
+
+\begin{itemize}
+    \item \textbf{Clase 0 (FALSO):} Incluye todo contenido desinformativo, abarcando tanto noticias falsas formales como bulos informales, contenido satírico deliberadamente engañoso, y cualquier tipo de información con intención de desinformar
+    \item \textbf{Clase 1 (REAL):} Incluye contenido periodístico legítimo, noticias verificadas de fuentes confiables, y información factualmente correcta
+\end{itemize}
+
+\subsubsection{Justificación del Enfoque Binario}
+
+La decisión de utilizar clasificación binaria, en lugar de esquemas multiclase más granulares, se fundamenta en:
+
+\begin{enumerate}
+    \item \textbf{Practicidad para usuarios finales:} En aplicaciones reales, los usuarios necesitan una respuesta clara y directa sobre la confiabilidad del contenido
+    \item \textbf{Consistencia con la literatura:} La mayoría de trabajos en detección de noticias falsas utilizan esquemas binarios, facilitando la comparación de resultados
+    \item \textbf{Robustez del modelo:} Los esquemas binarios tienden a ser más robustos y menos propensos al sobreajuste que las clasificaciones multiclase complejas
+    \item \textbf{Disponibilidad de datos:} Los corpus disponibles están mayoritariamente etiquetados de forma binaria
+\end{enumerate}
+
+\subsubsection{Consideraciones sobre Esquemas Alternativos}
+
+Aunque este trabajo adopta clasificación binaria, es importante reconocer que existen esquemas alternativos más granulares:
+
+\begin{itemize}
+    \item \textbf{Clasificación ternaria:} FALSO, REAL, PARCIALMENTE\_CIERTO
+    \item \textbf{Clasificación por niveles de confianza:} Escalas de 5 o 7 puntos de credibilidad
+    \item \textbf{Clasificación por tipo de desinformación:} Distinguiendo entre sátira, propaganda, clickbait, etc.
+\end{itemize}
+
+Sin embargo, estos enfoques requieren corpus más especializados y presentan desafíos adicionales en términos de consistencia de etiquetado y acuerdo entre anotadores.
+
+\subsection{Fronteras Difusas en la Clasificación de Veracidad}
+\label{subsec:fronteras_difusas}
+
+\textbf{Es importante reconocer que la clasificación binaria de contenido informativo presenta inherentemente zonas grises y fronteras difusas}, donde la distinción entre "verdadero" y "falso" no es absoluta. Esta complejidad conceptual representa uno de los desafíos fundamentales en la detección automatizada de desinformación.
+
+\subsubsection{Casos Límite y Ambigüedades}
+
+En la práctica, existen varios tipos de contenido que desafían la clasificación binaria estricta:
+
+\begin{itemize}
+    \item \textbf{Información parcialmente correcta:} Noticias que contienen algunos hechos verificables mezclados con información falsa o tergiversada
+    \item \textbf{Contenido satírico ambiguo:} Material humorístico que puede ser malinterpretado como información factual
+    \item \textbf{Opiniones presentadas como hechos:} Contenido subjetivo que se presenta con apariencia de objetividad periodística
+    \item \textbf{Información desactualizada:} Noticias que fueron ciertas en el pasado pero ya no son válidas
+    \item \textbf{Interpretaciones sesgadas:} Presentación de hechos reales con marcos interpretativos tendenciosos
+    \item \textbf{Información especulativa:} Predicciones o análisis presentados como hechos consumados
+\end{itemize}
+
+\subsubsection{Implicaciones para el Modelado}
+
+Esta ambiguidad inherente se aborda en esta investigación mediante:
+
+\begin{enumerate}
+    \item \textbf{Criterios de etiquetado conservadores:} En casos ambiguos, se prioriza la asignación a la clase "REAL" para evitar censura inadecuada de contenido legítimo
+    \item \textbf{Umbral de confianza:} El modelo genera probabilidades que pueden interpretarse como niveles de certeza, permitiendo identificar casos limítrofes
+    \item \textbf{Validación humana en casos dudosos:} Los corpus utilizados fueron validados manualmente para resolver ambigüedades
+    \item \textbf{Reconocimiento de limitaciones:} Se asume que un porcentaje mínimo de casos será inherentemente ambiguo y difícil de clasificar con certeza absoluta
+\end{enumerate}
+
+\subsubsection{Justificación Pragmática del Enfoque Binario}
+
+A pesar de estas complejidades, el enfoque binario se justifica porque:
+
+\begin{itemize}
+    \item \textbf{Utilidad práctica:} Los usuarios finales requieren decisiones claras sobre la credibilidad del contenido
+    \item \textbf{Viabilidad técnica:} Los modelos binarios son más robustos y fáciles de entrenar que los esquemas multiclase complejos
+    \item \textbf{Consistencia metodológica:} Permite comparación directa con la literatura existente
+    \item \textbf{Escalabilidad:} Facilita la anotación y validación de grandes volúmenes de datos
+\end{itemize}
+
+Es fundamental entender que \textbf{la frontera difusa no es una limitación del modelo, sino una característica inherente del problema mismo}, que debe ser gestionada mediante diseño metodológico cuidadoso y reconocimiento explícito de las limitaciones del enfoque adoptado.
+
 \section{Construcción del Corpus Unificado}
 \label{sec:construccion_corpus}
 
@@ -121,7 +196,7 @@ Variabilidad estructural mayor, requiere análisis semántico y contextual más 
 
 \subsection{Fuentes de Datos Académicas}
 
-Se llevó a cabo un proceso exhaustivo de investigación y unificación de cuatro corpus académicos reconocidos, los cuales constituyen pilares en la investigación de noticias falsas en español. La Tabla \ref{tab:corpus_academicos} presenta un resumen detallado de estos recursos.
+Se llevó a cabo un proceso exhaustivo de investigación y unificación de cuatro corpus académicos reconocidos, los cuales constituyen pilares en la investigación de noticias falsas en español. \textbf{Es importante señalar que, aunque todos los corpus convergen hacia el objetivo común de detección de desinformación, cada uno fue desarrollado con enfoques metodológicos y propósitos específicos diferentes}, lo que enriquece la diversidad y robustez del conjunto de datos unificado. La Tabla \ref{tab:corpus_academicos} presenta un resumen detallado de estos recursos y sus características distintivas.
 
 \begin{table}[htbp]
 \centering
@@ -155,19 +230,19 @@ Se llevó a cabo un proceso exhaustivo de investigación y unificación de cuatr
 
 \subsubsection{Spanish Fake News Corpus (IberLEF)}
 
-Este corpus, asociado a las competencias de IberLEF y desarrollado por Posadas-Durán, Gómez-Adorno, et al., ha tenido varias versiones. La versión original y más citada del corpus contiene un total de 971 noticias \cite{posadas2019detection}. Este corpus se caracteriza por su enfoque en análisis estilométrico y ha sido utilizado en múltiples evaluaciones comparativas dentro del marco de las competencias IberLEF \cite{gomez2021overview, aragon2020overview}. Las versiones posteriores del corpus han sido mantenidas y actualizadas en repositorios públicos \cite{ramirez2021spanish}.
+Este corpus, asociado a las competencias de IberLEF y desarrollado por Posadas-Durán, Gómez-Adorno, et al., ha tenido varias versiones. La versión original y más citada del corpus contiene un total de 971 noticias \cite{posadas2019detection}. \textbf{Su propósito específico fue el desarrollo de técnicas de análisis estilométrico para identificar patrones lingüísticos distintivos en texto desinformativo}. Este corpus se caracteriza por su enfoque metodológico riguroso en análisis estilométrico y ha sido utilizado en múltiples evaluaciones comparativas dentro del marco de las competencias IberLEF \cite{gomez2021overview, aragon2020overview}. \textbf{Las fuentes de este corpus provienen principalmente de sitios web verificados como desinformativos por organismos de fact-checking españoles y latinoamericanos}. Las versiones posteriores del corpus han sido mantenidas y actualizadas en repositorios públicos \cite{ramirez2021spanish}.
 
 \subsubsection{Dataset de Zules Acosta (Universidad Politécnica de Madrid)}
 
-Desarrollado como parte de un Trabajo Fin de Máster Universitario en Ciberseguridad en la Universidad Politécnica de Madrid, este corpus contiene 598 noticias verificadas \cite{acosta2019construccion}. El dataset fue construido mediante técnicas de web scraping y se encuentra disponible públicamente en la plataforma Kaggle \cite{acosta2019dataset, zules2019spanish}. Su contribución principal radica en la aplicación de metodologías rigurosas de verificación para la construcción de datasets de noticias falsas.
+Desarrollado como parte de un Trabajo Fin de Máster Universitario en Ciberseguridad en la Universidad Politécnica de Madrid, este corpus contiene 598 noticias verificadas \cite{acosta2019construccion}. \textbf{Su propósito original fue establecer una metodología de construcción de corpus para noticias falsas en español, con énfasis en la verificación manual exhaustiva}. El dataset fue construido mediante técnicas de web scraping y se encuentra disponible públicamente en la plataforma Kaggle \cite{acosta2019dataset, zules2019spanish}. \textbf{Las fuentes incluyen tanto medios legítimos (para noticias reales) como sitios identificados como propagadores de desinformación, con verificación cruzada mediante múltiples fact-checkers}. Su contribución principal radica en la aplicación de metodologías rigurosas de verificación para la construcción de datasets de noticias falsas.
 
 \subsubsection{Dataset de Tretiakov et al.}
 
-Este corpus, desarrollado por Tretiakov, Martín García y Camacho, contiene 1,958 noticias falsas en español \cite{tretiakov2022detection}. El dataset fue creado en el contexto de técnicas de aprendizaje automático para la detección de información falsa y se encuentra disponible públicamente en Kaggle \cite{tretiakov2022noticias}. Su enfoque se centra en la aplicación de técnicas de machine learning para la clasificación automatizada de contenido desinformativo.
+Este corpus, desarrollado por Tretiakov, Martín García y Camacho, contiene 1,958 noticias falsas en español \cite{tretiakov2022detection}. \textbf{Su propósito específico fue la evaluación de técnicas de machine learning tradicionales para clasificación binaria de contenido desinformativo}. El dataset fue creado en el contexto de técnicas de aprendizaje automático para la detección de información falsa y se encuentra disponible públicamente en Kaggle \cite{tretiakov2022noticias}. \textbf{Las fuentes de este corpus se concentran en redes sociales y plataformas digitales donde se propaga desinformación, incluyendo Twitter, Facebook y sitios web no verificados}. Su enfoque se centra en la aplicación de técnicas de machine learning para la clasificación automatizada de contenido desinformativo.
 
 \subsubsection{Spanish Political Fake News Dataset}
 
-El corpus más extenso utilizado, desarrollado por Blanco-Fernández et al., contiene 57,231 noticias de temática política \cite{blanco2024enhancing}. Este dataset fue específicamente diseñado para evaluar modelos BERT y RoBERTa en la detección de desinformación política en español y se encuentra disponible en Kaggle \cite{blanco2024spanish}. Su gran tamaño y enfoque en contenido político lo convierte en un recurso valioso para el entrenamiento de modelos de gran escala.
+El corpus más extenso utilizado, desarrollado por Blanco-Fernández et al., contiene 57,231 noticias de temática política \cite{blanco2024enhancing}. \textbf{Su propósito específico fue evaluar modelos transformer (BERT/RoBERTa) en el dominio político, donde la desinformación tiene particular relevancia social}. Este dataset fue específicamente diseñado para evaluar modelos BERT y RoBERTa en la detección de desinformación política en español y se encuentra disponible en Kaggle \cite{blanco2024spanish}. \textbf{Las fuentes incluyen tanto medios de comunicación tradicionales como plataformas digitales especializadas en contenido político, con particular énfasis en el contexto español e iberoamericano}. Su gran tamaño y enfoque en contenido político lo convierte en un recurso valioso para el entrenamiento de modelos de gran escala.
 
 \subsection{Proceso de Unificación y Estandarización}
 
