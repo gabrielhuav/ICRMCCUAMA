@@ -1,12 +1,12 @@
 %!TEX root = ../ICR.tex
 \chapter{Marco Teórico \label{cap:MarcoTeorico}}
 
-En esta sección se describen las bases teóricas y los conceptos fundamentales que sustentan las dos metodologías de detección de fraude digital desarrolladas en este proyecto de investigación. Se abordan desde las técnicas clásicas de representación de texto y optimización metaheurística, hasta los paradigmas de aprendizaje profundo que definen el estado del arte actual.
+En esta sección se describen las bases teóricas y los conceptos fundamentales que sustentan las dos metodologías de detección de noticias falsas desarrolladas en este proyecto de investigación. Aunque las técnicas son aplicables a diferentes tipos de fraude digital, el enfoque específico se centra en la detección de desinformación periodística. Se abordan desde las técnicas clásicas de representación de texto y optimización metaheurística, hasta los paradigmas de aprendizaje profundo que definen el estado del arte actual.
 
-\section{Detección de Noticias Falsas y Fraude Digital}
+\section{Detección de Noticias Falsas: Fundamentos y Extensibilidad}
 \label{sec:deteccion_noticias_falsas}
 
-La detección de noticias falsas y fraude digital constituye un problema multifacético que requiere un enfoque interdisciplinario. La desinformación se caracteriza por ser información deliberadamente falsa o engañosa que se presenta como noticia legítima \cite{bondielli2019survey}. Esta problemática ha evolucionado significativamente con el advenimiento de las redes sociales y los medios digitales, donde la velocidad de propagación supera ampliamente la capacidad de verificación tradicional.
+La detección de noticias falsas constituye un problema multifacético que requiere un enfoque interdisciplinario, con metodologías que pueden extenderse a otros tipos de fraude digital. La desinformación se caracteriza por ser información deliberadamente falsa o engañosa que se presenta como noticia legítima \cite{bondielli2019survey}. Esta problemática ha evolucionado significativamente con el advenimiento de las redes sociales y los medios digitales, donde la velocidad de propagación supera ampliamente la capacidad de verificación tradicional.
 
 En el contexto de la detección automatizada, se han explorado diferentes enfoques y técnicas. Das et al. \cite{das2022heuristic} propusieron un marco de ensamblaje basado en incertidumbre e impulsado por heurísticas para la detección de noticias falsas en tuits y artículos de noticias. Este enfoque parte de la premisa de que diferentes modelos pueden tener distintas fortalezas y debilidades, y que la combinación inteligente de múltiples predictores puede superar las limitaciones individuales.
 
@@ -30,6 +30,27 @@ La rápida propagación de las noticias falsas a través de las redes sociales p
 \subsection{El Problema de las Heurísticas Cognitivas}
 
 La investigación de Ali et al. \cite{ali2021fake} ha demostrado que las heurísticas cognitivas humanas, como la popularidad social (número de "me gusta" o compartidos), influyen significativamente en la percepción de credibilidad. Este fenómeno complica la detección, ya que el contenido falso puede volverse viral precisamente por aprovechar estos sesgos cognitivos.
+
+\subsection{Diferenciación y Transferibilidad: Noticias Falsas vs. Fraude Digital}
+
+Es fundamental establecer una distinción clara entre los conceptos centrales de este trabajo:
+
+\begin{itemize}
+    \item \textbf{Noticias Falsas (\glspl{noticiafalsa}):} Información deliberadamente engañosa que se presenta con formato periodístico legítimo, cuyo objetivo principal es manipular la opinión pública, influir en decisiones políticas o sociales, o crear confusión sobre eventos actuales. Se caracteriza por imitar el estilo de medios de comunicación establecidos.
+
+    \item \textbf{Fraude Digital (\gls{fraudedigital}):} Conjunto más amplio de actividades maliciosas en entornos digitales orientadas principalmente a obtener beneficios económicos ilícitos, acceso no autorizado a información sensible, o perpetrar estafas. Incluye phishing, esquemas Ponzi digitales, fraude financiero, estafas de inversión, entre otros.
+\end{itemize}
+
+\textbf{Enfoque de esta investigación:} Este proyecto se centra específicamente en la detección de noticias falsas, utilizando técnicas de procesamiento de lenguaje natural y optimización metaheurística. Sin embargo, la metodología desarrollada es inherentemente transferible a otros tipos de fraude digital, ya que ambos problemas comparten características fundamentales:
+
+\begin{itemize}
+    \item \textbf{Naturaleza textual:} Ambos tipos de contenido requieren análisis de texto
+    \item \textbf{Patrones lingüísticos:} Pueden exhibir características estilométricas distintivas
+    \item \textbf{Clasificación binaria:} Pueden abordarse como problemas de clasificación legítimo/fraudulento
+    \item \textbf{Optimización de parámetros:} Ambos se benefician de técnicas de calibración de hiperparámetros
+\end{itemize}
+
+\textbf{Adaptaciones necesarias para transferencia:} Para aplicar la metodología a otros tipos de fraude digital sería necesario: (1) construir corpus específicos del dominio objetivo, (2) ajustar características de preprocesamiento según el tipo de contenido, (3) re-calibrar hiperparámetros para el nuevo dominio, y (4) potencialmente incorporar características adicionales específicas del tipo de fraude.
 
 \section{Representación de Texto: Desde BoW hasta Embeddings Contextuales}
 \label{sec:representacion_texto}
@@ -151,7 +172,7 @@ La investigación reciente ha revelado que los LLMs presentan un doble rol:
 
 Las metaheurísticas son estrategias de optimización de alto nivel que guían procesos de búsqueda para encontrar soluciones de alta calidad en espacios de búsqueda complejos. A diferencia de los algoritmos exactos, las metaheurísticas buscan soluciones "suficientemente buenas" en tiempo computacional razonable \cite{anselmo2013diseno}.
 
-En el contexto de la detección de fraude digital, las metaheurísticas abordan varios problemas de optimización:
+En el contexto de la detección de noticias falsas, las metaheurísticas abordan varios problemas de optimización, con metodologías transferibles a otros tipos de fraude digital:
 \begin{itemize}
     \item \textbf{Calibración de hiperparámetros:} Optimización de parámetros de modelos de ML/DL
     \item \textbf{Selección de características:} Identificación de subconjuntos óptimos de variables
@@ -182,7 +203,7 @@ Bacanin et al. \cite{bacanin2023benefits} demostraron los beneficios de usar met
     \item \textbf{Adaptabilidad:} Ajuste dinámico según el comportamiento del modelo
 \end{itemize}
 
-La investigación que publiqué en \cite{hurtado2024calibracion} específicamente aborda la calibración de hiperparámetros en algoritmos metaheurísticos para detección de fraude digital, proporcionando un marco metodológico relevante para esta tesis.
+La investigación que publiqué en \cite{hurtado2024calibracion} específicamente aborda la calibración de hiperparámetros en algoritmos metaheurísticos para detección de noticias falsas (como caso específico de fraude digital), proporcionando un marco metodológico relevante para esta tesis.
 
 \subsubsection{Frameworks de Ensemble Heurístico}
 
@@ -232,7 +253,7 @@ Deshai y Bhaskara Rao \cite{deshai2023unmasking} desarrollaron un enfoque CNN co
 
 \subsection{Combinación de Representaciones Clásicas y Modernas}
 
-La tendencia actual en detección de fraude digital favorece sistemas híbridos que combinan:
+La tendencia actual en detección de noticias falsas favorece sistemas híbridos que combinan (principios aplicables a otros tipos de fraude digital):
 \begin{itemize}
     \item \textbf{Características lingüísticas tradicionales:} TF-IDF, n-gramas, métricas de legibilidad
     \item \textbf{Embeddings contextuales:} Representaciones de BERT y similares
@@ -285,6 +306,6 @@ Este marco teórico establece los fundamentos para las dos metodologías desarro
     \item \textbf{Enfoque de Deep Learning:} Emplea modelos Transformer pre-entrenados con fine-tuning, aprovechando representaciones contextuales sofisticadas
 \end{enumerate}
 
-La combinación de ambos enfoques, sustentada en la literatura revisada, permite abordar el problema de detección de fraude digital desde múltiples perspectivas, maximizando tanto la efectividad como la eficiencia computacional del sistema propuesto.
+La combinación de ambos enfoques, sustentada en la literatura revisada, permite abordar el problema de detección de noticias falsas desde múltiples perspectivas, maximizando tanto la efectividad como la eficiencia computacional del sistema propuesto. La metodología desarrollada establece principios transferibles para abordar otros tipos de fraude digital con las adaptaciones correspondientes.
 
 El marco establece también la base teórica para la contribución metodológica principal de esta tesis: la aplicación sistemática de técnicas metaheurísticas para la optimización de hiperparámetros en ambos paradigmas, desde clasificadores tradicionales hasta modelos de deep learning, en el contexto específico de textos en español.

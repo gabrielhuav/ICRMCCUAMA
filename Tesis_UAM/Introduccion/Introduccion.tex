@@ -3,31 +3,33 @@
 
 \section{Planteamiento del problema}
 
-En la era de la información digital, la interconexión global ha traído consigo un desafío sin precedentes: la propagación masiva de \gls{desinformacion} y fraude digital. Este fenómeno, que abarca desde \glspl{noticiafalsa} (\textit{fake news}) hasta complejas estafas en línea, representa una amenaza significativa para la estabilidad social, económica y democrática a nivel mundial.
+En la era de la información digital, la interconexión global ha traído consigo un desafío sin precedentes: la propagación masiva de \gls{desinformacion}. Este fenómeno, que abarca desde \glspl{noticiafalsa} (\textit{fake news}) hasta diversas formas de \gls{fraudedigital}, representa una amenaza significativa para la estabilidad social, económica y democrática a nivel mundial.
 
 Las \glspl{noticiafalsa}, definidas como información deliberadamente engañosa disfrazada de periodismo auténtico \cite{bondielli2019survey}, se difunden a través de redes sociales y medios digitales con el fin de manipular la opinión pública y el comportamiento de los individuos. La gravedad de esta problemática se ha intensificado exponencialmente con la sofisticación de los actores maliciosos, la democratización de herramientas de generación de contenido mediante \gls{ia} \cite{hu2024bad}, y la velocidad sin precedentes con la que la información se viraliza en el ecosistema digital.
 
+\textbf{Es importante distinguir entre noticias falsas y fraude digital}: mientras que las \glspl{noticiafalsa} se enfocan en la manipulación de la información y la opinión pública a través de contenido periodístico falso, el \gls{fraudedigital} abarca un espectro más amplio de actividades maliciosas orientadas principalmente a obtener beneficios económicos o acceso no autorizado a información sensible. \textbf{Este proyecto se centra específicamente en la detección de noticias falsas}, aunque la metodología desarrollada podría ser replicada y adaptada para abordar otros tipos de fraude digital.
+
 La investigación reciente ha documentado el impacto multidimensional de la desinformación, que va desde la distorsión de procesos democráticos \cite{ali2020posttruth} hasta la creación de pánico público durante crisis sanitarias como la pandemia de COVID-19 \cite{perez2020fake}. Paralelamente, el fraude digital ha evolucionado hacia formas cada vez más sofisticadas, aprovechando tanto vulnerabilidades técnicas como sesgos cognitivos humanos \cite{ali2021fake}.
 
-\textbf{Desde la perspectiva de detección automatizada, la problemática se conceptualiza fundamentalmente como un problema de clasificación binaria}: determinar si un contenido dado es \textbf{confiable} (información verificada y legítima) o \textbf{no confiable} (cualquier tipo de contenido desinformativo). Esta simplificación, aunque reduce la complejidad natural del espectro de veracidad de la información, resulta práctica y efectiva para aplicaciones reales donde los usuarios requieren respuestas claras y accionables.
+\textbf{Desde la perspectiva de detección automatizada, la problemática se conceptualiza fundamentalmente como un problema de clasificación binaria}: determinar si un contenido dado es \textbf{confiable} (información verificada y legítima) o \textbf{no confiable} (contenido desinformativo). Esta simplificación, aunque reduce la complejidad natural del espectro de veracidad de la información, resulta práctica y efectiva para aplicaciones reales donde los usuarios requieren respuestas claras y accionables.
 
-El fraude digital contemporáneo se manifiesta a través de múltiples modalidades con un impacto significativo en individuos, empresas y sociedades, como se ilustra en la Figura \ref{fig:mapa_problema}:
+La desinformación contemporánea se manifiesta a través de múltiples modalidades con un impacto significativo en individuos, empresas y sociedades, como se ilustra en la Figura \ref{fig:mapa_problema}. Aunque el presente estudio se enfoca específicamente en noticias falsas, es relevante comprender el contexto más amplio del fraude digital para dimensionar la importancia de desarrollar metodologías transferibles:
 
 \begin{itemize}
-    \item \textbf{Noticias falsas generadas por \gls{ia}:} Contenido sintético creado por Grandes Modelos de Lenguaje (\glspl{gpt}) que imita el estilo periodístico legítimo \cite{su2023fake}
-    \item \textbf{Desinformación política dirigida:} Campañas coordinadas para influir en procesos electorales y opinión pública \cite{carcamo2021fake}
-    \item \textbf{Fraude financiero digital:} Esquemas que explotan plataformas digitales y criptomonedas \cite{cao2020corporate}
-    \item \textbf{Fraude laboral en línea:} Ofertas de empleo falsas que buscan obtener información personal o financiera \cite{nasser2021online}
-    \item \textbf{Estafas de ingeniería social:} Técnicas sofisticadas que combinan información personal extraída de redes sociales con narrativas convincentes
-    \item \textbf{Desinformación en salud:} Información médica falsa que puede tener consecuencias directas en la salud pública \cite{pulido2020new}
-    \item \textbf{\Glspl{deepfake}:} Contenido multimedia manipulado mediante técnicas de \gls{dl}
-    \item \textbf{\Glspl{bulo}:} Información falsa que se propaga viralmente en redes sociales
+    \item \textbf{Noticias falsas generadas por \gls{ia}:} Contenido sintético creado por Grandes Modelos de Lenguaje (\glspl{gpt}) que imita el estilo periodístico legítimo \cite{su2023fake} - \textit{Foco principal de este proyecto}
+    \item \textbf{Desinformación política dirigida:} Campañas coordinadas para influir en procesos electorales y opinión pública \cite{carcamo2021fake} - \textit{Aplicable con la metodología propuesta}
+    \item \textbf{Fraude financiero digital:} Esquemas que explotan plataformas digitales y criptomonedas \cite{cao2020corporate} - \textit{Metodología transferible}
+    \item \textbf{Fraude laboral en línea:} Ofertas de empleo falsas que buscan obtener información personal o financiera \cite{nasser2021online} - \textit{Metodología transferible}
+    \item \textbf{Estafas de ingeniería social:} Técnicas sofisticadas que combinan información personal extraída de redes sociales con narrativas convincentes - \textit{Metodología transferible}
+    \item \textbf{Desinformación en salud:} Información médica falsa que puede tener consecuencias directas en la salud pública \cite{pulido2020new} - \textit{Aplicable con la metodología propuesta}
+    \item \textbf{\Glspl{deepfake}:} Contenido multimedia manipulado mediante técnicas de \gls{dl} - \textit{Requiere extensión multimodal}
+    \item \textbf{\Glspl{bulo}:} Información falsa que se propaga viralmente en redes sociales - \textit{Aplicable con la metodología propuesta}
 \end{itemize}
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{Imagenes/mapaConceptual1.png}
-    \caption{Mapa Conceptual 1: Taxonomía del problema de desinformación y fraude digital en la era de la IA.}
+    \caption{Mapa Conceptual 1: Taxonomía del problema de desinformación con enfoque en noticias falsas y extensibilidad hacia fraude digital.}
     \label{fig:mapa_problema}
 \end{figure}
 
@@ -160,7 +162,7 @@ Con el advenimiento de Grandes Modelos de Lenguaje como GPT-3 \cite{brown2020lan
 \section{Objetivos}
 
 \subsection*{Objetivo General}
-Desarrollar un método computacional basado en algoritmos metaheurísticos y modelos de lenguaje para detectar noticias falsas y fraude digital en español.
+Desarrollar un método computacional basado en algoritmos metaheurísticos y modelos de lenguaje para detectar noticias falsas en español, con metodología transferible a otros tipos de fraude digital.
 
 \subsection*{Objetivos Específicos}
 
@@ -173,7 +175,7 @@ Desarrollar un método computacional basado en algoritmos metaheurísticos y mod
     
     \item Realizar un análisis comparativo del rendimiento entre el enfoque metaheurístico y el modelo de lenguaje, utilizando un conjunto completo de métricas de evaluación (Exactitud, Precisión, Exhaustividad y F1-Score).
     
-    \item Desarrollar un prototipo de aplicación web funcional, contenerizada con \texttt{Docker}, para demostrar la aplicabilidad práctica del modelo de mayor rendimiento en el análisis de URLs para categorizar contenido digital como fraudulento o legítimo.
+    \item Desarrollar un prototipo de aplicación web funcional, contenerizada con \texttt{Docker}, para demostrar la aplicabilidad práctica del modelo de mayor rendimiento en el análisis de URLs para categorizar contenido noticioso como falso o legítimo, con potencial de extensión hacia otros tipos de fraude digital.
 \end{itemize}
 
 \section{Alcance y Limitaciones}
@@ -191,8 +193,18 @@ Desarrollar un método computacional basado en algoritmos metaheurísticos y mod
 \begin{itemize}
     \item \textbf{Modalidad de datos:} Procesamiento exclusivo de contenido textual (no multimodal)
     \item \textbf{Tipo de clasificación:} Clasificación binaria supervisada (FALSO/REAL)
+    \item \textbf{Dominio principal:} Detección de noticias falsas en español
     \item \textbf{Arquitecturas evaluadas:} Comparación sistemática entre enfoques clásicos optimizados y modelos Transformer
     \item \textbf{Implementación práctica:} Desarrollo de aplicaciones web funcionales y containerizadas
+\end{itemize}
+
+\subsubsection{Transferibilidad de la Metodología}
+\begin{itemize}
+    \item \textbf{Fraude financiero digital:} La metodología puede adaptarse para detectar esquemas de inversión fraudulentos, estafas de criptomonedas, y ofertas financieras falsas
+    \item \textbf{Fraude laboral:} Aplicable para identificar ofertas de empleo falsas y esquemas de reclutamiento fraudulentos
+    \item \textbf{Estafas de ingeniería social:} Útil para detectar contenido de phishing y esquemas de manipulación social
+    \item \textbf{Desinformación temática específica:} Extensible a desinformación médica, científica, o política con ajustes de dominio
+    \item \textbf{Limitaciones de transferencia:} Contenido multimodal (deepfakes de video/audio) requiere arquitecturas especializadas adicionales
 \end{itemize}
 
 \subsubsection{Alcance Metodológico}
