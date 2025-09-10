@@ -172,12 +172,453 @@ La investigación reciente ha revelado que los LLMs presentan un doble rol:
 
 Las metaheurísticas son estrategias de optimización de alto nivel que guían procesos de búsqueda para encontrar soluciones de alta calidad en espacios de búsqueda complejos. A diferencia de los algoritmos exactos, las metaheurísticas buscan soluciones "suficientemente buenas" en tiempo computacional razonable \cite{anselmo2013diseno}.
 
+\subsubsection{Justificación del Uso de Metaheurísticas en Detección de Noticias Falsas}
+
+La aplicación de metaheurísticas en este dominio se justifica por las siguientes características del problema:
+
+\begin{itemize}
+    \item \textbf{Espacio de hiperparámetros complejo:} Los modelos de clasificación (SVM, redes neuronales) tienen múltiples hiperparámetros interdependientes
+    \item \textbf{Función objetivo no convexa:} Las métricas de rendimiento (F1-Score, precisión) no son funciones continuas y diferenciables
+    \item \textbf{Interacciones no lineales:} Los hiperparámetros interactúan de manera compleja, haciendo ineficaces los métodos de optimización tradicionales
+    \item \textbf{Múltiples óptimos locales:} El espacio de búsqueda presenta numerosos máximos locales que pueden atrapar algoritmos determinísticos
+    \item \textbf{Eficiencia computacional:} Las metaheurísticas exploran el espacio de forma más inteligente que métodos exhaustivos como grid search
+\end{itemize}
+
+\subsubsection{Arquitectura General del Sistema Metaheurístico}
+
+El framework metaheurístico desarrollado sigue una arquitectura modular que permite la intercambiabilidad de algoritmos:
+
+\begin{equation}
+\text{Sistema} = \{D, P, A, F, E\}
+\end{equation}
+
+Donde:
+\begin{itemize}
+    \item \textbf{D}: Dataset de noticias preprocesado
+    \item \textbf{P}: Pipeline de preprocesamiento (tokenización, TF-IDF)
+    \item \textbf{A}: Algoritmo metaheurístico (GA, PSO, SA, VNS, SS)
+    \item \textbf{F}: Función objetivo (F1-Score en validación cruzada)
+    \item \textbf{E}: Evaluador final en conjunto de prueba
+\end{itemize}
+
+\subsubsection{Entradas del Sistema Metaheurístico}
+
+\textbf{1. Datos de Entrada:}
+\begin{itemize}
+    \item \textbf{Corpus textual:} Noticias en español con etiquetas binarias (REAL/FALSO)
+    \item \textbf{División de datos:} 70\% entrenamiento, 10\% validación, 20\% prueba (estratificada)
+    \item \textbf{Representación BoW:} Matriz dispersa TF-IDF de dimensión $n \times v$ donde $n$ es el número de documentos y $v$ el tamaño del vocabulario
+\end{itemize}
+
+\textbf{2. Espacio de Hiperparámetros:}
+
+Para SVM con kernel RBF:
+\begin{align}
+C &\in [10^{-3}, 10^{3}] \text{ (parámetro de regularización)} \\
+\gamma &\in [10^{-4}, 10^{1}] \text{ (parámetro del kernel RBF)} \\
+\text{class\_weight} &\in \{\text{None}, \text{balanced}\} \text{ (balanceado de clases)}
+\end{align}
+
+Para TF-IDF:
+\begin{align}
+\text{max\_features} &\in [1000, 50000] \text{ (tamaño del vocabulario)} \\
+\text{min\_df} &\in [1, 10] \text{ (frecuencia mínima de documento)} \\
+\text{max\_df} &\in [0.7, 1.0] \text{ (frecuencia máxima de documento)} \\
+\text{ngram\_range} &\in \{(1,1), (1,2), (1,3)\} \text{ (rango de n-gramas)}
+\end{align}
+
+\subsubsection{Preprocesamiento y Pipeline}
+
+\textbf{Etapa 1: Limpieza Textual}
+\begin{enumerate}
+    \item \textbf{Normalización de caracteres:} Conversión a minúsculas, eliminación de acentos
+    \item \textbf{Filtrado de contenido:} Eliminación de URLs, menciones (@), hashtags
+    \item \textbf{Tokenización:} División en tokens usando expresiones regulares
+    \item \textbf{Eliminación de stopwords:} Filtrado de palabras vacías en español
+    \item \textbf{Validación de longitud:} Exclusión de textos demasiado cortos ($<$ 10 tokens)
+\end{enumerate}
+
+\textbf{Etapa 2: Vectorización TF-IDF}
+\begin{equation}
+\text{TF-IDF}(t,d) = \text{TF}(t,d) \times \log\left(\frac{N}{|\{d' : t \in d'\}|}\right)
+\end{equation}
+
+Donde $t$ es un término, $d$ un documento, $N$ el total de documentos, y el denominador cuenta documentos que contienen $t$.
+
+\textbf{Etapa 3: Normalización}
+Aplicación de normalización L2 para estabilizar el entrenamiento:
+\begin{equation}
+\mathbf{x}_{\text{norm}} = \frac{\mathbf{x}}{||\mathbf{x}||_2}
+\end{equation}
+
+\subsubsection{Algoritmos Metaheurísticos Implementados}
+
+\textbf{1. Algoritmo Genético (GA)}
+
+\textit{Inspiración biológica:} Evolución natural y selección de especies
+
+\textit{Representación:} Cada individuo es un vector de hiperparámetros codificados
+\begin{equation}
+\text{Individuo} = [C, \gamma, \text{max\_features}, \text{min\_df}, \text{max\_df}, \text{ngram}]
+\end{equation}
+
+\textit{Operadores genéticos:}
+\begin{itemize}
+    \item \textbf{Selección:} Torneo de tamaño 3
+    \item \textbf{Cruce:} Cruce uniforme con probabilidad 0.8
+    \item \textbf{Mutación:} Mutación gaussiana con probabilidad 0.1
+    \item \textbf{Elitismo:} Preservación del 10\% mejores individuos
+\end{itemize}
+
+\textit{Parámetros:}
+\begin{align}
+\text{Tamaño población} &= 30 \\
+\text{Generaciones} &= 50 \\
+\text{Tasa cruce} &= 0.8 \\
+\text{Tasa mutación} &= 0.1
+\end{align}
+
+\textbf{2. Optimización por Enjambre de Partículas (PSO)}
+
+\textit{Inspiración biológica:} Comportamiento de bandadas de aves y cardúmenes
+
+\textit{Ecuaciones de movimiento:}
+\begin{align}
+v_{i}^{t+1} &= w \cdot v_{i}^{t} + c_1 \cdot r_1 \cdot (p_{i} - x_{i}^{t}) + c_2 \cdot r_2 \cdot (g - x_{i}^{t}) \\
+x_{i}^{t+1} &= x_{i}^{t} + v_{i}^{t+1}
+\end{align}
+
+Donde:
+\begin{itemize}
+    \item $v_i^t$: velocidad de la partícula $i$ en iteración $t$
+    \item $x_i^t$: posición de la partícula $i$ en iteración $t$
+    \item $p_i$: mejor posición personal de la partícula $i$
+    \item $g$: mejor posición global del enjambre
+    \item $w$: factor de inercia ($w = 0.9$)
+    \item $c_1, c_2$: factores de aceleración ($c_1 = c_2 = 2.0$)
+    \item $r_1, r_2$: números aleatorios $\in [0,1]$
+\end{itemize}
+
+\textit{Parámetros:}
+\begin{align}
+\text{Tamaño enjambre} &= 30 \\
+\text{Iteraciones} &= 50 \\
+\text{Factor inercia} &= 0.9 \\
+\text{Factores aceleración} &= 2.0
+\end{align}
+
+\textbf{3. Recocido Simulado Multi-arranque (MSA)}
+
+\textit{Inspiración física:} Proceso de enfriamiento controlado en metalurgia
+
+\textit{Criterio de aceptación:}
+\begin{equation}
+P(\text{aceptar}) = \begin{cases}
+1 & \text{si } \Delta f \geq 0 \\
+e^{\frac{\Delta f}{T}} & \text{si } \Delta f < 0
+\end{cases}
+\end{equation}
+
+Donde $\Delta f = f(\text{nueva}) - f(\text{actual})$ y $T$ es la temperatura.
+
+\textit{Esquema de enfriamiento:}
+\begin{equation}
+T_{k+1} = \alpha \cdot T_k, \quad \alpha = 0.95
+\end{equation}
+
+\textit{Parámetros:}
+\begin{align}
+\text{Temperatura inicial} &= 100.0 \\
+\text{Temperatura final} &= 0.01 \\
+\text{Factor enfriamiento} &= 0.95 \\
+\text{Iteraciones por temperatura} &= 10 \\
+\text{Número de arranques} &= 5
+\end{align}
+
+\textbf{4. Búsqueda en Vecindades Variables (VNS)}
+
+\textit{Principio:} Cambio sistemático de estructuras de vecindad para escapar de óptimos locales
+
+\textit{Estructuras de vecindad:}
+\begin{itemize}
+    \item $N_1$: Perturbación de un hiperparámetro aleatorio
+    \item $N_2$: Perturbación de dos hiperparámetros aleatorios
+    \item $N_3$: Perturbación de todos los hiperparámetros
+\end{itemize}
+
+\textit{Algoritmo general:}
+\begin{enumerate}
+    \item Inicializar solución $x$
+    \item Para cada vecindad $k = 1, 2, 3$:
+    \item \quad Generar $x'$ en $N_k(x)$
+    \item \quad Aplicar búsqueda local desde $x'$ → $x''$
+    \item \quad Si $f(x'') > f(x)$: $x = x''$, $k = 1$
+    \item \quad Sino: $k = k + 1$
+    \item Repetir hasta criterio de parada
+\end{enumerate}
+
+\textbf{5. Búsqueda Dispersa (SS)}
+
+\textit{Principio:} Combinar soluciones de calidad y diversas para generar nuevas soluciones
+
+\textit{Componentes principales:}
+\begin{itemize}
+    \item \textbf{Conjunto de referencia:} 10 soluciones (5 de calidad + 5 diversas)
+    \item \textbf{Generación de subconjuntos:} Todas las combinaciones de tamaño 2
+    \item \textbf{Método de combinación:} Promedio ponderado por fitness
+    \item \textbf{Mejora:} Búsqueda local en nuevas soluciones
+    \item \textbf{Actualización:} Reemplazo de peores soluciones
+\end{itemize}
+
+\subsubsection{Función Objetivo y Evaluación}
+
+\textbf{Función objetivo principal:}
+\begin{equation}
+f(\theta) = \text{F1-Score}_{CV}(\theta)
+\end{equation}
+
+Donde $\theta$ representa el vector de hiperparámetros y $\text{F1-Score}_{CV}$ es el F1-Score promedio en validación cruzada estratificada de 5 pliegues.
+
+\textbf{Métricas de evaluación secundarias:}
+\begin{align}
+\text{Precisión} &= \frac{TP}{TP + FP} \\
+\text{Recall} &= \frac{TP}{TP + FN} \\
+\text{F1-Score} &= \frac{2 \times \text{Precisión} \times \text{Recall}}{\text{Precisión} + \text{Recall}} \\
+\text{Exactitud} &= \frac{TP + TN}{TP + TN + FP + FN}
+\end{align}
+
+\subsubsection{Etapas del Proceso Metaheurístico}
+
+\textbf{Etapa 1: Inicialización}
+\begin{enumerate}
+    \item Cargar y dividir el dataset
+    \item Definir espacios de búsqueda para hiperparámetros
+    \item Inicializar población/enjambre según el algoritmo
+    \item Configurar parámetros del algoritmo metaheurístico
+\end{enumerate}
+
+\textbf{Etapa 2: Evaluación de Fitness}
+\begin{enumerate}
+    \item Para cada configuración de hiperparámetros:
+    \item \quad Construir pipeline TF-IDF + SVM
+    \item \quad Entrenar en conjunto de entrenamiento
+    \item \quad Evaluar en validación cruzada 5-fold
+    \item \quad Calcular F1-Score promedio como fitness
+\end{enumerate}
+
+\textbf{Etapa 3: Evolución/Optimización}
+\begin{enumerate}
+    \item Aplicar operadores específicos del algoritmo
+    \item Generar nuevas configuraciones candidatas
+    \item Evaluar fitness de nuevas configuraciones
+    \item Actualizar población/enjambre según criterios del algoritmo
+    \item Verificar criterios de convergencia
+\end{enumerate}
+
+\textbf{Etapa 4: Selección Final}
+\begin{enumerate}
+    \item Identificar la mejor configuración encontrada
+    \item Re-entrenar modelo con configuración óptima
+    \item Evaluar en conjunto de prueba independiente
+    \item Reportar métricas finales
+\end{enumerate}
+
+\subsubsection{Salidas del Sistema Metaheurístico}
+
+\textbf{1. Configuración Óptima de Hiperparámetros:}
+\begin{itemize}
+    \item Valores óptimos para cada hiperparámetro del modelo
+    \item Historia de convergencia del algoritmo
+    \item Número de evaluaciones realizadas
+    \item Tiempo total de optimización
+\end{itemize}
+
+\textbf{2. Modelo Entrenado Optimizado:}
+\begin{itemize}
+    \item Vectorizador TF-IDF configurado
+    \item Clasificador SVM entrenado
+    \item Pipeline completo listo para predicción
+\end{itemize}
+
+\textbf{3. Métricas de Rendimiento:}
+\begin{itemize}
+    \item F1-Score, Precisión, Recall, Exactitud en conjunto de prueba
+    \item Matriz de confusión
+    \item Curvas de convergencia
+    \item Análisis de importancia de hiperparámetros
+\end{itemize}
+
+\textbf{4. Análisis Comparativo:}
+\begin{itemize}
+    \item Comparación entre algoritmos metaheurísticos
+    \item Análisis de eficiencia computacional
+    \item Estudio de robustez y estabilidad
+\end{itemize}
+
 En el contexto de la detección de noticias falsas, las metaheurísticas abordan varios problemas de optimización, con metodologías transferibles a otros tipos de fraude digital:
 \begin{itemize}
     \item \textbf{Calibración de hiperparámetros:} Optimización de parámetros de modelos de ML/DL
     \item \textbf{Selección de características:} Identificación de subconjuntos óptimos de variables
     \item \textbf{Arquitectura neural:} Diseño automático de topologías de red
     \item \textbf{Balanceado de datos:} Optimización de técnicas de muestreo
+\end{itemize}
+
+\subsubsection{Comparación de Algoritmos Metaheurísticos}
+
+La Tabla \ref{tab:comparacion_metaheuristicas} presenta una comparación sistemática de los cinco algoritmos implementados, destacando sus características distintivas, ventajas y limitaciones en el contexto de optimización de hiperparámetros para detección de noticias falsas.
+
+\begin{table}[htbp]
+\centering
+\adjustbox{width=\textwidth,center}{%
+\small
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\rowcolor{UAMPurple!20}
+\textbf{Algoritmo} & \textbf{Inspiración} & \textbf{Fortalezas} & \textbf{Limitaciones} & \textbf{Parámetros Clave} \\
+\hline
+\textbf{GA} & Evolución biológica & 
+\begin{tabular}[t]{@{}l@{}}Exploración global robusta\\Paralelización natural\\Buena diversidad poblacional\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Convergencia lenta\\Muchos parámetros a ajustar\\Puede estancarse prematuramente\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Población: 30\\Generaciones: 50\\Cruce: 0.8\\Mutación: 0.1\end{tabular} \\
+\hline
+\textbf{PSO} & 
+\begin{tabular}[t]{@{}l@{}}Comportamiento\\de enjambre\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Convergencia rápida\\Pocos parámetros\\Fácil implementación\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Puede convergir prematuramente\\Sensible a parámetros\\Exploración limitada\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Partículas: 30\\Iteraciones: 50\\Inercia: 0.9\\Aceleración: 2.0\end{tabular} \\
+\hline
+\textbf{SA/MSA} & 
+\begin{tabular}[t]{@{}l@{}}Recocido\\de metales\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Escape de óptimos locales\\Base teórica sólida\\Múltiples arranques\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Esquema de enfriamiento crítico\\Búsqueda individual\\Muchas evaluaciones\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}T inicial: 100\\T final: 0.01\\Enfriamiento: 0.95\\Arranques: 5\end{tabular} \\
+\hline
+\textbf{VNS} & 
+\begin{tabular}[t]{@{}l@{}}Cambio sistemático\\de vecindades\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Escape sistemático de óptimos\\Combinación exploración/explotación\\Flexibilidad en vecindades\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Dependiente de definición de vecindades\\Puede ser costoso computacionalmente\\Diseño específico del problema\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Vecindades: 3\\Iteraciones: 100\\Búsqueda local: Hill climbing\end{tabular} \\
+\hline
+\textbf{SS} & 
+\begin{tabular}[t]{@{}l@{}}Combinación de\\soluciones de calidad\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Balance calidad-diversidad\\Intensificación y diversificación\\Memoria adaptativa\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Complejo de implementar\\Muchos componentes\\Sensible a tamaño de referencia\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Ref. Set: 10\\Combinaciones: todas\\Mejora: local search\\Actualizaciones: dinámicas\end{tabular} \\
+\hline
+\end{tabular}
+}
+\caption{Comparación de algoritmos metaheurísticos implementados}
+\label{tab:comparacion_metaheuristicas}
+\end{table}
+
+\subsubsection{Criterios de Selección y Justificación}
+
+La selección de estos cinco algoritmos metaheurísticos se basó en criterios específicos de idoneidad para el problema de optimización de hiperparámetros en detección de noticias falsas:
+
+\begin{enumerate}
+    \item \textbf{Diversidad de paradigmas:} Se incluyeron representantes de las principales familias de metaheurísticas (evolutivas, de enjambre, basadas en trayectoria, de memoria)
+    
+    \item \textbf{Eficiencia computacional:} Algoritmos con balance adecuado entre calidad de solución y tiempo de cómputo
+    
+    \item \textbf{Robustez empírica:} Métodos con evidencia documentada de efectividad en problemas de optimización de ML
+    
+    \item \textbf{Implementación práctica:} Algoritmos con parámetros bien establecidos y implementaciones estables
+    
+    \item \textbf{Complementariedad:} Enfoques que exploran el espacio de búsqueda de maneras fundamentalmente diferentes
+\end{enumerate}
+
+Esta selección permite una evaluación comprehensiva de diferentes estrategias de optimización, proporcionando insights sobre qué características algorítmicas son más efectivas para el problema específico de calibración de detectores de noticias falsas.
+
+\subsubsection{Justificación Frente a Métodos Alternativos}
+
+\textbf{Comparación con Grid Search:}
+\begin{itemize}
+    \item \textbf{Eficiencia:} Grid search requiere $O(n^k)$ evaluaciones donde $n$ es el número de valores por parámetro y $k$ el número de parámetros. Para este problema: $10^6$ evaluaciones vs. 1,500 de metaheurísticas
+    \item \textbf{Escalabilidad:} Grid search se vuelve impracticable con espacios de alta dimensión
+    \item \textbf{Optimización continua:} Las metaheurísticas manejan parámetros continuos naturalmente
+\end{itemize}
+
+\textbf{Comparación con Random Search:}
+\begin{itemize}
+    \item \textbf{Inteligencia dirigida:} Las metaheurísticas aprenden del histórico de evaluaciones
+    \item \textbf{Convergencia:} Random search no garantiza convergencia hacia regiones prometedoras
+    \item \textbf{Explotación vs. Exploración:} Las metaheurísticas balancean sistemáticamente ambos aspectos
+\end{itemize}
+
+\textbf{Comparación con Optimización Bayesiana:}
+\begin{itemize}
+    \item \textbf{Asunciones del modelo:} Bayesian optimization asume suavidad que puede no cumplirse en métricas de ML
+    \item \textbf{Costo computacional:} El cálculo de la función de adquisición puede ser costoso
+    \item \textbf{Flexibilidad:} Las metaheurísticas son más flexibles para restricciones complejas
+\end{itemize}
+
+\textbf{Comparación con Gradient-based Methods:}
+\begin{itemize}
+    \item \textbf{Diferenciabilidad:} Las métricas de clasificación (F1-Score) no son diferenciables
+    \item \textbf{Naturaleza discreta:} Algunos hiperparámetros son categóricos o discretos
+    \item \textbf{Robustez:} Los métodos basados en gradiente son sensibles a óptimos locales
+\end{itemize}
+
+\subsubsection{Flujo del Proceso Metaheurístico}
+
+La Figura \ref{fig:flujo_metaheuristicas} ilustra el flujo completo del proceso de optimización metaheurística aplicado a la detección de noticias falsas, desde la entrada de datos hasta la obtención del modelo optimizado final.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Imagenes/mapaConceptual3.png}
+    \caption{Flujo del proceso de optimización metaheurística para detección de noticias falsas. Se muestra la transformación desde datos textuales hasta el modelo optimizado final, pasando por las etapas de preprocesamiento, optimización y evaluación.}
+    \label{fig:flujo_metaheuristicas}
+\end{figure}
+
+Este flujo garantiza:
+\begin{itemize}
+    \item \textbf{Reproducibilidad:} Cada etapa está claramente definida con parámetros específicos
+    \item \textbf{Escalabilidad:} El proceso puede aplicarse a corpus de diferentes tamaños
+    \item \textbf{Transferibilidad:} La metodología es aplicable a otros problemas de clasificación textual
+    \item \textbf{Transparencia:} Cada decisión algorítmica está justificada y documentada
+\end{itemize}
+
+\subsubsection{Consideraciones de Implementación}
+
+\textbf{Manejo de Memoria:}
+\begin{itemize}
+    \item Uso de matrices dispersas (scipy.sparse) para representaciones TF-IDF
+    \item Liberación explícita de memoria entre evaluaciones
+    \item Procesamiento por lotes para corpus grandes
+\end{itemize}
+
+\textbf{Paralelización:}
+\begin{itemize}
+    \item Evaluación paralela de individuos en GA
+    \item Vectorización de operaciones en PSO
+    \item Múltiples arranques independientes en SA
+\end{itemize}
+
+\textbf{Validación y Robustez:}
+\begin{itemize}
+    \item Validación cruzada estratificada para preservar distribución de clases
+    \item Múltiples ejecuciones independientes para análisis estadístico
+    \item Manejo de casos extremos y configuraciones inválidas
+\end{itemize}
+
+\subsubsection{Métricas de Monitoreo del Proceso}
+
+Durante la ejecución de cada algoritmo metaheurístico, se monitorizan las siguientes métricas:
+
+\begin{enumerate}
+    \item \textbf{Convergencia:} Evolución del mejor fitness a lo largo de las iteraciones
+    \item \textbf{Diversidad:} Medida de dispersión en la población/enjambre
+    \item \textbf{Estagnación:} Número de iteraciones sin mejora significativa
+    \item \textbf{Eficiencia:} Número de evaluaciones para alcanzar convergencia
+    \item \textbf{Estabilidad:} Variabilidad entre ejecuciones independientes
+\end{enumerate}
+
+Estas métricas permiten:
+\begin{itemize}
+    \item Ajustar parámetros de los algoritmos dinámicamente
+    \item Detectar convergencia prematura o estagnación
+    \item Comparar objetivamente el rendimiento de diferentes metaheurísticas
+    \item Identificar configuraciones problemáticas o excepcionales
 \end{itemize}
 
 \subsection{Aplicaciones en Detección de Noticias Falsas}
