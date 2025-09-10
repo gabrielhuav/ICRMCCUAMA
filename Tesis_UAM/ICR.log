@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.25)  10 SEP 2025 01:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.25)  10 SEP 2025 02:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1121,7 +1121,7 @@ your preamble.
 \openout2 = `Portada/Portada.aux'.
 
 (Portada/Portada.tex
-<./Imagenes/uam.png, id=650, 202.8378pt x 147.4308pt>
+<./Imagenes/uam.png, id=653, 202.8378pt x 147.4308pt>
 File: ./Imagenes/uam.png Graphic file (type png)
 <use ./Imagenes/uam.png>
 Package pdftex.def Info: ./Imagenes/uam.png  used on input line 5.
@@ -1195,8 +1195,8 @@ LaTeX Info: Redefining \% on input line 106.
 LaTeX Info: Redefining \. on input line 170.
 LaTeX Info: Redefining \% on input line 170.
  [11]
-LaTeX Info: Redefining \. on input line 253.
-LaTeX Info: Redefining \% on input line 253.
+LaTeX Info: Redefining \. on input line 257.
+LaTeX Info: Redefining \% on input line 257.
  [12])
 \tf@toc=\write7
 \openout7 = `ICR.toc'.
@@ -1652,151 +1652,44 @@ LaTeX Info: Redefining \% on input line 83.
 
 (Introduccion/Introduccion.tex
 Cap\'{\i }tulo 1.
-
-Package natbib Warning: Citation `bondielli2019survey' on page 1 undefined on i
-nput line 8.
-
-
-Package natbib Warning: Citation `hu2024bad' on page 1 undefined on input line 
-8.
-
-
-Package natbib Warning: Citation `ali2020posttruth' on page 1 undefined on inpu
-t line 12.
-
-
-Package natbib Warning: Citation `perez2020fake' on page 1 undefined on input l
-ine 12.
-
-
-Package natbib Warning: Citation `ali2021fake' on page 1 undefined on input lin
-e 12.
-
 [1
 
 
 ]
-
-Package natbib Warning: Citation `su2023fake' on page 2 undefined on input line
- 19.
-
-
-Package natbib Warning: Citation `carcamo2021fake' on page 2 undefined on input
- line 20.
-
-
-Package natbib Warning: Citation `cao2020corporate' on page 2 undefined on inpu
-t line 21.
-
-
-Package natbib Warning: Citation `nasser2021online' on page 2 undefined on inpu
-t line 22.
-
-
-Package natbib Warning: Citation `pulido2020new' on page 2 undefined on input l
-ine 24.
-
-<Imagenes/mapaConceptual1.png, id=1302, 722.7pt x 520.19344pt>
+<Imagenes/mapaConceptual1.png, id=1321, 722.7pt x 520.19344pt>
 File: Imagenes/mapaConceptual1.png Graphic file (type png)
 <use Imagenes/mapaConceptual1.png>
 Package pdftex.def Info: Imagenes/mapaConceptual1.png  used on input line 31.
 (pdftex.def)             Requested size: 433.62pt x 312.11845pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package natbib Warning: Citation `acosta2019construccion' on page 2 undefined o
-n input line 38.
-
-
-Package natbib Warning: Citation `posadas2019detection' on page 2 undefined on 
-input line 38.
 
 LaTeX Info: Redefining \. on input line 44.
 LaTeX Info: Redefining \% on input line 44.
 [2]
-
-Package natbib Warning: Citation `singh2023comprehensive' on page 3 undefined o
-n input line 50.
-
-
-Package natbib Warning: Citation `tsai2023stylometric' on page 3 undefined on i
-nput line 54.
-
 LaTeX Info: Redefining \. on input line 55.
 LaTeX Info: Redefining \% on input line 55.
-[3 <./Imagenes/mapaConceptual1.png>]
-
-Package natbib Warning: Citation `su2023adapting' on page 4 undefined on input 
-line 56.
-
-<Imagenes/mapaConceptual2.png, id=1319, 726.46407pt x 504.38437pt>
+ [3 <./Imagenes/mapaConceptual1.png>]
+<Imagenes/mapaConceptual2.png, id=1351, 726.46407pt x 504.38437pt>
 File: Imagenes/mapaConceptual2.png Graphic file (type png)
 <use Imagenes/mapaConceptual2.png>
 Package pdftex.def Info: Imagenes/mapaConceptual2.png  used on input line 65.
 (pdftex.def)             Requested size: 433.62pt x 301.0706pt.
 LaTeX Info: Redefining \. on input line 73.
 LaTeX Info: Redefining \% on input line 73.
-[4 <./Imagenes/mapaConceptual2.png>]
-
-Package natbib Warning: Citation `ali2021fake' on page 5 undefined on input lin
-e 80.
-
-
-Package natbib Warning: Citation `brown2020language' on page 5 undefined on inp
-ut line 91.
-
-
-Package natbib Warning: Citation `su2023fake' on page 5 undefined on input line
- 91.
-
+ [4 <./Imagenes/mapaConceptual2.png>]
 LaTeX Info: Redefining \. on input line 98.
 LaTeX Info: Redefining \% on input line 98.
+
 [5]
-
-Package natbib Warning: Citation `hu2022deep' on page 6 undefined on input line
- 101.
-
-
-Package natbib Warning: Citation `acosta2019construccion' on page 6 undefined o
-n input line 105.
-
-
-Package natbib Warning: Citation `posadas2019detection' on page 6 undefined on 
-input line 106.
-
-
-Package natbib Warning: Citation `tretiakov2022detection' on page 6 undefined o
-n input line 107.
-
-
-Package natbib Warning: Citation `blanco2024enhancing' on page 6 undefined on i
-nput line 108.
-
 LaTeX Info: Redefining \. on input line 128.
 LaTeX Info: Redefining \% on input line 128.
-[6]
-
-Package natbib Warning: Citation `sanh2019distilbert' on page 7 undefined on in
-put line 128.
-
-
+ [6]
 Overfull \hbox (27.59181pt too wide) in paragraph at lines 146--147
 []\T1/cmr/bx/n/12 Optimización me-ta-heu-rís-ti-ca: \T1/cmr/m/n/12 Apli-ca-ción
  sis-te-má-ti-ca de al-go-rit-mos bio-inspirados
  []
-
-
-Package natbib Warning: Citation `brown2020language' on page 7 undefined on inp
-ut line 160.
-
-
-Package natbib Warning: Citation `touvron2023llama' on page 7 undefined on inpu
-t line 160.
-
-
-Package natbib Warning: Citation `gemini2023family' on page 7 undefined on inpu
-t line 160.
 
 LaTeX Info: Redefining \. on input line 161.
 LaTeX Info: Redefining \% on input line 161.
@@ -1836,41 +1729,12 @@ LaTeX Info: Redefining \% on input line 98.
 
  (MarcoTeorico/MarcoTeorico.tex
 Cap\'{\i }tulo 2.
-
-Package natbib Warning: Citation `bondielli2019survey' on page 13 undefined on 
-input line 9.
-
-
-Package natbib Warning: Citation `das2022heuristic' on page 13 undefined on inp
-ut line 11.
-
-
-Package natbib Warning: Citation `thota2018fake' on page 13 undefined on input 
-line 13.
-
-
-Package natbib Warning: Citation `tsai2023stylometric' on page 13 undefined on 
-input line 15.
-
 [13
 
 
 
 
 ]
-
-Package natbib Warning: Citation `ali2020posttruth' on page 14 undefined on inp
-ut line 19.
-
-
-Package natbib Warning: Citation `perez2020fake' on page 14 undefined on input 
-line 27.
-
-
-Package natbib Warning: Citation `ali2021fake' on page 14 undefined on input li
-ne 32.
-
-
 Overfull \hbox (14.89433pt too wide) in paragraph at lines 34--34
 []\T1/cmr/bx/n/14.4 Diferenciación y Trans-fe-ri-bi-li-dad: No-ti-cias Fal-sas 
 vs. Frau-
@@ -1886,86 +1750,18 @@ Overfull \hbox (1.40675pt too wide) in paragraph at lines 55--55
 LaTeX Info: Redefining \. on input line 66.
 LaTeX Info: Redefining \% on input line 66.
 [15]
-
-Package natbib Warning: Citation `acosta2019construccion' on page 16 undefined 
-on input line 69.
-
-
-Package natbib Warning: Citation `thota2018fake' on page 16 undefined on input 
-line 85.
-
-
-Package natbib Warning: Citation `vaswani2017attention' on page 16 undefined on
- input line 102.
-
 LaTeX Info: Redefining \. on input line 103.
 LaTeX Info: Redefining \% on input line 103.
-[16]
-
-Package natbib Warning: Citation `devlin2018bert' on page 17 undefined on input
- line 122.
-
-
-Package natbib Warning: Citation `sanh2019distilbert' on page 17 undefined on i
-nput line 128.
-
-
-Package natbib Warning: Citation `jiao2019tinybert' on page 17 undefined on inp
-ut line 129.
-
+ [16]
 LaTeX Info: Redefining \. on input line 136.
 LaTeX Info: Redefining \% on input line 136.
-[17]
-
-Package natbib Warning: Citation `martinez2021fake' on page 18 undefined on inp
-ut line 136.
-
-
-Package natbib Warning: Citation `blanco2024enhancing' on page 18 undefined on 
-input line 137.
-
-
-Package natbib Warning: Citation `shushkevich2023improving' on page 18 undefine
-d on input line 138.
-
-
-Package natbib Warning: Citation `brown2020language' on page 18 undefined on in
-put line 145.
-
-
-Package natbib Warning: Citation `touvron2023llama' on page 18 undefined on inp
-ut line 149.
-
-
-Package natbib Warning: Citation `gemini2023family' on page 18 undefined on inp
-ut line 153.
-
-
-Package natbib Warning: Citation `bai2022constitutional' on page 18 undefined o
-n input line 157.
-
-
-Package natbib Warning: Citation `hu2024bad' on page 18 undefined on input line
- 163.
-
-
-Package natbib Warning: Citation `su2023fake' on page 18 undefined on input lin
-e 164.
-
+ [17]
 LaTeX Info: Redefining \. on input line 165.
 LaTeX Info: Redefining \% on input line 165.
-[18]
-
-Package natbib Warning: Citation `su2023adapting' on page 19 undefined on input
- line 165.
-
-
-Package natbib Warning: Citation `anselmo2013diseno' on page 19 undefined on in
-put line 173.
-
+ [18]
 LaTeX Info: Redefining \. on input line 198.
 LaTeX Info: Redefining \% on input line 198.
-[19]
+ [19]
 LaTeX Info: Redefining \. on input line 244.
 LaTeX Info: Redefining \% on input line 244.
  [20]
@@ -1987,7 +1783,7 @@ LaTeX Info: Redefining \% on input line 512.
 LaTeX Info: Redefining \. on input line 536.
 LaTeX Info: Redefining \% on input line 536.
  [26]
-<Imagenes/mapaConceptual3.png, id=1540, 398.9304pt x 191.2746pt>
+<Imagenes/mapaConceptual3.png, id=1626, 398.9304pt x 191.2746pt>
 File: Imagenes/mapaConceptual3.png Graphic file (type png)
 <use Imagenes/mapaConceptual3.png>
 Package pdftex.def Info: Imagenes/mapaConceptual3.png  used on input line 568.
@@ -2002,60 +1798,23 @@ LaTeX Info: Redefining \% on input line 577.
 LaTeX Info: Redefining \. on input line 593.
 LaTeX Info: Redefining \% on input line 593.
  [28 <./Imagenes/mapaConceptual3.png>]
-
-Package natbib Warning: Citation `aqil2021modeling' on page 29 undefined on inp
-ut line 628.
-
 LaTeX Info: Redefining \. on input line 633.
 LaTeX Info: Redefining \% on input line 633.
-[29]
-
-Package natbib Warning: Citation `bacanin2023benefits' on page 30 undefined on 
-input line 639.
-
-
+ [29]
 Overfull \hbox (1.32481pt too wide) in paragraph at lines 643--644
 []\T1/cmr/bx/n/12 Evitación de óp-ti-mos lo-ca-les: \T1/cmr/m/n/12 Ca-pa-ci-dad
  de es-ca-pe de con-fi-gu-ra-cio-nes subóp-
  []
 
-
-Package natbib Warning: Citation `hurtado2024calibracion' on page 30 undefined 
-on input line 647.
-
-
-Package natbib Warning: Citation `das2022heuristic' on page 30 undefined on inp
-ut line 651.
-
-
-Package natbib Warning: Citation `hidayattullah2020financial' on page 30 undefi
-ned on input line 664.
-
 LaTeX Info: Redefining \. on input line 666.
 LaTeX Info: Redefining \% on input line 666.
 [30]
-
-Package natbib Warning: Citation `horak2023gaussian' on page 31 undefined on in
-put line 675.
-
-
-Package natbib Warning: Citation `yildirim2023novel' on page 31 undefined on in
-put line 681.
-
-
-Package natbib Warning: Citation `deshai2023unmasking' on page 31 undefined on 
-input line 690.
-
 LaTeX Info: Redefining \. on input line 700.
 LaTeX Info: Redefining \% on input line 700.
-[31]
-
-Package natbib Warning: Citation `zhang2023using' on page 32 undefined on input
- line 716.
-
+ [31]
 LaTeX Info: Redefining \. on input line 736.
 LaTeX Info: Redefining \% on input line 736.
-[32])
+ [32])
 LaTeX Info: Redefining \. on input line 99.
 LaTeX Info: Redefining \% on input line 99.
  [33]
@@ -2075,606 +1834,120 @@ Cap\'{\i }tulo 3.
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
  [36]
-
-Package natbib Warning: Citation `acosta2019construccion' on page 37 undefined 
-on input line 43.
-
-
-Package natbib Warning: Citation `posadas2019detection' on page 37 undefined on
- input line 45.
-
 LaTeX Info: Redefining \. on input line 46.
 LaTeX Info: Redefining \% on input line 46.
-[37]
-
-Package natbib Warning: Citation `alam2023overview' on page 38 undefined on inp
-ut line 47.
-
-
-Package natbib Warning: Citation `barron2023clef' on page 38 undefined on input
- line 47.
-
-
-Package natbib Warning: Citation `aragon2020overview' on page 38 undefined on i
-nput line 51.
-
-
-Package natbib Warning: Citation `gomez2021overview' on page 38 undefined on in
-put line 51.
-
-
-Package natbib Warning: Citation `ramirez2021spanish' on page 38 undefined on i
-nput line 53.
-
-
-Package natbib Warning: Citation `acosta2019construccion' on page 38 undefined 
-on input line 64.
-
-
-Package natbib Warning: Citation `alam2023overview' on page 38 undefined on inp
-ut line 66.
-
-
-Package natbib Warning: Citation `aragon2020overview' on page 38 undefined on i
-nput line 68.
-
-
-Package natbib Warning: Citation `barron2023clef' on page 38 undefined on input
- line 70.
-
-
-Package natbib Warning: Citation `gomez2021overview' on page 38 undefined on in
-put line 72.
-
-
-Package natbib Warning: Citation `posadas2019detection' on page 38 undefined on
- input line 74.
-
-
-Package natbib Warning: Citation `ramirez2021spanish' on page 38 undefined on i
-nput line 76.
-
-
-Package natbib Warning: Citation `tretiakov2022detection' on page 38 undefined 
-on input line 78.
-
-
-Underfull \vbox (badness 1168) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 87.
-LaTeX Info: Redefining \% on input line 87.
- [38]
-
-Package natbib Warning: Citation `devlin2018bert' on page 39 undefined on input
- line 92.
-
-
-Package natbib Warning: Citation `sanh2019distilbert' on page 39 undefined on i
-nput line 94.
-
-LaTeX Info: Redefining \. on input line 95.
-LaTeX Info: Redefining \% on input line 95.
-[39]
-
-Package natbib Warning: Citation `martinez2021fake' on page 40 undefined on inp
-ut line 96.
-
-
-Package natbib Warning: Citation `blanco2024enhancing' on page 40 undefined on 
-input line 98.
-
-
-Package natbib Warning: Citation `brown2020language' on page 40 undefined on in
-put line 100.
-
-
-Package natbib Warning: Citation `gemini2023family' on page 40 undefined on inp
-ut line 100.
-
-
-Package natbib Warning: Citation `su2023adapting' on page 40 undefined on input
- line 102.
-
-
-Package natbib Warning: Citation `su2023fake' on page 40 undefined on input lin
-e 102.
-
-
-Package natbib Warning: Citation `shushkevich2023improving' on page 40 undefine
-d on input line 104.
-
-
-Package natbib Warning: Citation `hu2024bad' on page 40 undefined on input line
- 106.
-
-
-Underfull \vbox (badness 1168) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 107.
-LaTeX Info: Redefining \% on input line 107.
- [40]
-
-Package natbib Warning: Citation `devlin2018bert' on page 41 undefined on input
- line 117.
-
-
-Package natbib Warning: Citation `sanh2019distilbert' on page 41 undefined on i
-nput line 119.
-
-
-Package natbib Warning: Citation `jiao2019tinybert' on page 41 undefined on inp
-ut line 121.
-
-
-Package natbib Warning: Citation `martinez2021fake' on page 41 undefined on inp
-ut line 123.
-
-
-Package natbib Warning: Citation `blanco2024enhancing' on page 41 undefined on 
-input line 125.
-
-
-Package natbib Warning: Citation `brown2020language' on page 41 undefined on in
-put line 127.
-
-
-Package natbib Warning: Citation `gemini2023family' on page 41 undefined on inp
-ut line 129.
-
-
-Package natbib Warning: Citation `su2023adapting' on page 41 undefined on input
- line 131.
-
-
-Package natbib Warning: Citation `aqil2021modeling' on page 41 undefined on inp
-ut line 143.
-
-LaTeX Info: Redefining \. on input line 144.
-LaTeX Info: Redefining \% on input line 144.
-[41]
-
-Package natbib Warning: Citation `deshai2023unmasking' on page 42 undefined on 
-input line 145.
-
-
-Package natbib Warning: Citation `bacanin2023benefits' on page 42 undefined on 
-input line 147.
-
-
-Package natbib Warning: Citation `das2022heuristic' on page 42 undefined on inp
-ut line 149.
-
-
-Package natbib Warning: Citation `hurtado2024calibracion' on page 42 undefined 
-on input line 151.
-
-
+ [37]
 Underfull \vbox (badness 2285) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 153.
-LaTeX Info: Redefining \% on input line 153.
+LaTeX Info: Redefining \. on input line 54.
+LaTeX Info: Redefining \% on input line 54.
+ [38]
+LaTeX Info: Redefining \. on input line 95.
+LaTeX Info: Redefining \% on input line 95.
+
+[39]
+Underfull \vbox (badness 1168) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
+ [40]
+LaTeX Info: Redefining \. on input line 144.
+LaTeX Info: Redefining \% on input line 144.
+
+[41]
+Underfull \vbox (badness 2285) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 152.
+LaTeX Info: Redefining \% on input line 152.
  [42]
+LaTeX Info: Redefining \. on input line 189.
+LaTeX Info: Redefining \% on input line 189.
 
-Package natbib Warning: Citation `yildirim2023novel' on page 43 undefined on in
-put line 153.
-
-
-Package natbib Warning: Citation `aqil2021modeling' on page 43 undefined on inp
-ut line 164.
-
-
-Package natbib Warning: Citation `deshai2023unmasking' on page 43 undefined on 
-input line 166.
-
-
-Package natbib Warning: Citation `bacanin2023benefits' on page 43 undefined on 
-input line 168.
-
-
-Package natbib Warning: Citation `das2022heuristic' on page 43 undefined on inp
-ut line 170.
-
-
-Package natbib Warning: Citation `hurtado2024calibracion' on page 43 undefined 
-on input line 172.
-
-
-Package natbib Warning: Citation `yildirim2023novel' on page 43 undefined on in
-put line 174.
-
-
-Package natbib Warning: Citation `yazdi2020improving' on page 43 undefined on i
-nput line 176.
-
-
-Package natbib Warning: Citation `yasmin2024ensemble' on page 43 undefined on i
-nput line 178.
-
-
-Package natbib Warning: Citation `yazdi2020improving' on page 43 undefined on i
-nput line 186.
-
-
-Package natbib Warning: Citation `yasmin2024ensemble' on page 43 undefined on i
-nput line 188.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 194.
-LaTeX Info: Redefining \% on input line 194.
- [43]
-
-Package natbib Warning: Citation `holland1992adaptation' on page 44 undefined o
-n input line 197.
-
-
-Package natbib Warning: Citation `kennedy1995particle' on page 44 undefined on 
-input line 207.
-
-
-Package natbib Warning: Citation `eberhart1995particle' on page 44 undefined on
- input line 207.
-
-LaTeX Info: Redefining \. on input line 208.
-LaTeX Info: Redefining \% on input line 208.
-[44]
-
-Package natbib Warning: Citation `kirkpatrick1983optimization' on page 45 undef
-ined on input line 217.
+[43]
+LaTeX Info: Redefining \. on input line 204.
+LaTeX Info: Redefining \% on input line 204.
+ [44]
+Underfull \vbox (badness 7888) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 220.
 LaTeX Info: Redefining \% on input line 220.
-[45]
+ [45]
+LaTeX Info: Redefining \. on input line 232.
+LaTeX Info: Redefining \% on input line 232.
 
-Package natbib Warning: Citation `marti2018multistart' on page 46 undefined on 
-input line 221.
-
-
-Package natbib Warning: Citation `glover1998template' on page 46 undefined on i
-nput line 225.
-
-
-Package natbib Warning: Citation `mladenovic1997variable' on page 46 undefined 
-on input line 233.
-
-LaTeX Info: Redefining \. on input line 236.
-LaTeX Info: Redefining \% on input line 236.
 [46]
-
-Package natbib Warning: Citation `holland1992adaptation' on page 47 undefined o
-n input line 248.
-
-
-Package natbib Warning: Citation `kennedy1995particle' on page 47 undefined on 
-input line 250.
-
-
-Package natbib Warning: Citation `kirkpatrick1983optimization' on page 47 undef
-ined on input line 252.
-
-
-Package natbib Warning: Citation `marti2018multistart' on page 47 undefined on 
-input line 254.
-
-
-Package natbib Warning: Citation `glover1998template' on page 47 undefined on i
-nput line 256.
-
-
-Package natbib Warning: Citation `mladenovic1997variable' on page 47 undefined 
-on input line 258.
-
-
-Overfull \hbox (8.83992pt too wide) in paragraph at lines 268--268
+LaTeX Info: Redefining \. on input line 269.
+LaTeX Info: Redefining \% on input line 269.
+ [47]
+Overfull \hbox (8.83992pt too wide) in paragraph at lines 270--270
 []\T1/cmr/bx/n/17.28 Hiperparámetros en Mo-de-los de Apren-di-za-je Au-
  []
 
-LaTeX Info: Redefining \. on input line 276.
-LaTeX Info: Redefining \% on input line 276.
-[47]
-LaTeX Info: Redefining \. on input line 295.
-LaTeX Info: Redefining \% on input line 295.
- [48]
-LaTeX Info: Redefining \. on input line 311.
-LaTeX Info: Redefining \% on input line 311.
+LaTeX Info: Redefining \. on input line 288.
+LaTeX Info: Redefining \% on input line 288.
+[48]
+LaTeX Info: Redefining \. on input line 309.
+LaTeX Info: Redefining \% on input line 309.
  [49]
-
-Package natbib Warning: Citation `omalley2020hyperparameter' on page 50 undefin
-ed on input line 318.
-
-LaTeX Info: Redefining \. on input line 335.
-LaTeX Info: Redefining \% on input line 335.
-[50]
+LaTeX Info: Redefining \. on input line 328.
+LaTeX Info: Redefining \% on input line 328.
+ [50]
+LaTeX Info: Redefining \. on input line 347.
+LaTeX Info: Redefining \% on input line 347.
+ [51]
 File: Imagenes/mapaConceptual3.png Graphic file (type png)
 <use Imagenes/mapaConceptual3.png>
-Package pdftex.def Info: Imagenes/mapaConceptual3.png  used on input line 348.
+Package pdftex.def Info: Imagenes/mapaConceptual3.png  used on input line 350.
 (pdftex.def)             Requested size: 433.62pt x 207.91895pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Imagenes/mapaConceptual4.png, id=1660, 407.6028pt x 192.2382pt>
+<Imagenes/mapaConceptual4.png, id=1847, 407.6028pt x 192.2382pt>
 File: Imagenes/mapaConceptual4.png Graphic file (type png)
 <use Imagenes/mapaConceptual4.png>
-Package pdftex.def Info: Imagenes/mapaConceptual4.png  used on input line 355.
+Package pdftex.def Info: Imagenes/mapaConceptual4.png  used on input line 357.
 (pdftex.def)             Requested size: 433.62pt x 204.5107pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Imagenes/mapaConceptual5.png, id=1661, 440.3652pt x 208.6194pt>
+<Imagenes/mapaConceptual5.png, id=1848, 440.3652pt x 208.6194pt>
 File: Imagenes/mapaConceptual5.png Graphic file (type png)
 <use Imagenes/mapaConceptual5.png>
-Package pdftex.def Info: Imagenes/mapaConceptual5.png  used on input line 362.
+Package pdftex.def Info: Imagenes/mapaConceptual5.png  used on input line 364.
 (pdftex.def)             Requested size: 433.62pt x 205.43242pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/mapaConceptual6.png, id=1662, 441.3288pt x 211.5102pt>
+<Imagenes/mapaConceptual6.png, id=1849, 441.3288pt x 211.5102pt>
 File: Imagenes/mapaConceptual6.png Graphic file (type png)
 <use Imagenes/mapaConceptual6.png>
-Package pdftex.def Info: Imagenes/mapaConceptual6.png  used on input line 369.
+Package pdftex.def Info: Imagenes/mapaConceptual6.png  used on input line 371.
 (pdftex.def)             Requested size: 433.62pt x 207.82077pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 378.
-LaTeX Info: Redefining \% on input line 378.
-[51]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 382.
-LaTeX Info: Redefining \% on input line 382.
- [52 <./Imagenes/mapaConceptual4.png>]
-LaTeX Info: Redefining \. on input line 382.
-LaTeX Info: Redefining \% on input line 382.
+LaTeX Info: Redefining \. on input line 380.
+LaTeX Info: Redefining \% on input line 380.
+[52 <./Imagenes/mapaConceptual4.png>]
+LaTeX Info: Redefining \. on input line 381.
+LaTeX Info: Redefining \% on input line 381.
  [53 <./Imagenes/mapaConceptual5.png> <./Imagenes/mapaConceptual6.png>]
-
-Package natbib Warning: Citation `acosta2019construccion' on page 54 undefined 
-on input line 383.
-
-
-Package natbib Warning: Citation `posadas2019detection' on page 54 undefined on
- input line 385.
-
-
-Package natbib Warning: Citation `gomez2021overview' on page 54 undefined on in
-put line 385.
-
-
-Package natbib Warning: Citation `aragon2020overview' on page 54 undefined on i
-nput line 385.
-
-
-Package natbib Warning: Citation `tretiakov2022detection' on page 54 undefined 
-on input line 387.
-
-
-Package natbib Warning: Citation `blanco2024enhancing' on page 54 undefined on 
-input line 387.
-
-
-Package natbib Warning: Citation `vaswani2017attention' on page 54 undefined on
- input line 391.
-
-
-Package natbib Warning: Citation `devlin2018bert' on page 54 undefined on input
- line 391.
-
-LaTeX Info: Redefining \. on input line 392.
-LaTeX Info: Redefining \% on input line 392.
-[54]
-
-Package natbib Warning: Citation `sanh2019distilbert' on page 55 undefined on i
-nput line 393.
-
-
-Package natbib Warning: Citation `jiao2019tinybert' on page 55 undefined on inp
-ut line 393.
-
-
-Package natbib Warning: Citation `brown2020language' on page 55 undefined on in
-put line 395.
-
-
-Package natbib Warning: Citation `touvron2023llama' on page 55 undefined on inp
-ut line 395.
-
-
-Package natbib Warning: Citation `gemini2023family' on page 55 undefined on inp
-ut line 395.
-
-
-Package natbib Warning: Citation `bai2022constitutional' on page 55 undefined o
-n input line 395.
-
-
-Package natbib Warning: Citation `martinez2021fake' on page 55 undefined on inp
-ut line 397.
-
-
-Package natbib Warning: Citation `blanco2024enhancing' on page 55 undefined on 
-input line 397.
-
-
-Package natbib Warning: Citation `hu2024bad' on page 55 undefined on input line
- 399.
-
-
-Package natbib Warning: Citation `su2023adapting' on page 55 undefined on input
- line 399.
-
-
-Package natbib Warning: Citation `su2023fake' on page 55 undefined on input lin
-e 399.
-
-
-Package natbib Warning: Citation `aqil2021modeling' on page 55 undefined on inp
-ut line 403.
-
-
-Package natbib Warning: Citation `bacanin2023benefits' on page 55 undefined on 
-input line 405.
-
-
-Package natbib Warning: Citation `hurtado2024calibracion' on page 55 undefined 
-on input line 405.
+LaTeX Info: Redefining \. on input line 390.
+LaTeX Info: Redefining \% on input line 390.
+ [54]
+Underfull \vbox (badness 2970) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 406.
 LaTeX Info: Redefining \% on input line 406.
-[55]
+ [55]
+LaTeX Info: Redefining \. on input line 463.
+LaTeX Info: Redefining \% on input line 463.
 
-Package natbib Warning: Citation `das2022heuristic' on page 56 undefined on inp
-ut line 407.
-
-
-Package natbib Warning: Citation `yildirim2023novel' on page 56 undefined on in
-put line 407.
-
-
-Package natbib Warning: Citation `deshai2023unmasking' on page 56 undefined on 
-input line 409.
-
-
-Package natbib Warning: Citation `aqil2021modeling' on page 56 undefined on inp
-ut line 425.
-
-
-Package natbib Warning: Citation `deshai2023unmasking' on page 56 undefined on 
-input line 427.
-
-
-Package natbib Warning: Citation `hidayattullah2020financial' on page 56 undefi
-ned on input line 429.
-
-
-Package natbib Warning: Citation `horak2023gaussian' on page 56 undefined on in
-put line 431.
-
-
-Package natbib Warning: Citation `nasser2021online' on page 56 undefined on inp
-ut line 433.
-
-
-Package natbib Warning: Citation `bacanin2023benefits' on page 56 undefined on 
-input line 435.
-
-
-Package natbib Warning: Citation `yildirim2023novel' on page 56 undefined on in
-put line 437.
-
-
-Package natbib Warning: Citation `yazdi2020improving' on page 56 undefined on i
-nput line 439.
-
-
-Package natbib Warning: Citation `das2022heuristic' on page 56 undefined on inp
-ut line 441.
-
-
-Package natbib Warning: Citation `kapunac2023variable' on page 56 undefined on 
-input line 443.
-
-
-Package natbib Warning: Citation `yasmin2024ensemble' on page 56 undefined on i
-nput line 445.
-
-
-Package natbib Warning: Citation `aqil2021modeling' on page 56 undefined on inp
-ut line 460.
-
-
-Package natbib Warning: Citation `hidayattullah2020financial' on page 56 undefi
-ned on input line 460.
-
-
-Package natbib Warning: Citation `deshai2023unmasking' on page 56 undefined on 
-input line 461.
-
-
-Package natbib Warning: Citation `bacanin2023benefits' on page 56 undefined on 
-input line 461.
-
-
-Package natbib Warning: Citation `yildirim2023novel' on page 56 undefined on in
-put line 462.
-
-LaTeX Info: Redefining \. on input line 467.
-LaTeX Info: Redefining \% on input line 467.
 [56]
-LaTeX Info: Redefining \. on input line 467.
-LaTeX Info: Redefining \% on input line 467.
+LaTeX Info: Redefining \. on input line 463.
+LaTeX Info: Redefining \% on input line 463.
  [57]
-
-Package natbib Warning: Citation `bacanin2023benefits' on page 58 undefined on 
-input line 468.
-
-
-Package natbib Warning: Citation `horak2023gaussian' on page 58 undefined on in
-put line 469.
-
-
-Package natbib Warning: Citation `kapunac2023variable' on page 58 undefined on 
-input line 470.
-
-
-Package natbib Warning: Citation `aqil2021modeling' on page 58 undefined on inp
-ut line 476.
-
-
-Package natbib Warning: Citation `das2022heuristic' on page 58 undefined on inp
-ut line 477.
-
-
-Package natbib Warning: Citation `yasmin2024ensemble' on page 58 undefined on i
-nput line 477.
-
-
-Package natbib Warning: Citation `yildirim2023novel' on page 58 undefined on in
-put line 478.
-
-
-Package natbib Warning: Citation `ali2021fake' on page 58 undefined on input li
-ne 487.
-
-
-Package natbib Warning: Citation `ali2020posttruth' on page 58 undefined on inp
-ut line 487.
-
-
-Package natbib Warning: Citation `carcamo2021fake' on page 58 undefined on inpu
-t line 489.
-
-
-Package natbib Warning: Citation `perez2020fake' on page 58 undefined on input 
-line 489.
-
-LaTeX Info: Redefining \. on input line 490.
-LaTeX Info: Redefining \% on input line 490.
-[58]
-
-Package natbib Warning: Citation `pulido2020new' on page 59 undefined on input 
-line 491.
-
-
-Package natbib Warning: Citation `nasser2021online' on page 59 undefined on inp
-ut line 497.
-
-
-Package natbib Warning: Citation `alvarez2021fraude' on page 59 undefined on in
-put line 497.
-
-
-Package natbib Warning: Citation `hidayattullah2020financial' on page 59 undefi
-ned on input line 499.
-
-
-Package natbib Warning: Citation `cao2020corporate' on page 59 undefined on inp
-ut line 499.
-
-LaTeX Info: Redefining \. on input line 507.
-LaTeX Info: Redefining \% on input line 507.
-[59])
+LaTeX Info: Redefining \. on input line 488.
+LaTeX Info: Redefining \% on input line 488.
+ [58]
+LaTeX Info: Redefining \. on input line 502.
+LaTeX Info: Redefining \% on input line 502.
+ [59])
 LaTeX Info: Redefining \. on input line 100.
 LaTeX Info: Redefining \% on input line 100.
  [60]
@@ -2682,7 +1955,7 @@ LaTeX Info: Redefining \% on input line 100.
 
  (Metodologia/Metodologia.tex
 Cap\'{\i }tulo 4.
-<Imagenes/metodologiaCompleta.png, id=1714, 324.2514pt x 170.5572pt>
+<Imagenes/metodologiaCompleta.png, id=1955, 324.2514pt x 170.5572pt>
 File: Imagenes/metodologiaCompleta.png Graphic file (type png)
 <use Imagenes/metodologiaCompleta.png>
 Package pdftex.def Info: Imagenes/metodologiaCompleta.png  used on input line 1
@@ -2705,16 +1978,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-
-Package natbib Warning: Citation `bondielli2019survey' on page 62 undefined on 
-input line 40.
-
-
-Package natbib Warning: Citation `hu2022deep' on page 62 undefined on input lin
-e 40.
-
 LaTeX Info: Redefining \. on input line 45.
 LaTeX Info: Redefining \% on input line 45.
+
 [62 <./Imagenes/metodologiaCompleta.png>]
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
@@ -2725,82 +1991,19 @@ LaTeX Info: Redefining \% on input line 108.
 LaTeX Info: Redefining \. on input line 137.
 LaTeX Info: Redefining \% on input line 137.
  [65]
-
-Package natbib Warning: Citation `hu2022deep' on page 66 undefined on input lin
-e 141.
-
-
-Package natbib Warning: Citation `posadas2019detection' on page 66 undefined on
- input line 211.
-
-
-Package natbib Warning: Citation `acosta2019construccion' on page 66 undefined 
-on input line 214.
-
-
-Package natbib Warning: Citation `tretiakov2022detection' on page 66 undefined 
-on input line 217.
-
-
-Package natbib Warning: Citation `blanco2024enhancing' on page 66 undefined on 
-input line 220.
-
-
-Package natbib Warning: Citation `posadas2019detection' on page 66 undefined on
- input line 233.
-
-
-Package natbib Warning: Citation `gomez2021overview' on page 66 undefined on in
-put line 233.
-
-
-Package natbib Warning: Citation `aragon2020overview' on page 66 undefined on i
-nput line 233.
-
-
-Package natbib Warning: Citation `ramirez2021spanish' on page 66 undefined on i
-nput line 233.
-
 LaTeX Info: Redefining \. on input line 234.
 LaTeX Info: Redefining \% on input line 234.
-[66]
-
-Package natbib Warning: Citation `acosta2019construccion' on page 67 undefined 
-on input line 237.
-
-
-Package natbib Warning: Citation `acosta2019dataset' on page 67 undefined on in
-put line 237.
-
-
-Package natbib Warning: Citation `zules2019spanish' on page 67 undefined on inp
-ut line 237.
-
-
-Package natbib Warning: Citation `tretiakov2022detection' on page 67 undefined 
-on input line 241.
-
-
-Package natbib Warning: Citation `tretiakov2022noticias' on page 67 undefined o
-n input line 241.
-
-
-Package natbib Warning: Citation `blanco2024enhancing' on page 67 undefined on 
-input line 245.
-
-
-Package natbib Warning: Citation `blanco2024spanish' on page 67 undefined on in
-put line 245.
-
+ [66]
 LaTeX Info: Redefining \. on input line 246.
 LaTeX Info: Redefining \% on input line 246.
-[67]
+ [67]
 LaTeX Info: Redefining \. on input line 362.
 LaTeX Info: Redefining \% on input line 362.
  [68]
 LaTeX Info: Redefining \. on input line 409.
 LaTeX Info: Redefining \% on input line 409.
- [69]
+
+[69]
 Overfull \hbox (4.13824pt too wide) in paragraph at lines 420--421
 \T1/cmr/m/n/12 man-te-ner una pro-por-ción si-mi-lar en-tre no-ti-cias "FALSAS[
 ] -EA-LES"(idealmente
@@ -2815,53 +2018,13 @@ Overfull \hbox (81.65826pt too wide) in paragraph at lines 467--468
 k-inner\T1/cmr/m/n/12 ) 
  []
 
-
-Package natbib Warning: Citation `posadas2019detection' on page 71 undefined on
- input line 488.
-
-
-Package natbib Warning: Citation `gomez2021overview' on page 71 undefined on in
-put line 491.
-
-
-Package natbib Warning: Citation `aragon2020overview' on page 71 undefined on i
-nput line 494.
-
-
-Package natbib Warning: Citation `ramirez2021spanish' on page 71 undefined on i
-nput line 497.
-
-
-Package natbib Warning: Citation `acosta2019construccion' on page 71 undefined 
-on input line 500.
-
-
-Package natbib Warning: Citation `zules2019spanish' on page 71 undefined on inp
-ut line 503.
-
-
-Package natbib Warning: Citation `tretiakov2022detection' on page 71 undefined 
-on input line 506.
-
-
-Package natbib Warning: Citation `tretiakov2022noticias' on page 71 undefined o
-n input line 509.
-
-
-Package natbib Warning: Citation `blanco2024enhancing' on page 71 undefined on 
-input line 512.
-
-
-Package natbib Warning: Citation `blanco2024spanish' on page 71 undefined on in
-put line 515.
-
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
 [71]
 LaTeX Info: Redefining \. on input line 580.
 LaTeX Info: Redefining \% on input line 580.
  [72]
-<Imagenes/balanceo_corpus_explicacion.png, id=1814, 1924.94156pt x 1105.88156pt
+<Imagenes/balanceo_corpus_explicacion.png, id=2087, 1924.94156pt x 1105.88156pt
 >
 File: Imagenes/balanceo_corpus_explicacion.png Graphic file (type png)
 <use Imagenes/balanceo_corpus_explicacion.png>
@@ -2888,101 +2051,21 @@ LaTeX Info: Redefining \% on input line 713.
 LaTeX Info: Redefining \. on input line 744.
 LaTeX Info: Redefining \% on input line 744.
  [77]
-
-Package natbib Warning: Citation `hurtado2024calibracion' on page 78 undefined 
-on input line 769.
-
-
-Package natbib Warning: Citation `bacanin2023benefits' on page 78 undefined on 
-input line 769.
-
-
-Package natbib Warning: Citation `kirkpatrick1983optimization' on page 78 undef
-ined on input line 781.
-
-
-Package natbib Warning: Citation `marti2018multistart' on page 78 undefined on 
-input line 781.
-
-
-Package natbib Warning: Citation `glover1998template' on page 78 undefined on i
-nput line 784.
-
-
-Package natbib Warning: Citation `mladenovic1997variable' on page 78 undefined 
-on input line 787.
-
-
-Package natbib Warning: Citation `holland1992adaptation' on page 78 undefined o
-n input line 790.
-
-
-Package natbib Warning: Citation `kennedy1995particle' on page 78 undefined on 
-input line 793.
-
-
-Package natbib Warning: Citation `eberhart1995particle' on page 78 undefined on
- input line 793.
-
-
-Package natbib Warning: Citation `kirkpatrick1983optimization' on page 78 undef
-ined on input line 803.
-
-
-Package natbib Warning: Citation `marti2018multistart' on page 78 undefined on 
-input line 803.
-
 LaTeX Info: Redefining \. on input line 804.
 LaTeX Info: Redefining \% on input line 804.
-[78]
-
-Package natbib Warning: Citation `glover1998template' on page 79 undefined on i
-nput line 845.
-
+ [78]
 LaTeX Info: Redefining \. on input line 879.
 LaTeX Info: Redefining \% on input line 879.
-[79]
-
-Package natbib Warning: Citation `holland1992adaptation' on page 80 undefined o
-n input line 883.
-
-
-Package natbib Warning: Citation `mladenovic1997variable' on page 80 undefined 
-on input line 921.
-
+ [79]
 LaTeX Info: Redefining \. on input line 952.
 LaTeX Info: Redefining \% on input line 952.
-[80]
-
-Package natbib Warning: Citation `kennedy1995particle' on page 81 undefined on 
-input line 956.
-
-
-Package natbib Warning: Citation `eberhart1995particle' on page 81 undefined on
- input line 956.
-
+ [80]
 LaTeX Info: Redefining \. on input line 1013.
 LaTeX Info: Redefining \% on input line 1013.
-[81]
-
-Package natbib Warning: Citation `vaswani2017attention' on page 82 undefined on
- input line 1049.
-
-
-Package natbib Warning: Citation `sanh2019distilbert' on page 82 undefined on i
-nput line 1083.
-
-
-Package natbib Warning: Citation `devlin2018bert' on page 82 undefined on input
- line 1084.
-
-
-Package natbib Warning: Citation `jiao2019tinybert' on page 82 undefined on inp
-ut line 1085.
-
+ [81]
 LaTeX Info: Redefining \. on input line 1086.
 LaTeX Info: Redefining \% on input line 1086.
-[82]
+ [82]
 Overfull \hbox (3.8647pt too wide) in paragraph at lines 1126--1127
 []\T1/cmr/m/n/12 La con-fi-gu-ra-ción ba-se del mo-de-lo se es-ta-ble-ció con-s
 i-de-ran-do las li-mi-ta-cio-nes compu-
@@ -2997,37 +2080,49 @@ LaTeX Info: Redefining \% on input line 1248.
 LaTeX Info: Redefining \. on input line 1280.
 LaTeX Info: Redefining \% on input line 1280.
  [85]
-LaTeX Info: Redefining \. on input line 1382.
-LaTeX Info: Redefining \% on input line 1382.
+LaTeX Info: Redefining \. on input line 1384.
+LaTeX Info: Redefining \% on input line 1384.
  [86]
-LaTeX Info: Redefining \. on input line 1420.
-LaTeX Info: Redefining \% on input line 1420.
+LaTeX Info: Redefining \. on input line 1397.
+LaTeX Info: Redefining \% on input line 1397.
  [87]
-LaTeX Info: Redefining \. on input line 1523.
-LaTeX Info: Redefining \% on input line 1523.
+LaTeX Info: Redefining \. on input line 1476.
+LaTeX Info: Redefining \% on input line 1476.
  [88]
-LaTeX Info: Redefining \. on input line 1604.
-LaTeX Info: Redefining \% on input line 1604.
+LaTeX Info: Redefining \. on input line 1496.
+LaTeX Info: Redefining \% on input line 1496.
  [89]
-LaTeX Info: Redefining \. on input line 1723.
-LaTeX Info: Redefining \% on input line 1723.
+LaTeX Info: Redefining \. on input line 1529.
+LaTeX Info: Redefining \% on input line 1529.
  [90]
-LaTeX Info: Redefining \. on input line 1723.
-LaTeX Info: Redefining \% on input line 1723.
+LaTeX Info: Redefining \. on input line 1643.
+LaTeX Info: Redefining \% on input line 1643.
  [91]
-LaTeX Info: Redefining \. on input line 1774.
-LaTeX Info: Redefining \% on input line 1774.
- [92])
+LaTeX Info: Redefining \. on input line 1654.
+LaTeX Info: Redefining \% on input line 1654.
+ [92]
+LaTeX Info: Redefining \. on input line 1792.
+LaTeX Info: Redefining \% on input line 1792.
+ [93]
+LaTeX Info: Redefining \. on input line 1888.
+LaTeX Info: Redefining \% on input line 1888.
+ [94]
+LaTeX Info: Redefining \. on input line 1888.
+LaTeX Info: Redefining \% on input line 1888.
+ [95]
+LaTeX Info: Redefining \. on input line 1936.
+LaTeX Info: Redefining \% on input line 1936.
+ [96])
 LaTeX Info: Redefining \. on input line 101.
 LaTeX Info: Redefining \% on input line 101.
- [93]
+ [97]
 \openout2 = `AnalisisResultados/AnalisisResultados.aux'.
 
 
 (AnalisisResultados/AnalisisResultados.tex
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
- [94
+ [98
 
 
 
@@ -3035,60 +2130,41 @@ LaTeX Info: Redefining \% on input line 2.
 ]
 Cap\'{\i }tulo 5.
 
-Package natbib Warning: Citation `hurtado2024calibracion' on page 95 undefined 
-on input line 11.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [95]
-
-Package natbib Warning: Citation `posadas2019detection' on page 96 undefined on
- input line 31.
-
-
-Package natbib Warning: Citation `acosta2019construccion' on page 96 undefined 
-on input line 34.
-
-
-Package natbib Warning: Citation `tretiakov2022detection' on page 96 undefined 
-on input line 37.
-
-
-Package natbib Warning: Citation `blanco2024enhancing' on page 96 undefined on 
-input line 40.
-
+ [99]
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
-[96]
+
+[100]
 LaTeX Info: Redefining \. on input line 133.
 LaTeX Info: Redefining \% on input line 133.
- [97]
+ [101]
 LaTeX Info: Redefining \. on input line 174.
 LaTeX Info: Redefining \% on input line 174.
- [98]
+ [102]
 Underfull \vbox (badness 3323) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 293.
 LaTeX Info: Redefining \% on input line 293.
- [99]
+ [103]
 LaTeX Info: Redefining \. on input line 293.
 LaTeX Info: Redefining \% on input line 293.
 
-[100]
+[104]
 LaTeX Info: Redefining \. on input line 446.
 LaTeX Info: Redefining \% on input line 446.
- [101]
+ [105]
 LaTeX Info: Redefining \. on input line 446.
 LaTeX Info: Redefining \% on input line 446.
- [102]
-<Imagenes/convergencia_recocido_simulado.png, id=2019, 611.4042pt x 390.258pt>
+ [106]
+<Imagenes/convergencia_recocido_simulado.png, id=2365, 611.4042pt x 390.258pt>
 File: Imagenes/convergencia_recocido_simulado.png Graphic file (type png)
 <use Imagenes/convergencia_recocido_simulado.png>
 Package pdftex.def Info: Imagenes/convergencia_recocido_simulado.png  used on i
 nput line 453.
 (pdftex.def)             Requested size: 346.89731pt x 221.43108pt.
-<Imagenes/matriz_confusion_recocido_simulado.png, id=2020, 465.4188pt x 390.258
+<Imagenes/matriz_confusion_recocido_simulado.png, id=2366, 465.4188pt x 390.258
 pt>
 File: Imagenes/matriz_confusion_recocido_simulado.png Graphic file (type png)
 <use Imagenes/matriz_confusion_recocido_simulado.png>
@@ -3101,8 +2177,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 465.
 LaTeX Info: Redefining \% on input line 465.
-[103 <./Imagenes/convergencia_recocido_simulado.png>]
-<Imagenes/convergencia_ss.png, id=2027, 617.1858pt x 390.258pt>
+[107 <./Imagenes/convergencia_recocido_simulado.png>]
+<Imagenes/convergencia_ss.png, id=2373, 617.1858pt x 390.258pt>
 File: Imagenes/convergencia_ss.png Graphic file (type png)
 <use Imagenes/convergencia_ss.png>
 Package pdftex.def Info: Imagenes/convergencia_ss.png  used on input line 473.
@@ -3111,7 +2187,7 @@ Package pdftex.def Info: Imagenes/convergencia_ss.png  used on input line 473.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/matriz_confusion_ss.png, id=2028, 465.4188pt x 390.258pt>
+<Imagenes/matriz_confusion_ss.png, id=2374, 465.4188pt x 390.258pt>
 File: Imagenes/matriz_confusion_ss.png Graphic file (type png)
 <use Imagenes/matriz_confusion_ss.png>
 Package pdftex.def Info: Imagenes/matriz_confusion_ss.png  used on input line 4
@@ -3122,18 +2198,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 485.
 LaTeX Info: Redefining \% on input line 485.
-[104 <./Imagenes/matriz_confusion_recocido_simulado.png>]
+[108 <./Imagenes/matriz_confusion_recocido_simulado.png>]
 LaTeX Info: Redefining \. on input line 490.
 LaTeX Info: Redefining \% on input line 490.
- [105 <./Imagenes/convergencia_ss.png> <./Imagenes/matriz_confusion_ss.png>]
-<Imagenes/convergencia_algoritmo_genÃ©tico.png, id=2043, 611.4042pt x 390.258pt
+ [109 <./Imagenes/convergencia_ss.png> <./Imagenes/matriz_confusion_ss.png>]
+<Imagenes/convergencia_algoritmo_genÃ©tico.png, id=2388, 611.4042pt x 390.258pt
 >
 File: Imagenes/convergencia_algoritmo_genÃ©tico.png Graphic file (type png)
 <use Imagenes/convergencia_algoritmo_genÃ©tico.png>
 Package pdftex.def Info: Imagenes/convergencia_algoritmo_genÃ©tico.png  used on
  input line 493.
 (pdftex.def)             Requested size: 346.89731pt x 221.43108pt.
-<Imagenes/matriz_confusion_algoritmo_genÃ©tico.png, id=2044, 465.4188pt x 390.2
+<Imagenes/matriz_confusion_algoritmo_genÃ©tico.png, id=2389, 465.4188pt x 390.2
 58pt>
 File: Imagenes/matriz_confusion_algoritmo_genÃ©tico.png Graphic file (type png)
 
@@ -3147,8 +2223,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 505.
 LaTeX Info: Redefining \% on input line 505.
-[106 <./Imagenes/convergencia_algoritmo_genÃ©tico.png>]
-<Imagenes/convergencia_vns.png, id=2050, 611.4042pt x 390.258pt>
+[110 <./Imagenes/convergencia_algoritmo_genÃ©tico.png>]
+<Imagenes/convergencia_vns.png, id=2395, 611.4042pt x 390.258pt>
 File: Imagenes/convergencia_vns.png Graphic file (type png)
 <use Imagenes/convergencia_vns.png>
 Package pdftex.def Info: Imagenes/convergencia_vns.png  used on input line 513.
@@ -3158,7 +2234,7 @@ Package pdftex.def Info: Imagenes/convergencia_vns.png  used on input line 513.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/matriz_confusion_vns.png, id=2051, 465.4188pt x 390.258pt>
+<Imagenes/matriz_confusion_vns.png, id=2396, 465.4188pt x 390.258pt>
 File: Imagenes/matriz_confusion_vns.png Graphic file (type png)
 <use Imagenes/matriz_confusion_vns.png>
 Package pdftex.def Info: Imagenes/matriz_confusion_vns.png  used on input line 
@@ -3169,20 +2245,20 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 525.
 LaTeX Info: Redefining \% on input line 525.
-[107 <./Imagenes/matriz_confusion_algoritmo_genÃ©tico.png>]
+[111 <./Imagenes/matriz_confusion_algoritmo_genÃ©tico.png>]
 Overfull \vbox (11.16568pt too high) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
 
-[108 <./Imagenes/convergencia_vns.png> <./Imagenes/matriz_confusion_vns.png>]
-<Imagenes/convergencia_pso.png, id=2065, 617.1858pt x 390.258pt>
+[112 <./Imagenes/convergencia_vns.png> <./Imagenes/matriz_confusion_vns.png>]
+<Imagenes/convergencia_pso.png, id=2411, 617.1858pt x 390.258pt>
 File: Imagenes/convergencia_pso.png Graphic file (type png)
 <use Imagenes/convergencia_pso.png>
 Package pdftex.def Info: Imagenes/convergencia_pso.png  used on input line 533.
 
 (pdftex.def)             Requested size: 346.89731pt x 219.3588pt.
-<Imagenes/matriz_confusion_pso.png, id=2066, 465.4188pt x 390.258pt>
+<Imagenes/matriz_confusion_pso.png, id=2412, 465.4188pt x 390.258pt>
 File: Imagenes/matriz_confusion_pso.png Graphic file (type png)
 <use Imagenes/matriz_confusion_pso.png>
 Package pdftex.def Info: Imagenes/matriz_confusion_pso.png  used on input line 
@@ -3194,46 +2270,30 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 545.
 LaTeX Info: Redefining \% on input line 545.
-[109 <./Imagenes/convergencia_pso.png>]
-
-Package natbib Warning: Citation `hurtado2024calibracion' on page 110 undefined
- on input line 564.
-
+[113 <./Imagenes/convergencia_pso.png>]
 LaTeX Info: Redefining \. on input line 566.
 LaTeX Info: Redefining \% on input line 566.
-[110 <./Imagenes/matriz_confusion_pso.png>]
-
-Package natbib Warning: Citation `yildirim2023novel' on page 111 undefined on i
-nput line 570.
-
+ [114 <./Imagenes/matriz_confusion_pso.png>]
 LaTeX Info: Redefining \. on input line 644.
 LaTeX Info: Redefining \% on input line 644.
-[111]
-
-Package natbib Warning: Citation `blanco2024enhancing' on page 112 undefined on
- input line 660.
-
+ [115]
 LaTeX Info: Redefining \. on input line 690.
 LaTeX Info: Redefining \% on input line 690.
-[112]
-
-Package natbib Warning: Citation `hurtado2024calibracion' on page 113 undefined
- on input line 690.
-
+ [116]
 LaTeX Info: Redefining \. on input line 720.
 LaTeX Info: Redefining \% on input line 720.
-[113]
+ [117]
 Overfull \hbox (10.44398pt too wide) in paragraph at lines 722--722
 []\T1/cmr/bx/n/17.28 Resultados del En-fo-que Trans-for-mer: Dis-til-BERT
  []
 
 LaTeX Info: Redefining \. on input line 776.
 LaTeX Info: Redefining \% on input line 776.
-[114]
+[118]
 LaTeX Info: Redefining \. on input line 867.
 LaTeX Info: Redefining \% on input line 867.
- [115]
-<Imagenes/Entrenamiento/curva_aprendizaje_v7.png, id=2121, 1293.633pt x 498.422
+ [119]
+<Imagenes/Entrenamiento/curva_aprendizaje_v7.png, id=2471, 1293.633pt x 498.422
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v7.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v7.png>
@@ -3246,49 +2306,49 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 907.
 LaTeX Info: Redefining \% on input line 907.
-[116]
+[120]
 LaTeX Info: Redefining \. on input line 926.
 LaTeX Info: Redefining \% on input line 926.
- [117 <./Imagenes/Entrenamiento/curva_aprendizaje_v7.png>]
+ [121 <./Imagenes/Entrenamiento/curva_aprendizaje_v7.png>]
 LaTeX Info: Redefining \. on input line 940.
 LaTeX Info: Redefining \% on input line 940.
- [118]
-<Imagenes/Entrenamiento/curva_aprendizaje_v1.png, id=2152, 1149.093pt x 425.670
+ [122]
+<Imagenes/Entrenamiento/curva_aprendizaje_v1.png, id=2501, 1149.093pt x 425.670
 3pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v1.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v1.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v1.png  used 
 on input line 992.
 (pdftex.def)             Requested size: 195.12767pt x 72.27855pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v2.png, id=2153, 1149.093pt x 426.152
+<Imagenes/Entrenamiento/curva_aprendizaje_v2.png, id=2502, 1149.093pt x 426.152
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v2.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v2.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v2.png  used 
 on input line 993.
 (pdftex.def)             Requested size: 195.12767pt x 72.36035pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v3.png, id=2154, 1149.093pt x 426.152
+<Imagenes/Entrenamiento/curva_aprendizaje_v3.png, id=2503, 1149.093pt x 426.152
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v3.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v3.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v3.png  used 
 on input line 997.
 (pdftex.def)             Requested size: 195.12767pt x 72.36035pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v4.png, id=2155, 1149.093pt x 426.152
+<Imagenes/Entrenamiento/curva_aprendizaje_v4.png, id=2504, 1149.093pt x 426.152
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v4.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v4.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v4.png  used 
 on input line 998.
 (pdftex.def)             Requested size: 195.12767pt x 72.36035pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v5.png, id=2156, 1293.633pt x 498.422
+<Imagenes/Entrenamiento/curva_aprendizaje_v5.png, id=2505, 1293.633pt x 498.422
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v5.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v5.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v5.png  used 
 on input line 1002.
 (pdftex.def)             Requested size: 195.12767pt x 75.17838pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v6.png, id=2157, 1293.633pt x 498.422
+<Imagenes/Entrenamiento/curva_aprendizaje_v6.png, id=2506, 1293.633pt x 498.422
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v6.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v6.png>
@@ -3302,11 +2362,11 @@ on input line 1007.
 (pdftex.def)             Requested size: 390.25534pt x 150.35675pt.
 LaTeX Info: Redefining \. on input line 1029.
 LaTeX Info: Redefining \% on input line 1029.
- [119]
+ [123]
 LaTeX Info: Redefining \. on input line 1029.
 LaTeX Info: Redefining \% on input line 1029.
 
-[120 <./Imagenes/Entrenamiento/curva_aprendizaje_v1.png> <./Imagenes/Entrenamie
+[124 <./Imagenes/Entrenamiento/curva_aprendizaje_v1.png> <./Imagenes/Entrenamie
 nto/curva_aprendizaje_v2.png> <./Imagenes/Entrenamiento/curva_aprendizaje_v3.pn
 g> <./Imagenes/Entrenamiento/curva_aprendizaje_v4.png> <./Imagenes/Entrenamient
 o/curva_aprendizaje_v5.png> <./Imagenes/Entrenamiento/curva_aprendizaje_v6.png>
@@ -3318,64 +2378,64 @@ r/m/n/12 La V5 com-bi-nó la di-vi-sión 70/10/20
 
 LaTeX Info: Redefining \. on input line 1067.
 LaTeX Info: Redefining \% on input line 1067.
-[121]
+[125]
 LaTeX Info: Redefining \. on input line 1127.
 LaTeX Info: Redefining \% on input line 1127.
- [122]
+ [126]
 LaTeX Info: Redefining \. on input line 1191.
 LaTeX Info: Redefining \% on input line 1191.
- [123]
+ [127]
 LaTeX Info: Redefining \. on input line 1191.
 LaTeX Info: Redefining \% on input line 1191.
- [124])
+ [128])
 LaTeX Info: Redefining \. on input line 102.
 LaTeX Info: Redefining \% on input line 102.
- [125]
+ [129]
 \openout2 = `Capitulo6/Capitulo6.aux'.
 
  (Capitulo6/Capitulo6.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [126
+ [130
 
 
 
 
 ]
 Cap\'{\i }tulo 6.
-[127]
+[131]
 LaTeX Info: Redefining \. on input line 33.
 LaTeX Info: Redefining \% on input line 33.
- [128]
+ [132]
 Overfull \hbox (19.18446pt too wide) in paragraph at lines 44--44
 []\T1/cmr/bx/n/17.28 Prototipo 2: Ana-li-za-dor Ba-sa-do en Mo-de-los Trans-
  []
 
 LaTeX Info: Redefining \. on input line 59.
 LaTeX Info: Redefining \% on input line 59.
-[129]
+[133]
 Overfull \hbox (49.81021pt too wide) in paragraph at lines 60--61
 []\T1/cmr/bx/n/12 Predicción: \T1/cmr/m/n/12 Los ten-so-res se pa-san al mo-de-
 lo \T1/cmtt/m/n/12 TFAutoModelForSequenceClassification\T1/cmr/m/n/12 ,
  []
 
-<Imagenes/app_real.png, id=2236, 1924.94156pt x 1105.88156pt>
+<Imagenes/app_real.png, id=2585, 1924.94156pt x 1105.88156pt>
 File: Imagenes/app_real.png Graphic file (type png)
 <use Imagenes/app_real.png>
 Package pdftex.def Info: Imagenes/app_real.png  used on input line 72.
 (pdftex.def)             Requested size: 390.25534pt x 224.1929pt.
-<Imagenes/app_falsa1.png, id=2238, 1920.42468pt x 1103.62312pt>
+<Imagenes/app_falsa1.png, id=2587, 1920.42468pt x 1103.62312pt>
 File: Imagenes/app_falsa1.png Graphic file (type png)
 <use Imagenes/app_falsa1.png>
 Package pdftex.def Info: Imagenes/app_falsa1.png  used on input line 82.
 (pdftex.def)             Requested size: 390.25534pt x 224.2571pt.
 LaTeX Info: Redefining \. on input line 89.
 LaTeX Info: Redefining \% on input line 89.
-[130]
+[134]
 LaTeX Info: Redefining \. on input line 89.
 LaTeX Info: Redefining \% on input line 89.
- [131 <./Imagenes/app_real.png> <./Imagenes/app_falsa1.png>]
-<Imagenes/app_falsa2.png, id=2254, 1924.94156pt x 1102.87032pt>
+ [135 <./Imagenes/app_real.png> <./Imagenes/app_falsa1.png>]
+<Imagenes/app_falsa2.png, id=2604, 1924.94156pt x 1102.87032pt>
 File: Imagenes/app_falsa2.png Graphic file (type png)
 <use Imagenes/app_falsa2.png>
 Package pdftex.def Info: Imagenes/app_falsa2.png  used on input line 92.
@@ -3383,12 +2443,12 @@ Package pdftex.def Info: Imagenes/app_falsa2.png  used on input line 92.
 )
 LaTeX Info: Redefining \. on input line 103.
 LaTeX Info: Redefining \% on input line 103.
- [132 <./Imagenes/app_falsa2.png>]
+ [136 <./Imagenes/app_falsa2.png>]
 \openout2 = `Conclusiones/Conclusiones.aux'.
 
  (Conclusiones/Conclusiones.tex
 Cap\'{\i }tulo 7.
-[133
+[137
 
 
 
@@ -3401,27 +2461,116 @@ rlyStopping \T1/cmr/m/n/12 y \T1/cmtt/m/n/12 ReduceLROnPlateau\T1/cmr/m/n/12 .
 
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
-[134])
+[138])
 LaTeX Info: Redefining \. on input line 104.
 LaTeX Info: Redefining \% on input line 104.
- [135]
+ [139]
 \openout2 = `Anexos/Anexo1.aux'.
 
  (Anexos/Anexo1.tex
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
- [136
+ [140
 
 
 
 
 ]
 Ap\'{e}ndice A.
-) [137] (ICR.bbl)
+) [141] (ICR.bbl
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [142
 
-Package natbib Warning: There were undefined citations.
 
-(ICR.aux (Portada/Portada.aux)
+
+] [143]
+LaTeX Info: Redefining \. on input line 153.
+LaTeX Info: Redefining \% on input line 153.
+ [144]
+Underfull \hbox (badness 1430) in paragraph at lines 156--163
+[]\T1/cmr/m/n/12 Arsenii Tre-tia-kov, Ale-jan-dro Mar-tín Gar-cía, and Da-vid C
+a-ma-cho.  De-
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 156--163
+\T1/cmr/m/n/12 tec-tion of fal-se in-for-ma-tion in Spa-nish using ma-chi-ne le
+ar-ning tech-ni-
+ []
+
+LaTeX Info: Redefining \. on input line 236.
+LaTeX Info: Redefining \% on input line 236.
+[145]
+LaTeX Info: Redefining \. on input line 313.
+LaTeX Info: Redefining \% on input line 313.
+ [146]
+LaTeX Info: Redefining \. on input line 390.
+LaTeX Info: Redefining \% on input line 390.
+ [147]
+Overfull \hbox (99.3442pt too wide) in paragraph at lines 400--406
+\T1/cmtt/m/n/12 improving-[]fake-[]news-[]detection-[]using-[]k-[]means-[]and-[
+]support-[]vector-[]machine-[]approaches$[]\T1/cmr/m/n/12 .
+ []
+
+LaTeX Info: Redefining \. on input line 469.
+LaTeX Info: Redefining \% on input line 469.
+[148]
+Underfull \hbox (badness 1472) in paragraph at lines 500--505
+[]\T1/cmr/m/n/12 Fabricio An-drés Zu-les Acos-ta.  Da-ta-Set Web scra-ping no-t
+i-cias ve-ri-fi-ca-
+ []
+
+
+Underfull \hbox (badness 1028) in paragraph at lines 500--505
+\T1/cmr/m/n/12 das.  Kag-gle, 2019.  URL []$\T1/cmtt/m/n/12 https : / / www . k
+aggle . com / datasets / zulanac /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--547
+[]\T1/cmr/m/n/12 L. Ehr-lin-ger and W. Wöÿ.  To-wards a de-fi-ni-tion of know-l
+ed-ge
+ []
+
+
+Underfull \hbox (badness 3128) in paragraph at lines 541--547
+\T1/cmr/m/n/12 graphs.  In \T1/cmr/m/it/12 SE-MAN-TiCS (Posters, De-mos, SuC-CE
+SS)\T1/cmr/m/n/12 , 2016.  URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--547
+[]$\T1/cmtt/m/n/12 https : / / www . researchgate . net / publication / 3233167
+36 _ Towards _ a _
+ []
+
+LaTeX Info: Redefining \. on input line 557.
+LaTeX Info: Redefining \% on input line 557.
+[149]
+Underfull \hbox (badness 4595) in paragraph at lines 587--593
+[]\T1/cmr/m/n/12 C. E. Manzano-Velasco.  Da-ta-Set Web scra-ping no-ti-cias ve-
+ri-fi-ca-das.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--621
+\T1/cmtt/m/n/12 xmlui / bitstream / handle / 20 . 500 . 12746 / 6834 / CIF % 20
+2023-[]1 % 20-[] % 20Res %
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--621
+\T1/cmtt/m/n/12 C3 % BAmenes % 20ejecutivos _ RIDUM . pdf ? sequence = 1 & isAl
+lowed = y # page = 89$[]\T1/cmr/m/n/12 .
+ []
+
+LaTeX Info: Redefining \. on input line 631.
+LaTeX Info: Redefining \% on input line 631.
+[150])
+LaTeX Info: Redefining \. on input line 116.
+LaTeX Info: Redefining \% on input line 116.
+ [151] (ICR.aux (Portada/Portada.aux)
 LaTeX Info: Redefining \. on input line 17.
 LaTeX Info: Redefining \% on input line 17.
  (Resumen/Resumen.aux)
@@ -3439,13 +2588,13 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ICR.out' has not changed.
-(rerunfilecheck)             Checksum: B07EA2670B40636EF215D3C8A7965F54;44104.
+(rerunfilecheck)             Checksum: 0E5FBCD3C3EC4F5021E984D0D14062C7;44217.
  ) 
 Here is how much of TeX's memory you used:
- 47188 strings out of 474486
- 1089104 string characters out of 5743755
+ 47552 strings out of 474486
+ 1097601 string characters out of 5743755
  1981542 words of memory out of 5000000
- 67948 multiletter control sequences out of 15000+600000
+ 68212 multiletter control sequences out of 15000+600000
  584645 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,19n,93p,2518b,2304s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3499,9 +2648,9 @@ c/amsfonts/cm/cmr8.pfb><C:/Users/gabri/AppData/Local/Programs/MiKTeX/fonts/type
 onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/gabri/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/gabri/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ICR.pdf (171 pages, 7322081 bytes).
+Output written on ICR.pdf (185 pages, 7466992 bytes).
 PDF statistics:
- 3699 PDF objects out of 4296 (max. 8388607)
- 774 named destinations out of 1000 (max. 500000)
- 1446 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4294 PDF objects out of 4296 (max. 8388607)
+ 874 named destinations out of 1000 (max. 500000)
+ 1454 words of extra memory for PDF output out of 10000 (max. 10000000)
 

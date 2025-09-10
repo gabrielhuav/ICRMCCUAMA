@@ -1378,6 +1378,58 @@ La estructura de la matriz de confusión para clasificación binaria se puede re
 
 \subsection{Marco de Métricas de Rendimiento}
 
+\subsubsection{Fundamentación Teórica de las Métricas según el Estado del Arte}
+
+La selección de métricas de evaluación en este trabajo se fundamenta en los estándares establecidos por la literatura especializada y los marcos de evaluación reconocidos internacionalmente. Como establece Gómez-Adorno et al. \cite{gomez2021overview} en su consolidación de métricas FakeDeS para detección en español, la evaluación rigurosa requiere un conjunto comprehensivo de medidas que capturen diferentes aspectos del rendimiento del modelo.
+
+Los talleres CheckThat! organizados en el marco de CLEF \cite{alam2023overview, barron2023clef} han estandarizado el uso de métricas específicas que permiten la comparación directa entre sistemas, estableciendo que las métricas fundamentales para clasificación binaria deben incluir: exactitud, precisión, exhaustividad (recall), F1-Score y especificidad. Esta estandarización garantiza la reproducibilidad y comparabilidad de los resultados con el estado del arte internacional.
+
+\subsubsection{Propiedades Matemáticas de las Métricas Implementadas}
+
+Para que una función pueda considerarse una métrica válida en el contexto matemático, debe cumplir con propiedades formales específicas. Las métricas implementadas en este trabajo satisfacen los siguientes axiomas fundamentales:
+
+\textbf{1. Axioma de Normalización:}
+Todas las métricas están normalizadas en el rango [0,1], donde:
+\begin{itemize}
+    \item Valor 0: Rendimiento mínimo posible
+    \item Valor 1: Rendimiento máximo posible
+    \item Esta propiedad permite comparabilidad directa entre métricas diferentes
+\end{itemize}
+
+\textbf{2. Axioma de Monotonía:}
+Las métricas son monotónicamente crecientes respecto a las predicciones correctas:
+\begin{itemize}
+    \item $\uparrow TP \Rightarrow \uparrow \text{Precisión, Recall, F1-Score, Exactitud}$
+    \item $\uparrow TN \Rightarrow \uparrow \text{Especificidad, Exactitud}$
+    \item Esta propiedad garantiza que mejores predicciones resulten en mejores valores de métrica
+\end{itemize}
+
+\textbf{3. Axioma de Sensibilidad:}
+Las métricas reaccionan apropiadamente a cambios en los componentes de la matriz de confusión:
+\begin{itemize}
+    \item Cambios en FP afectan negativamente a Precisión y Especificidad
+    \item Cambios en FN afectan negativamente a Recall y Exactitud
+    \item Esta sensibilidad permite detectar diferentes tipos de errores del modelo
+\end{itemize}
+
+\textbf{4. Axioma de Complementariedad:}
+Las métricas capturan aspectos complementarios del rendimiento:
+\begin{itemize}
+    \item Precisión mide calidad de predicciones positivas
+    \item Recall mide cobertura de casos positivos reales
+    \item F1-Score equilibra ambos aspectos mediante media armónica
+    \item Especificidad mide calidad en clase negativa
+\end{itemize}
+
+\textbf{5. Propiedad de Consistencia con Literatura:}
+Las definiciones implementadas son consistentes con:
+\begin{itemize}
+    \item Marcos de evaluación IberLEF \cite{aragon2020overview}
+    \item Estándares CheckThat! CLEF \cite{barron2023clef}
+    \item Métricas utilizadas en trabajos de referencia \cite{posadas2019detection, blanco2024enhancing}
+    \item Protocolos de evaluación en competencias internacionales
+\end{itemize}
+
 Utilizando las definiciones anteriores, el rendimiento se evaluó con un conjunto comprehensivo de métricas estándar. La Tabla \ref{tab:metricas_evaluacion} presenta la definición formal y el propósito de cada métrica implementada.
 
 \begin{table}[htbp]
@@ -1410,6 +1462,44 @@ Utilizando las definiciones anteriores, el rendimiento se evaluó con un conjunt
 \label{tab:metricas_evaluacion}
 \end{table}
 
+\subsubsection{Validación Matemática de las Métricas Implementadas}
+
+Para garantizar la solidez matemática del marco de evaluación, se verificó que cada métrica cumple con las propiedades formales establecidas en el estado del arte:
+
+\textbf{1. Verificación de Dominios y Rangos:}
+\begin{align}
+\text{Exactitud} &= \frac{TP + TN}{TP + TN + FP + FN} \in [0,1] \\
+\text{Precisión} &= \frac{TP}{TP + FP} \in [0,1] \quad \text{si } TP + FP > 0 \\
+\text{Recall} &= \frac{TP}{TP + FN} \in [0,1] \quad \text{si } TP + FN > 0 \\
+\text{F1} &= \frac{2 \cdot \text{Precisión} \cdot \text{Recall}}{\text{Precisión} + \text{Recall}} \in [0,1] \\
+\text{Especificidad} &= \frac{TN}{TN + FP} \in [0,1] \quad \text{si } TN + FP > 0
+\end{align}
+
+\textbf{2. Verificación de Casos Límite:}
+\begin{itemize}
+    \item \textbf{Rendimiento perfecto:} $TP > 0, TN > 0, FP = 0, FN = 0 \Rightarrow$ Todas las métricas = 1
+    \item \textbf{Rendimiento nulo:} $TP = 0, TN = 0, FP > 0, FN > 0 \Rightarrow$ Exactitud = 0
+    \item \textbf{Casos degenerados:} Manejo apropiado cuando denominadores son cero
+\end{itemize}
+
+\textbf{3. Consistencia con Estándares Internacionales:}
+Las fórmulas implementadas son idénticas a las utilizadas en:
+\begin{itemize}
+    \item Competencias IberLEF 2020-2021 \cite{aragon2020overview, gomez2021overview}
+    \item Evaluaciones CheckThat! CLEF \cite{barron2023clef}
+    \item Trabajos de referencia en detección en español \cite{posadas2019detection, blanco2024enhancing}
+    \item Estándares scikit-learn para reproducibilidad
+\end{itemize}
+
+\textbf{4. Propiedades de Agregación:}
+Las métricas permiten agregación estadística válida:
+\begin{itemize}
+    \item Media aritmética para comparar rendimiento promedio entre modelos
+    \item Desviación estándar para medir estabilidad del rendimiento
+    \item Intervalos de confianza para análisis de significancia estadística
+    \item Ranking ordenado para selección de modelo óptimo
+\end{itemize}
+
 \subsubsection{Consideraciones Específicas para Detección de Noticias Falsas}
 
 En el contexto de detección de noticias falsas, cada tipo de error tiene implicaciones específicas:
@@ -1419,6 +1509,44 @@ En el contexto de detección de noticias falsas, cada tipo de error tiene implic
     \item \textbf{Falsos Negativos (FN):} Contenido falso no detectado - permite propagación de desinformación y daño social
     \item \textbf{Trade-off crítico:} Balance entre detectar desinformación vs. preservar libertad de información
     \item \textbf{Contexto de aplicación:} En sistemas automatizados, los FP pueden ser más tolerables que los FN si existe revisión humana posterior
+\end{itemize}
+
+\subsubsection{Alineación con Métricas del Estado del Arte}
+
+La selección e implementación de métricas en este trabajo está directamente alineada con los estándares establecidos por la literatura especializada en detección de noticias falsas en español:
+
+\textbf{1. Consistencia con Competencias IberLEF:}
+\begin{itemize}
+    \item \textbf{Posadas-Durán et al. \cite{posadas2019detection}:} Utilizan exactitud, precisión, recall y F1-Score como métricas principales
+    \item \textbf{Aragón et al. \cite{aragon2020overview}:} Establecen F1-Score como métrica de ranking principal en IberLEF 2020
+    \item \textbf{Gómez-Adorno et al. \cite{gomez2021overview}:} Consolidan el uso de F1-Score macro-averaged para comparación entre sistemas
+    \item \textbf{Este trabajo:} Implementa las mismas métricas garantizando comparabilidad directa
+\end{itemize}
+
+\textbf{2. Alineación con Marcos Internacionales:}
+\begin{itemize}
+    \item \textbf{CheckThat! CLEF \cite{barron2023clef}:} Establece precisión y recall como métricas fundamentales
+    \item \textbf{Evaluaciones multimodales \cite{alam2023overview}:} Requieren métricas balanceadas para evitar sesgos
+    \item \textbf{Estándares scikit-learn:} Garantizan reproducibilidad y comparabilidad internacional
+    \item \textbf{Este trabajo:} Adopta estándares internacionales para máxima reproducibilidad
+\end{itemize}
+
+\textbf{3. Justificación Específica por Métrica:}
+\begin{itemize}
+    \item \textbf{F1-Score:} Métrica principal siguiendo a Gómez-Adorno et al. \cite{gomez2021overview} por su balance entre precisión y recall
+    \item \textbf{Exactitud:} Incluida para comparabilidad con trabajos clásicos, con advertencia sobre limitaciones en datos desbalanceados
+    \item \textbf{Precisión:} Crítica para evaluar confiabilidad de detecciones positivas, siguiendo a Posadas-Durán et al. \cite{posadas2019detection}
+    \item \textbf{Recall:} Fundamental para evaluar cobertura de detección, alineado con estándares CheckThat! \cite{barron2023clef}
+    \item \textbf{Especificidad:} Añadida para análisis comprehensivo de rendimiento en clase negativa
+\end{itemize}
+
+\textbf{4. Validación mediante Comparación Benchmarking:}
+Las métricas implementadas permiten comparación directa con:
+\begin{itemize}
+    \item Resultados reportados en IberLEF 2020-2021
+    \item Baselines establecidos por Tretiakov et al. \cite{tretiakov2022detection}
+    \item Rendimiento de modelos transformer reportado por Blanco-Fernández et al. \cite{blanco2024enhancing}
+    \item Estándares de la comunidad científica internacional
 \end{itemize}
 
 \subsection{Criterios de Selección del Mejor Modelo}

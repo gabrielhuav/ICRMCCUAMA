@@ -31,38 +31,38 @@
 \contentsline {table}{\numberline {4.20}{\ignorespaces Protocolo de evaluación implementado para ambos paradigmas.}}{86}{table.4.20}%
 \contentsline {table}{\numberline {4.21}{\ignorespaces Definición de categorías de la matriz de confusión en el contexto de detección de noticias falsas.}}{87}{table.4.21}%
 \contentsline {table}{\numberline {4.22}{\ignorespaces Estructura de la matriz de confusión para clasificación binaria.}}{87}{table.4.22}%
-\contentsline {table}{\numberline {4.23}{\ignorespaces Marco de métricas de evaluación para clasificación binaria de noticias falsas.}}{87}{table.4.23}%
-\contentsline {table}{\numberline {4.24}{\ignorespaces Criterios multi-dimensionales para selección del modelo óptimo.}}{88}{table.4.24}%
-\contentsline {table}{\numberline {4.25}{\ignorespaces Protocolo de validación cruzada para robustez estadística.}}{88}{table.4.25}%
-\contentsline {table}{\numberline {4.26}{\ignorespaces Métricas de benchmarking computacional para evaluación de eficiencia.}}{89}{table.4.26}%
-\contentsline {table}{\numberline {4.27}{\ignorespaces Estructura del reporte de resultados comparativo.}}{89}{table.4.27}%
-\contentsline {table}{\numberline {4.28}{\ignorespaces Especificaciones del entorno de desarrollo para algoritmos metaheurísticos.}}{90}{table.4.28}%
-\contentsline {table}{\numberline {4.29}{\ignorespaces Especificaciones detalladas del hardware utilizado para entrenamiento de DistilBERT.}}{90}{table.4.29}%
-\contentsline {table}{\numberline {4.30}{\ignorespaces Optimizaciones de hardware implementadas para maximizar eficiencia.}}{91}{table.4.30}%
-\contentsline {table}{\numberline {4.31}{\ignorespaces Stack tecnológico completo utilizado en el desarrollo del proyecto.}}{91}{table.4.31}%
-\contentsline {table}{\numberline {4.32}{\ignorespaces Marco ético implementado para el desarrollo responsable de la herramienta.}}{92}{table.4.32}%
-\contentsline {table}{\numberline {4.33}{\ignorespaces Artefactos generados para facilitar la reproducibilidad completa del estudio.}}{93}{table.4.33}%
+\contentsline {table}{\numberline {4.23}{\ignorespaces Marco de métricas de evaluación para clasificación binaria de noticias falsas.}}{89}{table.4.23}%
+\contentsline {table}{\numberline {4.24}{\ignorespaces Criterios multi-dimensionales para selección del modelo óptimo.}}{92}{table.4.24}%
+\contentsline {table}{\numberline {4.25}{\ignorespaces Protocolo de validación cruzada para robustez estadística.}}{92}{table.4.25}%
+\contentsline {table}{\numberline {4.26}{\ignorespaces Métricas de benchmarking computacional para evaluación de eficiencia.}}{92}{table.4.26}%
+\contentsline {table}{\numberline {4.27}{\ignorespaces Estructura del reporte de resultados comparativo.}}{93}{table.4.27}%
+\contentsline {table}{\numberline {4.28}{\ignorespaces Especificaciones del entorno de desarrollo para algoritmos metaheurísticos.}}{93}{table.4.28}%
+\contentsline {table}{\numberline {4.29}{\ignorespaces Especificaciones detalladas del hardware utilizado para entrenamiento de DistilBERT.}}{94}{table.4.29}%
+\contentsline {table}{\numberline {4.30}{\ignorespaces Optimizaciones de hardware implementadas para maximizar eficiencia.}}{94}{table.4.30}%
+\contentsline {table}{\numberline {4.31}{\ignorespaces Stack tecnológico completo utilizado en el desarrollo del proyecto.}}{95}{table.4.31}%
+\contentsline {table}{\numberline {4.32}{\ignorespaces Marco ético implementado para el desarrollo responsable de la herramienta.}}{95}{table.4.32}%
+\contentsline {table}{\numberline {4.33}{\ignorespaces Artefactos generados para facilitar la reproducibilidad completa del estudio.}}{96}{table.4.33}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Corpus académicos utilizados para la construcción del conjunto de datos unificado.}}{96}{table.5.1}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Configuración detallada de parámetros para los cinco algoritmos metaheurísticos implementados.}}{97}{table.5.2}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Función de evaluación común utilizada por todos los algoritmos metaheurísticos.}}{98}{table.5.3}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Pseudocódigo completo del algoritmo Multi-Start Simulated Annealing (MSA).}}{99}{table.5.4}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Pseudocódigo completo del algoritmo Scatter Search (SS).}}{100}{table.5.5}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Pseudocódigo completo del Algoritmo Genético (GA).}}{101}{table.5.6}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Pseudocódigo completo del algoritmo Variable Neighborhood Search (VNS).}}{102}{table.5.7}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces Pseudocódigo completo del algoritmo Particle Swarm Optimization (PSO).}}{102}{table.5.8}%
-\contentsline {table}{\numberline {5.9}{\ignorespaces Resultados comparativos finales de los cinco algoritmos metaheurísticos implementados usando métricas macro promedio.}}{111}{table.5.9}%
-\contentsline {table}{\numberline {5.10}{\ignorespaces Análisis de fortalezas y debilidades de cada algoritmo metaheurístico basado en métricas macro.}}{111}{table.5.10}%
-\contentsline {table}{\numberline {5.11}{\ignorespaces Comparación de rendimiento entre enfoques metaheurísticos y modelos de lenguaje usando métricas macro.}}{112}{table.5.11}%
-\contentsline {table}{\numberline {5.12}{\ignorespaces Composición del corpus expandido utilizado para el entrenamiento de DistilBERT.}}{115}{table.5.12}%
-\contentsline {table}{\numberline {5.13}{\ignorespaces Configuración arquitectónica del modelo DistilBERT implementado.}}{115}{table.5.13}%
-\contentsline {table}{\numberline {5.14}{\ignorespaces Técnicas de regularización implementadas en la configuración V7 final.}}{116}{table.5.14}%
-\contentsline {table}{\numberline {5.15}{\ignorespaces Resumen de versiones experimentales de DistilBERT con evolución de estrategias y resultados reales del desarrollo.}}{119}{table.5.15}%
-\contentsline {table}{\numberline {5.16}{\ignorespaces Visualización comparativa de convergencia y métricas para todas las versiones experimentales de DistilBERT.}}{120}{table.5.16}%
-\contentsline {table}{\numberline {5.17}{\ignorespaces Evolución de configuraciones y resultados entre versiones experimentales.}}{121}{table.5.17}%
-\contentsline {table}{\numberline {5.18}{\ignorespaces Pseudocódigo simplificado del algoritmo DistilBERT V7.}}{124}{table.5.18}%
-\contentsline {table}{\numberline {5.19}{\ignorespaces Métricas finales del modelo DistilBERT optimizado.}}{125}{table.5.19}%
-\contentsline {table}{\numberline {5.20}{\ignorespaces Comparación DistilBERT vs. mejor algoritmo metaheurístico.}}{125}{table.5.20}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Corpus académicos utilizados para la construcción del conjunto de datos unificado.}}{100}{table.5.1}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Configuración detallada de parámetros para los cinco algoritmos metaheurísticos implementados.}}{101}{table.5.2}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Función de evaluación común utilizada por todos los algoritmos metaheurísticos.}}{102}{table.5.3}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Pseudocódigo completo del algoritmo Multi-Start Simulated Annealing (MSA).}}{103}{table.5.4}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Pseudocódigo completo del algoritmo Scatter Search (SS).}}{104}{table.5.5}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Pseudocódigo completo del Algoritmo Genético (GA).}}{105}{table.5.6}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Pseudocódigo completo del algoritmo Variable Neighborhood Search (VNS).}}{106}{table.5.7}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Pseudocódigo completo del algoritmo Particle Swarm Optimization (PSO).}}{106}{table.5.8}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces Resultados comparativos finales de los cinco algoritmos metaheurísticos implementados usando métricas macro promedio.}}{115}{table.5.9}%
+\contentsline {table}{\numberline {5.10}{\ignorespaces Análisis de fortalezas y debilidades de cada algoritmo metaheurístico basado en métricas macro.}}{115}{table.5.10}%
+\contentsline {table}{\numberline {5.11}{\ignorespaces Comparación de rendimiento entre enfoques metaheurísticos y modelos de lenguaje usando métricas macro.}}{116}{table.5.11}%
+\contentsline {table}{\numberline {5.12}{\ignorespaces Composición del corpus expandido utilizado para el entrenamiento de DistilBERT.}}{119}{table.5.12}%
+\contentsline {table}{\numberline {5.13}{\ignorespaces Configuración arquitectónica del modelo DistilBERT implementado.}}{119}{table.5.13}%
+\contentsline {table}{\numberline {5.14}{\ignorespaces Técnicas de regularización implementadas en la configuración V7 final.}}{120}{table.5.14}%
+\contentsline {table}{\numberline {5.15}{\ignorespaces Resumen de versiones experimentales de DistilBERT con evolución de estrategias y resultados reales del desarrollo.}}{123}{table.5.15}%
+\contentsline {table}{\numberline {5.16}{\ignorespaces Visualización comparativa de convergencia y métricas para todas las versiones experimentales de DistilBERT.}}{124}{table.5.16}%
+\contentsline {table}{\numberline {5.17}{\ignorespaces Evolución de configuraciones y resultados entre versiones experimentales.}}{125}{table.5.17}%
+\contentsline {table}{\numberline {5.18}{\ignorespaces Pseudocódigo simplificado del algoritmo DistilBERT V7.}}{128}{table.5.18}%
+\contentsline {table}{\numberline {5.19}{\ignorespaces Métricas finales del modelo DistilBERT optimizado.}}{129}{table.5.19}%
+\contentsline {table}{\numberline {5.20}{\ignorespaces Comparación DistilBERT vs. mejor algoritmo metaheurístico.}}{129}{table.5.20}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

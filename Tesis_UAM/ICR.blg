@@ -1,48 +1,74 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: ICR.aux
-I found no \citation commands---while reading file ICR.aux
-I found no \bibdata command---while reading file ICR.aux
-I found no \bibstyle command---while reading file ICR.aux
-You've used 0 entries,
-            0 wiz_defined-function locations,
-            83 strings with 480 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
-int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+Reallocating 'name_of_file' (item size: 1) to 20 items.
+A level-1 auxiliary file: Portada/Portada.aux
+Reallocating 'name_of_file' (item size: 1) to 20 items.
+A level-1 auxiliary file: Resumen/Resumen.aux
+Reallocating 'name_of_file' (item size: 1) to 32 items.
+A level-1 auxiliary file: Agradecimientos/Dedicatoria.aux
+Reallocating 'name_of_file' (item size: 1) to 36 items.
+A level-1 auxiliary file: Agradecimientos/Agradecimientos.aux
+Reallocating 'name_of_file' (item size: 1) to 30 items.
+A level-1 auxiliary file: Introduccion/Introduccion.aux
+Reallocating 'name_of_file' (item size: 1) to 30 items.
+A level-1 auxiliary file: MarcoTeorico/MarcoTeorico.aux
+Reallocating 'name_of_file' (item size: 1) to 32 items.
+A level-1 auxiliary file: EstadoDelArte/EstadoDelArte.aux
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+A level-1 auxiliary file: Metodologia/Metodologia.aux
+Reallocating 'name_of_file' (item size: 1) to 42 items.
+A level-1 auxiliary file: AnalisisResultados/AnalisisResultados.aux
+Reallocating 'name_of_file' (item size: 1) to 24 items.
+A level-1 auxiliary file: Capitulo6/Capitulo6.aux
+Reallocating 'name_of_file' (item size: 1) to 30 items.
+A level-1 auxiliary file: Conclusiones/Conclusiones.aux
+Reallocating 'name_of_file' (item size: 1) to 18 items.
+A level-1 auxiliary file: Anexos/Anexo1.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: unsrtnat.bst
+Reallocating 'name_of_file' (item size: 1) to 24 items.
+Database file #1: Referencias/Referencias.bib
+Warning--there's a number but no volume in alvarez2021fraude
+You've used 76 entries,
+            2481 wiz_defined-function locations,
+            1077 strings with 25177 characters,
+and the built_in function-call counts, 33275 in all, are:
+= -- 2724
+> -- 2240
+< -- 44
++ -- 837
+- -- 680
+* -- 2792
+:= -- 5592
+add.period$ -- 362
+call.type$ -- 76
+change.case$ -- 158
+chr.to.int$ -- 71
+cite$ -- 77
+duplicate$ -- 1458
+empty$ -- 2643
+format.name$ -- 776
+if$ -- 6963
+int.to.chr$ -- 6
+int.to.str$ -- 77
+missing$ -- 47
+newline$ -- 514
+num.names$ -- 234
+pop$ -- 622
+preamble$ -- 1
+purify$ -- 76
 quote$ -- 0
-skip$ -- 0
+skip$ -- 887
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 1026
+swap$ -- 285
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
+type$ -- 529
+warning$ -- 1
+while$ -- 228
 width$ -- 0
-write$ -- 0
-(There were 3 error messages)
+write$ -- 1232
+(There was 1 warning)
