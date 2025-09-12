@@ -490,9 +490,6 @@ INPUT .\ICR.gls
 INPUT .\ICR.gls
 INPUT ICR.gls
 INPUT C:\Users\gabri\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
-INPUT .\ICR.gls
-INPUT .\ICR.gls
-INPUT ICR.gls
 INPUT .\Introduccion\Introduccion.tex
 INPUT .\Introduccion\Introduccion.tex
 OUTPUT Introduccion\Introduccion.aux

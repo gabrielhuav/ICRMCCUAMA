@@ -9,16 +9,18 @@
 \newacronym{nlp}{NLP}{Natural Language Processing}
 \newacronym{tfidf}{TF-IDF}{Term Frequency-Inverse Document Frequency}
 \newacronym{bert}{BERT}{Bidirectional Encoder Representations from Transformers}
+\newacronym{distilbert}{DistilBERT}{Distilled Bidirectional Encoder Representations from Transformers}
 \newacronym{gpt}{GPT}{Generative Pre-trained Transformer}
 \newacronym{rnn}{RNN}{Redes Neuronales Recurrentes}
 \newacronym{lstm}{LSTM}{Long Short-Term Memory}
 \newacronym{cnn}{CNN}{Redes Neuronales Convolucionales}
 \newacronym{svm}{SVM}{Support Vector Machine}
-\newacronym{ag}{AG}{Algoritmo Genético}
 \newacronym{pso}{PSO}{Particle Swarm Optimization}
 \newacronym{sa}{SA}{Simulated Annealing (Recocido Simulado)}
+\newacronym{msa}{MSA}{Multi-Start Simulated Annealing (Recocido Multiarranque)}
 \newacronym{vns}{VNS}{Variable Neighborhood Search}
 \newacronym{ss}{SS}{Scatter Search}
+\newacronym{ga}{GA}{Genetic Algorithm (Algoritmo Genético)}
 \newacronym{ia}{IA}{Inteligencia Artificial}
 \newacronym{ml}{ML}{Machine Learning}
 \newacronym{dl}{DL}{Deep Learning}
@@ -29,6 +31,15 @@
 \newacronym{css}{CSS}{Cascading Style Sheets}
 \newacronym{http}{HTTP}{HyperText Transfer Protocol}
 \newacronym{url}{URL}{Uniform Resource Locator}
+\newacronym{gpu}{GPU}{Graphics Processing Unit}
+\newacronym{cpu}{CPU}{Central Processing Unit}
+\newacronym{ram}{RAM}{Random Access Memory}
+\newacronym{auc}{AUC}{Area Under the Curve}
+\newacronym{roc}{ROC}{Receiver Operating Characteristic}
+\newacronym{tp}{TP}{True Positive (Verdadero Positivo)}
+\newacronym{tn}{TN}{True Negative (Verdadero Negativo)}
+\newacronym{fp}{FP}{False Positive (Falso Positivo)}
+\newacronym{fn}{FN}{False Negative (Falso Negativo)}
 
 % =============================================================================
 % TÉRMINOS FUNDAMENTALES DE LA INVESTIGACIÓN
@@ -81,6 +92,11 @@
 \newglossaryentry{tokenizacion}{
 	name={Tokenización},
 	description={Proceso de dividir texto en unidades más pequeñas llamadas tokens, que pueden ser palabras, subpalabras, caracteres o n-gramas. Es el primer paso en el preprocesamiento de texto para análisis computacional.}
+}
+
+\newglossaryentry{bolsadepalabras}{
+	name={Bolsa de Palabras (Bag of Words)},
+	description={Modelo de representación de texto que describe la ocurrencia de palabras en un documento, ignorando el orden y la estructura gramatical. Cada documento se representa como un vector donde cada dimensión corresponde a una palabra del vocabulario y su valor indica la frecuencia de aparición de esa palabra. Es fundamental para técnicas como TF-IDF y constituye la base para muchos algoritmos de clasificación de texto tradicionales.}
 }
 
 \newglossaryentry{stemming}{
@@ -163,12 +179,12 @@
 
 \newglossaryentry{precision}{
 	name={Precisión},
-	description={Métrica que mide la proporción de predicciones positivas que fueron correctas. Se calcula como: Precisión = VP / (VP + FP), donde VP son verdaderos positivos y FP son falsos positivos.}
+	description={Métrica que mide la proporción de predicciones positivas que fueron correctas. Se calcula como: Precisión = \acrshort{tp} / (\acrshort{tp} + \acrshort{fp}).}
 }
 
 \newglossaryentry{recall}{
 	name={Sensibilidad (Recall)},
-	description={Métrica que mide la proporción de casos positivos reales que fueron correctamente identificados. Se calcula como: Recall = VP / (VP + FN), donde FN son falsos negativos.}
+	description={Métrica que mide la proporción de casos positivos reales que fueron correctamente identificados. Se calcula como: Recall = \acrshort{tp} / (\acrshort{tp} + \acrshort{fn}).}
 }
 
 \newglossaryentry{fscore}{
@@ -178,12 +194,12 @@
 
 \newglossaryentry{accuracy}{
 	name={Exactitud (Accuracy)},
-	description={Proporción de predicciones correctas sobre el total de predicciones. Se calcula como: Accuracy = (VP + VN) / (VP + VN + FP + FN), donde VN son verdaderos negativos.}
+	description={Proporción de predicciones correctas sobre el total de predicciones. Se calcula como: Accuracy = (\acrshort{tp} + \acrshort{tn}) / (\acrshort{tp} + \acrshort{tn} + \acrshort{fp} + \acrshort{fn}).}
 }
 
-\newglossaryentry{auc}{
+\newglossaryentry{aucroc}{
 	name={AUC-ROC},
-	description={Área bajo la curva ROC (Receiver Operating Characteristic). Mide la capacidad del modelo para distinguir entre clases. Un valor de 1.0 indica un clasificador perfecto, mientras que 0.5 indica rendimiento aleatorio.}
+	description={Área bajo la curva \acrshort{roc} (\acrshort{auc} de \acrshort{roc}). Mide la capacidad del modelo para distinguir entre clases. Un valor de 1.0 indica un clasificador perfecto, mientras que 0.5 indica rendimiento aleatorio.}
 }
 
 \newglossaryentry{matrizconfusion}{

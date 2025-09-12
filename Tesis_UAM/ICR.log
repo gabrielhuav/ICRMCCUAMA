@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.8)  12 SEP 2025 15:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.8)  12 SEP 2025 17:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1124,7 +1124,7 @@ your preamble.
 \openout2 = `Portada/Portada.aux'.
 
 (Portada/Portada.tex
-<./Imagenes/uam.png, id=697, 202.8378pt x 147.4308pt>
+<./Imagenes/uam.png, id=693, 202.8378pt x 147.4308pt>
 File: ./Imagenes/uam.png Graphic file (type png)
 <use ./Imagenes/uam.png>
 Package pdftex.def Info: ./Imagenes/uam.png  used on input line 5.
@@ -1187,19 +1187,19 @@ LaTeX Info: Redefining \% on input line 1.
  [9
 
 ]
-Overfull \hbox (5.18776pt too wide) in paragraph at lines 109--109
+Overfull \hbox (5.18776pt too wide) in paragraph at lines 107--107
  [][] [][]\T1/cmr/m/n/12 Algoritmos Me-ta-heu-rís-ti-cos: Fun-da-men-tos Teó-ri
 -cos y Apli-ca-cio-nes Prác- 
  []
 
-LaTeX Info: Redefining \. on input line 112.
-LaTeX Info: Redefining \% on input line 112.
+LaTeX Info: Redefining \. on input line 113.
+LaTeX Info: Redefining \% on input line 113.
 [10]
-LaTeX Info: Redefining \. on input line 176.
-LaTeX Info: Redefining \% on input line 176.
+LaTeX Info: Redefining \. on input line 178.
+LaTeX Info: Redefining \% on input line 178.
  [11]
-LaTeX Info: Redefining \. on input line 266.
-LaTeX Info: Redefining \% on input line 266.
+LaTeX Info: Redefining \. on input line 289.
+LaTeX Info: Redefining \% on input line 289.
  [12])
 \tf@toc=\write7
 \openout7 = `ICR.toc'.
@@ -1245,6 +1245,18 @@ LaTeX Info: Redefining \% on input line 76.
 ]
 (ICR.gls
 
+Package glossaries Warning: Glossary entry `ag' has not been defined on input l
+ine 8.
+
+
+Package glossaries Warning: Glossary entry `ag' has not been defined on input l
+ine 8.
+
+
+Package glossaries Warning: Glossary entry `ag' has not been defined on input l
+ine 8.
+
+
 Package glossaries Warning: Glossary entry `bow' has not been defined on input 
 line 23.
 
@@ -1260,511 +1272,135 @@ line 23.
 
 
 ]
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
+LaTeX Info: Redefining \. on input line 85.
+LaTeX Info: Redefining \% on input line 85.
  [22]
 LaTeX Info: Redefining \. on input line 129.
 LaTeX Info: Redefining \% on input line 129.
  [23]
-LaTeX Info: Redefining \. on input line 179.
-LaTeX Info: Redefining \% on input line 179.
- [24])
-LaTeX Info: Redefining \. on input line 80.
-LaTeX Info: Redefining \% on input line 80.
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+141.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+141.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+141.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+148.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+148.
+
+
+Package glossaries-extra Warning: Base acronym command \acrshort should not be 
+used with new abbreviation definitions. Use \glsxtrshort instead on input line 
+148.
+
+LaTeX Info: Redefining \. on input line 186.
+LaTeX Info: Redefining \% on input line 186.
+[24])
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
  [25]
-LaTeX Info: Redefining \. on input line 80.
-LaTeX Info: Redefining \% on input line 80.
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
  [26
-
-] (ICR.gls
-pdfTeX warning (ext4): destination with the same identifier (name{glo:ag}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.8   \setentrycounter{page}\glsnumberformat{24}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:api}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.10 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:attention
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.12 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:auc}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.14 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:bert}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.19 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:bias}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.21 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-
-Package glossaries Warning: Glossary entry `bow' has not been defined on input 
-line 23.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{glo:bow}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.23 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-
-Package glossaries Warning: Glossary entry `bow' has not been defined on input 
-line 23.
-
-
-Package glossaries Warning: Glossary entry `bow' has not been defined on input 
-line 23.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{glo:bulo}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.25   \setentrycounter{page}\glsnumberformat{1}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:cnn}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.30 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:convergen
-cia}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.32 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:corpus}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.34 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:css}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.36 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:csv}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.38 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:dataset})
- has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.43 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  % [27
-
-
-]
-pdfTeX warning (ext4): destination with the same identifier (name{glo:deepfake}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.45   \setentrycounter{page}\glsnumberformat{1}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:desinform
-acion}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.47   \setentrycounter{page}\glsnumberformat{1}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:dl}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.50   \setentrycounter{page}\glsnumberformat{1}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:embedding
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.55 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:espaciobu
-squeda}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.57 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:exploraci
-on}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.59 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:explotaci
-on}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.61 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:factcheck
-ing}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.66 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:finetunin
-g}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.68 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:fscore}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.70 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:funcionob
-jetivo}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.72 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:gpt}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.78   \setentrycounter{page}\glsnumberformat{1}}}
-                                                  %
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
- [28]
-pdfTeX warning (ext4): destination with the same identifier (name{glo:hiperpara
-metro}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.83   \setentrycounter{page}\glsnumberformat{1}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:html}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.85 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:http}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.87 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:ia}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.93   \setentrycounter{page}\glsnumberformat{1}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:icr}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.95 ...etentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:json}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.100 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:lemmatiza
-tion}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.105 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:lstm}) ha
-s been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.107 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:malinform
-acion}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.112 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:matrizcon
-fusion}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.114 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:metaheuri
-stica}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.116 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:misinform
-acion}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.118 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:ml}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.121 ...etentrycounter{page}\glsnumberformat{1}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:nlp}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.126 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:noticiafa
-lsa}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.128 ...etentrycounter{page}\glsnumberformat{1}}}
-                                                  %
-LaTeX Info: Redefining \. on input line 129.
-LaTeX Info: Redefining \% on input line 129.
- [29]
-pdfTeX warning (ext4): destination with the same identifier (name{glo:overfitti
-ng}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.133 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:pln}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.139 ...etentrycounter{page}\glsnumberformat{1}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:precision
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.141 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:pso}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.143 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:recall}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.148 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:rnn}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.150 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:sa}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.155 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:ss}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.157 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:stemming}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.159 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:stopwords
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.161 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:svm}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.163 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:tfidf}) h
-as been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.168 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:tokenizac
-ion}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.170 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:transform
-er}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.172 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:underfitt
-ing}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.177 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-LaTeX Info: Redefining \. on input line 179.
-LaTeX Info: Redefining \% on input line 179.
- [30]
-pdfTeX warning (ext4): destination with the same identifier (name{glo:url}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.179 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:validacio
-ncruzada}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.184 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:varianza}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.186 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:vns}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.188 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %
-pdfTeX warning (ext4): destination with the same identifier (name{glo:webscrapi
-ng}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.193 ...tentrycounter{page}\glsnumberformat{vi}}}
-                                                  %)
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
- [31]
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
- [32
 
 ]
 \openout2 = `Introduccion/Introduccion.aux'.
 
-
-(Introduccion/Introduccion.tex
+ (Introduccion/Introduccion.tex
 Cap\'{\i }tulo 1.
 [1
 
 
 ]
-LaTeX Info: Redefining \. on input line 40.
-LaTeX Info: Redefining \% on input line 40.
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
  [2]
-<Imagenes/mapaConceptual1.png, id=1385, 1628.33344pt x 880.79062pt>
+<Imagenes/mapaConceptual1.png, id=1366, 1628.33344pt x 880.79062pt>
 File: Imagenes/mapaConceptual1.png Graphic file (type png)
 <use Imagenes/mapaConceptual1.png>
-Package pdftex.def Info: Imagenes/mapaConceptual1.png  used on input line 54.
+Package pdftex.def Info: Imagenes/mapaConceptual1.png  used on input line 47.
 (pdftex.def)             Requested size: 433.62pt x 234.55078pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 66.
-LaTeX Info: Redefining \% on input line 66.
-[3]
-Overfull \hbox (2.35315pt too wide) in paragraph at lines 68--69
+Overfull \hbox (2.35315pt too wide) in paragraph at lines 61--62
 []\T1/cmr/bx/n/12 Corpus es-pa-ñol pe-nin-su-lar: \T1/cmr/m/n/12 Los cor-pus de
  Posadas-Durán et al. [[]] y Blanco-
  []
 
-LaTeX Info: Redefining \. on input line 82.
-LaTeX Info: Redefining \% on input line 82.
-[4 <./Imagenes/mapaConceptual1.png>]
-LaTeX Info: Redefining \. on input line 111.
-LaTeX Info: Redefining \% on input line 111.
- [5]
-<Imagenes/mapaConceptual2.png, id=1425, 1044.90375pt x 636.87938pt>
+LaTeX Info: Redefining \. on input line 62.
+LaTeX Info: Redefining \% on input line 62.
+[3 <./Imagenes/mapaConceptual1.png>]
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
+ [4]
+<Imagenes/mapaConceptual2.png, id=1397, 1044.90375pt x 636.87938pt>
 File: Imagenes/mapaConceptual2.png Graphic file (type png)
 <use Imagenes/mapaConceptual2.png>
-Package pdftex.def Info: Imagenes/mapaConceptual2.png  used on input line 120.
+Package pdftex.def Info: Imagenes/mapaConceptual2.png  used on input line 113.
 (pdftex.def)             Requested size: 433.62pt x 264.30002pt.
-LaTeX Info: Redefining \. on input line 128.
-LaTeX Info: Redefining \% on input line 128.
- [6 <./Imagenes/mapaConceptual2.png>]
-LaTeX Info: Redefining \. on input line 153.
-LaTeX Info: Redefining \% on input line 153.
 
-[7]
-LaTeX Info: Redefining \. on input line 183.
-LaTeX Info: Redefining \% on input line 183.
- [8]
-Overfull \hbox (27.59181pt too wide) in paragraph at lines 201--202
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 125.
+LaTeX Info: Redefining \% on input line 125.
+[5]
+LaTeX Info: Redefining \. on input line 134.
+LaTeX Info: Redefining \% on input line 134.
+ [6 <./Imagenes/mapaConceptual2.png>]
+LaTeX Info: Redefining \. on input line 164.
+LaTeX Info: Redefining \% on input line 164.
+ [7]
+Overfull \hbox (27.59181pt too wide) in paragraph at lines 194--195
 []\T1/cmr/bx/n/12 Optimización me-ta-heu-rís-ti-ca: \T1/cmr/m/n/12 Apli-ca-ción
  sis-te-má-ti-ca de al-go-rit-mos bio-inspirados
  []
 
-LaTeX Info: Redefining \. on input line 216.
-LaTeX Info: Redefining \% on input line 216.
-[9]
+LaTeX Info: Redefining \. on input line 196.
+LaTeX Info: Redefining \% on input line 196.
+[8]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-29.
+22.
  (C:\Users\gabri\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Info: Redefining \. on input line 244.
-LaTeX Info: Redefining \% on input line 244.
+LaTeX Info: Redefining \. on input line 223.
+LaTeX Info: Redefining \% on input line 223.
 
-[10]
-Overfull \hbox (24.1192pt too wide) in paragraph at lines 262--263
+[9]
+LaTeX Info: Redefining \. on input line 253.
+LaTeX Info: Redefining \% on input line 253.
+ [10]
+Overfull \hbox (24.1192pt too wide) in paragraph at lines 255--256
 []\T1/cmr/bx/n/12 Limitaciones de trans-fe-ren-cia: \T1/cmr/m/n/12 Con-te-ni-do
  mul-ti-mo-dal (deep-fa-kes de vi-deo/audio)
  []
 
-LaTeX Info: Redefining \. on input line 277.
-LaTeX Info: Redefining \% on input line 277.
+LaTeX Info: Redefining \. on input line 279.
+LaTeX Info: Redefining \% on input line 279.
 [11]
-LaTeX Info: Redefining \. on input line 302.
-LaTeX Info: Redefining \% on input line 302.
- [12]
-Overfull \hbox (16.75839pt too wide) in paragraph at lines 310--311
-[]\T1/cmr/bx/n/12 Optimización me-ta-heu-rís-ti-ca: \T1/cmr/m/n/12 Apli-ca-ción
- no-ve-do-sa de al-go-rit-mos bio-inspirados
- []
-
-LaTeX Info: Redefining \. on input line 334.
-LaTeX Info: Redefining \% on input line 334.
-[13])
-LaTeX Info: Redefining \. on input line 98.
-LaTeX Info: Redefining \% on input line 98.
+LaTeX Info: Redefining \. on input line 308.
+LaTeX Info: Redefining \% on input line 308.
+ [12])
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
+ [13]
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
  [14]
 \openout2 = `MarcoTeorico/MarcoTeorico.aux'.
 
@@ -1786,11 +1422,11 @@ Overfull \hbox (3.55983pt too wide) in paragraph at lines 110--110
 []\T1/cmr/bx/n/14.4 TF-IDF (Term Frequency-Inverse Do-cu-ment Fre-quency) 
  []
 
-LaTeX Info: Redefining \. on input line 132.
-LaTeX Info: Redefining \% on input line 132.
+LaTeX Info: Redefining \. on input line 131.
+LaTeX Info: Redefining \% on input line 131.
 [18]
-LaTeX Info: Redefining \. on input line 164.
-LaTeX Info: Redefining \% on input line 164.
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
  [19]
 LaTeX Info: Redefining \. on input line 196.
 LaTeX Info: Redefining \% on input line 196.
@@ -1822,7 +1458,7 @@ LaTeX Info: Redefining \% on input line 572.
 LaTeX Info: Redefining \. on input line 588.
 LaTeX Info: Redefining \% on input line 588.
  [29]
-<Imagenes/figura2Flujo.png, id=1710, 3854.4pt x 1214.5375pt>
+<Imagenes/figura2Flujo.png, id=1687, 3854.4pt x 1214.5375pt>
 File: Imagenes/figura2Flujo.png Graphic file (type png)
 <use Imagenes/figura2Flujo.png>
 Package pdftex.def Info: Imagenes/figura2Flujo.png  used on input line 618.
@@ -1854,8 +1490,8 @@ LaTeX Info: Redefining \% on input line 762.
 LaTeX Info: Redefining \. on input line 801.
 LaTeX Info: Redefining \% on input line 801.
  [35])
-LaTeX Info: Redefining \. on input line 99.
-LaTeX Info: Redefining \% on input line 99.
+LaTeX Info: Redefining \. on input line 95.
+LaTeX Info: Redefining \% on input line 95.
  [36]
 \openout2 = `EstadoDelArte/EstadoDelArte.aux'.
 
@@ -1931,12 +1567,12 @@ LaTeX Info: Redefining \% on input line 328.
 LaTeX Info: Redefining \. on input line 347.
 LaTeX Info: Redefining \% on input line 347.
  [53]
-<Imagenes/mapaConceptual3.png, id=1925, 820.56563pt x 615.80063pt>
+<Imagenes/mapaConceptual3.png, id=1902, 820.56563pt x 615.80063pt>
 File: Imagenes/mapaConceptual3.png Graphic file (type png)
 <use Imagenes/mapaConceptual3.png>
 Package pdftex.def Info: Imagenes/mapaConceptual3.png  used on input line 350.
 (pdftex.def)             Requested size: 433.62pt x 325.40495pt.
-<Imagenes/mapaConceptual4.png, id=1926, 1239.12938pt x 624.83438pt>
+<Imagenes/mapaConceptual4.png, id=1903, 1239.12938pt x 624.83438pt>
 File: Imagenes/mapaConceptual4.png Graphic file (type png)
 <use Imagenes/mapaConceptual4.png>
 Package pdftex.def Info: Imagenes/mapaConceptual4.png  used on input line 357.
@@ -1945,7 +1581,7 @@ Package pdftex.def Info: Imagenes/mapaConceptual4.png  used on input line 357.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/mapaConceptual5.png, id=1927, 833.61438pt x 612.78937pt>
+<Imagenes/mapaConceptual5.png, id=1904, 833.61438pt x 612.78937pt>
 File: Imagenes/mapaConceptual5.png Graphic file (type png)
 <use Imagenes/mapaConceptual5.png>
 Package pdftex.def Info: Imagenes/mapaConceptual5.png  used on input line 364.
@@ -1953,7 +1589,7 @@ Package pdftex.def Info: Imagenes/mapaConceptual5.png  used on input line 364.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/mapaConceptual6.png, id=1928, 1193.96063pt x 615.80063pt>
+<Imagenes/mapaConceptual6.png, id=1905, 1193.96063pt x 615.80063pt>
 File: Imagenes/mapaConceptual6.png Graphic file (type png)
 <use Imagenes/mapaConceptual6.png>
 Package pdftex.def Info: Imagenes/mapaConceptual6.png  used on input line 371.
@@ -1988,8 +1624,8 @@ LaTeX Info: Redefining \% on input line 488.
 LaTeX Info: Redefining \. on input line 502.
 LaTeX Info: Redefining \% on input line 502.
  [61])
-LaTeX Info: Redefining \. on input line 100.
-LaTeX Info: Redefining \% on input line 100.
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
  [62]
 \openout2 = `Metodologia/Metodologia.aux'.
 
@@ -2002,7 +1638,7 @@ Cap\'{\i }tulo 4.
 
 
 ]
-<Imagenes/metodologiaCompleta.png, id=2039, 324.2514pt x 170.5572pt>
+<Imagenes/metodologiaCompleta.png, id=2016, 324.2514pt x 170.5572pt>
 File: Imagenes/metodologiaCompleta.png Graphic file (type png)
 <use Imagenes/metodologiaCompleta.png>
 Package pdftex.def Info: Imagenes/metodologiaCompleta.png  used on input line 2
@@ -2056,7 +1692,7 @@ LaTeX Info: Redefining \% on input line 558.
 LaTeX Info: Redefining \. on input line 606.
 LaTeX Info: Redefining \% on input line 606.
  [75]
-<Imagenes/balanceo_corpus_explicacion.png, id=2174, 1189.44376pt x 603.75563pt>
+<Imagenes/balanceo_corpus_explicacion.png, id=2151, 1189.44376pt x 603.75563pt>
 
 File: Imagenes/balanceo_corpus_explicacion.png Graphic file (type png)
 <use Imagenes/balanceo_corpus_explicacion.png>
@@ -2150,8 +1786,8 @@ LaTeX Info: Redefining \% on input line 1918.
 LaTeX Info: Redefining \. on input line 1966.
 LaTeX Info: Redefining \% on input line 1966.
  [99])
-LaTeX Info: Redefining \. on input line 101.
-LaTeX Info: Redefining \% on input line 101.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
  [100]
 \openout2 = `AnalisisResultados/AnalisisResultados.aux'.
 
@@ -2185,13 +1821,13 @@ LaTeX Info: Redefining \% on input line 387.
 LaTeX Info: Redefining \. on input line 447.
 LaTeX Info: Redefining \% on input line 447.
  [108]
-<Imagenes/convergencia_recocido_simulado.png, id=2447, 611.4042pt x 390.258pt>
+<Imagenes/convergencia_recocido_simulado.png, id=2424, 611.4042pt x 390.258pt>
 File: Imagenes/convergencia_recocido_simulado.png Graphic file (type png)
 <use Imagenes/convergencia_recocido_simulado.png>
 Package pdftex.def Info: Imagenes/convergencia_recocido_simulado.png  used on i
 nput line 450.
 (pdftex.def)             Requested size: 346.89731pt x 221.43108pt.
-<Imagenes/matriz_confusion_recocido_simulado.png, id=2448, 465.4188pt x 390.258
+<Imagenes/matriz_confusion_recocido_simulado.png, id=2425, 465.4188pt x 390.258
 pt>
 File: Imagenes/matriz_confusion_recocido_simulado.png Graphic file (type png)
 <use Imagenes/matriz_confusion_recocido_simulado.png>
@@ -2205,7 +1841,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Info: Redefining \. on input line 462.
 LaTeX Info: Redefining \% on input line 462.
 [109 <./Imagenes/convergencia_recocido_simulado.png>]
-<Imagenes/convergencia_ss.png, id=2454, 617.1858pt x 390.258pt>
+<Imagenes/convergencia_ss.png, id=2431, 617.1858pt x 390.258pt>
 File: Imagenes/convergencia_ss.png Graphic file (type png)
 <use Imagenes/convergencia_ss.png>
 Package pdftex.def Info: Imagenes/convergencia_ss.png  used on input line 470.
@@ -2214,7 +1850,7 @@ Package pdftex.def Info: Imagenes/convergencia_ss.png  used on input line 470.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/matriz_confusion_ss.png, id=2455, 465.4188pt x 390.258pt>
+<Imagenes/matriz_confusion_ss.png, id=2432, 465.4188pt x 390.258pt>
 File: Imagenes/matriz_confusion_ss.png Graphic file (type png)
 <use Imagenes/matriz_confusion_ss.png>
 Package pdftex.def Info: Imagenes/matriz_confusion_ss.png  used on input line 4
@@ -2229,14 +1865,14 @@ LaTeX Info: Redefining \% on input line 482.
 LaTeX Info: Redefining \. on input line 487.
 LaTeX Info: Redefining \% on input line 487.
  [111 <./Imagenes/convergencia_ss.png> <./Imagenes/matriz_confusion_ss.png>]
-<Imagenes/convergencia_algoritmo_genÃ©tico.png, id=2470, 611.4042pt x 390.258pt
+<Imagenes/convergencia_algoritmo_genÃ©tico.png, id=2447, 611.4042pt x 390.258pt
 >
 File: Imagenes/convergencia_algoritmo_genÃ©tico.png Graphic file (type png)
 <use Imagenes/convergencia_algoritmo_genÃ©tico.png>
 Package pdftex.def Info: Imagenes/convergencia_algoritmo_genÃ©tico.png  used on
  input line 490.
 (pdftex.def)             Requested size: 346.89731pt x 221.43108pt.
-<Imagenes/matriz_confusion_algoritmo_genÃ©tico.png, id=2471, 465.4188pt x 390.2
+<Imagenes/matriz_confusion_algoritmo_genÃ©tico.png, id=2448, 465.4188pt x 390.2
 58pt>
 File: Imagenes/matriz_confusion_algoritmo_genÃ©tico.png Graphic file (type png)
 
@@ -2251,7 +1887,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Info: Redefining \. on input line 502.
 LaTeX Info: Redefining \% on input line 502.
 [112 <./Imagenes/convergencia_algoritmo_genÃ©tico.png>]
-<Imagenes/convergencia_vns.png, id=2477, 611.4042pt x 390.258pt>
+<Imagenes/convergencia_vns.png, id=2454, 611.4042pt x 390.258pt>
 File: Imagenes/convergencia_vns.png Graphic file (type png)
 <use Imagenes/convergencia_vns.png>
 Package pdftex.def Info: Imagenes/convergencia_vns.png  used on input line 510.
@@ -2261,7 +1897,7 @@ Package pdftex.def Info: Imagenes/convergencia_vns.png  used on input line 510.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/matriz_confusion_vns.png, id=2478, 465.4188pt x 390.258pt>
+<Imagenes/matriz_confusion_vns.png, id=2455, 465.4188pt x 390.258pt>
 File: Imagenes/matriz_confusion_vns.png Graphic file (type png)
 <use Imagenes/matriz_confusion_vns.png>
 Package pdftex.def Info: Imagenes/matriz_confusion_vns.png  used on input line 
@@ -2279,13 +1915,13 @@ LaTeX Info: Redefining \. on input line 527.
 LaTeX Info: Redefining \% on input line 527.
 
 [114 <./Imagenes/convergencia_vns.png> <./Imagenes/matriz_confusion_vns.png>]
-<Imagenes/convergencia_pso.png, id=2492, 617.1858pt x 390.258pt>
+<Imagenes/convergencia_pso.png, id=2469, 617.1858pt x 390.258pt>
 File: Imagenes/convergencia_pso.png Graphic file (type png)
 <use Imagenes/convergencia_pso.png>
 Package pdftex.def Info: Imagenes/convergencia_pso.png  used on input line 530.
 
 (pdftex.def)             Requested size: 346.89731pt x 219.3588pt.
-<Imagenes/matriz_confusion_pso.png, id=2493, 465.4188pt x 390.258pt>
+<Imagenes/matriz_confusion_pso.png, id=2470, 465.4188pt x 390.258pt>
 File: Imagenes/matriz_confusion_pso.png Graphic file (type png)
 <use Imagenes/matriz_confusion_pso.png>
 Package pdftex.def Info: Imagenes/matriz_confusion_pso.png  used on input line 
@@ -2320,7 +1956,7 @@ LaTeX Info: Redefining \% on input line 773.
 LaTeX Info: Redefining \. on input line 864.
 LaTeX Info: Redefining \% on input line 864.
  [121]
-<Imagenes/Entrenamiento/curva_aprendizaje_v7.png, id=2552, 1293.633pt x 498.422
+<Imagenes/Entrenamiento/curva_aprendizaje_v7.png, id=2529, 1293.633pt x 498.422
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v7.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v7.png>
@@ -2340,42 +1976,42 @@ LaTeX Info: Redefining \% on input line 923.
 LaTeX Info: Redefining \. on input line 937.
 LaTeX Info: Redefining \% on input line 937.
  [124]
-<Imagenes/Entrenamiento/curva_aprendizaje_v1.png, id=2583, 1149.093pt x 425.670
+<Imagenes/Entrenamiento/curva_aprendizaje_v1.png, id=2560, 1149.093pt x 425.670
 3pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v1.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v1.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v1.png  used 
 on input line 989.
 (pdftex.def)             Requested size: 195.12767pt x 72.27855pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v2.png, id=2584, 1149.093pt x 426.152
+<Imagenes/Entrenamiento/curva_aprendizaje_v2.png, id=2561, 1149.093pt x 426.152
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v2.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v2.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v2.png  used 
 on input line 990.
 (pdftex.def)             Requested size: 195.12767pt x 72.36035pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v3.png, id=2585, 1149.093pt x 426.152
+<Imagenes/Entrenamiento/curva_aprendizaje_v3.png, id=2562, 1149.093pt x 426.152
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v3.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v3.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v3.png  used 
 on input line 994.
 (pdftex.def)             Requested size: 195.12767pt x 72.36035pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v4.png, id=2586, 1149.093pt x 426.152
+<Imagenes/Entrenamiento/curva_aprendizaje_v4.png, id=2563, 1149.093pt x 426.152
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v4.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v4.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v4.png  used 
 on input line 995.
 (pdftex.def)             Requested size: 195.12767pt x 72.36035pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v5.png, id=2587, 1293.633pt x 498.422
+<Imagenes/Entrenamiento/curva_aprendizaje_v5.png, id=2564, 1293.633pt x 498.422
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v5.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v5.png>
 Package pdftex.def Info: Imagenes/Entrenamiento/curva_aprendizaje_v5.png  used 
 on input line 999.
 (pdftex.def)             Requested size: 195.12767pt x 75.17838pt.
-<Imagenes/Entrenamiento/curva_aprendizaje_v6.png, id=2588, 1293.633pt x 498.422
+<Imagenes/Entrenamiento/curva_aprendizaje_v6.png, id=2565, 1293.633pt x 498.422
 1pt>
 File: Imagenes/Entrenamiento/curva_aprendizaje_v6.png Graphic file (type png)
 <use Imagenes/Entrenamiento/curva_aprendizaje_v6.png>
@@ -2435,11 +2071,11 @@ LaTeX Info: Redefining \% on input line 1370.
 LaTeX Info: Redefining \. on input line 1402.
 LaTeX Info: Redefining \% on input line 1402.
  [135])
-LaTeX Info: Redefining \. on input line 102.
-LaTeX Info: Redefining \% on input line 102.
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
  [136]
-LaTeX Info: Redefining \. on input line 102.
-LaTeX Info: Redefining \% on input line 102.
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
  [137]
 \openout2 = `Capitulo6/Capitulo6.aux'.
 
@@ -2469,12 +2105,12 @@ Overfull \hbox (49.81021pt too wide) in paragraph at lines 60--61
 lo \T1/cmtt/m/n/12 TFAutoModelForSequenceClassification\T1/cmr/m/n/12 ,
  []
 
-<Imagenes/app_real.png, id=2722, 1924.94156pt x 1105.88156pt>
+<Imagenes/app_real.png, id=2699, 1924.94156pt x 1105.88156pt>
 File: Imagenes/app_real.png Graphic file (type png)
 <use Imagenes/app_real.png>
 Package pdftex.def Info: Imagenes/app_real.png  used on input line 72.
 (pdftex.def)             Requested size: 390.25534pt x 224.1929pt.
-<Imagenes/app_falsa1.png, id=2724, 1920.42468pt x 1103.62312pt>
+<Imagenes/app_falsa1.png, id=2701, 1920.42468pt x 1103.62312pt>
 File: Imagenes/app_falsa1.png Graphic file (type png)
 <use Imagenes/app_falsa1.png>
 Package pdftex.def Info: Imagenes/app_falsa1.png  used on input line 82.
@@ -2485,14 +2121,14 @@ LaTeX Info: Redefining \% on input line 89.
 LaTeX Info: Redefining \. on input line 89.
 LaTeX Info: Redefining \% on input line 89.
  [143 <./Imagenes/app_real.png> <./Imagenes/app_falsa1.png>]
-<Imagenes/app_falsa2.png, id=2740, 1924.94156pt x 1102.87032pt>
+<Imagenes/app_falsa2.png, id=2717, 1924.94156pt x 1102.87032pt>
 File: Imagenes/app_falsa2.png Graphic file (type png)
 <use Imagenes/app_falsa2.png>
 Package pdftex.def Info: Imagenes/app_falsa2.png  used on input line 92.
 (pdftex.def)             Requested size: 390.25534pt x 223.58244pt.
 )
-LaTeX Info: Redefining \. on input line 103.
-LaTeX Info: Redefining \% on input line 103.
+LaTeX Info: Redefining \. on input line 99.
+LaTeX Info: Redefining \% on input line 99.
  [144 <./Imagenes/app_falsa2.png>]
 \openout2 = `Conclusiones/Conclusiones.aux'.
 
@@ -2512,8 +2148,8 @@ rlyStopping \T1/cmr/m/n/12 y \T1/cmtt/m/n/12 ReduceLROnPlateau\T1/cmr/m/n/12 .
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
 [146])
-LaTeX Info: Redefining \. on input line 104.
-LaTeX Info: Redefining \% on input line 104.
+LaTeX Info: Redefining \. on input line 100.
+LaTeX Info: Redefining \% on input line 100.
  [147]
 \openout2 = `Anexos/Anexo1.aux'.
 
@@ -2618,8 +2254,8 @@ lowed = y # page = 89$[]\T1/cmr/m/n/12 .
 LaTeX Info: Redefining \. on input line 621.
 LaTeX Info: Redefining \% on input line 621.
 [158])
-LaTeX Info: Redefining \. on input line 116.
-LaTeX Info: Redefining \% on input line 116.
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
  [159] (ICR.aux (Portada/Portada.aux)
 LaTeX Info: Redefining \. on input line 17.
 LaTeX Info: Redefining \% on input line 17.
@@ -2638,19 +2274,31 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ICR.out' has not changed.
-(rerunfilecheck)             Checksum: 1C6BAB5484E163429FAAB9294F742C3C;47771.
+(rerunfilecheck)             Checksum: 99C2DBB5E7996064A2E3154113CD2733;47676.
  ) 
 Here is how much of TeX's memory you used:
- 47582 strings out of 474486
- 1099107 string characters out of 5743756
- 1982542 words of memory out of 5000000
- 68183 multiletter control sequences out of 15000+600000
+ 48003 strings out of 474486
+ 1105786 string characters out of 5743756
+ 1983542 words of memory out of 5000000
+ 68613 multiletter control sequences out of 15000+600000
  584645 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,19n,93p,2518b,2304s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{glo:fraudedigital} has been referenced but does not
  exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:fn} has been referenced but does not exist, rep
+laced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:fp} has been referenced but does not exist, rep
+laced by a fixed one
+
+
+pdfTeX warning (dest): name{glo:tp} has been referenced but does not exist, rep
+laced by a fixed one
 
  <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm07
 00.pk> <C:\Users\gabri\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
@@ -2698,9 +2346,9 @@ c/amsfonts/cm/cmr8.pfb><C:/Users/gabri/AppData/Local/Programs/MiKTeX/fonts/type
 onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/gabri/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/gabri/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ICR.pdf (193 pages, 8182341 bytes).
+Output written on ICR.pdf (187 pages, 8167208 bytes).
 PDF statistics:
- 4447 PDF objects out of 5155 (max. 8388607)
- 933 named destinations out of 1000 (max. 500000)
- 1547 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4419 PDF objects out of 5155 (max. 8388607)
+ 926 named destinations out of 1000 (max. 500000)
+ 1539 words of extra memory for PDF output out of 10000 (max. 10000000)
 

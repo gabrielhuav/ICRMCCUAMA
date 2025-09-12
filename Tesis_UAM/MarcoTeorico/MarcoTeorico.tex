@@ -23,7 +23,7 @@ La rápida propagación de las noticias falsas a través de las redes sociales p
     \item \textbf{Manipular la opinión pública:} Influenciando procesos democráticos y decisiones sociales
     \item \textbf{Incitar a la violencia:} Promoviendo comportamientos agresivos basados en información errónea
     \item \textbf{Difundir propaganda política:} Siendo utilizada como herramienta de influencia partidista
-    \item \textbf{Fomentar el odio:} Exacerbando divisiones sociales y promoviendo discriminación
+    \item \textbf{Fomentar el odio:} Intensificando divisiones sociales y promoviendo discriminación
     \item \textbf{Provocar pánico:} Especialmente en contextos de crisis sanitarias como la pandemia de COVID-19 \cite{perez2020fake}
 \end{itemize}
 
@@ -33,7 +33,7 @@ La investigación de Ali et al. \cite{ali2021fake} ha demostrado que las heurís
 
 \subsection{Diferenciación Técnica y Transferibilidad: Noticias Falsas vs. Fraude Digital}
 
-Es crucial establecer una distinción técnica clara entre los dominios de aplicación, ya que aunque comparten características computacionales, representan problemas con diferentes objetivos, audiencias y patrones:
+Es necesario establecer una distinción técnica clara entre los dominios de aplicación, ya que aunque comparten características computacionales, representan problemas con diferentes objetivos, audiencias y patrones:
 
 \subsubsection{Características Distintivas por Dominio}
 
@@ -94,10 +94,10 @@ Para aplicar la metodología desarrollada a detección de fraude digital, se req
 
 \begin{enumerate}
     \item \textbf{Construcción de corpus específico}: Recopilar y etiquetar datos representativos del tipo de fraude digital objetivo
-    \item \textbf{Ajuste de preprocesamiento}: Adaptar técnicas de limpieza según las características del nuevo dominio (emails vs. artículos)
+    \item \textbf{Ajuste de preprocesamiento}: Adaptar técnicas de limpieza según las características del nuevo dominio
     \item \textbf{Re-calibración de hiperparámetros}: Aplicar los mismos algoritmos metaheurísticos pero re-optimizar para el nuevo corpus
-    \item \textbf{Incorporación de características específicas}: Añadir features relevantes al nuevo dominio (URLs sospechosas, patrones de solicitud de información)
-    \item \textbf{Validación cross-domain}: Evaluar la transferencia utilizando métricas de generalización
+    \item \textbf{Incorporación de características específicas}: Añadir características relevantes al nuevo dominio (URLs sospechosas, patrones de solicitud de información)
+    \item \textbf{Validación en diferentes dominios}: Evaluar la transferencia utilizando métricas de generalización
 \end{enumerate}
 
 \textbf{Enfoque de esta investigación}: Este proyecto desarrolla y valida la metodología en el dominio de noticias falsas en español, estableciendo las bases técnicas para su posterior transferencia a otros tipos de fraude digital. La elección de noticias falsas como dominio inicial se justifica por: (1) disponibilidad de corpus etiquetados, (2) relevancia social en comunidades hispanohablantes, y (3) menor complejidad técnica que permite validar la metodología base antes de extensiones más complejas.
