@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso Real de Balanceo del Corpus</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            height: 100vh;
+            overflow: hidden;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 95vw;
+            height: 95vh;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            backdrop-filter: blur(15px);
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            gap: 15px;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 12px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .stat-card.initial-fake { border-top-color: #e74c3c; }
+        .stat-card.initial-real { border-top-color: #f39c12; }
+        .stat-card.final-fake { border-top-color: #e74c3c; }
+        .stat-card.final-real { border-top-color: #27ae60; }
+        .stat-card.scraped { border-top-color: #9b59b6; }
+        .stat-card.total { border-top-color: #3498db; }
+
+        .stat-number {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 10px;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .initial-fake .stat-number { color: #e74c3c; }
+        .initial-real .stat-number { color: #f39c12; }
+        .final-fake .stat-number { color: #e74c3c; }
+        .final-real .stat-number { color: #27ae60; }
+        .scraped .stat-number { color: #9b59b6; }
+        .total .stat-number { color: #3498db; }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2.5fr 1fr;
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .process-section {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 18px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .process-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .unification-section {
+            margin-bottom: 15px;
+        }
+
+        .unification-title {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-decoration: underline;
+        }
+
+        .corpus-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 8px;
+            border-radius: 6px;
+            margin-bottom: 4px;
+            font-size: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .process-step {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 6px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .step-title {
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .step-description {
+            font-size: 9px;
+            opacity: 0.9;
+            line-height: 1.3;
+        }
+
+        .charts-section {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 12px;
+        }
+
+        .comparison-title {
+            text-align: center;
+            font-size: 18px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .charts-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .chart-wrapper {
+            background: white;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            gap: 8px;
+        }
+
+        .chart-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 180px;
+        }
+
+        .balance-indicator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .balance-icon {
+            font-size: 14px;
+        }
+
+        .balance-text {
+            font-weight: 600;
+            font-size: 11px;
+        }
+
+        .unbalanced .balance-icon,
+        .unbalanced .balance-text { color: #e74c3c; }
+        .balanced .balance-icon,
+        .balanced .balance-text { color: #27ae60; }
+
+        .results-section {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 18px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .results-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .results-text {
+            font-size: 11px;
+            opacity: 0.95;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .balance-metrics {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 8px;
+            background: rgba(52, 73, 94, 0.05);
+            border-radius: 8px;
+            color: #7f8c8d;
+            font-size: 10px;
+        }
+
+        .research-info {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+
+        .animate-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .animate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .arrow {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: #3498db;
+            animation: pulse 2s ease-in-out infinite;
+            z-index: 5;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="animate-btn" onclick="animateBalancing()">
+            ▶️ Animar
+        </button>
+
+        <div class="header">
+            <h1>Proceso Real de Unificación y Balanceo del Corpus</h1>
+            <p class="subtitle">De 4 Corpus Individuales a Distribución Equilibrada mediante Web Scraping</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card initial-fake">
+                <div class="stat-number" id="initialFakeCount">21,746</div>
+                <div class="stat-label">Falsas Inicial<br>(41.3%)</div>
+            </div>
+            <div class="stat-card initial-real">
+                <div class="stat-number" id="initialRealCount">30,943</div>
+                <div class="stat-label">Reales Inicial<br>(58.7%)</div>
+            </div>
+            <div class="stat-card final-fake">
+                <div class="stat-number" id="finalFakeCount">30,746</div>
+                <div class="stat-label">Falsas Final<br>(49.8%)</div>
+            </div>
+            <div class="stat-card final-real">
+                <div class="stat-number" id="finalRealCount">30,943</div>
+                <div class="stat-label">Reales Final<br>(50.2%)</div>
+            </div>
+            <div class="stat-card scraped">
+                <div class="stat-number" id="scrapedCount">9,000</div>
+                <div class="stat-label">Extraídas<br>Web Scraping</div>
+            </div>
+            <div class="stat-card total">
+                <div class="stat-number" id="totalCount">61,689</div>
+                <div class="stat-label">Total Final<br>Corpus</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="process-section">
+                <div class="process-title">📊 Proceso Completo</div>
+                
+                <div class="unification-section">
+                    <div class="unification-title">Unificación de Corpus:</div>
+                    <div class="corpus-item">Corpus 1: 572 registros</div>
+                    <div class="corpus-item">Corpus 2: 598 registros</div>
+                    <div class="corpus-item">Corpus 3: 2,000 registros</div>
+                    <div class="corpus-item">Corpus 4: 57,231 registros</div>
+                    <div class="corpus-item" style="background: rgba(255,255,255,0.2); font-weight: bold;">
+                        Total: 60,401 → 52,689 únicos
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-title">1. Análisis de Balance</div>
+                    <div class="step-description">Desbalance 41.3% vs 58.7% detectado</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-title">2. Web Scraping</div>
+                    <div class="step-description">Extracción de 9,000 noticias falsas</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-title">3. Equilibrio Final</div>
+                    <div class="step-description">Balance óptimo 49.8% vs 50.2%</div>
+                </div>
+            </div>
+
+            <div class="charts-section">
+                <h2 class="comparison-title">📊 Comparación: Unificado vs Balanceado</h2>
+                <div class="charts-container">
+                    <div class="chart-wrapper">
+                        <h3 class="chart-title">Corpus Unificado (Desbalanceado)</h3>
+                        <div class="chart-container">
+                            <canvas id="initialChart"></canvas>
+                        </div>
+                        <div class="balance-indicator unbalanced">
+                            <span class="balance-icon">⚠️</span>
+                            <span class="balance-text">Desbalanceado (41.3% vs 58.7%)</span>
+                        </div>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <h3 class="chart-title">Corpus Final (Equilibrado)</h3>
+                        <div class="chart-container">
+                            <canvas id="finalChart"></canvas>
+                        </div>
+                        <div class="balance-indicator balanced">
+                            <span class="balance-icon">✅</span>
+                            <span class="balance-text">Equilibrado (49.8% vs 50.2%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="results-title">🎯 Resultado Óptimo</div>
+                <div class="results-text">
+                    La unificación de <span class="highlight">4 corpus</span> y posterior 
+                    web scraping logró transformar un desbalance del <span class="highlight">17.4%</span> 
+                    en una distribución casi perfecta.
+                </div>
+                <div class="balance-metrics">
+                    <strong>Mejora del Balance:</strong><br>
+                    De 41.3% - 58.7% → 49.8% - 50.2%<br>
+                    <strong>Diferencia final:</strong> solo 0.4%
+                </div>
+                <div class="results-text">
+                    Esto elimina <span class="highlight">sesgos de clase</span> y optimiza 
+                    el entrenamiento de modelos de detección de noticias falsas.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="research-info">
+                Calibración de Hiper-Parámetros en Algoritmos Metaheurísticos y Modelos de Lenguaje
+            </div>
+            <div>Gabriel Hurtado Avilés • Universidad Autónoma Metropolitana Azcapotzalco • 2024</div>
+        </div>
+
+        <div class="arrow">➡️</div>
+    </div>
+
+    <script>
+        Chart.register(ChartDataLabels);
+
+        // Datos reales del corpus unificado inicial
+        const initialData = {
+            labels: ['Noticias Reales', 'Noticias Falsas'],
+            datasets: [{
+                data: [30943, 21746], // Datos reales del corpus unificado
+                backgroundColor: ['#f39c12', '#e74c3c'],
+                borderColor: ['#e67e22', '#c0392b'],
+                borderWidth: 2
+            }]
+        };
+
+        // Datos finales después del web scraping
+        const finalData = {
+            labels: ['Noticias Reales', 'Noticias Falsas'],
+            datasets: [{
+                data: [30943, 30746], // Datos finales balanceados
+                backgroundColor: ['#27ae60', '#e74c3c'],
+                borderColor: ['#2ecc71', '#c0392b'],
+                borderWidth: 2
+            }]
+        };
+
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 8,
+                        font: { size: 10, weight: '600' }
+                    }
+                },
+                datalabels: {
+                    color: 'white',
+                    font: { weight: 'bold', size: 11 },
+                    formatter: (value, context) => {
+                        const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                        const percentage = ((value / total) * 100).toFixed(1);
+                        return `${percentage}%\n${value.toLocaleString()}`;
+                    }
+                }
+            },
+            animation: {
+                animateRotate: true,
+                animateScale: true,
+                duration: 2000
+            }
+        };
+
+        let initialChart, finalChart;
+
+        function createCharts() {
+            const initialCtx = document.getElementById('initialChart').getContext('2d');
+            const finalCtx = document.getElementById('finalChart').getContext('2d');
+
+            initialChart = new Chart(initialCtx, {
+                type: 'doughnut',
+                data: initialData,
+                options: chartOptions
+            });
+
+            finalChart = new Chart(finalCtx, {
+                type: 'doughnut',
+                data: finalData,
+                options: chartOptions
+            });
+        }
+
+        function animateBalancing() {
+            const button = document.querySelector('.animate-btn');
+            button.disabled = true;
+            button.innerHTML = '🔄 Procesando...';
+
+            animateCounters();
+
+            setTimeout(() => {
+                if (initialChart) initialChart.destroy();
+                if (finalChart) finalChart.destroy();
+                createCharts();
+                
+                button.disabled = false;
+                button.innerHTML = '▶️ Repetir';
+            }, 1000);
+        }
+
+        function animateCounters() {
+            const counters = [
+                { element: document.getElementById('initialFakeCount'), target: 21746 },
+                { element: document.getElementById('initialRealCount'), target: 30943 },
+                { element: document.getElementById('finalFakeCount'), target: 30746 },
+                { element: document.getElementById('finalRealCount'), target: 30943 },
+                { element: document.getElementById('scrapedCount'), target: 9000 },
+                { element: document.getElementById('totalCount'), target: 61689 }
+            ];
+
+            counters.forEach(counter => {
+                let current = 0;
+                const increment = counter.target / 40;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= counter.target) {
+                        current = counter.target;
+                        clearInterval(timer);
+                    }
+                    counter.element.textContent = Math.floor(current).toLocaleString();
+                }, 30);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            createCharts();
+            setTimeout(() => animateCounters(), 500);
+        });
+    </script>
+</body>
+</html>

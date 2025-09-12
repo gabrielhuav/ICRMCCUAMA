@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Conceptual: Clasificación por Enfoque Metodológico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow: hidden;
+        }
+
+        .mindmap-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            padding: 25px;
+            width: 100%;
+            height: 100%;
+            max-width: 1700px;
+            max-height: 950px;
+            position: relative;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 15px;
+            color: #7f8c8d;
+        }
+
+        .mindmap-content {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* SVG para las líneas conectivas */
+        .connections-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .connection-line {
+            stroke: #bdc3c7;
+            stroke-width: 4;
+            fill: none;
+            opacity: 0.8;
+            stroke-dasharray: 8,4;
+            animation: dashFlow 3s linear infinite;
+        }
+
+        @keyframes dashFlow {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: 24; }
+        }
+
+        /* Nodo central */
+        .central-node {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            color: white;
+            padding: 25px 35px;
+            border-radius: 60px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+            z-index: 5;
+            min-width: 320px;
+            border: 4px solid white;
+        }
+
+        /* Contenedor de ramas principales */
+        .branches-layout {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ramas principales */
+        .main-branch {
+            position: absolute;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            border-left: 5px solid;
+            transition: all 0.3s ease;
+            z-index: 3;
+            width: 300px;
+            cursor: move;
+            user-select: none;
+        }
+
+        .main-branch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            z-index: 4;
+        }
+
+        .main-branch.dragging {
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            z-index: 6;
+            opacity: 0.9;
+        }
+
+        .main-branch h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .main-branch ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-branch li {
+            margin-bottom: 8px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.4;
+            font-size: 11px;
+        }
+
+        .main-branch li:last-child {
+            margin-bottom: 0;
+        }
+
+        .main-branch li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: inherit;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        .main-branch strong {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .author-info {
+            font-size: 9px;
+            color: #666;
+            font-style: italic;
+            margin-top: 2px;
+        }
+
+        .year {
+            background: rgba(0,0,0,0.1);
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 9px;
+            margin-left: 4px;
+        }
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+        }
+
+        /* Posicionamiento inicial */
+        .branch-1 { top: 3%; left: 3%; }      /* Deep Learning */
+        .branch-2 { top: 3%; right: 3%; }     /* Machine Learning Clásico */
+        .branch-3 { top: 25%; left: 0%; }     /* Metaheurísticas */
+        .branch-4 { top: 25%; right: 0%; }    /* PLN Tradicional */
+        .branch-5 { top: 45%; left: 0%; }     /* Ensemble & Híbridos */
+        .branch-6 { top: 45%; right: 0%; }    /* Análisis Estilométrico */
+        .branch-7 { bottom: 25%; left: 0%; }  /* Datasets & Corpus */
+        .branch-8 { bottom: 25%; right: 0%; } /* Evaluación & Benchmarking */
+        .branch-9 { bottom: 3%; left: 3%; }   /* Análisis Social */
+        .branch-10 { bottom: 3%; right: 3%; } /* Sistemas Aplicados */
+
+        /* Colores específicos para cada rama */
+        .deep-learning { border-left-color: #3498db; }
+        .deep-learning h3, .deep-learning li:before { color: #3498db; }
+
+        .ml-clasico { border-left-color: #2ecc71; }
+        .ml-clasico h3, .ml-clasico li:before { color: #2ecc71; }
+
+        .metaheuristicas { border-left-color: #e74c3c; }
+        .metaheuristicas h3, .metaheuristicas li:before { color: #e74c3c; }
+
+        .pln-tradicional { border-left-color: #f39c12; }
+        .pln-tradicional h3, .pln-tradicional li:before { color: #f39c12; }
+
+        .ensemble-hibridos { border-left-color: #9b59b6; }
+        .ensemble-hibridos h3, .ensemble-hibridos li:before { color: #9b59b6; }
+
+        .estilometrico { border-left-color: #1abc9c; }
+        .estilometrico h3, .estilometrico li:before { color: #1abc9c; }
+
+        .datasets-corpus { border-left-color: #e67e22; }
+        .datasets-corpus h3, .datasets-corpus li:before { color: #e67e22; }
+
+        .evaluacion-bench { border-left-color: #95a5a6; }
+        .evaluacion-bench h3, .evaluacion-bench li:before { color: #95a5a6; }
+
+        .analisis-social { border-left-color: #34495e; }
+        .analisis-social h3, .analisis-social li:before { color: #34495e; }
+
+        .sistemas-aplicados { border-left-color: #8e44ad; }
+        .sistemas-aplicados h3, .sistemas-aplicados li:before { color: #8e44ad; }
+
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 10px;
+            color: #2c3e50;
+            padding: 8px;
+            background: rgba(52, 73, 94, 0.05);
+            border-radius: 8px;
+            line-height: 1.3;
+            z-index: 10;
+            position: relative;
+        }
+
+        .footer .title {
+            font-weight: 600;
+            font-size: 11px;
+            color: #34495e;
+            margin-bottom: 3px;
+        }
+
+        .footer .author {
+            font-weight: 500;
+            color: #7f8c8d;
+            font-size: 10px;
+        }
+
+        /* Animaciones de entrada */
+        .main-branch {
+            animation: branchAppear 0.8s ease forwards;
+            opacity: 0;
+            transform: scale(0.3);
+        }
+
+        .main-branch.branch-1 { animation-delay: 0.1s; }
+        .main-branch.branch-2 { animation-delay: 0.2s; }
+        .main-branch.branch-3 { animation-delay: 0.3s; }
+        .main-branch.branch-4 { animation-delay: 0.4s; }
+        .main-branch.branch-5 { animation-delay: 0.5s; }
+        .main-branch.branch-6 { animation-delay: 0.6s; }
+        .main-branch.branch-7 { animation-delay: 0.7s; }
+        .main-branch.branch-8 { animation-delay: 0.8s; }
+        .main-branch.branch-9 { animation-delay: 0.9s; }
+        .main-branch.branch-10 { animation-delay: 1.0s; }
+
+        @keyframes branchAppear {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .central-node {
+            animation: centralPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes centralPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.02); }
+        }
+
+        /* Botón para guardar posiciones */
+        .save-positions-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            z-index: 10;
+        }
+
+        .save-positions-btn:hover {
+            background: #2980b9;
+        }
+
+        /* Indicador de instrucciones */
+        .instructions {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(52, 73, 94, 0.9);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 11px;
+            z-index: 10;
+        }
+
+        /* Responsive */
+        @media (max-width: 1400px) {
+            .main-branch {
+                width: 280px;
+                padding: 12px;
+            }
+            
+            .central-node {
+                min-width: 280px;
+                padding: 20px 30px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .main-branch {
+                width: 260px;
+                padding: 10px;
+            }
+            
+            .main-branch h3 {
+                font-size: 14px;
+            }
+            
+            .main-branch li {
+                font-size: 10px;
+            }
+            
+            .central-node {
+                min-width: 260px;
+                padding: 15px 25px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .main-branch {
+                width: 220px;
+                padding: 8px;
+            }
+            
+            .main-branch h3 {
+                font-size: 13px;
+            }
+            
+            .main-branch li {
+                font-size: 9px;
+            }
+            
+            .central-node {
+                min-width: 220px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mindmap-container">
+        <div class="instructions">
+            💡 Arrastra las ramas para reorganizar el mapa
+        </div>
+        
+        <button class="save-positions-btn" onclick="savePositions()">
+            💾 Guardar Posiciones
+        </button>
+        
+        <div class="header">
+            <h1>Clasificación por Enfoque Metodológico</h1>
+            <p class="subtitle">Taxonomía de Técnicas Computacionales para Detección de Noticias Falsas</p>
+        </div>
+        
+        <div class="mindmap-content">
+            <!-- SVG para líneas conectivas -->
+            <svg class="connections-svg" id="connectionsSvg">
+                <!-- Las líneas se dibujarán dinámicamente con JavaScript -->
+            </svg>
+
+            <div class="branches-layout">
+                <!-- Nodo central -->
+                <div class="central-node" id="centralNode">
+                    🎯 ENFOQUES<br>METODOLÓGICOS
+                </div>
+
+                <!-- Ramas principales -->
+                <div class="main-branch deep-learning branch-1" data-branch="1">
+                    <h3>
+                        <span class="icon">🧠</span>
+                        Deep Learning & Transformers
+                    </h3>
+                    <ul>
+                        <li><strong>BERT & Variantes:</strong> <span class="year">2018-2024</span>
+                            <div class="author-info">Devlin et al., Sanh et al. (DistilBERT)</div>
+                        </li>
+                        <li><strong>Modelos Españoles:</strong> <span class="year">2021-2024</span>
+                            <div class="author-info">Martínez-Gallego et al., Blanco-Fernández et al.</div>
+                        </li>
+                        <li><strong>LLMs & Generativos:</strong> <span class="year">2020-2023</span>
+                            <div class="author-info">Brown et al. (GPT-3), Touvron et al. (LLaMA)</div>
+                        </li>
+                        <li><strong>Multimodales:</strong> <span class="year">2023</span>
+                            <div class="author-info">Gemini Team (Google)</div>
+                        </li>
+                        <li><strong>IA Constitucional:</strong> <span class="year">2022</span>
+                            <div class="author-info">Bai et al. - Harmlessness AI</div>
+                        </li>
+                        <li><strong>CNNs Adaptativos:</strong> <span class="year">2023</span>
+                            <div class="author-info">Deshai & Rao - PSO + CNN</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch ml-clasico branch-2" data-branch="2">
+                    <h3>
+                        <span class="icon">⚖️</span>
+                        Machine Learning Clásico
+                    </h3>
+                    <ul>
+                        <li><strong>SVM Optimizado:</strong> <span class="year">2020</span>
+                            <div class="author-info">Yazdi et al. - K-Means + SVM</div>
+                        </li>
+                        <li><strong>TF-IDF + Deep Learning:</strong> <span class="year">2018</span>
+                            <div class="author-info">Thota et al. - SMU Scholar</div>
+                        </li>
+                        <li><strong>Redes Neuronales:</strong> <span class="year">2021</span>
+                            <div class="author-info">Nasser et al. - ANN recruitment</div>
+                        </li>
+                        <li><strong>Random Forest & Bagging:</strong>
+                            <div class="author-info">Métodos ensemble tradicionales</div>
+                        </li>
+                        <li><strong>Gaussian Process:</strong> <span class="year">2023</span>
+                            <div class="author-info">Horak & Sabek - Financial distress</div>
+                        </li>
+                        <li><strong>Algoritmos Híbridos:</strong>
+                            <div class="author-info">Combinación de técnicas clásicas</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch metaheuristicas branch-3" data-branch="3">
+                    <h3>
+                        <span class="icon">🧬</span>
+                        Optimización Metaheurística
+                    </h3>
+                    <ul>
+                        <li><strong>Scheduling Problem:</strong> <span class="year">2021</span>
+                            <div class="author-info">Aqil & Lahby - Job Shop modeling</div>
+                        </li>
+                        <li><strong>Algoritmos Genéticos:</strong> <span class="year">2020</span>
+                            <div class="author-info">Hidayattullah et al. - Financial fraud</div>
+                        </li>
+                        <li><strong>PSO Adaptativo:</strong> <span class="year">2023</span>
+                            <div class="author-info">Deshai & Rao - Reviews detection</div>
+                        </li>
+                        <li><strong>Multi-thread Híbrido:</strong> <span class="year">2023</span>
+                            <div class="author-info">Yildirim - Social media detection</div>
+                        </li>
+                        <li><strong>Hiper-parámetros DL:</strong> <span class="year">2023</span>
+                            <div class="author-info">Bacanin et al. - Energy forecasting</div>
+                        </li>
+                        <li><strong>VNS & Scatter Search:</strong> <span class="year">2023</span>
+                            <div class="author-info">Kapunac et al. - Network spreading</div>
+                        </li>
+                        <li><strong>Tu Investigación:</strong> <span class="year">2024</span>
+                            <div class="author-info">Hurtado et al. - Calibración hiperparámetros</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch pln-tradicional branch-4" data-branch="4">
+                    <h3>
+                        <span class="icon">📝</span>
+                        PLN Tradicional
+                    </h3>
+                    <ul>
+                        <li><strong>Bag-of-Words (BoW):</strong>
+                            <div class="author-info">Representación vectorial básica</div>
+                        </li>
+                        <li><strong>TF-IDF Ponderado:</strong>
+                            <div class="author-info">Frecuencia término-documento inversa</div>
+                        </li>
+                        <li><strong>N-gramas:</strong>
+                            <div class="author-info">Características secuenciales</div>
+                        </li>
+                        <li><strong>Análisis Sintáctico:</strong>
+                            <div class="author-info">POS tagging, parsing</div>
+                        </li>
+                        <li><strong>NER & Entidades:</strong>
+                            <div class="author-info">Reconocimiento entidades nombradas</div>
+                        </li>
+                        <li><strong>Métricas Legibilidad:</strong>
+                            <div class="author-info">Complejidad textual</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch ensemble-hibridos branch-5" data-branch="5">
+                    <h3>
+                        <span class="icon">🤝</span>
+                        Ensemble & Híbridos
+                    </h3>
+                    <ul>
+                        <li><strong>Framework Heurístico:</strong> <span class="year">2022</span>
+                            <div class="author-info">Das et al. - Uncertainty-based ensemble</div>
+                        </li>
+                        <li><strong>BERT + Metadatos:</strong>
+                            <div class="author-info">Modelos pre-entrenados + características</div>
+                        </li>
+                        <li><strong>Ponderación Adaptativa:</strong>
+                            <div class="author-info">Pesos dinámicos por confianza</div>
+                        </li>
+                        <li><strong>Fusión Decisiones:</strong>
+                            <div class="author-info">Estrategias combinación múltiple</div>
+                        </li>
+                        <li><strong>Multi-objetivo:</strong>
+                            <div class="author-info">Precisión + eficiencia + robustez</div>
+                        </li>
+                        <li><strong>Knowledge-Enhanced:</strong> <span class="year">2022</span>
+                            <div class="author-info">Whitehouse et al. - LMs enhanced</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch estilometrico branch-6" data-branch="6">
+                    <h3>
+                        <span class="icon">✍️</span>
+                        Análisis Estilométrico
+                    </h3>
+                    <ul>
+                        <li><strong>NER Estilométrico:</strong> <span class="year">2023</span>
+                            <div class="author-info">Tsai - Cross-domain analysis</div>
+                        </li>
+                        <li><strong>Patrones Escritura:</strong> <span class="year">2019</span>
+                            <div class="author-info">Posadas-Durán et al. - Spanish corpus</div>
+                        </li>
+                        <li><strong>Características Autor:</strong>
+                            <div class="author-info">Longitud oraciones, puntuación</div>
+                        </li>
+                        <li><strong>Complejidad Sintáctica:</strong>
+                            <div class="author-info">Estructuras gramaticales</div>
+                        </li>
+                        <li><strong>Vocabulario Distintivo:</strong>
+                            <div class="author-info">Palabras características por autor</div>
+                        </li>
+                        <li><strong>Análisis Temporal:</strong>
+                            <div class="author-info">Evolución estilo escritura</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch datasets-corpus branch-7" data-branch="7">
+                    <h3>
+                        <span class="icon">📊</span>
+                        Datasets & Corpus
+                    </h3>
+                    <ul>
+                        <li><strong>Spanish Fake News Corpus:</strong> <span class="year">2019-2021</span>
+                            <div class="author-info">Posadas-Durán et al., Ramírez Cruz et al.</div>
+                        </li>
+                        <li><strong>Web Scraping Verificadas:</strong> <span class="year">2019-2024</span>
+                            <div class="author-info">Acosta, Manzano-Velasco</div>
+                        </li>
+                        <li><strong>Political Fake News ES:</strong> <span class="year">2024</span>
+                            <div class="author-info">Blanco-Fernández et al. - Kaggle</div>
+                        </li>
+                        <li><strong>Noticias Falsas ES:</strong> <span class="year">2022</span>
+                            <div class="author-info">Tretiakov et al. - Springer</div>
+                        </li>
+                        <li><strong>IberLEF Datasets:</strong> <span class="year">2020-2021</span>
+                            <div class="author-info">Aragón et al., Gómez-Adorno et al.</div>
+                        </li>
+                        <li><strong>CLEF CheckThat!:</strong> <span class="year">2023</span>
+                            <div class="author-info">Alam et al., Barrón-Cedeño et al.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch evaluacion-bench branch-8" data-branch="8">
+                    <h3>
+                        <span class="icon">📈</span>
+                        Evaluación & Benchmarking
+                    </h3>
+                    <ul>
+                        <li><strong>Métricas Estándar:</strong>
+                            <div class="author-info">Precision, Recall, F1-Score, AUC-ROC</div>
+                        </li>
+                        <li><strong>Validación Cruzada:</strong>
+                            <div class="author-info">K-fold cross-validation</div>
+                        </li>
+                        <li><strong>Datasets Referencia:</strong>
+                            <div class="author-info">LIAR, BuzzFeedNews, CREDBANK</div>
+                        </li>
+                        <li><strong>A/B Testing:</strong>
+                            <div class="author-info">Evaluación en producción</div>
+                        </li>
+                        <li><strong>Fairness Analysis:</strong>
+                            <div class="author-info">Análisis sesgo algorítmico</div>
+                        </li>
+                        <li><strong>Competitions:</strong>
+                            <div class="author-info">IberLEF, CLEF, shared tasks</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch analisis-social branch-9" data-branch="9">
+                    <h3>
+                        <span class="icon">👥</span>
+                        Análisis Social & Heurísticas
+                    </h3>
+                    <ul>
+                        <li><strong>Heurísticas Cognitivas:</strong> <span class="year">2020-2021</span>
+                            <div class="author-info">Ali et al. - Facebook credibility</div>
+                        </li>
+                        <li><strong>Post-truth Propaganda:</strong> <span class="year">2020</span>
+                            <div class="author-info">Ali & Zain-Ul-Abdin - 2016 election</div>
+                        </li>
+                        <li><strong>Análisis Cross-cultural:</strong> <span class="year">2021</span>
+                            <div class="author-info">Cárcamo-Ulloa et al. - Chile y España</div>
+                        </li>
+                        <li><strong>COVID-19 & Twitter:</strong> <span class="year">2020</span>
+                            <div class="author-info">Pérez-Dasilva et al. - Actores principales</div>
+                        </li>
+                        <li><strong>Social Impact (SISM):</strong> <span class="year">2020</span>
+                            <div class="author-info">Pulido et al. - Health fake news</div>
+                        </li>
+                        <li><strong>Network Spreading:</strong>
+                            <div class="author-info">Difusión en redes sociales</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch sistemas-aplicados branch-10" data-branch="10">
+                    <h3>
+                        <span class="icon">🔧</span>
+                        Sistemas Aplicados
+                    </h3>
+                    <ul>
+                        <li><strong>Alerta Temprana:</strong> <span class="year">2024</span>
+                            <div class="author-info">Manzano-Velasco et al. - Colombia</div>
+                        </li>
+                        <li><strong>Interfaz Consulta ES:</strong> <span class="year">2020</span>
+                            <div class="author-info">García Robledo et al. - UAM</div>
+                        </li>
+                        <li><strong>Clinical Decision Support:</strong> <span class="year">2015</span>
+                            <div class="author-info">Reyes-Ortiz et al. - NLP approaches</div>
+                        </li>
+                        <li><strong>Fraud Detection:</strong> <span class="year">2020-2023</span>
+                            <div class="author-info">Financial & recruitment fraud</div>
+                        </li>
+                        <li><strong>Knowledge Graphs:</strong> <span class="year">2016</span>
+                            <div class="author-info">Ehrlinger & Wöß - Definitions</div>
+                        </li>
+                        <li><strong>Marketplace Security:</strong> <span class="year">2023</span>
+                            <div class="author-info">Osorio-Giraldo et al. - Facebook</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="title">Clasificación Metodológica: Estado del Arte en Detección de Noticias Falsas</div>
+            <div class="author">Gabriel Hurtado Avilés • Universidad Autónoma Metropolitana Azcapotzalco</div>
+        </div>
+    </div>
+
+    <script>
+        // Variables para el sistema de arrastre
+        let isDragging = false;
+        let currentElement = null;
+        let startX, startY, elementX, elementY;
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeDragAndDrop();
+            loadSavedPositions();
+            updateConnections();
+        });
+
+        function initializeDragAndDrop() {
+            const branches = document.querySelectorAll('.main-branch');
+            
+            branches.forEach(branch => {
+                branch.addEventListener('mousedown', startDrag);
+                branch.addEventListener('touchstart', startDrag, { passive: false });
+            });
+
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('touchmove', drag, { passive: false });
+            document.addEventListener('mouseup', endDrag);
+            document.addEventListener('touchend', endDrag);
+        }
+
+        function startDrag(e) {
+            e.preventDefault();
+            isDragging = true;
+            currentElement = e.currentTarget;
+            currentElement.classList.add('dragging');
+
+            const clientX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+            const clientY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+
+            startX = clientX;
+            startY = clientY;
+
+            const rect = currentElement.getBoundingClientRect();
+            const containerRect = currentElement.parentElement.getBoundingClientRect();
+            
+            elementX = rect.left - containerRect.left;
+            elementY = rect.top - containerRect.top;
+        }
+
+        function drag(e) {
+            if (!isDragging || !currentElement) return;
+            
+            e.preventDefault();
+            
+            const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+            const clientY = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
+
+            const deltaX = clientX - startX;
+            const deltaY = clientY - startY;
+
+            const newX = elementX + deltaX;
+            const newY = elementY + deltaY;
+
+            // Limitar el movimiento dentro del contenedor
+            const container = currentElement.parentElement;
+            const containerRect = container.getBoundingClientRect();
+            const elementRect = currentElement.getBoundingClientRect();
+
+            const maxX = containerRect.width - elementRect.width;
+            const maxY = containerRect.height - elementRect.height;
+
+            const constrainedX = Math.max(0, Math.min(newX, maxX));
+            const constrainedY = Math.max(0, Math.min(newY, maxY));
+
+            currentElement.style.left = constrainedX + 'px';
+            currentElement.style.top = constrainedY + 'px';
+            currentElement.style.right = 'auto';
+            currentElement.style.bottom = 'auto';
+
+            // Actualizar las líneas de conexión en tiempo real
+            updateConnections();
+        }
+
+        function endDrag() {
+            if (currentElement) {
+                currentElement.classList.remove('dragging');
+                currentElement = null;
+            }
+            isDragging = false;
+        }
+
+        function updateConnections() {
+            const svg = document.getElementById('connectionsSvg');
+            const centralNode = document.getElementById('centralNode');
+            const branches = document.querySelectorAll('.main-branch');
+            
+            // Limpiar líneas existentes
+            svg.innerHTML = '';
+
+            // Obtener el centro del nodo central
+            const centralRect = centralNode.getBoundingClientRect();
+            const containerRect = svg.getBoundingClientRect();
+            
+            const centralX = (centralRect.left + centralRect.width / 2 - containerRect.left) / containerRect.width * 100;
+            const centralY = (centralRect.top + centralRect.height / 2 - containerRect.top) / containerRect.height * 100;
+
+            // Colores para cada rama
+            const colors = ['#3498db', '#2ecc71', '#e74c3c', '#f39c12', '#9b59b6', '#1abc9c', '#e67e22', '#95a5a6', '#34495e', '#8e44ad'];
+
+            branches.forEach((branch, index) => {
+                const branchRect = branch.getBoundingClientRect();
+                const branchX = (branchRect.left + branchRect.width / 2 - containerRect.left) / containerRect.width * 100;
+                const branchY = (branchRect.top + branchRect.height / 2 - containerRect.top) / containerRect.height * 100;
+
+                // Crear línea SVG
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('class', 'connection-line');
+                line.setAttribute('x1', centralX + '%');
+                line.setAttribute('y1', centralY + '%');
+                line.setAttribute('x2', branchX + '%');
+                line.setAttribute('y2', branchY + '%');
+                line.setAttribute('stroke', colors[index]);
+
+                svg.appendChild(line);
+            });
+        }
+
+        function savePositions() {
+            const positions = {};
+            const branches = document.querySelectorAll('.main-branch');
+            
+            branches.forEach(branch => {
+                const branchId = branch.getAttribute('data-branch');
+                const rect = branch.getBoundingClientRect();
+                const containerRect = branch.parentElement.getBoundingClientRect();
+                
+                positions[branchId] = {
+                    x: rect.left - containerRect.left,
+                    y: rect.top - containerRect.top
+                };
+            });
+
+            localStorage.setItem('mindmapMethodologyPositions', JSON.stringify(positions));
+            
+            // Mostrar confirmación
+            const btn = document.querySelector('.save-positions-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✅ Guardado';
+            btn.style.background = '#27ae60';
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '#3498db';
+            }, 2000);
+        }
+
+        function loadSavedPositions() {
+            const savedPositions = localStorage.getItem('mindmapMethodologyPositions');
+            if (!savedPositions) return;
+
+            const positions = JSON.parse(savedPositions);
+            const branches = document.querySelectorAll('.main-branch');
+
+            branches.forEach(branch => {
+                const branchId = branch.getAttribute('data-branch');
+                if (positions[branchId]) {
+                    branch.style.left = positions[branchId].x + 'px';
+                    branch.style.top = positions[branchId].y + 'px';
+                    branch.style.right = 'auto';
+                    branch.style.bottom = 'auto';
+                }
+            });
+        }
+
+        // Actualizar conexiones cuando se redimensiona la ventana
+        window.addEventListener('resize', updateConnections);
+    </script>
+</body>
+</html>

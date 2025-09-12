@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental: Revisiones y Fraude Financiero (Interactivo)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #6a11cb 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow: hidden;
+        }
+
+        .mindmap-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            padding: 25px;
+            width: 100%;
+            height: 100%;
+            max-width: 1600px;
+            max-height: 900px;
+            position: relative;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .mindmap-content {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* SVG para las líneas conectivas */
+        .connections-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .connection-line {
+            stroke: #bdc3c7;
+            stroke-width: 3;
+            fill: none;
+            opacity: 0.7;
+            stroke-dasharray: 5,5;
+            animation: dashFlow 2s linear infinite;
+        }
+
+        @keyframes dashFlow {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: 20; }
+        }
+
+        /* Nodo central */
+        .central-node {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            z-index: 5;
+            min-width: 300px;
+            border: 4px solid white;
+        }
+
+        /* Contenedor de ramas principales */
+        .branches-layout {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ramas principales */
+        .main-branch {
+            position: absolute;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            border-left: 5px solid;
+            transition: all 0.3s ease;
+            z-index: 3;
+            width: 280px;
+            cursor: move;
+            user-select: none;
+        }
+
+        .main-branch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            z-index: 4;
+        }
+
+        .main-branch.dragging {
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            z-index: 6;
+            opacity: 0.9;
+        }
+
+        .main-branch h3 {
+            font-size: 15px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .main-branch ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-branch li {
+            margin-bottom: 8px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.4;
+            font-size: 11px;
+        }
+
+        .main-branch li:last-child {
+            margin-bottom: 0;
+        }
+
+        .main-branch li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: inherit;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        .main-branch strong {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .author-info {
+            font-size: 9px;
+            color: #666;
+            font-style: italic;
+            margin-top: 2px;
+        }
+
+        .year {
+            background: rgba(0,0,0,0.1);
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 9px;
+            margin-left: 4px;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+
+        /* Posicionamiento inicial */
+        .branch-1 { top: 5%; left: 5%; }      /* Revisiones Sistemáticas */
+        .branch-2 { top: 5%; right: 5%; }     /* Fraude Financiero */
+        .branch-3 { top: 30%; left: 1%; }     /* Fraude Laboral */
+        .branch-4 { top: 30%; right: 1%; }    /* Análisis Social */
+        .branch-5 { bottom: 30%; left: 1%; }  /* Metodologías NLP */
+        .branch-6 { bottom: 30%; right: 1%; } /* Datasets Especializados */
+        .branch-7 { bottom: 5%; left: 5%; }   /* Impacto Salud */
+        .branch-8 { bottom: 5%; right: 5%; }  /* Sistemas Prácticos */
+
+        /* Colores específicos para cada rama */
+        .revisiones { border-left-color: #e74c3c; }
+        .revisiones h3, .revisiones li:before { color: #e74c3c; }
+
+        .fraude-financiero { border-left-color: #27ae60; }
+        .fraude-financiero h3, .fraude-financiero li:before { color: #27ae60; }
+
+        .fraude-laboral { border-left-color: #3498db; }
+        .fraude-laboral h3, .fraude-laboral li:before { color: #3498db; }
+
+        .analisis-social { border-left-color: #9b59b6; }
+        .analisis-social h3, .analisis-social li:before { color: #9b59b6; }
+
+        .metodologias { border-left-color: #f39c12; }
+        .metodologias h3, .metodologias li:before { color: #f39c12; }
+
+        .datasets { border-left-color: #1abc9c; }
+        .datasets h3, .datasets li:before { color: #1abc9c; }
+
+        .impacto-salud { border-left-color: #e67e22; }
+        .impacto-salud h3, .impacto-salud li:before { color: #e67e22; }
+
+        .sistemas-practicos { border-left-color: #34495e; }
+        .sistemas-practicos h3, .sistemas-practicos li:before { color: #34495e; }
+
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 10px;
+            color: #2c3e50;
+            padding: 8px;
+            background: rgba(52, 73, 94, 0.05);
+            border-radius: 8px;
+            line-height: 1.3;
+            z-index: 10;
+            position: relative;
+        }
+
+        .footer .title {
+            font-weight: 600;
+            font-size: 11px;
+            color: #34495e;
+            margin-bottom: 3px;
+        }
+
+        .footer .author {
+            font-weight: 500;
+            color: #7f8c8d;
+            font-size: 10px;
+        }
+
+        /* Animaciones de entrada */
+        .main-branch {
+            animation: branchAppear 0.8s ease forwards;
+            opacity: 0;
+            transform: scale(0.3);
+        }
+
+        .main-branch.branch-1 { animation-delay: 0.1s; }
+        .main-branch.branch-2 { animation-delay: 0.2s; }
+        .main-branch.branch-3 { animation-delay: 0.3s; }
+        .main-branch.branch-4 { animation-delay: 0.4s; }
+        .main-branch.branch-5 { animation-delay: 0.5s; }
+        .main-branch.branch-6 { animation-delay: 0.6s; }
+        .main-branch.branch-7 { animation-delay: 0.7s; }
+        .main-branch.branch-8 { animation-delay: 0.8s; }
+
+        @keyframes branchAppear {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .central-node {
+            animation: centralPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes centralPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.02); }
+        }
+
+        /* Botón para guardar posiciones */
+        .save-positions-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            z-index: 10;
+        }
+
+        .save-positions-btn:hover {
+            background: #2980b9;
+        }
+
+        /* Indicador de instrucciones */
+        .instructions {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(52, 73, 94, 0.9);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 11px;
+            z-index: 10;
+        }
+
+        /* Responsive */
+        @media (max-width: 1400px) {
+            .main-branch {
+                width: 260px;
+                padding: 12px;
+            }
+            
+            .central-node {
+                min-width: 260px;
+                padding: 15px 25px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .main-branch {
+                width: 240px;
+                padding: 10px;
+            }
+            
+            .main-branch h3 {
+                font-size: 13px;
+            }
+            
+            .main-branch li {
+                font-size: 10px;
+            }
+            
+            .central-node {
+                min-width: 240px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .main-branch {
+                width: 200px;
+                padding: 8px;
+            }
+            
+            .main-branch h3 {
+                font-size: 12px;
+            }
+            
+            .main-branch li {
+                font-size: 9px;
+            }
+            
+            .central-node {
+                min-width: 200px;
+                padding: 10px 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mindmap-container">
+        <div class="instructions">
+            💡 Arrastra las ramas para reorganizar el mapa
+        </div>
+        
+        <button class="save-positions-btn" onclick="savePositions()">
+            💾 Guardar Posiciones
+        </button>
+        
+        <div class="header">
+            <h1>Revisiones y Detección de Fraude Financiero</h1>
+            <p class="subtitle">Análisis de Literatura Académica en Detección de Noticias Falsas y Fraude Digital</p>
+        </div>
+        
+        <div class="mindmap-content">
+            <!-- SVG para líneas conectivas -->
+            <svg class="connections-svg" id="connectionsSvg">
+                <!-- Las líneas se dibujarán dinámicamente con JavaScript -->
+            </svg>
+
+            <div class="branches-layout">
+                <!-- Nodo central -->
+                <div class="central-node" id="centralNode">
+                    📚 REVISIONES Y<br>FRAUDE FINANCIERO
+                </div>
+
+                <!-- Ramas principales -->
+                <div class="main-branch revisiones branch-1" data-branch="1">
+                    <h3>
+                        <span class="icon">📖</span>
+                        Revisiones Sistemáticas
+                    </h3>
+                    <ul>
+                        <li><strong>Bondielli & Marcelloni</strong> <span class="year">2019</span>
+                            <div class="author-info">Survey técnicas detección general</div>
+                        </li>
+                        <li><strong>Hu et al.</strong> <span class="year">2022</span>
+                            <div class="author-info">Deep Learning comprehensivo - AI Open</div>
+                        </li>
+                        <li><strong>Mridha et al.</strong> <span class="year">2021</span>
+                            <div class="author-info">IEEE Access - revisión completa</div>
+                        </li>
+                        <li><strong>Singh et al.</strong> <span class="year">2023</span>
+                            <div class="author-info">Redes sociales automática</div>
+                        </li>
+                        <li><strong>Thota et al.</strong> <span class="year">2018</span>
+                            <div class="author-info">SMU Scholar - enfoque específico</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch fraude-financiero branch-2" data-branch="2">
+                    <h3>
+                        <span class="icon">💰</span>
+                        Fraude Financiero
+                    </h3>
+                    <ul>
+                        <li><strong>Hidayattullah et al.</strong> <span class="year">2020</span>
+                            <div class="author-info">Meta-heurísticas Indonesia - IWBIS</div>
+                        </li>
+                        <li><strong>Horak & Sabek</strong> <span class="year">2023</span>
+                            <div class="author-info">Gaussian Process predicción - Retos</div>
+                        </li>
+                        <li><strong>Villamil Arcos</strong> <span class="year">2022</span>
+                            <div class="author-info">ML fraude transaccional - U. Nacional Colombia</div>
+                        </li>
+                        <li><strong>Cao et al.</strong> <span class="year">2020</span>
+                            <div class="author-info">Corporate employment audit effort</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch fraude-laboral branch-3" data-branch="3">
+                    <h3>
+                        <span class="icon">🏢</span>
+                        Fraude Laboral
+                    </h3>
+                    <ul>
+                        <li><strong>Nasser et al.</strong> <span class="year">2021</span>
+                            <div class="author-info">ANN reclutamiento online - PICICT</div>
+                        </li>
+                        <li><strong>Aguirre Quezada</strong> <span class="year">2023</span>
+                            <div class="author-info">Marco legislativo México - Senado</div>
+                        </li>
+                        <li><strong>Alvarez</strong> <span class="year">2021</span>
+                            <div class="author-info">Era digital derecho laboral</div>
+                        </li>
+                        <li><strong>Osorio-Giraldo et al.</strong> <span class="year">2023</span>
+                            <div class="author-info">Facebook Marketplace seguridad</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch analisis-social branch-4" data-branch="4">
+                    <h3>
+                        <span class="icon">🌐</span>
+                        Análisis Social
+                    </h3>
+                    <ul>
+                        <li><strong>Ali & Zain-Ul-Abdin</strong> <span class="year">2020</span>
+                            <div class="author-info">Heurísticas Facebook 2016 - J. Applied Comm.</div>
+                        </li>
+                        <li><strong>Ali et al.</strong> <span class="year">2021</span>
+                            <div class="author-info">Credibilidad redes sociales - Internet Research</div>
+                        </li>
+                        <li><strong>Cárcamo-Ulloa et al.</strong> <span class="year">2021</span>
+                            <div class="author-info">Chile y España medios - J. Iberian & Latin Am.</div>
+                        </li>
+                        <li><strong>Pérez-Dasilva et al.</strong> <span class="year">2020</span>
+                            <div class="author-info">COVID-19 Twitter - El Profesional</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch metodologias branch-5" data-branch="5">
+                    <h3>
+                        <span class="icon">🔬</span>
+                        Metodologías NLP
+                    </h3>
+                    <ul>
+                        <li><strong>Tsai</strong> <span class="year">2023</span>
+                            <div class="author-info">Estilométrico NER - Electronics</div>
+                        </li>
+                        <li><strong>Posadas-Durán et al.</strong> <span class="year">2019</span>
+                            <div class="author-info">Corpus español - J. Intelligent & Fuzzy</div>
+                        </li>
+                        <li><strong>Martínez-Gallego et al.</strong> <span class="year">2021</span>
+                            <div class="author-info">BERT español - arXiv</div>
+                        </li>
+                        <li><strong>Tretiakov et al.</strong> <span class="year">2022</span>
+                            <div class="author-info">ML español - Springer</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch datasets branch-6" data-branch="6">
+                    <h3>
+                        <span class="icon">📊</span>
+                        Datasets Especializados
+                    </h3>
+                    <ul>
+                        <li><strong>Acosta</strong> <span class="year">2019</span>
+                            <div class="author-info">Dataset construcción - U. Politécnica Madrid</div>
+                        </li>
+                        <li><strong>Ramírez Cruz et al.</strong> <span class="year">2021</span>
+                            <div class="author-info">Spanish Fake News Corpus 2.0 - GitHub</div>
+                        </li>
+                        <li><strong>Blanco-Fernández et al.</strong> <span class="year">2024</span>
+                            <div class="author-info">Political Fake News español - Kaggle</div>
+                        </li>
+                        <li><strong>Manzano-Velasco</strong> <span class="year">2024</span>
+                            <div class="author-info">Web scraping verificadas - Kaggle</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch impacto-salud branch-7" data-branch="7">
+                    <h3>
+                        <span class="icon">🏥</span>
+                        Impacto en Salud
+                    </h3>
+                    <ul>
+                        <li><strong>Pulido et al.</strong> <span class="year">2020</span>
+                            <div class="author-info">SISM metodología salud - Int. J. Env. Res.</div>
+                        </li>
+                        <li><strong>Pérez-Dasilva et al.</strong> <span class="year">2020</span>
+                            <div class="author-info">Coronavirus tendencias Twitter</div>
+                        </li>
+                        <li><strong>Sistema SISM:</strong> Social Impact Social Media
+                            <div class="author-info">Combate noticias falsas en salud</div>
+                        </li>
+                        <li><strong>Impacto COVID-19:</strong> Desinformación pandemia
+                            <div class="author-info">Análisis actores principales</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch sistemas-practicos branch-8" data-branch="8">
+                    <h3>
+                        <span class="icon">🔧</span>
+                        Sistemas Prácticos
+                    </h3>
+                    <ul>
+                        <li><strong>Manzano-Velasco et al.</strong> <span class="year">2024</span>
+                            <div class="author-info">Alerta temprana Colombia - U. del Cauca</div>
+                        </li>
+                        <li><strong>García Robledo et al.</strong> <span class="year">2020</span>
+                            <div class="author-info">Interfaz consulta español - UAM</div>
+                        </li>
+                        <li><strong>Padilla Cuevas et al.</strong> <span class="year">2019</span>
+                            <div class="author-info">Detección eventos académicos - UAM</div>
+                        </li>
+                        <li><strong>Reyes-Ortiz et al.</strong> <span class="year">2015</span>
+                            <div class="author-info">Clinical Decision Support - DEXA</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="title">Estado del Arte: Revisiones y Detección de Fraude Financiero</div>
+            <div class="author">Gabriel Hurtado Avilés • Universidad Autónoma Metropolitana Azcapotzalco</div>
+        </div>
+    </div>
+
+    <script>
+        // Variables para el sistema de arrastre
+        let isDragging = false;
+        let currentElement = null;
+        let startX, startY, elementX, elementY;
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeDragAndDrop();
+            loadSavedPositions();
+            updateConnections();
+        });
+
+        function initializeDragAndDrop() {
+            const branches = document.querySelectorAll('.main-branch');
+            
+            branches.forEach(branch => {
+                branch.addEventListener('mousedown', startDrag);
+                branch.addEventListener('touchstart', startDrag, { passive: false });
+            });
+
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('touchmove', drag, { passive: false });
+            document.addEventListener('mouseup', endDrag);
+            document.addEventListener('touchend', endDrag);
+        }
+
+        function startDrag(e) {
+            e.preventDefault();
+            isDragging = true;
+            currentElement = e.currentTarget;
+            currentElement.classList.add('dragging');
+
+            const clientX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+            const clientY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+
+            startX = clientX;
+            startY = clientY;
+
+            const rect = currentElement.getBoundingClientRect();
+            const containerRect = currentElement.parentElement.getBoundingClientRect();
+            
+            elementX = rect.left - containerRect.left;
+            elementY = rect.top - containerRect.top;
+        }
+
+        function drag(e) {
+            if (!isDragging || !currentElement) return;
+            
+            e.preventDefault();
+            
+            const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+            const clientY = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
+
+            const deltaX = clientX - startX;
+            const deltaY = clientY - startY;
+
+            const newX = elementX + deltaX;
+            const newY = elementY + deltaY;
+
+            // Limitar el movimiento dentro del contenedor
+            const container = currentElement.parentElement;
+            const containerRect = container.getBoundingClientRect();
+            const elementRect = currentElement.getBoundingClientRect();
+
+            const maxX = containerRect.width - elementRect.width;
+            const maxY = containerRect.height - elementRect.height;
+
+            const constrainedX = Math.max(0, Math.min(newX, maxX));
+            const constrainedY = Math.max(0, Math.min(newY, maxY));
+
+            currentElement.style.left = constrainedX + 'px';
+            currentElement.style.top = constrainedY + 'px';
+            currentElement.style.right = 'auto';
+            currentElement.style.bottom = 'auto';
+
+            // Actualizar las líneas de conexión en tiempo real
+            updateConnections();
+        }
+
+        function endDrag() {
+            if (currentElement) {
+                currentElement.classList.remove('dragging');
+                currentElement = null;
+            }
+            isDragging = false;
+        }
+
+        function updateConnections() {
+            const svg = document.getElementById('connectionsSvg');
+            const centralNode = document.getElementById('centralNode');
+            const branches = document.querySelectorAll('.main-branch');
+            
+            // Limpiar líneas existentes
+            svg.innerHTML = '';
+
+            // Obtener el centro del nodo central
+            const centralRect = centralNode.getBoundingClientRect();
+            const containerRect = svg.getBoundingClientRect();
+            
+            const centralX = (centralRect.left + centralRect.width / 2 - containerRect.left) / containerRect.width * 100;
+            const centralY = (centralRect.top + centralRect.height / 2 - containerRect.top) / containerRect.height * 100;
+
+            // Colores para cada rama
+            const colors = ['#e74c3c', '#27ae60', '#3498db', '#9b59b6', '#f39c12', '#1abc9c', '#e67e22', '#34495e'];
+
+            branches.forEach((branch, index) => {
+                const branchRect = branch.getBoundingClientRect();
+                const branchX = (branchRect.left + branchRect.width / 2 - containerRect.left) / containerRect.width * 100;
+                const branchY = (branchRect.top + branchRect.height / 2 - containerRect.top) / containerRect.height * 100;
+
+                // Crear línea SVG
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('class', 'connection-line');
+                line.setAttribute('x1', centralX + '%');
+                line.setAttribute('y1', centralY + '%');
+                line.setAttribute('x2', branchX + '%');
+                line.setAttribute('y2', branchY + '%');
+                line.setAttribute('stroke', colors[index]);
+
+                svg.appendChild(line);
+            });
+        }
+
+        function savePositions() {
+            const positions = {};
+            const branches = document.querySelectorAll('.main-branch');
+            
+            branches.forEach(branch => {
+                const branchId = branch.getAttribute('data-branch');
+                const rect = branch.getBoundingClientRect();
+                const containerRect = branch.parentElement.getBoundingClientRect();
+                
+                positions[branchId] = {
+                    x: rect.left - containerRect.left,
+                    y: rect.top - containerRect.top
+                };
+            });
+
+            localStorage.setItem('mindmapReviewPositions', JSON.stringify(positions));
+            
+            // Mostrar confirmación
+            const btn = document.querySelector('.save-positions-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✅ Guardado';
+            btn.style.background = '#27ae60';
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '#3498db';
+            }, 2000);
+        }
+
+        function loadSavedPositions() {
+            const savedPositions = localStorage.getItem('mindmapReviewPositions');
+            if (!savedPositions) return;
+
+            const positions = JSON.parse(savedPositions);
+            const branches = document.querySelectorAll('.main-branch');
+
+            branches.forEach(branch => {
+                const branchId = branch.getAttribute('data-branch');
+                if (positions[branchId]) {
+                    branch.style.left = positions[branchId].x + 'px';
+                    branch.style.top = positions[branchId].y + 'px';
+                    branch.style.right = 'auto';
+                    branch.style.bottom = 'auto';
+                }
+            });
+        }
+
+        // Actualizar conexiones cuando se redimensiona la ventana
+        window.addEventListener('resize', updateConnections);
+    </script>
+</body>
+</html>

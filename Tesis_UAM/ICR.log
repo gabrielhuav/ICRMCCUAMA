@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.8)  12 SEP 2025 12:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.8)  12 SEP 2025 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2056,18 +2056,18 @@ LaTeX Info: Redefining \% on input line 558.
 LaTeX Info: Redefining \. on input line 606.
 LaTeX Info: Redefining \% on input line 606.
  [75]
-<Imagenes/balanceo_corpus_explicacion.png, id=2174, 1924.94156pt x 1105.88156pt
->
+<Imagenes/balanceo_corpus_explicacion.png, id=2174, 1189.44376pt x 603.75563pt>
+
 File: Imagenes/balanceo_corpus_explicacion.png Graphic file (type png)
 <use Imagenes/balanceo_corpus_explicacion.png>
 Package pdftex.def Info: Imagenes/balanceo_corpus_explicacion.png  used on inpu
 t line 631.
-(pdftex.def)             Requested size: 346.89731pt x 199.28633pt.
+(pdftex.def)             Requested size: 346.89731pt x 176.0796pt.
 LaTeX Info: Redefining \. on input line 644.
 LaTeX Info: Redefining \% on input line 644.
  [76]
-LaTeX Info: Redefining \. on input line 663.
-LaTeX Info: Redefining \% on input line 663.
+LaTeX Info: Redefining \. on input line 664.
+LaTeX Info: Redefining \% on input line 664.
  [77 <./Imagenes/balanceo_corpus_explicacion.png>]
 LaTeX Info: Redefining \. on input line 696.
 LaTeX Info: Redefining \% on input line 696.
@@ -2698,7 +2698,7 @@ c/amsfonts/cm/cmr8.pfb><C:/Users/gabri/AppData/Local/Programs/MiKTeX/fonts/type
 onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/gabri/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/gabri/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ICR.pdf (193 pages, 7915027 bytes).
+Output written on ICR.pdf (193 pages, 8182341 bytes).
 PDF statistics:
  4447 PDF objects out of 5155 (max. 8388607)
  933 named destinations out of 1000 (max. 500000)

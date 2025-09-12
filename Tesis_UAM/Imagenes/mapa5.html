@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Conceptual: Métodos de Optimización y Metaheurísticas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #3498db 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            overflow: hidden;
+        }
+
+        .mindmap-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            width: 100%;
+            height: 100%;
+            max-width: 1600px;
+            max-height: 900px;
+            position: relative;
+            backdrop-filter: blur(15px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .mindmap-content {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* SVG para las líneas conectivas */
+        .connections-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .connection-line {
+            stroke: #bdc3c7;
+            stroke-width: 3;
+            fill: none;
+            opacity: 0.6;
+            stroke-dasharray: 8,4;
+            animation: dashFlow 3s linear infinite;
+        }
+
+        @keyframes dashFlow {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: 24; }
+        }
+
+        /* Nodo central */
+        .central-node {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 25px 35px;
+            border-radius: 60px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 15px 40px rgba(231, 76, 60, 0.4);
+            z-index: 5;
+            min-width: 280px;
+            border: 4px solid white;
+        }
+
+        /* Contenedor de ramas principales */
+        .branches-layout {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ramas principales */
+        .main-branch {
+            position: absolute;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid;
+            transition: all 0.3s ease;
+            z-index: 3;
+            width: 260px;
+            cursor: move;
+            user-select: none;
+        }
+
+        .main-branch:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            z-index: 4;
+        }
+
+        .main-branch.dragging {
+            transform: scale(1.08);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+            z-index: 6;
+            opacity: 0.9;
+        }
+
+        .main-branch h3 {
+            font-size: 15px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .main-branch ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-branch li {
+            margin-bottom: 8px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.4;
+            font-size: 11px;
+        }
+
+        .main-branch li:last-child {
+            margin-bottom: 0;
+        }
+
+        .main-branch li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: inherit;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .main-branch strong {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .algorithm-info {
+            font-size: 9px;
+            color: #666;
+            font-style: italic;
+            margin-top: 2px;
+            padding-left: 8px;
+        }
+
+        .year {
+            background: rgba(0,0,0,0.1);
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 9px;
+            margin-left: 4px;
+        }
+
+        .performance {
+            background: rgba(46, 204, 113, 0.2);
+            padding: 1px 4px;
+            border-radius: 2px;
+            font-size: 8px;
+            margin-left: 4px;
+            color: #27ae60;
+        }
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+        }
+
+        /* Posicionamiento inicial - más compacto */
+        .branch-1 { top: 5%; left: 5%; }      /* Algoritmos Genéticos */
+        .branch-2 { top: 5%; right: 5%; }     /* PSO */
+        .branch-3 { top: 25%; left: 2%; }     /* Recocido Simulado */
+        .branch-4 { top: 25%; right: 2%; }    /* VNS */
+        .branch-5 { top: 45%; left: 2%; }     /* Aplicaciones */
+        .branch-6 { top: 45%; right: 2%; }    /* Tu Investigación */
+        .branch-7 { bottom: 25%; left: 2%; }  /* Keras Tuner */
+        .branch-8 { bottom: 25%; right: 2%; } /* Direcciones Futuras */
+
+        /* Colores específicos para cada rama */
+        .geneticos { border-left-color: #e74c3c; }
+        .geneticos h3, .geneticos li:before { color: #e74c3c; }
+
+        .pso { border-left-color: #3498db; }
+        .pso h3, .pso li:before { color: #3498db; }
+
+        .recocido { border-left-color: #f39c12; }
+        .recocido h3, .recocido li:before { color: #f39c12; }
+
+        .vns { border-left-color: #1abc9c; }
+        .vns h3, .vns li:before { color: #1abc9c; }
+
+        .aplicaciones { border-left-color: #95a5a6; }
+        .aplicaciones h3, .aplicaciones li:before { color: #95a5a6; }
+
+        .tu-investigacion { border-left-color: #8e44ad; }
+        .tu-investigacion h3, .tu-investigacion li:before { color: #8e44ad; }
+
+        .keras-tuner { border-left-color: #34495e; }
+        .keras-tuner h3, .keras-tuner li:before { color: #34495e; }
+
+        .futuras { border-left-color: #27ae60; }
+        .futuras h3, .futuras li:before { color: #27ae60; }
+
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 10px;
+            color: #2c3e50;
+            padding: 8px;
+            background: rgba(52, 73, 94, 0.05);
+            border-radius: 8px;
+            line-height: 1.3;
+            z-index: 10;
+            position: relative;
+        }
+
+        .footer .title {
+            font-weight: 600;
+            font-size: 11px;
+            color: #34495e;
+            margin-bottom: 3px;
+        }
+
+        .footer .author {
+            font-weight: 500;
+            color: #7f8c8d;
+            font-size: 10px;
+        }
+
+        /* Animaciones de entrada */
+        .main-branch {
+            animation: branchAppear 0.6s ease forwards;
+            opacity: 0;
+            transform: scale(0.3);
+        }
+
+        .main-branch.branch-1 { animation-delay: 0.1s; }
+        .main-branch.branch-2 { animation-delay: 0.2s; }
+        .main-branch.branch-3 { animation-delay: 0.3s; }
+        .main-branch.branch-4 { animation-delay: 0.4s; }
+        .main-branch.branch-5 { animation-delay: 0.5s; }
+        .main-branch.branch-6 { animation-delay: 0.6s; }
+        .main-branch.branch-7 { animation-delay: 0.7s; }
+        .main-branch.branch-8 { animation-delay: 0.8s; }
+
+        @keyframes branchAppear {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .central-node {
+            animation: centralPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes centralPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.02); }
+        }
+
+        /* Botón para guardar posiciones */
+        .save-positions-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            z-index: 10;
+        }
+
+        .save-positions-btn:hover {
+            background: #2980b9;
+        }
+
+        /* Indicador de instrucciones */
+        .instructions {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(52, 73, 94, 0.9);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 11px;
+            z-index: 10;
+        }
+
+        /* Responsive */
+        @media (max-width: 1400px) {
+            .main-branch {
+                width: 240px;
+                padding: 12px;
+            }
+            
+            .central-node {
+                min-width: 260px;
+                padding: 20px 30px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .main-branch {
+                width: 220px;
+                padding: 10px;
+            }
+            
+            .main-branch h3 {
+                font-size: 13px;
+            }
+            
+            .main-branch li {
+                font-size: 10px;
+            }
+            
+            .central-node {
+                min-width: 240px;
+                padding: 18px 25px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mindmap-container">
+        <div class="instructions">
+            🔧 Arrastra para reorganizar
+        </div>
+        
+        <button class="save-positions-btn" onclick="savePositions()">
+            💾 Guardar
+        </button>
+        
+        <div class="header">
+            <h1>Métodos de Optimización Metaheurística</h1>
+            <p class="subtitle">Aplicaciones en Detección de Noticias Falsas</p>
+        </div>
+        
+        <div class="mindmap-content">
+            <!-- SVG para líneas conectivas -->
+            <svg class="connections-svg" id="connectionsSvg">
+                <!-- Las líneas se dibujarán dinámicamente con JavaScript -->
+            </svg>
+
+            <div class="branches-layout">
+                <!-- Nodo central -->
+                <div class="central-node" id="centralNode">
+                    🧬 OPTIMIZACIÓN<br>METAHEURÍSTICA
+                </div>
+
+                <!-- Ramas principales -->
+                <div class="main-branch geneticos branch-1" data-branch="1">
+                    <h3>
+                        <span class="icon">🧬</span>
+                        Algoritmos Genéticos
+                    </h3>
+                    <ul>
+                        <li><strong>Fundador:</strong> Holland <span class="year">1992</span></li>
+                        <li><strong>Inspiración:</strong> Evolución biológica
+                            <div class="algorithm-info">Selección, cruce, mutación</div>
+                        </li>
+                        <li><strong>Aplicación:</strong> Hidayattullah et al.
+                            <div class="algorithm-info">SVM optimizado <span class="performance">96.15%</span></div>
+                        </li>
+                        <li><strong>Características:</strong>
+                            <div class="algorithm-info">• Población de soluciones<br/>• Evolución dirigida por fitness</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch pso branch-2" data-branch="2">
+                    <h3>
+                        <span class="icon">🐦</span>
+                        Particle Swarm Optimization
+                    </h3>
+                    <ul>
+                        <li><strong>Creadores:</strong> Kennedy & Eberhart <span class="year">1995</span></li>
+                        <li><strong>Inspiración:</strong> Comportamiento de bandadas
+                            <div class="algorithm-info">Búsqueda social colaborativa</div>
+                        </li>
+                        <li><strong>Parámetros:</strong> Inercia, coeficientes c1/c2
+                            <div class="algorithm-info">Velocidad máxima, posición</div>
+                        </li>
+                        <li><strong>Ventajas:</strong>
+                            <div class="algorithm-info">• Convergencia rápida<br/>• Pocos parámetros</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch recocido branch-3" data-branch="3">
+                    <h3>
+                        <span class="icon">🔥</span>
+                        Recocido Simulado
+                    </h3>
+                    <ul>
+                        <li><strong>Origen:</strong> Kirkpatrick et al. <span class="year">1983</span></li>
+                        <li><strong>Inspiración:</strong> Enfriamiento de metales
+                            <div class="algorithm-info">Aceptación probabilística</div>
+                        </li>
+                        <li><strong>Parámetros:</strong>
+                            <div class="algorithm-info">• Temperatura inicial<br/>• Esquema enfriamiento</div>
+                        </li>
+                        <li><strong>Fortaleza:</strong> Escape de óptimos locales</li>
+                    </ul>
+                </div>
+
+                <div class="main-branch vns branch-4" data-branch="4">
+                    <h3>
+                        <span class="icon">🔄</span>
+                        Variable Neighborhood Search
+                    </h3>
+                    <ul>
+                        <li><strong>Creadores:</strong> Mladenović & Hansen <span class="year">1997</span></li>
+                        <li><strong>Principio:</strong> Cambio sistemático vecindades
+                            <div class="algorithm-info">Exploración/explotación alternada</div>
+                        </li>
+                        <li><strong>Ventaja:</strong> Óptimo en una vecindad ≠ óptimo en otra</li>
+                        <li><strong>Aplicación:</strong> Espacios de hiperparámetros</li>
+                    </ul>
+                </div>
+
+                <div class="main-branch aplicaciones branch-5" data-branch="5">
+                    <h3>
+                        <span class="icon">⚙️</span>
+                        Aplicaciones Principales
+                    </h3>
+                    <ul>
+                        <li><strong>Noticias Falsas:</strong> Aqil & Lahby <span class="year">2021</span>
+                            <div class="algorithm-info">Job Shop Scheduling model</div>
+                        </li>
+                        <li><strong>Deep Learning:</strong> Bacanin et al. <span class="year">2023</span>
+                            <div class="algorithm-info">Hyperparameter tuning</div>
+                        </li>
+                        <li><strong>Fraude Financiero:</strong> Hidayattullah <span class="year">2020</span></li>
+                        <li><strong>Ensemble:</strong> Das et al. <span class="performance">95% F1</span></li>
+                    </ul>
+                </div>
+
+                <div class="main-branch tu-investigacion branch-6" data-branch="6">
+                    <h3>
+                        <span class="icon">🎓</span>
+                        Esta Investigación
+                    </h3>
+                    <ul>
+                        <li><strong>Publicación:</strong> Hurtado et al. - BUAP <span class="year">2024</span></li>
+                        <li><strong>Algoritmos:</strong> AG, PSO, SA, MS, SS, VNS
+                            <div class="algorithm-info">6 metaheurísticas comparadas</div>
+                        </li>
+                        <li><strong>Comparativa:</strong> TF-IDF vs DistilBERT</li>
+                        <li><strong>Contribución:</strong>
+                            <div class="algorithm-info">• Calibración automática<br/>• Corpus español unificado</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="main-branch keras-tuner branch-7" data-branch="7">
+                    <h3>
+                        <span class="icon">🤖</span>
+                        Keras Tuner & Modernos
+                    </h3>
+                    <ul>
+                        <li><strong>Keras Tuner:</strong> O'Malley et al. <span class="year">2020</span>
+                            <div class="algorithm-info">TensorFlow hyperparameter tuning</div>
+                        </li>
+                        <li><strong>Estrategias:</strong> Random, Bayesian, Hyperband</li>
+                        <li><strong>LLMs:</strong> Zhang et al. <span class="year">2023</span>
+                            <div class="algorithm-info">Large language models para optimización</div>
+                        </li>
+                        <li><strong>DistilBERT:</strong> Learning rate, batch size, epochs</li>
+                    </ul>
+                </div>
+
+                <div class="main-branch futuras branch-8" data-branch="8">
+                    <h3>
+                        <span class="icon">🚀</span>
+                        Direcciones Futuras
+                    </h3>
+                    <ul>
+                        <li><strong>AutoML:</strong> Pipelines automatizados
+                            <div class="algorithm-info">End-to-end optimization</div>
+                        </li>
+                        <li><strong>Multi-objetivo:</strong>
+                            <div class="algorithm-info">• Precisión vs Eficiencia<br/>• Interpretabilidad vs Performance</div>
+                        </li>
+                        <li><strong>Neural Architecture Search:</strong> Evolutionary DL</li>
+                        <li><strong>Tiempo Real:</strong> Adaptación online</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="title">Métodos de Optimización Metaheurística en Detección de Fraude Digital</div>
+            <div class="author">Gabriel Hurtado Avilés • UAM Azcapotzalco • 2024</div>
+        </div>
+    </div>
+
+    <script>
+        // Variables para el sistema de arrastre
+        let isDragging = false;
+        let currentElement = null;
+        let startX, startY, elementX, elementY;
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeDragAndDrop();
+            loadSavedPositions();
+            updateConnections();
+        });
+
+        function initializeDragAndDrop() {
+            const branches = document.querySelectorAll('.main-branch');
+            
+            branches.forEach(branch => {
+                branch.addEventListener('mousedown', startDrag);
+                branch.addEventListener('touchstart', startDrag, { passive: false });
+            });
+
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('touchmove', drag, { passive: false });
+            document.addEventListener('mouseup', endDrag);
+            document.addEventListener('touchend', endDrag);
+        }
+
+        function startDrag(e) {
+            e.preventDefault();
+            isDragging = true;
+            currentElement = e.currentTarget;
+            currentElement.classList.add('dragging');
+
+            const clientX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+            const clientY = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
+
+            startX = clientX;
+            startY = clientY;
+
+            const rect = currentElement.getBoundingClientRect();
+            const containerRect = currentElement.parentElement.getBoundingClientRect();
+            
+            elementX = rect.left - containerRect.left;
+            elementY = rect.top - containerRect.top;
+        }
+
+        function drag(e) {
+            if (!isDragging || !currentElement) return;
+            
+            e.preventDefault();
+            
+            const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+            const clientY = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
+
+            const deltaX = clientX - startX;
+            const deltaY = clientY - startY;
+
+            const newX = elementX + deltaX;
+            const newY = elementY + deltaY;
+
+            // Limitar el movimiento dentro del contenedor
+            const container = currentElement.parentElement;
+            const containerRect = container.getBoundingClientRect();
+            const elementRect = currentElement.getBoundingClientRect();
+
+            const maxX = containerRect.width - elementRect.width;
+            const maxY = containerRect.height - elementRect.height;
+
+            const constrainedX = Math.max(0, Math.min(newX, maxX));
+            const constrainedY = Math.max(0, Math.min(newY, maxY));
+
+            currentElement.style.left = constrainedX + 'px';
+            currentElement.style.top = constrainedY + 'px';
+            currentElement.style.right = 'auto';
+            currentElement.style.bottom = 'auto';
+
+            // Actualizar las líneas de conexión en tiempo real
+            updateConnections();
+        }
+
+        function endDrag() {
+            if (currentElement) {
+                currentElement.classList.remove('dragging');
+                currentElement = null;
+            }
+            isDragging = false;
+        }
+
+        function updateConnections() {
+            const svg = document.getElementById('connectionsSvg');
+            const centralNode = document.getElementById('centralNode');
+            const branches = document.querySelectorAll('.main-branch');
+            
+            // Limpiar líneas existentes
+            svg.innerHTML = '';
+
+            // Obtener el centro del nodo central
+            const centralRect = centralNode.getBoundingClientRect();
+            const containerRect = svg.getBoundingClientRect();
+            
+            const centralX = (centralRect.left + centralRect.width / 2 - containerRect.left) / containerRect.width * 100;
+            const centralY = (centralRect.top + centralRect.height / 2 - containerRect.top) / containerRect.height * 100;
+
+            // Colores para cada rama
+            const colors = ['#e74c3c', '#3498db', '#f39c12', '#1abc9c', '#95a5a6', '#8e44ad', '#34495e', '#27ae60'];
+
+            branches.forEach((branch, index) => {
+                const branchRect = branch.getBoundingClientRect();
+                const branchX = (branchRect.left + branchRect.width / 2 - containerRect.left) / containerRect.width * 100;
+                const branchY = (branchRect.top + branchRect.height / 2 - containerRect.top) / containerRect.height * 100;
+
+                // Crear línea SVG
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('class', 'connection-line');
+                line.setAttribute('x1', centralX + '%');
+                line.setAttribute('y1', centralY + '%');
+                line.setAttribute('x2', branchX + '%');
+                line.setAttribute('y2', branchY + '%');
+                line.setAttribute('stroke', colors[index]);
+
+                svg.appendChild(line);
+            });
+        }
+
+        function savePositions() {
+            const positions = {};
+            const branches = document.querySelectorAll('.main-branch');
+            
+            branches.forEach(branch => {
+                const branchId = branch.getAttribute('data-branch');
+                const rect = branch.getBoundingClientRect();
+                const containerRect = branch.parentElement.getBoundingClientRect();
+                
+                positions[branchId] = {
+                    x: rect.left - containerRect.left,
+                    y: rect.top - containerRect.top
+                };
+            });
+
+            localStorage.setItem('mindmapOptimizationPositions', JSON.stringify(positions));
+            
+            // Mostrar confirmación
+            const btn = document.querySelector('.save-positions-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✅ Guardado';
+            btn.style.background = '#27ae60';
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '#3498db';
+            }, 2000);
+        }
+
+        function loadSavedPositions() {
+            const savedPositions = localStorage.getItem('mindmapOptimizationPositions');
+            if (!savedPositions) return;
+
+            const positions = JSON.parse(savedPositions);
+            const branches = document.querySelectorAll('.main-branch');
+
+            branches.forEach(branch => {
+                const branchId = branch.getAttribute('data-branch');
+                if (positions[branchId]) {
+                    branch.style.left = positions[branchId].x + 'px';
+                    branch.style.top = positions[branchId].y + 'px';
+                    branch.style.right = 'auto';
+                    branch.style.bottom = 'auto';
+                }
+            });
+        }
+
+        // Actualizar conexiones cuando se redimensiona la ventana
+        window.addEventListener('resize', updateConnections);
+    </script>
+</body>
+</html>
