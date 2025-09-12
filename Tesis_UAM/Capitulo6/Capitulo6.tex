@@ -25,7 +25,7 @@ El primer prototipo se desarrolló para servir los modelos optimizados con los a
 \subsection{Componentes del Modelo}
 El ``modelo'' en este enfoque no es un único archivo, sino un pipeline de preprocesamiento y clasificación compuesto por cinco artefactos distintos, todos ellos guardados en la carpeta \texttt{app/modelo\_recocido/}:
 \begin{itemize}
-    \item \texttt{vectorizer.joblib:} El objeto \texttt{TfidfVectorizer} entrenado, responsable de convertir texto nuevo al formato de Bolsa de Palabras (BoW).
+    \item \texttt{vectorizer.joblib:} El objeto \texttt{TfidfVectorizer} entrenado, responsable de convertir texto nuevo al formato TF-IDF.
     \item \texttt{selector\_caracteristicas.joblib:} El objeto \texttt{SelectPercentile} que aplica la reducción de dimensionalidad, seleccionando solo las características más relevantes.
     \item \texttt{modelo\_recocido\_solucion.npy:} Array de NumPy que define los índices de las características a utilizar.
     \item \texttt{modelo\_recocido\_pesos.npy:} Array de NumPy con los pesos optimizados por el algoritmo.

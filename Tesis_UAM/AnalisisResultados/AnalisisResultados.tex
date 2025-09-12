@@ -57,7 +57,7 @@ Las características del corpus son las siguientes:
 
 \subsubsection{Configuración de Representación Textual}
 
-La representación textual se fundamentó en el paradigma clásico de Bolsa de Palabras con ponderación TF-IDF:
+La representación textual se fundamentó en la técnica TF-IDF:
 
 \begin{itemize}
     \item \textbf{Vocabulario inicial:} 5,000 términos más frecuentes del corpus
@@ -190,7 +190,7 @@ El algoritmo MSA implementa una estrategia de multiarranque que ejecuta múltipl
 \rowcolor{LightGray!10}
 \multicolumn{2}{|l|}{\textbf{0. Carga y preprocesamiento de datos:}} \\
 \hline
-\multicolumn{2}{|l|}{Cargar corpus BoW desde archivo CSV} \\
+\multicolumn{2}{|l|}{Cargar corpus TF-IDF desde archivo CSV} \\
 \multicolumn{2}{|l|}{Dividir datos: 80\% entrenamiento, 10\% validación, 10\% pruebas} \\
 \multicolumn{2}{|l|}{Aplicar SelectPercentile(percentile=10) para reducir características} \\
 \hline
@@ -250,7 +250,7 @@ El algoritmo SS utiliza una estrategia de combinación sistemática que mantiene
 \rowcolor{LightGray!10}
 \multicolumn{2}{|l|}{\textbf{0. Carga y preprocesamiento de datos:}} \\
 \hline
-\multicolumn{2}{|l|}{Cargar corpus BoW desde archivo CSV} \\
+\multicolumn{2}{|l|}{Cargar corpus TF-IDF desde archivo CSV} \\
 \multicolumn{2}{|l|}{Dividir datos: 80\% entrenamiento, 10\% validación, 10\% pruebas} \\
 \multicolumn{2}{|l|}{Aplicar SelectPercentile(percentile=10) para reducir características} \\
 \hline
@@ -304,7 +304,7 @@ El algoritmo GA emplea una estrategia evolutiva basada en principios darwinianos
 \rowcolor{LightGray!10}
 \multicolumn{2}{|l|}{\textbf{0. Carga y preprocesamiento de datos:}} \\
 \hline
-\multicolumn{2}{|l|}{Cargar corpus BoW desde archivo CSV} \\
+\multicolumn{2}{|l|}{Cargar corpus TF-IDF desde archivo CSV} \\
 \multicolumn{2}{|l|}{Dividir datos: 80\% entrenamiento, 10\% validación, 10\% pruebas} \\
 \multicolumn{2}{|l|}{Aplicar SelectPercentile(percentile=10) para reducir características} \\
 \hline
@@ -353,7 +353,7 @@ El algoritmo VNS implementa una búsqueda sistemática que cambia de estructura 
 \rowcolor{LightGray!10}
 \multicolumn{2}{|l|}{\textbf{0. Carga y preprocesamiento de datos:}} \\
 \hline
-\multicolumn{2}{|l|}{Cargar corpus BoW desde archivo CSV} \\
+\multicolumn{2}{|l|}{Cargar corpus TF-IDF desde archivo CSV} \\
 \multicolumn{2}{|l|}{Dividir datos: 80\% entrenamiento, 10\% validación, 10\% pruebas} \\
 \multicolumn{2}{|l|}{Aplicar SelectPercentile(percentile=10) para reducir características} \\
 \hline
@@ -401,7 +401,7 @@ El algoritmo PSO simula el comportamiento de enjambres mediante partículas que 
 \rowcolor{LightGray!10}
 \multicolumn{2}{|l|}{\textbf{0. Carga y preprocesamiento de datos:}} \\
 \hline
-\multicolumn{2}{|l|}{Cargar corpus BoW desde archivo CSV} \\
+\multicolumn{2}{|l|}{Cargar corpus TF-IDF desde archivo CSV} \\
 \multicolumn{2}{|l|}{Dividir datos: 80\% entrenamiento, 10\% validación, 10\% pruebas} \\
 \multicolumn{2}{|l|}{Aplicar SelectPercentile(percentile=10) para reducir características} \\
 \hline
@@ -640,7 +640,7 @@ El análisis exhaustivo reveló limitaciones críticas que justifican la transic
 
 \paragraph{Limitaciones de Representación:}
 \begin{itemize}
-    \item \textbf{Paradigma BoW-TF-IDF:} Pérdida de información contextual y semántica
+    \item \textbf{Representación TF-IDF:} Pérdida de información contextual y semántica
     \item \textbf{Reducción dimensional agresiva:} De 5,000 a 500 características elimina información relevante
     \item \textbf{Representaciones estáticas:} Incapacidad para modelar significados contextuales
 \end{itemize}
@@ -708,7 +708,7 @@ Las limitaciones identificadas establecen la necesidad de evolucionar hacia enfo
 
 \begin{itemize}
     \item \textbf{Brecha de rendimiento significativa:} 22-30 puntos porcentuales respecto a modelos de lenguaje
-    \item \textbf{Representación textual limitada:} BoW-TF-IDF como cuello de botella fundamental
+    \item \textbf{Representación textual limitada:} TF-IDF como cuello de botella fundamental
     \item \textbf{Comprensión semántica insuficiente:} Incapacidad para modelar relaciones contextuales complejas
     \item \textbf{F1-Score macro limitado:} Ningún algoritmo superó el 0.68 en F1-Score macro
 \end{itemize}

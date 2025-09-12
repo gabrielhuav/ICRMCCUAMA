@@ -31,25 +31,25 @@ La rápida propagación de las noticias falsas a través de las redes sociales p
 
 La investigación de Ali et al. \cite{ali2021fake} ha demostrado que las heurísticas cognitivas humanas, como la popularidad social (número de ``me gusta'' o compartidos), influyen significativamente en la percepción de credibilidad. Este fenómeno complica la detección, ya que el contenido falso puede volverse viral precisamente por aprovechar estos sesgos cognitivos.
 
-\section{Representación de Texto: Desde BoW hasta Embeddings Contextuales}
+\section{Representación de Texto: Desde TF-IDF hasta Embeddings Contextuales}
 \label{sec:representacion_texto}
 
 La evolución de las técnicas de representación textual ha sido fundamental para el progreso en PLN. Esta sección aborda desde los métodos clásicos hasta las representaciones más sofisticadas utilizadas en esta tesis.
 
-\subsection{Bolsa de Palabras (Bag-of-Words - BoW)}
+\subsection{TF-IDF (Term Frequency-Inverse Document Frequency)}
 
-El modelo de Bolsa de Palabras (BoW) constituye una de las técnicas más fundamentales para la representación de texto. A pesar de su simplicidad, sigue siendo relevante como línea base y componente en sistemas híbridos. El proceso implica:
+TF-IDF constituye una de las técnicas más fundamentales y efectivas para la representación de texto. A pesar de su simplicidad conceptual, ha demostrado ser muy efectiva en tareas de clasificación de texto. El proceso implica:
 
 \begin{enumerate}
     \item \textbf{Construcción del vocabulario:} Creación de un diccionario con todas las palabras únicas presentes en el corpus de documentos
-    \item \textbf{Vectorización:} Representación de cada documento como un vector disperso, donde cada dimensión corresponde a una palabra del vocabulario y su valor representa la frecuencia de aparición
-\end{enumerate}
+    \item \textbf{Cálculo de ponderaciones:} Cada término recibe un peso basado en su frecuencia en el documento (TF) y su rareza en el corpus (IDF)
+\end{enumerate>
 
 Aunque este método ignora la gramática y el orden de las palabras, ha demostrado ser efectivo como base para métodos más sofisticados y fue fundamental en los primeros trabajos de clasificación de noticias en español \cite{acosta2019construccion}.
 
-\subsection{Ponderación TF-IDF (Term Frequency-Inverse Document Frequency)}
+\subsection{Fundamentos Matemáticos de TF-IDF}
 
-La técnica TF-IDF mejora significativamente la representación BoW al introducir ponderación semántica. Se calcula como el producto de dos componentes:
+La técnica TF-IDF introduce ponderación semántica mediante el producto de dos componentes fundamentales:
 
 \begin{equation}
 \text{TF-IDF}(t,d,D) = \text{TF}(t,d) \times \text{IDF}(t,D)
@@ -65,7 +65,7 @@ Esta ponderación asigna mayor peso a términos que son frecuentes en un documen
 
 \subsection{Limitaciones de los Métodos Clásicos}
 
-Los enfoques basados en BoW y TF-IDF presentan limitaciones fundamentales:
+Los enfoques basados en TF-IDF presentan limitaciones fundamentales:
 \begin{itemize}
     \item \textbf{Pérdida de información secuencial:} No capturan el orden ni la estructura sintáctica
     \item \textbf{Problema de dispersidad:} Generan representaciones muy dispersas en vocabularios grandes

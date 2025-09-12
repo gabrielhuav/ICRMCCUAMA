@@ -102,25 +102,25 @@ Para aplicar la metodología desarrollada a detección de fraude digital, se req
 
 \textbf{Enfoque de esta investigación}: Este proyecto desarrolla y valida la metodología en el dominio de noticias falsas en español, estableciendo las bases técnicas para su posterior transferencia a otros tipos de fraude digital. La elección de noticias falsas como dominio inicial se justifica por: (1) disponibilidad de corpus etiquetados, (2) relevancia social en comunidades hispanohablantes, y (3) menor complejidad técnica que permite validar la metodología base antes de extensiones más complejas.
 
-\section{Representación de Texto: Desde BoW hasta Embeddings Contextuales}
+\section{Representación de Texto: Desde TF-IDF hasta Embeddings Contextuales}
 \label{sec:representacion_texto}
 
 La evolución de las técnicas de representación textual ha sido fundamental para el progreso en PLN. Esta sección aborda desde los métodos clásicos hasta las representaciones más sofisticadas utilizadas en esta tesis.
 
-\subsection{Bolsa de Palabras (Bag-of-Words - BoW)}
+\subsection{TF-IDF (Term Frequency-Inverse Document Frequency)}
 
-El modelo de Bolsa de Palabras (BoW) constituye una de las técnicas más fundamentales para la representación de texto. A pesar de su simplicidad, sigue siendo relevante como línea base y componente en sistemas híbridos. El proceso implica:
+TF-IDF constituye una de las técnicas más fundamentales y efectivas para la representación de texto. A pesar de su simplicidad conceptual, ha demostrado ser muy efectiva en tareas de clasificación de texto. El proceso implica:
 
 \begin{enumerate}
     \item \textbf{Construcción del vocabulario:} Creación de un diccionario con todas las palabras únicas presentes en el corpus de documentos
-    \item \textbf{Vectorización:} Representación de cada documento como un vector disperso, donde cada dimensión corresponde a una palabra del vocabulario y su valor representa la frecuencia de aparición
+    \item \textbf{Cálculo de ponderaciones:} Cada término recibe un peso basado en su frecuencia en el documento (TF) y su rareza en el corpus (IDF)
 \end{enumerate}
 
 Aunque este método ignora la gramática y el orden de las palabras, ha demostrado ser efectivo como base para métodos más sofisticados y fue fundamental en los primeros trabajos de clasificación de noticias en español \cite{acosta2019construccion}.
 
-\subsection{Ponderación TF-IDF (Term Frequency-Inverse Document Frequency)}
+\subsection{Fundamentos Matemáticos de TF-IDF}
 
-La técnica TF-IDF mejora significativamente la representación BoW al introducir ponderación semántica. Se calcula como el producto de dos componentes:
+TF-IDF introduce ponderación semántica mediante el producto de dos componentes fundamentales:
 
 \begin{equation}
 \text{TF-IDF}(t,d,D) = \text{TF}(t,d) \times \text{IDF}(t,D)
@@ -136,7 +136,7 @@ Esta ponderación asigna mayor peso a términos que son frecuentes en un documen
 
 \subsection{Limitaciones de los Métodos Clásicos}
 
-Los enfoques basados en BoW y TF-IDF presentan limitaciones fundamentales:
+Los enfoques basados en TF-IDF presentan limitaciones fundamentales:
 \begin{itemize}
     \item \textbf{Pérdida de información secuencial:} No capturan el orden ni la estructura sintáctica
     \item \textbf{Problema de dispersidad:} Generan representaciones muy dispersas en vocabularios grandes
@@ -257,7 +257,7 @@ Donde:
 \begin{itemize}
     \item \textbf{Corpus textual:} Noticias en español con etiquetas binarias (REAL/FALSO)
     \item \textbf{División de datos:} 70\% entrenamiento, 10\% validación, 20\% prueba (estratificada)
-    \item \textbf{Representación BoW:} Matriz dispersa TF-IDF de dimensión $n \times v$ donde $n$ es el número de documentos y $v$ el tamaño del vocabulario
+    \item \textbf{Representación TF-IDF:} Matriz dispersa TF-IDF de dimensión $n \times v$ donde $n$ es el número de documentos y $v$ el tamaño del vocabulario
 \end{itemize}
 
 \textbf{2. Espacio de Hiperparámetros:}
@@ -615,7 +615,7 @@ La Figura \ref{fig:flujo_metaheuristicas} ilustra el flujo completo del proceso 
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth]{Imagenes/mapaConceptual3.png}
+    \includegraphics[width=\textwidth]{Imagenes/figura2Flujo.png}
     \caption{Flujo del proceso de optimización metaheurística para detección de noticias falsas. Se muestra la transformación desde datos textuales hasta el modelo optimizado final, pasando por las etapas de preprocesamiento, optimización y evaluación.}
     \label{fig:flujo_metaheuristicas}
 \end{figure}
