@@ -107,6 +107,49 @@ Para aplicar la metodología desarrollada a detección de fraude digital, se req
 
 La evolución de las técnicas de representación textual ha sido fundamental para el progreso en PLN. Esta sección aborda desde los métodos clásicos hasta las representaciones más sofisticadas utilizadas en esta tesis.
 
+\subsection{Bolsa de Palabras (Bag of Words): Primer Acercamiento Metodológico}
+
+El modelo de \gls{bolsadepalabras} (Bag of Words, BoW) constituye uno de los enfoques más básicos pero fundamentales en el procesamiento de texto. Aunque no fue utilizado en los modelos finales de esta tesis, representó el primer acercamiento metodológico explorado en la investigación preliminar documentada en \cite{hurtado2024calibracion}.
+
+\subsubsection{Fundamentos del Modelo BoW}
+
+El modelo BoW representa un documento como una colección desordenada de palabras, ignorando completamente la gramática y el orden de las palabras, pero manteniendo la multiplicidad (frecuencia) de cada término. Matemáticamente, un documento $d$ se representa como un vector de frecuencias:
+
+\begin{equation}
+\text{BoW}(d) = [f_1, f_2, ..., f_V]
+\end{equation}
+
+Donde $f_i$ es la frecuencia del término $i$ en el documento y $V$ es el tamaño del vocabulario.
+
+\subsubsection{Proceso de Construcción}
+
+\begin{enumerate}
+    \item \textbf{Tokenización:} División del texto en unidades léxicas individuales
+    \item \textbf{Construcción del vocabulario:} Creación de un diccionario con todos los términos únicos del corpus
+    \item \textbf{Vectorización:} Cada documento se convierte en un vector donde cada dimensión corresponde a un término del vocabulario
+    \item \textbf{Conteo de frecuencias:} Cada posición del vector contiene la frecuencia del término correspondiente
+\end{enumerate}
+
+\subsubsection{Ventajas y Aplicabilidad Inicial}
+
+El modelo BoW ofreció ventajas específicas en las primeras fases de la investigación:
+\begin{itemize}
+    \item \textbf{Simplicidad conceptual:} Fácil implementación y comprensión
+    \item \textbf{Eficiencia computacional:} Bajo costo de procesamiento para corpus pequeños
+    \item \textbf{Transparencia:} Interpretabilidad directa de las características
+    \item \textbf{Línea base sólida:} Punto de partida para comparaciones con métodos más sofisticados
+\end{itemize}
+
+\subsubsection{Limitaciones Identificadas}
+
+La experiencia con BoW en el trabajo preliminar \cite{hurtado2024calibracion} reveló limitaciones que motivaron la evolución hacia enfoques más sofisticados:
+\begin{itemize}
+    \item \textbf{Pérdida total del orden:} Imposibilidad de capturar patrones secuenciales relevantes
+    \item \textbf{Ausencia de ponderación semántica:} Todas las palabras reciben el mismo tratamiento independientemente de su importancia
+    \item \textbf{Problemas de escalabilidad:} Crecimiento exponencial de la dimensionalidad con el vocabulario
+    \item \textbf{Sensibilidad a palabras vacías:} Dominancia de términos frecuentes pero poco informativos
+\end{itemize}
+
 \subsection{TF-IDF (Term Frequency-Inverse Document Frequency)}
 
 TF-IDF constituye una de las técnicas más fundamentales y efectivas para la representación de texto. A pesar de su simplicidad conceptual, ha demostrado ser muy efectiva en tareas de clasificación de texto. El proceso implica:
@@ -144,12 +187,18 @@ Los enfoques basados en TF-IDF presentan limitaciones fundamentales:
     \item \textbf{Falta de contexto:} Una palabra tiene la misma representación independientemente del contexto
 \end{itemize}
 
+\subsubsection{Evolución Metodológica}
+
+La transición de BoW hacia TF-IDF representó un primer refinamiento que introdujo ponderación semántica, abordando algunas de las limitaciones más críticas del enfoque básico. Esta evolución metodológica, documentada en el marco de optimización metaheurística \cite{hurtado2024calibracion}, estableció los fundamentos para los enfoques más sofisticados desarrollados en esta tesis.
+
+A pesar de sus limitaciones, el modelo BoW proporcionó información útil sobre cómo identificar patrones distintivos en textos en español que permiten distinguir noticias falsas de verdaderas. Esta experiencia inicial sirvió como punto de partida para desarrollar las dos metodologías principales de esta investigación: el enfoque clásico optimizado y el de aprendizaje profundo.
+
 \section{La Revolución Transformer y los Modelos de Lenguaje Modernos}
 \label{sec:transformers_modelos_lenguaje}
 
 \subsection{La Arquitectura Transformer: Fundamentos}
 
-La arquitectura Transformer, introducida por Vaswani et al. \cite{vaswani2017attention} en el trabajo seminal ``Attention Is All You Need'', revolucionó el campo del PLN. Su innovación principal radica en el mecanismo de \textbf{auto-atención (self-attention)}, que permite al modelo calcular representaciones ponderando dinámicamente la importancia de cada elemento en una secuencia con respecto a todos los demás elementos.
+La arquitectura Transformer, introducida por Vaswani et al. \cite{vaswani2017attention} en el trabajo ``Attention Is All You Need'', revolucionó el campo del PLN. Su innovación principal radica en el mecanismo de \textbf{auto-atención (self-attention)}, que permite al modelo calcular representaciones ponderando dinámicamente la importancia de cada elemento en una secuencia con respecto a todos los demás elementos.
 
 \subsubsection{Mecanismo de Atención Multi-Cabeza}
 
@@ -175,8 +224,8 @@ BERT (Bidirectional Encoder Representations from Transformers) \cite{devlin2018b
 
 El éxito de BERT motivó el desarrollo de variantes más eficientes:
 \begin{itemize}
-    \item \textbf{DistilBERT} \cite{sanh2019distilbert}: Utiliza destilación de conocimiento para reducir el tamaño del modelo en un 40\% manteniendo el 97\% del rendimiento
-    \item \textbf{TinyBERT} \cite{jiao2019tinybert}: Aplica destilación a nivel de transformador y predicción para crear modelos aún más compactos
+    \item \textbf{DistilBERT} \cite{sanh2019distilbert}: Utiliza destilación de conocimiento para reducir el tamaño del modelo en un 40\% manteniendo el 97\% del rendimiento. Disponible en múltiples idiomas incluyendo español
+    \item \textbf{TinyBERT} \cite{jiao2019tinybert}: Aplica destilación a nivel de transformador y predicción para crear modelos aún más compactos, logrando excelente rendimiento. Sin embargo, su principal limitación es que únicamente está disponible en inglés, lo que restringe su aplicabilidad para tareas en español
 \end{itemize}
 
 \subsection{Aplicaciones en Detección de Noticias Falsas en Español}
@@ -192,7 +241,7 @@ Para el español específicamente, se han desarrollado modelos especializados y 
 
 \subsubsection{GPT-3 y el Paradigma Few-Shot}
 
-GPT-3 \cite{brown2020language} marcó un hito al demostrar capacidades emergentes de few-shot learning. Con 175 mil millones de parámetros, mostró que los modelos de gran escala pueden realizar tareas sin ajuste fino específico, solo con ejemplos en el prompt.
+GPT-3 \cite{brown2020language} marcó un hito al demostrar capacidades emergentes de aprendizaje con pocos ejemplos (few-shot learning). Con 175 mil millones de parámetros, mostró que los modelos de gran escala pueden realizar tareas sin ajuste fino específico, solo con ejemplos en el prompt.
 
 \subsubsection{LLaMA y la Democratización de LLMs}
 
@@ -204,13 +253,13 @@ Gemini \cite{gemini2023family} introduce capacidades multimodales nativas, proce
 
 \subsubsection{IA Constitucional}
 
-El trabajo de Bai et al. \cite{bai2022constitutional} sobre IA Constitucional aborda la alineación y seguridad de los LLMs, estableciendo principios para entrenar modelos más seguros y alineados con valores humanos. Este enfoque es crucial cuando los LLMs se utilizan para tareas de detección de desinformación.
+El trabajo de Bai et al. \cite{bai2022constitutional} sobre IA Constitucional aborda la alineación y seguridad de los LLMs, estableciendo principios para entrenar modelos más seguros y alineados con valores humanos. Este enfoque es relevante cuando los LLMs se utilizan para tareas de detección de desinformación.
 
 \subsection{El Doble Rol de los LLMs en Detección}
 
 La investigación reciente ha revelado que los LLMs presentan un doble rol:
 \begin{itemize}
-    \item \textbf{Como ``Buenos Consejeros'':} Pueden ser fine-tuned para detectar noticias falsas con alta precisión \cite{hu2024bad}
+    \item \textbf{Como ``Buenos Consejeros'':} Pueden ser ajustados finamente (fine-tuned) para detectar noticias falsas con alta precisión \cite{hu2024bad}
     \item \textbf{Como ``Malos Actores'':} Pueden generar desinformación convincente, complicando la detección \cite{su2023fake}
     \item \textbf{Adaptación Necesaria:} Los sistemas de detección deben adaptarse a la era de LLMs \cite{su2023adapting}
 \end{itemize}
@@ -231,7 +280,7 @@ La aplicación de metaheurísticas en este dominio se justifica por las siguient
     \item \textbf{Función objetivo no convexa:} Las métricas de rendimiento (F1-Score, precisión) no son funciones continuas y diferenciables
     \item \textbf{Interacciones no lineales:} Los hiperparámetros interactúan de manera compleja, haciendo ineficaces los métodos de optimización tradicionales
     \item \textbf{Múltiples óptimos locales:} El espacio de búsqueda presenta numerosos máximos locales que pueden atrapar algoritmos determinísticos
-    \item \textbf{Eficiencia computacional:} Las metaheurísticas exploran el espacio de forma más inteligente que métodos exhaustivos como grid search
+    \item \textbf{Eficiencia computacional:} Las metaheurísticas exploran el espacio de forma más inteligente que métodos exhaustivos como búsqueda en cuadrícula (grid search)
 \end{itemize}
 
 \subsubsection{Arquitectura General del Sistema Metaheurístico}
@@ -262,12 +311,7 @@ Donde:
 
 \textbf{2. Espacio de Hiperparámetros:}
 
-Para SVM con kernel RBF:
-\begin{align}
-C &\in [10^{-3}, 10^{3}] \text{ (parámetro de regularización)} \\
-\gamma &\in [10^{-4}, 10^{1}] \text{ (parámetro del kernel RBF)} \\
-\text{class\_weight} &\in \{\text{None}, \text{balanced}\} \text{ (balanceado de clases)}
-\end{align}
+Los algoritmos metaheurísticos optimizan múltiples conjuntos de hiperparámetros según el tipo de modelo utilizado. Como ejemplo representativo, para algoritmos de clasificación tradicionales se pueden optimizar parámetros de regularización, configuraciones de kernel, y esquemas de balanceado de clases.
 
 Para TF-IDF:
 \begin{align}
@@ -503,14 +547,6 @@ Donde $\theta$ representa el vector de hiperparámetros y $\text{F1-Score}_{CV}$
     \item Comparación entre algoritmos metaheurísticos
     \item Análisis de eficiencia computacional
     \item Estudio de robustez y estabilidad
-\end{itemize}
-
-En el contexto de la detección de noticias falsas, las metaheurísticas abordan varios problemas de optimización, con metodologías transferibles a otros tipos de fraude digital:
-\begin{itemize}
-    \item \textbf{Calibración de hiperparámetros:} Optimización de parámetros de modelos de ML/DL
-    \item \textbf{Selección de características:} Identificación de subconjuntos óptimos de variables
-    \item \textbf{Arquitectura neural:} Diseño automático de topologías de red
-    \item \textbf{Balanceado de datos:} Optimización de técnicas de muestreo
 \end{itemize}
 
 \subsubsection{Comparación de Algoritmos Metaheurísticos}
