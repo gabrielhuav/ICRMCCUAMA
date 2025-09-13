@@ -285,7 +285,7 @@ La aplicación de metaheurísticas en este dominio se justifica por las siguient
 
 \subsubsection{Arquitectura General del Sistema Metaheurístico}
 
-El framework metaheurístico desarrollado sigue una arquitectura modular que permite la intercambiabilidad de algoritmos:
+El marco de trabajo (framework) metaheurístico desarrollado sigue una arquitectura modular que permite la intercambiabilidad de algoritmos:
 
 \begin{equation}
 \text{Sistema} = \{D, P, A, F, E\}
@@ -294,7 +294,7 @@ El framework metaheurístico desarrollado sigue una arquitectura modular que per
 Donde:
 \begin{itemize}
     \item \textbf{D}: Dataset de noticias preprocesado
-    \item \textbf{P}: Pipeline de preprocesamiento (tokenización, TF-IDF)
+    \item \textbf{P}: Tubería de procesamiento (pipeline) de preprocesamiento (tokenización, TF-IDF)
     \item \textbf{A}: Algoritmo metaheurístico (GA, PSO, SA, VNS, SS)
     \item \textbf{F}: Función objetivo (F1-Score en validación cruzada)
     \item \textbf{E}: Evaluador final en conjunto de prueba
@@ -321,7 +321,7 @@ Para TF-IDF:
 \text{ngram\_range} &\in \{(1,1), (1,2), (1,3)\} \text{ (rango de n-gramas)}
 \end{align}
 
-\subsubsection{Preprocesamiento y Pipeline}
+\subsubsection{Preprocesamiento y Tubería de Procesamiento (Pipeline)}
 
 \textbf{Etapa 1: Limpieza Textual}
 \begin{enumerate}
@@ -459,7 +459,7 @@ T_{k+1} = \alpha \cdot T_k, \quad \alpha = 0.95
 \begin{itemize}
     \item \textbf{Conjunto de referencia:} 10 soluciones (5 de calidad + 5 diversas)
     \item \textbf{Generación de subconjuntos:} Todas las combinaciones de tamaño 2
-    \item \textbf{Método de combinación:} Promedio ponderado por fitness
+    \item \textbf{Método de combinación:} Promedio ponderado por aptitud (fitness)
     \item \textbf{Mejora:} Búsqueda local en nuevas soluciones
     \item \textbf{Actualización:} Reemplazo de peores soluciones
 \end{itemize}
@@ -491,13 +491,13 @@ Donde $\theta$ representa el vector de hiperparámetros y $\text{F1-Score}_{CV}$
     \item Configurar parámetros del algoritmo metaheurístico
 \end{enumerate}
 
-\textbf{Etapa 2: Evaluación de Fitness}
+\textbf{Etapa 2: Evaluación de Aptitud (Fitness)}
 \begin{enumerate}
     \item Para cada configuración de hiperparámetros:
     \item \quad Construir pipeline TF-IDF + SVM
     \item \quad Entrenar en conjunto de entrenamiento
     \item \quad Evaluar en validación cruzada 5-fold
-    \item \quad Calcular F1-Score promedio como fitness
+    \item \quad Calcular F1-Score promedio como aptitud (fitness)
 \end{enumerate}
 
 \textbf{Etapa 3: Evolución/Optimización}
@@ -613,18 +613,18 @@ La selección de estos cinco algoritmos metaheurísticos se basó en criterios e
     \item \textbf{Complementariedad:} Enfoques que exploran el espacio de búsqueda de maneras fundamentalmente diferentes
 \end{enumerate}
 
-Esta selección permite una evaluación comprehensiva de diferentes estrategias de optimización, proporcionando insights sobre qué características algorítmicas son más efectivas para el problema específico de calibración de detectores de noticias falsas.
+Esta selección permite una evaluación comprehensiva de diferentes estrategias de optimización, proporcionando información sobre qué características algorítmicas son más efectivas para el problema específico de calibración de detectores de noticias falsas.
 
 \subsubsection{Justificación Frente a Métodos Alternativos}
 
-\textbf{Comparación con Grid Search:}
+\textbf{Comparación con Búsqueda en Cuadrícula (Grid search):}
 \begin{itemize}
     \item \textbf{Eficiencia:} Grid search requiere $O(n^k)$ evaluaciones donde $n$ es el número de valores por parámetro y $k$ el número de parámetros. Para este problema: $10^6$ evaluaciones vs. 1,500 de metaheurísticas
     \item \textbf{Escalabilidad:} Grid search se vuelve impracticable con espacios de alta dimensión
     \item \textbf{Optimización continua:} Las metaheurísticas manejan parámetros continuos naturalmente
 \end{itemize}
 
-\textbf{Comparación con Random Search:}
+\textbf{Comparación con Búsqueda Aleatoria (Random Search):}
 \begin{itemize}
     \item \textbf{Inteligencia dirigida:} Las metaheurísticas aprenden del histórico de evaluaciones
     \item \textbf{Convergencia:} Random search no garantiza convergencia hacia regiones prometedoras
@@ -638,7 +638,7 @@ Esta selección permite una evaluación comprehensiva de diferentes estrategias 
     \item \textbf{Flexibilidad:} Las metaheurísticas son más flexibles para restricciones complejas
 \end{itemize}
 
-\textbf{Comparación con Gradient-based Methods:}
+\textbf{Comparación con Métodos Basados en Gradiente (Gradient-based Methods):}
 \begin{itemize}
     \item \textbf{Diferenciabilidad:} Las métricas de clasificación (F1-Score) no son diferenciables
     \item \textbf{Naturaleza discreta:} Algunos hiperparámetros son categóricos o discretos
@@ -647,12 +647,12 @@ Esta selección permite una evaluación comprehensiva de diferentes estrategias 
 
 \subsubsection{Flujo del Proceso Metaheurístico}
 
-La Figura \ref{fig:flujo_metaheuristicas} ilustra el flujo completo del proceso de optimización metaheurística aplicado a la detección de noticias falsas, desde la entrada de datos hasta la obtención del modelo optimizado final.
+La Figura \ref{fig:flujo_metaheuristicas} ilustra el flujo completo del proceso de optimización de ambos enfoques aplicado a la detección de noticias falsas, desde la entrada de datos hasta la obtención del modelo optimizado final.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{Imagenes/figura2Flujo.png}
-    \caption{Flujo del proceso de optimización metaheurística para detección de noticias falsas. Se muestra la transformación desde datos textuales hasta el modelo optimizado final, pasando por las etapas de preprocesamiento, optimización y evaluación.}
+    \caption{Flujo del proceso de optimización para detección de noticias falsas. Se muestra la transformación desde datos textuales hasta el modelo optimizado final, pasando por las etapas de preprocesamiento, optimización y evaluación.}
     \label{fig:flujo_metaheuristicas}
 \end{figure}
 
@@ -709,7 +709,7 @@ Estas métricas permiten:
 
 \subsection{Aplicaciones en Detección de Noticias Falsas}
 
-\subsubsection{Modelado como Problema de Scheduling}
+\subsubsection{Modelado como Problema de Programación de Trabajos (Job Shop Scheduling)}
 
 Aqil y Lahby \cite{aqil2021modeling} propusieron una perspectiva innovadora, modelando la detección de noticias falsas como un problema de Job Shop Scheduling. Compararon tres metaheurísticas:
 \begin{itemize}
@@ -732,9 +732,9 @@ Bacanin et al. \cite{bacanin2023benefits} demostraron los beneficios de usar met
 
 La investigación que publiqué en \cite{hurtado2024calibracion} específicamente aborda la calibración de hiperparámetros en algoritmos metaheurísticos para detección de noticias falsas (como caso específico de fraude digital), proporcionando un marco metodológico relevante para esta tesis.
 
-\subsubsection{Frameworks de Ensemble Heurístico}
+\subsubsection{Marcos de Trabajo (Frameworks) de Ensamble (Ensemble) Heurístico}
 
-Das et al. \cite{das2022heuristic} desarrollaron un marco de ensemble que combina:
+Das et al. \cite{das2022heuristic} desarrollaron un marco de ensamble (ensemble) que combina:
 \begin{itemize}
     \item \textbf{Modelos pre-entrenados:} BERT y similares para captura semántica
     \item \textbf{Características estadísticas:} Metadatos como URL, autor, timestamp
