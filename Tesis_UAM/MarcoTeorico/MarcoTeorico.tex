@@ -711,14 +711,14 @@ Estas métricas permiten:
 
 \subsubsection{Modelado como Problema de Programación de Trabajos (Job Shop Scheduling)}
 
-Aqil y Lahby \cite{aqil2021modeling} propusieron una perspectiva innovadora, modelando la detección de noticias falsas como un problema de Job Shop Scheduling. Compararon tres metaheurísticas:
+Aqil y Lahby \cite{aqil2021modeling} propusieron una perspectiva innovadora, modelando la detección de noticias falsas como un problema de programación de trabajos en flujo (Flow Shop Scheduling Problem, FSSP). Compararon tres metaheurísticas:
 \begin{itemize}
+    \item \textbf{Voraz Iterativo (Iterated Greedy, IG):} Algoritmo constructivo que mejora iterativamente la solución mediante destrucción y reconstrucción
     \item \textbf{Algoritmo Genético (GA):} Evolución de soluciones mediante selección, cruce y mutación
-    \item \textbf{Optimización por Enjambre de Partículas (PSO):} Búsqueda inspirada en comportamiento de bandadas
     \item \textbf{Colonia de Abejas Artificiales (ABC):} Algoritmo basado en comportamiento de forrajeo de abejas
 \end{itemize}
 
-Sus resultados mostraron que el algoritmo Iterated Greedy (IG) superó a las metaheurísticas bioinspiradas en este contexto específico.
+Sus resultados mostraron que el algoritmo Voraz Iterativo (IG) logró el mejor rendimiento en términos de minimización del makespan (tiempo máximo de finalización), superando a los otros dos algoritmos metaheurísticos (GA y ABC) en este contexto específico.
 
 \subsubsection{Optimización de Hiperparámetros en Deep Learning}
 
