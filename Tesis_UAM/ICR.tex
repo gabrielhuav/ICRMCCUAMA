@@ -45,11 +45,14 @@
 
 \graphicspath{ {./Imagenes/} }
 
-\usepackage[automake,nonumberlist,nogroupskip,xindy]{glossaries-extra}
+\usepackage[nonumberlist,nogroupskip]{glossaries-extra}
 \makeglossaries
 \loadglsentries{Glosario/Glosario}
 
 \begin{document}
+
+% Comando para incluir todas las entradas del glosario, incluso las no referenciadas
+\glsaddall
 
 \frontmatter
 \include{Portada/Portada}

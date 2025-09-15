@@ -494,7 +494,7 @@ Donde $\theta$ representa el vector de hiperparámetros y $\text{F1-Score}_{CV}$
 \textbf{Etapa 2: Evaluación de Aptitud (Fitness)}
 \begin{enumerate}
     \item Para cada configuración de hiperparámetros:
-    \item \quad Construir pipeline TF-IDF + SVM
+    \item \quad Construir pipeline TF-IDF + Clasificador
     \item \quad Entrenar en conjunto de entrenamiento
     \item \quad Evaluar en validación cruzada 5-fold
     \item \quad Calcular F1-Score promedio como aptitud (fitness)
@@ -530,7 +530,7 @@ Donde $\theta$ representa el vector de hiperparámetros y $\text{F1-Score}_{CV}$
 \textbf{2. Modelo Entrenado Optimizado:}
 \begin{itemize}
     \item Vectorizador TF-IDF configurado
-    \item Clasificador SVM entrenado
+    \item Clasificador entrenado
     \item Pipeline completo listo para predicción
 \end{itemize}
 
@@ -608,12 +608,12 @@ La selección de estos cinco algoritmos metaheurísticos se basó en criterios e
     
     \item \textbf{Robustez empírica:} Métodos con evidencia documentada de efectividad en problemas de optimización de ML
     
-    \item \textbf{Implementación práctica:} Algoritmos con parámetros bien establecidos y implementaciones estables
+    \item \textbf{Implementación práctica:} Algoritmos con parámetros bien establecidos e implementaciones estables
     
     \item \textbf{Complementariedad:} Enfoques que exploran el espacio de búsqueda de maneras fundamentalmente diferentes
 \end{enumerate}
 
-Esta selección permite una evaluación comprehensiva de diferentes estrategias de optimización, proporcionando información sobre qué características algorítmicas son más efectivas para el problema específico de calibración de detectores de noticias falsas.
+Esta selección permite comparar diferentes estrategias de optimización, proporcionando información sobre qué características algorítmicas son más efectivas para el problema específico de calibración de detectores de noticias falsas.
 
 \subsubsection{Justificación Frente a Métodos Alternativos}
 
@@ -703,7 +703,7 @@ Estas métricas permiten:
 \begin{itemize}
     \item Ajustar parámetros de los algoritmos dinámicamente
     \item Detectar convergencia prematura o estagnación
-    \item Comparar objetivamente el rendimiento de diferentes metaheurísticas
+    \item Comparar el rendimiento de diferentes metaheurísticas
     \item Identificar configuraciones problemáticas o excepcionales
 \end{itemize}
 
@@ -775,55 +775,18 @@ Yildirim \cite{yildirim2023novel} propuso un enfoque metaheurístico híbrido mu
 
 Deshai y Bhaskara Rao \cite{deshai2023unmasking} desarrollaron un enfoque CNN con PSO adaptativo para detectar reseñas falsas online. Su algoritmo PSO adaptativo ajusta dinámicamente los parámetros de velocidad e inercia basándose en el rendimiento de la iteración actual.
 
-\section{Integración de Enfoques: Hacia Sistemas Híbridos}
-\label{sec:integracion_enfoques}
+\subsubsection{Fine-tuning: Adaptación de Modelos Pre-entrenados}
 
-\subsection{Combinación de Representaciones Clásicas y Modernas}
+Una de las innovaciones más significativas en PLN moderno ha sido el desarrollo del paradigma de \textbf{fine-tuning} o ajuste fino, introducido formalmente por Howard y Ruder \cite{howard2018universal} en su trabajo sobre ULMFiT (Universal Language Model Fine-tuning). Este enfoque representa un cambio paradigmático respecto a los métodos tradicionales de entrenamiento desde cero, permitiendo aprovechar el conocimiento adquirido por modelos durante su pre-entrenamiento en grandes corpus.
 
-La tendencia actual en detección de noticias falsas favorece sistemas híbridos que combinan (principios aplicables a otros tipos de fraude digital):
-\begin{itemize}
-    \item \textbf{Características lingüísticas tradicionales:} TF-IDF, n-gramas, métricas de legibilidad
-    \item \textbf{Embeddings contextuales:} Representaciones de BERT y similares
-    \item \textbf{Metadatos estructurales:} Información temporal, de red social, y fuente
-    \item \textbf{Características estilométricas:} Patrones de puntuación, longitud de oraciones, complejidad sintáctica
-\end{itemize}
+El proceso de fine-tuning consiste en tomar un modelo pre-entrenado y continuar su entrenamiento con datos específicos del dominio objetivo, manteniendo la arquitectura base pero adaptando los pesos para la nueva tarea. En el contexto de modelos Transformer como BERT \cite{kenton2019bert}, esto implica congelar parcial o totalmente las capas inferiores que capturan características lingüísticas generales, mientras se ajustan las capas superiores para la tarea específica de clasificación.
 
-\subsection{Arquitecturas de Ensemble Optimizadas}
-
-Las arquitecturas modernas emplean:
-\begin{itemize}
-    \item \textbf{Ensemble de modelos heterogéneos:} Combinación de clasificadores tradicionales y deep learning
-    \item \textbf{Ponderación adaptativa:} Pesos dinámicos basados en confianza y rendimiento
-    \item \textbf{Fusión de decisiones:} Estrategias sofisticadas para combinar predicciones múltiples
-\end{itemize}
-
-\subsection{Optimización End-to-End}
-
-Zhang et al. \cite{zhang2023using} exploraron el uso de LLMs para optimización de hiperparámetros, abriendo nuevas posibilidades para la optimización automática de pipelines completos de detección.
-
-\section{Desafíos y Direcciones Futuras}
-\label{sec:desafios_direcciones}
-
-\subsection{Desafíos Técnicos}
-
-\begin{itemize}
-    \item \textbf{Adaptación multilingüe:} Desarrollo de modelos robustos para múltiples idiomas
-    \item \textbf{Detección en tiempo real:} Optimización para procesamiento de streams de alta velocidad
-    \item \textbf{Robustez adversarial:} Resistencia a ataques de evasión sofisticados
-    \item \textbf{Explicabilidad:} Desarrollo de modelos interpretables para decisiones críticas
-\end{itemize}
-
-\subsection{Consideraciones Éticas y Sociales}
-
-\begin{itemize}
-    \item \textbf{Sesgos algorítmicos:} Mitigación de discriminación en sistemas de detección
-    \item \textbf{Privacidad:} Protección de datos personales en análisis de contenido
-    \item \textbf{Transparencia:} Apertura en metodologías y criterios de detección
-    \item \textbf{Impacto social:} Consideración de efectos en libertad de expresión y democracia
-\end{itemize}
+La efectividad de este enfoque radica en que las representaciones contextuales aprendidas durante el pre-entrenamiento en tareas como masked language modeling contienen información semántica y sintáctica rica que es transferible a tareas downstream \cite{ruder2019neural}. Para la detección de noticias falsas, esto significa que el modelo ya comprende patrones lingüísticos complejos, estructura narrativa y coherencia semántica antes de especializarse en identificar marcadores de desinformación, constituyendo la base metodológica fundamental del segundo enfoque desarrollado en esta investigación.
 
 \section{Síntesis del Marco Teórico}
 \label{sec:sintesis_marco}
+
+La tendencia actual en detección de noticias falsas favorece sistemas híbridos que combinan múltiples paradigmas metodológicos, principios que son extensibles a otros tipos de fraude digital. Por ejemplo, Zhang et al. \cite{zhang2023using} exploraron el uso de LLMs para optimización de hiperparámetros, abriendo nuevas posibilidades para la optimización automática de pipelines completos de detección.
 
 Este marco teórico establece los fundamentos para las dos metodologías desarrolladas en esta tesis:
 
@@ -833,6 +796,4 @@ Este marco teórico establece los fundamentos para las dos metodologías desarro
     \item \textbf{Enfoque de Deep Learning:} Emplea modelos Transformer pre-entrenados con fine-tuning, aprovechando representaciones contextuales sofisticadas
 \end{enumerate}
 
-La combinación de ambos enfoques, sustentada en la literatura revisada, permite abordar el problema de detección de noticias falsas desde múltiples perspectivas, maximizando tanto la efectividad como la eficiencia computacional del sistema propuesto. La metodología desarrollada establece principios transferibles para abordar otros tipos de fraude digital con las adaptaciones correspondientes.
-
-El marco establece también la base teórica para la contribución metodológica principal de esta tesis: la aplicación sistemática de técnicas metaheurísticas para la optimización de hiperparámetros en ambos paradigmas, desde clasificadores tradicionales hasta modelos de deep learning, en el contexto específico de textos en español.
+La integración de ambos enfoques, sustentada en la literatura revisada, establece la base teórica para la contribución metodológica principal de esta tesis: la aplicación sistemática de optimización de hiperparámetros en ambos paradigmas, desde clasificadores tradicionales hasta modelos de deep learning, en el contexto específico de textos en español.

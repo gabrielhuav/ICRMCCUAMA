@@ -22,18 +22,12 @@ if errorlevel 1 (
 )
 
 echo.
-echo [3/6] Generando glosario con makeglossaries...
-makeglossaries ICR
+echo [3/6] Generando glosario con makeindex...
+makeindex -s ICR.ist -o ICR.gls ICR.glo
 if errorlevel 1 (
-    echo ERROR en makeglossaries - usando metodo alternativo...
-    echo Generando glosario manualmente con PowerShell...
-    powershell -ExecutionPolicy Bypass -File "generar_glosario.ps1"
-    if errorlevel 1 (
-        echo ERROR en generacion manual del glosario
-        echo Intentando con xindy...
-        xindy -L spanish -C utf8 -I xindy -M "ICR" -t "ICR.glg" -o "ICR.gls" "ICR.glo"
-        xindy -L spanish -C utf8 -I xindy -M "ICR" -t "ICR.alg" -o "ICR.acr" "ICR.acn"
-    )
+    echo ERROR en makeindex para glosario
+    pause
+    exit /b 1
 )
 
 echo.
@@ -60,7 +54,7 @@ echo ===============================================
 
 echo.
 echo [LIMPIEZA] Eliminando archivos auxiliares...
-powershell -Command "Remove-Item -Path '*.aux', '*.log', '*.toc', '*.lof', '*.lot', '*.out', '*.bbl', '*.blg', '*.fdb_latexmk', '*.fls', '*.glo', '*.gls', '*.glg', '*.ist', '*.xdy' -Force -ErrorAction SilentlyContinue"
+powershell -Command "Remove-Item -Path '*.aux', '*.log', '*.toc', '*.lof', '*.lot', '*.out', '*.bbl', '*.blg', '*.fdb_latexmk', '*.fls', '*.glo', '*.gls', '*.glg', '*.ist', '*.xdy', '*.ilg' -Force -ErrorAction SilentlyContinue"
 powershell -Command "Get-ChildItem -Recurse -Path '.' -Include '*.aux' | Remove-Item -Force -ErrorAction SilentlyContinue"
 echo Archivos auxiliares eliminados.
 echo.

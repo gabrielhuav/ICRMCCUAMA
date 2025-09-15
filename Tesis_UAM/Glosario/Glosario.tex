@@ -96,7 +96,7 @@
 
 \newglossaryentry{bolsadepalabras}{
 	name={Bolsa de Palabras (Bag of Words)},
-	description={Modelo de representación de texto que describe la ocurrencia de palabras en un documento, ignorando el orden y la estructura gramatical. Cada documento se representa como un vector donde cada dimensión corresponde a una palabra del vocabulario y su valor indica la frecuencia de aparición de esa palabra. Es fundamental para técnicas como TF-IDF y constituye la base para muchos algoritmos de clasificación de texto tradicionales.}
+	description={Modelo de representación de texto que describe la ocurrencia de palabras en un documento, ignorando el orden y la estructura gramatical. Cada documento se representa como un vector donde cada dimensión corresponde a una palabra del vocabulario y su valor indica la frecuencia de aparición de esa palabra. Es importante para técnicas como TF-IDF y constituye la base para muchos algoritmos de clasificación de texto tradicionales.}
 }
 
 \newglossaryentry{stemming}{
@@ -255,6 +255,5 @@
 % COMANDOS PARA INCLUIR TODAS LAS ENTRADAS EN EL GLOSARIO
 % =============================================================================
 
-% Esto fuerza que todos los términos aparezcan en el glosario, 
-% incluso si no son referenciados en el texto
-\glsaddall
+% Nota: El comando \glsaddall debe colocarse en el documento principal (ICR.tex)
+% después de cargar las entradas del glosario, no aquí en el archivo de definiciones
