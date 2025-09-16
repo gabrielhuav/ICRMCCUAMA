@@ -1,0 +1,95 @@
+\glossaryentry{ICR?\glossentry{icr}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{PLN?\glossentry{pln}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{NLP?\glossentry{nlp}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{TF-IDF?\glossentry{tfidf}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{BERT?\glossentry{bert}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{DistilBERT?\glossentry{distilbert}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{GPT?\glossentry{gpt}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{RNN?\glossentry{rnn}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{LSTM?\glossentry{lstm}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{CNN?\glossentry{cnn}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{SVM?\glossentry{svm}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{PSO?\glossentry{pso}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{SA?\glossentry{sa}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{MSA?\glossentry{msa}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{VNS?\glossentry{vns}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{SS?\glossentry{ss}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{GA?\glossentry{ga}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{IA?\glossentry{ia}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{ML?\glossentry{ml}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{DL?\glossentry{dl}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{API?\glossentry{api}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{CSV?\glossentry{csv}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{JSON?\glossentry{json}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{HTML?\glossentry{html}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{CSS?\glossentry{css}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{HTTP?\glossentry{http}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{URL?\glossentry{url}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{GPU?\glossentry{gpu}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{RAM?\glossentry{ram}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{AUC?\glossentry{auc}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{ROC?\glossentry{roc}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{TP?\glossentry{tp}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{TN?\glossentry{tn}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{FP?\glossentry{fp}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{FN?\glossentry{fn}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Noticia Falsa?\glossentry{noticiafalsa}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Bulo?\glossentry{bulo}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Desinformación?\glossentry{desinformacion}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Desinformación (Misinformation)?\glossentry{misinformacion}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Información Maliciosa (Malinformation)?\glossentry{malinformacion}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Verificación de Hechos (Fact-Checking)?\glossentry{factchecking}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Fraude Digital?\glossentry{fraudedigital}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Deepfake?\glossentry{deepfake}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Tokenización?\glossentry{tokenizacion}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Bolsa de Palabras (Bag of Words)?\glossentry{bolsadepalabras}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Stemming?\glossentry{stemming}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Lematización?\glossentry{lemmatization}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Palabras Vacías (Stop Words)?\glossentry{stopwords}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Embedding?\glossentry{embedding}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Transformer?\glossentry{transformer}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Atención (Attention)?\glossentry{attention}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Fine-tuning?\glossentry{finetuning}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Metaheurística?\glossentry{metaheuristica}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Hiperparámetro?\glossentry{hiperparametro}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Función Objetivo?\glossentry{funcionobjetivo}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Espacio de Búsqueda?\glossentry{espaciobusqueda}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Convergencia?\glossentry{convergencia}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Exploración?\glossentry{exploracion}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Explotación?\glossentry{explotacion}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Precisión?\glossentry{precision}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Sensibilidad (Recall)?\glossentry{recall}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{F1-Score?\glossentry{fscore}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Exactitud (Accuracy)?\glossentry{accuracy}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{AUC-ROC?\glossentry{aucroc}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Matriz de Confusión?\glossentry{matrizconfusion}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Web Scraping?\glossentry{webscraping}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Dataset?\glossentry{dataset}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Corpus?\glossentry{corpus}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Validación Cruzada?\glossentry{validacioncruzada}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Sobreajuste (Overfitting)?\glossentry{overfitting}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Subajuste (Underfitting)?\glossentry{underfitting}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Sesgo (Bias)?\glossentry{bias}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Varianza?\glossentry{varianza}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Desinformación?\glossentry{desinformacion}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Noticia Falsa?\glossentry{noticiafalsa}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Fraude Digital?\glossentry{fraudedigital}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Noticia Falsa?\glossentry{noticiafalsa}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{IA?\glossentry{ia}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Noticia Falsa?\glossentry{noticiafalsa}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{Fraude Digital?\glossentry{fraudedigital}|setentrycounter[]{page}"\glsnumberformat}{1}
+\glossaryentry{IA?\glossentry{ia}|setentrycounter[]{page}"\glsnumberformat}{2}
+\glossaryentry{GPT?\glossentry{gpt}|setentrycounter[]{page}"\glsnumberformat}{2}
+\glossaryentry{Deepfake?\glossentry{deepfake}|setentrycounter[]{page}"\glsnumberformat}{3}
+\glossaryentry{DL?\glossentry{dl}|setentrycounter[]{page}"\glsnumberformat}{3}
+\glossaryentry{Bulo?\glossentry{bulo}|setentrycounter[]{page}"\glsnumberformat}{3}
+\glossaryentry{Noticia Falsa?\glossentry{noticiafalsa}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{PLN?\glossentry{pln}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{ML?\glossentry{ml}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{IA?\glossentry{ia}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{Hiperparámetro?\glossentry{hiperparametro}|setentrycounter[]{page}"\glsnumberformat}{5}
+\glossaryentry{Bolsa de Palabras (Bag of Words)?\glossentry{bolsadepalabras}|setentrycounter[]{page}"\glsnumberformat}{18}
+\glossaryentry{Desinformación?\glossentry{desinformacion}|setentrycounter[]{page}"\glsnumberformat}{65}
+\glossaryentry{Desinformación (Misinformation)?\glossentry{misinformacion}|setentrycounter[]{page}"\glsnumberformat}{65}
+\glossaryentry{Información Maliciosa (Malinformation)?\glossentry{malinformacion}|setentrycounter[]{page}"\glsnumberformat}{65}

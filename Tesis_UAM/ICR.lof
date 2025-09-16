@@ -1,0 +1,33 @@
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Mapa Conceptual 1: Taxonomía del problema de desinformación con enfoque en noticias falsas y extensibilidad hacia fraude digital.}}{3}{figure.1.1}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Mapa Conceptual 2: Estrategias tecnológicas para la detección de fraude digital.}}{6}{figure.1.2}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Flujo del proceso de optimización para detección de noticias falsas. Se muestra la transformación desde datos textuales hasta el modelo optimizado final, pasando por las etapas de preprocesamiento, optimización y evaluación.}}{32}{figure.2.1}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Mapa Conceptual 3: Artículos que son revisiones o están relacionados al análisis de contenido y detección de fraude financiero.}}{54}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Mapa Conceptual 4: Clasificación de artículos por enfoque metodológico.}}{55}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Mapa Conceptual 5: Métodos de optimización y metaheurísticas aplicadas.}}{55}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Mapa Conceptual 6: Artículos relacionados que incorporan Modelos de Lenguaje.}}{56}{figure.3.4}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Metodología propuesta que aborda la problemática combinando Algoritmos Metaheurísticos y Modelos de Lenguaje.}}{64}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Representación gráfica del proceso de balanceo del corpus: comparación entre distribución inicial desbalanceada y distribución final equilibrada. La imagen muestra cómo la extracción web de 9,000 noticias falsas permitió alcanzar un equilibrio óptimo de 49.8\% noticias falsas vs 50.2\% noticias reales.}}{77}{figure.4.2}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Evolución de la convergencia del algoritmo MSA mostrando el progreso gradual a través de los 31 niveles de temperatura desde 1000 hasta 1.24.}}{107}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Matriz de confusión para MSA en el conjunto de pruebas, evidenciando la baja especificidad (33\%) y el sesgo hacia la clasificación como noticias reales.}}{108}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Convergencia eficiente del algoritmo SS en solo 10 iteraciones, mostrando mejoras progresivas en las iteraciones 4, 5 y 7 hasta estabilizarse en 0.6630.}}{109}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Matriz de confusión para SS demostrando mejor balance que MSA con especificidad del 40\% y excelente generalización.}}{109}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Evolución darwiniana del algoritmo GA a lo largo de 20 generaciones, evidenciando progreso sostenido desde 0.6198 hasta 0.7090 con hitos evolutivos significativos.}}{110}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Matriz de confusión para GA mostrando el mejor balance global con especificidad líder del 48\% y rendimiento sólido en ambas clases.}}{111}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Progreso sistemático del algoritmo VNS a través de 20 iteraciones con cambios efectivos de vecindario, mostrando saltos significativos en las iteraciones 6 y 14.}}{112}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Matriz de confusión para VNS destacando la excelente exhaustividad del 89\% para detección de noticias reales con especificidad competitiva del 41\%.}}{112}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Convergencia problemática del algoritmo PSO evidenciando estancamiento prematuro en la iteración 7-8 y exploración insuficiente del espacio de búsqueda.}}{113}{figure.5.9}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Matriz de confusión para PSO revelando el comportamiento extremo problemático con especificidad crítica del 15\% y sesgo severo hacia la clase mayoritaria.}}{114}{figure.5.10}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Evolución de la exactitud y pérdida durante el entrenamiento del modelo DistilBERT V7. Las líneas azul y roja muestran la convergencia en entrenamiento y validación respectivamente. La estrella dorada marca la mejor época (13), después de la cual se observa el inicio del overfitting con una separación creciente entre las curvas.}}{121}{figure.5.11}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Evolución de exactitud a través de las versiones experimentales.}}{126}{figure.5.12}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Captura de pantalla de la aplicación analizando una noticia real.}}{141}{figure.6.1}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Captura de pantalla de la aplicación detectando una noticia falsa basada en su contenido.}}{141}{figure.6.2}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Captura de pantalla de la aplicación detectando una página de fraude digital.}}{142}{figure.6.3}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

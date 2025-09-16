@@ -983,7 +983,7 @@ Las características de implementación incluyen:
 
 \subsubsection{Optimización por Enjambre de Partículas (Particle Swarm Optimization - PSO)}
 
-PSO, desarrollado por Kennedy y Eberhart \cite{kennedy1995particle} y Eberhart y Kennedy \cite{eberhart1995particle}, se fundamenta en el comportamiento social observado en enjambres naturales como bandadas de aves o cardúmenes de peces. Las partículas (soluciones) se mueven en el espacio de búsqueda influenciadas por su propia experiencia y la información colectiva del enjambre, creando un mecanismo de inteligencia emergente.
+PSO, desarrollado por Kennedy y Eberhart \cite{kennedy1995particle}, se fundamenta en el comportamiento social observado en enjambres naturales como bandadas de aves o cardúmenes de peces. Las partículas (soluciones) se mueven en el espacio de búsqueda influenciadas por su propia experiencia y la información colectiva del enjambre, creando un mecanismo de inteligencia emergente.
 
 \begin{table}[htbp]
 \centering
@@ -1233,87 +1233,6 @@ La optimización de hiperparámetros se realizó mediante una búsqueda sistemá
     \item \textbf{Selección final:} Evaluación en conjunto de validación para determinar configuración óptima
 \end{enumerate}
 
-\subsection{Arquitectura del Modelo de Clasificación}
-
-El modelo final implementa una arquitectura que combina las representaciones contextuales de DistilBERT con capas de clasificación especializadas:
-
-\begin{table}[htbp]
-\centering
-\adjustbox{width=0.9\textwidth,center}{%
-\small
-\begin{tabular}{|l|l|l|}
-\hline
-\rowcolor{UAMPurple!20}
-\textbf{Capa} & \textbf{Configuración} & \textbf{Función} \\
-\hline
-\rowcolor{LightGreen!30}
-DistilBERT Base & \begin{tabular}[t]{@{}l@{}}66M parámetros\\6 capas transformer\end{tabular} & Extracción de características \\
-\hline
-\rowcolor{LightSkyBlue!30}
-Pooling Layer & Global average pooling & Agregación de secuencia \\
-\hline
-\rowcolor{LightCoral!30}
-Dropout & Rate = 0.7 & Regularización \\
-\hline
-\rowcolor{LightGoldenrod!30}
-Dense Layer & 128 unidades + ReLU & Representación intermedia \\
-\hline
-\rowcolor{LightPink!30}
-Output Layer & 1 unidad + Sigmoid & Clasificación binaria \\
-\hline
-\end{tabular}
-}
-\caption{Arquitectura del modelo de clasificación basado en DistilBERT.}
-\label{tab:arquitectura_modelo}
-\end{table}
-
-\subsection{Protocolo de Entrenamiento}
-
-El protocolo de entrenamiento se diseñó para maximizar la estabilidad y reproducibilidad de los resultados:
-
-\subsubsection{Configuración de Entrenamiento}
-
-\begin{itemize}
-    \item \textbf{Optimizador:} AdamW con weight decay integrado
-    \item \textbf{Función de pérdida:} Binary crossentropy con smoothing
-    \item \textbf{Métricas de monitoreo:} Accuracy y AUC para seguimiento durante entrenamiento
-    \item \textbf{Scheduler:} ReduceLROnPlateau para ajuste dinámico del learning rate
-    \item \textbf{Checkpointing:} Guardado automático del mejor modelo basado en validation loss
-\end{itemize}
-
-\subsubsection{Estrategia de Validación}
-
-\begin{itemize}
-    \item \textbf{Early stopping:} Monitoreo de validation loss con paciencia de 8 épocas
-    \item \textbf{Validation split:} 10\% del conjunto de entrenamiento reservado para validación
-    \item \textbf{Estratificación:} Mantenimiento de proporciones de clases en validación
-    \item \textbf{Seed fija:} random\_state=42 para reproducibilidad
-\end{itemize}
-
-\subsection{Consideraciones de Implementación}
-
-\subsubsection{Optimizaciones de Memoria}
-
-Para manejar eficientemente los recursos computacionales disponibles:
-
-\begin{itemize}
-    \item \textbf{Gradient accumulation:} Simulación de batches más grandes cuando necesario
-    \item \textbf{Mixed precision:} Uso de float16 para reducir uso de VRAM
-    \item \textbf{Batch size adaptativo:} Ajuste dinámico según disponibilidad de memoria
-    \item \textbf{Gradient clipping:} Prevención de gradientes explosivos
-\end{itemize}
-
-\subsubsection{Monitoreo y Logging}
-
-\begin{itemize}
-    \item \textbf{TensorBoard:} Visualización de métricas durante entrenamiento
-    \item \textbf{Logging detallado:} Registro de hiperparámetros y métricas por época
-    \item \textbf{Checkpoints automáticos:} Guardado periódico para recuperación
-    \item \textbf{Profiling GPU:} Monitoreo de utilización de recursos
-\end{itemize}
-
-Esta configuración metodológica establece un marco robusto para el entrenamiento de DistilBERT, garantizando tanto la calidad de los resultados como la reproducibilidad del proceso experimental.
-
 \section{Metodología de Evaluación Comparativa}
 \label{sec:evaluacion_comparativa}
 
@@ -1521,15 +1440,6 @@ Las fórmulas implementadas son idénticas a las utilizadas en:
     \item Estándares scikit-learn para reproducibilidad
 \end{itemize}
 
-\textbf{4. Propiedades de Agregación:}
-Las métricas permiten agregación estadística válida:
-\begin{itemize}
-    \item Media aritmética para comparar rendimiento promedio entre modelos
-    \item Desviación estándar para medir estabilidad del rendimiento
-    \item Intervalos de confianza para análisis de significancia estadística
-    \item Ranking ordenado para selección de modelo óptimo
-\end{itemize}
-
 \subsubsection{Consideraciones Específicas para Detección de Noticias Falsas}
 
 En el contexto de detección de noticias falsas, cada tipo de error tiene implicaciones específicas:
@@ -1537,8 +1447,8 @@ En el contexto de detección de noticias falsas, cada tipo de error tiene implic
 \begin{itemize}
     \item \textbf{Falsos Positivos (FP):} Contenido real clasificado como falso - puede generar censura indebida y limitar la libertad de información
     \item \textbf{Falsos Negativos (FN):} Contenido falso no detectado - permite propagación de desinformación y daño social
-    \item \textbf{Trade-off crítico:} Balance entre detectar desinformación vs. preservar libertad de información
-    \item \textbf{Contexto de aplicación:} En sistemas automatizados, los FP pueden ser más tolerables que los FN si existe revisión humana posterior
+    \item \textbf{Equilibrio fundamental:} La detección de desinformación requiere un balance cuidadoso entre la identificación efectiva de contenido falso y la preservación de la libertad de información legítima
+    \item \textbf{Consideraciones prácticas:} En implementaciones reales, los falsos positivos pueden ser más aceptables cuando existe un proceso de revisión humana que puede corregir estas decisiones automáticas
 \end{itemize}
 
 \subsubsection{Alineación con Métricas del Estado del Arte}
@@ -1570,11 +1480,11 @@ La selección e implementación de métricas en este trabajo está directamente 
     \item \textbf{Especificidad:} Añadida para análisis comprehensivo de rendimiento en clase negativa
 \end{itemize}
 
-\textbf{4. Validación mediante Comparación Benchmarking:}
+\textbf{4. Validación mediante Comparación de Métricas:}
 Las métricas implementadas permiten comparación directa con:
 \begin{itemize}
-    \item Resultados reportados en IberLEF 2020-2021
-    \item Baselines establecidos por Tretiakov et al. \cite{tretiakov2022detection}
+    \item Evidencias reportadas en IberLEF 2020-2021
+    \item Resultados establecidos por Tretiakov et al. \cite{tretiakov2022detection}
     \item Rendimiento de modelos transformer reportado por Blanco-Fernández et al. \cite{blanco2024enhancing}
     \item Estándares de la comunidad científica internacional
 \end{itemize}
@@ -1608,37 +1518,6 @@ La selección del modelo óptimo se basará en una evaluación multi-criterio qu
 }
 \caption{Criterios multi-dimensionales para selección del modelo óptimo.}
 \label{tab:criterios_seleccion}
-\end{table}
-
-\subsection{Protocolo de Validación Cruzada}
-
-Para garantizar la robustez estadística de los resultados, se implementará un protocolo de validación adicional:
-
-\begin{table}[htbp]
-\centering
-\adjustbox{width=0.9\textwidth,center}{%
-\small
-\begin{tabular}{|l|l|l|}
-\hline
-\rowcolor{UAMPurple!20}
-\textbf{Aspecto} & \textbf{Configuración} & \textbf{Propósito} \\
-\hline
-\rowcolor{LightGreen!30}
-Tipo de validación & Stratified K-Fold (k=5) & Mantener proporción de clases \\
-\hline
-\rowcolor{LightSkyBlue!30}
-Semillas aleatorias & Múltiples seeds (42, 123, 456, 789, 999) & Evaluar estabilidad estadística \\
-\hline
-\rowcolor{LightCoral!30}
-Repeticiones & 3 ejecuciones por configuración & Reducir variabilidad aleatoria \\
-\hline
-\rowcolor{LightGoldenrod!30}
-Análisis estadístico & Test de significancia (t-test pareado) & Validar diferencias entre modelos \\
-\hline
-\end{tabular}
-}
-\caption{Protocolo de validación cruzada para robustez estadística.}
-\label{tab:validacion_cruzada}
 \end{table}
 
 \subsection{Benchmarking Computacional}
@@ -1679,7 +1558,7 @@ Se realizará un análisis detallado de las matrices de confusión para comprend
 \begin{itemize}
     \item \textbf{Análisis por clase:} Identificación de sesgos hacia noticias reales o falsas
     \item \textbf{Análisis de errores:} Caracterización cualitativa de casos mal clasificados
-    \item \textbf{Visualización:} Heatmaps normalizados para comparación visual
+    \item \textbf{Visualización:} Mapas de calor normalizados para comparación visual
     \item \textbf{Interpretabilidad:} Análisis de características más influyentes en decisiones
 \end{itemize}
 
