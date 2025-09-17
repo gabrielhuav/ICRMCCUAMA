@@ -3,17 +3,16 @@
 
 Este capítulo presenta el análisis integral de los resultados obtenidos mediante la metodología unificada desarrollada para la detección de noticias falsas en español. Los resultados se organizan siguiendo la estructura evolutiva de la metodología: comenzando con la validación del flujo de datos de datos común, continuando con la evaluación de los modelos clásicos optimizados con algoritmos metaheurísticos (que establecen la línea base), progresando hacia los resultados del modelo Transformer DistilBERT, y culminando con una evaluación comparativa integral que justifica la selección del modelo final.
 
-El análisis estadístico se fundamenta en un marco de evaluación unificado que emplea las métricas definidas en la metodología: Exactitud (Accuracy), Precisión (Precision), Exhaustividad (Recall), F1-Score y Especificidad. \textbf{Criterio fundamental:} Todos los experimentos se ejecutaron bajo condiciones experimentales idénticas para garantizar comparabilidad objetiva: mismo corpus, misma división de datos (70\% entrenamiento, 10\% validación, 20\% prueba), mismas semillas aleatorias, y mismo protocolo de validación cruzada estratificada.
+El análisis estadístico se fundamenta en un marco de evaluación unificado que emplea las métricas definidas en la metodología: Exactitud (Accuracy), Precisión (Precision), Exhaustividad (Recall), F1-Score y Especificidad. \textbf{Criterio fundamental:} Todos los experimentos se ejecutaron bajo condiciones experimentales idénticas para garantizar comparabilidad objetiva: mismo corpus, misma división de datos (70\% entrenamiento, 10\% validación, 20\% prueba), y mismo protocolo de validación.
 
 \section{Validación del Flujo de Datos y Representaciones}
 \label{sec:validacion_pipeline_datos}
 
-Antes de proceder con la evaluación de modelos, se validó la robustez del flujo de datos de procesamiento de datos desarrollado, que constituye la base común para ambos enfoques de modelado.
+Antes de proceder con la evaluación de modelos, se validó la robustez del flujo de datos de procesamiento desarrollado, que constituye la base común para ambos enfoques de modelado.
 
 \subsection{Características del Corpus Unificado Final}
 
 El corpus utilizado para todos los experimentos presenta las siguientes características tras el proceso de unificación y limpieza: 
-
 
 \begin{table}[htbp]
 \centering
@@ -45,19 +44,9 @@ El corpus utilizado para todos los experimentos presenta las siguientes caracter
 \label{tab:corpus_academicos_resultados}
 \end{table}
 
-Las características del corpus son las siguientes:
-
-\begin{itemize}
-    \item \textbf{Conjunto de entrenamiento:} 42,151 registros (80\%)
-    \item \textbf{Conjunto de validación:} 5,269 registros (10\%)
-    \item \textbf{Conjunto de pruebas:} 5,269 registros (10\%)
-    \item \textbf{Total de noticias:} 52,689 artículos de fuentes académicas verificadas
-    \item \textbf{Distribución balanceada:} Aproximadamente 40\% noticias falsas y 60\% noticias reales
-\end{itemize}
-
 \subsubsection{Configuración de Representación Textual}
 
-La representación textual se fundamentó en la técnica TF-IDF:
+Como se detalló en capitulos anteriores, la representación textual se basó en TF-IDF con la siguiente configuración específica para los experimentos:
 
 \begin{itemize}
     \item \textbf{Vocabulario inicial:} 5,000 términos más frecuentes del corpus
@@ -71,8 +60,7 @@ La representación textual se fundamentó en la técnica TF-IDF:
 Todos los algoritmos metaheurísticos optimizaron un clasificador logístico binario con las siguientes características:
 
 \begin{itemize}
-    \item \textbf{Función de activación:} Sigmoid para clasificación binaria
-    \item \textbf{Binarización adaptativa:} Umbrales dinámicos para cada característica
+    \item \textbf{Función de activación:} Sigmoide para clasificación binaria
     \item \textbf{Parámetros optimizados:} Selección de características, pesos del modelo y umbrales de decisión
     \item \textbf{Función objetivo:} Maximización de la exactitud en el conjunto de entrenamiento
 \end{itemize}
@@ -123,8 +111,7 @@ La Tabla \ref{tab:configuracion_algoritmos_metaheuristicos} presenta la configur
 Los parámetros establecidos se fundamentan en:
 
 \begin{itemize}
-    \item \textbf{Literatura especializada:} Valores base extraídos de trabajos seminales para cada algoritmo
-    \item \textbf{Experimentación preliminar:} Ajuste fino mediante pruebas en subconjuntos del corpus
+    \item \textbf{Literatura especializada:} Valores base extraídos de trabajos originales para cada algoritmo
     \item \textbf{Balance exploración-explotación:} Configuración para evitar convergencia prematura
     \item \textbf{Eficiencia computacional:} Límites de iteraciones para tiempos de ejecución razonables
     \item \textbf{Estabilidad estadística:} Parámetros que garantizan reproducibilidad de resultados
