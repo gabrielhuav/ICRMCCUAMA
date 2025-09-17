@@ -166,22 +166,20 @@ Se llevó a cabo un proceso exhaustivo de investigación y unificación de cuatr
 \footnotesize
 \begin{tabular}{|c|l|l|c|c|l|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{ID} & \textbf{Nombre del Corpus} & \textbf{Autores Principales} & \textbf{Año} & \textbf{Noticias} & \textbf{Características} & \textbf{Ref.} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{ID}} & \textbf{\textcolor{white}{Nombre del Corpus}} & \textbf{\textcolor{white}{Autores Principales}} & \textbf{\textcolor{white}{Año}} & \textbf{\textcolor{white}{Noticias}} & \textbf{\textcolor{white}{Características}} & \textbf{\textcolor{white}{Ref.}} \\
 \hline
-\rowcolor{UAMAzcapoLight!30}
+\rowcolor{UAMAzcapoLight!40}
 1 & \begin{tabular}[t]{@{}l@{}}Spanish Fake News Corpus\\(IberLEF)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Posadas-Durán, J.P.\\Gómez-Adorno, H.\end{tabular} & 2019-2021 & 971 & \begin{tabular}[t]{@{}l@{}}Análisis estilométrico\\Múltiples versiones\end{tabular} & \cite{posadas2019detection} \\
 \hline
-\rowcolor{UAMCuajimalpaLight!30}
 2 & \begin{tabular}[t]{@{}l@{}}Conjunto de datos Zules Acosta\\(UPM)\end{tabular} & Acosta, F.A.Z. & 2019 & 598 & \begin{tabular}[t]{@{}l@{}}Trabajo fin de maestría\\Extracción web verificada\end{tabular} & \cite{acosta2019construccion} \\
 \hline
-\rowcolor{UAMIztapalapaLight!30}
+\rowcolor{UAMAzcapoLight!40}
 3 & \begin{tabular}[t]{@{}l@{}}Conjunto de datos Tretiakov\\(Kaggle)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Tretiakov, A.\\Martín García, A.\end{tabular} & 2022 & 1,958 & \begin{tabular}[t]{@{}l@{}}Aprendizaje automático\\Disponible públicamente\end{tabular} & \cite{tretiakov2022detection} \\
 \hline
-\rowcolor{UAMLermaLight!30}
 4 & \begin{tabular}[t]{@{}l@{}}Spanish Political Fake News\\Conjunto de datos\end{tabular} & \begin{tabular}[t]{@{}l@{}}Blanco-Fernández, Y.\\Otero-Vizoso, J.\end{tabular} & 2024 & 57,231 & \begin{tabular}[t]{@{}l@{}}Temática política\\Modelos BERT/RoBERTa\end{tabular} & \cite{blanco2024enhancing} \\
 \hline
-\rowcolor{UAMAzcapo!20}
+\rowcolor{UAMAzcapoMedium!30}
 \multicolumn{5}{|c|}{\textbf{TOTAL CORPUS ACADÉMICOS}} & \textbf{60,758} & \textbf{Cuatro fuentes} \\
 \hline
 \end{tabular}
@@ -208,36 +206,106 @@ El corpus más extenso utilizado, desarrollado por Blanco-Fernández et al., con
 
 \subsection{Análisis Comparativo Detallado de los Corpus Utilizados}
 
-Para garantizar una comprensión completa de las características y diferencias entre los corpus utilizados, se presenta un análisis comparativo exhaustivo que permite entender las fortalezas y limitaciones de cada fuente de datos, así como las decisiones metodológicas tomadas en el proceso de unificación.
+Para garantizar una comprensión completa de las características y diferencias entre los corpus utilizados, se presenta un análisis comparativo exhaustivo que permite entender las fortalezas y limitaciones de cada fuente de datos, así como las decisiones metodológicas tomadas en el proceso de unificación (ver tabla \ref{tab:comparacion_exhaustiva_corpus}) .
 
 \begin{table}[htbp]
 \centering
 \adjustbox{width=\textwidth,center}{%
-\footnotesize
-\begin{tabular}{|c|l|l|c|c|l|c|}
+\tiny
+\begin{tabular}{|l|c|c|c|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{ID} & \textbf{Nombre del Corpus} & \textbf{Autores Principales} & \textbf{Año} & \textbf{Noticias} & \textbf{Características} & \textbf{Ref.} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Aspecto Comparativo}} & \textbf{\textcolor{white}{Posadas-Durán}} & \textbf{\textcolor{white}{Acosta (UPM)}} & \textbf{\textcolor{white}{Tretiakov}} & \textbf{\textcolor{white}{Blanco-Fernández}} & \textbf{\textcolor{white}{El Deforma}} \\
 \hline
-\rowcolor{UAMAzcapoLight!30}
-1 & \begin{tabular}[t]{@{}l@{}}Spanish Fake News Corpus\\(IberLEF)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Posadas-Durán, J.P.\\Gómez-Adorno, H.\end{tabular} & 2019-2021 & 971 & \begin{tabular}[t]{@{}l@{}}Análisis estilométrico\\Múltiples versiones\end{tabular} & \cite{posadas2019detection} \\
+\rowcolor{UAMAzcapoLight!40}
+\textbf{Tamaño del corpus} & 971 noticias & 598 noticias & 1,958 noticias & 57,231 noticias & 9,000 noticias \\
 \hline
-\rowcolor{UAMCuajimalpaLight!30}
-2 & \begin{tabular}[t]{@{}l@{}}Conjunto de datos Zules Acosta\\(UPM)\end{tabular} & Acosta, F.A.Z. & 2019 & 598 & \begin{tabular}[t]{@{}l@{}}Trabajo fin de maestría\\Extracción web verificada\end{tabular} & \cite{acosta2019construccion} \\
+\rowcolor{UAMCuajimalpaLight!40}
+\textbf{Año de creación} & 2019-2021 & 2019 & 2022 & 2024 & 2025 (extracción) \\
 \hline
-\rowcolor{UAMIztapalapaLight!30}
-3 & \begin{tabular}[t]{@{}l@{}}Conjunto de datos Tretiakov\\(Kaggle)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Tretiakov, A.\\Martín García, A.\end{tabular} & 2022 & 1,958 & \begin{tabular}[t]{@{}l@{}}Aprendizaje automático\\Disponible públicamente\end{tabular} & \cite{tretiakov2022detection} \\
+\rowcolor{UAMIztapalapaLight!40}
+\textbf{Enfoque metodológico} & 
+\begin{tabular}[t]{@{}l@{}}Análisis estilométrico\\Competencias IberLEF\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Metodología de\\construcción de corpus\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Aprendizaje automático\\tradicional\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Modelos Transformer\\BERT/RoBERTa\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Contenido satírico\\Web scraping\end{tabular} \\
 \hline
-\rowcolor{UAMLermaLight!30}
-4 & \begin{tabular}[t]{@{}l@{}}Spanish Political Fake News\\Conjunto de datos\end{tabular} & \begin{tabular}[t]{@{}l@{}}Blanco-Fernández, Y.\\Otero-Vizoso, J.\end{tabular} & 2024 & 57,231 & \begin{tabular}[t]{@{}l@{}}Temática política\\Modelos BERT/RoBERTa\end{tabular} & \cite{blanco2024enhancing} \\
+\rowcolor{UAMLermaLight!40}
+\textbf{Dominio temático} & General & General & General & Político específico & Satírico/General \\
 \hline
-\rowcolor{UAMAzcapo!20}
-\multicolumn{5}{|c|}{\textbf{TOTAL CORPUS ACADÉMICOS}} & \textbf{60,758} & \textbf{Cuatro fuentes} \\
+\rowcolor{UAMXochimilcoLight!40}
+\textbf{Distribución de clases} & Balanceado & Balanceado & Solo falsas & Balanceado & Solo falsas \\
+\hline
+\rowcolor{UAMAzcapoLight!40}
+\textbf{Fuentes de noticias reales} & 
+\begin{tabular}[t]{@{}l@{}}Medios españoles\\verificados\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Múltiples medios\\internacionales\end{tabular} & 
+N/A & 
+\begin{tabular}[t]{@{}l@{}}Medios políticos\\españoles\end{tabular} & 
+N/A \\
+\hline
+\rowcolor{UAMCuajimalpaLight!40}
+\textbf{Fuentes de noticias falsas} & 
+\begin{tabular}[t]{@{}l@{}}Sitios verificados como\\desinformativos\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Fact-checkers y\\verificadores\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Redes sociales y\\sitios no verificados\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Desinformación\\política verificada\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Portal satírico\\El Deforma\end{tabular} \\
+\hline
+\rowcolor{UAMIztapalapaLight!40}
+\textbf{Variabilidad regional} & España/Latinoamérica & Internacional & Múltiple & España & México \\
+\hline
+\rowcolor{UAMLermaLight!40}
+\textbf{Periodo temporal} & 2018-2021 & 2018-2019 & 2020-2022 & 2020-2024 & 2019-2025 \\
+\hline
+\rowcolor{UAMXochimilcoLight!40}
+\textbf{Calidad de anotación} & 
+\begin{tabular}[t]{@{}l@{}}Alta - múltiples\\anotadores\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Alta - verificación\\manual exhaustiva\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Media - basada\\en fuentes\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Alta - verificación\\política especializada\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Automática - contenido\\inherentemente falso\end{tabular} \\
+\hline
+\rowcolor{UAMAzcapoLight!40}
+\textbf{Metadatos incluidos} & 
+\begin{tabular}[t]{@{}l@{}}Características\\estilométricas\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Fuente, fecha,\\categoría\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Fecha, fuente,\\contexto\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Orientación política,\\fecha, fuente\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}URL, fecha de\\extracción\end{tabular} \\
+\hline
+\rowcolor{UAMCuajimalpaLight!40}
+\textbf{Disponibilidad pública} & 
+\begin{tabular}[t]{@{}l@{}}GitHub\\(IberLEF)\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Kaggle\\UPM\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Kaggle\\Público\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Kaggle\\Applied Sciences\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Generado para\\esta tesis\end{tabular} \\
+\hline
+\rowcolor{UAMIztapalapaLight!40}
+\textbf{Fortaleza principal} & 
+\begin{tabular}[t]{@{}l@{}}Análisis lingüístico\\profundo\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Metodología\\rigurosa\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Foco en ML\\tradicional\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Gran escala y\\especialización política\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Contemporaneidad\\y diversidad\end{tabular} \\
+\hline
+\rowcolor{UAMLermaLight!40}
+\textbf{Limitación principal} & 
+\begin{tabular}[t]{@{}l@{}}Tamaño\\limitado\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Tamaño muy\\pequeño\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Solo noticias\\falsas\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Dominio muy\\específico\end{tabular} & 
+\begin{tabular}[t]{@{}l@{}}Solo contenido\\satírico\end{tabular} \\
+\hline
+\rowcolor{UAMXochimilcoLight!40}
+\textbf{Contribución al corpus final} & 1.6\% & 1.0\% & 3.2\% & 92.8\% & 14.6\% \\
 \hline
 \end{tabular}
 }
-\caption{Corpus académicos utilizados para la construcción del conjunto de datos unificado.}
-\label{tab:corpus_academicos}
+\caption{Comparación exhaustiva de características de los corpus utilizados en la construcción del conjunto de datos unificado.}
+\label{tab:comparacion_exhaustiva_corpus}
 \end{table}
 
 \subsubsection{Características de Variabilidad Regional del Español}
@@ -348,22 +416,20 @@ El proceso de extracción automatizada se ejecutó en múltiples fases para alca
 \small
 \begin{tabular}{|c|l|l|c|c|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Fase} & \textbf{Estrategia} & \textbf{Técnica Utilizada} & \textbf{Objetivo} & \textbf{Resultado} & \textbf{Observaciones} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Fase}} & \textbf{\textcolor{white}{Estrategia}} & \textbf{\textcolor{white}{Técnica Utilizada}} & \textbf{\textcolor{white}{Objetivo}} & \textbf{\textcolor{white}{Resultado}} & \textbf{\textcolor{white}{Observaciones}} \\
 \hline
-\rowcolor{UAMAzcapoLight!30}
+\rowcolor{UAMAzcapoLight!40}
 1 & Scraping Inicial & \begin{tabular}[t]{@{}l@{}}Navegación por enlaces\\Extracción de contenido\end{tabular} & 1,000 & 1,000 & \begin{tabular}[t]{@{}l@{}}Proceso exitoso\\Base establecida\end{tabular} \\
 \hline
-\rowcolor{UAMCuajimalpaLight!30}
 2 & \begin{tabular}[t]{@{}l@{}}Búsqueda Expandida\\Masiva\end{tabular} & \begin{tabular}[t]{@{}l@{}}URLs desde existentes\\Crawling híbrido\end{tabular} & 9,000 & 2,495 & \begin{tabular}[t]{@{}l@{}}Expansión limitada\\Nuevas estrategias\end{tabular} \\
 \hline
-\rowcolor{UAMIztapalapaLight!30}
+\rowcolor{UAMAzcapoLight!40}
 3 & \begin{tabular}[t]{@{}l@{}}Crawler Híbrido\\Persistente\end{tabular} & \begin{tabular}[t]{@{}l@{}}URLs semilla\\Trafilatura\end{tabular} & 9,000 & 2,495 & \begin{tabular}[t]{@{}l@{}}Estabilización\\Mismo resultado\end{tabular} \\
 \hline
-\rowcolor{UAMLermaLight!30}
 4 & \begin{tabular}[t]{@{}l@{}}Paginación\\Sistemática\end{tabular} & \begin{tabular}[t]{@{}l@{}}Escaneo por páginas\\Indexación completa\end{tabular} & 9,000 & 9,000 & \begin{tabular}[t]{@{}l@{}}Éxito completo\\Objetivo alcanzado\end{tabular} \\
 \hline
-\rowcolor{UAMAzcapo!20}
+\rowcolor{UAMAzcapoMedium!30}
 \multicolumn{4}{|c|}{\textbf{TOTAL EXTRAÍDO}} & \textbf{9,000} & \textbf{Extracción web completada} \\
 \hline
 \end{tabular}
@@ -394,37 +460,37 @@ La Tabla \ref{tab:corpus_referencias_completas} presenta las referencias bibliog
 \footnotesize
 \begin{tabular}{|l|l|l|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
+\rowcolor{UAMAzcapo}
 \textbf{\textcolor{white}{Corpus}} & \textbf{\textcolor{white}{Tipo de Referencia}} & \textbf{\textcolor{white}{Fuente Principal}} & \textbf{\textcolor{white}{Referencia}} \\
 \hline
-\rowcolor{UAMAzcapoLight}
+\rowcolor{UAMAzcapoLight!40}
 \textbf{Spanish Fake News Corpus (IberLEF)} & Artículo original & Journal of Intelligent and Fuzzy Systems & \cite{posadas2019detection} \\
 \hline
-\rowcolor{ProfessionalGray}
+\rowcolor{UAMAzcapoLight!40}
 Spanish Fake News Corpus (IberLEF) & Workshop IberLEF 2021 & Procesamiento del Lenguaje Natural & \cite{gomez2021overview} \\
 \hline
-\rowcolor{ProfessionalGray}
+\rowcolor{UAMAzcapoLight!40}
 Spanish Fake News Corpus (IberLEF) & Workshop IberLEF 2020 & IberLEF Workshop Proceedings & \cite{aragon2020overview} \\
 \hline
-\rowcolor{ProfessionalGray}
+\rowcolor{UAMAzcapoLight!40}
 Spanish Fake News Corpus (IberLEF) & Repositorio GitHub & GitHub Repository & \cite{ramirez2021spanish} \\
 \hline
-\rowcolor{UAMCuajimalpaLight}
+\rowcolor{UAMAzcapoLight!40}
 \textbf{Conjunto de datos Zules Acosta (UPM)} & Tesis de Maestría & Universidad Politécnica de Madrid & \cite{acosta2019construccion} \\
 \hline
-\rowcolor{ProfessionalGray}
+\rowcolor{UAMAzcapoLight!40}
 Dataset Zules Acosta (UPM) & Dataset Kaggle & Kaggle Platform & \cite{zules2019spanish} \\
 \hline
-\rowcolor{UAMIztapalapaLight}
+\rowcolor{UAMAzcapoLight!40}
 \textbf{Dataset Tretiakov (Kaggle)} & Capítulo de libro & Springer Book Chapter & \cite{tretiakov2022detection} \\
 \hline
-\rowcolor{ProfessionalGray}
+\rowcolor{UAMAzcapoLight!40}
 Dataset Tretiakov (Kaggle) & Dataset Kaggle & Kaggle Platform & \cite{tretiakov2022noticias} \\
 \hline
-\rowcolor{UAMLermaLight}
+\rowcolor{UAMAzcapoLight!40}
 \textbf{Spanish Political Fake News Dataset} & Artículo científico & Applied Sciences Journal & \cite{blanco2024enhancing} \\
 \hline
-\rowcolor{ProfessionalGray}
+\rowcolor{UAMAzcapoLight!40}
 Spanish Political Fake News Dataset & Dataset Kaggle & Kaggle Platform & \cite{blanco2024spanish} \\
 \hline
 \end{tabular}
@@ -456,19 +522,18 @@ La Tabla \ref{tab:corpus_final} presenta la composición detallada del corpus un
 \adjustbox{width=0.9\textwidth,center}{%
 \begin{tabular}{|l|c|c|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Fuente de Datos} & \textbf{Noticias} & \textbf{Porcentaje} & \textbf{Tipo} & \textbf{Estado} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Fuente de Datos}} & \textbf{\textcolor{white}{Noticias}} & \textbf{\textcolor{white}{Porcentaje}} & \textbf{\textcolor{white}{Tipo}} & \textbf{\textcolor{white}{Estado}} \\
 \hline
-\rowcolor{UAMAzcapoLight!30}
+\rowcolor{UAMAzcapoLight!40}
 Corpus Académicos Unificados & 52,689 & 85.4\% & Mixto & Procesado \\
 \hline
-\rowcolor{UAMCuajimalpaLight!30}
 Extracción Web ``El Deforma'' & 9,000 & 14.6\% & Falso & Extraído \\
 \hline
-\rowcolor{UAMIztapalapaLight!30}
+\rowcolor{UAMAzcapoLight!40}
 Duplicados Eliminados & -15 & -0.02\% & -- & Removido \\
 \hline
-\rowcolor{UAMAzcapo!20}
+\rowcolor{UAMAzcapoMedium!30}
 \textbf{CORPUS FINAL} & \textbf{61,674} & \textbf{100\%} & \textbf{Balanceado} & \textbf{Listo} \\
 \hline
 \end{tabular}
@@ -589,19 +654,18 @@ La Tabla \ref{tab:division_datos} muestra la distribución principal implementad
 \adjustbox{width=0.8\textwidth,center}{%
 \begin{tabular}{|l|c|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Conjunto de Datos} & \textbf{Porcentaje} & \textbf{Noticias} & \textbf{Propósito} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Conjunto de Datos}} & \textbf{\textcolor{white}{Porcentaje}} & \textbf{\textcolor{white}{Noticias}} & \textbf{\textcolor{white}{Propósito}} \\
 \hline
-\rowcolor{UAMCuajimalpaLight!30}
+\rowcolor{UAMAzcapoLight!40}
 Entrenamiento & 70\% & 43,171 & Entrenar modelos \\
 \hline
-\rowcolor{UAMIztapalapaLight!30}
 Validación & 10\% & 6,167 & Calibrar hiperparámetros \\
 \hline
-\rowcolor{UAMLermaLight!30}
+\rowcolor{UAMAzcapoLight!40}
 Pruebas & 20\% & 12,336 & Evaluación final \\
 \hline
-\rowcolor{UAMAzcapo!20}
+\rowcolor{UAMAzcapoMedium!30}
 \textbf{TOTAL} & \textbf{100\%} & \textbf{61,674} & \textbf{Metodología completa} \\
 \hline
 \end{tabular}
@@ -609,7 +673,6 @@ Pruebas & 20\% & 12,336 & Evaluación final \\
 \caption{División estratificada principal del corpus para entrenamiento y evaluación.}
 \label{tab:division_datos}
 \end{table}
-
 Esta estrategia sigue las mejores prácticas establecidas en la literatura de aprendizaje automático y permite una evaluación imparcial de ambas metodologías. La estratificación garantiza que cada subconjunto mantenga la misma proporción de noticias falsas y reales que el corpus completo, evitando sesgos en el entrenamiento y evaluación de los modelos.
 
 \subsubsection{Proceso de Limpieza Final}
@@ -687,22 +750,22 @@ Para la optimización de hiperparámetros de clasificadores, se implementaron y 
 \footnotesize
 \begin{tabular}{|l|l|l|l|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
+\rowcolor{UAMAzcapo}
 \textbf{\textcolor{white}{Algoritmo}} & \textbf{\textcolor{white}{Inspiración}} & \textbf{\textcolor{white}{Principio Base}} & \textbf{\textcolor{white}{Estrategia Principal}} & \textbf{\textcolor{white}{Ref.}} \\
 \hline
-\rowcolor{UAMCuajimalpaLight}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{MSA} & Metalurgia & \begin{tabular}[t]{@{}l@{}}Recocido de metales\\Enfriamiento controlado\end{tabular} & \begin{tabular}[t]{@{}l@{}}Múltiples puntos de inicio\\Aceptación probabilística\end{tabular} & \cite{kirkpatrick1983optimization, marti2018multistart} \\
 \hline
-\rowcolor{UAMIztapalapaLight}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{SS} & Metodología científica & \begin{tabular}[t]{@{}l@{}}Búsqueda sistemática\\Combinación estructurada\end{tabular} & \begin{tabular}[t]{@{}l@{}}Conjunto de referencia\\Generación de subconjuntos\end{tabular} & \cite{glover1998template} \\
 \hline
-\rowcolor{UAMLermaLight}
+\rowcolor{UAMLermaLight!50}
 \textbf{VNS} & Exploración geográfica & \begin{tabular}[t]{@{}l@{}}Cambio sistemático\\de vecindarios\end{tabular} & \begin{tabular}[t]{@{}l@{}}Exploración local\\Diversificación estructural\end{tabular} & \cite{mladenovic1997variable} \\
 \hline
-\rowcolor{UAMXochimilcoLight}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{GA} & Evolución natural & \begin{tabular}[t]{@{}l@{}}Selección natural\\Supervivencia del más apto\end{tabular} & \begin{tabular}[t]{@{}l@{}}Operadores genéticos\\Evolución poblacional\end{tabular} & \cite{holland1992adaptation} \\
 \hline
-\rowcolor{UAMAzcapoLight}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{PSO} & Comportamiento social & \begin{tabular}[t]{@{}l@{}}Inteligencia de enjambre\\Comunicación colectiva\end{tabular} & \begin{tabular}[t]{@{}l@{}}Movimiento de partículas\\Intercambio de información\end{tabular} & \cite{kennedy1995particle, eberhart1995particle} \\
 \hline
 \end{tabular}
@@ -723,22 +786,20 @@ El algoritmo MSA implementado incluye las siguientes características:
 \small
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
+\rowcolor{UAMAzcapo}
 \textbf{\textcolor{white}{Parámetro}} & \textbf{\textcolor{white}{Valor}} & \textbf{\textcolor{white}{Descripción}} \\
 \hline
-\rowcolor{UAMCuajimalpaLight}
+\rowcolor{UAMAzcapoLight!40}
 Temperatura inicial (TI) & 1000 & Energía inicial alta para exploración amplia \\
 \hline
-\rowcolor{ProfessionalGray}
 Temperatura final (TF) & 1 & Estado de convergencia con poca aleatoriedad \\
 \hline
-\rowcolor{UAMCuajimalpaLight}
+\rowcolor{UAMAzcapoLight!40}
 Factor de enfriamiento ($\alpha$) & 0.8 & Tasa de reducción geométrica de temperatura \\
 \hline
-\rowcolor{ProfessionalGray}
 Pasos por temperatura & 100 & Iteraciones en cada nivel térmico \\
 \hline
-\rowcolor{UAMCuajimalpaLight}
+\rowcolor{UAMAzcapoLight!40}
 Puntos de arranque múltiples & 5 & Inicializaciones independientes \\
 \hline
 \end{tabular}
@@ -763,19 +824,17 @@ La Búsqueda Dispersa, desarrollada por Glover \cite{glover1998template}, se bas
 \small
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
+\rowcolor{UAMAzcapo}
 \textbf{\textcolor{white}{Parámetro}} & \textbf{\textcolor{white}{Valor}} & \textbf{\textcolor{white}{Descripción}} \\
 \hline
-\rowcolor{UAMAzcapoLight}
+\rowcolor{UAMAzcapoLight!40}
 Tamaño de población (P) & 50 & Población inicial diversa para exploración \\
 \hline
-\rowcolor{ProfessionalGray}
 Conjunto de referencia (b) & 5 & Mejores soluciones seleccionadas \\
 \hline
-\rowcolor{UAMAzcapoLight}
+\rowcolor{UAMAzcapoLight!40}
 Máximo de iteraciones & 10 & Ciclos de mejora y actualización \\
 \hline
-\rowcolor{ProfessionalGray}
 Combinaciones por iteración & 10 & Nuevas soluciones generadas por ciclo \\
 \hline
 \end{tabular}
@@ -801,19 +860,17 @@ El Algoritmo Genético, fundamentado en el trabajo original de Holland \cite{hol
 \small
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
+\rowcolor{UAMAzcapo}
 \textbf{\textcolor{white}{Parámetro}} & \textbf{\textcolor{white}{Valor}} & \textbf{\textcolor{white}{Descripción}} \\
 \hline
-\rowcolor{UAMAzcapoLight}
+\rowcolor{UAMAzcapoLight!40}
 Número de generaciones & 20 & Ciclos evolutivos completos \\
 \hline
-\rowcolor{ProfessionalGray}
 Tamaño de población & 50 & Individuos por generación \\
 \hline
-\rowcolor{UAMAzcapoLight}
+\rowcolor{UAMAzcapoLight!40}
 Tasa de mutación & 0.1 & Probabilidad de modificación genética \\
 \hline
-\rowcolor{ProfessionalGray}
 Tamaño de torneo & 3 & Individuos competidores en selección \\
 \hline
 \end{tabular}
@@ -821,7 +878,6 @@ Tamaño de torneo & 3 & Individuos competidores en selección \\
 \caption{Configuración de parámetros del algoritmo GA.}
 \label{tab:parametros_ga}
 \end{table}
-
 Los operadores genéticos implementados incluyen:
 \begin{itemize}
     \item \textbf{Selección por torneo determinística:} Competencia entre individuos para reproducción
