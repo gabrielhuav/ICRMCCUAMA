@@ -3,11 +3,11 @@
 
 En este capítulo se presenta una metodología unificada e integrada para abordar el problema de la detección de noticias falsas en español. La estrategia metodológica se fundamenta en un proceso evolutivo de desarrollo y evaluación que avanza desde técnicas clásicas hasta modelos de lenguaje de última generación, permitiendo una comparación sistemática y objetiva de diferentes paradigmas de inteligencia artificial sobre una base de datos común.
 
-El diseño metodológico adopta un enfoque experimental escalonado que incluye: (1) adquisición y procesamiento unificado de datos, (2) implementación de un pipeline de procesamiento común, (3) desarrollo paralelo de modelos de clasificación utilizando algoritmos metaheurísticos y modelos Transformer, y (4) evaluación comparativa integral bajo un marco de métricas unificado. Este proceso culmina con la implementación de la solución más efectiva en una aplicación web funcional.
+El diseño metodológico adopta un enfoque experimental escalonado que incluye: (1) adquisición y procesamiento unificado de datos, (2) implementación de un Flujo de datos de procesamiento común, (3) desarrollo paralelo de modelos de clasificación utilizando algoritmos metaheurísticos y modelos Transformer, y (4) evaluación comparativa integral bajo un marco de métricas unificado. Este proceso culmina con la implementación de la solución más efectiva en una aplicación web funcional.
 
 \section{Visión General del Proceso Metodológico Integrado}
 
-La metodología se estructura como un pipeline experimental unificado que evalúa sistemáticamente dos paradigmas de inteligencia artificial complementarios. Como se ilustra en la Figura \ref{fig:metodologia_general}, ambos enfoques parten de una base metodológica común pero implementan estrategias de modelado diferenciadas, convergiendo finalmente en una evaluación comparativa que determina la solución óptima.
+La metodología se estructura como un flujo de datos experimental unificado que evalúa sistemáticamente dos paradigmas de inteligencia artificial complementarios. Como se ilustra en la Figura \ref{fig:metodologia_general}, ambos enfoques parten de una base metodológica común pero implementan estrategias de modelado diferenciadas, convergiendo finalmente en una evaluación comparativa que determina la solución óptima.
 
 \textbf{Fundamento del enfoque evolutivo:} Esta investigación adopta una filosofía de desarrollo evolutivo donde se exploran técnicas de complejidad creciente, comenzando con métodos clásicos de PLN optimizados mediante metaheurísticas (estableciendo una línea base sólida) y progresando hacia modelos Transformer de última generación. Esta progresión permite:
 
@@ -149,53 +149,6 @@ Es fundamental entender que \textbf{la frontera difusa no es una limitación del
 
 El primer y más fundamental paso de la metodología fue la construcción de un corpus de alta calidad y de tamaño significativo en español, dada la escasez documentada de recursos centralizados para esta tarea \cite{hu2022deep}.
 
-\begin{table}[htbp]
-\centering
-\adjustbox{width=\textwidth,center}{%
-\footnotesize
-\begin{tabular}{|c|l|l|c|c|l|c|}
-\hline
-\rowcolor{UAMPurple!20}
-\textbf{Aspecto} & \textbf{Noticia Falsa} & \textbf{Bulo} \\
-\hline
-\rowcolor{LightGreen!30}
-\textbf{Definición} & 
-Información deliberadamente fabricada que se presenta como noticia legítima, pero contiene datos falsos, inexactos o engañosos & 
-Información falsa que circula ampliamente, especialmente en redes sociales, con propósito de engañar a la audiencia \\
-\hline
-\rowcolor{LightSkyBlue!30}
-\textbf{Formato} & 
-Apariencia de contenido periodístico real, formato de noticia tradicional con titular, cuerpo, fecha, fuente & 
-No necesariamente formato periodístico, puede ser texto libre, memes, cadenas de WhatsApp \\
-\hline
-\rowcolor{LightCoral!30}
-\textbf{Intención} & 
-Intención maliciosa de desinformar simulando legitimidad periodística & 
-Propósito de engañar que apela más a emociones que a hechos verificables \\
-\hline
-\rowcolor{LightGoldenrod!30}
-\textbf{Propagación} & 
-Se distribuye a través de sitios web que simulan medios legítimos o plataformas de noticias & 
-Circulación viral en redes sociales, aplicaciones de mensajería, cadenas de reenvío \\
-\hline
-\rowcolor{LightPink!30}
-\textbf{Ejemplos} & 
-Artículos con titular sensacionalista, byline falso, citas inventadas, estadísticas manipuladas & 
-Teorías conspirativas, información médica falsa, rumores políticos, cadenas de ``urgente'' \\
-\hline
-\rowcolor{HeaderBlue!20}
-\textbf{Relevancia para PLN} & 
-Estructura textual más predecible, patrones estilísticos identificables en el análisis automatizado & 
-Variabilidad estructural mayor, requiere análisis semántico y contextual más sofisticado \\
-\hline
-\end{tabular}
-}
-\caption{Comparación detallada entre noticia falsa y bulo en el contexto de detección automática.}
-\label{tab:noticia_falsa_vs_bulo}
-\end{table}
-
-
-
 % Definir colores adicionales para hacer las tablas más coloridas
 \definecolor{LightGreen}{RGB}{144, 238, 144}
 \definecolor{LightCoral}{RGB}{240, 128, 128}
@@ -247,7 +200,7 @@ Desarrollado como parte de un Trabajo Fin de Maestría Universitaria en Ciberseg
 
 \subsubsection{Dataset de Tretiakov et al.}
 
-Este corpus, desarrollado por Tretiakov, Martín García y Camacho, contiene 1,958 noticias falsas en español \cite{tretiakov2022detection}. \textbf{Su propósito específico fue la evaluación de técnicas de aprendizaje automático tradicionales para clasificación binaria de contenido desinformativo}. El conjunto de datos fue creado en el contexto de técnicas de aprendizaje automático para la detección de información falsa y se encuentra disponible públicamente en Kaggle \cite{tretiakov2022noticias}. \textbf{Las fuentes de este corpus se concentran en redes sociales y plataformas digitales donde se propaga desinformación, incluyendo Twitter, Facebook y sitios web no verificados}. Su enfoque se centra en la aplicación de técnicas de aprendizaje automático para la clasificación automatizada de contenido desinformativo.
+Este corpus, desarrollado por Tretiakov, Martín García y Camacho, contiene 1,958 noticias en español (Corpus balanceado, 50\% por ciento de noticias falsas y 50\% de noticias verdaderas) \cite{tretiakov2022detection}. \textbf{Su propósito específico fue la evaluación de técnicas de aprendizaje automático tradicionales para clasificación binaria de contenido desinformativo}. El conjunto de datos fue creado en el contexto de técnicas de aprendizaje automático para la detección de información falsa y se encuentra disponible públicamente en Kaggle \cite{tretiakov2022noticias}. \textbf{Las fuentes de este corpus se concentran en redes sociales y plataformas digitales donde se propaga desinformación, incluyendo Twitter, Facebook y sitios web no verificados}. Su enfoque se centra en la aplicación de técnicas de aprendizaje automático para la clasificación automatizada de contenido desinformativo.
 
 \subsubsection{Spanish Political Fake News Dataset}
 
@@ -270,7 +223,7 @@ Para garantizar una comprensión completa de las características y diferencias 
 \textbf{Tamaño del corpus} & 971 noticias & 598 noticias & 1,958 noticias & 57,231 noticias & 9,000 noticias \\
 \hline
 \rowcolor{LightGreen!30}
-\textbf{Año de creación} & 2019-2021 & 2019 & 2022 & 2024 & 2024 (extracción) \\
+\textbf{Año de creación} & 2019-2021 & 2019 & 2022 & 2024 & 2025 (extracción) \\
 \hline
 \rowcolor{LightYellow!30}
 \textbf{Enfoque metodológico} & 
@@ -306,7 +259,7 @@ N/A \\
 \textbf{Variabilidad regional} & España/Latinoamérica & Internacional & Múltiple & España & México \\
 \hline
 \rowcolor{LightGreen!30}
-\textbf{Periodo temporal} & 2018-2021 & 2018-2019 & 2020-2022 & 2020-2024 & 2020-2024 \\
+\textbf{Periodo temporal} & 2018-2021 & 2018-2019 & 2020-2022 & 2020-2024 & 2019-2025 \\
 \hline
 \rowcolor{LightYellow!30}
 \textbf{Calidad de anotación} & 
@@ -369,7 +322,7 @@ Una consideración metodológica fundamental en esta investigación es el recono
     
     \item \textbf{Español latinoamericano diverso:} El corpus de Acosta incluye fuentes internacionales que abarcan múltiples países de habla hispana
     
-    \item \textbf{Español digital contemporáneo:} Los corpus más recientes (2020-2024) capturan la evolución del español en medios digitales
+    \item \textbf{Español digital contemporáneo:} Los corpus más recientes (2020-2025) capturan la evolución del español en medios digitales
 \end{itemize}
 
 \textbf{Ventajas metodológicas del enfoque multiregional:}
@@ -393,7 +346,7 @@ Esta diversidad regional no constituye una limitación, sino una fortaleza que p
 
 \textbf{2. Cobertura Temporal y Geográfica:}
 \begin{itemize}
-    \item \textbf{Span temporal:} 2018-2024 (6 años de evolución en patrones de desinformación)
+    \item \textbf{Span temporal:} 2018-2025 (7 años de evolución en patrones de desinformación)
     \item \textbf{Cobertura geográfica:} España, México, Latinoamérica (diversidad regional del español)
     \item \textbf{Evolución temática:} Desde temas generales hasta especialización política y satírica
 \end{itemize}
@@ -652,7 +605,7 @@ El análisis detallado de los corpus permite identificar patrones complementario
 \textbf{1. Análisis Cuantitativo Comparativo:}
 \begin{itemize}
     \item \textbf{Distribución de tamaños:} Desde corpus micro (598 noticias) hasta macro (57,231 noticias)
-    \item \textbf{Diversidad temporal:} Cobertura continua de 6 años (2018-2024) entre todos los corpus
+    \item \textbf{Diversidad temporal:} Cobertura continua de 7 años (2018-2025) entre todos los corpus
     \item \textbf{Representación geográfica:} Equilibrio entre España (3 corpus), México (1 corpus) y cobertura internacional (1 corpus)
 \end{itemize}
 
@@ -752,7 +705,7 @@ El primer enfoque metodológico se basó en técnicas clásicas de PLN combinada
 
 \subsection{Preprocesamiento y Representación Textual}
 
-El pipeline de preprocesamiento implementó una serie de transformaciones estándar para convertir el texto crudo en representaciones numéricas adecuadas para algoritmos de aprendizaje automático.
+El flujo de datos de preprocesamiento implementó una serie de transformaciones estándar para convertir el texto crudo en representaciones numéricas adecuadas para algoritmos de aprendizaje automático.
 
 \subsubsection{Función de Limpieza de Texto}
 
@@ -910,7 +863,7 @@ La implementación incorpora:
 
 \subsubsection{Algoritmo Genético (Genetic Algorithm - GA)}
 
-El Algoritmo Genético, fundamentado en el trabajo seminal de Holland \cite{holland1992adaptation}, emula los procesos de evolución natural descritos por Darwin, donde las especies más aptas tienen mayor probabilidad de sobrevivir y reproducirse. En optimización, este principio se traduce en la evolución de poblaciones de soluciones mediante operadores inspirados en la genética: selección, cruce y mutación.
+El Algoritmo Genético, fundamentado en el trabajo original de Holland \cite{holland1992adaptation}, emula los procesos de evolución natural descritos por Darwin, donde las especies más aptas tienen mayor probabilidad de sobrevivir y reproducirse. En optimización, este principio se traduce en la evolución de poblaciones de soluciones mediante operadores inspirados en la genética: selección, cruce y mutación.
 
 \begin{table}[htbp]
 \centering
@@ -1039,7 +992,7 @@ Donde:
 
 \subsection{Reducción de Dimensionalidad}
 
-Para hacer computacionalmente factible la optimización, se aplicó reducción de dimensionalidad usando \texttt{SelectPercentile} con selección del 10\% de las características más relevantes según el test chi-cuadrado. La Tabla \ref{tab:reduccion_dimensionalidad} resume el proceso de selección de características.
+Para hacer computacionalmente factible la optimización, se aplicó reducción de dimensionalidad usando \texttt{SelectPercentile} con selección del 10\% de las características más relevantes según el test chi-cuadrado (El test chi-cuadrado es una prueba estadística que mide si dos cosas están relacionadas entre sí. En nuestro caso, mide qué tan relacionada está cada palabra con el hecho de que una noticia sea falsa o real). La Tabla \ref{tab:reduccion_dimensionalidad} resume el proceso de selección de características.
 
 \begin{table}[htbp]
 \centering
@@ -1113,6 +1066,7 @@ Se seleccionó el modelo \texttt{distilbert-base-multilingual-cased} por las sig
     \item \textbf{Eficiencia computacional:} Reducción del 40\% en parámetros respecto a BERT base manteniendo el 97\% del rendimiento \cite{sanh2019distilbert}
     \item \textbf{Arquitectura probada:} Basado en destilación de conocimiento de BERT \cite{devlin2018bert}
     \item \textbf{Balance óptimo:} Mejor relación rendimiento-eficiencia que TinyBERT \cite{jiao2019tinybert}
+    \item \textbf{Especialización en español:} A diferencia de TinyBERT que está diseñado principalmente para inglés, DistilBERT tiene una versión multilingüe específica que incluye entrenamiento extensivo en español, lo cual es crítico para esta investigación que maneja un corpus de español neutro multiregional
     \item \textbf{Disponibilidad:} Accesible a través de la librería Transformers de Hugging Face
 \end{itemize}
 
@@ -1520,37 +1474,6 @@ La selección del modelo óptimo se basará en una evaluación multi-criterio qu
 \label{tab:criterios_seleccion}
 \end{table}
 
-\subsection{Benchmarking Computacional}
-
-Para evaluar la eficiencia computacional, se estableció un protocolo de benchmarking estandarizado:
-
-\begin{table}[htbp]
-\centering
-\adjustbox{width=\textwidth,center}{%
-\small
-\begin{tabular}{|l|l|l|l|}
-\hline
-\rowcolor{UAMPurple!20}
-\textbf{Métrica} & \textbf{Unidad} & \textbf{Método de Medición} & \textbf{Contexto de Evaluación} \\
-\hline
-\rowcolor{LightGreen!30}
-Tiempo de inferencia & milisegundos/muestra & \begin{tabular}[t]{@{}l@{}}Promedio de 1000\\predicciones individuales\end{tabular} & \begin{tabular}[t]{@{}l@{}}Simulación de uso\\en producción\end{tabular} \\
-\hline
-\rowcolor{LightSkyBlue!30}
-Memoria RAM & MB & Pico de uso durante inferencia & \begin{tabular}[t]{@{}l@{}}Requisitos mínimos\\de hardware\end{tabular} \\
-\hline
-\rowcolor{LightCoral!30}
-Memoria GPU & MB & VRAM utilizada (si aplica) & \begin{tabular}[t]{@{}l@{}}Necesidades de\\aceleración GPU\end{tabular} \\
-\hline
-\rowcolor{LightGoldenrod!30}
-Throughput & muestras/segundo & \begin{tabular}[t]{@{}l@{}}Procesamiento en lotes\\de diferentes tamaños\end{tabular} & \begin{tabular}[t]{@{}l@{}}Escalabilidad del\\sistema\end{tabular} \\
-\hline
-\end{tabular}
-}
-\caption{Métricas de benchmarking computacional para evaluación de eficiencia.}
-\label{tab:benchmarking_computacional}
-\end{table}
-
 \subsection{Análisis de Matrices de Confusión}
 
 Se realizará un análisis detallado de las matrices de confusión para comprender el comportamiento específico de cada modelo:
@@ -1633,71 +1556,6 @@ El desarrollo de los algoritmos metaheurísticos se realizó en un entorno cloud
 }
 \caption{Especificaciones del entorno de desarrollo para algoritmos metaheurísticos.}
 \label{tab:entorno_metaheuristicos}
-\end{table}
-
-\subsection{Hardware Dedicado para Entrenamiento DistilBERT}
-
-Para el entrenamiento del modelo DistilBERT se utilizó un equipo de desarrollo dedicado con especificaciones de gaming adaptadas para deep learning. La Tabla \ref{tab:hardware_distilbert} presenta las especificaciones detalladas del sistema.
-
-\begin{table}[htbp]
-\centering
-\adjustbox{width=\textwidth,center}{%
-\footnotesize
-\begin{tabular}{|l|l|l|l|}
-\hline
-\rowcolor{UAMPurple!20}
-\textbf{Componente} & \textbf{Modelo/Especificación} & \textbf{Características Técnicas} & \textbf{Relevancia para Deep Learning} \\
-\hline
-\rowcolor{LightGreen!30}
-\textbf{Laptop} & Machenike L16 Pro & \begin{tabular}[t]{@{}l@{}}Gaming laptop optimizada\\Sistema de refrigeración avanzado\end{tabular} & \begin{tabular}[t]{@{}l@{}}Entrenamiento prolongado\\Estabilidad térmica\end{tabular} \\
-\hline
-\rowcolor{LightSkyBlue!30}
-\textbf{Procesador} & AMD Ryzen 7 7735H & \begin{tabular}[t]{@{}l@{}}8 núcleos, 16 hilos\\Frecuencia base: 3.2 GHz\\Boost: hasta 4.75 GHz\\Arquitectura: Zen 3+ (6nm)\\TDP: 35-54W configurable\end{tabular} & \begin{tabular}[t]{@{}l@{}}Paralelización de procesos\\Preprocesamiento de datos\\Gestión de memoria\end{tabular} \\
-\hline
-\rowcolor{LightCoral!30}
-\textbf{GPU} & NVIDIA GeForce RTX 4060 & \begin{tabular}[t]{@{}l@{}}Arquitectura: Ada Lovelace\\8GB GDDR6 VRAM\\3072 núcleos CUDA\\140W TGP (laptop)\\Ray Tracing 3ra gen\\DLSS 3 support\end{tabular} & \begin{tabular}[t]{@{}l@{}}Aceleración CUDA\\Mixed precision (FP16)\\Tensor cores para transformers\\Memoria suficiente para DistilBERT\end{tabular} \\
-\hline
-\rowcolor{LightGoldenrod!30}
-\textbf{Memoria RAM} & 16GB DDR5 & \begin{tabular}[t]{@{}l@{}}Velocidad: 4800 MHz\\Latencia optimizada\\Dual channel\end{tabular} & \begin{tabular}[t]{@{}l@{}}Carga de datasets grandes\\Batching eficiente\\Multitasking durante entrenamiento\end{tabular} \\
-\hline
-\rowcolor{LightPink!30}
-\textbf{Almacenamiento} & 1TB SSD NVMe & \begin{tabular}[t]{@{}l@{}}PCIe 4.0 interface\\Velocidades: 7000+ MB/s lectura\\Baja latencia de acceso\end{tabular} & \begin{tabular}[t]{@{}l@{}}Carga rápida de datos\\Checkpointing eficiente\\Almacenamiento de modelos\end{tabular} \\
-\hline
-\end{tabular}
-}
-\caption{Especificaciones detalladas del hardware utilizado para entrenamiento de DistilBERT.}
-\label{tab:hardware_distilbert}
-\end{table}
-
-\subsubsection{Optimizaciones Específicas del Hardware}
-
-El hardware seleccionado permitió implementar las siguientes optimizaciones:
-
-\begin{table}[htbp]
-\centering
-\adjustbox{width=0.9\textwidth,center}{%
-\small
-\begin{tabular}{|l|l|l|}
-\hline
-\rowcolor{UAMPurple!20}
-\textbf{Optimización} & \textbf{Implementación} & \textbf{Beneficio Obtenido} \\
-\hline
-\rowcolor{LightGreen!30}
-Mixed Precision Training & FP16 con automatic scaling & \begin{tabular}[t]{@{}l@{}}Reducción 50\% uso VRAM\\Aceleración 1.5-2x en entrenamiento\end{tabular} \\
-\hline
-\rowcolor{LightSkyBlue!30}
-CUDA Memory Management & \texttt{tf.config.experimental.memory\_growth} & Uso eficiente de 8GB VRAM \\
-\hline
-\rowcolor{LightCoral!30}
-Tensor Cores Utilization & Dimensiones múltiplos de 8 & \begin{tabular}[t]{@{}l@{}}Aceleración automática\\en operaciones matriciales\end{tabular} \\
-\hline
-\rowcolor{LightGoldenrod!30}
-Gradient Accumulation & Simulación de batch size mayor & \begin{tabular}[t]{@{}l@{}}Entrenamiento estable\\con memoria limitada\end{tabular} \\
-\hline
-\end{tabular}
-}
-\caption{Optimizaciones de hardware implementadas para maximizar eficiencia.}
-\label{tab:optimizaciones_hardware}
 \end{table}
 
 \subsection{Stack Tecnológico Completo}
@@ -1819,7 +1677,7 @@ Para facilitar la reproducción completa del estudio y su extensión por parte d
 \textbf{Artefacto} & \textbf{Formato} & \textbf{Contenido} & \textbf{Disponibilidad} \\
 \hline
 \rowcolor{LightGreen!30}
-\textbf{Código fuente completo} & GitHub repository & \begin{tabular}[t]{@{}l@{}}Scripts de entrenamiento\\Algoritmos implementados\\Pipeline completo\end{tabular} & Público (MIT License) \\
+\textbf{Código fuente completo} & GitHub repository & \begin{tabular}[t]{@{}l@{}}Scripts de entrenamiento\\Algoritmos implementados\\Flujo de datos completo\end{tabular} & Público (MIT License) \\
 \hline
 \rowcolor{LightSkyBlue!30}
 \textbf{Datasets procesados} & CSV + metadata & \begin{tabular}[t]{@{}l@{}}Corpus unificado\\División train/val/test\\Estadísticas descriptivas\end{tabular} & \begin{tabular}[t]{@{}l@{}}Público (respetando\\licencias originales)\end{tabular} \\
