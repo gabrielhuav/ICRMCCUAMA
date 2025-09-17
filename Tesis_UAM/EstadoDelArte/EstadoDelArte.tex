@@ -29,7 +29,7 @@ El proceso de selección aplicó diferentes criterios de relevancia temática, c
 
 Como resultado de este proceso , se identificaron 80 trabajos que constituyen el núcleo de esta revisión, organizados temáticamente para facilitar el análisis comparativo y la identificación de tendencias emergentes en el campo.
 
-\section{Panorama de la Investigación en Detección de Noticias Falsas}
+\section{Panorama de la Investigación en Detección de Noticias Falsas y Modelos de Lenguaje}
 \label{sec:panorama_investigacion}
 
 El campo de la detección automatizada de desinformación ha experimentado una evolución notable y acelerada, caracterizada por una transición paradigmática desde enfoques tradicionales basados en características estadísticas simples hacia sistemas sofisticados que integran múltiples modalidades, técnicas de optimización avanzadas, y conocimiento contextual profundo. Esta evolución refleja tanto los avances tecnológicos en inteligencia artificial como la creciente sofisticación de las técnicas de desinformación empleadas por actores maliciosos.
@@ -40,7 +40,7 @@ La progresión temporal del campo puede dividirse en tres fases principales: (1)
 
 La disponibilidad de conjuntos de datos de alta calidad constituye el fundamento sobre el cual se construye cualquier sistema de detección eficaz, y representa uno de los mayores desafíos en el desarrollo de tecnologías de detección de desinformación. En el contexto hispanohablante, esta necesidad se vuelve particularmente crítica debido a la relativa escasez de recursos comparado con el inglés, donde la mayoría de la investigación se ha concentrado históricamente.
 
-Los trabajos pioneros en esta dirección han establecido las bases metodológicas para la construcción y evaluación de corpus especializados, desarrollando protocolos de anotación, criterios de calidad, y marcos de evaluación que han influido significativamente en el desarrollo del campo. Acosta \cite{acosta2019construccion} desarrolló uno de los primeros marcos sistemáticos para la construcción de conjuntos de datos de noticias en español, estableciendo criterios rigurosos de calidad y protocolos de etiquetado manual que han influido significativamente en trabajos posteriores. Su metodología, centrada en la extracción automatizada seguida de verificación manual, demostró la viabilidad de crear recursos lingüísticos de gran escala para el español mientras mantenía estándares de calidad comparables a los corpus en inglés. El trabajo incluye un análisis detallado de las fuentes de noticias, criterios de selección temporal, y metodologías de validación cruzada entre anotadores.
+Los trabajos pioneros en esta dirección (ver tabla \ref{tab:articulos_metodologia}) han establecido las bases metodológicas para la construcción y evaluación de corpus especializados, desarrollando protocolos de anotación, criterios de calidad, y marcos de evaluación que han influido significativamente en el desarrollo del campo. Acosta \cite{acosta2019construccion} desarrolló uno de los primeros marcos sistemáticos para la construcción de conjuntos de datos de noticias en español, estableciendo criterios rigurosos de calidad y protocolos de etiquetado manual que han influido significativamente en trabajos posteriores. Su metodología, centrada en la extracción automatizada seguida de verificación manual, demostró la viabilidad de crear recursos lingüísticos de gran escala para el español mientras mantenía estándares de calidad comparables a los corpus en inglés. El trabajo incluye un análisis detallado de las fuentes de noticias, criterios de selección temporal, y metodologías de validación cruzada entre anotadores.
 
 El trabajo de Posadas-Durán et al. \cite{posadas2019detection} complementó estos esfuerzos al proponer un nuevo corpus específicamente diseñado para la detección de noticias falsas en español, incorporando características estilométricas innovadoras que capturan patrones lingüísticos sutiles pero significativos para la identificación de contenido desinformativo. Este enfoque pionero en el análisis del estilo de escritura como indicador de veracidad abrió nuevas líneas de investigación que han sido extensamente exploradas en trabajos posteriores. Su corpus incluye anotaciones multinivel que abarcan desde características superficiales del texto hasta análisis semánticos profundos, proporcionando un recurso invaluable para investigaciones subsequentes.
 
@@ -89,9 +89,16 @@ Esta base metodológica en constante evolución ha permitido el desarrollo de ap
 
 \subsection{Evolución de los Modelos de Lenguaje en Detección de Desinformación}
 
-La irrupción de los modelos de lenguaje pre-entrenados ha revolucionado completamente el panorama de la detección automatizada de noticias falsas, representando un cambio paradigmático fundamental en cómo conceptualizamos y abordamos la comprensión automatizada de texto. Esta transformación se caracteriza por una progresión clara y acelerada desde arquitecturas básicas hacia sistemas cada vez más sofisticados que integran conocimiento contextual profundo, capacidades de razonamiento complejo, y comprensión semántica avanzada.
+La irrupción de los modelos de lenguaje pre-entrenados ha revolucionado completamente el panorama de la detección automatizada de noticias falsas, representando un cambio paradigmático fundamental en cómo conceptualizamos y abordamos la comprensión automatizada de texto (ver figura \ref{fig:mapa_conceptual_3}). Esta transformación se caracteriza por una progresión clara y acelerada desde arquitecturas básicas hacia sistemas cada vez más sofisticados que integran conocimiento contextual profundo, capacidades de razonamiento complejo, y comprensión semántica avanzada.
 
 El punto de inflexión histórico llegó con la introducción de BERT \cite{devlin2018bert}, cuya arquitectura bidireccional revolucionaria permitió capturar dependencias contextuales de manera más efectiva que los enfoques secuenciales previos basados en LSTM o GRU. La capacidad fundamental de BERT para entender el contexto completo de una oración de manera simultánea, en lugar de procesarla secuencialmente de izquierda a derecha como los modelos anteriores, representó un avance fundamental que ha sido extensamente aplicado y adaptado en la detección de desinformación. Esta arquitectura bidireccional permite al modelo capturar relaciones complejas entre palabras que pueden estar distantes en el texto pero semánticamente relacionadas, una característica crucial para identificar inconsistencias sutiles y patrones desinformativos sofisticados.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Imagenes/mapaConceptual3.png}
+    \caption{Mapa Conceptual 3: Artículos relacionados que incorporan Modelos de Lenguaje.}
+    \label{fig:mapa_conceptual_3}
+\end{figure}
 
 La necesidad imperativa de modelos más eficientes computacionalmente, especialmente para aplicaciones en tiempo real y dispositivos con recursos limitados, llevó al desarrollo de variantes optimizadas como DistilBERT \cite{sanh2019distilbert}, que mantiene aproximadamente el $97\%$ del rendimiento de BERT con solo el $60\%$ de sus parámetros mediante técnicas innovadoras de destilación de conocimiento. Esta línea de investigación, que incluye también desarrollos como TinyBERT \cite{jiao2019tinybert}, ha demostrado ser crucial para aplicaciones prácticas de detección en tiempo real donde los recursos computacionales son limitados pero la precisión no puede comprometerse significativamente.
 
@@ -101,7 +108,7 @@ Blanco-Fernández et al. \cite{blanco2024enhancing} extendieron significativamen
 
 El surgimiento explosivo de modelos generativos de gran escala ha introducido dimensiones completamente nuevas y complejas al problema de detección. Brown et al. \cite{brown2020language} establecieron con GPT-3 las bases conceptuales y técnicas de los modelos de lenguaje de gran escala, cuyas capacidades avanzadas de generación de texto han complicado paradójicamente el problema de detección al crear contenido sintético cada vez más indistinguible del contenido humano auténtico. El equipo de Gemini \cite{gemini2023family} ha continuado esta evolución hacia modelos multimodales que pueden procesar y generar simultáneamente texto, imágenes y otros tipos de información, ampliando el alcance y la complejidad de los desafíos de detección.
 
-Esta evolución acelerada ha generado nuevos desafíos metodológicos y éticos que requieren enfoques innovadores. Su et al. \cite{su2023adapting} analizaron cómo la era de los modelos de lenguaje grandes requiere adaptaciones fundamentales en las técnicas de detección tradicionales, incluyendo nuevos marcos teóricos y metodológicos para abordar contenido generado artificialmente. Complementariamente, en otro de sus trabajos \cite{su2023fake} reveló que los detectores existentes muestran sesgos sistemáticos significativos contra texto generado por LLMs, planteando cuestiones fundamentales sobre la generalización, robustez, y equidad de los sistemas de detección contemporáneos.
+Esta evolución acelerada ha generado nuevos desafíos metodológicos y éticos que requieren enfoques innovadores (ver tabla \ref{tab:modelos_lenguaje}. Su et al. \cite{su2023adapting} analizaron cómo la era de los modelos de lenguaje grandes requiere adaptaciones fundamentales en las técnicas de detección tradicionales, incluyendo nuevos marcos teóricos y metodológicos para abordar contenido generado artificialmente. Complementariamente, en otro de sus trabajos \cite{su2023fake} reveló que los detectores existentes muestran sesgos sistemáticos significativos contra texto generado por LLMs, planteando cuestiones fundamentales sobre la generalización, robustez, y equidad de los sistemas de detección contemporáneos.
 
 El enfoque hacia la mejora continua y la adaptación de estos sistemas se refleja en trabajos innovadores como el de Shushkevich et al. \cite{shushkevich2023improving}, que exploraron la combinación sinérgica de modelos BERT con datos aumentados mediante ChatGPT, demostrando cómo los propios LLMs pueden utilizarse estratégicamente para mejorar la detección de contenido falso mediante técnicas de augmentación de datos y transferencia de conocimiento.
 
@@ -140,13 +147,20 @@ Una perspectiva particularmente interesante e importante emerge del trabajo de H
 
 \subsection{Técnicas de Optimización Metaheurística en Detección de Desinformación}
 
-La aplicación de algoritmos metaheurísticos a la detección de noticias falsas representa una forma innovadora entre dos áreas de investigación que han madurado de manera independiente pero complementaria durante las últimas décadas. Por un lado, las metaheurísticas han demostrado repetidamente su eficacia excepcional en la resolución de problemas de optimización complejos, no lineales, y multimodales en múltiples dominios científicos y de ingeniería. Por otro lado, la detección de desinformación enfrenta desafíos inherentes y crecientes de optimización, particularmente en la calibración precisa de hiperparámetros, la selección inteligente de características relevantes, y la optimización de arquitecturas de modelos complejos.
+La aplicación de algoritmos metaheurísticos a la detección de noticias falsas representa una forma innovadora entre dos áreas de investigación que han madurado de manera independiente pero complementaria durante las últimas décadas (ver figura \ref{fig:mapa_conceptual_4}). Por un lado, las metaheurísticas han demostrado repetidamente su eficacia excepcional en la resolución de problemas de optimización complejos, no lineales, y multimodales en múltiples dominios científicos y de ingeniería. Por otro lado, la detección de desinformación enfrenta desafíos inherentes y crecientes de optimización, particularmente en la calibración precisa de hiperparámetros, la selección inteligente de características relevantes, y la optimización de arquitecturas de modelos complejos.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Imagenes/mapaConceptual4.png}
+    \caption{Mapa Conceptual 4: Métodos de optimización y metaheurísticas aplicadas.}
+    \label{fig:mapa_conceptual_4}
+\end{figure}
 
 Una aproximación innovadora consiste en formular la detección de noticias falsas como un problema de optimización combinatorial. Esta perspectiva tiene ventajas tanto teóricas como prácticas, ya que permite aplicar décadas de investigación en optimización metaheurística a un problema social actual y relevante. 
 
 Aqil y Lahby \cite{aqil2021modeling} fueron pioneros en modelar esta tarea como un problema de planificación de tareas (Job Shop Scheduling). En su enfoque, diferentes algoritmos de procesamiento de texto deben ejecutarse de manera óptima considerando restricciones de tiempo, recursos computacionales y calidad de resultados. Los autores evaluaron tres metaheurísticas principales: Iterated Greedy, Algoritmos Genéticos y Artificial Bee Colony. Sus resultados mostraron que Iterated Greedy superaba consistentemente a las otras alternativas tanto en eficiencia computacional como en calidad de soluciones, estableciendo un precedente metodológico importante para investigaciones posteriores.
 
-En el ámbito específico y técnicamente desafiante de la detección de reseñas falsas, que comparte muchas características con la detección de noticias falsas, Deshai y Rao \cite{deshai2023unmasking} desarrollaron un enfoque innovador y técnicamente sofisticado que combina redes neuronales convolucionales (CNN) con Optimización por Enjambre de Partículas adaptativo (PSO). Su contribución principal radica en la demostración empírica y teórica de que PSO puede optimizar efectivamente los hiperparámetros complejos de redes CNN, superando métodos tradicionales como Grid Search y Random Search en términos de eficiencia computacional, convergencia, y calidad de resultados finales. El trabajo incluye un análisis detallado de la superficie de respuesta del espacio de hiperparámetros y demuestra cómo PSO puede navegar eficientemente estos espacios multidimensionales complejos.
+En el ámbito específico y técnicamente desafiante de la detección de reseñas falsas, que comparte muchas características con la detección de noticias falsas, Deshai y Rao \cite{deshai2023unmasking} (ver tabla \ref{tab:articulos_metaheuristicas}) desarrollaron un enfoque innovador y técnicamente sofisticado que combina redes neuronales convolucionales (CNN) con Optimización por Enjambre de Partículas adaptativo (PSO). Su contribución principal radica en la demostración empírica y teórica de que PSO puede optimizar efectivamente los hiperparámetros complejos de redes CNN, superando métodos tradicionales como Grid Search y Random Search en términos de eficiencia computacional, convergencia, y calidad de resultados finales. El trabajo incluye un análisis detallado de la superficie de respuesta del espacio de hiperparámetros y demuestra cómo PSO puede navegar eficientemente estos espacios multidimensionales complejos.
 
 Bacanin et al. \cite{bacanin2023benefits} investigaron la aplicación de metaheurísticas para optimizar hiperparámetros en modelos de aprendizaje profundo, enfocándose originalmente en predicción de cargas energéticas. Sus resultados con Algoritmos Genéticos Binarios, PSO y Recocido Simulado para modelos LSTM demuestran mejoras consistentes sobre métodos tradicionales de optimización. El trabajo presenta comparaciones rigurosas con técnicas baseline y análisis estadísticos que validan la efectividad de estas aproximaciones metaheurísticas, ofreciendo insights valiosos que se extienden más allá del dominio energético hacia aplicaciones de procesamiento de texto y análisis de sentimientos.
 
@@ -192,7 +206,7 @@ Finalmente, el trabajo de Yasmin et al. \cite{yasmin2024ensemble} avanza decidid
 \section{Algoritmos Metaheurísticos: Fundamentos Teóricos y Aplicaciones Prácticas}
 \label{sec:algoritmos_metaheuristicos}
 
-Los algoritmos metaheurísticos representan una clase fundamental y versátil de técnicas de optimización que han demostrado ser especialmente efectivas para resolver problemas complejos de optimización no lineal, no convexos, y multimodales, incluyendo específicamente la calibración de hiperparámetros en modelos de aprendizaje automático y la optimización de arquitecturas de redes neuronales. Esta sección presenta los fundamentos teóricos, principios operativos, y aplicaciones prácticas de los principales algoritmos metaheurísticos utilizados en la detección de noticias falsas y optimización de modelos.
+Los algoritmos metaheurísticos representan una clase fundamental y versátil de técnicas de optimización que han demostrado ser especialmente efectivas para resolver problemas complejos de optimización no lineal, no convexos, y multimodales, incluyendo específicamente la calibración de hiperparámetros en modelos de aprendizaje automático y la optimización de arquitecturas de redes neuronales (ver tabla \ref{tab:algoritmos_metaheuristicos}). Esta sección presenta los fundamentos teóricos, principios operativos, y aplicaciones prácticas de los principales algoritmos metaheurísticos utilizados en la detección de noticias falsas y optimización de modelos.
 
 \subsection{Algoritmos Genéticos (GA): Evolución Artificial para Optimización}
 
@@ -328,9 +342,9 @@ Keras Tuner facilita múltiples aspectos críticos del proceso de optimización:
     \item \textbf{Estrategias de búsqueda avanzadas}: Incluye implementaciones de Random Search, Hyperband, y Bayesian Optimization como opciones incorporadas
 \end{itemize}
 
-\subsection{Ventajas Sinérgicas: Modelos de Lenguaje y Herramientas de Optimización}
+\subsection{Beneficios combinados: Modelos de Lenguaje y Herramientas de Optimización}
 
-Los modelos de lenguaje modernos como DistilBERT, cuando se combinan inteligentemente con herramientas como Keras Tuner y algoritmos metaheurísticos, crean sistemas de optimización extraordinariamente poderosos que operan como sistemas inteligentes adaptativos:
+Los modelos de lenguaje modernos como DistilBERT, cuando se combinan inteligentemente con herramientas como Keras Tuner o algoritmos metaheurísticos (ver figura \ref{fig:mapa_conceptual_5}), crean sistemas de optimización extraordinariamente poderosos que operan como sistemas inteligentes adaptativos:
 
 \begin{itemize}
     \item \textbf{Representaciones semánticas complejas}: Los transformers pre-entrenados capturan representaciones semánticas sofisticadas del texto que van más allá de características superficiales, proporcionando una base rica para la detección de patrones desinformativos sutiles
@@ -340,39 +354,18 @@ Los modelos de lenguaje modernos como DistilBERT, cuando se combinan inteligente
     \item \textbf{Robustez estadística}: La optimización sistemática produce modelos más robustos que generalizan mejor a datos no vistos y mantienen rendimiento estable en diferentes contextos
 \end{itemize}
 
-En contraste notable, la búsqueda de parámetros en los algoritmos metaheurísticos se realiza de manera más tradicional y controlada, donde cada algoritmo implementa su propia estrategia específica de exploración del espacio de hiperparámetros sin depender de herramientas de automatización externas, proporcionando control granular sobre el proceso de optimización y permitiendo la incorporación de conocimiento específico del dominio.
-
-Esta combinación sinérgica es especialmente poderosa para la detección de noticias falsas, donde la optimización automática e inteligente puede representar la diferencia crítica entre un modelo que apenas funciona de manera marginal y uno que detecta desinformación con alta precisión y baja tasa de falsos positivos, aprovechando al máximo las capacidades semánticas avanzadas de los transformers pre-entrenados mientras mantiene eficiencia computacional práctica.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{Imagenes/mapaConceptual3.png}
-    \caption{Mapa Conceptual 3: Artículos que son revisiones o están relacionados al análisis de contenido y detección de fraude financiero.}
-    \label{fig:mapa_conceptual_3}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{Imagenes/mapaConceptual4.png}
-    \caption{Mapa Conceptual 4: Clasificación de artículos por enfoque metodológico.}
-    \label{fig:mapa_conceptual_4}
-\end{figure}
+En contraste notable, la búsqueda de parámetros en los algoritmos metaheurísticos se realiza de manera más tradicional y controlada, donde cada algoritmo implementa su propia estrategia específica de exploración del espacio de hiperparámetros sin depender de herramientas de automatización externas, proporcionando control granular sobre el proceso de optimización y permitiendo la incorporación de conocimiento específico del dominio (ver figura \ref{fig:mapa_conceptual_5}).
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{Imagenes/mapaConceptual5.png}
-    \caption{Mapa Conceptual 5: Métodos de optimización y metaheurísticas aplicadas.}
+    \caption{Mapa Conceptual 5: Clasificación de artículos por enfoque metodológico.}
     \label{fig:mapa_conceptual_5}
 \end{figure}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{Imagenes/mapaConceptual6.png}
-    \caption{Mapa Conceptual 6: Artículos relacionados que incorporan Modelos de Lenguaje.}
-    \label{fig:mapa_conceptual_6}
-\end{figure}
+Estos beneficios combinados son especialmente poderosos para la detección de noticias falsas, donde la optimización automática e inteligente puede representar la diferencia crítica entre un modelo que apenas funciona de manera marginal y uno que detecta desinformación con alta precisión y baja tasa de falsos positivos, aprovechando al máximo las capacidades semánticas avanzadas de los transformers pre-entrenados mientras mantiene eficiencia computacional práctica.
 
-\section{Análisis Temático Comprehensivo de la Literatura Relevante}
+\section{Análisis de Literatura Relevante}
 \label{sec:analisis_tematico}
 
 Más allá de la clasificación taxonómica superficial, resulta fundamental realizar un análisis en profundidad de las contribuciones clave de cada grupo temático identificado, examinando no solo qué se ha hecho, sino cómo se ha hecho, qué resultados se han obtenido, y cuáles son las implicaciones para la planeación y ejecución metodológica de esta tesis. Esta sección proporciona un análisis crítico y detallado de los aportes más significativos de cada categoría de investigación.
@@ -412,7 +405,7 @@ La aplicación de PSO para la detección de reseñas falsas \cite{deshai2023unma
 \subsection{Aplicación de Metaheurísticas por Tipo de Detección}
 \label{subsec:metaheuristicas_por_tipo}
 
-La literatura revisada revela patrones específicos y sistemáticos en la aplicación de algoritmos metaheurísticos según el tipo de detección, el dominio del problema, y las características específicas de los datos involucrados. Esta taxonomía detallada proporciona insights valiosos para la selección informada de técnicas de optimización para diferentes contextos de aplicación.
+La literatura revisada revela patrones específicos y sistemáticos en la aplicación de algoritmos metaheurísticos según el tipo de detección, el dominio del problema, y las características específicas de los datos involucrados (ver tabla \ref{tab:tab:metaheuristicas_deteccion}). Esta taxonomía detallada proporciona insights valiosos para la selección informada de técnicas de optimización para diferentes contextos de aplicación.
 
 \begin{table}[htbp]
 \centering
@@ -493,7 +486,14 @@ Pulido et al. \cite{pulido2020new} propusieron el marco innovador SISM (Social I
 
 \subsection{Detección de Fraude: Extensión Más Allá de las Noticias}
 
-La investigación en detección de fraude ha diversificado significativamente sus aplicaciones, extendiéndose más allá del dominio específico de noticias falsas hacia otros contextos de fraude digital que presentan características similares pero requieren adaptaciones específicas.
+La investigación en detección de fraude ha diversificado significativamente sus aplicaciones, extendiéndose más allá del dominio específico de noticias falsas hacia otros contextos de fraude digital que presentan características similares pero requieren adaptaciones específicas (ver figura \ref{fig:mapa_conceptual_6}).
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Imagenes/mapaConceptual6.png}
+    \caption{Mapa Conceptual 6: Artículos que son revisiones o están relacionados al análisis de contenido y detección de fraude digital.}
+    \label{fig:mapa_conceptual_6}
+\end{figure}
 
 En el ámbito laboral específicamente, Nasser et al. \cite{nasser2021online} desarrollaron sistemas basados en redes neuronales artificiales para detectar ofertas de trabajo fraudulentas, demostrando que las técnicas desarrolladas para detección de noticias falsas pueden transferirse efectivamente a otros dominios textuales. Paralelamente, Alvarez \cite{alvarez2021fraude} analizó comprehensivamente las nuevas modalidades de fraude laboral en la era digital latinoamericana, proporcionando contexto regional importante para entender las manifestaciones específicas del fraude en diferentes contextos socioeconómicos.
 
