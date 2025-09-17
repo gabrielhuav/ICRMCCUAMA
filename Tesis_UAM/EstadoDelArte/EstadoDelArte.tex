@@ -147,14 +147,7 @@ Una perspectiva particularmente interesante e importante emerge del trabajo de H
 
 \subsection{Técnicas de Optimización Metaheurística en Detección de Desinformación}
 
-La aplicación de algoritmos metaheurísticos a la detección de noticias falsas representa una forma innovadora entre dos áreas de investigación que han madurado de manera independiente pero complementaria durante las últimas décadas (ver figura \ref{fig:mapa_conceptual_4}). Por un lado, las metaheurísticas han demostrado repetidamente su eficacia excepcional en la resolución de problemas de optimización complejos, no lineales, y multimodales en múltiples dominios científicos y de ingeniería. Por otro lado, la detección de desinformación enfrenta desafíos inherentes y crecientes de optimización, particularmente en la calibración precisa de hiperparámetros, la selección inteligente de características relevantes, y la optimización de arquitecturas de modelos complejos.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{Imagenes/mapaConceptual4.png}
-    \caption{Mapa Conceptual 4: Métodos de optimización y metaheurísticas aplicadas.}
-    \label{fig:mapa_conceptual_4}
-\end{figure}
+La aplicación de algoritmos metaheurísticos a la detección de noticias falsas representa una forma innovadora entre dos áreas de investigación que han madurado de manera independiente pero complementaria durante las últimas décadas. Por un lado, las metaheurísticas han demostrado repetidamente su eficacia excepcional en la resolución de problemas de optimización complejos, no lineales, y multimodales en múltiples dominios científicos y de ingeniería. Por otro lado, la detección de desinformación enfrenta desafíos inherentes y crecientes de optimización, particularmente en la calibración precisa de hiperparámetros, la selección inteligente de características relevantes, y la optimización de arquitecturas de modelos complejos.
 
 Aqil y Lahby \cite{aqil2021modeling} fueron pioneros en modelar esta tarea como un problema de planificación de tareas (Job Shop Scheduling). En su enfoque, diferentes algoritmos de procesamiento de texto deben ejecutarse de manera óptima considerando restricciones de tiempo, recursos computacionales y calidad de resultados. Los autores evaluaron tres metaheurísticas principales: Iterated Greedy, Algoritmos Genéticos y Artificial Bee Colony. Sus resultados mostraron que Iterated Greedy superaba consistentemente a las otras alternativas tanto en eficiencia computacional como en calidad de soluciones, estableciendo un precedente metodológico importante para investigaciones posteriores.
 
@@ -199,7 +192,14 @@ Yildirim \cite{yildirim2023novel} propuso un enfoque multi-hilo que combina múl
 
 La diversificación creciente hacia enfoques híbridos se observa claramente en estudios metodológicamente innovadores como el de Yazdi et al. \cite{yazdi2020improving}, que combina técnicas de clustering K-Means con máquinas de vectores de soporte (SVM) para optimizar la selección de características en espacios de alta dimensionalidad. Su contribución demuestra que la integración inteligente de metaheurísticas con técnicas de preprocesamiento puede mejorar significativamente la eficacia de detectores convencionales, especialmente en escenarios donde la dimensionalidad de los datos presenta desafíos computacionales significativos.
 
-Finalmente, el trabajo de Yasmin et al. \cite{yasmin2024ensemble} avanza decididamente hacia la optimización, donde múltiples metaheurísticas colaboran de manera coordinada en la calibración simultánea de pesos, hiperparámetros, y arquitecturas de diferentes clasificadores base. Este enfoque representa la frontera actual más avanzada en la aplicación de optimización metaheurística a problemas de detección complejos y establece precedentes importantes para desarrollos futuros en el campo.
+Finalmente, el trabajo de Yasmin et al. \cite{yasmin2024ensemble} avanza decididamente hacia la optimización, donde múltiples metaheurísticas colaboran de manera coordinada en la calibración simultánea de pesos, hiperparámetros, y arquitecturas de diferentes clasificadores base. Estos enfoques representan la frontera actual más avanzada en la aplicación de optimización metaheurística a problemas de detección complejos y establece precedentes importantes para desarrollos futuros en el campo (ver figura \ref{fig:mapa_conceptual_4}).
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Imagenes/mapaConceptual4.png}
+    \caption{Mapa Conceptual 4: Métodos de optimización y metaheurísticas aplicadas.}
+    \label{fig:mapa_conceptual_4}
+\end{figure}
 
 \section{Algoritmos Metaheurísticos: Fundamentos Teóricos y Aplicaciones Prácticas}
 \label{sec:algoritmos_metaheuristicos}
@@ -476,7 +476,11 @@ Pulido et al. \cite{pulido2020new} propusieron el marco innovador SISM (Social I
 
 \subsection{Detección de Fraude: Extensión Más Allá de las Noticias}
 
-La investigación en detección de fraude ha diversificado significativamente sus aplicaciones, extendiéndose más allá del dominio específico de noticias falsas hacia otros contextos de fraude digital que presentan características similares pero requieren adaptaciones específicas (ver figura \ref{fig:mapa_conceptual_6}).
+La investigación en detección de fraude ha diversificado significativamente sus aplicaciones, extendiéndose más allá del dominio específico de noticias falsas hacia otros contextos de fraude digital que presentan características similares pero requieren adaptaciones específicas(ver figura \ref{fig:mapa_conceptual_6}).
+
+En el ámbito laboral específicamente, Nasser et al. \cite{nasser2021online} desarrollaron sistemas basados en redes neuronales artificiales para detectar ofertas de trabajo fraudulentas, demostrando que las técnicas desarrolladas para detección de noticias falsas pueden transferirse efectivamente a otros dominios textuales. Paralelamente, Alvarez \cite{alvarez2021fraude} analizó las nuevas modalidades de fraude laboral en la era digital latinoamericana, proporcionando contexto regional importante para entender las manifestaciones específicas del fraude en diferentes contextos socioeconómicos.
+
+En el sector financiero, la investigación de Hidayattullah et al. \cite{hidayattullah2020financial} demostró empíricamente la efectividad de combinar aprendizaje automático con optimización metaheurística para detectar fraudes en estados financieros, estableciendo precedentes metodológicos importantes. Cao et al. \cite{cao2020corporate} establecieron conexiones innovadoras entre indicadores de empleo corporativo y riesgo de fraude, proporcionando herramientas valiosas para auditores y reguladores financieros.
 
 \begin{figure}[h!]
     \centering
@@ -485,15 +489,9 @@ La investigación en detección de fraude ha diversificado significativamente su
     \label{fig:mapa_conceptual_6}
 \end{figure}
 
-En el ámbito laboral específicamente, Nasser et al. \cite{nasser2021online} desarrollaron sistemas basados en redes neuronales artificiales para detectar ofertas de trabajo fraudulentas, demostrando que las técnicas desarrolladas para detección de noticias falsas pueden transferirse efectivamente a otros dominios textuales. Paralelamente, Alvarez \cite{alvarez2021fraude} analizó las nuevas modalidades de fraude laboral en la era digital latinoamericana, proporcionando contexto regional importante para entender las manifestaciones específicas del fraude en diferentes contextos socioeconómicos.
-
-En el sector financiero, la investigación de Hidayattullah et al. \cite{hidayattullah2020financial} demostró empíricamente la efectividad de combinar aprendizaje automático con optimización metaheurística para detectar fraudes en estados financieros, estableciendo precedentes metodológicos importantes. Cao et al. \cite{cao2020corporate} establecieron conexiones innovadoras entre indicadores de empleo corporativo y riesgo de fraude, proporcionando herramientas valiosas para auditores y reguladores financieros.
-
 \section{Síntesis y Perspectivas Futuras}
 \label{sec:sintesis_perspectivas}
 
-La revisión detallada de la literatura revela una evolución acelerada en las aproximaciones para la detección de noticias falsas y fraude digital. Desde los primeros enfoques relativamente simples basados en características lingüísticas superficiales hasta los modernos sistemas sofisticados basados en transformers y LLMs, el campo ha experimentado avances extraordinarios en términos de precisión, escalabilidad, y aplicabilidad práctica.
-
-Los desafíos principales identificados a través de esta revisión incluyen: (1) la necesidad imperativa de mayor cantidad de datos etiquetados de alta calidad en español, (2) la adaptación cultural y lingüística de modelos a contextos específicos del mundo hispanohablante, (3) la optimización eficiente de hiperparámetros en modelos cada vez más complejos, y (4) la integración inteligente de información multimodal y conocimiento externo estructurado.
+La revisión detallada de la literatura revela una evolución acelerada en las aproximaciones para la detección de noticias falsas y fraude digital. Los desafíos principales identificados a través de esta revisión incluyen: (1) la necesidad imperativa de mayor cantidad de datos etiquetados de alta calidad en español, (2) la adaptación cultural y lingüística de modelos a contextos específicos del mundo hispanohablante, (3) la optimización eficiente de hiperparámetros en modelos cada vez más complejos, y (4) la integración inteligente de información multimodal y conocimiento externo estructurado.
 
 La organización temática presentada en este capítulo proporciona un marco conceptual robusto para entender las diferentes dimensiones del problema de detección de desinformación y justifica empíricamente la aproximación metodológica híbrida adoptada en esta investigación, que combina modelos de lenguaje con algoritmos metaheurísticos para lograr rendimiento superior en la detección de contenido desinformativo en español.
