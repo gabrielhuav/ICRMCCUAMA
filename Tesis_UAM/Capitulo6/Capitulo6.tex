@@ -47,9 +47,9 @@ El segundo prototipo, que representa la culminación del proyecto, implementa el
 \subsection{Componentes del Modelo}
 Este modelo se guarda en el formato estándar de Hugging Face en la carpeta \texttt{app/modelo\_final\_distilbert\_es/}. Este formato encapsula de manera eficiente todos los componentes necesarios:
 \begin{itemize}
-    \item \texttt{tf\_model.h5:} Contiene la arquitectura y los **pesos del modelo** ajustados durante el fine-tuning.
+    \item \texttt{tf\_model.h5:} Contiene la arquitectura y los \textbf{pesos del modelo} ajustados durante el fine-tuning.
     \item \texttt{config.json:} Archivo de configuración que describe la arquitectura del modelo.
-    \item \texttt{tokenizer.json, vocab.txt, etc.:} Archivos que definen el **tokenizador** exacto, garantizando un preprocesamiento consistente.
+    \item \texttt{tokenizer.json, vocab.txt, etc.:} Archivos que definen el \textbf{tokenizador} exacto, garantizando un preprocesamiento consistente.
 \end{itemize}
 
 \subsection{Flujo de Inferencia}
@@ -65,7 +65,7 @@ El proceso de inferencia con el modelo Transformer es notablemente más directo 
 Ambos prototipos comparten una interfaz de usuario común, definida en el archivo \texttt{index.html}, que permite una interacción fluida y proporciona un análisis detallado. A continuación se muestran capturas de pantalla de la aplicación final en funcionamiento.
 
 \subsection{Caso de Uso 1: Detección de una Noticia Real}
-En la Figura \ref{fig:app_real}, se introduce la URL de una noticia de una fuente verificada. La aplicación extrae correctamente el contenido y, basándose en el análisis del modelo Transformer, emite un veredicto de **REAL** con una alta confianza, demostrando la capacidad del sistema para identificar texto legítimo.
+En la Figura \ref{fig:app_real}, se introduce la URL de una noticia de una fuente verificada. La aplicación extrae correctamente el contenido y, basándose en el análisis del modelo Transformer, emite un veredicto de \textbf{REAL} con una alta confianza, demostrando la capacidad del sistema para identificar texto legítimo.
 
 \begin{figure}[htbp]
     \centering
@@ -75,7 +75,7 @@ En la Figura \ref{fig:app_real}, se introduce la URL de una noticia de una fuent
 \end{figure}
 
 \subsection{Caso de Uso 2: Detección de una Página con Contenido Engañoso}
-La Figura \ref{fig:app_falsa1} muestra el análisis de una URL con contenido engañoso. El modelo de lenguaje identifica patrones en la redacción (exageraciones, estilo, etc.) que son inconsistentes con el periodismo real y la clasifica correctamente como **FALSA** con un alto grado de confianza.
+La Figura \ref{fig:app_falsa1} muestra el análisis de una URL con contenido engañoso. El modelo de lenguaje identifica patrones en la redacción (exageraciones, estilo, etc.) que son inconsistentes con el periodismo real y la clasifica correctamente como \textbf{FALSA} con un alto grado de confianza.
 
 \begin{figure}[htbp]
     \centering
@@ -85,7 +85,7 @@ La Figura \ref{fig:app_falsa1} muestra el análisis de una URL con contenido eng
 \end{figure}
 
 \subsection{Caso de Uso 3: Detección de una Página Fraudulenta}
-Finalmente, la Figura \ref{fig:app_falsa2} ilustra un caso donde se introduce una URL de una página de inversión fraudulenta. El modelo, habiendo sido entrenado con ejemplos similares, detecta el lenguaje de urgencia y las promesas poco realistas, emitiendo un veredicto de **FALSO** con una confianza casi del 100\%, demostrando su utilidad como herramienta de prevención de fraude digital.
+Finalmente, la Figura \ref{fig:app_falsa2} ilustra un caso donde se introduce una URL de una página de inversión fraudulenta. El modelo, habiendo sido entrenado con ejemplos similares, detecta el lenguaje de urgencia y las promesas poco realistas, emitiendo un veredicto de \textbf{FALSO} con una confianza casi del 100\%, demostrando su utilidad como herramienta de prevención de fraude digital.
 
 \begin{figure}[htbp]
     \centering

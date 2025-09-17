@@ -1,14 +1,14 @@
 %!TEX root = ../ICR.tex
 \chapter{Resultados y Evaluación Comparativa \label{cap:AnalisisDeResultados}}
 
-Este capítulo presenta el análisis integral de los resultados obtenidos mediante la metodología unificada desarrollada para la detección de noticias falsas en español. Los resultados se organizan siguiendo la estructura evolutiva de la metodología: comenzando con la validación del pipeline de datos común, continuando con la evaluación de los modelos clásicos optimizados con algoritmos metaheurísticos (que establecen la línea base), progresando hacia los resultados del modelo Transformer DistilBERT, y culminando con una evaluación comparativa integral que justifica la selección del modelo final.
+Este capítulo presenta el análisis integral de los resultados obtenidos mediante la metodología unificada desarrollada para la detección de noticias falsas en español. Los resultados se organizan siguiendo la estructura evolutiva de la metodología: comenzando con la validación del flujo de datos de datos común, continuando con la evaluación de los modelos clásicos optimizados con algoritmos metaheurísticos (que establecen la línea base), progresando hacia los resultados del modelo Transformer DistilBERT, y culminando con una evaluación comparativa integral que justifica la selección del modelo final.
 
 El análisis estadístico se fundamenta en un marco de evaluación unificado que emplea las métricas definidas en la metodología: Exactitud (Accuracy), Precisión (Precision), Exhaustividad (Recall), F1-Score y Especificidad. \textbf{Criterio fundamental:} Todos los experimentos se ejecutaron bajo condiciones experimentales idénticas para garantizar comparabilidad objetiva: mismo corpus, misma división de datos (70\% entrenamiento, 10\% validación, 20\% prueba), mismas semillas aleatorias, y mismo protocolo de validación cruzada estratificada.
 
-\section{Validación del Pipeline de Datos y Representaciones}
+\section{Validación del Flujo de Datos y Representaciones}
 \label{sec:validacion_pipeline_datos}
 
-Antes de proceder con la evaluación de modelos, se validó la robustez del pipeline de procesamiento de datos desarrollado, que constituye la base común para ambos enfoques de modelado.
+Antes de proceder con la evaluación de modelos, se validó la robustez del flujo de datos de procesamiento de datos desarrollado, que constituye la base común para ambos enfoques de modelado.
 
 \subsection{Características del Corpus Unificado Final}
 
@@ -558,13 +558,13 @@ Estas visualizaciones proporcionan evidencia gráfica que respalda las conclusio
 \subsection{Contextualización con Investigación Publicada}
 \label{subsec:contextualizacion_investigacion}
 
-Los hallazgos de esta investigación fueron formalizados y publicados en el capítulo de libro ``Calibración de hiper-parámetros en algoritmos metaheurísticos para la detección de fraude digital'' \cite{hurtado2024calibracion}. Es importante destacar que en la versión publicada, la **Búsqueda Dispersa (SS) obtuvo resultados iguales o ligeramente superiores al Algoritmo Genético**, confirmando la competitividad de ambos enfoques.
+Los hallazgos de esta investigación fueron formalizados y publicados en el capítulo de libro ``Calibración de hiper-parámetros en algoritmos metaheurísticos para la detección de fraude digital'' \cite{hurtado2024calibracion}. Es importante destacar que en la versión publicada, la \textbf{Búsqueda Dispersa (SS) obtuvo resultados iguales o ligeramente superiores al Algoritmo Genético}, confirmando la competitividad de ambos enfoques.
 
-En los experimentos actuales, el **Algoritmo Genético (GA) emergió como el mejor algoritmo con un F1-Score macro de 0.68 y exactitud del 71.06\%**. Esta ligera variación en el ranking se atribuye a diferencias en la configuración específica de hiperparámetros y semillas aleatorias utilizadas en experimentos independientes.
+En los experimentos actuales, el \textbf{Algoritmo Genético (GA) emergió como el mejor algoritmo con un F1-Score macro de 0.68 y exactitud del 71.06\%}. Esta ligera variación en el ranking se atribuye a diferencias en la configuración específica de hiperparámetros y semillas aleatorias utilizadas en experimentos independientes.
 
 \subsubsection{Comparación con Investigación Internacional}
 
-Los resultados obtenidos son consistentes con investigación internacional reciente. Yildirim \cite{yildirim2023novel} realizó pruebas exhaustivas con múltiples algoritmos metaheurísticos, alcanzando exactitud del 78.8\% con SVM optimizado. Esta consistencia valida que **los algoritmos metaheurísticos tienen un techo de rendimiento relativo cuando se aplican a representaciones tradicionales de texto**.
+Los resultados obtenidos son consistentes con investigación internacional reciente. Yildirim \cite{yildirim2023novel} realizó pruebas exhaustivas con múltiples algoritmos metaheurísticos, alcanzando exactitud del 78.8\% con SVM optimizado. Esta consistencia valida que \textbf{los algoritmos metaheurísticos tienen un techo de rendimiento relativo cuando se aplican a representaciones tradicionales de texto}.
 
 \subsection{Análisis Comparativo de Resultados}
 \label{subsec:analisis_comparativo}
@@ -654,7 +654,7 @@ El análisis exhaustivo reveló limitaciones críticas que justifican la transic
 
 \subsubsection{Evidencia de Superioridad de Modelos de Lenguaje}
 
-La investigación de Blanco-Fernández et al. \cite{blanco2024enhancing} demuestra que modelos BERT y RoBERTa para detección de noticias falsas en español **alcanzan exactitudes de más del 90\%, llegando hasta 98\%**. Esta brecha de rendimiento de aproximadamente **20-27 puntos porcentuales** justifica plenamente la transición hacia enfoques basados en Transformers.
+La investigación de Blanco-Fernández et al. \cite{blanco2024enhancing} demuestra que modelos BERT y RoBERTa para detección de noticias falsas en español \textbf{alcanzan exactitudes de más del 90\%, llegando hasta 98\%}. Esta brecha de rendimiento de aproximadamente \textbf{20-27 puntos porcentuales} justifica plenamente la transición hacia enfoques basados en Transformers.
 
 \begin{table}[htbp]
 \centering
@@ -813,7 +813,7 @@ La configuración final implementó una división específica para maximizar el 
 
 \subsubsection{Estrategia de Regularización Anti-Overfitting}
 
-El principal desafío durante el desarrollo fue el **overfitting prematuro**, que se manifestó consistentemente en los primeros 15 experimentos. La configuración final implementó múltiples técnicas de regularización:
+El principal desafío durante el desarrollo fue el \textbf{overfitting prematuro}, que se manifestó consistentemente en los primeros 15 experimentos. La configuración final implementó múltiples técnicas de regularización:
 
 \begin{table}[htbp]
 \centering
@@ -825,7 +825,7 @@ El principal desafío durante el desarrollo fue el **overfitting prematuro**, qu
 \textbf{Técnica de Regularización} & \textbf{Valor/Configuración} & \textbf{Objetivo} & \textbf{Impacto} \\
 \hline
 \rowcolor{LightGreen!30}
-\textbf{Learning Rate Ultra-Bajo} & 2e-06 & Convergencia gradual & Reducción overfitting \\
+\textbf{Learning Rate (Tasa de aprendizaje) Ultra-Baja} & 2e-06 & Convergencia gradual & Reducción overfitting \\
 \hline
 \rowcolor{LightBlue!30}
 \textbf{Dropout Agresivo} & 0.7 & Prevenir co-adaptación & Generalización \\
@@ -834,7 +834,7 @@ El principal desafío durante el desarrollo fue el **overfitting prematuro**, qu
 \textbf{Regularización L2} & 0.05 & Penalización de pesos & Suavizado del modelo \\
 \hline
 \rowcolor{LightGoldenrod!30}
-\textbf{Batch Size Pequeño} & 4 & Mayor ruido en gradientes & Regularización implícita \\
+\textbf{Batch Size (Tamaño de lote) Pequeño} & 4 & Mayor ruido en gradientes & Regularización implícita \\
 \hline
 \rowcolor{LightPink!30}
 \textbf{Noise Injection} & 0.03 & Perturbación controlada & Robustez del modelo \\
@@ -856,13 +856,13 @@ El principal desafío durante el desarrollo fue el **overfitting prematuro**, qu
 
 \subsubsection{Metodología de Tuning Automatizado}
 
-La optimización se realizó mediante **Keras Tuner** con búsqueda aleatoria sobre un espacio de hiperparámetros cuidadosamente diseñado:
+La optimización se realizó mediante \textbf{Keras Tuner} con búsqueda aleatoria sobre un espacio de hiperparámetros cuidadosamente diseñado:
 
 \begin{itemize}
     \item \textbf{Learning rates explorados:} [5e-6, 2e-6, 1e-6, 8e-7]
     \item \textbf{Dropout rates evaluados:} [0.4, 0.5, 0.6, 0.7]
     \item \textbf{Regularización L2:} [0.05, 0.1, 0.2, 0.5]
-    \item \textbf{Batch sizes probados:} [4, 6, 8]
+    \item \textbf{Batch sizes (número de ejemplos por lote) probados:} [4, 6, 8]
     \item \textbf{Configuraciones totales:} 192 combinaciones posibles
     \item \textbf{Trials ejecutados:} 4 (limitado por recursos computacionales)
 \end{itemize}
@@ -884,7 +884,7 @@ La búsqueda automatizada identificó la siguiente configuración como óptima:
 
 \subsubsection{Evolución del Entrenamiento}
 
-El modelo final se entrenó durante 21 épocas antes de que el mecanismo de early stopping detuviera el proceso. La **época 13 fue identificada como el punto óptimo**, marcando el momento antes del inicio del overfitting:
+El modelo final se entrenó durante 21 épocas antes de que el mecanismo de early stopping detuviera el proceso. La \textbf{época 13 fue identificada como el punto óptimo}, marcando el momento antes del inicio del overfitting:
 
 \begin{figure}[h!]
     \centering
@@ -895,7 +895,7 @@ El modelo final se entrenó durante 21 épocas antes de que el mecanismo de earl
 
 \subsubsection{Análisis del Gap de Generalización}
 
-La métrica clave para evaluar el overfitting fue el **gap de pérdida** (diferencia entre pérdida de validación y entrenamiento):
+La métrica clave para evaluar el overfitting fue el \textbf{gap de pérdida} (diferencia entre pérdida de validación y entrenamiento):
 
 \begin{itemize}
     \item \textbf{Épocas 1-9:} Gap < 0.02 (convergencia excelente)
