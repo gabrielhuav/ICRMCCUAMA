@@ -12,7 +12,7 @@ Antes de proceder con la evaluación de modelos, se validó la robustez del fluj
 
 \subsection{Características del Corpus Unificado Final}
 
-El corpus utilizado para todos los experimentos presenta las siguientes características tras el proceso de unificación y limpieza: 
+El corpus utilizado para todos los experimentos presentaba inicialmente las siguientes características tras el proceso de unificación y limpieza:
 
 \begin{table}[htbp]
 \centering
@@ -53,11 +53,14 @@ Como se detalló en capitulos anteriores, la representación textual se basó en
     \item \textbf{Reducción de dimensionalidad:} Selección del 10\% más discriminativo (500 características)
     \item \textbf{Criterio de selección:} Test chi-cuadrado para identificar características más relevantes
     \item \textbf{Representación final:} Matriz dispersa de 500 dimensiones por documento
+    \item \textbf{Trade-off (compensación) identificado:} La selección de más características tiende a mejorar las métricas de clasificación pero deteriora significativamente el rendimiento computacional de los algoritmos metaheurísticos
 \end{itemize}
+
+\textbf{Justificación de la configuración:} La selección de 500 características (10\% del vocabulario) representa un balance óptimo entre capacidad discriminativa y eficiencia computacional. Experimentos preliminares con más de 1,000 características mostraron mejoras marginales en exactitud (<2\%) a costa de incrementos importantes en tiempo de convergencia (>300\%), haciendo inviable la optimización metaheurística en tiempos razonables.
 
 \subsubsection{Arquitectura del Clasificador}
 
-Todos los algoritmos metaheurísticos optimizaron un clasificador logístico binario con las siguientes características:
+Todos los algoritmos metaheurísticos, detallados en capitulos anteriores, optimizaron un clasificador logístico binario con las siguientes características:
 
 \begin{itemize}
     \item \textbf{Función de activación:} Sigmoide para clasificación binaria
@@ -68,7 +71,7 @@ Todos los algoritmos metaheurísticos optimizaron un clasificador logístico bin
 \subsection{Implementación y Configuración de Algoritmos Metaheurísticos}
 \label{subsec:implementacion_algoritmos}
 
-La Tabla \ref{tab:configuracion_algoritmos_metaheuristicos} presenta la configuración detallada de parámetros para cada algoritmo metaheurístico implementado. Estos valores fueron establecidos siguiendo las mejores prácticas reportadas en la literatura y ajustados experimentalmente para el dominio específico de detección de noticias falsas.
+La tabla \ref{tab:configuracion_algoritmos_metaheuristicos} (ver tabla \ref{tab:configuracion_algoritmos_metaheuristicos}) presenta la configuración detallada de parámetros para cada algoritmo metaheurístico implementado. Estos valores fueron establecidos siguiendo las mejores prácticas reportadas en la literatura y ajustados experimentalmente para el dominio específico de detección de noticias falsas.
 
 \begin{table}[htbp]
 \centering
@@ -122,7 +125,7 @@ Los parámetros establecidos se fundamentan en:
 
 \subsubsection{Función de Evaluación Común}
 
-Todos los algoritmos metaheurísticos utilizan una función de evaluación unificada que implementa un clasificador logístico binario para garantizar comparabilidad directa entre enfoques. A continuación se presenta el pseudocódigo detallado de la función implementada:
+Todos los algoritmos metaheurísticos utilizan una función de evaluación unificada que implementa un clasificador logístico binario para garantizar comparabilidad directa entre enfoques. A continuación se presenta el pseudocódigo detallado de la función implementada (ver tabla \ref{tab:funcion_evaluacion}):
 
 \begin{table}[htbp]
 \centering
@@ -159,7 +162,7 @@ Todos los algoritmos metaheurísticos utilizan una función de evaluación unifi
 
 \subsubsection{Multi-Start Simulated Annealing (MSA)}
 
-El algoritmo MSA implementa una estrategia de multiarranque que ejecuta múltiples instancias de recocido simulado desde diferentes puntos de inicio, aprovechando la aceptación probabilística para escapar de óptimos locales. A continuación se presenta el pseudocódigo detallado del algoritmo implementado:
+El algoritmo MSA implementa una estrategia de multiarranque que ejecuta múltiples instancias de recocido simulado desde diferentes puntos de inicio, aprovechando la aceptación probabilística para escapar de óptimos locales. En la tabla \ref{tab:pseudocodigo_msa} (ver tabla \ref{tab:pseudocodigo_msa}) se presenta el pseudocódigo detallado del algoritmo implementado.
 
 \begin{table}[htbp]
 \centering
@@ -219,7 +222,7 @@ El algoritmo MSA implementa una estrategia de multiarranque que ejecuta múltipl
 
 \subsubsection{Scatter Search (SS)}
 
-El algoritmo SS utiliza una estrategia de combinación sistemática que mantiene un conjunto de referencia con las mejores soluciones y genera nuevas soluciones mediante cruces estructurados. A continuación se presenta el pseudocódigo detallado del algoritmo implementado:
+El algoritmo SS utiliza una estrategia de combinación sistemática que mantiene un conjunto de referencia con las mejores soluciones y genera nuevas soluciones mediante cruces estructurados. En la tabla \ref{tab:pseudocodigo_ss} (ver tabla \ref{tab:pseudocodigo_ss}) se presenta el pseudocódigo detallado del algoritmo implementado.
 
 \begin{table}[htbp]
 \centering
@@ -273,7 +276,7 @@ El algoritmo SS utiliza una estrategia de combinación sistemática que mantiene
 
 \subsubsection{Genetic Algorithm (GA)}
 
-El algoritmo GA emplea una estrategia evolutiva basada en principios darwinianos, utilizando selección por torneo, cruce de un punto y mutación para evolucionar una población hacia mejores soluciones. A continuación se presenta el pseudocódigo detallado del algoritmo implementado:
+El algoritmo GA emplea una estrategia evolutiva basada en principios darwinianos, utilizando selección por torneo, cruce de un punto y mutación para evolucionar una población hacia mejores soluciones. En la tabla \ref{tab:pseudocodigo_ga} (ver tabla \ref{tab:pseudocodigo_ga}) se presenta el pseudocódigo detallado del algoritmo implementado.
 
 \begin{table}[htbp]
 \centering
@@ -322,7 +325,7 @@ El algoritmo GA emplea una estrategia evolutiva basada en principios darwinianos
 
 \subsubsection{Variable Neighborhood Search (VNS)}
 
-El algoritmo VNS implementa una búsqueda sistemática que cambia de estructura de vecindario cuando no encuentra mejoras, reiniciando a la primera vecindad tras cada mejora encontrada. A continuación se presenta el pseudocódigo detallado del algoritmo implementado:
+El algoritmo VNS implementa una búsqueda sistemática que cambia de estructura de vecindario cuando no encuentra mejoras, reiniciando a la primera vecindad tras cada mejora encontrada. En la tabla \ref{tab:pseudocodigo_vns} (ver tabla \ref{tab:pseudocodigo_vns}) se presenta el pseudocódigo detallado del algoritmo implementado.
 
 \begin{table}[htbp]
 \centering
@@ -370,7 +373,7 @@ El algoritmo VNS implementa una búsqueda sistemática que cambia de estructura 
 
 \subsubsection{Particle Swarm Optimization (PSO)}
 
-El algoritmo PSO simula el comportamiento de enjambres mediante partículas que ajustan su velocidad basándose en su mejor posición personal y la mejor posición global del enjambre. A continuación se presenta el pseudocódigo detallado del algoritmo implementado:
+El algoritmo PSO simula el comportamiento de enjambres mediante partículas que ajustan su velocidad basándose en su mejor posición personal y la mejor posición global del enjambre. En la tabla \ref{tab:pseudocodigo_pso} (ver tabla \ref{tab:pseudocodigo_pso}) se presenta el pseudocódigo detallado del algoritmo implementado.
 
 \begin{table}[htbp]
 \centering
@@ -430,7 +433,7 @@ Esta sección presenta las visualizaciones generadas por cada algoritmo metaheur
 
 \subsubsection{Recocido Multiarranque (MSA) - Visualizaciones}
 
-El algoritmo MSA presenta un comportamiento de convergencia caracterizado por múltiples puntos de inicio y aceptación probabilística de soluciones. Su estrategia de multiarranque permite explorar diferentes regiones del espacio de búsqueda, mientras que el esquema de enfriamiento gradual facilita la transición entre exploración y explotación. A continuación se presentan las visualizaciones que documentan su comportamiento:
+El algoritmo MSA presenta un comportamiento de convergencia caracterizado por múltiples puntos de inicio y aceptación probabilística de soluciones. Su estrategia de multiarranque permite explorar diferentes regiones del espacio de búsqueda, mientras que el esquema de enfriamiento gradual facilita la transición entre exploración y explotación. A continuación se presentan algunas visualizaciones que documentan su comportamiento:
 
 \begin{figure}[h!]
     \centering
@@ -470,12 +473,12 @@ El algoritmo SS implementa una estrategia de combinación sistemática que manti
 
 \subsubsection{Algoritmo Genético (GA) - Visualizaciones}
 
-El algoritmo GA exhibe un proceso evolutivo robusto basado en principios darwinianos, donde la selección por torneo, el cruce de un punto y la mutación controlada trabajan sinérgicamente para evolucionar la población hacia mejores soluciones. Su capacidad para mantener diversidad genética mientras converge gradualmente hacia óptimos se refleja claramente en las siguientes visualizaciones:
+El algoritmo GA exhibe un proceso evolutivo robusto basado en principios darwinianos, donde la selección por torneo, el cruce de un punto y la mutación controlada trabajan en conjunto para evolucionar la población hacia mejores soluciones. Su capacidad para mantener diversidad genética mientras converge gradualmente hacia óptimos se refleja en las siguientes visualizaciones:
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{Imagenes/convergencia_algoritmo_genético.png}
-    \caption{Evolución darwiniana del algoritmo GA a lo largo de 20 generaciones, evidenciando progreso sostenido desde 0.6198 hasta 0.7090 con hitos evolutivos significativos.}
+    \caption{Evolución darwiniana del algoritmo GA a lo largo de 20 generaciones, evidenciando progreso sostenido desde 0.6198 hasta 0.7090 con logros evolutivos significativos.}
     \label{fig:convergencia_ga}
 \end{figure}
 
@@ -490,7 +493,7 @@ El algoritmo GA exhibe un proceso evolutivo robusto basado en principios darwini
 
 \subsubsection{Búsqueda en Vecindades Variables (VNS) - Visualizaciones}
 
-El algoritmo VNS demuestra una estrategia de búsqueda sistemática que cambia dinámicamente entre diferentes estructuras de vecindario. Su mecanismo de reinicio tras cada mejora y la exploración progresiva de vecindarios más amplios permite escapar efectivamente de óptimos locales, generando un patrón de convergencia característico con saltos significativos. Las visualizaciones siguientes capturan este comportamiento distintivo:
+El algoritmo VNS demuestra una estrategia de búsqueda sistemática que cambia dinámicamente entre diferentes estructuras de vecindario. Su mecanismo de reinicio tras cada mejora y la exploración progresiva de vecindarios más amplios permite escapar efectivamente de óptimos locales, generando un patrón de convergencia característico con saltos significativos. Las visualizaciones siguientes capturan este distintivo algoritmo:
 
 \begin{figure}[h!]
     \centering
@@ -540,14 +543,14 @@ Las matrices de confusión confirman los patrones de rendimiento identificados:
     \item \textbf{PSO:} Comportamiento inaceptable para aplicaciones prácticas
 \end{itemize}
 
-Estas visualizaciones proporcionan evidencia gráfica que respalda las conclusiones cuantitativas del análisis, facilitando la comprensión del comportamiento específico de cada algoritmo metaheurístico en la tarea de detección de noticias falsas.
+Estas visualizaciones proporcionan evidencia gráfica que facilitan la comprensión del comportamiento específico de cada algoritmo metaheurístico en la tarea de detección de noticias falsas.
 
 \subsection{Contextualización con Investigación Publicada}
 \label{subsec:contextualizacion_investigacion}
 
 Los hallazgos de esta investigación fueron formalizados y publicados en el capítulo de libro ``Calibración de hiper-parámetros en algoritmos metaheurísticos para la detección de fraude digital'' \cite{hurtado2024calibracion}. Es importante destacar que en la versión publicada, la \textbf{Búsqueda Dispersa (SS) obtuvo resultados iguales o ligeramente superiores al Algoritmo Genético}, confirmando la competitividad de ambos enfoques.
 
-En los experimentos actuales, el \textbf{Algoritmo Genético (GA) emergió como el mejor algoritmo con un F1-Score macro de 0.68 y exactitud del 71.06\%}. Esta ligera variación en el ranking se atribuye a diferencias en la configuración específica de hiperparámetros y semillas aleatorias utilizadas en experimentos independientes.
+En los experimentos actuales, el \textbf{Algoritmo Genético (GA) emergió como el mejor algoritmo con un F1-Score macro de 0.68 y exactitud del 71.06\%}. Esta ligera variación en el ranking se atribuye a diferencias en la configuración específica de hiperparámetros y semillas aleatorias utilizadas en diferentes experimentos.
 
 \subsubsection{Comparación con Investigación Internacional}
 
@@ -614,7 +617,7 @@ Los resultados obtenidos son consistentes con investigación internacional recie
 \hline
 \end{tabular}
 }
-\caption{Análisis de fortalezas y debilidades de cada algoritmo metaheurístico basado en métricas macro.}
+\caption{Análisis de fortalezas y debilidades de cada algoritmo metaheurístico basado las métricas obtenidas.}
 \label{tab:fortalezas_debilidades}
 \end{table}
 
@@ -628,7 +631,7 @@ El análisis exhaustivo reveló limitaciones críticas que justifican la transic
 \paragraph{Limitaciones de Representación:}
 \begin{itemize}
     \item \textbf{Representación TF-IDF:} Pérdida de información contextual y semántica
-    \item \textbf{Reducción dimensional agresiva:} De 5,000 a 500 características elimina información relevante
+    \item \textbf{Reducción dimensional agresiva:} De 5,000 a 500 características elimina información relevante, aunque incrementar dimensiones mejora métricas a costa de viabilidad computacional
     \item \textbf{Representaciones estáticas:} Incapacidad para modelar significados contextuales
 \end{itemize}
 
@@ -672,22 +675,10 @@ La investigación de Blanco-Fernández et al. \cite{blanco2024enhancing} demuest
 \begin{itemize}
     \item \textbf{Línea base establecida:} F1-Score macro de 0.68 (GA) como referencia confiable
     \item \textbf{Metodología validada:} Publicación exitosa del capítulo de libro \cite{hurtado2024calibracion}
-    \item \textbf{Caracterización algorítmica:} Identificación clara de fortalezas y debilidades de cada metaheurístico
-    \item \textbf{Eficiencia computacional:} Tiempos de entrenamiento del orden de minutos
+    \item \textbf{Caracterización algorítmica:} Identificación clara de fortalezas y debilidades de cada algoritmo metaheurístico
+    \item \textbf{Eficiencia computacional:} Tiempos de entrenamiento demasiado largos
     \item \textbf{Interpretabilidad:} Modelos explicables con parámetros comprensibles
 \end{itemize}
-
-\subsubsection{Ranking Final Basado en F1-Score Macro}
-
-Basándose en los resultados experimentales obtenidos, el ranking definitivo usando F1-Score macro es:
-
-\begin{enumerate}
-    \item \textbf{Algoritmo Genético (GA):} F1-Score macro: 0.68, Exactitud: 71.06\%
-    \item \textbf{Variable Neighborhood Search (VNS):} F1-Score macro: 0.65, Exactitud: 69.22\%
-    \item \textbf{Scatter Search (SS):} F1-Score macro: 0.62, Exactitud: 66.12\%
-    \item \textbf{Multi-Start Simulated Annealing (MSA):} F1-Score macro: 0.54, Exactitud: 58.36\%
-    \item \textbf{Particle Swarm Optimization (PSO):} F1-Score macro: 0.51, Exactitud: 63.98\%
-\end{enumerate}
 
 \subsubsection{Justificación para la Evolución}
 
@@ -700,7 +691,7 @@ Las limitaciones identificadas establecen la necesidad de evolucionar hacia enfo
     \item \textbf{F1-Score macro limitado:} Ningún algoritmo superó el 0.68 en F1-Score macro
 \end{itemize}
 
-La experiencia obtenida durante la investigación del enfoque metaheurístico proporcionó insights valiosos que orientaron el desarrollo del segundo enfoque basado en modelos Transformer, que será analizado en la siguiente sección de este capítulo.
+La experiencia obtenida durante la investigación del enfoque metaheurístico proporcionó resultados valiosos que orientaron el desarrollo del segundo enfoque basado en modelos Transformer, que será analizado en la siguiente sección de este capítulo.
 
 % PARTE 2 MODELOS DE LENGUAJE
 \section{Resultados del Enfoque Transformer: DistilBERT Multilingüe}
@@ -713,20 +704,20 @@ La segunda fase de esta investigación se centró en el desarrollo y optimizaci�
 
 \subsubsection{Proceso de Experimentación Iterativa}
 
-El desarrollo del modelo DistilBERT requirió un proceso de experimentación exhaustivo que incluyó múltiples configuraciones y técnicas de regularización:
+El desarrollo del modelo DistilBERT requirió un proceso de experimentación que incluyó múltiples configuraciones y técnicas de regularización:
 
 \begin{itemize}
     \item \textbf{Experimentos preliminares:} 3 pruebas iniciales con TinyBERT en inglés (30-45 minutos cada uno)
     \item \textbf{Experimentos preliminares:} 3 pruebas con BERT en inglés Y español (24-48 horas cada uno)
     \item \textbf{Experimentos de configuración base:} 8 pruebas con DistilBERT multilingüe (12-24 horas cada uno)
-    \item \textbf{Experimentos de regularización:} 7 pruebas especializadas anti-overfitting (48-72 horas cada uno)
+    \item \textbf{Experimentos de regularización:} 7 pruebas especializadas anti-sobreajuste (48-72 horas cada uno)
     \item \textbf{Tiempo total de computación:} Aproximadamente 500 horas de GPU
     \item \textbf{Configuración final óptima:} La versión descrita a continuación, con regularización máxima
 \end{itemize}
 
 \subsubsection{Características del Corpus Expandido}
 
-Para el entrenamiento del modelo DistilBERT se utilizó la versión expandida del corpus, que incorpora tanto fuentes académicas como datos obtenidos mediante extracción web:
+Para el entrenamiento del modelo DistilBERT se utilizó una versión expandida del corpus, que incorpora tanto fuentes académicas como datos obtenidos mediante extracción web:
 
 \begin{table}[htbp]
 \centering
@@ -781,7 +772,7 @@ La configuración final implementó una división específica para maximizar el 
 \textbf{Modelo Base} & distilbert-base-multilingual-cased & Soporte nativo para español \\
 \hline
 \rowcolor{LightBlue!30}
-\textbf{Secuencia Máxima} & 128 tokens & Balance rendimiento/overfitting \\
+\textbf{Secuencia Máxima} & 128 tokens & Balance rendimiento/sobreajuste \\
 \hline
 \rowcolor{LightCoral!30}
 \textbf{Formato de Entrada} & título + [SEP] + texto & Información estructurada \\
@@ -798,9 +789,11 @@ La configuración final implementó una división específica para maximizar el 
 \label{tab:configuracion_distilbert}
 \end{table}
 
-\subsubsection{Estrategia de Regularización Anti-Overfitting}
+\subsubsection{Estrategia de Regularización Anti-Sobreajuste}
 
-El principal desafío durante el desarrollo fue el \textbf{overfitting prematuro}, que se manifestó consistentemente en los primeros 15 experimentos. La configuración final implementó múltiples técnicas de regularización:
+El principal desafío durante el desarrollo fue el \textbf{overfitting prematuro} (sobreajuste o memorización excesiva de los datos de entrenamiento), que se manifestó consistentemente en los primeros experimentos.
+
+La configuración final implementó múltiples técnicas de regularización:
 
 \begin{table}[htbp]
 \centering
@@ -812,46 +805,46 @@ El principal desafío durante el desarrollo fue el \textbf{overfitting prematuro
 \textbf{Técnica de Regularización} & \textbf{Valor/Configuración} & \textbf{Objetivo} & \textbf{Impacto} \\
 \hline
 \rowcolor{LightGreen!30}
-\textbf{Learning Rate (Tasa de aprendizaje) Ultra-Baja} & 2e-06 & Convergencia gradual & Reducción overfitting \\
+\textbf{Tasa de Aprendizaje Ultra-Baja} & 2e-06 & Convergencia gradual & Reducción sobreajuste \\
 \hline
 \rowcolor{LightBlue!30}
-\textbf{Dropout Agresivo} & 0.7 & Prevenir co-adaptación & Generalización \\
+\textbf{Dropout (o tasa de abandono) Agresivo} & 0.7 & Prevenir co-adaptación & Generalización \\
 \hline
 \rowcolor{LightCoral!30}
 \textbf{Regularización L2} & 0.05 & Penalización de pesos & Suavizado del modelo \\
 \hline
 \rowcolor{LightGoldenrod!30}
-\textbf{Batch Size (Tamaño de lote) Pequeño} & 4 & Mayor ruido en gradientes & Regularización implícita \\
+\textbf{Tamaño de Lote Pequeño} & 4 & Mayor ruido en gradientes & Regularización implícita \\
 \hline
 \rowcolor{LightPink!30}
-\textbf{Noise Injection} & 0.03 & Perturbación controlada & Robustez del modelo \\
+\textbf{Inyección de Ruido} & 0.03 & Perturbación controlada & Robustez del modelo \\
 \hline
 \rowcolor{LightSkyBlue!30}
-\textbf{Weight Decay Manual} & 0.02 & Decaimiento de pesos & Control de capacidad \\
+\textbf{Decaimiento de Pesos Manual} & 0.02 & Decaimiento de pesos & Control de capacidad \\
 \hline
 \rowcolor{HeaderBlue!20}
-\textbf{Early Stopping} & Paciencia: 8 épocas & Detención automática & Prevención overfitting \\
+\textbf{Parada Temprana} & Paciencia: 8 épocas & Detención automática & Prevención sobreajuste \\
 \hline
 \end{tabular}
 }
-\caption{Técnicas de regularización implementadas en la configuración V7 final.}
+\caption{Técnicas de regularización implementadas en la configuración final.}
 \label{tab:regularizacion_distilbert}
 \end{table}
 
 \subsection{Proceso de Optimización y Búsqueda de Hiperparámetros}
 \label{subsec:optimizacion_distilbert}
 
-\subsubsection{Metodología de Tuning Automatizado}
+\subsubsection{Ajuste de Hiperparámetros (Hyperparameter Tuning) Automatizado}
 
 La optimización se realizó mediante \textbf{Keras Tuner} con búsqueda aleatoria sobre un espacio de hiperparámetros cuidadosamente diseñado:
 
 \begin{itemize}
-    \item \textbf{Learning rates explorados:} [5e-6, 2e-6, 1e-6, 8e-7]
-    \item \textbf{Dropout rates evaluados:} [0.4, 0.5, 0.6, 0.7]
+    \item \textbf{Tasas de aprendizaje exploradas:} [5e-6, 2e-6, 1e-6, 8e-7]
+    \item \textbf{Dropout (o tasa de abandono) evaluados:} [0.4, 0.5, 0.6, 0.7]
     \item \textbf{Regularización L2:} [0.05, 0.1, 0.2, 0.5]
-    \item \textbf{Batch sizes (número de ejemplos por lote) probados:} [4, 6, 8]
+    \item \textbf{Tamaños de lote (número de ejemplos por lote) probados:} [4, 6, 8]
     \item \textbf{Configuraciones totales:} 192 combinaciones posibles
-    \item \textbf{Trials ejecutados:} 4 (limitado por recursos computacionales)
+    \item \textbf{Intentos ejecutados:} 4 (limitado por recursos computacionales)
 \end{itemize}
 
 \subsubsection{Configuración Óptima Identificada}
@@ -859,47 +852,47 @@ La optimización se realizó mediante \textbf{Keras Tuner} con búsqueda aleator
 La búsqueda automatizada identificó la siguiente configuración como óptima:
 
 \begin{itemize}
-    \item \textbf{Learning Rate:} 2e-06 (extremadamente conservador)
+    \item \textbf{Taza de Aprendizaje:} 2e-06 (extremadamente conservador)
     \item \textbf{Dropout Rate:} 0.7 (regularización agresiva)
     \item \textbf{L2 Regularization:} 0.05 (regularización moderada-fuerte)
-    \item \textbf{Noise Factor:} 0.03 (perturbación controlada)
-    \item \textbf{Batch Size:} 4 (máxima regularización implícita)
+    \item \textbf{Factor de Ruido:} 0.03 (perturbación controlada)
+    \item \textbf{tamaños de lote:} 4 (máxima regularización implícita)
 \end{itemize}
 
-\subsection{Análisis de Convergencia y Control de Overfitting}
+\subsection{Análisis de Convergencia y Control de Sobreajuste}
 \label{subsec:convergencia_distilbert}
 
 \subsubsection{Evolución del Entrenamiento}
 
-El modelo final se entrenó durante 21 épocas antes de que el mecanismo de early stopping detuviera el proceso. La \textbf{época 13 fue identificada como el punto óptimo}, marcando el momento antes del inicio del overfitting:
+El modelo final se entrenó durante 21 épocas antes de que el mecanismo de detención temprana detuviera el proceso. La \textbf{época 13 fue identificada como el punto óptimo}, marcando el momento antes del inicio del sobreajuste:
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v7.png}
-    \caption{Evolución de la exactitud y pérdida durante el entrenamiento del modelo DistilBERT V7. Las líneas azul y roja muestran la convergencia en entrenamiento y validación respectivamente. La estrella dorada marca la mejor época (13), después de la cual se observa el inicio del overfitting con una separación creciente entre las curvas.}
+    \caption{Evolución de la exactitud y pérdida durante el entrenamiento del modelo DistilBERT Final. Las líneas azul y roja muestran la convergencia en entrenamiento y validación respectivamente. La estrella dorada marca la mejor época (13), después de la cual se observa el inicio del sobreajuste con una separación creciente entre las curvas.}
     \label{fig:convergencia_distilbert}
 \end{figure}
 
 \subsubsection{Análisis del Gap de Generalización}
 
-La métrica clave para evaluar el overfitting fue el \textbf{gap de pérdida} (diferencia entre pérdida de validación y entrenamiento):
+La métrica clave para evaluar el sobreajuste fue el \textbf{gap de pérdida} (diferencia entre pérdida de validación y entrenamiento):
 
 \begin{itemize}
     \item \textbf{Épocas 1-9:} Gap < 0.02 (convergencia excelente)
-    \item \textbf{Época 10-13:} Gap 0.02-0.05 (objetivo V7 parcialmente alcanzado)
-    \item \textbf{Épocas 14-21:} Gap > 0.05 (inicio de overfitting)
+    \item \textbf{Época 10-13:} Gap 0.02-0.05 (objetivo final parcialmente alcanzado)
+    \item \textbf{Épocas 14-21:} Gap > 0.05 (inicio de sobreajuste)
     \item \textbf{Gap final en época 13:} 0.0492 (cerca del objetivo de < 0.04)
 \end{itemize}
 
-\subsubsection{Justificación del Early Stopping}
+\subsubsection{Justificación de la Detención Temprana}
 
-La detención del entrenamiento en la época 13 se justifica por múltiples indicadores:
+La detención del entrenamiento, evita el sobreajuste deteniendo el entrenamiento cuando no hay mejoras en diferentes épocas, en este caso, en la época 13, se justifica por múltiples indicadores:
 
 \begin{enumerate}
     \item \textbf{Pérdida de validación mínima:} Época 13 registró la menor pérdida de validación (0.2214)
     \item \textbf{Gap de generalización controlado:} 0.0492, cercano al objetivo de < 0.04
     \item \textbf{Exactitud estabilizada:} 95.04\% en validación, sin mejoras posteriores
-    \item \textbf{Prevención de overfitting:} Épocas posteriores mostraron degradación clara
+    \item \textbf{Prevención de sobreajuste:} Épocas posteriores mostraron degradación clara
     \item \textbf{Eficiencia computacional:} Evitar 9 épocas adicionales innecesarias
 \end{enumerate}
 
@@ -938,16 +931,16 @@ El proceso experimental siguió una metodología sistemática de refinamiento pr
 \textbf{V1} & Línea base & División 70/10/20, LR: 3e-05 & N/A & 94.7\% & 6 & Baseline \\
 \hline
 \rowcolor{LightOrange!30}
-\textbf{V2} & Anti-overfitting inicial & División 60/20/20, LR ultra-bajo & $ \text{gap}_{\text{final}} \leq 0.10 $ & 94.3\% & 8 & Excelente \\
+\textbf{V2} & Anti-sobreajuste inicial & División 60/20/20, LR ultra-bajo & $ \text{gap}_{\text{final}} \leq 0.10 $ & 94.3\% & 8 & Excelente \\
 \hline
 \rowcolor{LightCoral!30}
 \textbf{V3} & Mejora inicial & División 60/20/20, LR reducido & $ \text{gap}_{\text{final}} \leq 0.10 $ & 94.8\% & 11 & Convergente \\
 \hline
 \rowcolor{LightBlue!30}
-\textbf{V4} & Control overfitting & Anti-overfitting mejorado & $ \text{gap}_{\text{final}} \leq 0.10 $ & 95.8\% & 7 & Convergente \\
+\textbf{V4} & Control sobreajuste & Anti-sobreajuste mejorado & $ \text{gap}_{\text{final}} \leq 0.10 $ & 95.8\% & 7 & Convergente \\
 \hline
 \rowcolor{LightYellow!30}
-\textbf{V5} & Configuración híbrida & 70/10/20 + anti-overfitting & $ \text{gap}_{\text{final}} \leq 0.10 $ & 95.8\% & 11 & Óptimo \\
+\textbf{V5} & Configuración híbrida & 70/10/20 + anti-sobreajuste & $ \text{gap}_{\text{final}} \leq 0.10 $ & 95.8\% & 11 & Óptimo \\
 \hline
 \rowcolor{LightPink!30}
 \textbf{V6} & Regularización fuerte & L2 aumentado, dropout agresivo & 0.10 & 94.8\% & 8 & Convergente \\
@@ -972,12 +965,12 @@ El proceso experimental siguió una metodología sistemática de refinamiento pr
 \multicolumn{2}{|c|}{\textbf{Gráficas de Convergencia - Versiones Experimentales}} \\
 \hline
 \rowcolor{LightGreen!20}
-\textbf{Versión V1 - Línea Base} & \textbf{Versión V2 - Anti-Overfitting Inicial} \\
+\textbf{Versión V1 - Línea Base} & \textbf{Versión V2 - Anti-Sobreajuste Inicial} \\
 \includegraphics[width=0.45\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v1.png} & 
 \includegraphics[width=0.45\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v2.png} \\
 \hline
 \rowcolor{LightCoral!20}
-\textbf{Versión V3 - Primera Mejora} & \textbf{Versión V4 - Control Overfitting} \\
+\textbf{Versión V3 - Primera Mejora} & \textbf{Versión V4 - Control Sobreajuste} \\
 \includegraphics[width=0.45\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v3.png} & 
 \includegraphics[width=0.45\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v4.png} \\
 \hline
@@ -992,34 +985,34 @@ El proceso experimental siguió una metodología sistemática de refinamiento pr
 \hline
 \end{tabular}
 }
-\caption{Visualización comparativa de convergencia y métricas para todas las versiones experimentales de DistilBERT.}
+\caption{Visualización comparativa de convergencia y métricas para las versiones experimentales más significativas con DistilBERT.}
 \label{tab:imagenes_convergencia}
 \end{table}
 
 \subsubsection{Análisis Detallado por Versión}
 
 \paragraph{Versión V1 - Línea Base con División Estándar:}
-La V1 estableció la configuración base con división 70/10/20, learning rate de 3e-05, dropout 0.4, L2 regularization 0.001 y batch size 8. Alcanzó exactitud del 94.7\% en 6 épocas con early stopping efectivo. \textbf{Lección aprendida:} Los hiperparámetros moderados proporcionan un punto de partida sólido pero requieren refinamiento para convergencia óptima.
+La V1 estableció la configuración base con división 70/10/20, taza de aprendizaje de 3e-05, dropout 0.4, L2 regularization 0.001 y tamaños de lote 8. Alcanzó exactitud del 94.7\% en 6 épocas con detención temprana efectivo. \textbf{Lección aprendida:} Los hiperparámetros moderados proporcionan un punto de partida sólido pero requieren refinamiento para convergencia óptima.
 
-\paragraph{Versión V2 - Primera Configuración Anti-Overfitting:}
-La V2 introdujo la primera implementación completa anti-overfitting con división 60/20/20, learning rate ultra-bajo (2e-06), dropout 0.4, L2 regularization 0.01, batch size 4 y MAX\_LENGTH reducido a 128. Logró gap excelente de 0.018 con exactitud del 94.3\% en 8 épocas y early stopping estricto de 2 épocas. \textbf{Lección aprendida:} La regularización agresiva temprana produce gaps excepcionales pero puede limitar la exactitud máxima alcanzable.
+\paragraph{Versión V2 - Primera Configuración Anti-Sobreajuste:}
+La V2 introdujo la primera implementación completa anti-sobreajuste con división 60/20/20, taza de aprendizaje ultra-bajo (2e-06), dropout 0.4, L2 regularization 0.01, tamaños de lote 4 y MAX\_LENGTH reducido a 128. Logró gap excelente de 0.018 con exactitud del 94.3\% en 8 épocas y detención temprana estricto de 2 épocas. \textbf{Lección aprendida:} La regularización agresiva temprana produce gaps excepcionales pero puede limitar la exactitud máxima alcanzable.
 
 \paragraph{Versión V3 - Mejora Inicial Post-V2:}
-La V3 mantuvo división 60/20/20 pero ajustó learning rates y regularización L2 fortalecida. Logró gap de 0.051 con exactitud del 94.8\% en 11 épocas. \textbf{Lección aprendida:} Los ajustes posteriores a V2 demostraron que el balance fino es crítico para mantener tanto gap como exactitud.
+La V3 mantuvo división 60/20/20 pero ajustó la taza de aprendizajes y regularización L2 fortalecida. Logró gap de 0.051 con exactitud del 94.8\% en 11 épocas. \textbf{Lección aprendida:} Los ajustes posteriores a V2 demostraron que el balance fino es crítico para mantener tanto gap como exactitud.
 
-\paragraph{Versión V4 - Control de Overfitting Mejorado:}
-La V4 implementó configuración anti-overfitting mejorada con learning rate de 1e-05, dropout 0.3, L2 regularization 0.01 y paciencia de 5 épocas. Alcanzó gap de 0.037 y exactitud del 95.8\% en 7 épocas. \textbf{Lección aprendida:} El balance entre regularización y capacidad de aprendizaje es crítico para evitar underfitting.
+\paragraph{Versión V4 - Control de Sobreajuste Mejorado:}
+La V4 implementó configuración anti-sobreajuste mejorada con taza de aprendizaje de 1e-05, dropout 0.3, L2 regularization 0.01 y paciencia de 5 épocas. Alcanzó gap de 0.037 y exactitud del 95.8\% en 7 épocas. \textbf{Lección aprendida:} El balance entre regularización y capacidad de aprendizaje es crítico para evitar underfitting (o subajuste), que es cuando el modelo no logra aprender suficientemente de los datos de entrenamiento, lo que resulta en bajo rendimiento tanto en entrenamiento como en validación.
 
 \newpage
 
 \paragraph{Versión V5 - Configuración Híbrida Exitosa:}
-La V5 combinó la división 70/10/20 con técnicas anti-overfitting, manteniendo gap de 0.037 y exactitud del 95.8\% pero extendiendo a 11 épocas para mejor estabilidad. \textbf{Lección aprendida:} La hibridación de estrategias exitosas puede mantener rendimiento mientras mejora robustez.
+La V5 combinó la división 70/10/20 con técnicas anti-sobreajuste, manteniendo gap de 0.037 y exactitud del 95.8\% pero extendiendo a 11 épocas para mejor estabilidad. \textbf{Lección aprendida:} La hibridación de estrategias exitosas puede mantener rendimiento mientras mejora robustez.
 
 \paragraph{Versión V6 - Regularización Máxima Inicial:}
-La V6 implementó regularización extrema con learning rate de 1e-05, dropout 0.5, L2 regularization 0.5 y early stopping agresivo de 2 épocas. Resultó en gap de 0.051 y exactitud del 94.8\% en 8 épocas. \textbf{Lección aprendida:} La regularización extrema puede limitar la capacidad de aprendizaje si no se balancea adecuadamente.
+La V6 implementó regularización extrema con taza de aprendizaje de 1e-05, dropout 0.5, L2 regularization 0.5 y detención temprana agresivo de 2 épocas. Resultó en gap de 0.051 y exactitud del 94.8\% en 8 épocas. \textbf{Lección aprendida:} La regularización extrema puede limitar la capacidad de aprendizaje si no se balancea adecuadamente.
 
 \paragraph{Versión V7 - Configuración Final Óptima:}
-La V7 implementó regularización máxima corregida con learning rates ultra-bajos (2e-06), dropout agresivo (0.7), L2 regularization (0.05), noise injection (0.03) y batch size variable (4). Alcanzó gap de 0.050 con exactitud del 95.2\% en 21 épocas con mejor época en la 13. \textbf{Lección aprendida:} La regularización coordenada múltiple con técnicas avanzadas logra el mejor balance convergencia-generalización.
+La V7 implementó regularización máxima corregida con tasas de aprendizaje ultra-bajos (2e-06), dropout agresivo (0.7), L2 regularization (0.05), inyección de ruido (0.03) y tamaños de lote variable (4). Alcanzó gap de 0.050 con exactitud del 95.2\% en 21 épocas con mejor época en la 13. \textbf{Lección aprendida:} La regularización coordenada múltiple con técnicas avanzadas logra el mejor balance convergencia-generalización.
 
 \subsubsection{Configuraciones Técnicas Comparativas}
 
@@ -1032,10 +1025,10 @@ La V7 implementó regularización máxima corregida con learning rates ultra-baj
 \rowcolor{UAMPurple!20}
 \textbf{Parámetro} & \textbf{V1} & \textbf{V2} & \textbf{V3} & \textbf{V4} & \textbf{V5} & \textbf{V6} & \textbf{V7} \\
 \hline
-Learning Rate & 3e-05 & 2e-06 & 2e-06 & 1e-05 & 1e-05 & 1e-05 & 2e-06 \\
+Taza de Aprendizaje & 3e-05 & 2e-06 & 2e-06 & 1e-05 & 1e-05 & 1e-05 & 2e-06 \\
 Dropout Rate & 0.4 & 0.4 & 0.4 & 0.3 & 0.4 & 0.5 & 0.7 \\
 L2 Regularization & 0.001 & 0.01 & 0.01 & 0.01 & 0.1 & 0.5 & 0.05 \\
-Batch Size & 8 & 4 & 4 & 8 & 8 & 8 & 4 \\
+Tamaños de Lote & 8 & 4 & 4 & 8 & 8 & 8 & 4 \\
 División Datos & 70/10/20 & 60/20/20 & 60/20/20 & 60/20/20 & 70/10/20 & 60/20/20 & 70/10/20 \\
 \rowcolor{LightBlue!20}
 \textbf{Gap Final} & \textbf{N/A} & \textbf{0.018} & \textbf{0.051} & \textbf{0.037} & \textbf{0.037} & \textbf{0.051} & \textbf{0.050} \\
@@ -1086,28 +1079,28 @@ División Datos & 70/10/20 & 60/20/20 & 60/20/20 & 60/20/20 & 70/10/20 & 60/20/2
 
 \subsubsection{Versiones Clave del Desarrollo}
 
-\paragraph{V2 - Breakthrough Anti-Overfitting:}
-Primera implementación exitosa de regularización agresiva con gap excepcional de 0.018, estableciendo los fundamentos para versiones posteriores. Learning rate ultra-bajo (2e-06) y batch size 4.
+\paragraph{V2 - Superación limitaciones previas con Anti-Sobreajuste:}
+Primera implementación exitosa de regularización agresiva con gap excepcional de 0.018, estableciendo los fundamentos para versiones posteriores. Taza de aprendizaje ultra-bajo (2e-06) y tamaños de lote 4.
 
 \paragraph{V4-V5 - Pico de Rendimiento:}
 Máxima exactitud alcanzada (95.8\%) con gap controlado de 0.037. Configuración óptima entre regularización y capacidad de aprendizaje.
 
 \paragraph{V7 - Configuración Final:}
-Implementación de noise injection y regularización máxima coordinada. Exactitud final de 95.2\% con gap de 0.050, representando el mejor balance convergencia-generalización.
+Implementación de inyección de ruido y regularización máxima coordinada. Exactitud final de 95.2\% con gap de 0.050, representando el mejor balance convergencia-generalización.
 
 \subsubsection{Factores Críticos del Éxito}
 
 \begin{itemize}
-    \item \textbf{Learning rates ultra-bajos} (2e-06): Esenciales para convergencia estable
-    \item \textbf{Regularización múltiple coordinada}: L2 + dropout + weight decay + noise injection
+    \item \textbf{Tasas de aprendizaje ultra-bajos} (2e-06): Esenciales para convergencia estable
+    \item \textbf{Regularización múltiple coordinada}: L2 + dropout + weight decay + inyección de ruido
     \item \textbf{División de datos optimizada}: 70/10/20 superior a 60/20/20
-    \item \textbf{Early stopping inteligente}: Detección precisa del punto óptimo
+    \item \textbf{detención temprana inteligente}: Detección precisa del punto óptimo
 \end{itemize}
 
 \subsection{Pseudocódigo del Algoritmo de Entrenamiento DistilBERT}
 \label{subsec:pseudocodigo_distilbert}
 
-Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrenamiento DistilBERT V7. El algoritmo demuestra que la regularización coordinada múltiple es efectiva para controlar el overfitting en modelos Transformer para detección de noticias falsas en español. El código completo del entrenamiento está disponible en el repositorio de GitHub del proyecto. Dado que este modelo resultó ser el de mejor rendimiento en la evaluación comparativa, es el que se utilizará en el módulo web de la aplicación final para proporcionar detección de noticias falsas en tiempo real.
+Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrenamiento DistilBERT final (ver tabla \ref{tab:pseudocodigo_distilbert_simple}). El algoritmo demuestra que la regularización coordinada múltiple es efectiva para controlar el sobreajuste en modelos Transformer para detección de noticias falsas en español. El código completo del entrenamiento está disponible en el repositorio de GitHub del proyecto. Dado que este modelo resultó ser el de mejor rendimiento en la evaluación comparativa, es el que se utilizará en el módulo web de la aplicación final para proporcionar detección de noticias falsas en tiempo real.
 
 \begin{table}[htbp]
 \centering
@@ -1116,7 +1109,7 @@ Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrena
 \begin{tabular}{|l|l|}
 \hline
 \rowcolor{LightSkyBlue!20}
-\multicolumn{2}{|l|}{\textbf{Algoritmo DistilBERT V7 - Regularización Anti-Overfitting}} \\
+\multicolumn{2}{|l|}{\textbf{Algoritmo DistilBERT final - Regularización Anti-Sobreajuste}} \\
 \hline
 \textbf{Entrada:} & Corpus español, hiperparámetros de regularización \\
 \hline
@@ -1168,7 +1161,7 @@ Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrena
 \hline
 \end{tabular}
 }
-\caption{Pseudocódigo simplificado del algoritmo DistilBERT V7.}
+\caption{Pseudocódigo simplificado del algoritmo DistilBERT final (V7).}
 \label{tab:pseudocodigo_distilbert_simple}
 \end{table}
 
@@ -1233,7 +1226,7 @@ El modelo DistilBERT demostró superioridad categórica sobre enfoques metaheur�
     \item \textbf{Rendimiento superior}: 24+ puntos porcentuales de mejora en exactitud
     \item \textbf{Balance perfecto}: Detección excelente de ambas clases (falsas y reales)
     \item \textbf{Generalización robusta}: Gap controlado a través de regularización múltiple
-    \item \textbf{Metodología replicable}: Proceso sistemático de 7 versiones experimentales
+    \item \textbf{Metodología replicable}: Proceso sistemático de 7 versiones clave experimentales
 \end{itemize}
 
 Los resultados establecen definitivamente la superioridad de modelos Transformer para detección de noticias falsas en español, justificando la transición desde enfoques tradicionales hacia arquitecturas de aprendizaje profundo especializadas.
@@ -1245,7 +1238,7 @@ Esta sección presenta la evaluación comparativa final entre los dos paradigmas
 
 \subsection{Comparación de Rendimiento Cuantitativo}
 
-La Tabla \ref{tab:comparacion_final_paradigmas} presenta una síntesis de los resultados cuantitativos obtenidos por ambos enfoques bajo condiciones experimentales idénticas.
+La tabla \ref{tab:comparacion_final_paradigmas} presenta una síntesis de los resultados cuantitativos obtenidos por ambos enfoques bajo condiciones experimentales idénticas.
 
 \begin{table}[htbp]
 \centering
@@ -1271,7 +1264,7 @@ La Tabla \ref{tab:comparacion_final_paradigmas} presenta una síntesis de los re
 \label{tab:comparacion_final_paradigmas}
 \end{table}
 
-\textbf{Resultado principal:} El modelo DistilBERT fine-tuned supera consistentemente al mejor algoritmo metaheurístico en todas las métricas de evaluación, con mejoras absolutas que oscilan entre 21.5\% y 26.8\%.
+\textbf{Resultado principal:} El modelo DistilBERT fine-tuned (o ajustado finamente) supera consistentemente al mejor algoritmo metaheurístico en todas las métricas de evaluación, con mejoras absolutas que oscilan entre 21.5\% y 26.8\%.
 
 \subsection{Análisis Multidimensional de Paradigmas}
 
@@ -1279,7 +1272,7 @@ La Tabla \ref{tab:comparacion_final_paradigmas} presenta una síntesis de los re
 
 \begin{itemize}
     \item \textbf{Algoritmos Metaheurísticos:} Rendimiento moderado (71.1\% exactitud) que establece una línea base funcional pero insuficiente para aplicaciones críticas
-    \item \textbf{Modelos Transformer:} Rendimiento excepcional (95.2\% exactitud) que alcanza niveles de precisión comparables a sistemas comerciales
+    \item \textbf{Modelos Transformer:} Rendimiento excepcional (95.2\% exactitud) que alcanza niveles de precisión comparables a trabajos de investigación internacionales
     \item \textbf{Veredicto:} Superioridad clara de Transformers en capacidad de detección
 \end{itemize}
 
@@ -1288,14 +1281,14 @@ La Tabla \ref{tab:comparacion_final_paradigmas} presenta una síntesis de los re
 \begin{itemize}
     \item \textbf{Algoritmos Metaheurísticos:} Menor requerimiento de memoria (modelo final ~50MB), tiempo de inferencia rápido (~100ms por muestra)
     \item \textbf{Modelos Transformer:} Mayor requerimiento de memoria (modelo final ~250MB), tiempo de inferencia moderado (~500ms por muestra)
-    \item \textbf{Veredicto:} Trade-off aceptable considerando la mejora sustancial en rendimiento
+    \item \textbf{Veredicto:} Trade-off (En otras palabras, mejorar una cosa suele implicar sacrificar otra) aceptable considerando la mejora sustancial en rendimiento
 \end{itemize}
 
 \subsubsection{Dimensión 3: Interpretabilidad y Explicabilidad}
 
 \begin{itemize}
     \item \textbf{Algoritmos Metaheurísticos:} Interpretabilidad directa através de pesos de características TF-IDF identificables
-    \item \textbf{Modelos Transformer:} Interpretabilidad limitada, requiere técnicas adicionales como attention visualization
+    \item \textbf{Modelos Transformer:} Interpretabilidad limitada, requiere técnicas adicionales como attention visualization (interpretar y analizar).
     \item \textbf{Veredicto:} Ventaja para metaheurísticas, pero no crítica para la aplicación objetivo
 \end{itemize}
 
@@ -1303,13 +1296,13 @@ La Tabla \ref{tab:comparacion_final_paradigmas} presenta una síntesis de los re
 
 \begin{itemize}
     \item \textbf{Algoritmos Metaheurísticos:} Metodología fácilmente transferible a detección de otros tipos de fraude digital
-    \item \textbf{Modelos Transformer:} Transferibilidad excelente mediante fine-tuning adicional en nuevos dominios
+    \item \textbf{Modelos Transformer:} Transferibilidad excelente mediante ajuste fino adicional en nuevos dominios
     \item \textbf{Veredicto:} Empate, ambos enfoques ofrecen transferibilidad con estrategias diferentes
 \end{itemize}
 
 \subsection{Justificación de la Selección del Modelo Final}
 
-Con base en la evaluación comparativa integral, \textbf{se selecciona el modelo DistilBERT fine-tuned como la solución final} por las siguientes razones fundamentales:
+Con base en la evaluación comparativa integral, \textbf{se selecciona el modelo DistilBERT ajustado finamente (o fine-tuned) como la solución final} por las siguientes razones fundamentales:
 
 \begin{enumerate}
     \item \textbf{Rendimiento superior crítico:} La mejora de 24.1\% en exactitud es sustancial y justifica la adopción del modelo más complejo
@@ -1345,7 +1338,7 @@ Para realizar un análisis cualitativo profundo de los errores del modelo, se pr
 \begin{enumerate}
     \item \textbf{Extracción de errores:} Identificación sistemática de todos los Falsos Positivos (FP) y Falsos Negativos (FN) del conjunto de prueba
     \item \textbf{Muestreo estadístico:} Selección de una muestra representativa de errores para análisis manual detallado
-    \item \textbf{Categorización temática:} Clasificación de errores por dominio (política, salud, tecnología, etc.)
+    \item \textbf{Categorización temática:} Clasificación de temas por dominio (política, salud, tecnología, etc.)
     \item \textbf{Análisis lingüístico:} Identificación de patrones en estructura sintáctica, vocabulario y estilo
     \item \textbf{Validación de etiquetas:} Verificación de la calidad del etiquetado original en casos ambiguos
 \end{enumerate}
