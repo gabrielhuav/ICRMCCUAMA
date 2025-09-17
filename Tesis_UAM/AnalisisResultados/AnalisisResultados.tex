@@ -954,7 +954,7 @@ El proceso experimental siguió una metodología sistemática de refinamiento pr
 \label{tab:versiones_experimentales}
 \end{table}
 
-\subsubsection{Visualización de Convergencia por Versiones}
+\subsubsection{Visualización de Convergencia por Versiones \&}
 
 \begin{table}[htbp]
 \centering
@@ -989,30 +989,30 @@ El proceso experimental siguió una metodología sistemática de refinamiento pr
 \label{tab:imagenes_convergencia}
 \end{table}
 
-\subsubsection{Análisis Detallado por Versión}
+%\subsubsection{Análisis Detallado por Versión}
+%
+%\paragraph{Versión V1 - Línea Base con División Estándar:}
+%La V1 estableció la configuración base con división 70/10/20, taza de aprendizaje de 3e-05, dropout 0.4, L2 %regularization 0.001 y tamaños de lote 8. Alcanzó exactitud del 94.7\% en 6 épocas con detención temprana efectivo. %\textbf{Lección aprendida:} Los hiperparámetros moderados proporcionan un punto de partida sólido pero requieren %refinamiento para convergencia óptima.
+%
+%\paragraph{Versión V2 - Primera Configuración Anti-Sobreajuste:}
+%La V2 introdujo la primera implementación completa anti-sobreajuste con división 60/20/20, taza de aprendizaje ultra-bajo (2e-06), dropout 0.4, L2 regularization 0.01, tamaños de lote 4 y MAX\_LENGTH reducido a 128. Logró gap excelente de 0.018 con exactitud del 94.3\% en 8 épocas y detención temprana estricto de 2 épocas. \textbf{Lección aprendida:} La regularización agresiva temprana produce gaps excepcionales pero puede limitar la exactitud máxima alcanzable.
+%
+%\paragraph{Versión V3 - Mejora Inicial Post-V2:}
+%La V3 mantuvo división 60/20/20 pero ajustó la taza de aprendizajes y regularización L2 fortalecida. Logró gap de 0.051 con exactitud del 94.8\% en 11 épocas. \textbf{Lección aprendida:} Los ajustes posteriores a V2 demostraron que el balance fino es crítico para mantener tanto gap como exactitud.
+%
+%\paragraph{Versión V4 - Control de Sobreajuste Mejorado:}
+%La V4 implementó configuración anti-sobreajuste mejorada con taza de aprendizaje de 1e-05, dropout 0.3, L2 regularization 0.01 y paciencia de 5 épocas. Alcanzó gap de 0.037 y exactitud del 95.8\% en 7 épocas. \textbf{Lección aprendida:} El balance entre regularización y capacidad de aprendizaje es crítico para evitar underfitting (o subajuste), que es cuando el modelo no logra aprender suficientemente de los datos de entrenamiento, lo que resulta en bajo rendimiento tanto en entrenamiento como en validación.
 
-\paragraph{Versión V1 - Línea Base con División Estándar:}
-La V1 estableció la configuración base con división 70/10/20, taza de aprendizaje de 3e-05, dropout 0.4, L2 regularization 0.001 y tamaños de lote 8. Alcanzó exactitud del 94.7\% en 6 épocas con detención temprana efectivo. \textbf{Lección aprendida:} Los hiperparámetros moderados proporcionan un punto de partida sólido pero requieren refinamiento para convergencia óptima.
+%\newpage
 
-\paragraph{Versión V2 - Primera Configuración Anti-Sobreajuste:}
-La V2 introdujo la primera implementación completa anti-sobreajuste con división 60/20/20, taza de aprendizaje ultra-bajo (2e-06), dropout 0.4, L2 regularization 0.01, tamaños de lote 4 y MAX\_LENGTH reducido a 128. Logró gap excelente de 0.018 con exactitud del 94.3\% en 8 épocas y detención temprana estricto de 2 épocas. \textbf{Lección aprendida:} La regularización agresiva temprana produce gaps excepcionales pero puede limitar la exactitud máxima alcanzable.
+%\paragraph{Versión V5 - Configuración Híbrida Exitosa:}
+%La V5 combinó la división 70/10/20 con técnicas anti-sobreajuste, manteniendo gap de 0.037 y exactitud del 95.8\% pero extendiendo a 11 épocas para mejor estabilidad. \textbf{Lección aprendida:} La hibridación de estrategias exitosas puede mantener rendimiento mientras mejora robustez.
 
-\paragraph{Versión V3 - Mejora Inicial Post-V2:}
-La V3 mantuvo división 60/20/20 pero ajustó la taza de aprendizajes y regularización L2 fortalecida. Logró gap de 0.051 con exactitud del 94.8\% en 11 épocas. \textbf{Lección aprendida:} Los ajustes posteriores a V2 demostraron que el balance fino es crítico para mantener tanto gap como exactitud.
+%\paragraph{Versión V6 - Regularización Máxima Inicial:}
+%La V6 implementó regularización extrema con taza de aprendizaje de 1e-05, dropout 0.5, L2 regularization 0.5 y detención temprana agresivo de 2 épocas. Resultó en gap de 0.051 y exactitud del 94.8\% en 8 épocas. \textbf{Lección aprendida:} La regularización extrema puede limitar la capacidad de aprendizaje si no se balancea adecuadamente.
 
-\paragraph{Versión V4 - Control de Sobreajuste Mejorado:}
-La V4 implementó configuración anti-sobreajuste mejorada con taza de aprendizaje de 1e-05, dropout 0.3, L2 regularization 0.01 y paciencia de 5 épocas. Alcanzó gap de 0.037 y exactitud del 95.8\% en 7 épocas. \textbf{Lección aprendida:} El balance entre regularización y capacidad de aprendizaje es crítico para evitar underfitting (o subajuste), que es cuando el modelo no logra aprender suficientemente de los datos de entrenamiento, lo que resulta en bajo rendimiento tanto en entrenamiento como en validación.
-
-\newpage
-
-\paragraph{Versión V5 - Configuración Híbrida Exitosa:}
-La V5 combinó la división 70/10/20 con técnicas anti-sobreajuste, manteniendo gap de 0.037 y exactitud del 95.8\% pero extendiendo a 11 épocas para mejor estabilidad. \textbf{Lección aprendida:} La hibridación de estrategias exitosas puede mantener rendimiento mientras mejora robustez.
-
-\paragraph{Versión V6 - Regularización Máxima Inicial:}
-La V6 implementó regularización extrema con taza de aprendizaje de 1e-05, dropout 0.5, L2 regularization 0.5 y detención temprana agresivo de 2 épocas. Resultó en gap de 0.051 y exactitud del 94.8\% en 8 épocas. \textbf{Lección aprendida:} La regularización extrema puede limitar la capacidad de aprendizaje si no se balancea adecuadamente.
-
-\paragraph{Versión V7 - Configuración Final Óptima:}
-La V7 implementó regularización máxima corregida con tasas de aprendizaje ultra-bajos (2e-06), dropout agresivo (0.7), L2 regularization (0.05), inyección de ruido (0.03) y tamaños de lote variable (4). Alcanzó gap de 0.050 con exactitud del 95.2\% en 21 épocas con mejor época en la 13. \textbf{Lección aprendida:} La regularización coordenada múltiple con técnicas avanzadas logra el mejor balance convergencia-generalización.
+%\paragraph{Versión V7 - Configuración Final Óptima:}
+%La V7 implementó regularización máxima corregida con tasas de aprendizaje ultra-bajos (2e-06), dropout agresivo (0.7), L2 regularization (0.05), inyección de ruido (0.03) y tamaños de lote variable (4). Alcanzó gap de 0.050 con exactitud del 95.2\% en 21 épocas con mejor época en la 13. \textbf{Lección aprendida:} La regularización coordenada múltiple con técnicas avanzadas logra el mejor balance convergencia-generalización.
 
 \subsubsection{Configuraciones Técnicas Comparativas}
 
