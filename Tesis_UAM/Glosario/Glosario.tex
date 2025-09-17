@@ -41,6 +41,17 @@
 \newacronym{fp}{FP}{False Positive (Falso Positivo)}
 \newacronym{fn}{FN}{False Negative (Falso Negativo)}
 
+% Nuevas adiciones: Acrónimos de modelos
+\newacronym{beto}{BETO}{Bidirectional Encoder Representations from Transformers for Spanish}
+\newacronym{roberta}{RoBERTa}{Robustly Optimized BERT Pretraining Approach}
+\newacronym{llama}{LLaMA}{Large Language Model Meta AI}
+\newacronym{gemini}{Gemini}{A Family of Highly Capable Multimodal Models}
+
+% Nuevas adiciones: Acrónimos de herramientas de desarrollo
+\newacronym{docker}{Docker}{Plataforma para contenerización que empaqueta una aplicación y sus dependencias en un entorno aislado y reproducible.}
+\newacronym{flask}{Flask}{Microframework de Python utilizado para construir aplicaciones web y APIs RESTful.}
+\newacronym{restful}{RESTful}{Estilo de arquitectura de software para sistemas hipermedia distribuidos, comúnmente utilizado para el diseño de APIs web.}
+
 % =============================================================================
 % TÉRMINOS FUNDAMENTALES DE LA INVESTIGACIÓN
 % =============================================================================
@@ -134,6 +145,11 @@
 	description={Proceso de ajustar un modelo pre-entrenado en una tarea específica utilizando un conjunto de datos más pequeño y especializado. Permite aprovechar el conocimiento general del modelo pre-entrenado para tareas particulares.}
 }
 
+% Nuevas adiciones:
+\newglossaryentry{ngramas}{
+	name={n-gramas},
+	description={Secuencias contiguas de n elementos (palabras o caracteres) de un texto, que capturan el contexto local y las dependencias secuenciales. En esta tesis, se utilizan n-gramas de palabras como características para la representación TF-IDF.}
+}
 % =============================================================================
 % TÉRMINOS DE ALGORITMOS METAHEURÍSTICOS
 % =============================================================================
@@ -171,6 +187,37 @@
 \newglossaryentry{explotacion}{
 	name={Explotación},
 	description={Capacidad de un algoritmo para refinar y mejorar soluciones prometedoras encontradas, concentrando la búsqueda en regiones del espacio que han mostrado buenos resultados.}
+}
+
+% Nuevas adiciones: Términos de optimización
+\newglossaryentry{kerastuner}{
+	name={KerasTuner},
+	description={Una biblioteca de software para la optimización de hiperparámetros de modelos de aprendizaje automático, especialmente en TensorFlow, que permite explorar eficientemente diferentes combinaciones de parámetros.}
+}
+
+\newglossaryentry{learningrate}{
+	name={Tasa de Aprendizaje (Learning Rate)},
+	description={Un hiperparámetro que determina el tamaño de los pasos que un algoritmo de optimización (como el descenso de gradiente) toma para actualizar los parámetros del modelo en cada iteración. Una tasa de aprendizaje ultra-baja se utilizó para una convergencia más controlada y estable.}
+}
+
+\newglossaryentry{dropout}{
+	name={Dropout},
+	description={Una técnica de regularización utilizada en redes neuronales para prevenir el sobreajuste. Consiste en desactivar aleatoriamente una fracción de las neuronas de una capa durante el entrenamiento, obligando al modelo a aprender patrones más robustos.}
+}
+
+\newglossaryentry{earlystopping}{
+	name={Parada Temprana (Early Stopping)},
+	description={Un mecanismo de regularización que detiene el proceso de entrenamiento cuando el rendimiento del modelo en un conjunto de validación deja de mejorar. Se utiliza para prevenir el sobreajuste y reducir el tiempo de cómputo.}
+}
+
+\newglossaryentry{gapgeneralizacion}{
+	name={Gap de Generalización (Generalization Gap)},
+	description={La diferencia entre el rendimiento de un modelo en el conjunto de entrenamiento y en un conjunto de validación o prueba. Un gap pequeño indica que el modelo generaliza bien, mientras que un gap grande es un indicador de sobreajuste.}
+}
+
+\newglossaryentry{jobschedules}{
+	name={Programación de Trabajos (Job Shop Scheduling)},
+	description={Un problema de optimización combinatoria que implica la asignación de tareas a recursos en un tiempo determinado. Se menciona en la literatura como una perspectiva para modelar la optimización del flujo de datos en la detección de noticias falsas.}
 }
 
 % =============================================================================
