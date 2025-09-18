@@ -895,16 +895,15 @@ VNS, introducida por Mladenović y Hansen \cite{mladenovic1997variable}, se insp
 \small
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
+\rowcolor{UAMAzcapo}
 \textbf{\textcolor{white}{Parámetro}} & \textbf{\textcolor{white}{Valor}} & \textbf{\textcolor{white}{Descripción}} \\
 \hline
-\rowcolor{LightCoral}
+\rowcolor{UAMAzcapoLight!40}
 Máximo de iteraciones & 20 & Ciclos de búsqueda completos \\
 \hline
-\rowcolor{ProfessionalGray}
 Vecindarios máximos (k\_max) & 5 & Estructuras de vecindad diferentes \\
 \hline
-\rowcolor{LightCoral}
+\rowcolor{UAMAzcapoLight!40}
 Estrategia de vecindario & k elementos aleatorios & Modificación de k componentes simultáneas \\
 \hline
 \end{tabular}
@@ -930,22 +929,20 @@ PSO, desarrollado por Kennedy y Eberhart \cite{kennedy1995particle}, se fundamen
 \small
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
+\rowcolor{UAMAzcapo}
 \textbf{\textcolor{white}{Parámetro}} & \textbf{\textcolor{white}{Valor}} & \textbf{\textcolor{white}{Descripción}} \\
 \hline
-\rowcolor{LightPink}
+\rowcolor{UAMAzcapoLight!40}
 Número de partículas & 30 & Agentes en el enjambre \\
 \hline
-\rowcolor{ProfessionalGray}
 Máximo de iteraciones & 20 & Movimientos del enjambre \\
 \hline
-\rowcolor{LightPink}
+\rowcolor{UAMAzcapoLight!40}
 Factor de inercia (w) & 0.5 & Influencia del movimiento previo \\
 \hline
-\rowcolor{ProfessionalGray}
 Coeficiente cognitivo (c1) & 1.5 & Peso de la experiencia personal \\
 \hline
-\rowcolor{LightPink}
+\rowcolor{UAMAzcapoLight!40}
 Coeficiente social (c2) & 1.5 & Peso de la experiencia colectiva \\
 \hline
 \end{tabular}
@@ -953,6 +950,7 @@ Coeficiente social (c2) & 1.5 & Peso de la experiencia colectiva \\
 \caption{Configuración de parámetros del algoritmo PSO.}
 \label{tab:parametros_pso}
 \end{table}
+
 
 El comportamiento del enjambre se rige por:
 \begin{itemize}
@@ -986,22 +984,20 @@ Para hacer computacionalmente factible la optimización, se aplicó reducción d
 \small
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
+\rowcolor{UAMAzcapo}
 \textbf{\textcolor{white}{Aspecto}} & \textbf{\textcolor{white}{Configuración}} & \textbf{\textcolor{white}{Justificación}} \\
 \hline
-\rowcolor{ProfessionalGray}
+\rowcolor{UAMAzcapoLight!40}
 Método de selección & SelectPercentile & Selección basada en estadísticas univariadas \\
 \hline
-\rowcolor{LightBlue}
 Porcentaje seleccionado & 10\% & Balance entre información y eficiencia \\
 \hline
-\rowcolor{ProfessionalGray}
+\rowcolor{UAMAzcapoLight!40}
 Test estadístico & Chi-cuadrado & Adecuado para clasificación binaria \\
 \hline
-\rowcolor{LightBlue}
 Características originales & 5,000 & Vocabulario TF-IDF completo \\
 \hline
-\rowcolor{ProfessionalGray}
+\rowcolor{UAMAzcapoLight!40}
 Características reducidas & 500 & Dimensionalidad manejable \\
 \hline
 \end{tabular}
@@ -1009,6 +1005,7 @@ Características reducidas & 500 & Dimensionalidad manejable \\
 \caption{Configuración del proceso de reducción de dimensionalidad.}
 \label{tab:reduccion_dimensionalidad}
 \end{table}
+
 
 Esta estrategia de reducción permite que los algoritmos metaheurísticos operen eficientemente sobre un espacio de características optimizado, manteniendo la información más discriminativa para la tarea de clasificación.
 
@@ -1027,16 +1024,16 @@ Para la selección del modelo óptimo se realizó un análisis comparativo entre
 \small
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Modelo} & \textbf{Parámetros} & \textbf{Capas} & \textbf{Dimensión} & \textbf{Soporte Español} & \textbf{Reducción vs BERT} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Modelo}} & \textbf{\textcolor{white}{Parámetros}} & \textbf{\textcolor{white}{Capas}} & \textbf{\textcolor{white}{Dimensión}} & \textbf{\textcolor{white}{Soporte Español}} & \textbf{\textcolor{white}{Reducción vs BERT}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{BERT-base-multilingual} & 110M & 12 & 768 & Sí & -- (Referencia) \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{DistilBERT-multilingual} & 66M & 6 & 768 & Sí & 40\% parámetros \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{TinyBERT} & 14.5M & 4 & 312 & Limitado & 87\% parámetros \\
 \hline
 \end{tabular}
@@ -1066,19 +1063,19 @@ El entrenamiento del modelo DistilBERT se realizó en un entorno de hardware ded
 \small
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Componente} & \textbf{Especificación} & \textbf{Características Relevantes} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Componente}} & \textbf{\textcolor{white}{Especificación}} & \textbf{\textcolor{white}{Características Relevantes}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Procesador} & AMD Ryzen 7 7735H & \begin{tabular}[t]{@{}l@{}}8 núcleos, 16 hilos\\4.75 GHz boost\\Arquitectura Zen 3+ (6nm)\end{tabular} \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{GPU} & NVIDIA GeForce RTX 4060 & \begin{tabular}[t]{@{}l@{}}8GB GDDR6 VRAM\\3072 núcleos CUDA\\140W TGP\\Soporte mixed precision\end{tabular} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Memoria RAM} & 16GB DDR5 & \begin{tabular}[t]{@{}l@{}}Capacidad para datasets grandes\\Procesamiento de batches\end{tabular} \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{Almacenamiento} & x2 500GB SSD NVMe & \begin{tabular}[t]{@{}l@{}}Acceso rápido a datos\\Checkpointing eficiente\end{tabular} \\
 \hline
 \end{tabular}
@@ -1101,22 +1098,20 @@ La configuración base del modelo se estableció considerando las limitaciones c
 \small
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Parámetro} & \textbf{Valor} & \textbf{Justificación} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Parámetro}} & \textbf{\textcolor{white}{Valor}} & \textbf{\textcolor{white}{Justificación}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMAzcapoLight!40}
 Longitud máxima de secuencia & 128 tokens & \begin{tabular}[t]{@{}l@{}}Reducido desde 512\\Minimizar overfitting\end{tabular} \\
 \hline
-\rowcolor{LightSkyBlue!30}
 Épocas máximas & 30 & Suficiente para convergencia \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMAzcapoLight!40}
 Paciencia early stopping & 8 épocas & Evitar sobreentrenamiento \\
 \hline
-\rowcolor{LightGoldenrod!30}
 Factor de reducción LR & 0.15 & \begin{tabular}[t]{@{}l@{}}Más agresivo que estándar\\Convergencia controlada\end{tabular} \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!40}
 Precisión numérica & mixed\_float16 & Optimización de memoria GPU \\
 \hline
 \end{tabular}
@@ -1135,25 +1130,25 @@ Para controlar el overfitting identificado en experimentos preliminares, se impl
 \small
 \begin{tabular}{|l|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Técnica} & \textbf{Rango Explorado} & \textbf{Valor Óptimo} & \textbf{Propósito} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Técnica}} & \textbf{\textcolor{white}{Rango Explorado}} & \textbf{\textcolor{white}{Valor Óptimo}} & \textbf{\textcolor{white}{Propósito}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMCuajimalpaLight!50}
 Learning Rate Ultra-bajo & [8e-7, 5e-6] & 2e-06 & Convergencia controlada \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMIztapalapaLight!50}
 Dropout Agresivo & [0.4, 0.7] & 0.7 & Prevención de co-adaptación \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 Regularización L2 & [0.05, 0.5] & 0.05 & Control de pesos \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMXochimilcoLight!50}
 Weight Decay Manual & 0.02 fijo & 0.02 & Aplicado por batch \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!50}
 Noise Injection & [0.01, 0.03] & 0.03 & Alternativa a label smoothing \\
 \hline
-\rowcolor{ProfessionalGray!30}
+\rowcolor{UAMCuajimalpaLight!50}
 Batch Size Variable & \{4, 6, 8\} & 4 & Mayor regularización \\
 \hline
 \end{tabular}
@@ -1188,16 +1183,15 @@ Ambos enfoques fueron sometidos al mismo esquema de evaluación estructurado que
 \small
 \begin{tabular}{|l|c|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Fase} & \textbf{Conjunto} & \textbf{Porcentaje} & \textbf{Propósito} & \textbf{Restricciones} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Fase}} & \textbf{\textcolor{white}{Conjunto}} & \textbf{\textcolor{white}{Porcentaje}} & \textbf{\textcolor{white}{Propósito}} & \textbf{\textcolor{white}{Restricciones}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMAzcapoLight!40}
 \textbf{Entrenamiento} & Training & 70\% & \begin{tabular}[t]{@{}l@{}}Aprendizaje de parámetros\\Ajuste de pesos del modelo\end{tabular} & \begin{tabular}[t]{@{}l@{}}Exclusivo para entrenamiento\\Sin acceso a otros conjuntos\end{tabular} \\
 \hline
-\rowcolor{LightSkyBlue!30}
 \textbf{Validación} & Validation & 10\% & \begin{tabular}[t]{@{}l@{}}Calibración de hiperparámetros\\Selección de configuraciones\end{tabular} & \begin{tabular}[t]{@{}l@{}}No utilizado en entrenamiento\\Guía para optimización\end{tabular} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMAzcapoLight!40}
 \textbf{Evaluación Final} & Test & 20\% & \begin{tabular}[t]{@{}l@{}}Prueba objetiva\\Métricas de rendimiento\end{tabular} & \begin{tabular}[t]{@{}l@{}}Completamente no visto\\Una sola evaluación final\end{tabular} \\
 \hline
 \end{tabular}
@@ -1216,19 +1210,19 @@ Para la evaluación de modelos de clasificación binaria en detección de notici
 \small
 \begin{tabular}{|l|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Categoría} & \textbf{Descripción} & \textbf{Interpretación en Noticias Falsas} & \textbf{Impacto} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Categoría}} & \textbf{\textcolor{white}{Descripción}} & \textbf{\textcolor{white}{Interpretación en Noticias Falsas}} & \textbf{\textcolor{white}{Impacto}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Verdaderos Positivos (TP)} & \begin{tabular}[t]{@{}l@{}}Predicción: REAL\\Realidad: REAL\end{tabular} & \begin{tabular}[t]{@{}l@{}}Contenido real correctamente\\identificado como real\end{tabular} & \begin{tabular}[t]{@{}l@{}}Positivo\\Preserva información legítima\end{tabular} \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{Verdaderos Negativos (TN)} & \begin{tabular}[t]{@{}l@{}}Predicción: FALSO\\Realidad: FALSO\end{tabular} & \begin{tabular}[t]{@{}l@{}}Contenido falso correctamente\\identificado como falso\end{tabular} & \begin{tabular}[t]{@{}l@{}}Positivo\\Detecta desinformación\end{tabular} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Falsos Positivos (FP)} & \begin{tabular}[t]{@{}l@{}}Predicción: REAL\\Realidad: FALSO\end{tabular} & \begin{tabular}[t]{@{}l@{}}Contenido falso incorrectamente\\clasificado como real\end{tabular} & \begin{tabular}[t]{@{}l@{}}Negativo\\Permite propagación de falsedad\end{tabular} \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Falsos Negativos (FN)} & \begin{tabular}[t]{@{}l@{}}Predicción: FALSO\\Realidad: REAL\end{tabular} & \begin{tabular}[t]{@{}l@{}}Contenido real incorrectamente\\clasificado como falso\end{tabular} & \begin{tabular}[t]{@{}l@{}}Negativo\\Censura información legítima\end{tabular} \\
 \hline
 \end{tabular}
@@ -1247,16 +1241,16 @@ La estructura de la matriz de confusión para clasificación binaria se puede re
 \small
 \begin{tabular}{|c|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\multicolumn{1}{|c|}{} & \multicolumn{2}{c|}{\textbf{Predicción del Modelo}} \\
+\rowcolor{UAMAzcapo}
+\multicolumn{1}{|c|}{\textcolor{white}{\textbf{}}} & \multicolumn{2}{c|}{\textcolor{white}{\textbf{Predicción del Modelo}}} \\
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Realidad} & \textbf{REAL} & \textbf{FALSO} \\
+\rowcolor{UAMAzcapo}
+\textcolor{white}{\textbf{Realidad}} & \textcolor{white}{\textbf{REAL}} & \textcolor{white}{\textbf{FALSO}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{REAL} & TP & FN \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{FALSO} & FP & TN \\
 \hline
 \end{tabular}
@@ -1327,22 +1321,22 @@ Utilizando las definiciones anteriores, el rendimiento se evaluó con un conjunt
 \footnotesize
 \begin{tabular}{|l|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Métrica} & \textbf{Fórmula} & \textbf{Interpretación} & \textbf{Relevancia en Detección} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Métrica}} & \textbf{\textcolor{white}{Fórmula}} & \textbf{\textcolor{white}{Interpretación}} & \textbf{\textcolor{white}{Relevancia en Detección}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Exactitud} & $\frac{TP + TN}{TP + TN + FP + FN}$ & \begin{tabular}[t]{@{}l@{}}Proporción total de\\predicciones correctas\end{tabular} & \begin{tabular}[t]{@{}l@{}}Rendimiento general\\en datos balanceados\end{tabular} \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Precisión} & $\frac{TP}{TP + FP}$ & \begin{tabular}[t]{@{}l@{}}Confiabilidad de\\predicciones positivas\end{tabular} & \begin{tabular}[t]{@{}l@{}}Minimizar falsas alarmas\\de contenido falso\end{tabular} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Exhaustividad} & $\frac{TP}{TP + FN}$ & \begin{tabular}[t]{@{}l@{}}Capacidad de detectar\\casos positivos reales\end{tabular} & \begin{tabular}[t]{@{}l@{}}Detectar todo contenido\\verdaderamente falso\end{tabular} \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{F1-Score} & $2 \times \frac{Precision \times Recall}{Precision + Recall}$ & \begin{tabular}[t]{@{}l@{}}Balance entre precisión\\y exhaustividad\end{tabular} & \begin{tabular}[t]{@{}l@{}}Métrica principal para\\comparación de modelos\end{tabular} \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{Especificidad} & $\frac{TN}{TN + FP}$ & \begin{tabular}[t]{@{}l@{}}Capacidad de identificar\\casos negativos correctos\end{tabular} & \begin{tabular}[t]{@{}l@{}}Evitar clasificar contenido\\real como falso\end{tabular} \\
 \hline
 \end{tabular}
@@ -1439,19 +1433,19 @@ La selección del modelo óptimo se basará en una evaluación multi-criterio qu
 \small
 \begin{tabular}{|l|c|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Criterio} & \textbf{Peso} & \textbf{Métrica Principal} & \textbf{Métricas Secundarias} & \textbf{Justificación} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Criterio}} & \textbf{\textcolor{white}{Peso}} & \textbf{\textcolor{white}{Métrica Principal}} & \textbf{\textcolor{white}{Métricas Secundarias}} & \textbf{\textcolor{white}{Justificación}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Rendimiento Predictivo} & 40\% & F1-Score & \begin{tabular}[t]{@{}l@{}}Precision, Recall\\Accuracy, Specificity\end{tabular} & \begin{tabular}[t]{@{}l@{}}Capacidad fundamental\\de clasificación\end{tabular} \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Estabilidad del Modelo} & 25\% & Desviación estándar F1 & \begin{tabular}[t]{@{}l@{}}Varianza en múltiples\\ejecuciones\end{tabular} & \begin{tabular}[t]{@{}l@{}}Consistencia y\\confiabilidad\end{tabular} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Eficiencia Computacional} & 20\% & Tiempo de inferencia & \begin{tabular}[t]{@{}l@{}}Memoria utilizada\\Recursos GPU/CPU\end{tabular} & \begin{tabular}[t]{@{}l@{}}Viabilidad práctica\\de implementación\end{tabular} \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{Capacidad de Generalización} & 15\% & Gap Training-Test & \begin{tabular}[t]{@{}l@{}}Diferencia entre\\rendimiento interno y externo\end{tabular} & \begin{tabular}[t]{@{}l@{}}Robustez ante\\datos no vistos\end{tabular} \\
 \hline
 \end{tabular}
@@ -1481,22 +1475,20 @@ Los resultados se presentarán siguiendo un formato estandarizado que incluye:
 \small
 \begin{tabular}{|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Componente del Reporte} & \textbf{Contenido} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Componente del Reporte}} & \textbf{\textcolor{white}{Contenido}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMAzcapoLight!40}
 Tabla de métricas principales & Accuracy, Precision, Recall, F1-Score, Specificity \\
 \hline
-\rowcolor{LightSkyBlue!30}
 Análisis de variabilidad & Media ± desviación estándar por métrica \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMAzcapoLight!40}
 Benchmarking de eficiencia & Tiempos de inferencia y uso de recursos \\
 \hline
-\rowcolor{LightGoldenrod!30}
 Matrices de confusión & Visualización normalizada y análisis de errores \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!40}
 Recomendación final & Modelo seleccionado con justificación integral \\
 \hline
 \end{tabular}
@@ -1520,22 +1512,22 @@ El desarrollo de los algoritmos metaheurísticos se realizó en un entorno cloud
 \small
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Componente} & \textbf{Especificación} & \textbf{Ventajas para Metaheurísticos} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Componente}} & \textbf{\textcolor{white}{Especificación}} & \textbf{\textcolor{white}{Ventajas para Metaheurísticos}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Plataforma} & Google Colab Pro & \begin{tabular}[t]{@{}l@{}}Acceso a recursos escalables\\Flexibilidad de configuración\end{tabular} \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Procesamiento} & CPU Intel/AMD variable & \begin{tabular}[t]{@{}l@{}}Suficiente para algoritmos iterativos\\Paralelización básica\end{tabular} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Memoria RAM} & 12-16 GB & Carga completa de datasets \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{Almacenamiento} & Google Drive integrado & \begin{tabular}[t]{@{}l@{}}Persistencia entre sesiones\\Versionado de experimentos\end{tabular} \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{GPU} & No requerida & Algoritmos CPU-intensivos \\
 \hline
 \end{tabular}
@@ -1554,40 +1546,40 @@ La implementación utilizó un ecosistema de software cuidadosamente seleccionad
 \footnotesize
 \begin{tabular}{|l|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Categoría} & \textbf{Herramienta/Librería} & \textbf{Versión} & \textbf{Propósito Específico} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Categoría}} & \textbf{\textcolor{white}{Herramienta/Librería}} & \textbf{\textcolor{white}{Versión}} & \textbf{\textcolor{white}{Propósito Específico}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Lenguaje Base} & Python & 3.9.x & \begin{tabular}[t]{@{}l@{}}Lenguaje principal\\Compatibilidad con ecosistema ML\end{tabular} \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Deep Learning} & TensorFlow & 2.15.0 & \begin{tabular}[t]{@{}l@{}}Framework principal para DistilBERT\\Soporte GPU optimizado\end{tabular} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Transformers} & transformers (Hugging Face) & 4.35.0 & \begin{tabular}[t]{@{}l@{}}Modelos pre-entrenados\\Tokenización avanzada\end{tabular} \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{ML Tradicional} & scikit-learn & 1.3.2 & \begin{tabular}[t]{@{}l@{}}Algoritmos metaheurísticos\\Métricas de evaluación\end{tabular} \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{Procesamiento} & pandas & 2.1.3 & Manipulación de datasets \\
 \hline
-\rowcolor{ProfessionalGray!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Cómputo Numérico} & numpy & 1.25.2 & \begin{tabular}[t]{@{}l@{}}Operaciones matriciales\\Algoritmos de optimización\end{tabular} \\
 \hline
-\rowcolor{LightBlue!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{NLP} & NLTK & 3.8.1 & \begin{tabular}[t]{@{}l@{}}Preprocesamiento de texto\\Tokenización y limpieza\end{tabular} \\
 \hline
-\rowcolor{LightGreen!20}
+\rowcolor{UAMLermaLight!50}
 \textbf{Visualización} & matplotlib / seaborn & 3.8.1 / 0.12.2 & \begin{tabular}[t]{@{}l@{}}Gráficos de resultados\\Matrices de confusión\end{tabular} \\
 \hline
-\rowcolor{LightSkyBlue!20}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{Serialización} & joblib & 1.3.2 & \begin{tabular}[t]{@{}l@{}}Guardado de modelos\\Persistencia de experimentos\end{tabular} \\
 \hline
-\rowcolor{LightCoral!20}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{Web Framework} & Flask & 2.3.3 & API REST para aplicación final \\
 \hline
-\rowcolor{LightGoldenrod!20}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Contenerización} & Docker & 24.0.x & \begin{tabular}[t]{@{}l@{}}Deployment reproducible\\Aislamiento de dependencias\end{tabular} \\
 \hline
 \end{tabular}
@@ -1611,19 +1603,19 @@ Se estableció un marco ético comprehensivo que guía todas las decisiones de d
 \small
 \begin{tabular}{|l|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Principio Ético} & \textbf{Implementación} & \textbf{Mecanismo de Control} & \textbf{Impacto Esperado} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Principio Ético}} & \textbf{\textcolor{white}{Implementación}} & \textbf{\textcolor{white}{Mecanismo de Control}} & \textbf{\textcolor{white}{Impacto Esperado}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Transparencia} & \begin{tabular}[t]{@{}l@{}}Código fuente abierto\\Metodología pública\end{tabular} & \begin{tabular}[t]{@{}l@{}}Repositorio GitHub público\\Documentación completa\end{tabular} & \begin{tabular}[t]{@{}l@{}}Auditoría independiente\\Reproducibilidad científica\end{tabular} \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Responsabilidad} & \begin{tabular}[t]{@{}l@{}}Herramienta de apoyo\\No decisión final\end{tabular} & \begin{tabular}[t]{@{}l@{}}Interfaz con disclaimers\\Scores de confianza\end{tabular} & \begin{tabular}[t]{@{}l@{}}Uso responsable\\Juicio humano preservado\end{tabular} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Privacidad} & \begin{tabular}[t]{@{}l@{}}Procesamiento local\\No almacenamiento personal\end{tabular} & \begin{tabular}[t]{@{}l@{}}Anonimización automática\\Logs temporales únicamente\end{tabular} & \begin{tabular}[t]{@{}l@{}}Protección de datos\\Cumplimiento GDPR\end{tabular} \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{Equidad} & \begin{tabular}[t]{@{}l@{}}Datasets balanceados\\Evaluación multi-métrica\end{tabular} & \begin{tabular}[t]{@{}l@{}}Análisis de sesgos\\Validación cruzada\end{tabular} & \begin{tabular}[t]{@{}l@{}}Tratamiento imparcial\\Reducción de discriminación\end{tabular} \\
 \hline
 \end{tabular}
@@ -1631,7 +1623,6 @@ Se estableció un marco ético comprehensivo que guía todas las decisiones de d
 \caption{Marco ético implementado para el desarrollo responsable de la herramienta.}
 \label{tab:marco_etico}
 \end{table}
-
 
 \subsection{Limitaciones Declaradas y Uso Responsable}
 
@@ -1659,22 +1650,22 @@ Para facilitar la reproducción completa del estudio y su extensión por parte d
 \small
 \begin{tabular}{|l|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Artefacto} & \textbf{Formato} & \textbf{Contenido} & \textbf{Disponibilidad} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Artefacto}} & \textbf{\textcolor{white}{Formato}} & \textbf{\textcolor{white}{Contenido}} & \textbf{\textcolor{white}{Disponibilidad}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Código fuente completo} & GitHub repository & \begin{tabular}[t]{@{}l@{}}Scripts de entrenamiento\\Algoritmos implementados\\Flujo de datos completo\end{tabular} & Público (MIT License) \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Datasets procesados} & CSV + metadata & \begin{tabular}[t]{@{}l@{}}Corpus unificado\\División train/val/test\\Estadísticas descriptivas\end{tabular} & \begin{tabular}[t]{@{}l@{}}Público (respetando\\licencias originales)\end{tabular} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Modelos entrenados} & \begin{tabular}[t]{@{}l@{}}joblib (metaheurísticos)\\SavedModel (DistilBERT)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Pesos optimizados\\Configuraciones\\Métricas de evaluación\end{tabular} & \begin{tabular}[t]{@{}l@{}}Público\\(Hugging Face Hub)\end{tabular} \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{Entorno de ejecución} & Docker containers & \begin{tabular}[t]{@{}l@{}}Imagen completa\\Dependencias exactas\\Scripts de ejecución\end{tabular} & Docker Hub público \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{Resultados experimentales} & JSON + visualizaciones & \begin{tabular}[t]{@{}l@{}}Métricas detalladas\\Matrices de confusión\\Logs de entrenamiento\end{tabular} & \begin{tabular}[t]{@{}l@{}}Repositorio principal\\Supplementary material\end{tabular} \\
 \hline
 \end{tabular}

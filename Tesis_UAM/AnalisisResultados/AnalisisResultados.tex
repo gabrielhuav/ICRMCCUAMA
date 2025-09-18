@@ -20,23 +20,23 @@ El corpus utilizado para todos los experimentos presentaba inicialmente las sigu
 \footnotesize
 \begin{tabular}{|c|l|l|c|c|l|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{ID} & \textbf{Nombre del Corpus} & \textbf{Autores Principales} & \textbf{Año} & \textbf{Noticias} & \textbf{Características} & \textbf{Ref.} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{ID}} & \textbf{\textcolor{white}{Nombre del Corpus}} & \textbf{\textcolor{white}{Autores Principales}} & \textbf{\textcolor{white}{Año}} & \textbf{\textcolor{white}{Noticias}} & \textbf{\textcolor{white}{Características}} & \textbf{\textcolor{white}{Ref.}} \\
 \hline
-\rowcolor{UAMAzcapoLight!30}
+\rowcolor{UAMIztapalapaLight!50}
 1 & \begin{tabular}[t]{@{}l@{}}Spanish Fake News Corpus\\(IberLEF)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Posadas-Durán, J.P.\\Gómez-Adorno, H.\end{tabular} & 2019-2021 & 971 & \begin{tabular}[t]{@{}l@{}}Análisis estilométrico\\Múltiples versiones\end{tabular} & \cite{posadas2019detection} \\
 \hline
-\rowcolor{UAMCuajimalpaLight!30}
+\rowcolor{UAMCuajimalpaLight!50}
 2 & \begin{tabular}[t]{@{}l@{}}Conjunto de datos Zules Acosta\\(UPM)\end{tabular} & Acosta, F.A.Z. & 2019 & 598 & \begin{tabular}[t]{@{}l@{}}Trabajo fin de maestría\\Extracción web verificada\end{tabular} & \cite{acosta2019construccion} \\
 \hline
-\rowcolor{UAMIztapalapaLight!30}
+\rowcolor{UAMLermaLight!50}
 3 & \begin{tabular}[t]{@{}l@{}}Conjunto de datos Tretiakov\\(Kaggle)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Tretiakov, A.\\Martín García, A.\end{tabular} & 2022 & 1,958 & \begin{tabular}[t]{@{}l@{}}Aprendizaje automático\\Disponible públicamente\end{tabular} & \cite{tretiakov2022detection} \\
 \hline
-\rowcolor{UAMLermaLight!30}
+\rowcolor{UAMXochimilcoLight!50}
 4 & \begin{tabular}[t]{@{}l@{}}Spanish Political Fake News\\Conjunto de datos\end{tabular} & \begin{tabular}[t]{@{}l@{}}Blanco-Fernández, Y.\\Otero-Vizoso, J.\end{tabular} & 2024 & 57,231 & \begin{tabular}[t]{@{}l@{}}Temática política\\Modelos BERT/RoBERTa\end{tabular} & \cite{blanco2024enhancing} \\
 \hline
-\rowcolor{UAMAzcapo!20}
-\multicolumn{5}{|c|}{\textbf{TOTAL CORPUS ACADÉMICOS}} & \textbf{60,758} & \textbf{Cuatro fuentes} \\
+\rowcolor{UAMAzcapo}
+\multicolumn{5}{|c|}{\textbf{\textcolor{white}{TOTAL CORPUS ACADÉMICOS}}} & \textbf{\textcolor{white}{60,758}} & \textbf{\textcolor{white}{Cuatro fuentes}} \\
 \hline
 \end{tabular}
 }
@@ -79,28 +79,28 @@ La tabla \ref{tab:configuracion_algoritmos_metaheuristicos} (ver tabla \ref{tab:
 \footnotesize
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Parámetro} & \textbf{MSA} & \textbf{SS} & \textbf{GA} & \textbf{VNS} & \textbf{PSO} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Parámetro}} & \textbf{\textcolor{white}{MSA}} & \textbf{\textcolor{white}{SS}} & \textbf{\textcolor{white}{GA}} & \textbf{\textcolor{white}{VNS}} & \textbf{\textcolor{white}{PSO}} \\
 \hline
-\rowcolor{LightBlue!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Iteraciones/Generaciones} & 31 temperaturas & 10 iteraciones & 20 generaciones & 20 iteraciones & 20 iteraciones \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Población/Agentes} & 5 multiarranques & 50 soluciones & 50 individuos & 1 solución & 30 partículas \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Parámetro Principal 1} & \begin{tabular}[t]{@{}l@{}}Temp. inicial:\\1000\end{tabular} & \begin{tabular}[t]{@{}l@{}}RefSet:\\5 soluciones\end{tabular} & \begin{tabular}[t]{@{}l@{}}Tasa mutación:\\0.1\end{tabular} & \begin{tabular}[t]{@{}l@{}}k\_max:\\5 vecindarios\end{tabular} & \begin{tabular}[t]{@{}l@{}}Factor inercia:\\0.5\end{tabular} \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{Parámetro Principal 2} & \begin{tabular}[t]{@{}l@{}}Temp. final:\\1.24\end{tabular} & \begin{tabular}[t]{@{}l@{}}Combinaciones:\\10 por iteración\end{tabular} & \begin{tabular}[t]{@{}l@{}}Torneo:\\3 competidores\end{tabular} & \begin{tabular}[t]{@{}l@{}}Estrategia:\\k elementos\end{tabular} & \begin{tabular}[t]{@{}l@{}}Coef. cognitivo:\\1.5\end{tabular} \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{Parámetro Principal 3} & \begin{tabular}[t]{@{}l@{}}Factor enfriamiento:\\0.8\end{tabular} & \begin{tabular}[t]{@{}l@{}}Mejora:\\Mutación aleatoria\end{tabular} & \begin{tabular}[t]{@{}l@{}}Cruce:\\Un punto\end{tabular} & \begin{tabular}[t]{@{}l@{}}Aceptación:\\Solo mejora\end{tabular} & \begin{tabular}[t]{@{}l@{}}Coef. social:\\1.5\end{tabular} \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Característica Especial} & \begin{tabular}[t]{@{}l@{}}100 pasos por\\temperatura\end{tabular} & \begin{tabular}[t]{@{}l@{}}Combinación\\sistemática\end{tabular} & \begin{tabular}[t]{@{}l@{}}Selección\\determinística\end{tabular} & \begin{tabular}[t]{@{}l@{}}Reinicio a k=1\\tras mejora\end{tabular} & \begin{tabular}[t]{@{}l@{}}Velocidad\\gaussiana inicial\end{tabular} \\
 \hline
-\rowcolor{HeaderBlue!20}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Filosofía de Búsqueda} & \begin{tabular}[t]{@{}l@{}}Aceptación\\probabilística\end{tabular} & \begin{tabular}[t]{@{}l@{}}Combinación\\estructurada\end{tabular} & \begin{tabular}[t]{@{}l@{}}Evolución\\darwiniana\end{tabular} & \begin{tabular}[t]{@{}l@{}}Cambio de\\vecindarios\end{tabular} & \begin{tabular}[t]{@{}l@{}}Inteligencia\\de enjambre\end{tabular} \\
 \hline
 \end{tabular}
@@ -133,14 +133,14 @@ Todos los algoritmos metaheurísticos utilizan una función de evaluación unifi
 \scriptsize
 \begin{tabular}{|l|l|}
 \hline
-\rowcolor{HeaderBlue!20}
-\multicolumn{2}{|l|}{\textbf{Función: evaluar\_solucion}$(solucion, pesos, umbrales, X, y)$} \\
+\rowcolor{UAMAzcapo}
+\multicolumn{2}{|l|}{\textbf{\textcolor{white}{Función: evaluar\_solucion}$(solucion, pesos, umbrales, X, y)$}} \\
 \hline
 \textbf{Entrada:} & Índices de características, pesos, umbrales, datos $X$, etiquetas $y$ \\
 \hline
 \textbf{Salida:} & Tupla (exactitud, predicciones) \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{Proceso de clasificación logística:}} \\
 \hline
 \multicolumn{2}{|l|}{Para cada instancia $i$ en $X$:} \\
@@ -170,21 +170,21 @@ El algoritmo MSA implementa una estrategia de multiarranque que ejecuta múltipl
 \scriptsize
 \begin{tabular}{|l|l|}
 \hline
-\rowcolor{LightBlue!20}
-\multicolumn{2}{|l|}{\textbf{Algoritmo MSA - Multi-Start Simulated Annealing}} \\
+\rowcolor{UAMAzcapo}
+\multicolumn{2}{|l|}{\textbf{\textcolor{white}{Algoritmo MSA - Multi-Start Simulated Annealing}}} \\
 \hline
 \textbf{Entrada:} & $TI=1000$, $TF=1$, $\alpha=0.8$, $pasos=100$, $puntos=5$ \\
 \hline
 \textbf{Salida:} & Mejor solución $(sol^*, pesos^*, umbrales^*)$ \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{0. Carga y preprocesamiento de datos:}} \\
 \hline
 \multicolumn{2}{|l|}{Cargar corpus TF-IDF desde archivo CSV} \\
 \multicolumn{2}{|l|}{Dividir datos: 80\% entrenamiento, 10\% validación, 10\% pruebas} \\
 \multicolumn{2}{|l|}{Aplicar SelectPercentile(percentile=10) para reducir características} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{1. Inicialización multiarranque:}} \\
 \hline
 \multicolumn{2}{|l|}{Para $k = 1$ hasta $puntos=5$:} \\
@@ -193,7 +193,7 @@ El algoritmo MSA implementa una estrategia de multiarranque que ejecuta múltipl
 \multicolumn{2}{|l|}{\quad $umbrales[k] \leftarrow$ np.random.uniform(0, 1, size=num\_caracteristicas)} \\
 \multicolumn{2}{|l|}{\quad $evaluaciones[k] \leftarrow$ evaluar\_solucion$(soluciones[k], pesos[k], umbrales[k])$} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{2. Proceso de enfriamiento gradual:}} \\
 \hline
 \multicolumn{2}{|l|}{$TA \leftarrow TI = 1000$} \\
@@ -206,7 +206,7 @@ El algoritmo MSA implementa una estrategia de multiarranque que ejecuta múltipl
 \multicolumn{2}{|l|}{\quad \quad \quad \quad Aceptar solución vecina} \\
 \multicolumn{2}{|l|}{\quad $TA \leftarrow TA \times \alpha = TA \times 0.8$} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{3. Evaluación final:}} \\
 \hline
 \multicolumn{2}{|l|}{$idx\_mejor \leftarrow \arg\max(evaluaciones)$} \\
@@ -230,28 +230,28 @@ El algoritmo SS utiliza una estrategia de combinación sistemática que mantiene
 \scriptsize
 \begin{tabular}{|l|l|}
 \hline
-\rowcolor{LightGreen!20}
-\multicolumn{2}{|l|}{\textbf{Algoritmo SS - Scatter Search}} \\
+\rowcolor{UAMAzcapo}
+\multicolumn{2}{|l|}{\textbf{\textcolor{white}{Algoritmo SS - Scatter Search}}} \\
 \hline
 \textbf{Entrada:} & $P=50$, $b=5$, $max\_iteraciones=10$, $num\_combinaciones=10$ \\
 \hline
 \textbf{Salida:} & Mejor solución del RefSet final \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{0. Carga y preprocesamiento de datos:}} \\
 \hline
 \multicolumn{2}{|l|}{Cargar corpus TF-IDF desde archivo CSV} \\
 \multicolumn{2}{|l|}{Dividir datos: 80\% entrenamiento, 10\% validación, 10\% pruebas} \\
 \multicolumn{2}{|l|}{Aplicar SelectPercentile(percentile=10) para reducir características} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{1. Generación de población inicial diversa:}} \\
 \hline
 \multicolumn{2}{|l|}{Para $i = 1$ hasta $P=50$: generar solución aleatoria y evaluar} \\
 \multicolumn{2}{|l|}{Ordenar población por score descendente} \\
 \multicolumn{2}{|l|}{$ref\_set \leftarrow poblacion[:b]$ (mejores $b=5$ soluciones)} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{2. Proceso iterativo de mejora:}} \\
 \hline
 \multicolumn{2}{|l|}{Para $iteracion = 1$ hasta $max\_iteraciones=10$:} \\
@@ -261,7 +261,7 @@ El algoritmo SS utiliza una estrategia de combinación sistemática que mantiene
 \multicolumn{2}{|l|}{\quad \quad Evaluar nueva solución} \\
 \multicolumn{2}{|l|}{\quad Actualizar $ref\_set$ con mejores $b$ soluciones} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{3. Evaluación final:}} \\
 \hline
 \multicolumn{2}{|l|}{Evaluar mejor solución del RefSet en conjunto de pruebas} \\
@@ -284,21 +284,21 @@ El algoritmo GA emplea una estrategia evolutiva basada en principios darwinianos
 \scriptsize
 \begin{tabular}{|l|l|}
 \hline
-\rowcolor{LightGoldenrod!20}
-\multicolumn{2}{|l|}{\textbf{Algoritmo GA - Genetic Algorithm}} \\
+\rowcolor{UAMAzcapo}
+\multicolumn{2}{|l|}{\textbf{\textcolor{white}{Algoritmo GA - Genetic Algorithm}}} \\
 \hline
 \textbf{Entrada:} & $num\_generaciones=20$, $tam\_poblacion=50$, $tasa\_mutacion=0.1$, $tam\_torneo=3$ \\
 \hline
 \textbf{Salida:} & Mejor individuo global encontrado \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{0. Carga y preprocesamiento de datos:}} \\
 \hline
 \multicolumn{2}{|l|}{Cargar corpus TF-IDF desde archivo CSV} \\
 \multicolumn{2}{|l|}{Dividir datos: 80\% entrenamiento, 10\% validación, 10\% pruebas} \\
 \multicolumn{2}{|l|}{Aplicar SelectPercentile(percentile=10) para reducir características} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{1. Inicialización y proceso evolutivo:}} \\
 \hline
 \multicolumn{2}{|l|}{Generar población inicial de $tam\_poblacion=50$ individuos} \\
@@ -310,7 +310,7 @@ El algoritmo GA emplea una estrategia evolutiva basada en principios darwinianos
 \multicolumn{2}{|l|}{\quad \quad Aplicar cruce de un punto} \\
 \multicolumn{2}{|l|}{\quad \quad Aplicar mutación con probabilidad 0.1} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{2. Evaluación final:}} \\
 \hline
 \multicolumn{2}{|l|}{Evaluar mejor individuo global en conjunto de pruebas} \\
@@ -333,21 +333,21 @@ El algoritmo VNS implementa una búsqueda sistemática que cambia de estructura 
 \scriptsize
 \begin{tabular}{|l|l|}
 \hline
-\rowcolor{LightCoral!20}
-\multicolumn{2}{|l|}{\textbf{Algoritmo VNS - Variable Neighborhood Search}} \\
+\rowcolor{UAMAzcapo}
+\multicolumn{2}{|l|}{\textbf{\textcolor{white}{Algoritmo VNS - Variable Neighborhood Search}}} \\
 \hline
 \textbf{Entrada:} & $max\_iteraciones=20$, $k\_max=5$ \\
 \hline
 \textbf{Salida:} & Mejor solución global encontrada \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{0. Carga y preprocesamiento de datos:}} \\
 \hline
 \multicolumn{2}{|l|}{Cargar corpus TF-IDF desde archivo CSV} \\
 \multicolumn{2}{|l|}{Dividir datos: 80\% entrenamiento, 10\% validación, 10\% pruebas} \\
 \multicolumn{2}{|l|}{Aplicar SelectPercentile(percentile=10) para reducir características} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{1. Inicialización y búsqueda en vecindades:}} \\
 \hline
 \multicolumn{2}{|l|}{Generar solución inicial aleatoria} \\
@@ -358,7 +358,7 @@ El algoritmo VNS implementa una búsqueda sistemática que cambia de estructura 
 \multicolumn{2}{|l|}{\quad \quad \textbf{Si mejora}: aceptar y $k \leftarrow 1$} \\
 \multicolumn{2}{|l|}{\quad \quad \textbf{Sino}: $k \leftarrow k + 1$} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{2. Evaluación final:}} \\
 \hline
 \multicolumn{2}{|l|}{Evaluar mejor solución global en conjunto de pruebas} \\
@@ -381,28 +381,28 @@ El algoritmo PSO simula el comportamiento de enjambres mediante partículas que 
 \scriptsize
 \begin{tabular}{|l|l|}
 \hline
-\rowcolor{LightPink!20}
-\multicolumn{2}{|l|}{\textbf{Algoritmo PSO - Particle Swarm Optimization}} \\
+\rowcolor{UAMAzcapo}
+\multicolumn{2}{|l|}{\textbf{\textcolor{white}{Algoritmo PSO - Particle Swarm Optimization}}} \\
 \hline
 \textbf{Entrada:} & $num\_particulas=30$, $max\_iteraciones=20$, $w=0.5$, $c1=1.5$, $c2=1.5$ \\
 \hline
 \textbf{Salida:} & Mejor posición global del enjambre \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{0. Carga y preprocesamiento de datos:}} \\
 \hline
 \multicolumn{2}{|l|}{Cargar corpus TF-IDF desde archivo CSV} \\
 \multicolumn{2}{|l|}{Dividir datos: 80\% entrenamiento, 10\% validación, 10\% pruebas} \\
 \multicolumn{2}{|l|}{Aplicar SelectPercentile(percentile=10) para reducir características} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{1. Inicialización del enjambre:}} \\
 \hline
 \multicolumn{2}{|l|}{$solucion\_fija \leftarrow$ np.arange(num\_caracteristicas)} \\
 \multicolumn{2}{|l|}{Inicializar 30 partículas con posiciones y velocidades aleatorias} \\
 \multicolumn{2}{|l|}{Evaluar partículas e inicializar mejores personal y global} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{2. Optimización del enjambre:}} \\
 \hline
 \multicolumn{2}{|l|}{Para $i = 1$ hasta $max\_iteraciones=20$:} \\
@@ -411,7 +411,7 @@ El algoritmo PSO simula el comportamiento de enjambres mediante partículas que 
 \multicolumn{2}{|l|}{\quad \quad Actualizar posición: $posicion + velocidad$} \\
 \multicolumn{2}{|l|}{\quad \quad Evaluar y actualizar mejores personal y global} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{3. Evaluación final:}} \\
 \hline
 \multicolumn{2}{|l|}{Evaluar mejor posición global en conjunto de pruebas} \\
@@ -565,22 +565,22 @@ Los resultados obtenidos son consistentes con investigación internacional recie
 \footnotesize
 \begin{tabular}{|l|c|c|c|c|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Algoritmo} & \textbf{Exactitud (\%)} & \textbf{F1-Score (macro)} & \textbf{Precisión (macro)} & \textbf{Exhaustividad (macro)} & \textbf{F1-Score (weighted)} & \textbf{Ranking} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Algoritmo}} & \textbf{\textcolor{white}{Exactitud (\%)}} & \textbf{\textcolor{white}{F1-Score (macro)}} & \textbf{\textcolor{white}{Precisión (macro)}} & \textbf{\textcolor{white}{Exhaustividad (macro)}} & \textbf{\textcolor{white}{F1-Score (weighted)}} & \textbf{\textcolor{white}{Ranking}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{GA} & 71.06 & 0.68 & 0.72 & 0.68 & 0.70 & 1º \\
 \hline
-\rowcolor{LightBlue!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{VNS} & 69.22 & 0.65 & 0.70 & 0.65 & 0.67 & 2º \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{SS} & 66.12 & 0.62 & 0.66 & 0.62 & 0.64 & 3º \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{MSA} & 58.36 & 0.54 & 0.56 & 0.55 & 0.56 & 4º \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{PSO} & 63.98 & 0.51 & 0.74 & 0.57 & 0.55 & 5º \\
 \hline
 \end{tabular}
@@ -597,22 +597,22 @@ Los resultados obtenidos son consistentes con investigación internacional recie
 \scriptsize
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Algoritmo} & \textbf{Fortalezas Principales} & \textbf{Debilidades Críticas} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Algoritmo}} & \textbf{\textcolor{white}{Fortalezas Principales}} & \textbf{\textcolor{white}{Debilidades Críticas}} \\
 \hline
-\rowcolor{LightGreen!20}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{GA} & \begin{tabular}[t]{@{}l@{}}• Mejor F1-Score macro (0.68)\\• Mejor exactitud global (71.06\%)\\• Convergencia evolutiva estable\end{tabular} & \begin{tabular}[t]{@{}l@{}}• Especificidad aún limitada (48\%)\\• Dependencia de operadores genéticos\end{tabular} \\
 \hline
-\rowcolor{LightBlue!20}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{VNS} & \begin{tabular}[t]{@{}l@{}}• Segundo mejor F1-Score macro (0.65)\\• Cambios efectivos de vecindario\\• Buena precisión macro (0.70)\end{tabular} & \begin{tabular}[t]{@{}l@{}}• Especificidad moderada (41\%)\\• Sensible a configuración de k\end{tabular} \\
 \hline
-\rowcolor{LightGoldenrod!20}
+\rowcolor{UAMLermaLight!50}
 \textbf{SS} & \begin{tabular}[t]{@{}l@{}}• Convergencia eficiente\\• F1-Score macro competitivo (0.62)\\• Balance razonable\end{tabular} & \begin{tabular}[t]{@{}l@{}}• Rendimiento intermedio\\• RefSet de tamaño fijo limitante\end{tabular} \\
 \hline
-\rowcolor{LightCoral!20}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{MSA} & \begin{tabular}[t]{@{}l@{}}• Exploración exhaustiva\\• Múltiples puntos de inicio\end{tabular} & \begin{tabular}[t]{@{}l@{}}• F1-Score macro bajo (0.54)\\• Convergencia lenta\\• Rendimiento general limitado\end{tabular} \\
 \hline
-\rowcolor{LightPink!20}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{PSO} & \begin{tabular}[t]{@{}l@{}}• Simplicidad conceptual\\• Alta precisión macro (0.74)\end{tabular} & \begin{tabular}[t]{@{}l@{}}• F1-Score macro más bajo (0.51)\\• Convergencia prematura crítica\\• Especificidad extremadamente baja (15\%)\end{tabular} \\
 \hline
 \end{tabular}
@@ -652,13 +652,13 @@ La investigación de Blanco-Fernández et al. \cite{blanco2024enhancing} demuest
 \footnotesize
 \begin{tabular}{|l|c|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Enfoque} & \textbf{Exactitud Máxima} & \textbf{F1-Score Macro Máximo} & \textbf{Diferencia vs. BERT} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Enfoque}} & \textbf{\textcolor{white}{Exactitud Máxima}} & \textbf{\textcolor{white}{F1-Score Macro Máximo}} & \textbf{\textcolor{white}{Diferencia vs. BERT}} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{Metaheurísticos (GA)} & 71.06\% & 0.68 & -20 a -27 p.p. \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Modelos de Lenguaje} & 90-98\% & 0.90-0.98 & Referencia \\
 \hline
 \end{tabular}
@@ -725,17 +725,17 @@ Para el entrenamiento del modelo DistilBERT se utilizó una versión expandida d
 \footnotesize
 \begin{tabular}{|l|c|c|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Componente del Corpus} & \textbf{Noticias} & \textbf{Distribución} & \textbf{Fuente} & \textbf{Calidad} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Componente del Corpus}} & \textbf{\textcolor{white}{Noticias}} & \textbf{\textcolor{white}{Distribución}} & \textbf{\textcolor{white}{Fuente}} & \textbf{\textcolor{white}{Calidad}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Corpus Académicos} & 60,758 & 98.5\% & Investigación verificada & Alta \\
 \hline
-\rowcolor{LightBlue!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Extracción web} & 916 & 1.5\% & Sitios de noticias & Verificada \\
 \hline
-\rowcolor{HeaderBlue!20}
-\textbf{Corpus Total} & 61,674 & 100\% & Híbrido & Controlada \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Corpus Total}} & \textbf{\textcolor{white}{61,674}} & \textbf{\textcolor{white}{100\%}} & \textbf{\textcolor{white}{Híbrido}} & \textbf{\textcolor{white}{Controlada}} \\
 \hline
 \end{tabular}
 }
@@ -765,27 +765,27 @@ La configuración final implementó una división específica para maximizar el 
 \footnotesize
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Componente} & \textbf{Configuración} & \textbf{Justificación} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Componente}} & \textbf{\textcolor{white}{Configuración}} & \textbf{\textcolor{white}{Justificación}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Modelo Base} & distilbert-base-multilingual-cased & Soporte nativo para español \\
 \hline
-\rowcolor{LightBlue!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Secuencia Máxima} & 128 tokens & Balance rendimiento/sobreajuste \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Formato de Entrada} & título + [SEP] + texto & Información estructurada \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{Precisión} & Mixed Float16 & Optimización de memoria GPU \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{Núm. Etiquetas} & 2 (binario) & Clasificación falso/real \\
 \hline
 \end{tabular}
 }
-\caption{Configuración arquitectónica del modelo DistilBERT implementado.}
+\caption{Configuración de la arquitectura del modelo DistilBERT implementado.}
 \label{tab:configuracion_distilbert}
 \end{table}
 
@@ -801,28 +801,28 @@ La configuración final implementó múltiples técnicas de regularización:
 \scriptsize
 \begin{tabular}{|l|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Técnica de Regularización} & \textbf{Valor/Configuración} & \textbf{Objetivo} & \textbf{Impacto} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Técnica de Regularización}} & \textbf{\textcolor{white}{Valor/Configuración}} & \textbf{\textcolor{white}{Objetivo}} & \textbf{\textcolor{white}{Impacto}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Tasa de Aprendizaje Ultra-Baja} & 2e-06 & Convergencia gradual & Reducción sobreajuste \\
 \hline
-\rowcolor{LightBlue!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Dropout (o tasa de abandono) Agresivo} & 0.7 & Prevenir co-adaptación & Generalización \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Regularización L2} & 0.05 & Penalización de pesos & Suavizado del modelo \\
 \hline
-\rowcolor{LightGoldenrod!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{Tamaño de Lote Pequeño} & 4 & Mayor ruido en gradientes & Regularización implícita \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{Inyección de Ruido} & 0.03 & Perturbación controlada & Robustez del modelo \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Decaimiento de Pesos Manual} & 0.02 & Decaimiento de pesos & Control de capacidad \\
 \hline
-\rowcolor{HeaderBlue!20}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Parada Temprana} & Paciencia: 8 épocas & Detención automática & Prevención sobreajuste \\
 \hline
 \end{tabular}
@@ -924,28 +924,28 @@ El proceso experimental siguió una metodología sistemática de refinamiento pr
 \footnotesize
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Versión} & \textbf{Problema Objetivo} & \textbf{Estrategia Principal} & \textbf{Gap Final} & \textbf{Exactitud} & \textbf{Épocas} & \textbf{Estado} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Versión}} & \textbf{\textcolor{white}{Problema Objetivo}} & \textbf{\textcolor{white}{Estrategia Principal}} & \textbf{\textcolor{white}{Gap Final}} & \textbf{\textcolor{white}{Exactitud}} & \textbf{\textcolor{white}{Épocas}} & \textbf{\textcolor{white}{Estado}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{V1} & Línea base & División 70/10/20, LR: 3e-05 & N/A & 94.7\% & 6 & Baseline \\
 \hline
-\rowcolor{LightOrange!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{V2} & Anti-sobreajuste inicial & División 60/20/20, LR ultra-bajo & $ \text{gap}_{\text{final}} \leq 0.10 $ & 94.3\% & 8 & Excelente \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{V3} & Mejora inicial & División 60/20/20, LR reducido & $ \text{gap}_{\text{final}} \leq 0.10 $ & 94.8\% & 11 & Convergente \\
 \hline
-\rowcolor{LightBlue!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{V4} & Control sobreajuste & Anti-sobreajuste mejorado & $ \text{gap}_{\text{final}} \leq 0.10 $ & 95.8\% & 7 & Convergente \\
 \hline
-\rowcolor{LightYellow!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{V5} & Configuración híbrida & 70/10/20 + anti-sobreajuste & $ \text{gap}_{\text{final}} \leq 0.10 $ & 95.8\% & 11 & Óptimo \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{V6} & Regularización fuerte & L2 aumentado, dropout agresivo & 0.10 & 94.8\% & 8 & Convergente \\
 \hline
-\rowcolor{LightSkyBlue!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{V7} & Configuración final & Regularización máxima corregida & 0.050 & 95.2\% & 21 & Final \\
 \hline
 \end{tabular}
@@ -961,25 +961,25 @@ El proceso experimental siguió una metodología sistemática de refinamiento pr
 \adjustbox{width=\textwidth,center}{%
 \begin{tabular}{|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\multicolumn{2}{|c|}{\textbf{Gráficas de Convergencia - Versiones Experimentales}} \\
+\rowcolor{UAMAzcapo}
+\multicolumn{2}{|c|}{\textbf{\textcolor{white}{Gráficas de Convergencia - Versiones Experimentales}}} \\
 \hline
-\rowcolor{LightGreen!20}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Versión V1 - Línea Base} & \textbf{Versión V2 - Anti-Sobreajuste Inicial} \\
 \includegraphics[width=0.45\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v1.png} & 
 \includegraphics[width=0.45\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v2.png} \\
 \hline
-\rowcolor{LightCoral!20}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Versión V3 - Primera Mejora} & \textbf{Versión V4 - Control Sobreajuste} \\
 \includegraphics[width=0.45\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v3.png} & 
 \includegraphics[width=0.45\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v4.png} \\
 \hline
-\rowcolor{LightYellow!20}
+\rowcolor{UAMLermaLight!50}
 \textbf{Versión V5 - Configuración Híbrida} & \textbf{Versión V6 - Regularización Fuerte} \\
 \includegraphics[width=0.45\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v5.png} & 
 \includegraphics[width=0.45\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v6.png} \\
 \hline
-\rowcolor{LightSkyBlue!20}
+\rowcolor{UAMXochimilcoLight!50}
 \multicolumn{2}{|c|}{\textbf{Versión V7 - Configuración Final}} \\
 \multicolumn{2}{|c|}{\includegraphics[width=0.9\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v7.png}} \\
 \hline
@@ -1022,17 +1022,22 @@ El proceso experimental siguió una metodología sistemática de refinamiento pr
 \scriptsize
 \begin{tabular}{|l|c|c|c|c|c|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Parámetro} & \textbf{V1} & \textbf{V2} & \textbf{V3} & \textbf{V4} & \textbf{V5} & \textbf{V6} & \textbf{V7} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Parámetro}} & \textbf{\textcolor{white}{V1}} & \textbf{\textcolor{white}{V2}} & \textbf{\textcolor{white}{V3}} & \textbf{\textcolor{white}{V4}} & \textbf{\textcolor{white}{V5}} & \textbf{\textcolor{white}{V6}} & \textbf{\textcolor{white}{V7}} \\
 \hline
+\rowcolor{UAMIztapalapaLight!50}
 Taza de Aprendizaje & 3e-05 & 2e-06 & 2e-06 & 1e-05 & 1e-05 & 1e-05 & 2e-06 \\
+\rowcolor{UAMCuajimalpaLight!50}
 Dropout Rate & 0.4 & 0.4 & 0.4 & 0.3 & 0.4 & 0.5 & 0.7 \\
+\rowcolor{UAMLermaLight!50}
 L2 Regularization & 0.001 & 0.01 & 0.01 & 0.01 & 0.1 & 0.5 & 0.05 \\
+\rowcolor{UAMXochimilcoLight!50}
 Tamaños de Lote & 8 & 4 & 4 & 8 & 8 & 8 & 4 \\
+\rowcolor{UAMAzcapoLight!50}
 División Datos & 70/10/20 & 60/20/20 & 60/20/20 & 60/20/20 & 70/10/20 & 60/20/20 & 70/10/20 \\
-\rowcolor{LightBlue!20}
+\rowcolor{UAMCuajimalpaMedium!40}
 \textbf{Gap Final} & \textbf{N/A} & \textbf{0.018} & \textbf{0.051} & \textbf{0.037} & \textbf{0.037} & \textbf{0.051} & \textbf{0.050} \\
-\rowcolor{LightGreen!20}
+\rowcolor{UAMIztapalapaMedium!40}
 \textbf{Exactitud} & \textbf{94.7\%} & \textbf{94.3\%} & \textbf{94.8\%} & \textbf{95.8\%} & \textbf{95.8\%} & \textbf{94.8\%} & \textbf{95.2\%} \\
 \hline
 \end{tabular}
@@ -1108,14 +1113,14 @@ Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrena
 \small
 \begin{tabular}{|l|l|}
 \hline
-\rowcolor{LightSkyBlue!20}
-\multicolumn{2}{|l|}{\textbf{Algoritmo DistilBERT final - Regularización Anti-Sobreajuste}} \\
+\rowcolor{UAMAzcapo}
+\multicolumn{2}{|l|}{\textbf{\textcolor{white}{Algoritmo DistilBERT final - Regularización Anti-Sobreajuste}}} \\
 \hline
 \textbf{Entrada:} & Corpus español, hiperparámetros de regularización \\
 \hline
 \textbf{Salida:} & Modelo DistilBERT con gap $\leq$ 0.05 \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{1. Preparación de datos:}} \\
 \hline
 \multicolumn{2}{|l|}{Cargar corpus\_unificado\_es\_deforma\_completo.csv} \\
@@ -1123,7 +1128,7 @@ Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrena
 \multicolumn{2}{|l|}{Tokenizar con MAX\_LENGTH=128} \\
 \multicolumn{2}{|l|}{Crear batches de tamaño 4} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{2. Optimización de hiperparámetros:}} \\
 \hline
 \multicolumn{2}{|l|}{learning\_rate $\leftarrow$ [2e-6, 1e-6, 8e-7] \# Ultra-bajos} \\
@@ -1131,7 +1136,7 @@ Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrena
 \multicolumn{2}{|l|}{l2\_reg $\leftarrow$ [0.05, 0.1, 0.2] \# Fuerte} \\
 \multicolumn{2}{|l|}{Ejecutar búsqueda con Keras Tuner} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{3. Construcción del modelo:}} \\
 \hline
 \multicolumn{2}{|l|}{modelo $\leftarrow$ DistilBERT-multilingual-cased} \\
@@ -1139,7 +1144,7 @@ Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrena
 \multicolumn{2}{|l|}{Aplicar regularización L2 a pesos} \\
 \multicolumn{2}{|l|}{optimizer $\leftarrow$ Adam(lr=learning\_rate\_óptimo)} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{4. Entrenamiento con regularización:}} \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Para} época = 1 \textbf{hasta} 30:} \\
@@ -1151,7 +1156,7 @@ Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrena
 \multicolumn{2}{|l|}{\quad \textbf{Si} gap $\geq$ 0.04: ``ALERTA''} \\
 \multicolumn{2}{|l|}{\quad \textbf{Si} early\_stopping activado: \textbf{break}} \\
 \hline
-\rowcolor{LightGray!10}
+\rowcolor{UAMAzcapoLight!40}
 \multicolumn{2}{|l|}{\textbf{5. Evaluación final:}} \\
 \hline
 \multicolumn{2}{|l|}{Restaurar mejores pesos} \\
@@ -1178,9 +1183,10 @@ Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrena
 \small
 \begin{tabular}{|l|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Métrica} & \textbf{Valor} & \textbf{Calificación} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Métrica}} & \textbf{\textcolor{white}{Valor}} & \textbf{\textcolor{white}{Calificación}} \\
 \hline
+\rowcolors{2}{white}{UAMAzcapoLight!40}
 \textbf{Exactitud} & 95.2\% & Excelente \\
 \textbf{F1-Score} & 95.2\% & Excelente \\
 \textbf{Especificidad} & 94.96\% & Excelente \\
@@ -1200,16 +1206,16 @@ Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrena
 \small
 \begin{tabular}{|l|c|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Métrica} & \textbf{Mejor Metaheurístico} & \textbf{DistilBERT} & \textbf{Mejora} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Métrica}} & \textbf{\textcolor{white}{Mejor Metaheurístico}} & \textbf{\textcolor{white}{DistilBERT}} & \textbf{\textcolor{white}{Mejora}} \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Exactitud} & 71.06\% & 95.2\% & +24.14 p.p. \\
 \hline
-\rowcolor{LightBlue!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{F1-Score} & 0.68 & 0.952 & +40.0\% \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Especificidad} & 48\% & 94.96\% & +97.83\% \\
 \hline
 \end{tabular}
@@ -1246,17 +1252,17 @@ La tabla \ref{tab:comparacion_final_paradigmas} presenta una síntesis de los re
 \footnotesize
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Paradigma} & \textbf{Exactitud} & \textbf{Precisión} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Especificidad} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Paradigma}} & \textbf{\textcolor{white}{Exactitud}} & \textbf{\textcolor{white}{Precisión}} & \textbf{\textcolor{white}{Recall}} & \textbf{\textcolor{white}{F1-Score}} & \textbf{\textcolor{white}{Especificidad}} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{Mejor Metaheurística (GA)} & 71.1\% & 69.8\% & 74.2\% & 71.9\% & 67.8\% \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{DistilBERT Fine-tuned} & \textbf{95.2\%} & \textbf{94.8\%} & \textbf{95.7\%} & \textbf{95.2\%} & \textbf{94.6\%} \\
 \hline
-\rowcolor{HeaderBlue!20}
-\textbf{Mejora Absoluta} & \textbf{+24.1\%} & \textbf{+25.0\%} & \textbf{+21.5\%} & \textbf{+23.3\%} & \textbf{+26.8\%} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Mejora Absoluta}} & \textbf{\textcolor{white}{+24.1\%}} & \textbf{\textcolor{white}{+25.0\%}} & \textbf{\textcolor{white}{+21.5\%}} & \textbf{\textcolor{white}{+23.3\%}} & \textbf{\textcolor{white}{+26.8\%}} \\
 \hline
 \end{tabular}
 }
@@ -1395,22 +1401,22 @@ Para abordar las limitaciones identificadas, se sugiere:
 \small
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Limitación} & \textbf{Estrategia de Mejora} & \textbf{Implementación Sugerida} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Limitación}} & \textbf{\textcolor{white}{Estrategia de Mejora}} & \textbf{\textcolor{white}{Implementación Sugerida}} \\
 \hline
-\rowcolor{LightCoral!30}
+\rowcolor{UAMIztapalapaLight!50}
 \textbf{Corpus limitado} & Ampliación con datos diversos & Incorporar más fuentes y dominios \\
 \hline
-\rowcolor{LightBlue!30}
+\rowcolor{UAMCuajimalpaLight!50}
 \textbf{Falta verificación factual} & Integración con bases de datos & APIs de verificación de hechos \\
 \hline
-\rowcolor{LightGreen!30}
+\rowcolor{UAMLermaLight!50}
 \textbf{Sensibilidad al dominio} & Entrenamiento multitarea & Modelos especializados por tema \\
 \hline
-\rowcolor{LightYellow!30}
+\rowcolor{UAMXochimilcoLight!50}
 \textbf{Evolución de desinformación} & Aprendizaje continuo & Actualización regular del modelo \\
 \hline
-\rowcolor{LightPink!30}
+\rowcolor{UAMAzcapoLight!50}
 \textbf{Ambigüedad contextual} & Incorporación de contexto externo & Modelos multimodales \\
 \hline
 \end{tabular}
