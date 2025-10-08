@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Script para corregir automáticamente las comillas problemáticas en documentos LaTeX
+Script para corregir automáticamente problemas comunes en documentos LaTeX
 que usan babel español.
 
-El problema: babel español interpreta " después de puntuación como comandos especiales
-La solución: Reemplazar " con comillas tipográficas españolas usando ``texto''
+Correcciones que realiza:
+1. Comillas problemáticas: babel español interpreta " después de puntuación como comandos especiales
+   - Solución: Reemplazar " con comillas tipográficas españolas usando ``texto''
+2. Negritas con sintaxis Markdown: ** no funciona en LaTeX
+   - Solución: Reemplazar **texto** con \textbf{texto}
 """
 
 import os
@@ -32,7 +35,7 @@ def fix_quotes_in_file(filepath):
             old_text = f'{match[0]}"{match[1]}"'
             new_text = f'{match[0]}``{match[1]}\'\''
             content = content.replace(old_text, new_text)
-            changes_made.append(f'Cambiado: {old_text} -> {new_text}')
+            changes_made.append(f'Comillas: {old_text} -> {new_text}')
         
         # Patrón 2: Comillas al inicio de línea o después de espacios en blanco
         # Ejemplo: ' "palabra"' -> ' ``palabra'''
@@ -44,7 +47,7 @@ def fix_quotes_in_file(filepath):
             # Solo reemplazar si no se ha cambiado ya
             if old_text in content:
                 content = content.replace(old_text, new_text)
-                changes_made.append(f'Cambiado: {old_text} -> {new_text}')
+                changes_made.append(f'Comillas: {old_text} -> {new_text}')
         
         # Patrón 3: Comillas en contextos específicos como tablas o listas
         # Ejemplo: "FALSAS" -> ``FALSAS''
@@ -60,7 +63,7 @@ def fix_quotes_in_file(filepath):
                 inner_content = term[1:-1]  # Quitar las comillas externas
                 new_term = f'``{inner_content}\'\''
                 content = content.replace(term, new_term)
-                changes_made.append(f'Cambiado término específico: {term} -> {new_term}')
+                changes_made.append(f'Término específico: {term} -> {new_term}')
         
         # Patrón 4: Títulos entre comillas
         # Ejemplo: "Attention Is All You Need" -> ``Attention Is All You Need''
@@ -72,7 +75,18 @@ def fix_quotes_in_file(filepath):
             # Solo cambiar si no está dentro de una URL o comando LaTeX ya
             if old_text in content and '\\cite{' not in content[content.find(old_text)-10:content.find(old_text)+len(old_text)+10]:
                 content = content.replace(old_text, new_text)
-                changes_made.append(f'Cambiado título: {old_text} -> {new_text}')
+                changes_made.append(f'Título: {old_text} -> {new_text}')
+        
+        # NUEVO: Patrón 5: Negritas con sintaxis Markdown
+        # Ejemplo: **texto** -> \textbf{texto}
+        # Este patrón busca texto entre ** que no contenga saltos de línea
+        pattern5 = r'\*\*([^\*\n]+?)\*\*'
+        matches5 = re.findall(pattern5, content)
+        for match in matches5:
+            old_text = f'**{match}**'
+            new_text = f'\\textbf{{{match}}}'
+            content = content.replace(old_text, new_text)
+            changes_made.append(f'Negritas: {old_text} -> {new_text}')
         
         # Solo escribir si hay cambios
         if content != original_content:
@@ -128,12 +142,12 @@ def main():
             total_changes += len(changes)
             print(f"  ✓ Archivo modificado - {len(changes)} cambios realizados")
             
-            # Mostrar los primeros 3 cambios como ejemplo
-            for i, change in enumerate(changes[:3]):
+            # Mostrar los primeros 5 cambios como ejemplo
+            for i, change in enumerate(changes[:5]):
                 print(f"    {i+1}. {change}")
             
-            if len(changes) > 3:
-                print(f"    ... y {len(changes) - 3} cambios más")
+            if len(changes) > 5:
+                print(f"    ... y {len(changes) - 5} cambios más")
         else:
             print("  - Sin cambios necesarios")
     
@@ -148,7 +162,7 @@ def main():
         print("\n¡Corrección completada! Ahora puedes compilar tu documento LaTeX.")
         print("Recomendación: Ejecuta la compilación para verificar que todo funciona correctamente.")
     else:
-        print("\nNo se encontraron comillas problemáticas para corregir.")
+        print("\nNo se encontraron problemas para corregir.")
 
 if __name__ == "__main__":
     main()
