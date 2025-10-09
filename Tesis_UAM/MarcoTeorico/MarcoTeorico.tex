@@ -1,41 +1,39 @@
 %!TEX root = ../ICR.tex
 \chapter{Marco Teórico \label{cap:MarcoTeorico}}
 
-En esta sección se describen las bases teóricas y los conceptos fundamentales que sustentan las dos metodologías de detección de noticias falsas desarrolladas en este proyecto de investigación. Aunque las técnicas son aplicables a diferentes tipos de fraude digital, el enfoque específico se centra en la detección de desinformación periodística. Se abordan desde las técnicas clásicas de representación de texto y optimización metaheurística, hasta los paradigmas de aprendizaje profundo que definen el estado del arte actual.
+Esta sección describe las bases teóricas que sustentan las dos metodologías de detección de noticias falsas desarrolladas en este proyecto. Aunque las técnicas son aplicables a otros tipos de fraude digital, el enfoque se centra en la detección de desinformación periodística. Se abordan desde las técnicas clásicas de representación de texto y optimización metaheurística hasta los paradigmas de aprendizaje profundo que definen el estado del arte actual.
 
-\section{Detección de Noticias Falsas: Fundamentos y Extensibilidad}
+\section{Detección de noticias falsas: fundamentos y extensibilidad}
 \label{sec:deteccion_noticias_falsas}
 
-La detección de noticias falsas constituye un problema multifacético que requiere un enfoque interdisciplinario, con metodologías que pueden extenderse a otros tipos de fraude digital. La desinformación se caracteriza por ser información deliberadamente falsa o engañosa que se presenta como noticia legítima \cite{bondielli2019survey}. Esta problemática ha evolucionado significativamente con el advenimiento de las redes sociales y los medios digitales, donde la velocidad de propagación supera ampliamente la capacidad de verificación tradicional.
+La detección de noticias falsas es un problema multifacético que requiere un enfoque interdisciplinario, con metodologías que pueden extenderse a otros tipos de fraude digital. La desinformación se define como información deliberadamente falsa o engañosa presentada como noticia legítima \cite{bondielli2019survey}. Esta problemática ha evolucionado con la aparición de las redes sociales y los medios digitales, donde la velocidad de propagación supera la capacidad de verificación tradicional.
 
-En el contexto de la detección automatizada, se han explorado diferentes enfoques y técnicas. Das et al. \cite{das2022heuristic} propusieron un marco de ensamblaje basado en incertidumbre e impulsado por heurísticas para la detección de noticias falsas en tuits y artículos de noticias. Este enfoque parte de la premisa de que diferentes modelos pueden tener distintas fortalezas y debilidades, y que la combinación inteligente de múltiples predictores puede superar las limitaciones individuales.
+En el contexto de la detección automatizada, se han explorado diversos enfoques. Das et al. \cite{das2022heuristic} propusieron un marco de ensamblaje basado en incertidumbre e impulsado por heurísticas para detectar noticias falsas en tuits y artículos. Este enfoque parte de la premisa de que diferentes modelos poseen distintas fortalezas y que una combinación inteligente de predictores puede superar las limitaciones individuales.
 
-El equipo de la Southern Methodist University presentó una solución pionera utilizando procesamiento de lenguaje natural y aprendizaje profundo para analizar tanto titulares como el contenido completo de las noticias \cite{thota2018fake}. Su trabajo estableció un precedente importante al demostrar la viabilidad de la vectorización TF-IDF combinada con redes neuronales densas.
+El equipo de la Southern Methodist University presentó una solución pionera que utiliza procesamiento de lenguaje natural y aprendizaje profundo para analizar tanto titulares como el contenido completo de las noticias \cite{thota2018fake}. Su trabajo demostró la viabilidad de combinar la vectorización TF-IDF con redes neuronales densas. Adicionalmente, se ha propuesto un enfoque basado en análisis estilométrico que utiliza Procesamiento del Lenguaje Natural (PLN) y Reconocimiento de Entidades Nombradas (NER) para identificar patrones lingüísticos que sugieran baja veracidad \cite{tsai2023stylometric}. Este método se basa en la hipótesis de que los autores de contenido falso exhiben patrones de escritura distintivos.
 
-Complementariamente, se ha propuesto un enfoque basado en análisis estilométrico utilizando Procesamiento del Lenguaje Natural (PLN) y Reconocimiento de Entidades Nombradas (NER) para identificar patrones lingüísticos que sugieran baja veracidad de la información \cite{tsai2023stylometric}. Este enfoque aprovecha la hipótesis de que los autores de contenido falso pueden exhibir patrones de escritura distintivos.
+\subsection{Impacto social y desafíos de la desinformación}
 
-\subsection{Impacto Social y Desafíos de la Desinformación}
-
-La rápida propagación de las noticias falsas a través de las redes sociales puede tener graves consecuencias en la sociedad. Como documentan Ali y Zain-Ul-Abdin \cite{ali2020posttruth}, la desinformación puede:
+La rápida propagación de noticias falsas en redes sociales puede tener graves consecuencias sociales. Como documentan Ali y Zain-Ul-Abdin \cite{ali2020posttruth}, la desinformación puede:
 
 \begin{itemize}
-    \item \textbf{Distorsionar la realidad:} Alterando la percepción pública de eventos y hechos
-    \item \textbf{Manipular la opinión pública:} Influenciando procesos democráticos y decisiones sociales
-    \item \textbf{Incitar a la violencia:} Promoviendo comportamientos agresivos basados en información errónea
-    \item \textbf{Difundir propaganda política:} Siendo utilizada como herramienta de influencia partidista
-    \item \textbf{Fomentar el odio:} Intensificando divisiones sociales y promoviendo discriminación
-    \item \textbf{Provocar pánico:} Especialmente en contextos de crisis sanitarias como la pandemia de COVID-19 \cite{perez2020fake}
+    \item \textbf{Distorsionar la realidad:} Alterando la percepción pública de eventos y hechos.
+    \item \textbf{Manipular la opinión pública:} Influenciando procesos democráticos y decisiones sociales.
+    \item \textbf{Incitar a la violencia:} Promoviendo comportamientos agresivos basados en información errónea.
+    \item \textbf{Difundir propaganda política:} Siendo utilizada como herramienta de influencia partidista.
+    \item \textbf{Fomentar el odio:} Intensificando divisiones sociales y promoviendo la discriminación.
+    \item \textbf{Provocar pánico:} Especialmente en crisis sanitarias como la pandemia de COVID-19 \cite{perez2020fake}.
 \end{itemize}
 
-\subsection{El Problema de las Heurísticas Cognitivas}
+\subsection{El problema de las heurísticas cognitivas}
 
-La investigación de Ali et al. \cite{ali2021fake} ha demostrado que las heurísticas cognitivas humanas, como la popularidad social (número de ``me gusta'' o compartidos), influyen significativamente en la percepción de credibilidad. Este fenómeno complica la detección, ya que el contenido falso puede volverse viral precisamente por aprovechar estos sesgos cognitivos.
+La investigación de Ali et al. \cite{ali2021fake} demuestra que las heurísticas cognitivas humanas, como la popularidad social (número de ``me gusta'' o compartidos), influyen de manera significativa en la percepción de credibilidad. Este fenómeno complica la detección, ya que el contenido falso puede volverse viral precisamente al aprovechar estos sesgos cognitivos.
 
-\subsection{Diferenciación Técnica y Transferibilidad: Noticias Falsas vs. Fraude Digital}
+\subsection{Diferenciación técnica y transferibilidad: noticias falsas vs. fraude digital}
 
-Es necesario establecer una distinción técnica clara entre los dominios de aplicación, ya que aunque comparten características computacionales, representan problemas con diferentes objetivos, audiencias y patrones (ver tabla \ref{tab:diferencias_dominios}):
+Es necesario establecer una distinción técnica clara entre los dominios de aplicación. Aunque comparten características computacionales, representan problemas con diferentes objetivos, audiencias y patrones, como expone la Tabla \ref{tab:diferencias_dominios}.
 
-\subsubsection{Características Distintivas por Dominio}
+\subsubsection{Características distintivas por dominio}
 
 \begin{table}[htbp]
 \centering
@@ -76,44 +74,44 @@ Es necesario establecer una distinción técnica clara entre los dominios de apl
 \label{tab:diferencias_dominios}
 \end{table}
 
-\subsubsection{Fundamentos de la Transferibilidad Metodológica}
+\subsubsection{Fundamentos de la transferibilidad metodológica}
 
-A pesar de sus diferencias conceptuales, ambos dominios comparten características computacionales fundamentales que justifican la transferibilidad de la metodología desarrollada:
+A pesar de sus diferencias, ambos dominios comparten características computacionales que justifican la transferibilidad de la metodología:
 
 \begin{itemize}
-    \item \textbf{Naturaleza textual primaria}: Ambos dominios se basan en contenido textual como vector principal de engaño
-    \item \textbf{Problema de clasificación binaria}: Se reducen a problemas de clasificación legítimo/malicioso
-    \item \textbf{Características estilométricas}: Ambos pueden exhibir patrones lingüísticos distintivos detectables
-    \item \textbf{Optimización de hiperparámetros}: Ambos se benefician de técnicas de calibración metaheurística
-    \item \textbf{Evaluación mediante métricas estándar}: Utilizan las mismas métricas de clasificación (precisión, recall, F1-Score)
+    \item \textbf{Naturaleza textual primaria}: Ambos se basan en contenido textual como principal vector de engaño.
+    \item \textbf{Problema de clasificación binaria}: Se reducen a problemas de clasificación legítimo/malicioso.
+    \item \textbf{Características estilométricas}: Ambos pueden exhibir patrones lingüísticos distintivos.
+    \item \textbf{Optimización de hiperparámetros}: Se benefician de técnicas de calibración metaheurística.
+    \item \textbf{Evaluación mediante métricas estándar}: Utilizan las mismas métricas de clasificación (precisión, recall, F1-Score).
 \end{itemize}
 
-\subsubsection{Protocolo de Transferencia Metodológica}
+\subsubsection{Protocolo de transferencia metodológica}
 
-Para aplicar la metodología desarrollada a detección de fraude digital, se requiere el siguiente protocolo de adaptación:
+Para aplicar la metodología a la detección de fraude digital, se requiere el siguiente protocolo:
 
 \begin{enumerate}
-    \item \textbf{Construcción de corpus específico}: Recopilar y etiquetar datos representativos del tipo de fraude digital objetivo
-    \item \textbf{Ajuste de preprocesamiento}: Adaptar técnicas de limpieza según las características del nuevo dominio
-    \item \textbf{Re-calibración de hiperparámetros}: Aplicar los mismos algoritmos metaheurísticos pero re-optimizar para el nuevo corpus
-    \item \textbf{Incorporación de características específicas}: Añadir características relevantes al nuevo dominio (URLs sospechosas, patrones de solicitud de información)
-    \item \textbf{Validación en diferentes dominios}: Evaluar la transferencia utilizando métricas de generalización
+    \item \textbf{Construcción de corpus específico}: Recopilar y etiquetar datos representativos del tipo de fraude.
+    \item \textbf{Ajuste de preprocesamiento}: Adaptar las técnicas de limpieza al nuevo dominio.
+    \item \textbf{Re-calibración de hiperparámetros}: Re-optimizar los algoritmos metaheurísticos para el nuevo corpus.
+    \item \textbf{Incorporación de características específicas}: Añadir características relevantes como URLs sospechosas.
+    \item \textbf{Validación en diferentes dominios}: Evaluar la transferencia con métricas de generalización.
 \end{enumerate}
 
-\textbf{Enfoque de esta investigación}: Este proyecto desarrolla y valida la metodología en el dominio de noticias falsas en español, estableciendo las bases técnicas para su posterior transferencia a otros tipos de fraude digital. La elección de noticias falsas como dominio inicial se justifica por: (1) disponibilidad de corpus etiquetados, (2) relevancia social en comunidades hispanohablantes, y (3) menor complejidad técnica que permite validar la metodología base antes de extensiones más complejas.
+\textbf{Enfoque de esta investigación}: Este proyecto valida la metodología en el dominio de noticias falsas en español, sentando las bases para su transferencia a otros fraudes digitales. La elección de este dominio se justifica por la disponibilidad de corpus, su relevancia social y una menor complejidad técnica inicial.
 
-\section{Representación de Texto: Desde TF-IDF hasta Embeddings Contextuales}
+\section{Representación de texto: de TF-IDF a Embeddings Contextuales}
 \label{sec:representacion_texto}
 
-La evolución de las técnicas de representación textual ha sido fundamental para el progreso en PLN. Esta sección aborda desde los métodos clásicos hasta las representaciones más sofisticadas utilizadas en esta tesis.
+La evolución de las técnicas de representación textual ha sido clave para el progreso en PLN. Esta sección abarca desde métodos clásicos hasta las representaciones más sofisticadas usadas en esta tesis.
 
-\subsection{Bolsa de Palabras (Bag of Words): Primer Acercamiento Metodológico}
+\subsection{Bolsa de palabras (Bag of Words): primer acercamiento metodológico}
 
-El modelo de \gls{bolsadepalabras} (Bag of Words, BoW) constituye uno de los enfoques más básicos pero fundamentales en el procesamiento de texto. Aunque no fue utilizado en los modelos finales de esta tesis, representó el primer acercamiento metodológico explorado en la investigación preliminar documentada en \cite{hurtado2024calibracion}.
+El modelo de \gls{bolsadepalabras} (Bag of Words, BoW) es un enfoque fundamental en el procesamiento de texto. Aunque no se utilizó en los modelos finales de esta tesis, fue el primer acercamiento explorado en la investigación preliminar \cite{hurtado2024calibracion}.
 
-\subsubsection{Fundamentos del Modelo BoW}
+\subsubsection{Fundamentos del modelo BoW}
 
-El modelo BoW representa un documento como una colección desordenada de palabras, ignorando completamente la gramática y el orden de las palabras, pero manteniendo la multiplicidad (frecuencia) de cada término. Matemáticamente, un documento $d$ se representa como un vector de frecuencias:
+El modelo BoW representa un documento como una colección desordenada de sus palabras, ignorando la gramática y el orden, pero manteniendo la frecuencia de cada término. Matemáticamente, un documento $d$ se representa como un vector de frecuencias:
 
 \begin{equation}
 \text{BoW}(d) = [f_1, f_2, ..., f_V]
@@ -121,49 +119,49 @@ El modelo BoW representa un documento como una colección desordenada de palabra
 
 Donde $f_i$ es la frecuencia del término $i$ en el documento y $V$ es el tamaño del vocabulario.
 
-\subsubsection{Proceso de Construcción}
+\subsubsection{Proceso de construcción}
 
 \begin{enumerate}
-    \item \textbf{Tokenización:} División del texto en unidades léxicas individuales
-    \item \textbf{Construcción del vocabulario:} Creación de un diccionario con todos los términos únicos del corpus
-    \item \textbf{Vectorización:} Cada documento se convierte en un vector donde cada dimensión corresponde a un término del vocabulario
-    \item \textbf{Conteo de frecuencias:} Cada posición del vector contiene la frecuencia del término correspondiente
+    \item \textbf{Tokenización:} División del texto en unidades léxicas.
+    \item \textbf{Construcción del vocabulario:} Creación de un diccionario con todos los términos únicos.
+    \item \textbf{Vectorización:} Conversión de cada documento en un vector dimensional.
+    \item \textbf{Conteo de frecuencias:} Asignación de la frecuencia del término a cada posición del vector.
 \end{enumerate}
 
-\subsubsection{Ventajas y Aplicabilidad Inicial}
+\subsubsection{Ventajas y aplicabilidad inicial}
 
-El modelo BoW ofreció ventajas específicas en las primeras fases de la investigación:
+El modelo BoW ofreció ventajas en las primeras fases de la investigación:
 \begin{itemize}
-    \item \textbf{Simplicidad conceptual:} Fácil implementación y comprensión
-    \item \textbf{Eficiencia computacional:} Bajo costo de procesamiento para corpus pequeños
-    \item \textbf{Transparencia:} Interpretabilidad directa de las características
-    \item \textbf{Línea base sólida:} Punto de partida para comparaciones con métodos más sofisticados
+    \item \textbf{Simplicidad conceptual:} Fácil de implementar y comprender.
+    \item \textbf{Eficiencia computacional:} Bajo costo de procesamiento para corpus pequeños.
+    \item \textbf{Transparencia:} Interpretabilidad directa de las características.
+    \item \textbf{Línea base sólida:} Un punto de partida para comparaciones.
 \end{itemize}
 
-\subsubsection{Limitaciones Identificadas}
+\subsubsection{Limitaciones identificadas}
 
-La experiencia con BoW en el trabajo preliminar \cite{hurtado2024calibracion} reveló limitaciones que motivaron la evolución hacia enfoques más sofisticados:
+La experiencia con BoW reveló limitaciones que motivaron la evolución hacia enfoques más sofisticados:
 \begin{itemize}
-    \item \textbf{Pérdida total del orden:} Imposibilidad de capturar patrones secuenciales relevantes
-    \item \textbf{Ausencia de ponderación semántica:} Todas las palabras reciben el mismo tratamiento independientemente de su importancia
-    \item \textbf{Problemas de escalabilidad:} Crecimiento exponencial de la dimensionalidad con el vocabulario
-    \item \textbf{Sensibilidad a palabras vacías:} Dominancia de términos frecuentes pero poco informativos
+    \item \textbf{Pérdida total del orden:} Imposibilidad de capturar patrones secuenciales.
+    \item \textbf{Ausencia de ponderación semántica:} Todas las palabras reciben el mismo tratamiento.
+    \item \textbf{Problemas de escalabilidad:} Crecimiento exponencial de la dimensionalidad.
+    \item \textbf{Sensibilidad a palabras vacías:} Dominancia de términos frecuentes pero poco informativos.
 \end{itemize}
 
 \subsection{TF-IDF (Term Frequency-Inverse Document Frequency)}
 
-TF-IDF constituye una de las técnicas más fundamentales y efectivas para la representación de texto. A pesar de su simplicidad conceptual, ha demostrado ser muy efectiva en tareas de clasificación de texto. El proceso implica:
+TF-IDF es una de las técnicas más efectivas para la representación de texto. A pesar de su simplicidad, ha demostrado ser muy eficaz en tareas de clasificación. El proceso implica:
 
 \begin{enumerate}
-    \item \textbf{Construcción del vocabulario:} Creación de un diccionario con todas las palabras únicas presentes en el corpus de documentos
-    \item \textbf{Cálculo de ponderaciones:} Cada término recibe un peso basado en su frecuencia en el documento (TF) y su rareza en el corpus (IDF)
+    \item \textbf{Construcción del vocabulario:} Crear un diccionario con todas las palabras únicas del corpus.
+    \item \textbf{Cálculo de ponderaciones:} Asignar a cada término un peso basado en su frecuencia en el documento (TF) y su rareza en el corpus (IDF).
 \end{enumerate}
 
-Aunque este método ignora la gramática y el orden de las palabras, ha demostrado ser efectivo como base para métodos más sofisticados y fue fundamental en los primeros trabajos de clasificación de noticias en español \cite{acosta2019construccion}.
+Aunque este método ignora la gramática y el orden de las palabras, fue fundamental en los primeros trabajos de clasificación de noticias en español \cite{acosta2019construccion}.
 
-\subsection{Fundamentos Matemáticos de TF-IDF}
+\subsection{Fundamentos matemáticos de TF-IDF}
 
-TF-IDF introduce ponderación semántica mediante el producto de dos componentes fundamentales:
+TF-IDF introduce una ponderación semántica mediante el producto de dos componentes:
 
 \begin{equation}
 \text{TF-IDF}(t,d,D) = \text{TF}(t,d) \times \text{IDF}(t,D)
@@ -171,36 +169,34 @@ TF-IDF introduce ponderación semántica mediante el producto de dos componentes
 
 Donde:
 \begin{itemize}
-    \item \textbf{Frecuencia de Término (TF):} $\text{TF}(t,d) = \frac{f_{t,d}}{\sum_{t' \in d} f_{t',d}}$ - frecuencia relativa del término $t$ en el documento $d$
-    \item \textbf{Frecuencia Inversa de Documento (IDF):} $\text{IDF}(t,D) = \log\frac{|D|}{|\{d \in D : t \in d\}|}$ - importancia global del término en la colección
+    \item \textbf{Frecuencia de Término (TF):} $\text{TF}(t,d) = \frac{f_{t,d}}{\sum_{t' \in d} f_{t',d}}$ - frecuencia relativa del término $t$ en el documento $d$.
+    \item \textbf{Frecuencia Inversa de Documento (IDF):} $\text{IDF}(t,D) = \log\frac{|D|}{|\{d \in D : t \in d\}|}$ - importancia global del término en la colección.
 \end{itemize}
 
-Esta ponderación asigna mayor peso a términos que son frecuentes en un documento específico pero raros en el corpus general, mejorando la capacidad discriminativa del modelo \cite{thota2018fake}.
+Esta ponderación asigna mayor peso a los términos frecuentes en un documento pero raros en el corpus general, mejorando así la capacidad discriminativa del modelo \cite{thota2018fake}.
 
-\subsection{Limitaciones de los Métodos Clásicos}
+\subsection{Limitaciones de los métodos clásicos}
 
 Los enfoques basados en TF-IDF presentan limitaciones fundamentales:
 \begin{itemize}
-    \item \textbf{Pérdida de información secuencial:} No capturan el orden ni la estructura sintáctica
-    \item \textbf{Problema de dispersidad:} Generan representaciones muy dispersas en vocabularios grandes
-    \item \textbf{Ausencia de semántica:} No modelan relaciones semánticas entre palabras
-    \item \textbf{Falta de contexto:} Una palabra tiene la misma representación independientemente del contexto
+    \item \textbf{Pérdida de información secuencial:} No capturan el orden ni la estructura sintáctica.
+    \item \textbf{Problema de dispersidad:} Generan representaciones muy dispersas en vocabularios grandes.
+    \item \textbf{Ausencia de semántica:} No modelan relaciones semánticas entre palabras.
+    \item \textbf{Falta de contexto:} Una palabra tiene la misma representación sin importar su contexto.
 \end{itemize}
 
-\subsubsection{Evolución Metodológica}
+\subsubsection{Evolución metodológica}
 
-La transición de BoW hacia TF-IDF representó un primer refinamiento que introdujo ponderación semántica, abordando algunas de las limitaciones más críticas del enfoque básico. Esta evolución metodológica, documentada en el marco de optimización metaheurística \cite{hurtado2024calibracion}, estableció los fundamentos para los enfoques más sofisticados desarrollados en esta tesis.
+La transición de BoW a TF-IDF representó un primer refinamiento al introducir una ponderación semántica. Esta evolución, documentada en el marco de optimización metaheurística \cite{hurtado2024calibracion}, sentó las bases para los enfoques más avanzados de esta tesis. A pesar de sus limitaciones, el modelo BoW fue útil para identificar patrones distintivos en textos en español, sirviendo como punto de partida para las dos metodologías principales de esta investigación.
 
-A pesar de sus limitaciones, el modelo BoW proporcionó información útil sobre cómo identificar patrones distintivos en textos en español que permiten distinguir noticias falsas de verdaderas. Esta experiencia inicial sirvió como punto de partida para desarrollar las dos metodologías principales de esta investigación: el enfoque clásico optimizado y el de aprendizaje profundo.
-
-\section{La Revolución Transformer y los Modelos de Lenguaje Modernos}
+\section{La revolución Transformer y los Modelos de Lenguaje modernos}
 \label{sec:transformers_modelos_lenguaje}
 
-\subsection{La Arquitectura Transformer: Fundamentos}
+\subsection{La arquitectura Transformer: fundamentos}
 
-La arquitectura Transformer, introducida por Vaswani et al. \cite{vaswani2017attention} en el trabajo ``Attention Is All You Need'', revolucionó el campo del PLN. Su innovación principal radica en el mecanismo de \textbf{auto-atención (self-attention)}, que permite al modelo calcular representaciones ponderando dinámicamente la importancia de cada elemento en una secuencia con respecto a todos los demás elementos.
+La arquitectura Transformer, introducida por Vaswani et al. \cite{vaswani2017attention}, revolucionó el PLN con su mecanismo de \textbf{auto-atención (self-attention)}. Esta innovación permite al modelo calcular representaciones ponderando dinámicamente la importancia de cada elemento de una secuencia en relación con los demás.
 
-\subsubsection{Mecanismo de Atención Multi-Cabeza}
+\subsubsection{Mecanismo de atención multi-cabeza}
 
 El mecanismo de atención se define matemáticamente como:
 
@@ -208,84 +204,84 @@ El mecanismo de atención se define matemáticamente como:
 \text{Attention}(Q,K,V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 \end{equation}
 
-Donde $Q$, $K$, y $V$ representan las matrices de consultas (queries), claves (keys) y valores (values), respectivamente. La atención multi-cabeza extiende este concepto:
+Donde $Q$, $K$ y $V$ son las matrices de consultas, claves y valores. La atención multi-cabeza extiende este concepto:
 
 \begin{equation}
 \text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, ..., \text{head}_h)W^O
 \end{equation}
 
-Esta arquitectura permite capturar diferentes tipos de relaciones lingüísticas simultáneamente, superando las limitaciones de los modelos secuenciales previos como RNNs y LSTMs.
+Esta arquitectura permite capturar diferentes tipos de relaciones lingüísticas simultáneamente, superando las limitaciones de los modelos secuenciales previos.
 
-\subsection{BERT y la Era del Pre-entrenamiento Bidireccional}
+\subsection{BERT y la era del preentrenamiento bidireccional}
 
-BERT (Bidirectional Encoder Representations from Transformers) \cite{devlin2018bert} introdujo el paradigma de pre-entrenamiento bidireccional, entrenando el modelo para predecir palabras enmascaradas considerando tanto el contexto izquierdo como el derecho. Este enfoque genera representaciones contextuales más ricas que los modelos unidireccionales previos.
+BERT (Bidirectional Encoder Representations from Transformers) \cite{devlin2018bert} introdujo el paradigma de preentrenamiento bidireccional. Al entrenar el modelo para predecir palabras enmascaradas considerando el contexto de ambos lados, genera representaciones contextuales más ricas.
 
-\subsubsection{Variantes de BERT para Eficiencia}
+\subsubsection{Variantes de BERT para eficiencia}
 
 El éxito de BERT motivó el desarrollo de variantes más eficientes:
 \begin{itemize}
-    \item \textbf{DistilBERT} \cite{sanh2019distilbert}: Utiliza destilación de conocimiento para reducir el tamaño del modelo en un 40\% manteniendo el 97\% del rendimiento. Disponible en múltiples idiomas incluyendo español
-    \item \textbf{TinyBERT} \cite{jiao2019tinybert}: Aplica destilación a nivel de transformador y predicción para crear modelos aún más compactos, logrando excelente rendimiento. Sin embargo, su principal limitación es que únicamente está disponible en inglés, lo que restringe su aplicabilidad para tareas en español
+    \item \textbf{DistilBERT} \cite{sanh2019distilbert}: Reduce el tamaño del modelo en un 40% manteniendo el 97% de su rendimiento y está disponible en español.
+    \item \textbf{TinyBERT} \cite{jiao2019tinybert}: Crea modelos aún más compactos, pero su disponibilidad se limita al inglés.
 \end{itemize}
 
-\subsection{Aplicaciones en Detección de Noticias Falsas en Español}
+\subsection{Aplicaciones en la detección de noticias falsas en español}
 
-Para el español específicamente, se han desarrollado modelos especializados y evaluaciones:
+Para el español se han desarrollado modelos y evaluaciones especializadas:
 \begin{itemize}
-    \item Martínez-Gallego et al. \cite{martinez2021fake} exploraron la aplicación de BERT y BETO (BERT en español), estableciendo líneas base importantes
-    \item Blanco-Fernández et al. \cite{blanco2024enhancing} compararon sistemáticamente BERT y RoBERTa para detección de desinformación política
-    \item Shushkevich et al. \cite{shushkevich2023improving} investigaron la mejora de clasificación multiclase usando datos aumentados con ChatGPT
+    \item Martínez-Gallego et al. \cite{martinez2021fake} exploraron la aplicación de BERT y BETO (BERT en español).
+    \item Blanco-Fernández et al. \cite{blanco2024enhancing} compararon sistemáticamente BERT y RoBERTa para la detección de desinformación política.
+    \item Shushkevich et al. \cite{shushkevich2023improving} investigaron el uso de datos aumentados con ChatGPT para mejorar la clasificación multiclase.
 \end{itemize}
 
-\subsection{Grandes Modelos de Lenguaje (LLMs) y Nuevos Paradigmas}
+\subsection{Grandes Modelos de Lenguaje (LLMs) y nuevos paradigmas}
 
-\subsubsection{GPT-3 y el Paradigma Few-Shot}
+\subsubsection{GPT-3 y el paradigma few-shot}
 
-GPT-3 \cite{brown2020language} marcó un hito al demostrar capacidades emergentes de aprendizaje con pocos ejemplos (few-shot learning). Con 175 mil millones de parámetros, mostró que los modelos de gran escala pueden realizar tareas sin ajuste fino específico, solo con ejemplos en el prompt.
+GPT-3 \cite{brown2020language} demostró la capacidad de aprendizaje con pocos ejemplos (*few-shot learning*), mostrando que los modelos a gran escala pueden realizar tareas sin un ajuste fino específico.
 
-\subsubsection{LLaMA y la Democratización de LLMs}
+\subsubsection{LLaMA y la democratización de LLMs}
 
-LLaMA \cite{touvron2023llama} representa el esfuerzo por democratizar el acceso a modelos de gran escala, proporcionando alternativas open-source a modelos propietarios. Su arquitectura optimizada permite un rendimiento competitivo con menor costo computacional.
+LLaMA \cite{touvron2023llama} busca democratizar el acceso a modelos de gran escala, ofreciendo alternativas de código abierto con un rendimiento competitivo y menor costo computacional.
 
-\subsubsection{Modelos Multimodales: Gemini}
+\subsubsection{Modelos multimodales: Gemini}
 
-Gemini \cite{gemini2023family} introduce capacidades multimodales nativas, procesando texto, imágenes y audio de forma integrada. Esta capacidad es relevante para la detección de desinformación que cada vez más incorpora elementos multimedia.
+Gemini \cite{gemini2023family} introduce capacidades multimodales nativas, procesando texto, imágenes y audio de forma integrada, lo cual es relevante para la detección de desinformación multimedia.
 
 \subsubsection{IA Constitucional}
 
-El trabajo de Bai et al. \cite{bai2022constitutional} sobre IA Constitucional aborda la alineación y seguridad de los LLMs, estableciendo principios para entrenar modelos más seguros y alineados con valores humanos. Este enfoque es relevante cuando los LLMs se utilizan para tareas de detección de desinformación.
+El trabajo sobre IA Constitucional \cite{bai2022constitutional} aborda la alineación y seguridad de los LLMs, estableciendo principios para entrenar modelos más seguros y alineados con valores humanos.
 
-\subsection{El Doble Rol de los LLMs en Detección}
+\subsection{El doble rol de los LLMs en detección}
 
-La investigación reciente ha revelado que los LLMs presentan un doble rol:
+La investigación reciente revela el doble rol de los LLMs:
 \begin{itemize}
-    \item \textbf{Como ``Buenos Consejeros'':} Pueden ser ajustados finamente (fine-tuned) para detectar noticias falsas con alta precisión \cite{hu2024bad}
-    \item \textbf{Como ``Malos Actores'':} Pueden generar desinformación convincente, complicando la detección \cite{su2023fake}
-    \item \textbf{Adaptación Necesaria:} Los sistemas de detección deben adaptarse a la era de LLMs \cite{su2023adapting}
+    \item \textbf{Como ``buenos consejeros'':} Pueden ser ajustados para detectar noticias falsas con alta precisión \cite{hu2024bad}.
+    \item \textbf{Como ``malos actores'':} Pueden generar desinformación convincente, complicando su detección \cite{su2023fake}.
+    \item \textbf{Adaptación necesaria:} Los sistemas de detección deben adaptarse a la era de los LLMs \cite{su2023adapting}.
 \end{itemize}
 
-\section{Optimización Metaheurística en Detección de Fraude}
+\section{Optimización metaheurística en la detección de fraude}
 \label{sec:optimizacion_metaheuristica}
 
-\subsection{Fundamentos de las Metaheurísticas}
+\subsection{Fundamentos de las metaheurísticas}
 
-Las metaheurísticas son estrategias de optimización de alto nivel que guían procesos de búsqueda para encontrar soluciones de alta calidad en espacios de búsqueda complejos. A diferencia de los algoritmos exactos, las metaheurísticas buscan soluciones ``suficientemente buenas'' en tiempo computacional razonable \cite{anselmo2013diseno}.
+Las metaheurísticas son estrategias de optimización de alto nivel que guían la búsqueda de soluciones de alta calidad en espacios complejos. A diferencia de los algoritmos exactos, buscan soluciones ``suficientemente buenas'' en un tiempo computacional razonable \cite{anselmo2013diseno}.
 
-\subsubsection{Justificación del Uso de Metaheurísticas en Detección de Noticias Falsas}
+\subsubsection{Justificación del uso de metaheurísticas en la detección de noticias falsas}
 
-La aplicación de metaheurísticas en este dominio se justifica por las siguientes características del problema:
+La aplicación de metaheurísticas en este dominio se justifica por:
 
 \begin{itemize}
-    \item \textbf{Espacio de hiperparámetros complejo:} Los modelos de clasificación (SVM, redes neuronales) tienen múltiples hiperparámetros interdependientes
-    \item \textbf{Función objetivo no convexa:} Las métricas de rendimiento (F1-Score, precisión) no son funciones continuas y diferenciables
-    \item \textbf{Interacciones no lineales:} Los hiperparámetros interactúan de manera compleja, haciendo ineficaces los métodos de optimización tradicionales
-    \item \textbf{Múltiples óptimos locales:} El espacio de búsqueda presenta numerosos máximos locales que pueden atrapar algoritmos determinísticos
-    \item \textbf{Eficiencia computacional:} Las metaheurísticas exploran el espacio de forma más inteligente que métodos exhaustivos como búsqueda en cuadrícula (grid search)
+    \item \textbf{Espacio de hiperparámetros complejo:} Los modelos de clasificación tienen múltiples hiperparámetros interdependientes.
+    \item \textbf{Función objetivo no convexa:} Las métricas de rendimiento no son funciones continuas y diferenciables.
+    \item \textbf{Interacciones no lineales:} Los hiperparámetros interactúan de manera compleja.
+    \item \textbf{Múltiples óptimos locales:} El espacio de búsqueda puede atrapar algoritmos determinísticos.
+    \item \textbf{Eficiencia computacional:} Exploran el espacio de forma más inteligente que los métodos exhaustivos.
 \end{itemize}
 
-\subsubsection{Arquitectura General del Sistema Metaheurístico}
+\subsubsection{Arquitectura general del sistema metaheurístico}
 
-El marco de trabajo (framework) metaheurístico desarrollado sigue una arquitectura modular que permite la intercambiabilidad de algoritmos:
+El marco de trabajo metaheurístico desarrollado sigue una arquitectura modular:
 
 \begin{equation}
 \text{Sistema} = \{D, P, A, F, E\}
@@ -293,27 +289,25 @@ El marco de trabajo (framework) metaheurístico desarrollado sigue una arquitect
 
 Donde:
 \begin{itemize}
-    \item \textbf{D}: Dataset de noticias preprocesado
-    \item \textbf{P}: Tubería de procesamiento (pipeline) de preprocesamiento (tokenización, TF-IDF)
-    \item \textbf{A}: Algoritmo metaheurístico (GA, PSO, SA, VNS, SS)
-    \item \textbf{F}: Función objetivo (F1-Score en validación cruzada)
-    \item \textbf{E}: Evaluador final en conjunto de prueba
+    \item \textbf{D}: Dataset de noticias preprocesado.
+    \item \textbf{P}: Tubería de preprocesamiento (tokenización, TF-IDF).
+    \item \textbf{A}: Algoritmo metaheurístico (GA, PSO, SA, VNS, SS).
+    \item \textbf{F}: Función objetivo (F1-Score en validación cruzada).
+    \item \textbf{E}: Evaluador final en el conjunto de prueba.
 \end{itemize}
 
-\subsubsection{Entradas del Sistema Metaheurístico}
+\subsubsection{Entradas del sistema metaheurístico}
 
 \textbf{1. Datos de Entrada:}
 \begin{itemize}
-    \item \textbf{Corpus textual:} Noticias en español con etiquetas binarias (REAL/FALSO)
-    \item \textbf{División de datos:} 70\% entrenamiento, 10\% validación, 20\% prueba (estratificada)
-    \item \textbf{Representación TF-IDF:} Matriz dispersa TF-IDF de dimensión $n \times v$ donde $n$ es el número de documentos y $v$ el tamaño del vocabulario
+    \item \textbf{Corpus textual:} Noticias en español con etiquetas binarias (REAL/FALSO).
+    \item \textbf{División de datos:} 70\% entrenamiento, 10\% validación, 20\% prueba (estratificada).
+    \item \textbf{Representación TF-IDF:} Matriz dispersa de dimensión $n \times v$.
 \end{itemize}
 
 \textbf{2. Espacio de Hiperparámetros:}
 
-Los algoritmos metaheurísticos optimizan múltiples conjuntos de hiperparámetros según el tipo de modelo utilizado. Como ejemplo representativo, para algoritmos de clasificación tradicionales se pueden optimizar parámetros de regularización, configuraciones de kernel, y esquemas de balanceado de clases.
-
-Para TF-IDF:
+Los algoritmos metaheurísticos optimizan conjuntos de hiperparámetros. Para TF-IDF, por ejemplo:
 \begin{align}
 \text{max\_features} &\in [1000, 50000] \text{ (tamaño del vocabulario)} \\
 \text{min\_df} &\in [1, 10] \text{ (frecuencia mínima de documento)} \\
@@ -321,15 +315,15 @@ Para TF-IDF:
 \text{ngram\_range} &\in \{(1,1), (1,2), (1,3)\} \text{ (rango de n-gramas)}
 \end{align}
 
-\subsubsection{Preprocesamiento y Tubería de Procesamiento (Pipeline)}
+\subsubsection{Preprocesamiento y tubería de procesamiento (pipeline)}
 
 \textbf{Etapa 1: Limpieza Textual}
 \begin{enumerate}
-    \item \textbf{Normalización de caracteres:} Conversión a minúsculas, eliminación de acentos
-    \item \textbf{Filtrado de contenido:} Eliminación de URLs, menciones (@), hashtags
-    \item \textbf{Tokenización:} División en tokens usando expresiones regulares
-    \item \textbf{Eliminación de stopwords:} Filtrado de palabras vacías en español
-    \item \textbf{Validación de longitud:} Exclusión de textos demasiado cortos ($<$ 10 tokens)
+    \item \textbf{Normalización de caracteres:} Conversión a minúsculas y eliminación de acentos.
+    \item \textbf{Filtrado de contenido:} Eliminación de URLs, menciones y hashtags.
+    \item \textbf{Tokenización:} División en tokens.
+    \item \textbf{Eliminación de stopwords:} Filtrado de palabras vacías.
+    \item \textbf{Validación de longitud:} Exclusión de textos demasiado cortos.
 \end{enumerate}
 
 \textbf{Etapa 2: Vectorización TF-IDF}
@@ -337,32 +331,24 @@ Para TF-IDF:
 \text{TF-IDF}(t,d) = \text{TF}(t,d) \times \log\left(\frac{N}{|\{d' : t \in d'\}|}\right)
 \end{equation}
 
-Donde $t$ es un término, $d$ un documento, $N$ el total de documentos, y el denominador cuenta documentos que contienen $t$.
-
 \textbf{Etapa 3: Normalización}
-Aplicación de normalización L2 para estabilizar el entrenamiento:
+Se aplica normalización L2 para estabilizar el entrenamiento:
 \begin{equation}
 \mathbf{x}_{\text{norm}} = \frac{\mathbf{x}}{||\mathbf{x}||_2}
 \end{equation}
 
-\subsubsection{Algoritmos Metaheurísticos Implementados}
+\subsubsection{Algoritmos metaheurísticos implementados}
 
 \textbf{1. Algoritmo Genético (GA)}
 
-\textit{Inspiración biológica:} Evolución natural y selección de especies
+\textit{Inspiración biológica:} Evolución natural.
 
-\textit{Representación:} Cada individuo es un vector de hiperparámetros codificados
+\textit{Representación:} Cada individuo es un vector de hiperparámetros.
 \begin{equation}
 \text{Individuo} = [C, \gamma, \text{max\_features}, \text{min\_df}, \text{max\_df}, \text{ngram}]
 \end{equation}
 
-\textit{Operadores genéticos:}
-\begin{itemize}
-    \item \textbf{Selección:} Torneo de tamaño 3
-    \item \textbf{Cruce:} Cruce uniforme con probabilidad 0.8
-    \item \textbf{Mutación:} Mutación gaussiana con probabilidad 0.1
-    \item \textbf{Elitismo:} Preservación del 10\% mejores individuos
-\end{itemize}
+\textit{Operadores genéticos:} Selección por torneo, cruce uniforme, mutación gaussiana y elitismo.
 
 \textit{Parámetros:}
 \begin{align}
@@ -374,24 +360,13 @@ Aplicación de normalización L2 para estabilizar el entrenamiento:
 
 \textbf{2. Optimización por Enjambre de Partículas (PSO)}
 
-\textit{Inspiración biológica:} Comportamiento de bandadas de aves y cardúmenes
+\textit{Inspiración biológica:} Comportamiento de bandadas.
 
 \textit{Ecuaciones de movimiento:}
 \begin{align}
 v_{i}^{t+1} &= w \cdot v_{i}^{t} + c_1 \cdot r_1 \cdot (p_{i} - x_{i}^{t}) + c_2 \cdot r_2 \cdot (g - x_{i}^{t}) \\
 x_{i}^{t+1} &= x_{i}^{t} + v_{i}^{t+1}
 \end{align}
-
-Donde:
-\begin{itemize}
-    \item $v_i^t$: velocidad de la partícula $i$ en iteración $t$
-    \item $x_i^t$: posición de la partícula $i$ en iteración $t$
-    \item $p_i$: mejor posición personal de la partícula $i$
-    \item $g$: mejor posición global del enjambre
-    \item $w$: factor de inercia ($w = 0.9$)
-    \item $c_1, c_2$: factores de aceleración ($c_1 = c_2 = 2.0$)
-    \item $r_1, r_2$: números aleatorios $\in [0,1]$
-\end{itemize}
 
 \textit{Parámetros:}
 \begin{align}
@@ -403,7 +378,7 @@ Donde:
 
 \textbf{3. Recocido Simulado Multi-arranque (MSA)}
 
-\textit{Inspiración física:} Proceso de enfriamiento controlado en metalurgia
+\textit{Inspiración física:} Proceso de enfriamiento en metalurgia.
 
 \textit{Criterio de aceptación:}
 \begin{equation}
@@ -412,8 +387,6 @@ P(\text{aceptar}) = \begin{cases}
 e^{\frac{\Delta f}{T}} & \text{si } \Delta f < 0
 \end{cases}
 \end{equation}
-
-Donde $\Delta f = f(\text{nueva}) - f(\text{actual})$ y $T$ es la temperatura.
 
 \textit{Esquema de enfriamiento:}
 \begin{equation}
@@ -431,47 +404,26 @@ T_{k+1} = \alpha \cdot T_k, \quad \alpha = 0.95
 
 \textbf{4. Búsqueda en Vecindades Variables (VNS)}
 
-\textit{Principio:} Cambio sistemático de estructuras de vecindad para escapar de óptimos locales
+\textit{Principio:} Cambio sistemático de estructuras de vecindad.
 
-\textit{Estructuras de vecindad:}
-\begin{itemize}
-    \item $N_1$: Perturbación de un hiperparámetro aleatorio
-    \item $N_2$: Perturbación de dos hiperparámetros aleatorios
-    \item $N_3$: Perturbación de todos los hiperparámetros
-\end{itemize}
+\textit{Estructuras de vecindad:} Perturbación de uno, dos o todos los hiperparámetros.
 
-\textit{Algoritmo general:}
-\begin{enumerate}
-    \item Inicializar solución $x$
-    \item Para cada vecindad $k = 1, 2, 3$:
-    \item \quad Generar $x'$ en $N_k(x)$
-    \item \quad Aplicar búsqueda local desde $x'$ → $x''$
-    \item \quad Si $f(x'') > f(x)$: $x = x''$, $k = 1$
-    \item \quad Sino: $k = k + 1$
-    \item Repetir hasta criterio de parada
-\end{enumerate}
+\textit{Algoritmo general:} Se explora sistemáticamente cada vecindad y se reinicia la búsqueda al encontrar una mejora.
 
 \textbf{5. Búsqueda Dispersa (SS)}
 
-\textit{Principio:} Combinar soluciones de calidad y diversas para generar nuevas soluciones
+\textit{Principio:} Combinar soluciones de calidad para generar nuevas.
 
-\textit{Componentes principales:}
-\begin{itemize}
-    \item \textbf{Conjunto de referencia:} 10 soluciones (5 de calidad + 5 diversas)
-    \item \textbf{Generación de subconjuntos:} Todas las combinaciones de tamaño 2
-    \item \textbf{Método de combinación:} Promedio ponderado por aptitud (fitness)
-    \item \textbf{Mejora:} Búsqueda local en nuevas soluciones
-    \item \textbf{Actualización:} Reemplazo de peores soluciones
-\end{itemize}
+\textit{Componentes principales:} Un conjunto de referencia, generación de subconjuntos, método de combinación y mejora local.
 
-\subsubsection{Función Objetivo y Evaluación}
+\subsubsection{Función objetivo y evaluación}
 
 \textbf{Función objetivo principal:}
 \begin{equation}
 f(\theta) = \text{F1-Score}_{CV}(\theta)
 \end{equation}
 
-Donde $\theta$ representa el vector de hiperparámetros y $\text{F1-Score}_{CV}$ es el F1-Score promedio en validación cruzada estratificada de 5 pliegues.
+Donde $\theta$ es el vector de hiperparámetros y $\text{F1-Score}_{CV}$ es el F1-Score promedio en validación cruzada.
 
 \textbf{Métricas de evaluación secundarias:}
 \begin{align}
@@ -481,77 +433,75 @@ Donde $\theta$ representa el vector de hiperparámetros y $\text{F1-Score}_{CV}$
 \text{Exactitud} &= \frac{TP + TN}{TP + TN + FP + FN}
 \end{align}
 
-\subsubsection{Etapas del Proceso Metaheurístico}
+\subsubsection{Etapas del proceso metaheurístico}
 
 \textbf{Etapa 1: Inicialización}
 \begin{enumerate}
-    \item Cargar y dividir el dataset
-    \item Definir espacios de búsqueda para hiperparámetros
-    \item Inicializar población/enjambre según el algoritmo
-    \item Configurar parámetros del algoritmo metaheurístico
+    \item Cargar y dividir el dataset.
+    \item Definir los espacios de búsqueda.
+    \item Inicializar la población o enjambre.
+    \item Configurar los parámetros del algoritmo.
 \end{enumerate}
 
 \textbf{Etapa 2: Evaluación de Aptitud (Fitness)}
 \begin{enumerate}
     \item Para cada configuración de hiperparámetros:
-    \item \quad Construir pipeline TF-IDF + Clasificador
-    \item \quad Entrenar en conjunto de entrenamiento
-    \item \quad Evaluar en validación cruzada 5-fold
-    \item \quad Calcular F1-Score promedio como aptitud (fitness)
+    \item \quad Construir el pipeline TF-IDF + Clasificador.
+    \item \quad Entrenar en el conjunto de entrenamiento.
+    \item \quad Evaluar con validación cruzada.
+    \item \quad Calcular el F1-Score promedio como fitness.
 \end{enumerate}
 
 \textbf{Etapa 3: Evolución/Optimización}
 \begin{enumerate}
-    \item Aplicar operadores específicos del algoritmo
-    \item Generar nuevas configuraciones candidatas
-    \item Evaluar fitness de nuevas configuraciones
-    \item Actualizar población/enjambre según criterios del algoritmo
-    \item Verificar criterios de convergencia
+    \item Aplicar los operadores del algoritmo.
+    \item Generar nuevas configuraciones.
+    \item Evaluar el fitness de las nuevas configuraciones.
+    \item Actualizar la población o enjambre.
+    \item Verificar los criterios de convergencia.
 \end{enumerate}
 
 \textbf{Etapa 4: Selección Final}
 \begin{enumerate}
-    \item Identificar la mejor configuración encontrada
-    \item Re-entrenar modelo con configuración óptima
-    \item Evaluar en conjunto de prueba independiente
-    \item Reportar métricas finales
+    \item Identificar la mejor configuración.
+    \item Re-entrenar el modelo con la configuración óptima.
+    \item Evaluar en el conjunto de prueba.
+    \item Reportar las métricas finales.
 \end{enumerate}
 
-\subsubsection{Salidas del Sistema Metaheurístico}
+\subsubsection{Salidas del sistema metaheurístico}
 
 \textbf{1. Configuración Óptima de Hiperparámetros:}
 \begin{itemize}
-    \item Valores óptimos para cada hiperparámetro del modelo
-    \item Historia de convergencia del algoritmo
-    \item Número de evaluaciones realizadas
-    \item Tiempo total de optimización
+    \item Valores óptimos para cada hiperparámetro.
+    \item Historia de convergencia del algoritmo.
+    \item Número de evaluaciones y tiempo de optimización.
 \end{itemize}
 
 \textbf{2. Modelo Entrenado Optimizado:}
 \begin{itemize}
-    \item Vectorizador TF-IDF configurado
-    \item Clasificador entrenado
-    \item Pipeline completo listo para predicción
+    \item Vectorizador TF-IDF configurado.
+    \item Clasificador entrenado.
+    \item Pipeline completo listo para predicción.
 \end{itemize}
 
 \textbf{3. Métricas de Rendimiento:}
 \begin{itemize}
-    \item F1-Score, Precisión, Recall, Exactitud en conjunto de prueba
-    \item Matriz de confusión
-    \item Curvas de convergencia
-    \item Análisis de importancia de hiperparámetros
+    \item F1-Score, Precisión, Recall, Exactitud en el conjunto de prueba.
+    \item Matriz de confusión y curvas de convergencia.
+    \item Análisis de la importancia de los hiperparámetros.
 \end{itemize}
 
 \textbf{4. Análisis Comparativo:}
 \begin{itemize}
-    \item Comparación entre algoritmos metaheurísticos
-    \item Análisis de eficiencia computacional
-    \item Estudio de robustez y estabilidad
+    \item Comparación entre los algoritmos metaheurísticos.
+    \item Análisis de eficiencia computacional.
+    \item Estudio de robustez y estabilidad.
 \end{itemize}
 
-\subsubsection{Comparación de Algoritmos Metaheurísticos}
+\subsubsection{Comparación de algoritmos metaheurísticos}
 
-La Tabla \ref{tab:comparacion_metaheuristicas} (ver tabla \ref{tab:comparacion_metaheuristicas})presenta una comparación sistemática de los cinco algoritmos implementados, destacando sus características distintivas, ventajas y limitaciones en el contexto de optimización de hiperparámetros para detección de noticias falsas.
+La Tabla \ref{tab:comparacion_metaheuristicas} presenta una comparación sistemática de los cinco algoritmos implementados.
 
 \begin{table}[htbp]
 \centering
@@ -597,203 +547,116 @@ La Tabla \ref{tab:comparacion_metaheuristicas} (ver tabla \ref{tab:comparacion_m
 \label{tab:comparacion_metaheuristicas}
 \end{table}
 
-\subsubsection{Criterios de Selección y Justificación}
+\subsubsection{Criterios de selección y justificación}
 
-La selección de estos cinco algoritmos metaheurísticos se basó en criterios específicos de idoneidad para el problema de optimización de hiperparámetros en detección de noticias falsas:
+La selección de estos cinco algoritmos se basó en:
 
 \begin{enumerate}
-    \item \textbf{Diversidad de paradigmas:} Se incluyeron representantes de las principales familias de metaheurísticas (evolutivas, de enjambre, basadas en trayectoria, de memoria)
-    
-    \item \textbf{Eficiencia computacional:} Algoritmos con balance adecuado entre calidad de solución y tiempo de cómputo
-    
-    \item \textbf{Robustez empírica:} Métodos con evidencia documentada de efectividad en problemas de optimización de ML
-    
-    \item \textbf{Implementación práctica:} Algoritmos con parámetros bien establecidos e implementaciones estables
-    
-    \item \textbf{Complementariedad:} Enfoques que exploran el espacio de búsqueda de maneras fundamentalmente diferentes
+    \item \textbf{Diversidad de paradigmas:} Se incluyeron representantes de las principales familias de metaheurísticas.
+    \item \textbf{Eficiencia computacional:} Algoritmos con un buen balance entre calidad y tiempo de cómputo.
+    \item \textbf{Robustez empírica:} Métodos con efectividad documentada en problemas de optimización de ML.
+    \item \textbf{Implementación práctica:} Algoritmos con parámetros bien establecidos.
+    \item \textbf{Complementariedad:} Enfoques que exploran el espacio de búsqueda de maneras diferentes.
 \end{enumerate}
 
-Esta selección permite comparar diferentes estrategias de optimización, proporcionando información sobre qué características algorítmicas son más efectivas para el problema específico de calibración de detectores de noticias falsas.
+Esta selección permite comparar diferentes estrategias y determinar cuáles son más efectivas para la calibración de detectores de noticias falsas.
 
-\subsubsection{Justificación Frente a Métodos Alternativos}
+\subsubsection{Justificación frente a métodos alternativos}
 
 \textbf{Comparación con Búsqueda en Cuadrícula (Grid search):}
 \begin{itemize}
-    \item \textbf{Eficiencia:} Grid search requiere $O(n^k)$ evaluaciones donde $n$ es el número de valores por parámetro y $k$ el número de parámetros. Para este problema: $10^6$ evaluaciones vs. 1,500 de metaheurísticas
-    \item \textbf{Escalabilidad:} Grid search se vuelve impracticable con espacios de alta dimensión
-    \item \textbf{Optimización continua:} Las metaheurísticas manejan parámetros continuos naturalmente
+    \item \textbf{Eficiencia:} Grid search es computacionalmente inviable para espacios de alta dimensión.
+    \item \textbf{Optimización continua:} Las metaheurísticas manejan parámetros continuos de forma natural.
 \end{itemize}
 
 \textbf{Comparación con Búsqueda Aleatoria (Random Search):}
 \begin{itemize}
-    \item \textbf{Inteligencia dirigida:} Las metaheurísticas aprenden del histórico de evaluaciones
-    \item \textbf{Convergencia:} Random search no garantiza convergencia hacia regiones prometedoras
-    \item \textbf{Explotación vs. Exploración:} Las metaheurísticas balancean sistemáticamente ambos aspectos
+    \item \textbf{Inteligencia dirigida:} Las metaheurísticas aprenden de las evaluaciones para guiar la búsqueda.
 \end{itemize}
 
 \textbf{Comparación con Optimización Bayesiana:}
 \begin{itemize}
-    \item \textbf{Asunciones del modelo:} Bayesian optimization asume suavidad que puede no cumplirse en métricas de ML
-    \item \textbf{Costo computacional:} El cálculo de la función de adquisición puede ser costoso
-    \item \textbf{Flexibilidad:} Las metaheurísticas son más flexibles para restricciones complejas
+    \item \textbf{Flexibilidad:} Las metaheurísticas son más flexibles para restricciones complejas.
 \end{itemize}
 
-\textbf{Comparación con Métodos Basados en Gradiente (Gradient-based Methods):}
+\textbf{Comparación con Métodos Basados en Gradiente:}
 \begin{itemize}
-    \item \textbf{Diferenciabilidad:} Las métricas de clasificación (F1-Score) no son diferenciables
-    \item \textbf{Naturaleza discreta:} Algunos hiperparámetros son categóricos o discretos
-    \item \textbf{Robustez:} Los métodos basados en gradiente son sensibles a óptimos locales
+    \item \textbf{Diferenciabilidad:} Las métricas de clasificación no son diferenciables, y algunos hiperparámetros son discretos.
 \end{itemize}
 
-\subsubsection{Flujo del Proceso Metaheurístico}
+\subsubsection{Flujo del proceso metaheurístico}
 
-La Figura \ref{fig:flujo_metaheuristicas} (ver figura \ref{fig:flujo_metaheuristicas}) ilustra el flujo completo del proceso de optimización de ambos enfoques aplicado a la detección de noticias falsas, desde la entrada de datos hasta la obtención del modelo optimizado final.
+La Figura \ref{fig:flujo_metaheuristicas} ilustra el flujo completo del proceso de optimización.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{Imagenes/figura2Flujo.png}
-    \caption{Flujo del proceso de optimización para detección de noticias falsas. Se muestra la transformación desde datos textuales hasta el modelo optimizado final, pasando por las etapas de preprocesamiento, optimización y evaluación.}
+    \caption{Flujo del proceso de optimización para la detección de noticias falsas.}
     \label{fig:flujo_metaheuristicas}
 \end{figure}
 
-Este flujo garantiza:
-\begin{itemize}
-    \item \textbf{Reproducibilidad:} Cada etapa está claramente definida con parámetros específicos
-    \item \textbf{Escalabilidad:} El proceso puede aplicarse a corpus de diferentes tamaños
-    \item \textbf{Transferibilidad:} La metodología es aplicable a otros problemas de clasificación textual
-    \item \textbf{Transparencia:} Cada decisión algorítmica está justificada y documentada
-\end{itemize}
+Este flujo garantiza reproducibilidad, escalabilidad, transferibilidad y transparencia.
 
-\subsubsection{Consideraciones de Implementación}
+\subsubsection{Consideraciones de implementación}
 
-\textbf{Manejo de Memoria:}
-\begin{itemize}
-    \item Uso de matrices dispersas (scipy.sparse) para representaciones TF-IDF
-    \item Liberación explícita de memoria entre evaluaciones
-    \item Procesamiento por lotes para corpus grandes
-\end{itemize}
+\textbf{Manejo de Memoria:} Se utilizaron matrices dispersas y procesamiento por lotes.
 
-\textbf{Paralelización:}
-\begin{itemize}
-    \item Evaluación paralela de individuos en GA
-    \item Vectorización de operaciones en PSO
-    \item Múltiples arranques independientes en SA
-\end{itemize}
+\textbf{Paralelización:} Se implementó la evaluación paralela de individuos y la vectorización de operaciones.
 
-\textbf{Validación y Robustez:}
-\begin{itemize}
-    \item Validación cruzada estratificada para preservar distribución de clases
-    \item Múltiples ejecuciones independientes para análisis estadístico
-    \item Manejo de casos extremos y configuraciones inválidas
-\end{itemize}
+\textbf{Validación y Robustez:} Se usó validación cruzada estratificada y múltiples ejecuciones para el análisis estadístico.
 
-\subsubsection{Métricas de Monitoreo del Proceso}
+\subsubsection{Métricas de monitoreo del proceso}
 
-Durante la ejecución de cada algoritmo metaheurístico, se monitorizan las siguientes métricas:
+Durante la ejecución se monitorearon la convergencia, diversidad, estancamiento, eficiencia y estabilidad para ajustar y comparar los algoritmos.
 
-\begin{enumerate}
-    \item \textbf{Convergencia:} Evolución del mejor fitness a lo largo de las iteraciones
-    \item \textbf{Diversidad:} Medida de dispersión en la población/enjambre
-    \item \textbf{Estagnación:} Número de iteraciones sin mejora significativa
-    \item \textbf{Eficiencia:} Número de evaluaciones para alcanzar convergencia
-    \item \textbf{Estabilidad:} Variabilidad entre ejecuciones independientes
-\end{enumerate}
+\subsection{Aplicaciones en la detección de noticias falsas}
 
-Estas métricas permiten:
-\begin{itemize}
-    \item Ajustar parámetros de los algoritmos dinámicamente
-    \item Detectar convergencia prematura o estagnación
-    \item Comparar el rendimiento de diferentes metaheurísticas
-    \item Identificar configuraciones problemáticas o excepcionales
-\end{itemize}
+\subsubsection{Modelado como problema de programación de trabajos (Job Shop Scheduling)}
 
-\subsection{Aplicaciones en Detección de Noticias Falsas}
+Aqil y Lahby \cite{aqil2021modeling} modelaron la detección de noticias falsas como un problema de FSSP. Compararon tres metaheurísticas y encontraron que el algoritmo Voraz Iterativo (IG) lograba el mejor rendimiento.
 
-\subsubsection{Modelado como Problema de Programación de Trabajos (Job Shop Scheduling)}
+\subsubsection{Optimización de hiperparámetros en Deep Learning}
 
-Aqil y Lahby \cite{aqil2021modeling} propusieron una perspectiva innovadora, modelando la detección de noticias falsas como un problema de programación de trabajos en flujo (Flow Shop Scheduling Problem, FSSP). Compararon tres metaheurísticas:
-\begin{itemize}
-    \item \textbf{Voraz Iterativo (Iterated Greedy, IG):} Algoritmo constructivo que mejora iterativamente la solución mediante destrucción y reconstrucción
-    \item \textbf{Algoritmo Genético (GA):} Evolución de soluciones mediante selección, cruce y mutación
-    \item \textbf{Colonia de Abejas Artificiales (ABC):} Algoritmo basado en comportamiento de forrajeo de abejas
-\end{itemize}
+Bacanin et al. \cite{bacanin2023benefits} demostraron los beneficios de usar metaheurísticas para la calibración de hiperparámetros en modelos de *deep learning*, mostrando mejoras significativas sobre métodos tradicionales. La investigación que publiqué en \cite{hurtado2024calibracion} aborda específicamente la calibración de hiperparámetros para la detección de fraude digital, proporcionando un marco relevante para esta tesis.
 
-Sus resultados mostraron que el algoritmo Voraz Iterativo (IG) logró el mejor rendimiento en términos de minimización del makespan (tiempo máximo de finalización), superando a los otros dos algoritmos metaheurísticos (GA y ABC) en este contexto específico.
+\subsubsection{Marcos de trabajo (frameworks) de ensamble (ensemble) heurístico}
 
-\subsubsection{Optimización de Hiperparámetros en Deep Learning}
+Das et al. \cite{das2022heuristic} desarrollaron un marco de ensamble que combina modelos preentrenados, características estadísticas y heurísticas de incertidumbre, logrando F1-scores superiores al 95%.
 
-Bacanin et al. \cite{bacanin2023benefits} demostraron los beneficios de usar metaheurísticas para la calibración de hiperparámetros en modelos de deep learning. Su investigación mostró mejoras significativas sobre métodos tradicionales como grid search y random search:
+\subsection{Metaheurísticas para la detección de fraude financiero}
 
-\begin{itemize}
-    \item \textbf{Eficiencia computacional:} Exploración más inteligente del espacio de hiperparámetros
-    \item \textbf{Evitación de óptimos locales:} Capacidad de escape de configuraciones subóptimas
-    \item \textbf{Adaptabilidad:} Ajuste dinámico según el comportamiento del modelo
-\end{itemize}
+\subsubsection{Optimización multi-objetivo}
 
-La investigación que publiqué en \cite{hurtado2024calibracion} específicamente aborda la calibración de hiperparámetros en algoritmos metaheurísticos para detección de noticias falsas (como caso específico de fraude digital), proporcionando un marco metodológico relevante para esta tesis.
+Hidayattullah et al. \cite{hidayattullah2020financial} aplicaron metaheurísticas para optimizar la detección de fraude en estados financieros, considerando precisión, eficiencia y robustez. Sus resultados mostraron que un SVM optimizado con Algoritmo Genético alcanzó una precisión del 96.15%.
 
-\subsubsection{Marcos de Trabajo (Frameworks) de Ensamble (Ensemble) Heurístico}
+\subsubsection{Optimización de procesos gaussianos}
 
-Das et al. \cite{das2022heuristic} desarrollaron un marco de ensamble (ensemble) que combina:
-\begin{itemize}
-    \item \textbf{Modelos pre-entrenados:} BERT y similares para captura semántica
-    \item \textbf{Características estadísticas:} Metadatos como URL, autor, timestamp
-    \item \textbf{Heurísticas de incertidumbre:} Medidas de confianza para ponderación de predictores
-\end{itemize}
+Horak y Sabek \cite{horak2023gaussian} exploraron la optimización de hiperparámetros en *Gaussian Process Regression* para la predicción de dificultades financieras, destacando la importancia de la calibración metaheurística.
 
-Este enfoque híbrido logró F1-scores superiores al 95% en conjuntos de datos de referencia.
+\subsection{Algoritmos híbridos modernos}
 
-\subsection{Metaheurísticas para Detección de Fraude Financiero}
+\subsubsection{Enfoques multi-thread}
 
-\subsubsection{Optimización Multi-objetivo}
+Yildirim \cite{yildirim2023novel} propuso un enfoque metaheurístico híbrido *multi-thread* que optimiza simultáneamente la selección de características, los parámetros del clasificador y la arquitectura del ensamble.
 
-Hidayattullah et al. \cite{hidayattullah2020financial} aplicaron metaheurísticas para optimizar la detección de fraude en estados financieros. Su enfoque multi-objetivo consideró:
-\begin{itemize}
-    \item \textbf{Precisión de clasificación:} Maximización de métricas de rendimiento
-    \item \textbf{Eficiencia computacional:} Minimización de tiempo de entrenamiento
-    \item \textbf{Robustez:} Estabilidad ante variaciones en los datos
-\end{itemize}
+\subsubsection{PSO adaptativo}
 
-Los resultados mostraron que SVM optimizado con Algoritmo Genético alcanzó 96.15\% de precisión, superando significativamente a métodos tradicionales.
+Deshai y Bhaskara Rao \cite{deshai2023unmasking} desarrollaron un enfoque de CNN con PSO adaptativo para detectar reseñas falsas, ajustando dinámicamente los parámetros del algoritmo.
 
-\subsubsection{Optimización de Procesos Gaussianos}
+\subsubsection{Fine-tuning: adaptación de modelos preentrenados}
 
-Horak y Sabek \cite{horak2023gaussian} exploraron la optimización de hiperparámetros en Gaussian Process Regression para predicción de dificultades financieras. Su trabajo destaca la importancia de la calibración metaheurística en modelos probabilísticos.
+El paradigma de \textbf{fine-tuning}, introducido por Howard y Ruder \cite{howard2018universal}, ha sido una innovación significativa. Consiste en tomar un modelo preentrenado y continuar su entrenamiento con datos específicos del dominio objetivo.
 
-\subsection{Algoritmos Híbridos Modernos}
+En modelos Transformer como BERT \cite{kenton2019bert}, esto implica ajustar las capas superiores para la tarea específica de clasificación. La efectividad de este enfoque radica en que las representaciones contextuales aprendidas durante el preentrenamiento son transferibles a otras tareas \cite{ruder2019neural}. Para la detección de noticias falsas, esto constituye la base del segundo enfoque desarrollado en esta investigación.
 
-\subsubsection{Enfoques Multi-thread}
-
-Yildirim \cite{yildirim2023novel} propuso un enfoque metaheurístico híbrido multi-thread que optimiza simultáneamente:
-\begin{itemize}
-    \item Selección de características
-    \item Parámetros del algoritmo de clasificación
-    \item Arquitectura del ensemble
-\end{itemize}
-
-\subsubsection{PSO Adaptativo}
-
-Deshai y Bhaskara Rao \cite{deshai2023unmasking} desarrollaron un enfoque CNN con PSO adaptativo para detectar reseñas falsas online. Su algoritmo PSO adaptativo ajusta dinámicamente los parámetros de velocidad e inercia basándose en el rendimiento de la iteración actual.
-
-\subsubsection{Fine-tuning: Adaptación de Modelos Pre-entrenados}
-
-Una de las innovaciones más significativas en PLN moderno ha sido el desarrollo del paradigma de \textbf{fine-tuning} o ajuste fino, introducido formalmente por Howard y Ruder \cite{howard2018universal} en su trabajo sobre ULMFiT (Universal Language Model Fine-tuning). Este enfoque representa un cambio paradigmático respecto a los métodos tradicionales de entrenamiento desde cero, permitiendo aprovechar el conocimiento adquirido por modelos durante su pre-entrenamiento en grandes corpus.
-
-El proceso de fine-tuning consiste en tomar un modelo pre-entrenado y continuar su entrenamiento con datos específicos del dominio objetivo, manteniendo la arquitectura base pero adaptando los pesos para la nueva tarea. En el contexto de modelos Transformer como BERT \cite{kenton2019bert}, esto implica congelar parcial o totalmente las capas inferiores que capturan características lingüísticas generales, mientras se ajustan las capas superiores para la tarea específica de clasificación.
-
-La efectividad de este enfoque radica en que las representaciones contextuales aprendidas durante el pre-entrenamiento en tareas como masked language modeling contienen información semántica y sintáctica rica que es transferible a tareas downstream \cite{ruder2019neural}. Para la detección de noticias falsas, esto significa que el modelo ya comprende patrones lingüísticos complejos, estructura narrativa y coherencia semántica antes de especializarse en identificar marcadores de desinformación, constituyendo la base metodológica fundamental del segundo enfoque desarrollado en esta investigación.
-
-\section{Síntesis del Marco Teórico}
+\section{Síntesis del marco teórico}
 \label{sec:sintesis_marco}
 
-La tendencia actual en detección de noticias falsas favorece sistemas híbridos que combinan múltiples paradigmas metodológicos, principios que son extensibles a otros tipos de fraude digital. Por ejemplo, Zhang et al. \cite{zhang2023using} exploraron el uso de LLMs para optimización de hiperparámetros, abriendo nuevas posibilidades para la optimización automática de pipelines completos de detección.
-
-Este marco teórico establece los fundamentos para las dos metodologías desarrolladas en esta tesis:
+La tendencia actual en la detección de noticias falsas favorece los sistemas híbridos que combinan múltiples paradigmas. Este marco teórico establece los fundamentos para las dos metodologías desarrolladas en esta tesis:
 
 \begin{enumerate}
-    \item \textbf{Enfoque Clásico Optimizado:} Utiliza representaciones TF-IDF con optimización metaheurística de hiperparámetros, proporcionando una línea base sólida y computacionalmente eficiente
-    
-    \item \textbf{Enfoque de Deep Learning:} Emplea modelos Transformer pre-entrenados con fine-tuning, aprovechando representaciones contextuales sofisticadas
+    \item \textbf{Enfoque clásico optimizado:} Utiliza representaciones TF-IDF con optimización metaheurística de hiperparámetros.
+    \item \textbf{Enfoque de deep learning:} Emplea modelos Transformer preentrenados con *fine-tuning*.
 \end{enumerate}
 
-La integración de ambos enfoques, sustentada en la literatura revisada, establece la base teórica para la contribución metodológica principal de esta tesis: la aplicación sistemática de optimización de hiperparámetros en ambos paradigmas, desde clasificadores tradicionales hasta modelos de deep learning, en el contexto específico de textos en español.
+La integración de ambos enfoques, sustentada en la literatura, establece la base teórica para la contribución metodológica de esta tesis: la aplicación sistemática de la optimización de hiperparámetros en ambos paradigmas, en el contexto específico de textos en español.
