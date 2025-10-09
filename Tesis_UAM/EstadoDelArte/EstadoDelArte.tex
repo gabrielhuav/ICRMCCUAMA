@@ -25,7 +25,7 @@ La búsqueda se estructuró en torno a combinaciones de términos que reflejan l
     \item \textit{Cross-lingual fake news} y \textit{multilingual misinformation} para incluir enfoques multilingües.
 \end{itemize}
 
-Se priorizaron publicaciones de los últimos cinco años (2020-2025), sin excluir trabajos fundamentales anteriores. Los criterios de inclusión fueron: contribuciones metodológicas originales, validación empírica, relevancia directa para la detección de desinformación y calidad de la revisión por pares. Como resultado, se identificaron 80 trabajos que constituyen el núcleo de esta revisión.
+Se priorizaron publicaciones de los últimos cinco años (2020-2025), sin excluir trabajos fundamentales anteriores. Los criterios de inclusión fueron: contribuciones metodológicas originales, validación empírica, relevancia directa para la detección de desinformación y calidad de la revisión por pares. Como resultado, se identificaron 83 trabajos que constituyen el núcleo de esta revisión.
 
 \section{Panorama de la investigación en detección de noticias falsas y Modelos de Lenguaje}
 \label{sec:panorama_investigacion}
@@ -36,7 +36,7 @@ La progresión del campo puede dividirse en tres fases:
 \begin{enumerate}
     \item \textbf{La era pionera (2010-2016)}, con enfoques basados en características lingüísticas superficiales y aprendizaje automático tradicional.
     \item \textbf{La era de los modelos profundos (2017-2020)}, marcada por la adopción de redes neuronales y arquitecturas Transformer.
-    \item \textbf{La era contemporánea (2021-presente)}, dominada por modelos de lenguaje a gran escala y enfoques híbridos.
+    \item \textbf{La era contemporánea (2021-presente)}, dominada por modelos de lenguaje a gran escala y enfoques híbridos \cite{nature2025rise}.
 \end{enumerate}
 
 \subsection{Fundamentos metodológicos y construcción de corpus}
@@ -101,9 +101,9 @@ El punto de inflexión fue la introducción de \textbf{BERT} \cite{devlin2018ber
     \label{fig:mapa_conceptual_3}
 \end{figure}
 
-La necesidad de modelos más eficientes llevó al desarrollo de variantes como \textbf{DistilBERT} \cite{sanh2019distilbert}, que mantiene el 97% del rendimiento de BERT con solo el 60% de sus parámetros. En el contexto del español, Martínez-Gallego et al. \cite{martinez2021fake} demostraron que los modelos preentrenados específicamente en este idioma, como \textbf{BETO}, superan a las versiones multilingües genéricas.
+La necesidad de modelos más eficientes llevó al desarrollo de variantes como \textbf{DistilBERT} \cite{sanh2019distilbert}, que mantiene el 97% del rendimiento de BERT con solo el 60% de sus parámetros. En el contexto del español, trabajos como el de Padilla Cuevas et al. \cite{app14167031} con \textbf{MédicoBERT} han demostrado el valor de adaptar modelos de lenguaje a dominios específicos, como el médico, logrando una mejor comprensión del vocabulario técnico.
 
-El surgimiento de modelos generativos a gran escala como \textbf{GPT-3} \cite{brown2020language} ha introducido nuevas complejidades, ya que pueden crear contenido sintético indistinguible del humano. Investigaciones recientes revelan que los detectores actuales muestran sesgos contra el texto generado por LLMs \cite{su2023fake}, lo que plantea cuestiones sobre la generalización y equidad de estos sistemas.
+El surgimiento de modelos generativos a gran escala como \textbf{GPT-3} \cite{brown2020language} ha introducido nuevas complejidades. Como señalan Papageorgiou et al. \cite{papageorgiou2024survey}, estos modelos pueden tanto generar contenido falso indistinguible del humano como ser herramientas poderosas para su detección. Investigaciones recientes revelan que los detectores actuales muestran sesgos contra el texto generado por LLMs \cite{su2023fake}, lo que plantea cuestiones sobre la generalización y equidad de estos sistemas.
 
 \begin{table}[htbp]
 \centering
@@ -121,10 +121,10 @@ El surgimiento de modelos generativos a gran escala como \textbf{GPT-3} \cite{br
 \begin{tabular}[t]{@{}l@{}}Destilación de conocimiento para\\modelos eficientes\end{tabular} & Sanh, V., et al. & arXiv & 2019 & \cite{sanh2019distilbert} \\
 \hline
 \rowcolor{UAMLermaLight!50}
-\begin{tabular}[t]{@{}l@{}}Optimización extrema con\\TinyBERT\end{tabular} & Jiao, X., et al. & arXiv & 2019 & \cite{jiao2019tinybert} \\
+\begin{tabular}[t]{@{}l@{}}Aplicación de transformers\\en español (MédicoBERT)\end{tabular} & Padilla Cuevas, J., et al. & Applied Sciences & 2024 & \cite{app14167031} \\
 \hline
 \rowcolor{UAMXochimilcoLight!50}
-\begin{tabular}[t]{@{}l@{}}Aplicación sistemática de transformers\\en español\end{tabular} & Martínez-Gallego, K., et al. & arXiv & 2021 & \cite{martinez2021fake} \\
+\begin{tabular}[t]{@{}l@{}}Revisión sobre el uso de\\LLMs en noticias falsas\end{tabular} & Papageorgiou, E., et al. & Future Internet & 2024 & \cite{papageorgiou2024survey} \\
 \hline
 \rowcolor{UAMAzcapoLight!50}
 \begin{tabular}[t]{@{}l@{}}Comparación BERT vs RoBERTa\\para español\end{tabular} & Blanco-Fernández, Y., et al. & Applied Sciences & 2024 & \cite{blanco2024enhancing} \\
@@ -136,7 +136,7 @@ El surgimiento de modelos generativos a gran escala como \textbf{GPT-3} \cite{br
 \begin{tabular}[t]{@{}l@{}}Modelos multimodales de\\próxima generación\end{tabular} & Gemini Team, Google & arXiv & 2023 & \cite{gemini2023family} \\
 \hline
 \rowcolor{UAMLermaLight!50}
-\begin{tabular}[t]{@{}l@{}}Adaptación para la era\\de LLMs\end{tabular} & Su, J., et al. & arXiv & 2023 & \cite{su2023adapting} \\
+\begin{tabular}[t]{@{}l@{}}El auge de los grandes\\Modelos de Lenguaje\end{tabular} & Nature Comp. Science & Nature & 2025 & \cite{nature2025rise} \\
 \hline
 \end{tabular}
 }
