@@ -9,6 +9,8 @@ Correcciones que realiza:
    - Solución: Reemplazar " con comillas tipográficas españolas usando ``texto''
 2. Negritas con sintaxis Markdown: ** no funciona en LaTeX
    - Solución: Reemplazar **texto** con \textbf{texto}
+3. Cursivas con sintaxis Markdown: * no funciona en LaTeX
+   - Solución: Reemplazar *texto* con \textit{texto}
 """
 
 import os
@@ -77,7 +79,7 @@ def fix_quotes_in_file(filepath):
                 content = content.replace(old_text, new_text)
                 changes_made.append(f'Título: {old_text} -> {new_text}')
         
-        # NUEVO: Patrón 5: Negritas con sintaxis Markdown
+        # Patrón 5: Negritas con sintaxis Markdown
         # Ejemplo: **texto** -> \textbf{texto}
         # Este patrón busca texto entre ** que no contenga saltos de línea
         pattern5 = r'\*\*([^\*\n]+?)\*\*'
@@ -87,6 +89,18 @@ def fix_quotes_in_file(filepath):
             new_text = f'\\textbf{{{match}}}'
             content = content.replace(old_text, new_text)
             changes_made.append(f'Negritas: {old_text} -> {new_text}')
+        
+        # NUEVO: Patrón 6: Cursivas con sintaxis Markdown
+        # Ejemplo: *texto* -> \textit{texto}
+        # Este patrón busca texto entre * simples que no contenga saltos de línea
+        # y que no esté precedido o seguido por otro * (para evitar conflicto con negritas)
+        pattern6 = r'(?<!\*)\*([^\*\n]+?)\*(?!\*)'
+        matches6 = re.findall(pattern6, content)
+        for match in matches6:
+            old_text = f'*{match}*'
+            new_text = f'\\textit{{{match}}}'
+            content = content.replace(old_text, new_text)
+            changes_made.append(f'Cursivas: {old_text} -> {new_text}')
         
         # Solo escribir si hay cambios
         if content != original_content:
