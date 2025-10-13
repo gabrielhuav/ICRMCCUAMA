@@ -3,9 +3,9 @@
 
 En este capítulo se presenta una metodología unificada e integrada para abordar el problema de la detección de noticias falsas en español. La estrategia metodológica se fundamenta en un proceso evolutivo de desarrollo y evaluación que avanza desde técnicas clásicas hasta modelos de lenguaje de última generación, permitiendo una comparación sistemática y objetiva de diferentes paradigmas de inteligencia artificial sobre una base de datos común.
 
-El diseño metodológico adopta un enfoque experimental escalonado que incluye: (1) adquisición y procesamiento unificado de datos, (2) implementación de un Flujo de datos de procesamiento común, (3) desarrollo paralelo de modelos de clasificación utilizando algoritmos metaheurísticos y modelos Transformer, y (4) evaluación comparativa integral bajo un marco de métricas unificado. Este proceso culmina con la implementación de la solución más efectiva en una aplicación web funcional.
+El diseño metodológico adopta un enfoque experimental escalonado que incluye: (1) adquisición y procesamiento unificado de datos, (2) implementación de un flujo de datos de procesamiento común, (3) desarrollo paralelo de modelos de clasificación utilizando algoritmos metaheurísticos y modelos Transformer, y (4) evaluación comparativa integral bajo un marco de métricas unificado. Este proceso culmina con la implementación de la solución más efectiva en una aplicación web funcional.
 
-\section{Visión General del Proceso Metodológico}
+\section{Visión general del proceso metodológico}
 
 La metodología se estructura como un flujo de datos experimental unificado que evalúa sistemáticamente dos paradigmas de inteligencia artificial complementarios. Como se ilustra en la Figura \ref{fig:metodologia_general}, ambos enfoques parten de una base metodológica común pero implementan estrategias de modelado diferenciadas, convergiendo finalmente en una evaluación comparativa que determina la solución óptima.
 
@@ -27,16 +27,37 @@ Una vez completada la evaluación comparativa, el modelo de mejor rendimiento se
     \label{fig:metodologia_general}
 \end{figure}
 
-\section{Definición y Distinción de Conceptos Fundamentales}
+\subsection{Esquema visual del flujo de trabajo general del sistema}
+
+Para facilitar la comprensión integral de la arquitectura y el flujo de procesamiento implementado, se presenta un esquema visual completo del sistema desarrollado. La Figura \ref{fig:system_architecture} ilustra la arquitectura general del sistema, mostrando la interacción entre los componentes principales y el flujo de datos desde la adquisición del corpus hasta la implementación final.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Imagenes/system_architecture.png}
+    \caption{Arquitectura general del sistema de detección de noticias falsas, mostrando el flujo completo desde la construcción del corpus hasta la implementación de la aplicación web.}
+    \label{fig:system_architecture}
+\end{figure}
+
+Este esquema arquitectónico unificado permite visualizar:
+
+\begin{itemize}
+    \item \textbf{Capa de datos:} Proceso de unificación del corpus desde múltiples fuentes académicas y extracción web
+    \item \textbf{Capa de preprocesamiento:} Pipeline común de limpieza, tokenización y representación textual
+    \item \textbf{Capa de modelado dual:} Implementación paralela de enfoques metaheurísticos y Transformer
+    \item \textbf{Capa de evaluación:} Marco unificado de métricas y validación cruzada
+    \item \textbf{Capa de aplicación:} Integración del modelo óptimo en sistema productivo
+\end{itemize}
+
+\section{Definición y distinción de conceptos fundamentales}
 \label{sec:definicion_conceptos}
 
 Antes de proceder con la descripción metodológica, es fundamental establecer con precisión la terminología utilizada en esta investigación, particularmente la distinción entre conceptos relacionados pero diferenciados que a menudo se utilizan de manera intercambiable en la literatura.
 
-\subsection{Distinción entre Noticia Falsa y Bulo}
+\subsection{Distinción entre noticia falsa y bulo}
 
 En el contexto de esta investigación, es esencial distinguir entre dos conceptos fundamentales que, aunque relacionados, poseen características distintivas importantes para el desarrollo de sistemas de detección automática.
 
-\subsection{Taxonomía de la Desinformación}
+\subsection{Taxonomía de la desinformación}
 
 Para proporcionar un marco conceptual completo, esta investigación adopta la taxonomía establecida por la literatura internacional \cite{bondielli2019survey, hu2022deep}, que clasifica el contenido engañoso en tres categorías principales:
 
@@ -48,7 +69,7 @@ Para proporcionar un marco conceptual completo, esta investigación adopta la ta
 
 El alcance de esta investigación se centra específicamente en la detección automática de \textbf{desinformación}, abarcando tanto noticias falsas como bulos, reconociendo que ambos tipos requieren estrategias de procesamiento de lenguaje natural diferenciadas pero complementarias.
 
-\subsection{Justificación de la Unificación Terminológica}
+\subsection{Justificación de la unificación terminológica}
 
 En el contexto del desarrollo de sistemas automáticos de detección, la distinción entre noticia falsa y bulo, aunque conceptualmente importante, se aborda mediante un enfoque unificado de \textbf{detección de contenido desinformativo}. Esta decisión metodológica se fundamenta en:
 
@@ -61,17 +82,17 @@ En el contexto del desarrollo de sistemas automáticos de detección, la distinc
 
 Por tanto, en el resto de este documento, el término \textbf{``noticias falsas''} se utilizará de manera inclusiva para referirse a cualquier tipo de contenido desinformativo, reconociendo la diversidad de formatos y estrategias de propagación que abarca esta categorización.
 
-\subsection{Esquema de Clasificación: Enfoque Binario}
+\subsection{Esquema de clasificación: enfoque binario}
 \label{subsec:esquema_clasificacion}
 
 \textbf{Esta investigación adopta un esquema de clasificación binaria}, donde cada noticia se etiqueta en una de dos clases mutuamente excluyentes:
 
 \begin{itemize}
-    \item \textbf{Clase 0 (FALSO):} Incluye todo contenido desinformativo, abarcando tanto noticias falsas formales como bulos informales, contenido satírico deliberadamente engañoso, y cualquier tipo de información con intención de desinformar
-    \item \textbf{Clase 1 (REAL):} Incluye contenido periodístico legítimo, noticias verificadas de fuentes confiables, y información factualmente correcta
+    \item \textbf{Clase 0 (FALSO):} Incluye todo contenido desinformativo, abarcando tanto noticias falsas formales como bulos informales, contenido satírico deliberadamente engañoso y cualquier tipo de información con intención de desinformar
+    \item \textbf{Clase 1 (REAL):} Incluye contenido periodístico legítimo, noticias verificadas de fuentes confiables e información factualmente correcta
 \end{itemize}
 
-\subsubsection{Justificación del Enfoque Binario}
+\subsubsection{Justificación del enfoque binario}
 
 La decisión de utilizar clasificación binaria, en lugar de esquemas multiclase más granulares, se fundamenta en:
 
@@ -82,7 +103,7 @@ La decisión de utilizar clasificación binaria, en lugar de esquemas multiclase
     \item \textbf{Disponibilidad de datos:} Los corpus disponibles están mayoritariamente etiquetados de forma binaria
 \end{enumerate}
 
-\subsubsection{Consideraciones sobre Esquemas Alternativos}
+\subsubsection{Consideraciones sobre esquemas alternativos}
 
 Aunque este trabajo adopta clasificación binaria, es importante reconocer que existen esquemas alternativos más granulares:
 
@@ -94,12 +115,12 @@ Aunque este trabajo adopta clasificación binaria, es importante reconocer que e
 
 Sin embargo, estos enfoques requieren corpus más especializados y presentan desafíos adicionales en términos de consistencia de etiquetado y acuerdo entre anotadores.
 
-\subsection{Fronteras Difusas en la Clasificación de Veracidad}
+\subsection{Fronteras difusas en la clasificación de veracidad}
 \label{subsec:fronteras_difusas}
 
 \textbf{Es importante reconocer que la clasificación binaria de contenido informativo presenta inherentemente zonas grises y fronteras difusas}, donde la distinción entre ``verdadero'' y ``falso'' no es absoluta. Esta complejidad conceptual representa uno de los desafíos fundamentales en la detección automatizada de desinformación.
 
-\subsubsection{Casos Límite y Ambigüedades}
+\subsubsection{Casos límite y ambigüedades}
 
 En la práctica, existen varios tipos de contenido que desafían la clasificación binaria estricta:
 
@@ -112,9 +133,9 @@ En la práctica, existen varios tipos de contenido que desafían la clasificaci�
     \item \textbf{Información especulativa:} Predicciones o análisis presentados como hechos consumados
 \end{itemize}
 
-\subsubsection{Implicaciones para el Modelado}
+\subsubsection{Implicaciones para el modelado}
 
-Esta ambiguidad inherente se aborda en esta investigación mediante:
+Esta ambigüedad inherente se aborda en esta investigación mediante:
 
 \begin{enumerate}
     \item \textbf{Criterios de etiquetado conservadores:} En casos ambiguos, se prioriza la asignación a la clase ``REAL'' para evitar censura inadecuada de contenido legítimo
@@ -123,7 +144,7 @@ Esta ambiguidad inherente se aborda en esta investigación mediante:
     \item \textbf{Reconocimiento de limitaciones:} Se asume que un porcentaje mínimo de casos será inherentemente ambiguo y difícil de clasificar con certeza absoluta
 \end{enumerate}
 
-\subsubsection{Justificación Pragmática del Enfoque Binario}
+\subsubsection{Justificación pragmática del enfoque binario}
 
 A pesar de estas complejidades, el enfoque binario se justifica porque:
 
@@ -136,14 +157,14 @@ A pesar de estas complejidades, el enfoque binario se justifica porque:
 
 Es fundamental entender que \textbf{la frontera difusa no es una limitación del modelo, sino una característica inherente del problema mismo}, que debe ser gestionada mediante diseño metodológico cuidadoso y reconocimiento explícito de las limitaciones del enfoque adoptado.
 
-\section{Construcción del Corpus Unificado}
+\section{Construcción del corpus unificado}
 \label{sec:construccion_corpus}
 
 El primer y más fundamental paso de la metodología fue la construcción de un corpus de alta calidad y de tamaño significativo en español, dada la escasez documentada de recursos centralizados para esta tarea \cite{hu2022deep}.
 
-\subsection{Fuentes de Datos Académicas}
+\subsection{Fuentes de datos académicas}
 
-Se llevó a cabo un proceso exhaustivo de investigación y unificación de cuatro corpus académicos reconocidos, los cuales constituyen pilares en la investigación de noticias falsas en español. \textbf{Es importante señalar que, aunque todos los corpus convergen hacia el objetivo común de detección de desinformación, cada uno fue desarrollado con enfoques metodológicos y propósitos específicos diferentes}, lo que enriquece la diversidad y robustez del conjunto de datos unificado. La Tabla \ref{tab:corpus_academicos} (ver tabla \ref{tab:corpus_academicos}) presenta un resumen detallado de estos recursos y sus características distintivas.
+Se llevó a cabo un proceso exhaustivo de investigación y unificación de cuatro corpus académicos reconocidos, los cuales constituyen pilares en la investigación de noticias falsas en español. \textbf{Es importante señalar que aunque todos los corpus convergen hacia el objetivo común de detección de desinformación, cada uno fue desarrollado con enfoques metodológicos y propósitos específicos diferentes}, lo que enriquece la diversidad y robustez del conjunto de datos unificado. La Tabla \ref{tab:corpus_academicos} presenta un resumen detallado de estos recursos y sus características distintivas.
 
 \begin{table}[htbp]
 \centering
@@ -183,15 +204,15 @@ Desarrollado como parte de un Trabajo Fin de Maestría Universitaria en Ciberseg
 
 \subsubsection{Dataset de Tretiakov et al.}
 
-Este corpus, desarrollado por Tretiakov, Martín García y Camacho, contiene 1,958 noticias en español (Corpus balanceado, 50\% por ciento de noticias falsas y 50\% de noticias verdaderas) \cite{tretiakov2022detection}. \textbf{Su propósito específico fue la evaluación de técnicas de aprendizaje automático tradicionales para clasificación binaria de contenido desinformativo}. El conjunto de datos fue creado en el contexto de técnicas de aprendizaje automático para la detección de información falsa y se encuentra disponible públicamente en Kaggle \cite{tretiakov2022noticias}. \textbf{Las fuentes de este corpus se concentran en redes sociales y plataformas digitales donde se propaga desinformación, incluyendo Twitter, Facebook y sitios web no verificados}. Su enfoque se centra en la aplicación de técnicas de aprendizaje automático para la clasificación automatizada de contenido desinformativo.
+Este corpus, desarrollado por Tretiakov, Martín García y Camacho, contiene 1,958 noticias en español (Corpus balanceado, 50\% de noticias falsas y 50\% de noticias verdaderas) \cite{tretiakov2022detection}. \textbf{Su propósito específico fue la evaluación de técnicas de aprendizaje automático tradicionales para clasificación binaria de contenido desinformativo}. El conjunto de datos fue creado en el contexto de técnicas de aprendizaje automático para la detección de información falsa y se encuentra disponible públicamente en Kaggle \cite{tretiakov2022noticias}. \textbf{Las fuentes de este corpus se concentran en redes sociales y plataformas digitales donde se propaga desinformación, incluyendo Twitter, Facebook y sitios web no verificados}. Su enfoque se centra en la aplicación de técnicas de aprendizaje automático para la clasificación automatizada de contenido desinformativo.
 
 \subsubsection{Spanish Political Fake News Dataset}
 
 El corpus más extenso utilizado, desarrollado por Blanco-Fernández et al., contiene 57,231 noticias de temática política \cite{blanco2024enhancing}. \textbf{Su propósito específico fue evaluar modelos transformer (BERT/RoBERTa) en el dominio político, donde la desinformación tiene particular relevancia social}. Este conjunto de datos fue específicamente diseñado para evaluar modelos BERT y RoBERTa en la detección de desinformación política en español y se encuentra disponible en Kaggle \cite{blanco2024spanish}. \textbf{Las fuentes incluyen tanto medios de comunicación tradicionales como plataformas digitales especializadas en contenido político, con particular énfasis en el contexto español e iberoamericano}. Su gran tamaño y enfoque en contenido político lo convierte en un recurso valioso para el entrenamiento de modelos de gran escala.
 
-\subsection{Análisis Comparativo Detallado de los Corpus Utilizados}
+\subsection{Análisis comparativo detallado de los corpus utilizados}
 
-Para garantizar una comprensión completa de las características y diferencias entre los corpus utilizados, se presenta un análisis comparativo exhaustivo que permite entender las fortalezas y limitaciones de cada fuente de datos, así como las decisiones metodológicas tomadas en el proceso de unificación (ver tabla \ref{tab:comparacion_exhaustiva_corpus}) .
+Para garantizar una comprensión completa de las características y diferencias entre los corpus utilizados, se presenta un análisis comparativo exhaustivo que permite entender las fortalezas y limitaciones de cada fuente de datos, así como las decisiones metodológicas tomadas en el proceso de unificación (ver Tabla \ref{tab:comparacion_exhaustiva_corpus}).
 
 \begin{table}[htbp]
 \centering
@@ -293,7 +314,7 @@ N/A \\
 \label{tab:comparacion_exhaustiva_corpus}
 \end{table}
 
-\subsubsection{Características de Variabilidad Regional del Español}
+\subsubsection{Características de variabilidad regional del español}
 
 Una consideración metodológica fundamental en esta investigación es el reconocimiento y aprovechamiento de la diversidad regional del español presente en los corpus utilizados. \textbf{El corpus unificado representa un enfoque de español neutro multiregional}, lo que constituye una fortaleza metodológica significativa:
 
@@ -318,7 +339,7 @@ Una consideración metodológica fundamental en esta investigación es el recono
 
 Esta diversidad regional no constituye una limitación, sino una fortaleza que permite desarrollar modelos más robustos y ampliamente aplicables.
 
-\textbf{1. Diversidad Metodológica:}
+\textbf{1. Diversidad metodológica:}
 \begin{itemize}
     \item \textbf{Corpus de Posadas-Durán:} Aporta rigor en análisis estilométrico y experiencia en competencias académicas
     \item \textbf{Corpus de Acosta:} Contribuye con metodología de construcción verificada manualmente
@@ -327,14 +348,14 @@ Esta diversidad regional no constituye una limitación, sino una fortaleza que p
     \item \textbf{Contenido de El Deforma:} Introduce diversidad estilística y contemporaneidad
 \end{itemize}
 
-\textbf{2. Cobertura Temporal y Geográfica:}
+\textbf{2. Cobertura temporal y geográfica:}
 \begin{itemize}
     \item \textbf{Span temporal:} 2018-2025 (7 años de evolución en patrones de desinformación)
     \item \textbf{Cobertura geográfica:} España, México, Latinoamérica (diversidad regional del español)
     \item \textbf{Evolución temática:} Desde temas generales hasta especialización política y satírica
 \end{itemize}
 
-\textbf{3. Complementariedad en Tipos de Desinformación:}
+\textbf{3. Complementariedad en tipos de desinformación:}
 \begin{itemize}
     \item \textbf{Desinformación tradicional:} Corpus académicos con verificación formal
     \item \textbf{Desinformación política:} Especialización del corpus de Blanco-Fernández
@@ -342,7 +363,7 @@ Esta diversidad regional no constituye una limitación, sino una fortaleza que p
     \item \textbf{Múltiples fuentes:} Desde medios tradicionales hasta redes sociales
 \end{itemize}
 
-\textbf{4. Validación de Robustez:}
+\textbf{4. Validación de robustez:}
 La diversidad en metodologías de construcción permite validar la robustez de los modelos desarrollados:
 \begin{itemize}
     \item Modelos entrenados deben generalizar entre diferentes tipos de anotación
@@ -350,32 +371,32 @@ La diversidad en metodologías de construcción permite validar la robustez de l
     \item Evaluación de transferencia entre dominios (general → político → satírico)
 \end{itemize}
 
-\subsubsection{Justificación de la Estrategia de Unificación}
+\subsubsection{Justificación de la estrategia de unificación}
 
 La decisión de unificar corpus heterogéneos se basa en varios principios metodológicos sólidos:
 
-\textbf{1. Principio de Máxima Diversidad:}
+\textbf{1. Principio de máxima diversidad:}
 \begin{itemize}
     \item Mayor variabilidad en patrones lingüísticos
     \item Reducción de sesgos específicos de corpus individuales
     \item Mejora en generalización de modelos entrenados
 \end{itemize}
 
-\textbf{2. Principio de Escala Efectiva:}
+\textbf{2. Principio de escala efectiva:}
 \begin{itemize}
     \item Aprovechamiento del corpus grande (Blanco-Fernández) como base
     \item Enriquecimiento con corpus especializados más pequeños
     \item Balanceo mediante extracción web controlada
 \end{itemize}
 
-\textbf{3. Principio de Validación Cruzada:}
+\textbf{3. Principio de validación cruzada:}
 \begin{itemize}
     \item Cada corpus actúa como validación independiente de los otros
     \item Patrones consistentes entre corpus indican robustez
     \item Diferencias señalan áreas que requieren atención especial
 \end{itemize}
 
-\subsection{Proceso de Unificación y Estandarización}
+\subsection{Proceso de unificación y estandarización}
 
 La integración de corpus heterogéneos requirió un proceso sistemático de estandarización que incluyó:
 
@@ -387,11 +408,11 @@ La integración de corpus heterogéneos requirió un proceso sistemático de est
     \item \textbf{Limpieza de datos:} Eliminación de registros con valores nulos o inconsistentes mediante \texttt{dropna()} y validación de tipos de datos
 \end{enumerate}
 
-\subsection{Ampliación del Corpus Mediante Extracción Web}
+\subsection{Ampliación del corpus mediante extracción web}
 
 Para mejorar el balance del conjunto de datos y aumentar la diversidad de las noticias etiquetadas como ``FALSAS'', se aplicaron técnicas de extracción web automatizada. Se desarrolló un script especializado en Python utilizando las librerías BeautifulSoup y Requests para extraer de forma sistemática los titulares y cuerpos de noticia del portal de contenido satírico ``El Deforma''.
 
-\subsubsection{Proceso de Extracción Web Automatizada}
+\subsubsection{Proceso de extracción web automatizada}
 
 El proceso de extracción automatizada se ejecutó en múltiples fases para alcanzar el objetivo de 9,000 noticias adicionales. La Tabla \ref{tab:web_scraping_proceso} detalla las diferentes etapas implementadas.
 
@@ -423,7 +444,7 @@ El proceso de extracción automatizada se ejecutó en múltiples fases para alca
 \label{tab:web_scraping_proceso}
 \end{table}
 
-\subsubsection{Implementación Técnica de la Extracción Web}
+\subsubsection{Implementación técnica de la extracción web}
 
 El proceso de extracción automatizada incluyó:
 
@@ -494,11 +515,11 @@ Esta estrategia de ampliación se justifica por varios factores:
     \item \textbf{Variabilidad temática:} Ampliación del espectro de temas cubiertos en el corpus
 \end{itemize}
 
-\subsection{Corpus Final y Estrategia de División}
+\subsection{Corpus final y estrategia de división}
 
 El proceso completo de unificación, limpieza de duplicados y ampliación mediante extracción web resultó en un \textbf{corpus final con 61,674 noticias únicas}, constituyendo uno de los recursos más extensos disponibles para la detección de noticias falsas en español.
 
-\subsubsection{Análisis de Composición Final}
+\subsubsection{Análisis de composición final}
 
 La Tabla \ref{tab:corpus_final} presenta la composición detallada del corpus unificado final.
 
@@ -533,7 +554,7 @@ El análisis de balance del corpus final mostró una distribución equilibrada:
     \item \textbf{Noticias REALES (1):} 30,940 registros (50.2\%)
 \end{itemize}
 
-\subsubsection{Concepto y Importancia del Balanceo de Clases}
+\subsubsection{Concepto e importancia del balanceo de clases}
 
 El \textbf{balanceo de clases} es un concepto fundamental en el aprendizaje automático que se refiere a la distribución equitativa de ejemplos entre las diferentes categorías o clases del conjunto de datos. En el contexto de la detección de noticias falsas, esto significa mantener una proporción similar entre noticias etiquetadas como ``FALSAS'' y ``REALES''.
 
@@ -557,10 +578,6 @@ El \textbf{balanceo de clases} es un concepto fundamental en el aprendizaje auto
 
 \begin{figure}[htbp]
     \centering
-    % TODO: Agregar imagen que muestre:
-    % - Gráfico de barras comparando distribución antes y después del balanceo
-    % - Visualización de la proporción 49.8% vs 50.2%
-    % - Comparación con ejemplos de datasets desbalanceados (ej: 80%-20%)
     \includegraphics[width=0.8\textwidth]{Imagenes/balanceo_corpus_explicacion.png}
     \caption{Representación gráfica del proceso de balanceo del corpus: comparación entre distribución inicial desbalanceada y distribución final equilibrada. La imagen muestra cómo la extracción web de 9,000 noticias falsas permitió alcanzar un equilibrio óptimo de 49.8\% noticias falsas vs 50.2\% noticias reales.}
     \label{fig:balanceo_corpus}
@@ -578,25 +595,25 @@ El balanceo adecuado del corpus tiene impactos directos en múltiples aspectos d
     \item \textbf{Validación confiable:} Los resultados de validación cruzada son más representativos
 \end{itemize}
 
-\subsubsection{Síntesis del Análisis Comparativo entre Corpus}
+\subsubsection{Síntesis del análisis comparativo entre corpus}
 
 El análisis detallado de los corpus permite identificar patrones complementarios que justifican la estrategia de unificación adoptada:
 
-\textbf{1. Análisis Cuantitativo Comparativo:}
+\textbf{1. Análisis cuantitativo comparativo:}
 \begin{itemize}
     \item \textbf{Distribución de tamaños:} Desde corpus micro (598 noticias) hasta macro (57,231 noticias)
     \item \textbf{Diversidad temporal:} Cobertura continua de 7 años (2018-2025) entre todos los corpus
     \item \textbf{Representación geográfica:} Equilibrio entre España (3 corpus), México (1 corpus) y cobertura internacional (1 corpus)
 \end{itemize}
 
-\textbf{2. Análisis Cualitativo de Complementariedad:}
+\textbf{2. Análisis cualitativo de complementariedad:}
 \begin{itemize}
     \item \textbf{Metodologías de verificación:} Combinación de verificación manual experta, fact-checking automatizado y verificación basada en fuentes
     \item \textbf{Dominios temáticos:} Progresión desde contenido general hasta especialización política y satírica
     \item \textbf{Tipos de desinformación:} Desde noticias completamente fabricadas hasta manipulación política y contenido satírico
 \end{itemize}
 
-\textbf{3. Fortalezas Emergentes de la Unificación:}
+\textbf{3. Fortalezas emergentes de la unificación:}
 La combinación de estos corpus heterogéneos produce un conjunto de datos con características emergentes superiores a la suma de sus partes:
 \begin{itemize}
     \item \textbf{Robustez metodológica:} Los modelos entrenados deben generalizar entre diferentes criterios de anotación
@@ -605,14 +622,14 @@ La combinación de estos corpus heterogéneos produce un conjunto de datos con c
     \item \textbf{Validación cruzada inherente:} Cada corpus actúa como conjunto de validación independiente
 \end{itemize}
 
-\textbf{4. Limitaciones Reconocidas y Mitigación:}
+\textbf{4. Limitaciones reconocidas y mitigación:}
 \begin{itemize}
     \item \textbf{Heterogeneidad metodológica:} Mitigada mediante estandarización rigurosa del proceso de unificación
     \item \textbf{Desbalance de tamaños:} Compensado mediante estrategia de extracción web controlada
     \item \textbf{Diferencias temporales:} Convertidas en ventaja para evaluar evolución de patrones
 \end{itemize}
 
-\textbf{5. Validación de la Estrategia Comparativa:}
+\textbf{5. Validación de la estrategia comparativa:}
 El proceso de comparación mutua entre corpus revela que cada fuente aporta elementos únicos e irreemplazables:
 \begin{itemize}
     \item \textbf{Corpus pequeños especializados:} Aportan calidad y metodología rigurosa
@@ -623,16 +640,17 @@ El proceso de comparación mutua entre corpus revela que cada fuente aporta elem
 
 El resultado de esta estrategia de comparación y unificación es un corpus robusto de 61,674 noticias que mantiene la diversidad y riqueza de las fuentes originales mientras proporciona la escala necesaria para entrenar modelos de deep learning efectivos. Esta aproximación metodológica garantiza que los modelos desarrollados sean capaces de generalizar efectivamente entre diferentes tipos de contenido desinformativo y contextos de aplicación.
 
-\subsubsection{División Estratificada para Entrenamiento}
+\subsubsection{División estratificada para entrenamiento}
 
-Para garantizar una evaluación robusta y evitar el sobreajuste, este corpus se dividió de manera estratificada, manteniendo la proporción original de noticias falsas y reales en cada subconjunto. La configuración principal utilizada fue 70\% para entrenamiento, 10\% para validación y 20\% para evaluación final. Sin embargo, con el objetivo de analizar la sensibilidad del modelo ante diferentes proporciones de datos, también se realizaron experimentos adicionales con las siguientes divisiones alternativas:
+Para garantizar una evaluación robusta y evitar el sobreajuste, este corpus se dividió de manera estratificada, manteniendo la proporción original de noticias falsas y reales en cada subconjunto. La configuración utilizada fue \textbf{70\% para entrenamiento, 10\% para validación y 20\% para evaluación final}. Esta división garantiza:
 
 \begin{itemize}
-    \item 80\% entrenamiento / 10\% validación / 10\% prueba
-    \item 60\% entrenamiento / 20\% validación / 20\% prueba
+    \item \textbf{Conjunto de entrenamiento suficiente:} 70\% proporciona datos abundantes para el aprendizaje de patrones complejos
+    \item \textbf{Validación efectiva:} 10\% permite calibración de hiperparámetros sin comprometer datos de prueba
+    \item \textbf{Evaluación objetiva:} 20\% reservado exclusivamente para pruebas finales sin contaminar el proceso de desarrollo
 \end{itemize}
 
-La Tabla \ref{tab:division_datos} muestra la distribución principal implementada en la mayoría de los experimentos.
+La Tabla \ref{tab:division_datos} muestra la distribución implementada en todos los experimentos.
 
 \begin{table}[htbp]
 \centering
@@ -655,12 +673,24 @@ Pruebas & 20\% & 12,336 & Evaluación final \\
 \hline
 \end{tabular}
 }
-\caption{División estratificada principal del corpus para entrenamiento y evaluación.}
+\caption{División estratificada del corpus para entrenamiento y evaluación.}
 \label{tab:division_datos}
 \end{table}
+
 Esta estrategia sigue las mejores prácticas establecidas en la literatura de aprendizaje automático y permite una evaluación imparcial de ambas metodologías. La estratificación garantiza que cada subconjunto mantenga la misma proporción de noticias falsas y reales que el corpus completo, evitando sesgos en el entrenamiento y evaluación de los modelos.
 
-\subsubsection{Proceso de Limpieza Final}
+\textbf{Gestión de sesgo en el dataset:}
+
+Para minimizar posibles sesgos en el conjunto de datos, se implementaron las siguientes medidas:
+
+\begin{enumerate}
+    \item \textbf{Estratificación rigurosa:} Uso de \texttt{train\_test\_split} con parámetro \texttt{stratify} para mantener distribución de clases en cada partición
+    \item \textbf{Aleatorización controlada:} Semilla fija (\texttt{random\_state=42}) para reproducibilidad sin pérdida de aleatoriedad
+    \item \textbf{Análisis de distribución:} Verificación estadística de la distribución de clases en cada subconjunto mediante tests chi-cuadrado
+    \item \textbf{Validación cruzada estratificada:} Uso de k-fold estratificado (k=5) durante la optimización de hiperparámetros para garantizar robustez
+\end{enumerate}
+
+\subsubsection{Proceso de limpieza final}
 
 El proceso de limpieza final implementó las siguientes operaciones:
 
@@ -676,16 +706,16 @@ El proceso de limpieza final implementó las siguientes operaciones:
 El resultado final fue un corpus robusto, balanceado y limpio, optimizado para el entrenamiento de modelos de detección de noticias falsas en español, que constituye una de las contribuciones principales de este trabajo de investigación al proporcionar un recurso de gran escala para la comunidad hispanohablante.
 
 
-\section{Enfoque 1: Detección Mediante Algoritmos Metaheurísticos}
+\section{Enfoque 1: detección mediante algoritmos metaheurísticos}
 \label{sec:enfoque_metaheuristico}
 
 El primer enfoque metodológico se basó en técnicas clásicas de PLN combinadas con algoritmos de optimización metaheurística, sirviendo como línea base robusta para el proyecto y permitiendo la comparación con enfoques más modernos.
 
-\subsection{Preprocesamiento y Representación Textual}
+\subsection{Preprocesamiento y representación textual}
 
 El flujo de datos de preprocesamiento implementó una serie de transformaciones estándar para convertir el texto crudo en representaciones numéricas adecuadas para algoritmos de aprendizaje automático.
 
-\subsubsection{Función de Limpieza de Texto}
+\subsubsection{Función de limpieza de texto}
 
 Se implementó una función optimizada de limpieza que incluye los siguientes pasos:
 
@@ -723,9 +753,9 @@ La ponderación TF-IDF se calculó utilizando las siguientes fórmulas:
 \text{TF-IDF}(t,d,D) = \text{TF}(t,d) \times \text{IDF}(t,D)
 \end{equation}
 
-Donde $t$ representa un término, $d$ un documento, $D$ la colección completa de documentos, y $f_{t,d}$ la frecuencia del término $t$ en el documento $d$.
+Donde $t$ representa un término, $d$ un documento, $D$ la colección completa de documentos y $f_{t,d}$ la frecuencia del término $t$ en el documento $d$.
 
-\subsection{Algoritmos Metaheurísticos Implementados}
+\subsection{Algoritmos metaheurísticos implementados}
 
 Para la optimización de hiperparámetros de clasificadores, se implementaron y evaluaron cinco algoritmos metaheurísticos específicos \cite{hurtado2024calibracion, bacanin2023benefits}. La Tabla \ref{tab:algoritmos_metaheuristicos} presenta una visión general de los algoritmos seleccionados y sus características principales.
 
@@ -786,6 +816,9 @@ Pasos por temperatura & 100 & Iteraciones en cada nivel térmico \\
 \hline
 \rowcolor{UAMAzcapoLight!40}
 Puntos de arranque múltiples & 5 & Inicializaciones independientes \\
+\hline
+\rowcolor{UAMAzcapoMedium!30}
+\textbf{Iteraciones totales} & \textbf{31 temperaturas} & \textbf{Niveles de enfriamiento desde TI hasta TF} \\
 \hline
 \end{tabular}
 }
@@ -863,6 +896,7 @@ Tamaño de torneo & 3 & Individuos competidores en selección \\
 \caption{Configuración de parámetros del algoritmo GA.}
 \label{tab:parametros_ga}
 \end{table}
+
 Los operadores genéticos implementados incluyen:
 \begin{itemize}
     \item \textbf{Selección por torneo determinística:} Competencia entre individuos para reproducción
@@ -936,7 +970,6 @@ Coeficiente social (c2) & 1.5 & Peso de la experiencia colectiva \\
 \label{tab:parametros_pso}
 \end{table}
 
-
 El comportamiento del enjambre se rige por:
 \begin{itemize}
     \item \textbf{Inicialización:} Posiciones aleatorias en [-5, 5] y velocidades gaussianas
@@ -944,7 +977,7 @@ El comportamiento del enjambre se rige por:
     \item \textbf{Comunicación social:} Intercambio de información sobre mejores posiciones encontradas
 \end{itemize}
 
-\subsection{Función de Evaluación y Clasificación}
+\subsection{Función de evaluación y clasificación}
 
 Todos los algoritmos metaheurísticos utilizan una función de evaluación común que implementa un clasificador logístico binario:
 
@@ -959,7 +992,7 @@ Donde:
     \item La decisión final se toma con umbral de 0.5
 \end{itemize}
 
-\subsection{Reducción de Dimensionalidad}
+\subsection{Reducción de dimensionalidad}
 
 Para hacer computacionalmente factible la optimización, se aplicó reducción de dimensionalidad usando \texttt{SelectPercentile} con selección del 10\% de las características más relevantes según el test chi-cuadrado (El test chi-cuadrado es una prueba estadística que mide si dos cosas están relacionadas entre sí. En nuestro caso, mide qué tan relacionada está cada palabra con el hecho de que una noticia sea falsa o real). La Tabla \ref{tab:reduccion_dimensionalidad} resume el proceso de selección de características.
 
@@ -991,15 +1024,14 @@ Características reducidas & 500 & Dimensionalidad manejable \\
 \label{tab:reduccion_dimensionalidad}
 \end{table}
 
-
 Esta estrategia de reducción permite que los algoritmos metaheurísticos operen eficientemente sobre un espacio de características optimizado, manteniendo la información más discriminativa para la tarea de clasificación.
 
-\section{Enfoque 2: Detección Mediante Modelo Transformer}
+\section{Enfoque 2: detección mediante modelo Transformer}
 \label{sec:enfoque_transformer}
 
-El segundo enfoque se fundamentó en el paradigma de aprendizaje profundo, específicamente en la arquitectura Transformer \cite{vaswani2017attention}, utilizando un modelo de lenguaje pre-entrenado para capturar representaciones contextuales sofisticadas del texto.
+El segundo enfoque se fundamentó en el paradigma de aprendizaje profundo, específicamente en la arquitectura Transformer \cite{vaswani2017attention}, utilizando un modelo de lenguaje preentrenado para capturar representaciones contextuales sofisticadas del texto.
 
-\subsection{Selección y Justificación del Modelo}
+\subsection{Selección y justificación del modelo}
 
 Para la selección del modelo óptimo se realizó un análisis comparativo entre los principales modelos BERT optimizados disponibles. La Tabla \ref{tab:comparacion_modelos_bert} presenta las características técnicas de los candidatos evaluados.
 
@@ -1038,7 +1070,7 @@ Se seleccionó el modelo \texttt{distilbert-base-multilingual-cased} por las sig
     \item \textbf{Disponibilidad:} Accesible a través de la librería Transformers de Hugging Face
 \end{itemize}
 
-\subsection{Infraestructura Computacional}
+\subsection{Infraestructura computacional}
 
 El entrenamiento del modelo DistilBERT se realizó en un entorno de hardware dedicado con las siguientes especificaciones técnicas:
 
@@ -1069,11 +1101,11 @@ El entrenamiento del modelo DistilBERT se realizó en un entorno de hardware ded
 \label{tab:hardware_specs}
 \end{table}
 
-\subsection{Configuración Experimental y Optimización de Hiperparámetros}
+\subsection{Configuración experimental y optimización de hiperparámetros}
 
 El proceso de fine-tuning se implementó utilizando TensorFlow con precisión mixta (mixed\_float16) para optimizar el uso de memoria GPU y acelerar el entrenamiento. La configuración experimental se estructuró en múltiples fases de optimización.
 
-\subsubsection{Parámetros de Entrenamiento Base}
+\subsubsection{Parámetros de entrenamiento base}
 
 La configuración base del modelo se estableció considerando las limitaciones computacionales y las mejores prácticas para modelos Transformer:
 
@@ -1105,7 +1137,7 @@ Precisión numérica & mixed\_float16 & Optimización de memoria GPU \\
 \label{tab:parametros_base_distilbert}
 \end{table}
 
-\subsubsection{Estrategia de Regularización Avanzada}
+\subsubsection{Estrategia de regularización avanzada}
 
 Para controlar el overfitting identificado en experimentos preliminares, se implementó una estrategia de regularización intensiva que incluye múltiples técnicas complementarias:
 
@@ -1142,23 +1174,23 @@ Batch Size Variable & \{4, 6, 8\} & 4 & Mayor regularización \\
 \label{tab:regularizacion_distilbert}
 \end{table}
 
-\subsubsection{Proceso de Búsqueda de Hiperparámetros}
+\subsubsection{Proceso de búsqueda de hiperparámetros}
 
 La optimización de hiperparámetros se realizó mediante una búsqueda sistemática que combinó exploración manual y búsqueda en cuadrícula (grid search) en los rangos especificados. El proceso se estructuró en las siguientes etapas:
 
 \begin{enumerate}
     \item \textbf{Búsqueda inicial:} Exploración amplia de rangos para identificar regiones prometedoras
     \item \textbf{Refinamiento:} Búsqueda focalizada en torno a los mejores candidatos iniciales
-    \item \textbf{Validación cruzada:} Confirmación de estabilidad con múltiples semillas aleatorias
+    \item \textbf{Validación cruzada:} Confirmación de estabilidad con múltiples semillas aleatorias (k=5)
     \item \textbf{Selección final:} Evaluación en conjunto de validación para determinar configuración óptima
 \end{enumerate}
 
-\section{Metodología de Evaluación Comparativa}
+\section{Metodología de evaluación comparativa}
 \label{sec:evaluacion_comparativa}
 
 Para garantizar una comparación justa y rigurosa entre ambos paradigmas, se estableció un protocolo de evaluación común que eliminara sesgos metodológicos y permitiera una comparación objetiva del rendimiento.
 
-\subsection{Protocolo de Evaluación}
+\subsection{Protocolo de evaluación}
 
 Ambos enfoques fueron sometidos al mismo esquema de evaluación estructurado que garantiza la imparcialidad y reproducibilidad de los resultados. La Tabla \ref{tab:protocolo_evaluacion} detalla la estructura del protocolo implementado.
 
@@ -1185,7 +1217,7 @@ Ambos enfoques fueron sometidos al mismo esquema de evaluación estructurado que
 \label{tab:protocolo_evaluacion}
 \end{table}
 
-\subsection{Fundamentos de la Matriz de Confusión}
+\subsection{Fundamentos de la matriz de confusión}
 
 Para la evaluación de modelos de clasificación binaria en detección de noticias falsas, todas las métricas se derivan de la matriz de confusión, que categoriza las predicciones según su correspondencia con la realidad. La Tabla \ref{tab:matriz_confusion_conceptos} define los cuatro casos posibles.
 
@@ -1216,7 +1248,7 @@ Para la evaluación de modelos de clasificación binaria en detección de notici
 \label{tab:matriz_confusion_conceptos}
 \end{table}
 
-\subsubsection{Representación Visual de la Matriz de Confusión}
+\subsubsection{Representación visual de la matriz de confusión}
 
 La estructura de la matriz de confusión para clasificación binaria se puede representar como:
 
@@ -1244,19 +1276,19 @@ La estructura de la matriz de confusión para clasificación binaria se puede re
 \label{tab:estructura_matriz_confusion}
 \end{table}
 
-\subsection{Marco de Métricas de Rendimiento}
+\subsection{Marco de métricas de rendimiento}
 
-\subsubsection{Fundamentación Teórica de las Métricas según el Estado del Arte}
+\subsubsection{Fundamentación teórica de las métricas según el estado del arte}
 
 La selección de métricas de evaluación en este trabajo se fundamenta en los estándares establecidos por la literatura especializada y los marcos de evaluación reconocidos internacionalmente. Como establece Gómez-Adorno et al. \cite{gomez2021overview} en su consolidación de métricas FakeDeS para detección en español, la evaluación rigurosa requiere un conjunto comprehensivo de medidas que capturen diferentes aspectos del rendimiento del modelo.
 
 Los talleres CheckThat! organizados en el marco de CLEF \cite{alam2023overview, barron2023clef} han estandarizado el uso de métricas específicas que permiten la comparación directa entre sistemas, estableciendo que las métricas fundamentales para clasificación binaria deben incluir: exactitud, precisión, exhaustividad (recall), F1-Score y especificidad. Esta estandarización garantiza la reproducibilidad y comparabilidad de los resultados con el estado del arte internacional.
 
-\subsubsection{Propiedades Matemáticas de las Métricas Implementadas}
+\subsubsection{Propiedades matemáticas de las métricas implementadas}
 
 Para que una función pueda considerarse una métrica válida en el contexto matemático, debe cumplir con propiedades formales específicas. Las métricas implementadas en este trabajo satisfacen los siguientes axiomas fundamentales:
 
-\textbf{1. Axioma de Normalización:}
+\textbf{1. Axioma de normalización:}
 Todas las métricas están normalizadas en el rango [0,1], donde:
 \begin{itemize}
     \item Valor 0: Rendimiento mínimo posible
@@ -1264,7 +1296,7 @@ Todas las métricas están normalizadas en el rango [0,1], donde:
     \item Esta propiedad permite comparabilidad directa entre métricas diferentes
 \end{itemize}
 
-\textbf{2. Axioma de Monotonía:}
+\textbf{2. Axioma de monotonía:}
 Las métricas son monotónicamente crecientes respecto a las predicciones correctas:
 \begin{itemize}
     \item $\uparrow TP \Rightarrow \uparrow \text{Precisión, Recall, F1-Score, Exactitud}$
@@ -1272,7 +1304,7 @@ Las métricas son monotónicamente crecientes respecto a las predicciones correc
     \item Esta propiedad garantiza que mejores predicciones resulten en mejores valores de métrica
 \end{itemize}
 
-\textbf{3. Axioma de Sensibilidad:}
+\textbf{3. Axioma de sensibilidad:}
 Las métricas reaccionan apropiadamente a cambios en los componentes de la matriz de confusión:
 \begin{itemize}
     \item Cambios en FP afectan negativamente a Precisión y Especificidad
@@ -1280,7 +1312,7 @@ Las métricas reaccionan apropiadamente a cambios en los componentes de la matri
     \item Esta sensibilidad permite detectar diferentes tipos de errores del modelo
 \end{itemize}
 
-\textbf{4. Axioma de Complementariedad:}
+\textbf{4. Axioma de complementariedad:}
 Las métricas capturan aspectos complementarios del rendimiento:
 \begin{itemize}
     \item Precisión mide calidad de predicciones positivas
@@ -1289,7 +1321,7 @@ Las métricas capturan aspectos complementarios del rendimiento:
     \item Especificidad mide calidad en clase negativa
 \end{itemize}
 
-\textbf{5. Propiedad de Consistencia con Literatura:}
+\textbf{5. Propiedad de consistencia con literatura:}
 Las definiciones implementadas son consistentes con:
 \begin{itemize}
     \item Marcos de evaluación IberLEF \cite{aragon2020overview}
@@ -1330,11 +1362,11 @@ Utilizando las definiciones anteriores, el rendimiento se evaluó con un conjunt
 \label{tab:metricas_evaluacion}
 \end{table}
 
-\subsubsection{Validación Matemática de las Métricas Implementadas}
+\subsubsection{Validación matemática de las métricas implementadas}
 
 Para garantizar la solidez matemática del marco de evaluación, se verificó que cada métrica cumple con las propiedades formales establecidas en el estado del arte:
 
-\textbf{1. Verificación de Dominios y Rangos:}
+\textbf{1. Verificación de dominios y rangos:}
 \begin{align}
 \text{Exactitud} &= \frac{TP + TN}{TP + TN + FP + FN} \in [0,1] \\
 \text{Precisión} &= \frac{TP}{TP + FP} \in [0,1] \quad \text{si } TP + FP > 0 \\
@@ -1343,14 +1375,14 @@ Para garantizar la solidez matemática del marco de evaluación, se verificó qu
 \text{Especificidad} &= \frac{TN}{TN + FP} \in [0,1] \quad \text{si } TN + FP > 0
 \end{align}
 
-\textbf{2. Verificación de Casos Límite:}
+\textbf{2. Verificación de casos límite:}
 \begin{itemize}
     \item \textbf{Rendimiento perfecto:} $TP > 0, TN > 0, FP = 0, FN = 0 \Rightarrow$ Todas las métricas = 1
     \item \textbf{Rendimiento nulo:} $TP = 0, TN = 0, FP > 0, FN > 0 \Rightarrow$ Exactitud = 0
     \item \textbf{Casos degenerados:} Manejo apropiado cuando denominadores son cero
 \end{itemize}
 
-\textbf{3. Consistencia con Estándares Internacionales:}
+\textbf{3. Consistencia con estándares internacionales:}
 Las fórmulas implementadas son idénticas a las utilizadas en:
 \begin{itemize}
     \item Competencias IberLEF 2020-2021 \cite{aragon2020overview, gomez2021overview}
@@ -1359,7 +1391,7 @@ Las fórmulas implementadas son idénticas a las utilizadas en:
     \item Estándares scikit-learn para reproducibilidad
 \end{itemize}
 
-\subsubsection{Consideraciones Específicas para Detección de Noticias Falsas}
+\subsubsection{Consideraciones específicas para detección de noticias falsas}
 
 En el contexto de detección de noticias falsas, cada tipo de error tiene implicaciones específicas:
 
@@ -1370,11 +1402,11 @@ En el contexto de detección de noticias falsas, cada tipo de error tiene implic
     \item \textbf{Consideraciones prácticas:} En implementaciones reales, los falsos positivos pueden ser más aceptables cuando existe un proceso de revisión humana que puede corregir estas decisiones automáticas
 \end{itemize}
 
-\subsubsection{Alineación con Métricas del Estado del Arte}
+\subsubsection{Alineación con métricas del estado del arte}
 
 La selección e implementación de métricas en este trabajo está directamente alineada con los estándares establecidos por la literatura especializada en detección de noticias falsas en español:
 
-\textbf{1. Consistencia con Competencias IberLEF:}
+\textbf{1. Consistencia con competencias IberLEF:}
 \begin{itemize}
     \item \textbf{Posadas-Durán et al. \cite{posadas2019detection}:} Utilizan exactitud, precisión, recall y F1-Score como métricas principales
     \item \textbf{Aragón et al. \cite{aragon2020overview}:} Establecen F1-Score como métrica de ranking principal en IberLEF 2020
@@ -1382,7 +1414,7 @@ La selección e implementación de métricas en este trabajo está directamente 
     \item \textbf{Este trabajo:} Implementa las mismas métricas garantizando comparabilidad directa
 \end{itemize}
 
-\textbf{2. Alineación con Marcos Internacionales:}
+\textbf{2. Alineación con marcos internacionales:}
 \begin{itemize}
     \item \textbf{CheckThat! CLEF \cite{barron2023clef}:} Establece precisión y recall como métricas fundamentales
     \item \textbf{Evaluaciones multimodales \cite{alam2023overview}:} Requieren métricas balanceadas para evitar sesgos
@@ -1390,7 +1422,7 @@ La selección e implementación de métricas en este trabajo está directamente 
     \item \textbf{Este trabajo:} Adopta estándares internacionales para máxima reproducibilidad
 \end{itemize}
 
-\textbf{3. Justificación Específica por Métrica:}
+\textbf{3. Justificación específica por métrica:}
 \begin{itemize}
     \item \textbf{F1-Score:} Métrica principal siguiendo a Gómez-Adorno et al. \cite{gomez2021overview} por su balance entre precisión y recall
     \item \textbf{Exactitud:} Incluida para comparabilidad con trabajos clásicos, con advertencia sobre limitaciones en datos desbalanceados
@@ -1399,7 +1431,7 @@ La selección e implementación de métricas en este trabajo está directamente 
     \item \textbf{Especificidad:} Añadida para análisis comprehensivo de rendimiento en clase negativa
 \end{itemize}
 
-\textbf{4. Validación mediante Comparación de Métricas:}
+\textbf{4. Validación mediante comparación de métricas:}
 Las métricas implementadas permiten comparación directa con:
 \begin{itemize}
     \item Evidencias reportadas en IberLEF 2020-2021
@@ -1408,7 +1440,7 @@ Las métricas implementadas permiten comparación directa con:
     \item Estándares de la comunidad científica internacional
 \end{itemize}
 
-\subsection{Criterios de Selección del Mejor Modelo}
+\subsection{Criterios de selección del mejor modelo}
 
 La selección del modelo óptimo se basará en una evaluación multi-criterio que considera diferentes aspectos del rendimiento. La Tabla \ref{tab:criterios_seleccion} detalla los criterios y sus pesos relativos.
 
@@ -1439,7 +1471,7 @@ La selección del modelo óptimo se basará en una evaluación multi-criterio qu
 \label{tab:criterios_seleccion}
 \end{table}
 
-\subsection{Análisis de Matrices de Confusión}
+\subsection{Análisis de matrices de confusión}
 
 Se realizará un análisis detallado de las matrices de confusión para comprender el comportamiento específico de cada modelo:
 
@@ -1450,7 +1482,7 @@ Se realizará un análisis detallado de las matrices de confusión para comprend
     \item \textbf{Interpretabilidad:} Análisis de características más influyentes en decisiones
 \end{itemize}
 
-\subsection{Reporte de Resultados}
+\subsection{Reporte de resultados}
 
 Los resultados se presentarán siguiendo un formato estandarizado que incluye:
 
@@ -1484,10 +1516,10 @@ Recomendación final & Modelo seleccionado con justificación integral \\
 
 Esta metodología de evaluación comprensiva garantiza una comparación objetiva, estadísticamente robusta y prácticamente relevante entre los paradigmas de algoritmos metaheurísticos y modelos Transformer para la detección de noticias falsas en español.
 
-\section{Infraestructura Computacional y Herramientas}
+\section{Infraestructura computacional y herramientas}
 \label{sec:infraestructura}
 
-\subsection{Entorno de Desarrollo para Algoritmos Metaheurísticos}
+\subsection{Entorno de desarrollo para algoritmos metaheurísticos}
 
 El desarrollo de los algoritmos metaheurísticos se realizó en un entorno cloud optimizado para experimentación iterativa y flexibilidad de recursos. La Tabla \ref{tab:entorno_metaheuristicos} detalla las especificaciones del entorno utilizado.
 
@@ -1521,7 +1553,7 @@ El desarrollo de los algoritmos metaheurísticos se realizó en un entorno cloud
 \label{tab:entorno_metaheuristicos}
 \end{table}
 
-\subsection{Stack Tecnológico Completo}
+\subsection{Stack tecnológico completo}
 
 La implementación utilizó un ecosistema de software cuidadosamente seleccionado para garantizar compatibilidad y rendimiento óptimo. La Tabla \ref{tab:stack_tecnologico} detalla las herramientas y librerías utilizadas.
 
@@ -1541,7 +1573,7 @@ La implementación utilizó un ecosistema de software cuidadosamente seleccionad
 \textbf{Deep Learning} & TensorFlow & 2.15.0 & \begin{tabular}[t]{@{}l@{}}Framework principal para DistilBERT\\Soporte GPU optimizado\end{tabular} \\
 \hline
 \rowcolor{UAMLermaLight!50}
-\textbf{Transformers} & transformers (Hugging Face) & 4.35.0 & \begin{tabular}[t]{@{}l@{}}Modelos pre-entrenados\\Tokenización avanzada\end{tabular} \\
+\textbf{Transformers} & transformers (Hugging Face) & 4.35.0 & \begin{tabular}[t]{@{}l@{}}Modelos preentrenados\\Tokenización avanzada\end{tabular} \\
 \hline
 \rowcolor{UAMXochimilcoLight!50}
 \textbf{ML Tradicional} & scikit-learn & 1.3.2 & \begin{tabular}[t]{@{}l@{}}Algoritmos metaheurísticos\\Métricas de evaluación\end{tabular} \\
@@ -1573,7 +1605,7 @@ La implementación utilizó un ecosistema de software cuidadosamente seleccionad
 \label{tab:stack_tecnologico}
 \end{table}
 
-\section{Consideraciones Éticas y de Privacidad}
+\section{Consideraciones éticas y de privacidad}
 \label{sec:consideraciones_eticas}
 
 El desarrollo de herramientas de detección de desinformación conlleva importantes consideraciones éticas que deben ser abordadas de manera integral y transparente.
