@@ -1438,6 +1438,37 @@ Para asegurar la modularidad, portabilidad y escalabilidad, ambos prototipos se 
     \item \textbf{Contenerización (Capa de Despliegue):} La aplicación completa, junto con todas sus dependencias de Python y del sistema, se empaqueta en una imagen de contenedor utilizando \textbf{Docker}. El proceso es gestionado por un archivo \texttt{docker-compose.yml} que permite construir y ejecutar la aplicación en un entorno aislado y reproducible con un solo comando. Esto elimina los problemas de compatibilidad entre diferentes máquinas y simplifica drásticamente el despliegue.
 \end{itemize}
 
+\subsubsection{Diagramas de arquitectura del sistema}
+
+La Figura~\ref{fig:component_diagram} expone la arquitectura de componentes del sistema implementado, mostrando la interacción entre las diferentes capas y módulos que conforman tanto el prototipo metaheurístico como el prototipo basado en Transformers. El diagrama ilustra claramente la separación de responsabilidades entre el frontend de presentación, el backend de lógica de negocio, el módulo de inferencia de IA y la capa de contenerización, evidenciando la modularidad y escalabilidad del diseño arquitectónico.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Imagenes/component_diagram.png}
+    \caption{Diagrama de componentes del sistema mostrando la arquitectura modular de cuatro capas implementada para ambos prototipos de detección de noticias falsas.}
+    \label{fig:component_diagram}
+\end{figure}
+
+La Figura~\ref{fig:sequence_diagram} expone el flujo de ejecución temporal del sistema durante el procesamiento de una consulta de usuario, desde la recepción de una URL en el frontend hasta la entrega del resultado final de clasificación. El diagrama de secuencia detalla la comunicación entre actores y componentes, incluyendo la extracción web, el preprocesamiento de datos, la inferencia del modelo de IA y la respuesta estructurada al usuario, proporcionando una visión completa del ciclo de vida operacional del sistema.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{Imagenes/sequence_diagram.png}
+    \caption{Diagrama de secuencia mostrando el flujo temporal de procesamiento desde la entrada del usuario hasta la respuesta de clasificación del sistema.}
+    \label{fig:sequence_diagram}
+\end{figure}
+
+\subsubsection{Consideraciones técnicas de la arquitectura}
+
+Los diagramas presentados evidencian las decisiones arquitectónicas fundamentales que garantizan la robustez operacional del sistema:
+
+\begin{itemize}
+    \item \textbf{Separación de responsabilidades:} Cada componente tiene una función específica y bien definida, facilitando el mantenimiento y las actualizaciones
+    \item \textbf{Escalabilidad horizontal:} La arquitectura contenerizada permite la replicación de instancias según la demanda
+    \item \textbf{Tolerancia a fallos:} El diseño modular permite el aislamiento de errores sin afectar todo el sistema
+    \item \textbf{Eficiencia de recursos:} La carga única del modelo en memoria optimiza el tiempo de respuesta para consultas subsecuentes
+\end{itemize}
+
 \subsection{Prototipo 1: Analizador basado en metaheurísticas}
 
 El primer prototipo se desarrolló para servir los modelos optimizados con los algoritmos metaheurísticos (Recocido Simulado, Búsqueda Dispersa, etc.). Esta implementación sirvió como una valiosa prueba de concepto y como una base de comparación para el modelo Transformer final.
@@ -1578,7 +1609,7 @@ Para transición del prototipo a un sistema de producción robusto, se recomiend
     \item \textbf{Cola de trabajos:} Uso de Celery para procesamiento asíncrono en escenarios de alto volumen
     \item \textbf{Monitoreo y logging:} Integración de Prometheus y Grafana para telemetría en tiempo real
     \item \textbf{Balance de carga:} Configuración de NGINX o similar para distribución entre múltiples instancias
-    \item \textbf{Actualización continua:} Pipeline CI/CD para reentrenamiento y despliegue automatizado de nuevas versiones del modelo
+    \item \textbf{Actualización continua:} Flujo de procesamiento de datos CI/CD para reentrenamiento y despliegue automatizado de nuevas versiones del modelo
 \end{itemize}
 
 \subsection{Síntesis de implementación y viabilidad}
