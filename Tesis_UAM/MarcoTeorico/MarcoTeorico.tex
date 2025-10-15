@@ -39,31 +39,27 @@ Es necesario establecer una distinción técnica clara entre los dominios de apl
 \centering
 \adjustbox{width=\textwidth,center}{%
 \small
+\rowcolors{2}{UAMAzcapoLight!40}{white}
 \begin{tabular}{|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Aspecto} & \textbf{Noticias Falsas} & \textbf{Fraude Digital} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Aspecto}} & \textbf{\textcolor{white}{Noticias Falsas}} & \textbf{\textcolor{white}{Fraude Digital}} \\
 \hline
 \textbf{Objetivo primario} & 
 \begin{tabular}[t]{@{}l@{}}Manipulación de opinión pública,\\influencia política/social\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Beneficio económico ilícito,\\acceso no autorizado a recursos\end{tabular} \\
-\hline
 \textbf{Formato típico} & 
 \begin{tabular}[t]{@{}l@{}}Artículos periodísticos,\\imitando medios legítimos\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Emails de phishing, anuncios\\de inversión, ofertas comerciales\end{tabular} \\
-\hline
 \textbf{Audiencia objetivo} & 
 \begin{tabular}[t]{@{}l@{}}Consumidores de noticias, votantes,\\opinión pública general\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Potenciales víctimas económicas,\\usuarios con activos digitales\end{tabular} \\
-\hline
 \textbf{Métrica de éxito} & 
 \begin{tabular}[t]{@{}l@{}}Viralidad, alcance,\\influencia en opinión\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Cantidad de dinero/\\información obtenida\end{tabular} \\
-\hline
 \textbf{Indicadores lingüísticos} & 
 \begin{tabular}[t]{@{}l@{}}Imitación de estilo periodístico,\\fuentes falsas, sensacionalismo político\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Urgencia económica, ofertas ``limitadas'',\\solicitudes de información personal\end{tabular} \\
-\hline
 \textbf{Temporalidad} & 
 \begin{tabular}[t]{@{}l@{}}Eventos actuales,\\ciclos noticiosos\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Atemporales, aprovechan\\tendencias económicas\end{tabular} \\
@@ -220,7 +216,7 @@ BERT (Bidirectional Encoder Representations from Transformers) \cite{devlin2018b
 
 El éxito de BERT motivó el desarrollo de variantes más eficientes:
 \begin{itemize}
-    \item \textbf{DistilBERT} \cite{sanh2019distilbert}: Reduce el tamaño del modelo en un 40% manteniendo el 97% de su rendimiento y está disponible en español.
+    \item \textbf{DistilBERT} \cite{sanh2019distilbert}: Reduce el tamaño del modelo en un 40\% manteniendo el 97\% de su rendimiento y está disponible en español.
     \item \textbf{TinyBERT} \cite{jiao2019tinybert}: Crea modelos aún más compactos, pero su disponibilidad se limita al inglés.
 \end{itemize}
 
@@ -507,34 +503,31 @@ La Tabla \ref{tab:comparacion_metaheuristicas} presenta una comparación sistem�
 \centering
 \adjustbox{width=\textwidth,center}{%
 \small
+\rowcolors{2}{UAMAzcapoLight!40}{white}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
-\rowcolor{UAMAzcapoMedium!20}
-\textbf{Algoritmo} & \textbf{Inspiración} & \textbf{Fortalezas} & \textbf{Limitaciones} & \textbf{Parámetros Clave} \\
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Algoritmo}} & \textbf{\textcolor{white}{Inspiración}} & \textbf{\textcolor{white}{Fortalezas}} & \textbf{\textcolor{white}{Limitaciones}} & \textbf{\textcolor{white}{Parámetros Clave}} \\
 \hline
 \textbf{GA} & Evolución biológica & 
 \begin{tabular}[t]{@{}l@{}}Exploración global robusta\\Paralelización natural\\Buena diversidad poblacional\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Convergencia lenta\\Muchos parámetros a ajustar\\Puede estancarse prematuramente\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Población: 30\\Generaciones: 50\\Cruce: 0.8\\Mutación: 0.1\end{tabular} \\
-\hline
 \textbf{PSO} & 
 \begin{tabular}[t]{@{}l@{}}Comportamiento\\de enjambre\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Convergencia rápida\\Pocos parámetros\\Fácil implementación\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Puede convergir prematuramente\\Sensible a parámetros\\Exploración limitada\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Partículas: 30\\Iteraciones: 50\\Inercia: 0.9\\Aceleración: 2.0\end{tabular} \\
-\hline
 \textbf{SA/MSA} & 
 \begin{tabular}[t]{@{}l@{}}Recocido\\de metales\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Escape de óptimos locales\\Base teórica sólida\\Múltiples arranques\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Esquema de enfriamiento crítico\\Búsqueda individual\\Muchas evaluaciones\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}T inicial: 100\\T final: 0.01\\Enfriamiento: 0.95\\Arranques: 5\end{tabular} \\
-\hline
 \textbf{VNS} & 
 \begin{tabular}[t]{@{}l@{}}Cambio sistemático\\de vecindades\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Escape sistemático de óptimos\\Combinación exploración/explotación\\Flexibilidad en vecindades\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Dependiente de definición de vecindades\\Puede ser costoso computacionalmente\\Diseño específico del problema\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Vecindades: 3\\Iteraciones: 100\\Búsqueda local: Hill climbing\end{tabular} \\
-\hline
 \textbf{SS} & 
 \begin{tabular}[t]{@{}l@{}}Combinación de\\soluciones de calidad\end{tabular} & 
 \begin{tabular}[t]{@{}l@{}}Balance calidad-diversidad\\Intensificación y diversificación\\Memoria adaptativa\end{tabular} & 
@@ -621,13 +614,13 @@ Bacanin et al. \cite{bacanin2023benefits} demostraron los beneficios de usar met
 
 \subsubsection{Marcos de trabajo (frameworks) de ensamble (ensemble) heurístico}
 
-Das et al. \cite{das2022heuristic} desarrollaron un marco de ensamble que combina modelos preentrenados, características estadísticas y heurísticas de incertidumbre, logrando F1-scores superiores al 95%.
+Das et al. \cite{das2022heuristic} desarrollaron un marco de ensamble que combina modelos preentrenados, características estadísticas y heurísticas de incertidumbre, logrando F1-scores superiores al 95\%.
 
 \subsection{Metaheurísticas para la detección de fraude financiero}
 
 \subsubsection{Optimización multi-objetivo}
 
-Hidayattullah et al. \cite{hidayattullah2020financial} aplicaron metaheurísticas para optimizar la detección de fraude en estados financieros, considerando precisión, eficiencia y robustez. Sus resultados mostraron que un SVM optimizado con Algoritmo Genético alcanzó una precisión del 96.15%.
+Hidayattullah et al. \cite{hidayattullah2020financial} aplicaron metaheurísticas para optimizar la detección de fraude en estados financieros, considerando precisión, eficiencia y robustez. Sus resultados mostraron que un SVM optimizado con Algoritmo Genético alcanzó una precisión del 96.15\%.
 
 \subsubsection{Optimización de procesos gaussianos}
 
