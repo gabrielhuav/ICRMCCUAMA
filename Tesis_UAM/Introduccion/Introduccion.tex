@@ -1,45 +1,20 @@
+% filepath: c:\Users\gabri\OneDrive\Imágenes\Documentos\GitHubDesktop\ICRMCCUAMA\Tesis_UAM\Introduccion\Introduccion.tex
 %!TEX root = ../ICR.tex
 \chapter{Introducción \label{cap:Introduccion}}
 
 \section{Planteamiento del problema}
 
-La era digital y la interconexión global han generado un desafío sin precedentes: la propagación masiva de \gls{desinformacion}. Este fenómeno, que abarca desde \glspl{noticiafalsa} hasta diversas formas de \gls{fraudedigital}, representa una amenaza significativa para la estabilidad social, económica y democrática a nivel mundial.
+La era digital y la interconexión global han generado un desafío sin precedentes: la propagación masiva de \gls{desinformacion}. Este fenómeno, que abarca desde \glspl{noticiafalsa} hasta diversas formas de \gls{fraudedigital}, representa una amenaza significativa para la estabilidad social, económica y democrática a nivel mundial. Las \glspl{noticiafalsa} se definen como información deliberadamente engañosa que simula ser periodismo auténtico \cite{bondielli2019survey}, difundiéndose a través de redes sociales y medios digitales para manipular la opinión pública y el comportamiento de los individuos.
 
-Las \glspl{noticiafalsa} se definen como información deliberadamente engañosa que simula ser periodismo auténtico \cite{bondielli2019survey}. Se difunden a través de redes sociales y medios digitales para manipular la opinión pública y el comportamiento de los individuos. La gravedad del problema se ha intensificado exponencialmente debido a la creciente sofisticación de los actores maliciosos, la democratización de herramientas para generar contenido mediante \gls{ia} \cite{hu2024bad} y la velocidad sin precedentes con que la información se viraliza.
+La gravedad del problema se ha intensificado exponencialmente debido a tres factores convergentes: la creciente sofisticación de los actores maliciosos, la democratización de herramientas para generar contenido mediante \gls{ia} \cite{hu2024bad}, y la velocidad sin precedentes con que la información se viraliza. La investigación reciente documenta el impacto multidimensional de la desinformación, desde la distorsión de procesos democráticos \cite{ali2020posttruth} hasta la creación de pánico durante crisis sanitarias como la pandemia de COVID-19 \cite{perez2020fake}. De forma paralela, el fraude digital ha evolucionado hacia formas más sofisticadas que aprovechan tanto vulnerabilidades técnicas como sesgos cognitivos humanos \cite{ali2021fake}.
 
-\textbf{Distinción fundamental entre noticias falsas y fraude digital}: 
+\textbf{Distinción fundamental y enfoque de esta investigación:} Es importante distinguir entre dos conceptos relacionados pero distintos. Las \textbf{\glspl{noticiafalsa}} son información deliberadamente fabricada que imita el formato periodístico legítimo con el objetivo primario de \textit{manipular la opinión pública}, influir en decisiones políticas o sociales, o distorsionar la percepción de eventos actuales, midiendo su ``éxito'' por el alcance y la influencia social alcanzados. Por otro lado, el \textbf{\gls{fraudedigital}} comprende actividades maliciosas digitales cuyo objetivo primario es \textit{obtener beneficios económicos ilícitos} o acceso no autorizado a información o recursos, incluyendo estafas de inversión, phishing, fraude financiero y esquemas de estafas piramidales digitales, donde el ``éxito'' se mide por el beneficio económico obtenido.
 
-\begin{itemize}
-    \item \textbf{\Glspl{noticiafalsa}}: Información deliberadamente fabricada que imita el formato periodístico legítimo con el objetivo primario de \textit{manipular la opinión pública}, influir en decisiones políticas o sociales, o distorsionar la percepción de eventos actuales. Su ``éxito'' se mide por el alcance y la influencia social.
-    \item \textbf{\Gls{fraudedigital}}: Actividades maliciosas digitales con el objetivo primario de \textit{obtener beneficios económicos ilícitos} o acceso no autorizado a información o recursos. Incluye estafas de inversión, phishing, fraude financiero y esquemas de estafas piramidales digitales. Su ``éxito'' se mide por el beneficio económico obtenido.
-\end{itemize}
+Estas diferencias se manifiestan en objetivos divergentes (influencia social versus beneficio económico), audiencias distintas (consumidores de noticias versus potenciales víctimas económicas), métricas de éxito contrastantes (viralidad versus rentabilidad económica), y patrones lingüísticos diferenciados (imitación periodística versus técnicas de persuasión comercial y urgencia). \textbf{Este proyecto se centra específicamente en la detección de noticias falsas}, desarrollando una metodología inherentemente transferible al fraude digital debido a que comparten características computacionales fundamentales: naturaleza textual, clasificación binaria (legítimo/malicioso) y optimización de parámetros.
 
-\textbf{¿Por qué son tareas de detección relacionadas pero distintas?}
-\begin{itemize}
-    \item \textbf{Objetivos diferentes}: Las noticias falsas buscan influencia social; el fraude digital busca beneficio económico.
-    \item \textbf{Audiencias diferentes}: Las noticias falsas se dirigen a consumidores de noticias, mientras que el fraude digital apunta a potenciales víctimas económicas.
-    \item \textbf{Métricas de éxito diferentes}: Viralidad frente a rentabilidad económica.
-    \item \textbf{Patrones lingüísticos diferentes}: Las noticias falsas imitan el periodismo; el fraude digital utiliza técnicas de persuasión comercial y urgencia.
-\end{itemize}
+Desde la perspectiva de la detección automatizada, el problema se conceptualiza como una clasificación binaria: determinar si un contenido es \textbf{confiable} (verificado y legítimo) o \textbf{no confiable} (desinformativo). Aunque esta simplificación reduce la complejidad del espectro de veracidad, resulta práctica y efectiva para aplicaciones reales que requieren respuestas claras y accionables.
 
-\textbf{Enfoque de esta investigación}: Este proyecto se centra en la detección de noticias falsas y desarrolla una metodología inherentemente transferible al fraude digital, ya que comparten características computacionales: naturaleza textual, clasificación binaria (legítimo/malicioso) y optimización de parámetros.
-
-La investigación reciente documenta el impacto multidimensional de la desinformación, desde la distorsión de procesos democráticos \cite{ali2020posttruth} hasta la creación de pánico durante crisis sanitarias como la pandemia de COVID-19 \cite{perez2020fake}. De forma paralela, el fraude digital ha evolucionado hacia formas más sofisticadas que aprovechan vulnerabilidades técnicas y sesgos cognitivos humanos \cite{ali2021fake}.
-
-Desde la perspectiva de la detección automatizada, el problema se conceptualiza como una clasificación binaria: determinar si un contenido es \textbf{confiable} (verificado y legítimo) o \textbf{no confiable} (desinformativo). Aunque esta simplificación reduce la complejidad del espectro de veracidad, resulta práctica y efectiva para aplicaciones reales que requieren respuestas claras.
-
-La desinformación contemporánea se manifiesta en múltiples modalidades con un impacto significativo en individuos, empresas y sociedades, como lo ilustra la Figura \ref{fig:mapa_problema}. Si bien este estudio se enfoca en noticias falsas, es relevante comprender el contexto más amplio del fraude digital para dimensionar la importancia de desarrollar metodologías transferibles:
-
-\begin{itemize}
-    \item \textbf{Noticias falsas generadas por \gls{ia}:} Contenido sintético creado por Grandes Modelos de Lenguaje (\glspl{gpt}) que imita el estilo periodístico legítimo \cite{su2023fake} - \textit{Uno de los objetivos de este proyecto}.
-    \item \textbf{Desinformación política dirigida:} Campañas coordinadas para influir en procesos electorales y en la opinión pública \cite{carcamo2021fake} - \textit{Aplicable con la metodología propuesta}.
-    \item \textbf{Fraude financiero digital:} Esquemas que explotan plataformas digitales y criptomonedas \cite{cao2020corporate} - \textit{Metodología transferible}.
-    \item \textbf{Fraude laboral en línea:} Ofertas de empleo falsas para obtener información personal o financiera \cite{nasser2021online} - \textit{Metodología transferible}.
-    \item \textbf{Estafas de ingeniería social:} Técnicas sofisticadas que combinan información personal de redes sociales con narrativas convincentes - \textit{Metodología transferible}.
-    \item \textbf{Desinformación en salud:} Información médica falsa con consecuencias directas en la salud pública \cite{pulido2020new} - \textit{Aplicable con la metodología propuesta}.
-    \item \textbf{\Glspl{deepfake}:} Contenido multimedia manipulado con técnicas de \gls{dl} - \textit{Requiere extensión multimodal}.
-    \item \textbf{\Glspl{bulo}:} Información falsa que se propaga viralmente en redes sociales - \textit{Aplicable con la metodología propuesta}.
-\end{itemize}
+La desinformación contemporánea se manifiesta en múltiples modalidades con impacto significativo en individuos, empresas y sociedades, como lo ilustra la Figura \ref{fig:mapa_problema}. Si bien este estudio se enfoca en noticias falsas, es relevante comprender el contexto más amplio del fraude digital. Las manifestaciones incluyen noticias falsas generadas por \gls{ia} mediante Grandes Modelos de Lenguaje (\glspl{gpt}) que imitan el estilo periodístico legítimo \cite{su2023fake} —uno de los objetivos directos de este proyecto—, así como desinformación política dirigida mediante campañas coordinadas para influir en procesos electorales \cite{carcamo2021fake}, fraude financiero digital que explota plataformas digitales y criptomonedas \cite{cao2020corporate}, fraude laboral en línea con ofertas falsas para obtener información personal \cite{nasser2021online}, estafas de ingeniería social que combinan información de redes sociales con narrativas convincentes, desinformación en salud con consecuencias directas en la salud pública \cite{pulido2020new}, \glspl{deepfake} mediante contenido multimedia manipulado con técnicas de \gls{dl} (requiriendo extensión multimodal), y \glspl{bulo} que se propagan viralmente en redes sociales. La metodología desarrollada en este proyecto es directamente aplicable a la mayoría de estas manifestaciones, con las extensiones apropiadas para casos multimodales.
 
 \begin{figure}[h!]
     \centering
@@ -48,61 +23,19 @@ La desinformación contemporánea se manifiesta en múltiples modalidades con un
     \label{fig:mapa_problema}
 \end{figure}
 
-\subsection{El desafío específico del español: enfoque multiregional}
+\subsection{El desafío específico del español}
 
-El español, la cuarta lengua más hablada del mundo con más de 500 millones de hablantes nativos \cite{acosta2019construccion}, presenta desafíos únicos para la detección automatizada de desinformación. A pesar de su importancia demográfica y económica, existe una notable escasez de recursos computacionales especializados para esta tarea en español, en comparación con los abundantes recursos disponibles para el inglés \cite{posadas2019detection}.
+El español, la cuarta lengua más hablada del mundo con más de 500 millones de hablantes nativos \cite{acosta2019construccion}, presenta desafíos únicos para la detección automatizada de desinformación. A pesar de su importancia demográfica y económica, existe una notable escasez de recursos computacionales especializados para esta tarea en español, comparado con los abundantes recursos disponibles para el inglés \cite{posadas2019detection}. Esta brecha se manifiesta en la escasez de corpus etiquetados de calidad, la variabilidad dialectal que complica el modelado lingüístico, el contexto cultural específico que modula los patrones de desinformación, y las herramientas de detección limitadas disponibles para hispanohablantes.
 
-\subsubsection{Variante del español utilizada: justificación metodológica}
+\textbf{Esta investigación adopta un enfoque de español neutro multiregional}, fundamentado en la integración estratégica de corpus que representan diferentes variantes geográficas y estilísticas del español. Los corpus de Posadas-Durán et al. \cite{posadas2019detection} y Blanco-Fernández et al. \cite{blanco2024enhancing} aportan principalmente contenido peninsular español, mientras que el corpus de Acosta \cite{acosta2019construccion} incorpora fuentes internacionales con presencia del español mexicano y latinoamericano. La inclusión específica de contenido de ``El Deforma'' (portal satírico mexicano) añade características del español mexicano contemporáneo, y la variabilidad temporal de los corpus (2018-2025) captura la evolución del español digital en múltiples regiones.
 
-\textbf{Esta investigación adopta un enfoque de español neutro multiregional}, fundamentado en la integración estratégica de corpus que representan diferentes variantes geográficas y estilísticas del español. Esta decisión metodológica se justifica por:
+La distribución geográfica resultante aproxima un 70\% de contenido español (principalmente del corpus político de Blanco-Fernández), 20\% mexicano (contenido de ``El Deforma'' y fuentes mexicanas), y 10\% multinacional (corpus de Acosta con diversas fuentes internacionales). Esta composición produce un modelo capaz de generalizar eficazmente a través de las principales variantes del español sin estar sesgado hacia una región específica, ofreciendo robustez lingüística para detectar desinformación independientemente de la variante regional, generalización mejorada con menor dependencia de modismos regionales específicos, aplicabilidad universal para toda la comunidad hispanohablante, y representatividad demográfica que refleja la realidad del consumo transnacional de noticias en español.
 
-\begin{itemize}
-    \item \textbf{Corpus español peninsular:} Los corpus de Posadas-Durán et al. \cite{posadas2019detection} y Blanco-Fernández et al. \cite{blanco2024enhancing} incluyen principalmente contenido de medios españoles.
-    \item \textbf{Corpus latinoamericano:} El corpus de Acosta \cite{acosta2019construccion} incorpora fuentes internacionales con presencia del español de México y otros países latinoamericanos.
-    \item \textbf{Contenido mexicano específico:} La inclusión de contenido de ``El Deforma'' (portal satírico mexicano) aporta características del español mexicano contemporáneo.
-    \item \textbf{Variabilidad temporal:} Los corpus abarcan contenido desde 2018 hasta 2025, capturando la evolución del español digital en múltiples regiones.
-\end{itemize}
+\subsection{Complejidad técnica del problema}
 
-\textbf{Distribución geográfica del corpus unificado:}
-\begin{itemize}
-    \item \textbf{España ($\sim$70\%):} Principalmente del corpus político de Blanco-Fernández.
-    \item \textbf{México ($\sim$20\%):} Contenido de ``El Deforma'' y fuentes mexicanas en otros corpus.
-    \item \textbf{Multinacional ($\sim$10\%):} Corpus de Acosta con diversas fuentes internacionales.
-\end{itemize}
+La detección automatizada de \glspl{noticiafalsa} es un problema técnico multifacético que integra múltiples disciplinas, como se esquematiza en la Figura \ref{fig:mapa_soluciones}. La literatura reciente \cite{singh2023comprehensive} documenta desafíos que incluyen el análisis semántico profundo para comprender contexto e implicaciones sutiles mediante \gls{pln}, la detección de patrones estilométricos que identifiquen características lingüísticas indicativas de autoría maliciosa \cite{tsai2023stylometric}, el procesamiento en tiempo real del volumen masivo de contenido diario usando \gls{ml}, la adaptación a contenido sintético generado por modelos de \gls{ia} cada vez más sofisticados \cite{su2023adapting}, la robustez ante ataques adversariales diseñados para evadir detección, y la optimización de \glspl{hiperparametro} para calibrar modelos y maximizar rendimiento.
 
-Esta composición da como resultado un modelo que puede generalizar eficazmente a través de las principales variantes del español, sin estar sesgado hacia una región específica.
-
-\subsubsection{Ventajas del enfoque multiregional}
-
-\begin{itemize}
-    \item \textbf{Robustez lingüística:} El modelo entrenado es capaz de detectar desinformación independientemente de la variante regional del español.
-    \item \textbf{Generalización mejorada:} Menor dependencia de modismos o construcciones específicas de una región.
-    \item \textbf{Aplicabilidad universal:} El sistema resultante es útil para toda la comunidad hispanohablante.
-    \item \textbf{Representatividad demográfica:} Refleja la realidad del consumo de noticias en español, que frecuentemente cruza fronteras nacionales.
-\end{itemize}
-
-Esta brecha de recursos se manifiesta en:
-\begin{itemize}
-    \item \textbf{Escasez de corpus etiquetados:} Conjuntos de datos de entrenamiento limitados en español.
-    \item \textbf{Variabilidad dialectal:} La diversidad regional del español presenta desafíos adicionales.
-    \item \textbf{Contexto cultural específico:} Los patrones de desinformación varían según el contexto sociocultural.
-    \item \textbf{Herramientas de detección limitadas:} Pocas soluciones tecnológicas disponibles para hispanohablantes.
-\end{itemize}
-
-\subsection{La complejidad técnica del problema}
-
-La detección automatizada de \glspl{noticiafalsa} es un problema técnico multifacético que integra múltiples disciplinas, como se esquematiza en la Figura \ref{fig:mapa_soluciones}. La literatura reciente \cite{singh2023comprehensive} documenta que los desafíos incluyen:
-
-\begin{itemize}
-    \item \textbf{Análisis semántico profundo:} Comprender el contexto y las implicaciones sutiles del contenido mediante \gls{pln}.
-    \item \textbf{Detección de patrones estilométricos:} Identificar características lingüísticas que indiquen autoría maliciosa \cite{tsai2023stylometric}.
-    \item \textbf{Procesamiento en tiempo real:} Analizar el volumen masivo de contenido generado diariamente usando \gls{ml}.
-    \item \textbf{Adaptación a contenido sintético:} Detectar texto generado por modelos de \gls{ia} cada vez más sofisticados \cite{su2023adapting}.
-    \item \textbf{Robustez ante ataques adversariales:} Resistencia a intentos deliberados de evadir la detección.
-    \item \textbf{Optimización de \glspl{hiperparametro}:} Calibración de parámetros del modelo para maximizar el rendimiento.
-\end{itemize}
-
-Dada la sofisticación de estas amenazas, se requieren soluciones tecnológicas igualmente avanzadas para combatir el fraude digital. Este trabajo se centra en el desarrollo de tales soluciones, con un enfoque particular en el idioma español y la comparación sistemática de paradigmas tecnológicos complementarios.
+Dada la sofisticación de estas amenazas, se requieren soluciones tecnológicas igualmente avanzadas. Este trabajo se centra en el desarrollo de tales soluciones, con un enfoque particular en el idioma español y la comparación sistemática de paradigmas tecnológicos complementarios que abarcan desde técnicas clásicas optimizadas hasta modelos de lenguaje de última generación.
 
 \begin{figure}[h!]
     \centering
@@ -113,88 +46,25 @@ Dada la sofisticación de estas amenazas, se requieren soluciones tecnológicas 
 
 \section{Motivación}
 
-La motivación de esta investigación se fundamenta en una combinación de experiencias personales y la identificación de una brecha crítica en la protección tecnológica de las comunidades hispanohablantes.
+La motivación de esta investigación se fundamenta en la convergencia de experiencias personales cercanas y la identificación de una brecha crítica en la protección tecnológica de las comunidades hispanohablantes. Durante el desarrollo de este proyecto, se observaron múltiples casos de personas víctimas de fraude digital sofisticado, desde estafas de inversión disfrazadas de noticias financieras legítimas hasta esquemas de \textit{phishing} que aprovechaban eventos noticiosos para parecer creíbles. Las víctimas, frecuentemente personas mayores o con menor familiaridad con la tecnología digital, sufrieron no solo pérdidas económicas significativas, sino también un profundo impacto psicológico que afectó su confianza en los medios digitales.
 
-\subsection{Impacto personal y social observado}
+La investigación en psicología cognitiva aplicada a la desinformación \cite{ali2021fake} ha demostrado que ciertos grupos demográficos son particularmente vulnerables. Los adultos mayores muestran mayor susceptibilidad a heurísticas de credibilidad basadas en la autoridad percibida, mientras que las poblaciones con menor alfabetización digital poseen capacidad limitada para evaluar la legitimidad de fuentes en línea. Las comunidades con acceso limitado a información confiable desarrollan mayor dependencia de las redes sociales como fuente principal de noticias, y los hablantes nativos de español enfrentan menor disponibilidad de herramientas de verificación en su idioma comparado con anglófonos.
 
-Durante el desarrollo de esta investigación, se observaron múltiples casos cercanos de personas víctimas de fraude digital sofisticado. Estos incluyeron desde estafas de inversión disfrazadas de noticias financieras legítimas hasta esquemas de \textit{phishing} que aprovechaban eventos noticiosos para parecer creíbles. Las víctimas, a menudo personas mayores o con menor familiaridad con la tecnología digital, sufrieron no solo pérdidas económicas significativas, sino también un profundo impacto psicológico.
-
-\subsection{Vulnerabilidad de poblaciones específicas}
-
-La investigación en psicología cognitiva aplicada a la desinformación \cite{ali2021fake} ha demostrado que ciertos grupos demográficos son particularmente vulnerables:
-
-\begin{itemize}
-    \item \textbf{Adultos mayores:} Mayor susceptibilidad a heurísticas de credibilidad basadas en la autoridad percibida.
-    \item \textbf{Poblaciones con menor alfabetización digital:} Capacidad limitada para evaluar la legitimidad de las fuentes en línea.
-    \item \textbf{Comunidades con acceso limitado a información:} Mayor dependencia de las redes sociales como fuente principal de noticias.
-    \item \textbf{Hablantes nativos de español:} Menor disponibilidad de herramientas de verificación en su idioma.
-\end{itemize}
-
-\subsection{Urgencia tecnológica}
-
-El rápido avance de los modelos generativos de IA, como GPT-3 \cite{brown2020language} y sus sucesores, ha reducido las barreras para la creación de contenido falso convincente. Esta ``democratización'' de la capacidad de generar desinformación \cite{su2023fake} crea una urgencia imperativa para desarrollar defensas tecnológicas igualmente sofisticadas. Impulsado por esta necesidad, el presente trabajo se centra en desarrollar, comparar y validar métodos computacionales avanzados para la detección de noticias falsas, con el objetivo de contribuir a la protección de las poblaciones más vulnerables.
+El rápido avance de los modelos generativos de IA, como GPT-3 \cite{brown2020language} y sus sucesores, ha reducido dramáticamente las barreras para la creación de contenido falso convincente. Esta ``democratización'' de la capacidad de generar desinformación \cite{su2023fake} crea una urgencia imperativa para desarrollar defensas tecnológicas igualmente sofisticadas. Impulsado por esta necesidad, el presente trabajo se centra en desarrollar, comparar y validar métodos computacionales avanzados para la detección de noticias falsas, con el objetivo explícito de contribuir a la protección de las poblaciones más vulnerables en el ecosistema digital hispanohablante.
 
 \section{Justificación}
 
-Esta investigación se justifica por la brecha tecnológica existente, la novedad de su enfoque metodológico y la necesidad social de herramientas especializadas para el español.
+Esta investigación se justifica por tres dimensiones fundamentales: la brecha tecnológica existente en recursos para el español, la novedad de su enfoque metodológico comparativo, y la contribución científica multidimensional que ofrece.
 
-\subsection{Brecha tecnológica en recursos para el español}
+\subsection{Brecha tecnológica y novedad metodológica}
 
-El español, con más de 500 millones de hablantes nativos, representa un vasto ecosistema digital históricamente desatendido en herramientas para la detección de desinformación. Mientras que para el inglés existen múltiples conjuntos de datos a gran escala como LIAR, FakeNewsNet y CREDBANK \cite{hu2022deep}, los recursos equivalentes en español son limitados y fragmentados. El estado del arte actual se basa principalmente en cuatro corpus:
+El español, con más de 500 millones de hablantes nativos, representa un vasto ecosistema digital históricamente desatendido en herramientas para la detección de desinformación. Mientras que para el inglés existen múltiples conjuntos de datos a gran escala como LIAR, FakeNewsNet y CREDBANK \cite{hu2022deep}, los recursos equivalentes en español son limitados y fragmentados. El estado del arte actual se basa principalmente en cuatro corpus: el corpus de Acosta con 598 noticias \cite{acosta2019construccion}, el Spanish Fake News Corpus con 971 noticias \cite{posadas2019detection}, el corpus de Tretiakov con 1,958 noticias \cite{tretiakov2022detection}, y el Spanish Political Fake News con más de 57,000 noticias \cite{blanco2024enhancing}. Esta fragmentación dificulta significativamente el desarrollo de modelos robustos y generalizables, motivando la necesidad de unificación abordada en este proyecto.
 
-\begin{itemize}
-    \item \textbf{Corpus de Acosta (2019):} 598 noticias \cite{acosta2019construccion}.
-    \item \textbf{Spanish Fake News Corpus:} 971 noticias \cite{posadas2019detection}.
-    \item \textbf{Corpus de Tretiakov (2022):} 1,958 noticias \cite{tretiakov2022detection}.
-    \item \textbf{Spanish Political Fake News:} 57,000+ noticias \cite{blanco2024enhancing}.
-\end{itemize}
-
-Esta fragmentación dificulta el desarrollo de modelos robustos y generalizables.
-
-\subsection{Novedad metodológica: enfoque evolutivo comparativo}
-
-La novedad principal de esta investigación radica en su enfoque evolutivo, que compara sistemáticamente dos paradigmas de la Inteligencia Artificial:
-
-\subsubsection{Paradigma clásico optimizado}
-\begin{itemize}
-    \item \textbf{Representación textual:} TF-IDF.
-    \item \textbf{Optimización:} Algoritmos metaheurísticos para calibración de hiperparámetros.
-    \item \textbf{Clasificador:} Modelos de aprendizaje automático tradicionales.
-    \item \textbf{Ventajas:} Eficiencia computacional, interpretabilidad y menor dependencia de hardware especializado.
-\end{itemize}
-
-\subsubsection{Paradigma de deep learning}
-\begin{itemize}
-    \item \textbf{Representación textual:} Embeddings contextuales dinámicos.
-    \item \textbf{Modelo base:} DistilBERT preentrenado \cite{sanh2019distilbert}.
-    \item \textbf{Técnica:} \textit{Fine-tuning} con optimización de hiperparámetros.
-    \item \textbf{Ventajas:} Comprensión semántica profunda y captura de relaciones contextuales complejas.
-\end{itemize}
+La novedad principal de esta investigación radica en su \textbf{enfoque evolutivo comparativo} que evalúa sistemáticamente dos paradigmas complementarios de la Inteligencia Artificial. El \textbf{paradigma clásico optimizado} utiliza representación textual TF-IDF, optimización mediante algoritmos metaheurísticos para calibración de hiperparámetros, clasificadores de aprendizaje automático tradicionales, ofreciendo ventajas en eficiencia computacional, interpretabilidad y menor dependencia de hardware especializado. El \textbf{paradigma de deep learning} emplea embeddings contextuales dinámicos, modelo base DistilBERT preentrenado \cite{sanh2019distilbert}, técnica de \textit{fine-tuning} con optimización de hiperparámetros, proporcionando ventajas en comprensión semántica profunda y captura de relaciones contextuales complejas que escapan a enfoques tradicionales.
 
 \subsection{Contribución científica multidimensional}
 
-Esta investigación ofrece contribuciones en múltiples dimensiones:
-
-\subsubsection{Contribución a recursos lingüísticos}
-\begin{itemize}
-    \item \textbf{Corpus unificado:} Integración y estandarización de los principales corpus en español.
-    \item \textbf{Metodología de unificación:} Protocolo replicable para integrar conjuntos de datos heterogéneos.
-    \item \textbf{Benchmarking:} Establecimiento de líneas base comparativas para futuras investigaciones.
-\end{itemize}
-
-\subsubsection{Contribución metodológica}
-\begin{itemize}
-    \item \textbf{Optimización metaheurística:} Aplicación sistemática de algoritmos bioinspirados para la calibración de hiperparámetros.
-    \item \textbf{Análisis comparativo riguroso:} Evaluación exhaustiva con métricas múltiples y validación cruzada.
-    \item \textbf{Transferencia tecnológica:} Implementación práctica en aplicaciones web contenerizadas.
-\end{itemize}
-
-\subsubsection{Contribución aplicada}
-\begin{itemize}
-    \item \textbf{Herramientas funcionales:} Aplicaciones web desplegables para análisis en tiempo real.
-    \item \textbf{Código abierto:} Disponibilidad pública de implementaciones para la reproducibilidad.
-    \item \textbf{Impacto social directo:} Herramientas accesibles para comunidades hispanohablantes.
-\end{itemize}
+Esta investigación ofrece contribuciones sustanciales en tres dimensiones complementarias. En \textbf{recursos lingüísticos}, proporciona un corpus unificado mediante integración y estandarización de los principales corpus en español, desarrolla una metodología de unificación con protocolo replicable para integrar conjuntos de datos heterogéneos, y establece líneas base comparativas (benchmarking) para futuras investigaciones. En el ámbito \textbf{metodológico}, realiza una aplicación sistemática de algoritmos bioinspirados para la calibración de hiperparámetros mediante optimización metaheurística, ejecuta un análisis comparativo riguroso con evaluación exhaustiva usando métricas múltiples y validación cruzada, y demuestra transferencia tecnológica mediante implementación práctica en aplicaciones web contenerizadas. Las contribuciones \textbf{aplicadas} incluyen herramientas funcionales mediante aplicaciones web desplegables para análisis en tiempo real, disponibilidad pública de implementaciones para garantizar reproducibilidad mediante código abierto, y la generación de impacto social directo al proporcionar herramientas accesibles para comunidades hispanohablantes que históricamente han carecido de tales recursos.
 
 \section{Objetivos}
 
@@ -213,101 +83,32 @@ Desarrollar un método computacional basado en algoritmos metaheurísticos y mod
 
 \section{Alcance y limitaciones}
 
-\subsection{Alcance}
+\subsection{Alcance del proyecto}
 
-\subsubsection{Alcance lingüístico y cultural}
-\begin{itemize}
-    \item \textbf{Idioma objetivo:} El proyecto se centra exclusivamente en textos en español.
-    \item \textbf{Dominio de aplicación:} Detección de noticias falsas, con extensibilidad a otros tipos de fraude digital.
-    \item \textbf{Contexto geográfico:} Cobertura de múltiples países hispanohablantes.
-\end{itemize}
+El alcance de esta investigación se define en múltiples dimensiones complementarias. \textbf{Lingüísticamente}, el proyecto se centra exclusivamente en textos en español, abordando la detección de noticias falsas con extensibilidad demostrable a otros tipos de fraude digital, y proporciona cobertura de múltiples países hispanohablantes mediante el enfoque multiregional adoptado. \textbf{Técnicamente}, se limita al procesamiento exclusivo de contenido textual (modalidad unimodal), implementa clasificación binaria supervisada (FALSO/REAL) como aproximación práctica al problema, compara sistemáticamente enfoques clásicos optimizados versus modelos Transformer de última generación, y desarrolla aplicaciones web funcionales y contenerizadas que demuestran viabilidad práctica.
 
-\subsubsection{Alcance técnico}
-\begin{itemize}
-    \item \textbf{Modalidad de datos:} Procesamiento exclusivo de contenido textual.
-    \item \textbf{Tipo de clasificación:} Clasificación binaria supervisada (FALSO/REAL).
-    \item \textbf{Arquitecturas evaluadas:} Comparación entre enfoques clásicos optimizados y modelos Transformer.
-    \item \textbf{Implementación práctica:} Desarrollo de aplicaciones web funcionales y contenerizadas.
-\end{itemize}
+La \textbf{transferibilidad metodológica} demostrada hace que el enfoque sea adaptable para detectar fraude financiero y laboral mediante ajuste del corpus de entrenamiento, útil para detectar ingeniería social, \textit{phishing} y desinformación temática específica, aunque reconociendo que el contenido multimodal (videos, audios, deepfakes) requiere arquitecturas adicionales que exceden el alcance actual. \textbf{Metodológicamente}, la investigación aplica cinco algoritmos bioinspirados de optimización metaheurística (MSA, SS, VNS, GA, PSO), emplea validación experimental mediante validación cruzada estratificada y métricas múltiples para garantizar robustez estadística, y asegura reproducibilidad mediante documentación completa y disponibilidad de código fuente.
 
-\subsubsection{Transferibilidad de la metodología}
-\begin{itemize}
-    \item \textbf{Fraude financiero y laboral:} La metodología es adaptable para detectar estafas en estos dominios.
-    \item \textbf{Ingeniería social y desinformación temática:} Útil para detectar \textit{phishing} y desinformación en áreas específicas.
-    \item \textbf{Limitaciones de transferencia:} El contenido multimodal (videos, audios) requiere arquitecturas adicionales.
-\end{itemize}
+\subsection{Limitaciones reconocidas}
 
-\subsubsection{Alcance metodológico}
-\begin{itemize}
-    \item \textbf{Optimización metaheurística:} Aplicación de cinco algoritmos bioinspirados.
-    \item \textbf{Validación experimental:} Uso de validación cruzada estratificada y métricas múltiples.
-    \item \textbf{Reproducibilidad:} Documentación completa y código fuente disponible.
-\end{itemize}
+Las limitaciones de esta investigación se organizan en cuatro categorías fundamentales. Las \textbf{limitaciones de datos} incluyen dependencia de corpus existentes donde el rendimiento está condicionado por la calidad y representatividad de los datos disponibles, sesgos inherentes potenciales de naturaleza temporal (épocas de recolección), temática (predominio de contenido político) o geográfica (distribución desbalanceada de regiones), evolución del lenguaje que puede hacer que los modelos no capturen patrones emergentes en la desinformación futura, y dependencia de la calidad del etiquetado manual en los corpus originales que puede introducir ruido en el entrenamiento.
 
-\subsection{Limitaciones}
+Las \textbf{limitaciones técnicas} comprenden requisitos de recursos computacionales donde el entrenamiento de modelos Transformer requiere hardware especializado (GPUs) y tiempo considerable, escalabilidad en tiempo real limitada ya que los prototipos no están optimizados para procesamiento de flujos masivos de datos, y generalización a otros fraudes donde la efectividad en otros tipos de fraude digital es inferencial y requiere validación empírica adicional. Las \textbf{limitaciones operacionales} reconocen que los sistemas funcionan como herramientas de apoyo a la decisión humana y no como reemplazo del juicio humano experto, que la verificación absoluta de veracidad puede requerir investigación periodística adicional más allá de la clasificación automatizada, que el contexto dinámico de la desinformación implica que los modelos requieren actualización periódica para mantener efectividad, y que las consideraciones éticas relacionadas con sesgo algorítmico y responsabilidad no se abordan exhaustivamente.
 
-\subsubsection{Limitaciones de datos}
-\begin{itemize}
-    \item \textbf{Dependencia de corpus existentes:} El rendimiento está condicionado por la calidad de los datos disponibles.
-    \item \textbf{Sesgos inherentes:} Posibles sesgos temporales, temáticos o geográficos en las fuentes.
-    \item \textbf{Evolución del lenguaje:} Los modelos pueden no capturar patrones emergentes en la desinformación.
-    \item \textbf{Etiquetado:} Dependencia de la calidad del etiquetado manual en los corpus originales.
-\end{itemize}
-
-\subsubsection{Limitaciones técnicas}
-\begin{itemize}
-    \item \textbf{Recursos computacionales:} El entrenamiento de modelos Transformer requiere hardware especializado y tiempo considerable.
-    \item \textbf{Escalabilidad en tiempo real:} Los prototipos no están optimizados para procesamiento de flujos masivos.
-    \item \textbf{Generalización a otros fraudes:} La efectividad en otros tipos de fraude digital es inferencial.
-\end{itemize}
-
-\subsubsection{Limitaciones operacionales}
-\begin{itemize}
-    \item \textbf{Herramienta de apoyo:} Los sistemas son un apoyo a la decisión, no un reemplazo del juicio humano.
-    \item \textbf{Verificación absoluta:} La veracidad definitiva puede requerir investigación periodística.
-    \item \textbf{Contexto dinámico:} Los modelos requieren actualización periódica.
-    \item \textbf{Consideraciones éticas:} No se abordan explícitamente implicaciones de sesgo algorítmico.
-\end{itemize}
-
-\subsubsection{Limitaciones de evaluación}
-\begin{itemize}
-    \item \textbf{Métricas tradicionales:} Pueden no capturar toda la complejidad del problema.
-    \item \textbf{Validación temporal:} No se realiza con datos posteriores al entrenamiento.
-    \item \textbf{Análisis de errores:} El análisis cualitativo es limitado por el volumen de datos.
-\end{itemize}
+Finalmente, las \textbf{limitaciones de evaluación} incluyen el uso de métricas tradicionales que pueden no capturar toda la complejidad multidimensional del problema, validación temporal limitada al no realizarse evaluación con datos posteriores al período de entrenamiento (validación prospectiva), y análisis de errores cualitativo limitado por el volumen masivo de datos que dificulta el análisis caso por caso exhaustivo de fallos del sistema.
 
 \section{Contribuciones esperadas}
 
-\subsection{Contribuciones teóricas}
-\begin{itemize}
-    \item \textbf{Metodología comparativa:} Un marco sistemático para comparar paradigmas en la detección de desinformación.
-    \item \textbf{Optimización metaheurística:} Aplicación de algoritmos bioinspirados para la calibración de modelos.
-\end{itemize}
+Esta investigación aspira a generar contribuciones significativas en tres dimensiones complementarias que abarcan aspectos teóricos, prácticos y sociales. Las \textbf{contribuciones teóricas} incluyen el desarrollo de una metodología comparativa que proporciona un marco sistemático y riguroso para comparar paradigmas complementarios en la detección de desinformación, permitiendo a investigadores futuros tomar decisiones informadas sobre enfoques tecnológicos, así como la aplicación innovadora de algoritmos bioinspirados de optimización metaheurística para la calibración de modelos de detección, demostrando su viabilidad y efectividad en este dominio específico.
 
-\subsection{Contribuciones prácticas}
-\begin{itemize}
-    \item \textbf{Corpus unificado:} Un recurso consolidado para la investigación futura en español.
-    \item \textbf{Herramientas funcionales:} Aplicaciones desplegables para uso comunitario.
-    \item \textbf{Código abierto:} Implementaciones reproducibles y extensibles.
-\end{itemize}
+Las \textbf{contribuciones prácticas} abarcan la creación de un corpus unificado que constituye un recurso consolidado y de alta calidad para la investigación futura en español, resolviendo la fragmentación histórica de datasets en este idioma, el desarrollo de herramientas funcionales mediante aplicaciones web desplegables para uso comunitario que democratizan el acceso a tecnología de detección avanzada, y la provisión de código abierto con implementaciones reproducibles y extensibles que facilitan la validación y extensión del trabajo por parte de la comunidad científica.
 
-\subsection{Contribuciones sociales}
-\begin{itemize}
-    \item \textbf{Protección comunitaria:} Herramientas accesibles para comunidades hispanohablantes.
-    \item \textbf{Democratización tecnológica:} Reducción de la brecha digital en herramientas de verificación.
-    \item \textbf{Concientización:} Contribución a la alfabetización digital.
-\end{itemize}
+Las \textbf{contribuciones sociales} se orientan hacia la protección comunitaria mediante herramientas accesibles específicamente diseñadas para comunidades hispanohablantes que históricamente han carecido de tales recursos, la democratización tecnológica que contribuye a reducir la brecha digital en herramientas de verificación entre hablantes de español e inglés, y la contribución a la concientización y alfabetización digital mediante la disponibilidad de herramientas que ayudan a usuarios finales a desarrollar capacidades críticas para evaluar la credibilidad de contenidos digitales.
 
 \section{Organización del documento}
 
-Este documento se estructura de manera progresiva para guiar al lector a través de la investigación:
+Este documento se estructura de manera progresiva para guiar al lector a través del desarrollo completo de la investigación. El \textbf{Capítulo 2 - Marco Teórico} establece los fundamentos teóricos de las metodologías utilizadas, incluyendo técnicas de procesamiento de lenguaje natural, algoritmos metaheurísticos y arquitecturas de aprendizaje profundo. El \textbf{Capítulo 3 - Estado del Arte} revisa exhaustivamente la literatura relevante, identificando las brechas de conocimiento que justifican este trabajo y posicionando las contribuciones en el contexto de investigaciones previas.
 
-\begin{itemize}
-    \item \textbf{Capítulo 2 - Marco Teórico:} Establece los fundamentos de las metodologías utilizadas.
-    \item \textbf{Capítulo 3 - Estado del Arte:} Revisa la literatura relevante e identifica las brechas de conocimiento.
-    \item \textbf{Capítulo 4 - Metodología:} Detalla la construcción del corpus y la implementación de ambos paradigmas.
-    \item \textbf{Capítulo 5 - Resultados, Evaluación Comparativa e Implementación:} Presenta y compara los resultados obtenidos por ambas metodologías y describe el desarrollo de una aplicación web funcional.
-    \item \textbf{Capítulo 6 - Conclusiones y Trabajo Futuro:} Sintetiza los hallazgos y propone direcciones para investigaciones futuras.
-\end{itemize}
+El \textbf{Capítulo 4 - Metodología} detalla meticulosamente la construcción del corpus unificado y la implementación de ambos paradigmas tecnológicos (clásico optimizado y deep learning), proporcionando información suficiente para la reproducibilidad. El \textbf{Capítulo 5 - Resultados, Evaluación Comparativa e Implementación} presenta y compara sistemáticamente los resultados obtenidos por ambas metodologías utilizando múltiples métricas de evaluación, y describe el desarrollo de una aplicación web funcional que demuestra la viabilidad práctica de la solución óptima. Finalmente, el \textbf{Capítulo 6 - Conclusiones y Trabajo Futuro} sintetiza los hallazgos principales, discute las implicaciones teóricas y prácticas, reconoce las limitaciones del trabajo, y propone direcciones específicas para investigaciones futuras que puedan extender y mejorar las contribuciones de este proyecto.
 
-Cada capítulo se basa en el anterior para mantener una coherencia narrativa y técnica, proporcionando la profundidad analítica necesaria para validar las contribuciones científicas y prácticas de esta investigación.
+Cada capítulo se basa en el anterior para mantener una coherencia narrativa y técnica continua, proporcionando la profundidad analítica necesaria para validar tanto las contribuciones científicas como las prácticas de esta investigación, asegurando que el documento funcione como un recurso integral para académicos, profesionales y desarrolladores interesados en la detección automatizada de desinformación.
