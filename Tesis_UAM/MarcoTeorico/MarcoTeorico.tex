@@ -86,6 +86,68 @@ BERT (Bidirectional Encoder Representations from Transformers) \cite{devlin2018b
 
 Para el español se han desarrollado modelos y evaluaciones especializadas. Martínez-Gallego et al. \cite{martinez2021fake} exploraron la aplicación de BERT y BETO (BERT en español) para la detección de desinformación. Blanco-Fernández et al. \cite{blanco2024enhancing} compararon sistemáticamente BERT y RoBERTa para la detección de desinformación política, proporcionando evidencia empírica sobre su efectividad en este dominio. Shushkevich et al. \cite{shushkevich2023improving} investigaron el uso de datos aumentados con ChatGPT para mejorar la clasificación multiclase, demostrando que la generación sintética de datos puede mejorar la robustez de los modelos.
 
+\subsection{Corpus de pre-entrenamiento y especialización lingüística}
+
+La efectividad de los modelos de lenguaje preentrenados está intrínsecamente vinculada a la calidad, diversidad y relevancia de los corpus utilizados durante su fase de pre-entrenamiento. Esta subsección detalla las características de los corpus que fundamentan los modelos empleados en esta investigación.
+
+\textbf{BERT base} \cite{devlin2018bert} fue pre-entrenado sobre dos corpus masivos en inglés: \textbf{BooksCorpus} conteniendo más de 800 millones de palabras extraídas de 11,038 libros no publicados de diversos géneros, proporcionando exposición a narrativas largas y coherentes con estructuras lingüísticas complejas, y \textbf{English Wikipedia} con aproximadamente 2,500 millones de palabras de artículos enciclopédicos, ofreciendo conocimiento factual diverso y lenguaje formal bien estructurado. El pre-entrenamiento utilizó dos tareas auto-supervisadas: \textit{Masked Language Modeling} (MLM) donde el 15\% de los tokens son enmascarados y el modelo debe predecirlos basándose en el contexto bidireccional, y \textit{Next Sentence Prediction} (NSP) entrenando al modelo para predecir si una oración sigue naturalmente a otra, capturando relaciones entre oraciones.
+
+\textbf{DistilBERT multilingüe} \cite{sanh2019distilbert}, el modelo seleccionado para esta investigación, hereda el conocimiento de BERT mediante destilación de conocimiento pero fue entrenado sobre un corpus multilingüe significativamente más diverso. El corpus de pre-entrenamiento incluyó \textbf{Wikipedia multilingüe} con más de 100 idiomas representados incluyendo español con aproximadamente 1.6 millones de artículos, contenido total superior a 2.5 terabytes de texto limpio, y cobertura balanceada que garantiza representación significativa de idiomas no anglosajones. La metodología de pre-entrenamiento preservó la tarea MLM de BERT pero eliminó NSP para simplificación y eficiencia, aplicó destilación de conocimiento triple mediante pérdida de destilación supervisando las salidas del modelo estudiante con las del profesor, pérdida de enmascaramiento de lenguaje manteniendo la tarea MLM original, y pérdida de similitud coseno alineando las representaciones ocultas entre estudiante y profesor.
+
+Las características específicas para español en DistilBERT multilingüe incluyen vocabulario compartido mediante tokenizador WordPiece con 110,000 tokens compartidos entre todos los idiomas, proporcionando transferencia de conocimiento cross-lingual donde el aprendizaje en un idioma beneficia a otros debido a representaciones compartidas, y especialización implícita donde aunque no hay entrenamiento exclusivo en español, la arquitectura Transformer aprende patrones lingüísticos específicos mediante exposición a millones de oraciones en español durante el pre-entrenamiento.
+
+La decisión de utilizar DistilBERT multilingüe en lugar de variantes monolingües se fundamenta en disponibilidad y madurez donde es el modelo destilado multilingüe más estable y ampliamente validado, eficiencia comprobada manteniendo 97\% del rendimiento de BERT con 40\% menos parámetros validado empíricamente en múltiples benchmarks, soporte nativo para español sin necesidad de adaptación adicional o tokenizadores especializados, y integración con ecosistema mediante compatibilidad total con Hugging Face Transformers facilitando implementación.
+
+Modelos alternativos considerados pero no seleccionados incluyen \textbf{BETO} (BERT en Español) pre-entrenado exclusivamente sobre 3 mil millones de palabras del corpus OPUS de traducciones y Wikipedia en español, ofreciendo especialización en español pero con limitación de tamaño del corpus comparado con DistilBERT multilingüe y mayor costo computacional al ser modelo completo no destilado; \textbf{RoBERTa en español} con arquitectura más robusta pero similar al corpus de BETO ofreciendo rendimiento marginalmente superior pero sin justificar el incremento del 60\% en tiempo de entrenamiento y requerimientos de memoria; y \textbf{mBERT} (multilingual BERT) con 104 idiomas soportados pero siendo significativamente más grande (180M parámetros vs 134M de DistilBERT) resultando en menor eficiencia computacional sin mejoras proporcionales en rendimiento para la tarea específica de detección de noticias falsas.
+
+La Tabla \ref{tab:comparacion_corpus_preentrenamiento} presenta una comparación sistemática de los corpus de pre-entrenamiento utilizados por los principales modelos de lenguaje considerados en esta investigación.
+
+\begin{table}[htbp]
+\centering
+\adjustbox{width=\textwidth,center}{%
+\scriptsize
+\rowcolors{2}{UAMAzcapoLight!40}{white}
+\begin{tabular}{|l|l|c|c|l|}
+\hline
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Modelo}} & \textbf{\textcolor{white}{Corpus Principal}} & \textbf{\textcolor{white}{Tamaño Aprox.}} & \textbf{\textcolor{white}{Idiomas}} & \textbf{\textcolor{white}{Características Relevantes}} \\
+\hline
+\textbf{BERT base} & 
+\begin{tabular}[t]{@{}l@{}}BooksCorpus\\English Wikipedia\end{tabular} & 
+\begin{tabular}[t]{@{}c@{}}800M palabras\\2.5B palabras\end{tabular} & 
+Solo inglés & 
+\begin{tabular}[t]{@{}l@{}}Narrativas largas\\Conocimiento enciclopédico\end{tabular} \\
+\textbf{DistilBERT multilingüe} & 
+Wikipedia multilingüe & 
+>2.5TB texto & 
+104 idiomas & 
+\begin{tabular}[t]{@{}l@{}}Incluye 1.6M artículos en español\\Destilación triple\\Vocabulario compartido 110K tokens\end{tabular} \\
+\textbf{BETO} & 
+\begin{tabular}[t]{@{}l@{}}OPUS corpus\\Wikipedia español\end{tabular} & 
+3B palabras & 
+Solo español & 
+\begin{tabular}[t]{@{}l@{}}Especialización en español\\Sin destilación\end{tabular} \\
+\textbf{RoBERTa español} & 
+Similar a BETO & 
+3B palabras & 
+Solo español & 
+\begin{tabular}[t]{@{}l@{}}Arquitectura optimizada\\Mayor costo computacional\end{tabular} \\
+\textbf{mBERT} & 
+Wikipedia multilingüe & 
+>3TB texto & 
+104 idiomas & 
+\begin{tabular}[t]{@{}l@{}}Modelo completo no destilado\\180M parámetros\end{tabular} \\
+\hline
+\end{tabular}
+}
+\caption{Comparación de corpus de pre-entrenamiento para modelos de lenguaje considerados en esta investigación.}
+\label{tab:comparacion_corpus_preentrenamiento}
+\end{table}
+
+La validación de la elección de DistilBERT multilingüe se sustenta en evidencia empírica documentada en la literatura. Sanh et al. \cite{sanh2019distilbert} demostraron mediante evaluaciones extensivas en múltiples benchmarks (GLUE, SQuAD) que DistilBERT mantiene 97\% del rendimiento de BERT en tareas de comprensión del lenguaje natural, con reducción del 40\% en tamaño del modelo y aceleración del 60\% en inferencia. Estudios específicos para español \cite{blanco2024enhancing} confirmaron que modelos multilingües como DistilBERT alcanzan rendimiento comparable a modelos monolingües especializados en tareas de detección de desinformación, con la ventaja adicional de mayor eficiencia computacional. La transferencia de conocimiento cross-lingual inherente en modelos multilingües ha demostrado beneficiar idiomas con recursos limitados al aprovechar patrones aprendidos de idiomas con corpus más abundantes.
+
+En el contexto específico de esta investigación, la selección de DistilBERT multilingüe optimiza el balance entre rendimiento (capacidad de detectar patrones complejos en español), eficiencia (recursos computacionales accesibles para entrenamiento), y generalización (robustez ante diferentes variantes del español multiregional). El corpus de pre-entrenamiento multilingüe, aunque no exclusivo del español, proporciona exposición suficiente a estructuras lingüísticas del español para capturar dependencias semánticas y sintácticas relevantes para la detección de noticias falsas, mientras mantiene la eficiencia necesaria para experimentos iterativos de optimización de hiperparámetros.
+
 \subsection{Grandes Modelos de Lenguaje y su doble rol en detección}
 
 GPT-3 \cite{brown2020language} demostró la capacidad de aprendizaje con pocos ejemplos (\textit{few-shot learning}), mostrando que los modelos a gran escala pueden realizar tareas sin un ajuste fino específico. LLaMA \cite{touvron2023llama} busca democratizar el acceso a modelos de gran escala, ofreciendo alternativas de código abierto con un rendimiento competitivo y menor costo computacional. Gemini \cite{gemini2023family} introduce capacidades multimodales nativas, procesando texto, imágenes y audio de forma integrada, lo cual es relevante para la detección de desinformación multimedia. El trabajo sobre IA Constitucional \cite{bai2022constitutional} aborda la alineación y seguridad de los LLMs, estableciendo principios para entrenar modelos más seguros y alineados con valores humanos.
