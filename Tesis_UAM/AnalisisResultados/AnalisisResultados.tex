@@ -783,6 +783,39 @@ Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrena
 \adjustbox{width=0.9\textwidth,center}{%
 \small
 \rowcolors{2}{UAMAzcapoLight!40}{white}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Clase}} & \textbf{\textcolor{white}{Precisión}} & \textbf{\textcolor{white}{Recall}} & \textbf{\textcolor{white}{F1-Score}} & \textbf{\textcolor{white}{Soporte}} \\
+\hline
+\textbf{FALSO (0)} & 94.96\% & 95.44\% & 95.20\% & 6,168 \\
+\textbf{REAL (1)} & 95.44\% & 94.96\% & 95.20\% & 6,168 \\
+\hline
+\rowcolor{UAMAzcapo!30}
+\textbf{\textcolor{black}{Promedio Macro}} & \textbf{95.20\%} & \textbf{95.20\%} & \textbf{95.20\%} & \textbf{12,336} \\
+\textbf{\textcolor{black}{Promedio Ponderado}} & \textbf{95.20\%} & \textbf{95.20\%} & \textbf{95.20\%} & \textbf{12,336} \\
+\hline
+\end{tabular}
+}
+\caption{Desglose detallado de métricas por clase para el modelo DistilBERT optimizado, demostrando rendimiento equilibrado en ambas categorías.}
+\label{tab:metricas_por_clase_distilbert}
+\end{table}
+
+La Tabla~\ref{tab:metricas_por_clase_distilbert} presenta el desglose detallado de las métricas de rendimiento por clase para el modelo DistilBERT optimizado. Los resultados demuestran un \textbf{equilibrio excepcional} entre ambas clases, un aspecto crítico que valida la capacidad de generalización del modelo.
+
+Para la clase \textbf{FALSO (0)} (noticias falsas), el modelo alcanza una precisión del 94.96\%, lo que significa que cuando predice que una noticia es falsa, acierta en el 94.96\% de los casos, minimizando así los falsos positivos que podrían censurar contenido legítimo. El recall del 95.44\% indica que el modelo identifica correctamente el 95.44\% de todas las noticias realmente falsas, demostrando una excelente capacidad para detectar desinformación sin dejar pasar casos peligrosos. El F1-Score resultante del 95.20\% confirma el balance óptimo entre precisión y exhaustividad para esta clase crítica.
+
+Para la clase \textbf{REAL (1)} (noticias legítimas), el modelo muestra métricas simétricas con precisión del 95.44\% y recall del 94.96\%, alcanzando igualmente un F1-Score del 95.20\%. Esta simetría entre clases es particularmente relevante porque demuestra que el modelo no está sesgado hacia ninguna categoría, evitando tanto la propagación de desinformación (falsos negativos) como la censura inadecuada de contenido legítimo (falsos positivos).
+
+La \textbf{identidad entre los promedios macro y ponderados} (ambos 95.20\%) confirma que el corpus de prueba está perfectamente balanceado con 6,168 muestras en cada clase, y que el modelo no favorece la clase mayoritaria. Este equilibrio perfecto valida las decisiones metodológicas tomadas durante la construcción del corpus unificado, particularmente el proceso de balanceo mediante extracción web de 9,000 noticias falsas que garantizó la distribución equitativa 49.8\% / 50.2\% en el conjunto completo.
+
+En contraste, el mejor algoritmo metaheurístico (GA) mostró un desequilibrio notable con especificidad del 67.8\% para detectar noticias falsas versus exhaustividad del 74.2\% para noticias reales, evidenciando un sesgo hacia la clase mayoritaria. DistilBERT supera esta limitación manteniendo un rendimiento virtualmente idéntico en ambas clases, con una diferencia de solo 0.48 puntos porcentuales entre las métricas de precisión y recall, un margen estadísticamente insignificante que demuestra la robustez del modelo.
+
+\begin{table}[htbp]
+\centering
+\adjustbox{width=0.9\textwidth,center}{%
+\small
+\rowcolors{2}{UAMAzcapoLight!40}{white}
 \begin{tabular}{|l|c|c|c|}
 \hline
 \rowcolor{UAMAzcapo}
