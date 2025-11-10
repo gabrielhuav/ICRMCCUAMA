@@ -40,17 +40,33 @@
 \newacronym{tn}{TN}{True Negative (Verdadero Negativo)}
 \newacronym{fp}{FP}{False Positive (Falso Positivo)}
 \newacronym{fn}{FN}{False Negative (Falso Negativo)}
+\newacronym{mlm}{MLM}{Masked Language Modeling}
+\newacronym{nsp}{NSP}{Next Sentence Prediction}
+\newacronym{fssp}{FSSP}{Flexible Shop Scheduling Problem}
+\newacronym{ner}{NER}{Named Entity Recognition (Reconocimiento de Entidades Nombradas)}
+\newacronym{bow}{BoW}{Bag of Words}
+\newacronym{llm}{LLM}{Large Language Model (Gran Modelo de Lenguaje)}
 
 % Nuevas adiciones: Acrónimos de modelos
 \newacronym{beto}{BETO}{Bidirectional Encoder Representations from Transformers for Spanish}
 \newacronym{roberta}{RoBERTa}{Robustly Optimized BERT Pretraining Approach}
 \newacronym{llama}{LLaMA}{Large Language Model Meta AI}
 \newacronym{gemini}{Gemini}{A Family of Highly Capable Multimodal Models}
+\newacronym{tinybert}{TinyBERT}{A Smaller Student for Knowledge Distillation}
+\newacronym{mbert}{mBERT}{Multilingual BERT}
 
 % Nuevas adiciones: Acrónimos de herramientas de desarrollo
 \newacronym{docker}{Docker}{Plataforma para contenerización que empaqueta una aplicación y sus dependencias en un entorno aislado y reproducible.}
 \newacronym{flask}{Flask}{Microframework de Python utilizado para construir aplicaciones web y APIs RESTful.}
 \newacronym{restful}{RESTful}{Estilo de arquitectura de software para sistemas hipermedia distribuidos, comúnmente utilizado para el diseño de APIs web.}
+
+% Organizaciones y conferencias
+\newacronym{iberlef}{IberLEF}{Iberian Languages Evaluation Forum}
+\newacronym{clef}{CLEF}{Conference and Labs of the Evaluation Forum}
+\newacronym{acl}{ACL}{Association for Computational Linguistics}
+\newacronym{emnlp}{EMNLP}{Empirical Methods in Natural Language Processing}
+\newacronym{icokg}{ICOKG}{International Conference on Ontologies and Knowledge Graphs}
+\newacronym{bdcc}{BDCC}{Big Data and Cognitive Computing}
 
 % =============================================================================
 % TÉRMINOS FUNDAMENTALES DE LA INVESTIGACIÓN
@@ -96,6 +112,11 @@
 	description={Contenido multimedia (video, audio, imágenes) generado o manipulado usando inteligencia artificial, especialmente técnicas de aprendizaje profundo, para hacer que parezca que alguien dijo o hizo algo que nunca ocurrió realmente.}
 }
 
+\newglossaryentry{phishing}{
+	name={Phishing},
+	description={Técnica de fraude digital que utiliza mensajes electrónicos fraudulentos (correos, SMS, mensajes de redes sociales) que se hacen pasar por comunicaciones legítimas de organizaciones confiables, con el objetivo de obtener información sensible como contraseñas, números de tarjetas de crédito o datos personales.}
+}
+
 % =============================================================================
 % TÉRMINOS TÉCNICOS DE PROCESAMIENTO DE LENGUAJE NATURAL
 % =============================================================================
@@ -127,7 +148,7 @@
 
 \newglossaryentry{embedding}{
 	name={Embedding},
-	description={Representación vectorial densa de palabras, frases o documentos en un espacio multidimensional donde la distancia entre vectores refleja similitud semántica. Ejemplos incluyen Word2Vec, GloVe, y FastText.}
+	description={Representación vectorial densa de palabras, frases o documentos en un espacio multidimensional donde la distancia entre vectores refleja similitud semántica. Ejemplos incluyen Word2Vec, GloVe, FastText y los embeddings contextuales generados por modelos Transformer.}
 }
 
 \newglossaryentry{transformer}{
@@ -145,11 +166,26 @@
 	description={Proceso de ajustar un modelo pre-entrenado en una tarea específica utilizando un conjunto de datos más pequeño y especializado. Permite aprovechar el conocimiento general del modelo pre-entrenado para tareas particulares.}
 }
 
-% Nuevas adiciones:
 \newglossaryentry{ngramas}{
 	name={n-gramas},
 	description={Secuencias contiguas de n elementos (palabras o caracteres) de un texto, que capturan el contexto local y las dependencias secuenciales. En esta tesis, se utilizan n-gramas de palabras como características para la representación TF-IDF.}
 }
+
+\newglossaryentry{wordpiece}{
+	name={WordPiece},
+	description={Algoritmo de tokenización basado en subpalabras utilizado por modelos como BERT y DistilBERT. Divide palabras en unidades subléxicas más pequeñas, permitiendo manejar vocabularios grandes de manera eficiente y procesar palabras fuera del vocabulario mediante la composición de subpalabras conocidas.}
+}
+
+\newglossaryentry{preentrenamiento}{
+	name={Pre-entrenamiento},
+	description={Fase inicial del entrenamiento de un modelo de lenguaje en la que se aprenden representaciones generales del lenguaje utilizando grandes corpus de texto sin etiquetar. En modelos como BERT, incluye tareas como Masked Language Modeling (MLM) y Next Sentence Prediction (NSP).}
+}
+
+\newglossaryentry{destilacion}{
+	name={Destilación de Conocimiento},
+	description={Técnica de compresión de modelos en la que un modelo más pequeño (estudiante) aprende a imitar el comportamiento de un modelo más grande (profesor). DistilBERT utiliza destilación triple combinando pérdida de destilación, pérdida de enmascaramiento y pérdida de similitud coseno.}
+}
+
 % =============================================================================
 % TÉRMINOS DE ALGORITMOS METAHEURÍSTICOS
 % =============================================================================
@@ -161,12 +197,12 @@
 
 \newglossaryentry{hiperparametro}{
 	name={Hiperparámetro},
-	description={Parámetro de configuración del modelo que se establece antes del entrenamiento y no se aprende durante el proceso de entrenamiento. Ejemplos incluyen la tasa de aprendizaje, el número de épocas, y el tamaño del batch.}
+	description={Parámetro de configuración del modelo que se establece antes del entrenamiento y no se aprende durante el proceso de entrenamiento. Ejemplos incluyen la tasa de aprendizaje, el número de épocas, el tamaño del batch, el dropout rate y la regularización L2.}
 }
 
 \newglossaryentry{funcionobjetivo}{
 	name={Función Objetivo},
-	description={Función matemática que define el criterio a optimizar en un problema. En el contexto de esta investigación, representa la métrica de rendimiento del modelo que se busca maximizar o minimizar.}
+	description={Función matemática que define el criterio a optimizar en un problema. En el contexto de esta investigación, representa la métrica de rendimiento del modelo (típicamente F1-Score) que se busca maximizar durante la optimización de hiperparámetros.}
 }
 
 \newglossaryentry{espaciobusqueda}{
@@ -189,35 +225,60 @@
 	description={Capacidad de un algoritmo para refinar y mejorar soluciones prometedoras encontradas, concentrando la búsqueda en regiones del espacio que han mostrado buenos resultados.}
 }
 
+\newglossaryentry{operadorcruce}{
+	name={Operador de Cruce (Crossover)},
+	description={En algoritmos genéticos, operador que combina dos soluciones padres para generar una o más soluciones hijas, heredando características de ambos padres. Implementaciones comunes incluyen cruce de un punto, dos puntos y uniforme.}
+}
+
+\newglossaryentry{operadormutacion}{
+	name={Operador de Mutación},
+	description={En algoritmos genéticos, operador que introduce variabilidad aleatoria en una solución individual modificando uno o más de sus componentes. Previene la convergencia prematura y mantiene diversidad genética en la población.}
+}
+
+\newglossaryentry{elitismo}{
+	name={Elitismo},
+	description={Estrategia en algoritmos evolutivos que garantiza que las mejores soluciones de una generación se preserven y pasen a la siguiente generación sin modificación, asegurando que la calidad de la mejor solución no disminuya.}
+}
+
 % Nuevas adiciones: Términos de optimización
 \newglossaryentry{kerastuner}{
 	name={KerasTuner},
-	description={Una biblioteca de software para la optimización de hiperparámetros de modelos de aprendizaje automático, especialmente en TensorFlow, que permite explorar eficientemente diferentes combinaciones de parámetros.}
+	description={Una biblioteca de software para la optimización de hiperparámetros de modelos de aprendizaje automático, especialmente en TensorFlow, que permite explorar eficientemente diferentes combinaciones de parámetros utilizando estrategias como búsqueda aleatoria, Hyperband y optimización Bayesiana.}
 }
 
 \newglossaryentry{learningrate}{
 	name={Tasa de Aprendizaje (Learning Rate)},
-	description={Un hiperparámetro que determina el tamaño de los pasos que un algoritmo de optimización (como el descenso de gradiente) toma para actualizar los parámetros del modelo en cada iteración. Una tasa de aprendizaje ultra-baja se utilizó para una convergencia más controlada y estable.}
+	description={Un hiperparámetro que determina el tamaño de los pasos que un algoritmo de optimización (como el descenso de gradiente) toma para actualizar los parámetros del modelo en cada iteración. Una tasa de aprendizaje ultra-baja (como 2e-06) se utiliza para una convergencia más controlada y estable.}
 }
 
 \newglossaryentry{dropout}{
 	name={Dropout},
-	description={Una técnica de regularización utilizada en redes neuronales para prevenir el sobreajuste. Consiste en desactivar aleatoriamente una fracción de las neuronas de una capa durante el entrenamiento, obligando al modelo a aprender patrones más robustos.}
+	description={Una técnica de regularización utilizada en redes neuronales para prevenir el sobreajuste. Consiste en desactivar aleatoriamente una fracción de las neuronas de una capa durante el entrenamiento, obligando al modelo a aprender patrones más robustos y generalizables.}
 }
 
 \newglossaryentry{earlystopping}{
 	name={Parada Temprana (Early Stopping)},
-	description={Un mecanismo de regularización que detiene el proceso de entrenamiento cuando el rendimiento del modelo en un conjunto de validación deja de mejorar. Se utiliza para prevenir el sobreajuste y reducir el tiempo de cómputo.}
+	description={Un mecanismo de regularización que detiene el proceso de entrenamiento cuando el rendimiento del modelo en un conjunto de validación deja de mejorar durante un número específico de épocas (paciencia). Se utiliza para prevenir el sobreajuste y reducir el tiempo de cómputo.}
 }
 
 \newglossaryentry{gapgeneralizacion}{
 	name={Gap de Generalización (Generalization Gap)},
-	description={La diferencia entre el rendimiento de un modelo en el conjunto de entrenamiento y en un conjunto de validación o prueba. Un gap pequeño indica que el modelo generaliza bien, mientras que un gap grande es un indicador de sobreajuste.}
+	description={La diferencia entre el rendimiento de un modelo en el conjunto de entrenamiento y en un conjunto de validación o prueba. Un gap pequeño (menor a 0.05) indica que el modelo generaliza bien, mientras que un gap grande es un indicador de sobreajuste.}
 }
 
-\newglossaryentry{jobschedules}{
-	name={Programación de Trabajos (Job Shop Scheduling)},
-	description={Un problema de optimización combinatoria que implica la asignación de tareas a recursos en un tiempo determinado. Se menciona en la literatura como una perspectiva para modelar la optimización del flujo de datos en la detección de noticias falsas.}
+\newglossaryentry{regularizacionl2}{
+	name={Regularización L2},
+	description={Técnica de regularización que añade una penalización proporcional al cuadrado de la magnitud de los pesos del modelo a la función de pérdida. Ayuda a prevenir el sobreajuste forzando al modelo a utilizar pesos más pequeños y distribuidos, promoviendo soluciones más simples y generalizables.}
+}
+
+\newglossaryentry{weightdecay}{
+	name={Weight Decay (Decaimiento de Pesos)},
+	description={Técnica de regularización que reduce gradualmente la magnitud de los pesos del modelo en cada iteración del entrenamiento. Es equivalente a la regularización L2 en muchos optimizadores y ayuda a prevenir el sobreajuste controlando la capacidad del modelo.}
+}
+
+\newglossaryentry{inyeccionruido}{
+	name={Inyección de Ruido},
+	description={Técnica de regularización que añade ruido aleatorio a las activaciones o pesos del modelo durante el entrenamiento. Actúa como una forma de aumento de datos que mejora la robustez y capacidad de generalización del modelo.}
 }
 
 % =============================================================================
@@ -226,32 +287,47 @@
 
 \newglossaryentry{precision}{
 	name={Precisión},
-	description={Métrica que mide la proporción de predicciones positivas que fueron correctas. Se calcula como: Precisión = \acrshort{tp} / (\acrshort{tp} + \acrshort{fp}).}
+	description={Métrica que mide la proporción de predicciones positivas que fueron correctas. Se calcula como: Precisión = TP / (TP + FP). En detección de noticias falsas, indica qué tan confiable es el modelo cuando predice que una noticia es falsa.}
 }
 
 \newglossaryentry{recall}{
 	name={Sensibilidad (Recall)},
-	description={Métrica que mide la proporción de casos positivos reales que fueron correctamente identificados. Se calcula como: Recall = \acrshort{tp} / (\acrshort{tp} + \acrshort{fn}).}
+	description={Métrica que mide la proporción de casos positivos reales que fueron correctamente identificados. Se calcula como: Recall = TP / (TP + FN). También conocida como exhaustividad o tasa de verdaderos positivos.}
 }
 
 \newglossaryentry{fscore}{
 	name={F1-Score},
-	description={Media armónica entre precisión y recall. Se calcula como: F1 = 2 × (Precisión × Recall) / (Precisión + Recall). Proporciona una medida equilibrada del rendimiento del clasificador.}
+	description={Media armónica entre precisión y recall. Se calcula como: F1 = 2 × (Precisión × Recall) / (Precisión + Recall). Proporciona una medida equilibrada del rendimiento del clasificador y es la métrica principal utilizada en esta investigación para comparar modelos.}
 }
 
 \newglossaryentry{accuracy}{
 	name={Exactitud (Accuracy)},
-	description={Proporción de predicciones correctas sobre el total de predicciones. Se calcula como: Accuracy = (\acrshort{tp} + \acrshort{tn}) / (\acrshort{tp} + \acrshort{tn} + \acrshort{fp} + \acrshort{fn}).}
+	description={Proporción de predicciones correctas sobre el total de predicciones. Se calcula como: Accuracy = (TP + TN) / (TP + TN + FP + FN). Es una métrica útil cuando las clases están balanceadas.}
+}
+
+\newglossaryentry{especificidad}{
+	name={Especificidad (Specificity)},
+	description={Métrica que mide la capacidad del modelo para identificar correctamente los casos negativos. Se calcula como: Especificidad = TN / (TN + FP). En detección de noticias falsas, mide qué tan bien el modelo identifica noticias reales sin confundirlas con falsas.}
 }
 
 \newglossaryentry{aucroc}{
 	name={AUC-ROC},
-	description={Área bajo la curva \acrshort{roc} (\acrshort{auc} de \acrshort{roc}). Mide la capacidad del modelo para distinguir entre clases. Un valor de 1.0 indica un clasificador perfecto, mientras que 0.5 indica rendimiento aleatorio.}
+	description={Área bajo la curva ROC (Receiver Operating Characteristic). Mide la capacidad del modelo para distinguir entre clases a través de diferentes umbrales de decisión. Un valor de 1.0 indica un clasificador perfecto, mientras que 0.5 indica rendimiento aleatorio.}
 }
 
 \newglossaryentry{matrizconfusion}{
 	name={Matriz de Confusión},
-	description={Tabla que describe el rendimiento de un modelo de clasificación mostrando las predicciones correctas e incorrectas para cada clase. Permite calcular métricas detalladas de rendimiento.}
+	description={Tabla que describe el rendimiento de un modelo de clasificación mostrando las predicciones correctas e incorrectas para cada clase. Permite calcular métricas detalladas de rendimiento como precisión, recall, F1-Score y especificidad.}
+}
+
+\newglossaryentry{macroaverage}{
+	name={Promedio Macro},
+	description={Método de agregación de métricas que calcula la media aritmética simple de las métricas para cada clase, dando el mismo peso a todas las clases independientemente de su frecuencia. Útil para evaluar el rendimiento equilibrado en datasets balanceados.}
+}
+
+\newglossaryentry{weightedaverage}{
+	name={Promedio Ponderado},
+	description={Método de agregación de métricas que calcula la media ponderada de las métricas para cada clase, donde los pesos son proporcionales al número de muestras de cada clase. Refleja el rendimiento global considerando el desbalance de clases.}
 }
 
 % =============================================================================
@@ -260,42 +336,91 @@
 
 \newglossaryentry{webscraping}{
 	name={Web Scraping},
-	description={Técnica de extracción automatizada de datos de sitios web mediante programas que navegan y analizan el contenido HTML de las páginas web para recopilar información específica.}
+	description={Técnica de extracción automatizada de datos de sitios web mediante programas que navegan y analizan el contenido HTML de las páginas web para recopilar información específica. En esta investigación se utilizó para extraer 9,000 noticias del portal satírico ``El Deforma''.}
 }
 
 \newglossaryentry{dataset}{
 	name={Dataset},
-	description={Conjunto estructurado de datos utilizado para entrenar, validar y probar modelos de machine learning. En esta investigación, se refiere al corpus de noticias etiquetadas como verdaderas o falsas.}
+	description={Conjunto estructurado de datos utilizado para entrenar, validar y probar modelos de machine learning. En esta investigación, se refiere al corpus de noticias etiquetadas como verdaderas o falsas, que alcanzó más de 61,000 registros únicos.}
 }
 
 \newglossaryentry{corpus}{
 	name={Corpus},
-	description={Colección grande y estructurada de textos utilizados para investigación lingüística o entrenamiento de modelos de PLN. En este contexto, se refiere al conjunto unificado de noticias en español.}
+	description={Colección grande y estructurada de textos utilizados para investigación lingüística o entrenamiento de modelos de PLN. En este contexto, se refiere al conjunto unificado de noticias en español construido integrando cuatro corpus académicos y datos de extracción web.}
 }
 
 \newglossaryentry{validacioncruzada}{
 	name={Validación Cruzada},
-	description={Técnica de evaluación que divide el dataset en múltiples subconjuntos para entrenar y validar el modelo repetidamente, proporcionando una estimación más robusta del rendimiento.}
+	description={Técnica de evaluación que divide el dataset en múltiples subconjuntos (folds) para entrenar y validar el modelo repetidamente, proporcionando una estimación más robusta del rendimiento. La validación cruzada estratificada preserva la distribución de clases en cada fold.}
 }
 
 \newglossaryentry{overfitting}{
 	name={Sobreajuste (Overfitting)},
-	description={Fenómeno donde un modelo aprende demasiado específicamente los datos de entrenamiento, perdiendo capacidad de generalización a datos nuevos no vistos durante el entrenamiento.}
+	description={Fenómeno donde un modelo aprende demasiado específicamente los datos de entrenamiento, incluyendo ruido y patrones espurios, perdiendo capacidad de generalización a datos nuevos no vistos durante el entrenamiento. Se manifiesta como un gap grande entre el rendimiento en entrenamiento y validación.}
 }
 
 \newglossaryentry{underfitting}{
 	name={Subajuste (Underfitting)},
-	description={Fenómeno donde un modelo es demasiado simple para capturar la complejidad subyacente de los datos, resultando en bajo rendimiento tanto en entrenamiento como en validación.}
+	description={Fenómeno donde un modelo es demasiado simple para capturar la complejidad subyacente de los datos, resultando en bajo rendimiento tanto en entrenamiento como en validación. Indica que el modelo no tiene suficiente capacidad para aprender los patrones relevantes.}
 }
 
 \newglossaryentry{bias}{
 	name={Sesgo (Bias)},
-	description={Error sistemático en las predicciones del modelo que puede deberse a suposiciones erróneas en el algoritmo de aprendizaje, datos de entrenamiento no representativos, o prejuicios inherentes en el dataset.}
+	description={Error sistemático en las predicciones del modelo que puede deberse a suposiciones erróneas en el algoritmo de aprendizaje, datos de entrenamiento no representativos, o prejuicios inherentes en el dataset. En esta investigación se analizan sesgos temáticos, geográficos y temporales.}
 }
 
 \newglossaryentry{varianza}{
 	name={Varianza},
-	description={Medida de cuánto varían las predicciones del modelo para diferentes conjuntos de entrenamiento. Alta varianza indica que el modelo es sensible a pequeños cambios en los datos de entrenamiento.}
+	description={Medida de cuánto varían las predicciones del modelo para diferentes conjuntos de entrenamiento. Alta varianza indica que el modelo es sensible a pequeños cambios en los datos de entrenamiento, lo que puede ser una señal de sobreajuste.}
+}
+
+\newglossaryentry{divisiondatos}{
+	name={División de Datos},
+	description={Proceso de particionar el dataset completo en subconjuntos distintos para diferentes propósitos: entrenamiento (70\%), validación (10\%) y prueba (20\%). La división estratificada garantiza que cada subconjunto mantenga la misma proporción de clases que el dataset original.}
+}
+
+\newglossaryentry{balanceoclases}{
+	name={Balanceo de Clases},
+	description={Proceso de ajustar la distribución de ejemplos entre las diferentes clases para evitar sesgos hacia la clase mayoritaria. En esta investigación se logró un balanceo casi perfecto de 49.8\% noticias falsas y 50.2\% noticias reales mediante extracción web dirigida.}
+}
+
+\newglossaryentry{contenedorizacion}{
+	name={Contenerización},
+	description={Técnica de virtualización ligera que empaqueta una aplicación y todas sus dependencias en un contenedor aislado y portable. Docker es la plataforma de contenerización utilizada en esta investigación para garantizar reproducibilidad y facilitar el despliegue.}
+}
+
+\newglossaryentry{epoch}{
+	name={Época (Epoch)},
+	description={Una iteración completa sobre todo el conjunto de datos de entrenamiento. En el entrenamiento del modelo DistilBERT, se utilizaron hasta 30 épocas máximas, aunque el entrenamiento óptimo se detuvo en la época 13 mediante early stopping.}
+}
+
+\newglossaryentry{batch}{
+	name={Batch (Lote)},
+	description={Subconjunto de datos procesados simultáneamente en una iteración del algoritmo de entrenamiento. Un tamaño de batch pequeño (como 4, utilizado en esta investigación) proporciona regularización implícita al introducir más ruido en los gradientes.}
+}
+
+% =============================================================================
+% TÉRMINOS ESPECIALIZADOS DEL DOMINIO
+% =============================================================================
+
+\newglossaryentry{corpusunificado}{
+	name={Corpus Unificado},
+	description={Dataset consolidado de más de 61,000 noticias en español construido mediante la integración y estandarización de cuatro corpus académicos reconocidos (Posadas-Durán, Acosta, Tretiakov, Blanco-Fernández) más 9,000 noticias extraídas de ``El Deforma''. Representa una de las contribuciones principales de esta investigación.}
+}
+
+\newglossaryentry{españolneutro}{
+	name={Español Neutro Multiregional},
+	description={Enfoque metodológico que busca desarrollar modelos capaces de procesar múltiples variantes geográficas del español sin estar sesgados hacia una región específica. En esta investigación se logró mediante la integración de corpus de España (70\%), México (20\%) y múltiples países latinoamericanos (10\%).}
+}
+
+\newglossaryentry{checkworthy}{
+	name={Check-Worthiness},
+	description={Propiedad de una afirmación o pieza de contenido que indica si merece ser verificada por un fact-checker. Es una tarea preliminar en sistemas de verificación automática que ayuda a priorizar qué contenido debe ser sometido a verificación exhaustiva.}
+}
+
+\newglossaryentry{facedes}{
+	name={FakeDeS},
+	description={Framework estandarizado para la evaluación de sistemas de detección de noticias falsas en español, establecido por las competencias IberLEF. Define métricas, protocolos de evaluación y datasets de referencia que permiten la comparación directa entre diferentes sistemas.}
 }
 
 % =============================================================================
