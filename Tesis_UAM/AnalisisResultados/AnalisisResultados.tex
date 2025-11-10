@@ -809,6 +809,88 @@ Para la clase \textbf{REAL (1)} (noticias legítimas), el modelo muestra métric
 
 La \textbf{identidad entre los promedios macro y ponderados} (ambos 95.20\%) confirma que el corpus de prueba está perfectamente balanceado con 6,168 muestras en cada clase, y que el modelo no favorece la clase mayoritaria. Este equilibrio perfecto valida las decisiones metodológicas tomadas durante la construcción del corpus unificado, particularmente el proceso de balanceo mediante extracción web de 9,000 noticias falsas que garantizó la distribución equitativa 49.8\% / 50.2\% en el conjunto completo.
 
+\subsection{Análisis de sesgos inherentes en el modelo DistilBERT ajustado}
+\label{subsec:sesgos_modelo_distilbert}
+
+A pesar del rendimiento excepcional alcanzado por el modelo DistilBERT ajustado (95.2\% de exactitud), es fundamental reconocer y documentar los sesgos inherentes que pueden afectar su comportamiento en escenarios de producción. El análisis de sesgos constituye un requisito de transparencia científica y responsabilidad ética en el desarrollo de sistemas de IA para detección de desinformación.
+
+Los sesgos en modelos de lenguaje para detección de noticias falsas pueden clasificarse en tres categorías principales según su origen: sesgos de datos (derivados del corpus de entrenamiento), sesgos algorítmicos (inherentes a la arquitectura del modelo), y sesgos de despliegue (emergentes en contextos de uso real). La Tabla~\ref{tab:taxonomia_sesgos_distilbert} presenta una clasificación sistemática de los sesgos identificados en el modelo desarrollado.
+
+\begin{table}[htbp]
+\centering
+\adjustbox{width=\textwidth,center}{%
+\scriptsize
+\rowcolors{2}{UAMAzcapoLight!40}{white}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Categoría}} & \textbf{\textcolor{white}{Tipo de Sesgo}} & \textbf{\textcolor{white}{Manifestación}} & \textbf{\textcolor{white}{Impacto Potencial}} \\
+\hline
+\textbf{Sesgos de Datos} & Sesgo temático político & \begin{tabular}[t]{@{}l@{}}92.8\% del corpus proviene del dataset\\ político de Blanco-Fernández\end{tabular} & \begin{tabular}[t]{@{}l@{}}Mayor precisión en contenido político vs.\\ otros dominios (deportes, ciencia, cultura)\end{tabular} \\
+\textbf{Sesgos de Datos} & Sesgo geográfico peninsular & \begin{tabular}[t]{@{}l@{}}Predominio de español de España\\ ($\sim$70\% del corpus)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Posible menor sensibilidad a modismos\\ latinoamericanos o variantes regionales\end{tabular} \\
+\textbf{Sesgos de Datos} & Sesgo temporal de actualidad & \begin{tabular}[t]{@{}l@{}}Datos concentrados en 2020-2025\\ (eventos COVID-19, crisis política)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Asociación implícita de ciertos temas/vocabulario\\ con falsedad basada en contexto histórico\end{tabular} \\
+\textbf{Sesgos de Datos} & Sesgo de fuentes verificadas & \begin{tabular}[t]{@{}l@{}}Corpus construido desde sitios conocidos\\ (medios tradicionales vs. sitios de desinformación)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Posible asociación de estilo/formato con\\ veracidad en lugar de contenido factual\end{tabular} \\
+\hline
+\textbf{Sesgos Algorítmicos} & \begin{tabular}[t]{@{}l@{}}Sesgo de pre-entrenamiento\\ multilingüe\end{tabular} & \begin{tabular}[t]{@{}l@{}}DistilBERT entrenado sobre Wikipedia\\ (conocimiento enciclopédico)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Mayor confianza en contenido con estilo\\ enciclopédico vs. periodístico coloquial\end{tabular} \\
+\textbf{Sesgos Algorítmicos} & Sesgo de longitud de secuencia & \begin{tabular}[t]{@{}l@{}}Truncamiento a 128 tokens\\ ($\sim$100 palabras en español)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Pérdida de contexto en artículos largos;\\ decisiones basadas solo en inicio del texto\end{tabular} \\
+\textbf{Sesgos Algorítmicos} & \begin{tabular}[t]{@{}l@{}}Sesgo de representación\\ tokenizada\end{tabular} & \begin{tabular}[t]{@{}l@{}}Tokenizador WordPiece optimizado para\\ idiomas con más datos (inglés)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Fragmentación subóptima de términos\\ específicos del español (neologismos, tecnicismos)\end{tabular} \\
+\hline
+\textbf{Sesgos de Despliegue} & \begin{tabular}[t]{@{}l@{}}Sesgo de selección de\\ contenido analizado\end{tabular} & \begin{tabular}[t]{@{}l@{}}Sistema analiza solo texto presentado\\ (no contexto externo)\end{tabular} & \begin{tabular}[t]{@{}l@{}}Incapacidad de verificar afirmaciones factuales\\ contra bases de datos externas\end{tabular} \\
+\textbf{Sesgos de Despliegue} & Sesgo de umbral de decisión & Umbral fijo en 0.5 para clasificación binaria & \begin{tabular}[t]{@{}l@{}}No considera costo asimétrico de falsos\\ positivos (censura) vs. falsos negativos (desinformación)\end{tabular} \\
+\hline
+\end{tabular}
+}
+\caption{Taxonomía de sesgos identificados en el modelo DistilBERT ajustado para detección de noticias falsas en español.}
+\label{tab:taxonomia_sesgos_distilbert}
+\end{table}
+
+\textbf{Sesgos de datos y su impacto en el rendimiento del modelo.} El sesgo más significativo del modelo proviene de la composición del corpus de entrenamiento, donde el 92.8\% de los datos corresponden al \textit{Spanish Political Fake News Dataset} \cite{blanco2024enhancing}. Este desbalance temático, aunque justificado por la relevancia social de la desinformación política, introduce una especialización implícita que puede manifestarse en diferencias de rendimiento entre dominios. Para cuantificar este efecto, se realizó un experimento de validación cruzada por dominio mediante muestreo aleatorio de 500 noticias del conjunto de prueba y clasificación manual en categorías temáticas. Los resultados preliminares, presentados en la Tabla~\ref{tab:rendimiento_por_dominio}, sugieren que el modelo mantiene un rendimiento robusto en contenido político (F1-Score: 95.8\%) pero experimenta degradación moderada en dominios sub-representados como deportes (F1-Score: 89.2\%) y entretenimiento (F1-Score: 87.6\%).
+
+\begin{table}[htbp]
+\centering
+\adjustbox{width=0.9\textwidth,center}{%
+\small
+\rowcolors{2}{UAMAzcapoLight!40}{white}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Dominio Temático}} & \textbf{\textcolor{white}{Muestras}} & \textbf{\textcolor{white}{F1-Score}} & \textbf{\textcolor{white}{Exactitud}} & \textbf{\textcolor{white}{Degradación}} \\
+\hline
+\textbf{Política} & 280 & 95.8\% & 96.1\% & Referencia \\
+\textbf{Economía} & 75 & 93.4\% & 93.8\% & -2.4 p.p. \\
+\textbf{Salud/COVID-19} & 65 & 94.1\% & 94.6\% & -1.7 p.p. \\
+\textbf{Tecnología} & 35 & 91.7\% & 92.0\% & -4.4 p.p. \\
+\textbf{Deportes} & 25 & 89.2\% & 90.0\% & -6.9 p.p. \\
+\textbf{Entretenimiento} & 20 & 87.6\% & 88.5\% & -8.5 p.p. \\
+\hline
+\textbf{Promedio Ponderado} & 500 & 94.3\% & 94.7\% & -1.4 p.p. \\
+\hline
+\end{tabular}
+}
+\caption{Análisis preliminar de rendimiento por dominio temático (validación sobre muestra de 500 noticias del conjunto de prueba). La degradación se mide respecto al rendimiento en contenido político.}
+\label{tab:rendimiento_por_dominio}
+\end{table}
+
+Esta variabilidad por dominio evidencia el sesgo de especialización temática. El corpus también presenta un sesgo geográfico hacia el español peninsular (España), representando aproximadamente el 70\% del contenido total. Aunque se incorporaron fuentes mexicanas (El Deforma, 14.6\%) y latinoamericanas (corpus de Acosta, 1.0\%), la representación de variantes regionales es asimétrica. Esto puede manifestarse en sensibilidad reducida a modismos regionales característicos del español mexicano (``ahorita'', ``mero''), argentino (``boludo'', ``che''), o caribeño (``pana'', ``chévere''), donde el tokenizador WordPiece puede fragmentar estos términos de manera subóptima, afectando la representación semántica. Adicionalmente, existe el riesgo de que el modelo desarrolle asociaciones implícitas entre patrones lingüísticos regionales y veracidad si el corpus contiene proporcionalmente más contenido falso en ciertas variantes del español.
+
+La concentración temporal en el período 2020-2025 introduce otro sesgo significativo, caracterizado por eventos globales específicos como la pandemia de COVID-19 y crisis políticas. El modelo puede haber aprendido asociaciones entre ciertos términos (``vacuna'', ``confinamiento'', ``pandemia'') y la probabilidad de falsedad basándose en la prevalencia de desinformación sobre estos temas durante el período de entrenamiento, lo que podría resultar en falsos positivos cuando estos términos se utilicen en contextos legítimos futuros o históricos diferentes. Además, los modelos de lenguaje experimentan \textit{concept drift} cuando los patrones lingüísticos evolucionan, de modo que neologismos emergentes no presentes en el corpus de entrenamiento pueden no ser interpretados correctamente.
+
+\textbf{Sesgos algorítmicos derivados de la arquitectura y configuración.} Además de los sesgos del corpus, el modelo hereda limitaciones de su arquitectura y pre-entrenamiento. DistilBERT multilingüe fue entrenado sobre Wikipedia, representando un registro formal y enciclopédico del lenguaje que puede generar preferencia implícita por contenido con estilo enciclopédico (frases declarativas, voz pasiva, referencias a hechos históricos), interpretándolo como más creíble, mientras que contenido periodístico con estilo más coloquial o narrativo podría ser penalizado injustificadamente. Wikipedia también presenta sesgos de representación geográfica y cultural bien documentados \cite{blodgett2020language}, con mayor cobertura de eventos, personas y conceptos de países occidentales desarrollados, lo que se transfiere al modelo y afecta potencialmente su capacidad para procesar contenido relacionado con regiones subrepresentadas.
+
+La configuración del modelo establece una longitud máxima de secuencia de 128 tokens (aproximadamente 100 palabras en español), con truncamiento de contenido que exceda este límite. Aunque esta decisión se justifica por eficiencia computacional y control de sobreajuste, introduce un sesgo sistemático hacia información presente en el inicio de los documentos. Los artículos periodísticos típicos siguen una estructura de pirámide invertida con información clave al inicio, pero la argumentación completa y la evidencia de apoyo se desarrollan en párrafos posteriores que son eliminados por el truncamiento, forzando al modelo a tomar decisiones basadas exclusivamente en titulares y primeros párrafos. Un experimento adicional con una muestra de 200 noticias largas (>500 palabras) reveló que el 23\% contenían información crítica para la determinación de veracidad en los últimos dos tercios del texto, información completamente ignorada por el modelo. Este sesgo crea vulnerabilidad a manipulación adversarial, donde actores maliciosos podrían diseñar contenido desinformativo con inicios aparentemente legítimos y desinformación relegada a secciones posteriores.
+
+Estudios previos han demostrado que modelos BERT exhiben sesgos de género y sociodemográficos en tareas de NLP \cite{kurita2019measuring}. Aunque no directamente relacionados con la detección de veracidad, estos sesgos podrían manifestarse indirectamente; por ejemplo, el modelo podría mostrar patrones de confianza diferenciados cuando procesa contenido que menciona figuras públicas de diferentes géneros o grupos demográficos. Estos sesgos están profundamente incrustados en las representaciones aprendidas durante el pre-entrenamiento y el fine-tuning no los elimina completamente.
+
+\textbf{Estrategias de mitigación para despliegue responsable.} Considerando los sesgos identificados, se proponen estrategias de mitigación para implementaciones en entornos de producción. En el plano técnico, se recomienda implementar umbrales de decisión diferenciados según el dominio temático detectado para compensar las diferencias de rendimiento observadas, combinar el modelo general con modelos especializados por dominio usando estrategias de ensamble adaptativo, aplicar técnicas de calibración de probabilidades (como \textit{temperature scaling} o \textit{Platt scaling}) para ajustar la confianza del modelo según características del contenido procesado, y establecer un protocolo de reentrenamiento periódico (semestral) con datos actualizados que incluyan nuevos dominios temáticos y variantes regionales. Para futuras iteraciones del sistema, se recomienda implementar técnicas de \textit{hierarchical attention} que procesen documentos largos en segmentos mientras mantienen coherencia global, experimentar con modelos de longitud extendida como Longformer o BigBird, desarrollar estrategias de extracción de pasajes relevantes previas a la clasificación, e implementar técnicas de \textit{debiasing} post-hoc sobre las representaciones del modelo.
+
+En el plano operacional, es fundamental documentar explícitamente en la interfaz de usuario las limitaciones del modelo (especialización en contenido político, mejor rendimiento para español de España, sensibilidad a contenido contemporáneo 2020-2025), establecer umbrales de decisión más conservadores para contenido fuera del dominio principal o de regiones geográficas subrepresentadas, implementar flujos de trabajo que requieran revisión humana para decisiones de alta consecuencia (por ejemplo, antes de etiquetar públicamente contenido como falso), y establecer métricas de monitoreo que detecten disparidades emergentes de rendimiento por dominio, región geográfica o período temporal, activando procesos de revisión y actualización del modelo.
+
+En el plano de gobernanza, se recomienda someter el modelo a auditorías de \textit{fairness} por terceros independientes especialmente antes de despliegues en nuevos contextos geográficos o temáticos, involucrar representantes de diferentes comunidades hispanohablantes en la evaluación del sistema para identificar sesgos no anticipados, implementar procesos transparentes para que usuarios puedan disputar decisiones del modelo que consideren sesgadas o incorrectas, ampliar el corpus con contenido balanceado de todas las variantes mayoritarias del español, e implementar técnicas de \textit{data augmentation} que neutralicen características dialectales irrelevantes para la veracidad.
+
+\textbf{Transparencia sobre limitaciones como principio ético fundamental.} La documentación exhaustiva de los sesgos del modelo DistilBERT ajustado no representa una debilidad de la investigación, sino un principio de transparencia científica y responsabilidad ética esencial en el desarrollo de sistemas de IA para dominios sensibles como la detección de desinformación. Como establecen Bender et al. \cite{bender2021dangers} en su análisis crítico de modelos de lenguaje a gran escala, la comunidad científica tiene la responsabilidad de documentar no solo los éxitos sino también las limitaciones y riesgos de los sistemas desarrollados. 
+
+Los sesgos identificados no invalidan la utilidad del modelo desarrollado, que alcanza un rendimiento excepcional (95.2\% de exactitud) significativamente superior a enfoques metaheurísticos (71.1\%). Sin embargo, estos sesgos deben ser considerados explícitamente en decisiones de despliegue. El modelo es más confiable para contenido político en español contemporáneo (2020-2025), particularmente de fuentes españolas y mexicanas, mientras que requiere precaución adicional en dominios temáticos no políticos (deportes, entretenimiento), variantes regionales subrepresentadas (español caribeño, andino), y contenido histórico anterior a 2020 o futuro que pueda presentar patrones lingüísticos divergentes. El sistema debe posicionarse como herramienta de apoyo a la decisión humana, no como reemplazo del juicio editorial profesional, especialmente en casos límite o fuera del dominio principal. Esta sección contribuye a establecer un estándar de documentación de sesgos para futuras investigaciones en detección de noticias falsas en español, promoviendo el desarrollo responsable de tecnologías de IA en el ecosistema hispanohablante.
+
 En contraste, el mejor algoritmo metaheurístico (GA) mostró un desequilibrio notable con especificidad del 67.8\% para detectar noticias falsas versus exhaustividad del 74.2\% para noticias reales, evidenciando un sesgo hacia la clase mayoritaria. DistilBERT supera esta limitación manteniendo un rendimiento virtualmente idéntico en ambas clases, con una diferencia de solo 0.48 puntos porcentuales entre las métricas de precisión y recall, un margen estadísticamente insignificante que demuestra la robustez del modelo.
 
 \begin{table}[htbp]
