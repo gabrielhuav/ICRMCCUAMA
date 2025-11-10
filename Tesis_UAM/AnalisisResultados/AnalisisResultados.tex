@@ -3,7 +3,56 @@
 
 Este capítulo presenta el análisis integral de los resultados obtenidos mediante la metodología unificada desarrollada para la detección de noticias falsas en español. Los resultados se organizan siguiendo la estructura evolutiva de la metodología: comenzando con la validación del flujo de procesamiento de datos común, continuando con la evaluación de los modelos clásicos optimizados con algoritmos metaheurísticos que establecen la línea base, progresando hacia los resultados del modelo Transformer DistilBERT, culminando con una evaluación comparativa integral que justifica la selección del modelo final y demostrando su viabilidad práctica mediante la implementación de prototipos funcionales.
 
-El análisis estadístico se fundamenta en un marco de evaluación unificado que emplea las métricas definidas en la metodología: exactitud (accuracy), precisión (precision), exhaustividad (recall), F1-Score y especificidad. \textbf{Criterio fundamental:} Todos los experimentos se ejecutaron bajo condiciones experimentales idénticas para garantizar comparabilidad objetiva: mismo corpus, misma división de datos (70\% entrenamiento, 10\% validación, 20\% prueba) y mismo protocolo de validación.
+El análisis estadístico se fundamenta en un marco de evaluación unificado que emplea las métricas definidas en la metodología: exactitud (accuracy), precisión (precision), exhaustividad (recall), F1-Score y especificidad. Todos los experimentos se ejecutaron bajo condiciones experimentales idénticas para garantizar comparabilidad objetiva: mismo corpus, misma división de datos (70\% entrenamiento, 10\% validación, 20\% prueba) y mismo protocolo de validación.
+
+\newpage
+
+\section{Síntesis de resultados y contribuciones principales}
+\label{sec:sintesis_resultados_principales}
+
+Este capítulo presenta la validación experimental de la metodología evolutiva desarrollada, demostrando la superioridad de los modelos de lenguaje modernos sobre los enfoques clásicos optimizados para la detección de noticias falsas en español \cite{blanco2024enhancing, hurtado2024calibracion}. A continuación, se presenta una síntesis de los logros y contribuciones clave derivados de este análisis.
+
+El proceso de investigación culminó con la consolidación de un corpus a gran escala de \textbf{61,674 noticias únicas}, logrando un balance de clases casi perfecto (49.8\% FALSO / 50.2\% REAL) para la división de datos \cite{acosta2019construccion, posadas2019detection, tretiakov2022detection, blanco2024enhancing}. Sobre esta base, se estableció primero un "techo de rendimiento" para los enfoques clásicos (TF-IDF), donde el mejor modelo optimizado con un \textbf{Algoritmo Genético (GA)} alcanzó una \textbf{exactitud máxima de 71.06\%} \cite{hurtado2024calibracion}. Para superar esta línea base, se desarrolló un modelo \textbf{DistilBERT} optimizado \cite{sanh2019distilbert} mediante un riguroso proceso de 7 versiones experimentales y regularización múltiple, logrando alcanzar una \textbf{exactitud final de 95.2\%}. El resultado final demostró la superioridad categórica del enfoque de aprendizaje profundo, con una \textbf{mejora absoluta de +24.14 puntos porcentuales} en exactitud sobre la mejor línea base metaheurística.
+
+\subsection{Mapa Conceptual de Contribuciones del Capítulo}
+
+La Figura \ref{fig:mapa_contribuciones_resultados} ilustra la relación entre las contribuciones clave de este capítulo, mostrando cómo la validación de la línea base (metaheurísticas) \cite{hurtado2024calibracion, yildirim2023novel} justifica la transición al modelo Transformer \cite{vaswani2017attention, sanh2019distilbert}, y cómo la evaluación comparativa da lugar a la selección del modelo final para la implementación del prototipo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Imagenes/mapa_contribuciones_resultados.png}
+    \caption{Mapa conceptual de las contribuciones clave derivadas del análisis de resultados.}
+    \label{fig:mapa_contribuciones_resultados}
+\end{figure}
+
+\subsection{Tabla Comparativa entre Paradigmas}
+
+La Tabla \ref{tab:comparacion_alto_nivel} resume las diferencias fundamentales entre los dos paradigmas evaluados, destacando las ventajas y desventajas en rendimiento, complejidad y recursos.
+
+\begin{table}[H]
+\centering
+\adjustbox{width=\textwidth,center}{%
+\small
+\rowcolors{2}{UAMAzcapoLight!40}{white}
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{UAMAzcapo}
+\textbf{\textcolor{white}{Dimensión de Análisis}} & \textbf{\textcolor{white}{Enfoque 1: Metaheurístico (GA)}} & \textbf{\textcolor{white}{Enfoque 2: Transformer (DistilBERT)}} \\
+\hline
+\textbf{Modelo Base} & Clasificador Logístico & DistilBERT pre-entrenado \cite{sanh2019distilbert} \\
+\textbf{Representación Textual} & TF-IDF (Estática, 500 caract.) \cite{anselmo2013diseno, aqil2021modeling} & Embeddings Contextuales (Dinámicos) \\
+\textbf{Rendimiento (Exactitud)} & 71.06\% \cite{hurtado2024calibracion} & \textbf{95.2\%} \\
+\textbf{Detección "FALSOS"} & Baja (Especificidad 48\%) \cite{hurtado2024calibracion} & \textbf{Excelente (Especificidad 94.96\%)} \\
+\textbf{Equilibrio de Clases} & Desbalanceado (Sesgo a clase REAL) & \textbf{Perfectamente Balanceado} \\
+\textbf{Recursos de Entrenamiento} & CPU (Tiempos razonables) \cite{yildirim2023novel} & GPU (NVIDIA RTX 4060, >500 horas) \cite{whitehouse2022evaluation} \\
+\textbf{Interpretabilidad} & Alta (Pesos de características) & Baja (Modelo "caja negra") \\
+\textbf{Modelo de Aplicación} & \texttt{modelo\_metaheuristico.joblib} & \texttt{modelo\_final\_distilbert\_es} \\
+\hline
+\end{tabular}
+}
+\caption{Comparativa de alto nivel entre los paradigmas de detección implementados.}
+\label{tab:comparacion_alto_nivel}
+\end{table}
 
 \section{Validación del flujo de procesamiento y representaciones}
 \label{sec:validacion_pipeline_datos}
@@ -97,7 +146,7 @@ Todos los algoritmos metaheurísticos utilizan una función de evaluación unifi
 \label{tab:funcion_evaluacion}
 \end{table}
 
-\newpage
+
 
 El algoritmo MSA implementa una estrategia de multiarranque que ejecuta múltiples instancias de recocido simulado desde diferentes puntos de inicio, aprovechando la aceptación probabilística para escapar de óptimos locales. La Tabla~\ref{tab:pseudocodigo_msa} presenta el pseudocódigo detallado del algoritmo implementado.
 
@@ -308,93 +357,91 @@ Esta sección presenta las visualizaciones generadas por cada algoritmo metaheur
 
 El algoritmo MSA presenta un comportamiento de convergencia caracterizado por múltiples puntos de inicio y aceptación probabilística de soluciones. Su estrategia de multiarranque permite explorar diferentes regiones del espacio de búsqueda, mientras que el esquema de enfriamiento gradual facilita la transición entre exploración y explotación.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Imagenes/convergencia_recocido_simulado.png}
     \caption{Evolución de la convergencia del algoritmo MSA mostrando el progreso gradual a través de los 31 niveles de temperatura desde 1000 hasta 1.24.}
     \label{fig:convergencia_msa}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{Imagenes/matriz_confusion_recocido_simulado.png}
     \caption{Matriz de confusión para MSA en el conjunto de pruebas, evidenciando la baja especificidad (33\%) y el sesgo hacia la clasificación como noticias reales.}
     \label{fig:matriz_msa}
 \end{figure}
 
-\newpage
+
 
 El algoritmo SS implementa una estrategia de combinación sistemática que mantiene un conjunto de referencia élite y genera nuevas soluciones mediante cruces estructurados. Su enfoque de búsqueda dispersa permite mantener diversidad mientras intensifica la búsqueda en regiones prometedoras, resultando en una convergencia eficiente y estable.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Imagenes/convergencia_ss.png}
     \caption{Convergencia eficiente del algoritmo SS en solo 10 iteraciones, mostrando mejoras progresivas en las iteraciones 4, 5 y 7 hasta estabilizarse en 0.6630.}
     \label{fig:convergencia_ss}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{Imagenes/matriz_confusion_ss.png}
     \caption{Matriz de confusión para SS demostrando mejor balance que MSA con especificidad del 40\% y excelente generalización.}
     \label{fig:matriz_ss}
 \end{figure}
 
-\newpage
-
 El algoritmo GA exhibe un proceso evolutivo robusto basado en principios darwinianos, donde la selección por torneo, el cruce de un punto y la mutación controlada trabajan en conjunto para evolucionar la población hacia mejores soluciones. Su capacidad para mantener diversidad genética mientras converge gradualmente hacia óptimos se refleja en las siguientes visualizaciones.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Imagenes/convergencia_algoritmo_genético.png}
     \caption{Evolución darwiniana del algoritmo GA a lo largo de 20 generaciones, evidenciando progreso sostenido desde 0.6198 hasta 0.7090 con logros evolutivos significativos.}
     \label{fig:convergencia_ga}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{Imagenes/matriz_confusion_algoritmo_genético.png}
     \caption{Matriz de confusión para GA mostrando el mejor balance global con especificidad líder del 48\% y rendimiento sólido en ambas clases.}
     \label{fig:matriz_ga}
 \end{figure}
 
-\newpage
+
 
 El algoritmo VNS demuestra una estrategia de búsqueda sistemática que cambia dinámicamente entre diferentes estructuras de vecindario. Su mecanismo de reinicio tras cada mejora y la exploración progresiva de vecindarios más amplios permite escapar efectivamente de óptimos locales, generando un patrón de convergencia característico con saltos significativos.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Imagenes/convergencia_vns.png}
     \caption{Progreso sistemático del algoritmo VNS a través de 20 iteraciones con cambios efectivos de vecindario, mostrando saltos significativos en las iteraciones 6 y 14.}
     \label{fig:convergencia_vns}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{Imagenes/matriz_confusion_vns.png}
     \caption{Matriz de confusión para VNS destacando la excelente exhaustividad del 89\% para detección de noticias reales con especificidad competitiva del 41\%.}
     \label{fig:matriz_vns}
 \end{figure}
 
-\newpage
+
 
 El algoritmo PSO simula el comportamiento colectivo de enjambres mediante partículas que ajustan su trayectoria basándose en información cognitiva y social. Sin embargo, en este experimento específico, el algoritmo exhibe convergencia prematura y pérdida de diversidad del enjambre, lo que resulta en un estancamiento que limita significativamente su capacidad de exploración.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Imagenes/convergencia_pso.png}
     \caption{Convergencia problemática del algoritmo PSO evidenciando estancamiento prematuro en la iteración 7-8 y exploración insuficiente del espacio de búsqueda.}
     \label{fig:convergencia_pso}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{Imagenes/matriz_confusion_pso.png}
     \caption{Matriz de confusión para PSO revelando el comportamiento extremo problemático con especificidad crítica del 15\% y sesgo severo hacia la clase mayoritaria.}
     \label{fig:matriz_pso}
 \end{figure}
 
-\newpage
+
 
 Las matrices de confusión confirman los patrones de rendimiento identificados. GA muestra el mejor balance global entre especificidad y exhaustividad, mientras que VNS destaca en la detección de noticias reales manteniendo competitividad en noticias falsas. SS ofrece rendimiento equilibrado con buena estabilidad, MSA evidencia limitaciones en detección de noticias falsas, y PSO exhibe comportamiento inaceptable para aplicaciones prácticas. Estas visualizaciones proporcionan evidencia gráfica que facilita la comprensión del comportamiento específico de cada algoritmo metaheurístico en la tarea de detección de noticias falsas.
 
@@ -572,7 +619,7 @@ La optimización se realizó mediante Keras Tuner con búsqueda aleatoria sobre 
 
 El modelo final se entrenó durante 21 épocas antes de que el mecanismo de detención temprana detuviera el proceso. La época 13 fue identificada como el punto óptimo, marcando el momento antes del inicio del sobreajuste:
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Imagenes/Entrenamiento/curva_aprendizaje_v7.png}
     \caption{Evolución de la exactitud y pérdida durante el entrenamiento del modelo DistilBERT final. Las líneas azul y roja muestran la convergencia en entrenamiento y validación respectivamente. La estrella dorada marca la mejor época (13), después de la cual se observa el inicio del sobreajuste con una separación creciente entre las curvas.}
@@ -661,7 +708,7 @@ División Datos & 70/10/20 & 60/20/20 & 60/20/20 & 60/20/20 & 70/10/20 & 60/20/2
 \label{tab:configuraciones_tecnicas}
 \end{table}
 
-\newpage
+
 
 \begin{figure}[htbp]
 \centering
@@ -752,7 +799,7 @@ Esta subsección presenta el pseudocódigo simplificado del algoritmo de entrena
 \label{tab:pseudocodigo_distilbert_simple}
 \end{table}
 
-\newpage
+
 
 \subsection{Resultados finales y comparación}
 \label{subsec:resultados_comparacion}
