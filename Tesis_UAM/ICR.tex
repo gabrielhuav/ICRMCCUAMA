@@ -2,7 +2,7 @@
 % Realizada el 21/08/24
 %
 
-\documentclass[spanish,12pt,letterpaper]{book}
+\documentclass[spanish,12pt,letterpaper,openright]{book}
 
 \usepackage[spanish,mexico]{babel}
 \usepackage[utf8]{inputenc}
@@ -36,15 +36,14 @@
 \definecolor{UAMXochimilcoMedium}{RGB}{27, 153, 255}
 \definecolor{UAMXochimilcoLight}{RGB}{179, 221, 255}
 
-%% Es para poner los márgenes en una impresión
-%% a ambas caras de la hoja
+%% Márgenes uniformes para todas las páginas
 \voffset=-36pt
 \marginparsep=20pt
 \textwidth 6.0in
 \textheight 8.75in
 \setlength{\headheight}{15pt}
 \oddsidemargin 0.4in
-\evensidemargin 0in
+\evensidemargin 0.4in
 
 \decimalpoint
 
@@ -113,6 +112,7 @@
 %\include{Anexos/Anexo2}
 
 % \backmatter
+\cleardoublepage
 \addcontentsline{toc}{chapter}{Bibliografía}
 \bibliographystyle{unsrtnat}
 \nocite{*}
