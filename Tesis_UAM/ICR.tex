@@ -63,8 +63,19 @@
 
 \frontmatter
 
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Resumen}
 \include{Resumen/Resumen}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Dedicatoria}
 \include{Agradecimientos/Dedicatoria}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Agradecimientos}
 \include{Agradecimientos/Agradecimientos}
 
 \cleardoublepage
@@ -91,11 +102,11 @@
 
 \renewcommand{\chaptermark}[1]{\markboth{\it\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\chaptername \ \thechapter}{}}
-\fancyhead[LO,RE]{}
-\fancyhead[LE]{{\bfseries\thepage} \ \ \rightmark}
-\fancyhead[RO]{\leftmark \ \ {\bfseries\thepage}}
-\fancyfoot[LO,LE]{Universidad Autónoma Metropolitana}
-\fancyfoot[CO,CE]{}
+\fancyhead[L]{}
+\fancyhead[R]{\leftmark \ \ {\bfseries\thepage}}
+\fancyfoot[L]{Universidad Autónoma Metropolitana}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
 
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
